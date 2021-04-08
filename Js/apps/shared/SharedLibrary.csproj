@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>preview</LangVersion>
+		<Nullable>enable</Nullable>
+		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\ModelRefitClientExtensions\**" />
+		<Compile Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\RefitClientExtensions\**" />
+		<Compile Remove="node_modules\**" />
+		<Compile Remove="Services\Interfaces\**" />
+		<EmbeddedResource Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\ModelRefitClientExtensions\**" />
+		<EmbeddedResource Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\RefitClientExtensions\**" />
+		<EmbeddedResource Remove="node_modules\**" />
+		<EmbeddedResource Remove="Services\Interfaces\**" />
+		<None Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\ModelRefitClientExtensions\**" />
+		<None Remove="Extensions\IServiceCollection_Extensions\AddCustom_Extensions\AddRefitClient_Extension\RefitClientExtensions\**" />
+		<None Remove="node_modules\**" />
+		<None Remove="Services\Interfaces\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Remove="codegen-config.json" />
+		<None Remove="Monikers.imagemanifest" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="codegen-config.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+		<content Include="Monikers.imagemanifest">
+			<IncludeInVSIX>true</IncludeInVSIX>
+		</content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HotChocolate.Types" Version="11.1.0-preview.56" />
+		<PackageReference Include="Humanizer" Version="2.8.26" />
+		<PackageReference Include="Mapster" Version="7.1.5" />
+		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.3" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="5.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.3" />
+		<PackageReference Include="Pluralize.NET" Version="1.0.2" />
+		<PackageReference Include="protobuf-net" Version="3.0.73" />
+		<PackageReference Include="protobuf-net.Grpc" Version="1.0.147" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="6.0.24" />
+
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.3" />
+		<PackageReference Include="StrawberryShake" Version="11.0.0-preview.137" />
+		<PackageReference Include="System.IO.Pipelines" Version="6.0.0-preview.1.21102.12" />
+		<PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.1.21102.12" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Localizations\Customs\Resources\Resource.ko.resx" />
+	</ItemGroup>
+
+
+</Project>

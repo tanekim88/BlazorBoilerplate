@@ -1,0 +1,8 @@
+﻿msgid "Cancel"
+msgstr "취소"
+
+
+msgctxt "Respectful"
+msgid "May I please have 1 apple?"
+msgid_plural "May I please have {0} apples?"
+msgstr[0] "사과 {0}개 주실 수 있나요?"

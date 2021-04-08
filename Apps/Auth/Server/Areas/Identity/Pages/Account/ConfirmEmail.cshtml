@@ -1,0 +1,30 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData[index: "Title"] = "Confirm email";
+}
+
+<div class="w-full h-full grid place-items-center">
+    <form method="post" class="
+    flex flex-col items-center 
+    px-10
+    pb-10
+    mdc-card
+    ">
+        <svg class="bi mt-4 text-primary" width="32" height="32" fill="currentColor">
+            <use xlink:href="bootstrap-icons.svg#check2"/>
+        </svg>
+        <h2 class="text-primary text-center mt-5">@ViewData[index: "Title"]</h2>
+        <h4 class="text-secondary text-center mt-4">@TempData[key: "StatusMessage"]</h4>
+
+    </form>
+</div>
+
+@if (Model.ReturnUrl != null)
+{
+    <script>
+        var timer = setTimeout(function() {
+            window.location="@Model.ReturnUrl";
+        }, 5000);
+    </script>
+}

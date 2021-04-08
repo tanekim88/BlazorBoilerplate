@@ -1,0 +1,11 @@
+.light-square-theme {
+    --primary: #1976d2;
+    --secondary: #ffa000;
+    --error: #f44336;
+    --background: #eee;
+    --surface: #fff;
+
+    // @use "@material/shape" with ( $small-component-radius: 0, $medium-component-radius: 0, $large-component-radius: 0, );
+
+    // @use "@material/typography" with ( $font-family: unquote("Rubik, sans-serif"), $styles-button: ( font-size: 14px, font-weight: 500, letter-spacing: 0.05em, ), );
+}

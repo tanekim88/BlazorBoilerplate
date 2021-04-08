@@ -1,0 +1,152 @@
+﻿@page
+@model LoginModel
+@addTagHelper *, Auth.Server
+
+
+@{
+    ViewData[index: "Title"] = "Sign in";
+}
+
+@section Heads
+{
+
+}
+
+<div class="w-full h-full grid place-items-center">
+    <div class="inline-flex flex-wrap place-items-center place-content-center gap-8">
+        <form id="signin-form" method="post" class="
+                flex flex-col items-center 
+                px-10
+                pb-10
+                mdc-card
+            ">
+            @* <svg class="bi" width="32" height="32" fill="currentColor">
+                <use xlink:href="bootstrap-icons.svg#chat" />
+            </svg> *@
+            <h1 class="text-primary text-center mt-6">
+                @ViewData[index: "Title"]
+            </h1>
+            <div asp-validation-summary="ModelOnly" class="text-error"></div>
+            <div class="mt-5">
+                <label class="
+                mdc-text-field mdc-text-field--filled
+                w-64
+                ">
+                    <span class="mdc-text-field__ripple"></span>
+                    <input asp-for="Input.Email" class="mdc-text-field__input" type="email" aria-labelledby="email">
+                    <span class="mdc-floating-label" id="email">Email</span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <div class="w-64">
+                    <span asp-validation-for="Input.Email" class="text-error"></span>
+                </div>
+            </div>
+            <div class="mt-5">
+                <label class="
+                mdc-text-field mdc-text-field--filled
+                w-64
+                ">
+                    <span class="mdc-text-field__ripple"></span>
+                    <input asp-for="Input.Password" class="mdc-text-field__input" type="password" aria-labelledby="password">
+                    <span class="mdc-floating-label" id="password">Password</span>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <div class="w-64">
+                    <span asp-validation-for="Input.Password" class="text-error"></span>
+                </div>
+            </div>
+            <div class="mt-5">
+                <div class="mdc-form-field">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+
+                               asp-for="Input.RememberMe"/>
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                        <div class="mdc-checkbox__ripple"></div>
+                    </div>
+                    <label asp-for="Input.RememberMe" class="cursor-pointer">@Html.DisplayNameFor(expression: m => m.Input.RememberMe)</label>
+                </div>
+            </div>
+            <div class="mt-5">
+                <button class="mdc-button mdc-button--raised">
+                    <div class="mdc-button__ripple"></div>
+                    <span type="submit" class="
+                    mdc-button__label
+                    p-2
+                    ">Sign in</span>
+                </button>
+            </div>
+            <div class="mt-5 mt-5">
+                <div class="">
+                    <a class="" asp-page="./ForgotPassword">Forgot your password?</a>
+                </div>
+                <div class="">
+                    <a class="" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                </div>
+                <div class="">
+                    <a class="" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                </div>
+            </div>
+        </form>
+        @{
+            if ((Model.ExternalLogins?.Count ?? 0) != 0)
+            {
+                <form id="external-signin-form"
+                      asp-page="./ExternalLogin"
+                      asp-route-returnUrl="@Model.ReturnUrl"
+                      method="post"
+                      class="
+                flex flex-col items-center 
+                px-10 pb-10
+                mdc-card 
+
+                ">
+                    <h3 class="text-primary text-center mt-10">Use another service to sign in.</h3>
+
+                    @foreach (var provider in Model.ExternalLogins)
+                    {
+                        var iconClass = $"fab fa-{provider.Name.ToLower()}";
+
+                        if (provider.Name == "oidc")
+                        {
+                            iconClass = "fas fa-shield-alt";
+                        }
+
+                        <button type="submit" class="
+                        mdc-button mdc-button--raised
+                        bg-white
+                        w-64 rounded-full
+                        mt-5
+                         " name="provider" value="@provider.Name">
+                            @* <div class="mdc-button__ripple"></div> *@
+                            <i class="
+                            @iconClass
+                            absolute left-0
+                            ml-3
+                            "></i>
+
+
+                            <span class="mdc-button__label"> @provider.DisplayName</span>
+                        </button>
+                    }
+
+                </form>
+            }
+        }
+
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

@@ -1,0 +1,38 @@
+﻿@page "/authentication/{action}"
+@inject NavigationManager navigationManager
+<RemoteAuthenticatorView Action="@Action">
+    <LoggingIn>
+        You are about to be redirected to login page
+    </LoggingIn>
+    <CompletingLoggingIn>
+        Completing logging in
+    </CompletingLoggingIn>
+    <LogInFailed>
+        Login failed
+    </LogInFailed>
+    <LogOut>
+        Log out
+    </LogOut>
+    <CompletingLogOut>
+        Completing loging out.
+    </CompletingLogOut>
+    <LogOutFailed>
+        log out failed
+    </LogOutFailed>
+    <LogOutSucceeded>
+        Log out succeded
+    </LogOutSucceeded>
+    <UserProfile>
+        User profile
+    </UserProfile>
+    <Registering>
+        Registering.
+    </Registering>
+</RemoteAuthenticatorView>
+
+@code{
+
+    [Parameter]
+    public string Action { get; set; }
+
+}

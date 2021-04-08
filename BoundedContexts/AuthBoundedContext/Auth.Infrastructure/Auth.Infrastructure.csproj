@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <nullable>enable</nullable>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="3.1.0" />
+    <PackageReference Include="Ardalis.Specification" Version="5.0.3" />
+    <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Dapr.AspNetCore" Version="1.1.0" />
+    <PackageReference Include="Dapr.Client" Version="1.1.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="protobuf-net" Version="3.0.101" />
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.0.0-preview.2.21154.2-05" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Core.Infrastructure\Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
+    <ProjectReference Include="..\Auth.Domain\Auth.Domain.csproj" />
+    <ProjectReference Include="..\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
+    <ProjectReference Include="..\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />
+    <ProjectReference Include="..\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

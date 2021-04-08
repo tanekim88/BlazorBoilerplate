@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+						 <data name="Cancel">
+
+		
+		<value>
+			취소
+		</value>
+
+	 </data>
+						 <data name="Create">
+
+		
+		<value>
+			Create
+		</value>
+
+	 </data>
+						 <data name="Read">
+
+		
+		<value>
+			Read
+		</value>
+
+	 </data>
+						 <data name="Update">
+
+		
+		<value>
+			Update
+		</value>
+
+	 </data>
+						 <data name="Delete">
+
+		
+		<value>
+			Delete
+		</value>
+
+	 </data>
+						 <data name="Like">
+
+		
+		<value>
+			Like
+		</value>
+
+	 </data>
+						 <data name="Dislike">
+
+		
+		<value>
+			Dislike
+		</value>
+
+	 </data>
+						 <data name="Laugh">
+
+		
+		<value>
+			Laugh
+		</value>
+
+	 </data>
+						 <data name="Shock">
+
+		
+		<value>
+			Shock
+		</value>
+
+	 </data>
+						 <data name="Smile">
+
+		
+		<value>
+			Smile
+		</value>
+
+	 </data>
+						 <data name="None">
+
+		
+		<value>
+			None
+		</value>
+
+	 </data>
+						 <data name="Leader">
+
+		
+		<value>
+			Leader
+		</value>
+
+	 </data>
+						 <data name="Vice leader">
+
+		
+		<value>
+			Vice leader
+		</value>
+
+	 </data>
+						 <data name="Maintainer">
+
+		
+		<value>
+			Maintainer
+		</value>
+
+	 </data>
+						 <data name="Hooray">
+
+		
+		<value>
+			Hooray
+		</value>
+
+	 </data>
+						 <data name="Heart">
+
+		
+		<value>
+			Heart
+		</value>
+
+	 </data>
+						 <data name="Confused">
+
+		
+		<value>
+			Confused
+		</value>
+
+	 </data>
+						 <data name="Shocked">
+
+		
+		<value>
+			Shocked
+		</value>
+
+	 </data>
+						 <data name="Select">
+
+		
+		<value>
+			Select
+		</value>
+
+	 </data>
+						 <data name="Text">
+
+		
+		<value>
+			Text
+		</value>
+
+	 </data>
+						 <data name="Check box">
+
+		
+		<value>
+			Check box
+		</value>
+
+	 </data>
+						 <data name="Javascript">
+
+		
+		<value>
+			Javascript
+		</value>
+
+	 </data>
+						 <data name="Typescript">
+
+		
+		<value>
+			Typescript
+		</value>
+
+	 </data>
+						 <data name="C sharp">
+
+		
+		<value>
+			C sharp
+		</value>
+
+	 </data>
+						 <data name="Python">
+
+		
+		<value>
+			Python
+		</value>
+
+	 </data>
+						 <data name="Any">
+
+		
+		<value>
+			Any
+		</value>
+
+	 </data>
+						 <data name="Numeric">
+
+		
+		<value>
+			Numeric
+		</value>
+
+	 </data>
+						 <data name="Html">
+
+		
+		<value>
+			Html
+		</value>
+
+	 </data>
+						 <data name="Json">
+
+		
+		<value>
+			Json
+		</value>
+
+	 </data>
+						 <data name="Family">
+
+		
+		<value>
+			Family
+		</value>
+
+	 </data>
+						 <data name="Friend">
+
+		
+		<value>
+			Friend
+		</value>
+
+	 </data>
+						 <data name="Connection">
+
+		
+		<value>
+			Connection
+		</value>
+
+	 </data>
+						 <data name="Everyone">
+
+		
+		<value>
+			Everyone
+		</value>
+
+	 </data>
+						 <data name="Selected">
+
+		
+		<value>
+			Selected
+		</value>
+
+	 </data>
+						 <data name="Dating">
+
+		
+		<value>
+			Dating
+		</value>
+
+	 </data>
+						 <data name="Married">
+
+		
+		<value>
+			Married
+		</value>
+
+	 </data>
+						 <data name="Firtilization">
+
+		
+		<value>
+			Firtilization
+		</value>
+
+	 </data>
+						 <data name="Cleavage">
+
+		
+		<value>
+			Cleavage
+		</value>
+
+	 </data>
+						 <data name="Blastulation">
+
+		
+		<value>
+			Blastulation
+		</value>
+
+	 </data>
+						 <data name="Implantation">
+
+		
+		<value>
+			Implantation
+		</value>
+
+	 </data>
+						 <data name="Firtilized">
+
+		
+		<value>
+			Firtilized
+		</value>
+
+	 </data>
+						 <data name="Morula">
+
+		
+		<value>
+			Morula
+		</value>
+
+	 </data>
+						 <data name="Blastocyst">
+
+		
+		<value>
+			Blastocyst
+		</value>
+
+	 </data>
+						 <data name="Blastocyst Implants in the endometrium of the uterus.">
+
+		
+		<value>
+			Blastocyst Implants in the endometrium of the uterus.
+		</value>
+
+	 </data>
+						 <data name="Embryonic Disc">
+
+		
+		<value>
+			Embryonic Disc
+		</value>
+
+	 </data>
+						 <data name="Gastrulation">
+
+		
+		<value>
+			Gastrulation
+		</value>
+
+	 </data>
+						 <data name="Neurulation">
+
+		
+		<value>
+			Neurulation
+		</value>
+
+	 </data>
+						 <data name="Organogenesis: C shape">
+
+		
+		<value>
+			Organogenesis: C shape
+		</value>
+
+	 </data>
+						 <data name="Organogenesis: Eyes and nose develop, stomach start to develop.">
+
+		
+		<value>
+			Organogenesis: Eyes and nose develop, stomach start to develop.
+		</value>
+
+	 </data>
+						 <data name="Organogenesis: Lung begins to form.">
+
+		
+		<value>
+			Organogenesis: Lung begins to form.
+		</value>
+
+	 </data>
+						 <data name="Organogenesis: Nipples and hair follicles begins to develop.">
+
+		
+		<value>
+			Organogenesis: Nipples and hair follicles begins to develop.
+		</value>
+
+	 </data>
+						 <data name="Fetal Stage begins.">
+
+		
+		<value>
+			Fetal Stage begins.
+		</value>
+
+	 </data>
+						 <data name="Sex organs differentiate.">
+
+		
+		<value>
+			Sex organs differentiate.
+		</value>
+
+	 </data>
+						 <data name="Fingers and toes develop.">
+
+		
+		<value>
+			Fingers and toes develop.
+		</value>
+
+	 </data>
+						 <data name="Hearing begins">
+
+		
+		<value>
+			Hearing begins
+		</value>
+
+	 </data>
+						 <data name="Lungs begin to develop.">
+
+		
+		<value>
+			Lungs begin to develop.
+		</value>
+
+	 </data>
+						 <data name="Brains grow rapidly.">
+
+		
+		<value>
+			Brains grow rapidly.
+		</value>
+
+	 </data>
+						 <data name="Bones fully develop.">
+
+		
+		<value>
+			Bones fully develop.
+		</value>
+
+	 </data>
+						 <data name="Muscles fully develop.">
+
+		
+		<value>
+			Muscles fully develop.
+		</value>
+
+	 </data>
+						 <data name="Full-term development.">
+
+		
+		<value>
+			Full-term development.
+		</value>
+
+	 </data>
+						 <data name="Liked">
+
+		
+		<value>
+			Liked
+		</value>
+
+	 </data>
+						 <data name="Disliked">
+
+		
+		<value>
+			Disliked
+		</value>
+
+	 </data>
+						 <data name="Alert">
+
+		
+		<value>
+			Alert
+		</value>
+
+	 </data>
+						 <data name="Urgent">
+
+		
+		<value>
+			Urgent
+		</value>
+
+	 </data>
+						 <data name="Online">
+
+		
+		<value>
+			Online
+		</value>
+
+	 </data>
+						 <data name="Offline">
+
+		
+		<value>
+			Offline
+		</value>
+
+	 </data>
+						 <data name="Web">
+
+		
+		<value>
+			Web
+		</value>
+
+	 </data>
+						 <data name="Software">
+
+		
+		<value>
+			Software
+		</value>
+
+	 </data>
+						 <data name="Architecture">
+
+		
+		<value>
+			Architecture
+		</value>
+
+	 </data>
+						 <data name="Job applicant">
+
+		
+		<value>
+			Job applicant
+		</value>
+
+	 </data>
+						 <data name="Job employee">
+
+		
+		<value>
+			Job employee
+		</value>
+
+	 </data>
+						 <data name="Job recruiter">
+
+		
+		<value>
+			Job recruiter
+		</value>
+
+	 </data>
+						 <data name="Software engineer">
+
+		
+		<value>
+			Software engineer
+		</value>
+
+	 </data>
+						 <data name="Web designer">
+
+		
+		<value>
+			Web designer
+		</value>
+
+	 </data>
+						 <data name="Web engineer">
+
+		
+		<value>
+			Web engineer
+		</value>
+
+	 </data>
+						 <data name="Roommate">
+
+		
+		<value>
+			Roommate
+		</value>
+
+	 </data>
+						 <data name="Dependent">
+
+		
+		<value>
+			Dependent
+		</value>
+
+	 </data>
+						 <data name="Male">
+
+		
+		<value>
+			Male
+		</value>
+
+	 </data>
+						 <data name="Female">
+
+		
+		<value>
+			Female
+		</value>
+
+	 </data>
+						 <data name="Mother">
+
+		
+		<value>
+			Mother
+		</value>
+
+	 </data>
+						 <data name="Father">
+
+		
+		<value>
+			Father
+		</value>
+
+	 </data>
+						 <data name="Son">
+
+		
+		<value>
+			Son
+		</value>
+
+	 </data>
+						 <data name="Daughter">
+
+		
+		<value>
+			Daughter
+		</value>
+
+	 </data>
+						 <data name="Brother">
+
+		
+		<value>
+			Brother
+		</value>
+
+	 </data>
+						 <data name="Sister">
+
+		
+		<value>
+			Sister
+		</value>
+
+	 </data>
+						 <data name="Uncle">
+
+		
+		<value>
+			Uncle
+		</value>
+
+	 </data>
+						 <data name="Aunt">
+
+		
+		<value>
+			Aunt
+		</value>
+
+	 </data>
+						 <data name="Nephew">
+
+		
+		<value>
+			Nephew
+		</value>
+
+	 </data>
+						 <data name="Niece">
+
+		
+		<value>
+			Niece
+		</value>
+
+	 </data>
+						 <data name="Cousin (Female)">
+
+		
+		<value>
+			Cousin (Female)
+		</value>
+
+	 </data>
+						 <data name="Cousin (Male)">
+
+		
+		<value>
+			Cousin (Male)
+		</value>
+
+	 </data>
+						 <data name="Grandmother">
+
+		
+		<value>
+			Grandmother
+		</value>
+
+	 </data>
+						 <data name="Grandfather">
+
+		
+		<value>
+			Grandfather
+		</value>
+
+	 </data>
+						 <data name="Granddaughter">
+
+		
+		<value>
+			Granddaughter
+		</value>
+
+	 </data>
+						 <data name="Grandson">
+
+		
+		<value>
+			Grandson
+		</value>
+
+	 </data>
+						 <data name="Stepsister">
+
+		
+		<value>
+			Stepsister
+		</value>
+
+	 </data>
+						 <data name="Stepbrother">
+
+		
+		<value>
+			Stepbrother
+		</value>
+
+	 </data>
+						 <data name="Stepmother">
+
+		
+		<value>
+			Stepmother
+		</value>
+
+	 </data>
+						 <data name="Stepfather">
+
+		
+		<value>
+			Stepfather
+		</value>
+
+	 </data>
+						 <data name="Stepdaughter">
+
+		
+		<value>
+			Stepdaughter
+		</value>
+
+	 </data>
+						 <data name="Stepson">
+
+		
+		<value>
+			Stepson
+		</value>
+
+	 </data>
+						 <data name="Sister-in-law">
+
+		
+		<value>
+			Sister-in-law
+		</value>
+
+	 </data>
+						 <data name="Brother-in-law">
+
+		
+		<value>
+			Brother-in-law
+		</value>
+
+	 </data>
+						 <data name="Mother-in-law">
+
+		
+		<value>
+			Mother-in-law
+		</value>
+
+	 </data>
+						 <data name="Father-in-law">
+
+		
+		<value>
+			Father-in-law
+		</value>
+
+	 </data>
+						 <data name="Daughter-in-law">
+
+		
+		<value>
+			Daughter-in-law
+		</value>
+
+	 </data>
+						 <data name="Son in law">
+
+		
+		<value>
+			Son in law
+		</value>
+
+	 </data>
+						 <data name="Sibling (Gender neutral)">
+
+		
+		<value>
+			Sibling (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Parent (Gender neutral)">
+
+		
+		<value>
+			Parent (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Sibling of parent (Gender neutral)">
+
+		
+		<value>
+			Sibling of parent (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Child of sibling (Gender neutral)">
+
+		
+		<value>
+			Child of sibling (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Child (Gender neutral)">
+
+		
+		<value>
+			Child (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Cousin (Gender neutral)">
+
+		
+		<value>
+			Cousin (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Child-in-law (Gender neutral)">
+
+		
+		<value>
+			Child-in-law (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Parent-in-law (Gender neutral)">
+
+		
+		<value>
+			Parent-in-law (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Sibling-in-law (Gender neutral)">
+
+		
+		<value>
+			Sibling-in-law (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Step parent (Gender neutral)">
+
+		
+		<value>
+			Step parent (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Step child (Gender neutral)">
+
+		
+		<value>
+			Step child (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Step sibling (Gender neutral)">
+
+		
+		<value>
+			Step sibling (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Family member (Gender neutral)">
+
+		
+		<value>
+			Family member (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Pet (Gender neutral)">
+
+		
+		<value>
+			Pet (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Pet Owner (Gender neutral)">
+
+		
+		<value>
+			Pet Owner (Gender neutral)
+		</value>
+
+	 </data>
+						 <data name="Pdf">
+
+		
+		<value>
+			Pdf
+		</value>
+
+	 </data>
+						 <data name="Word">
+
+		
+		<value>
+			Word
+		</value>
+
+	 </data>
+						 <data name="&lt; 1 years old.">
+
+		
+		<value>
+			&lt; 1 years old.
+		</value>
+
+	 </data>
+						 <data name="1 - 3 years old.">
+
+		
+		<value>
+			1 - 3 years old.
+		</value>
+
+	 </data>
+						 <data name="4 - 8 years old.">
+
+		
+		<value>
+			4 - 8 years old.
+		</value>
+
+	 </data>
+						 <data name="9 - 13 years old.">
+
+		
+		<value>
+			9 - 13 years old.
+		</value>
+
+	 </data>
+						 <data name="14 - 18 years old.">
+
+		
+		<value>
+			14 - 18 years old.
+		</value>
+
+	 </data>
+						 <data name="19 - 30 years old.">
+
+		
+		<value>
+			19 - 30 years old.
+		</value>
+
+	 </data>
+						 <data name="31 - 50 years old.">
+
+		
+		<value>
+			31 - 50 years old.
+		</value>
+
+	 </data>
+						 <data name="&gt; 50 years old.">
+
+		
+		<value>
+			&gt; 50 years old.
+		</value>
+
+	 </data>
+						 <data name="Airport">
+
+		
+		<value>
+			Airport
+		</value>
+
+	 </data>
+						 <data name="Autonomous community">
+
+		
+		<value>
+			Autonomous community
+		</value>
+
+	 </data>
+						 <data name="Borough">
+
+		
+		<value>
+			Borough
+		</value>
+
+	 </data>
+						 <data name="Canton">
+
+		
+		<value>
+			Canton
+		</value>
+
+	 </data>
+						 <data name="City">
+
+		
+		<value>
+			City
+		</value>
+
+	 </data>
+						 <data name="City region">
+
+		
+		<value>
+			City region
+		</value>
+
+	 </data>
+						 <data name="Congressional district">
+
+		
+		<value>
+			Congressional district
+		</value>
+
+	 </data>
+						 <data name="Country">
+
+		
+		<value>
+			Country
+		</value>
+
+	 </data>
+						 <data name="County">
+
+		
+		<value>
+			County
+		</value>
+
+	 </data>
+						 <data name="Department">
+
+		
+		<value>
+			Department
+		</value>
+
+	 </data>
+						 <data name="District">
+
+		
+		<value>
+			District
+		</value>
+
+	 </data>
+						 <data name="Governorate">
+
+		
+		<value>
+			Governorate
+		</value>
+
+	 </data>
+						 <data name="Municipality">
+
+		
+		<value>
+			Municipality
+		</value>
+
+	 </data>
+						 <data name="National park">
+
+		
+		<value>
+			National park
+		</value>
+
+	 </data>
+						 <data name="Neighborhood">
+
+		
+		<value>
+			Neighborhood
+		</value>
+
+	 </data>
+						 <data name="Okrug">
+
+		
+		<value>
+			Okrug
+		</value>
+
+	 </data>
+						 <data name="Postal code">
+
+		
+		<value>
+			Postal code
+		</value>
+
+	 </data>
+						 <data name="Prefecture">
+
+		
+		<value>
+			Prefecture
+		</value>
+
+	 </data>
+						 <data name="Province">
+
+		
+		<value>
+			Province
+		</value>
+
+	 </data>
+						 <data name="Region">
+
+		
+		<value>
+			Region
+		</value>
+
+	 </data>
+						 <data name="State">
+
+		
+		<value>
+			State
+		</value>
+
+	 </data>
+						 <data name="Territory">
+
+		
+		<value>
+			Territory
+		</value>
+
+	 </data>
+						 <data name="Tv region">
+
+		
+		<value>
+			Tv region
+		</value>
+
+	 </data>
+						 <data name="Union territory">
+
+		
+		<value>
+			Union territory
+		</value>
+
+	 </data>
+						 <data name="University">
+
+		
+		<value>
+			University
+		</value>
+
+	 </data>
+						 <data name="Remember me?">
+
+		
+		<value>
+			Remember me?
+		</value>
+
+	 </data>
+	</root>

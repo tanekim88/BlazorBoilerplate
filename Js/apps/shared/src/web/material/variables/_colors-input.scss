@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+$colors-input: (
+    "primary": blue,
+    "secondary": green,
+    "background": yellow,
+    "surface": white,
+    "error": red,
+    "success": green,
+);
+
+$color-schemes: map-keys($colors-input);
+

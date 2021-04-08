@@ -1,0 +1,6 @@
+#: \Dtos\AuthDtos\LoginDto.cs:17
+#. [Display(Name = "Remember me?")] public bool RememberMe { get; set; }
+msgctxt "SharedAuth.Application.Dtos.AuthDtos.LoginDto"
+msgid "Remember me?"
+msgstr ""
+

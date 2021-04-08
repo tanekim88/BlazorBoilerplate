@@ -1,0 +1,23 @@
+@use "sass:color";
+
+// @use "material-components-web";
+
+// @use "@material/theme" with ( $primary: var(--primary), $secondary: var(--secondary), $error: var(--error), $background: var(--background), $surface:var(--surface) );
+
+// @use "@material/shape" with ( $small-component-radius: 4px, $medium-component-radius: 20px 4px, $large-component-radius: 4px, );
+
+// @use "@material/typography" with ( $font-family: unquote("Josefin Sans, sans-serif"), $styles-button: ( font-size: 14px, font-weight: 600, letter-spacing: 0.05em, ));
+
+
+
+// .validation-message {
+//     @apply text-error;
+// }
+
+// .validation-errors {
+//     list-style-type: disc;
+// }
+
+.material-icons.mdc-top-app-bar__action-item.mdc-icon-button.active::before {
+    opacity: 0.2;
+}

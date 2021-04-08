@@ -1,0 +1,21 @@
+@page "/account/email-confirmed"
+@inject NavigationManager navigationManager
+@inject AuthenticationStateProvider authStateProvider
+@inject IStringLocalizer<Resource> S
+@inherits EmailConfirmedPageBase
+
+<div class="w-full h-full grid place-items-center">
+    <MBCard
+        class="        
+    flex flex-col items-center 
+    px-10
+    pb-10
+    mdc-card
+    "
+        AutoStyled="true">
+        <svg class="bi mt-4 text-primary" width="32" height="32" fill="currentColor">
+            <use xlink:href="bootstrap-icons.svg#check2"/>
+        </svg>
+        <h4 class="text-secondary text-center mt-4">@S[name: "Your email is confirmed"]</h4>
+    </MBCard>
+</div>

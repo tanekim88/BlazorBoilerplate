@@ -1,0 +1,20 @@
+{
+    "folders": [
+        // {
+        //     "path": "IdentityServer"
+        // },
+        // {
+        //     "path": "BlazorApp"
+        // },
+        // {
+        //     "path": "Shared/SharedLibrary"
+        // },
+        // {
+        //     "path": "Shared/ServerLibrary"
+        // },
+        {
+            "path": ".."
+        },
+	],
+	"settings": {}
+}

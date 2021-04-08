@@ -1,0 +1,1 @@
+{"version":3,"file":"webpack.prod.js","sourceRoot":"","sources":["../../../apps/shared/webpack.prod.ts"],"names":[],"mappings":";;AAAA,0FAAqF;AACrF,iEAA6D;AAC7D,iDAA6C;AAC7C,MAAM,WAAW,GAAG,IAAI,0BAAW,CAAC,8BAAa,EAAE,CAAC,yCAAkB,CAAC,CAAC,CAAC;AAEzE,kBAAe,WAAW,CAAC,oBAAoB,CAAC;AAEhD,WAAW,CAAC,OAAO,EAAE,CAAC"}

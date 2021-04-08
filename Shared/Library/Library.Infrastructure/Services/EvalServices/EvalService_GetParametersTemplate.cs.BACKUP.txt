@@ -1,0 +1,138 @@
+using Library.Infrastructure.Services.PathServices;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+
+namespace Library.Infrastructure.Services.EvalServices
+{
+    public partial class EvalService
+    {
+        public record GetIntro_Input
+        {
+            public IDictionary<string, object> Parameters { get; set; }
+            public bool UseVar { get; set; } = true;
+        }
+
+        public record GetIntro_Output
+        {
+            public string ParametersTemplate { get; set; }
+            public List<XmlData> ListOfXmlData { get; set; }
+        }
+
+        public record XmlData
+        {
+            public string Key { get; set; }
+            public string XmlPath { get; set; }
+            public string ClassName { get; set; }
+        }
+
+        public async Task<GetIntro_Output> GetParametersTemplate(GetIntro_Input input)
+        {
+            var builder = new StringBuilder();
+
+
+            var currentProjDirPath = _pathService.GetCurrentProjectPath().ProjectDirPath;
+
+            var tempDirPath = Path.Combine(currentProjDirPath, "Temp");
+            var theadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
+
+            var session = input.Parameters;
+            var sessionKvList = session.ToList();
+
+            List<XmlData> listOfXmlData = sessionKvList.Select((kv, i) =>
+            {
+                var key = kv.Key;
+                object obj = kv.Value;
+                var objType = obj.GetType();
+                using (MemoryStream memoryStream = new MemoryStream())
+                using (StreamReader reader = new StreamReader(memoryStream))
+                {
+                    DataContractSerializer serializer = new DataContractSerializer(obj.GetType());
+                    serializer.WriteObject(memoryStream, obj);
+                    memoryStream.Position = 0;
+                    var xml = reader.ReadToEnd();
+                    //var className = GetClassName(new GetClassName_Input { Type = objType }).ClassName;
+                    var className = objType.Name;
+
+                    var xmlPath = Path.Combine(tempDirPath, new Guid().ToString(), ".xml");
+
+                    FileStream writer = new FileStream(xmlPath, FileMode.Create);
+                    serializer.WriteObject(writer, obj);
+                    writer.Close();
+
+
+
+                    return new XmlData { Key = key, XmlPath = xmlPath, ClassName = className };
+                }
+            }).ToList();
+
+            var varToken = input.UseVar ? "var" : "";
+
+
+            builder.Append("<#\n");
+            listOfXmlData.ForEach(tuple =>
+            {
+                var key = tuple.Key;
+                var xmlPath = tuple.XmlPath;
+                var className = tuple.ClassName;
+                var classNameVarToken = input.UseVar ? className : "";
+
+                var classTypeDecl = "classType_" + className;
+                var classNameDecl = "className_" + className;
+                var declaringTypeNameDecl = "declaringTypeName_" + className;
+                var classNamespaceDecl = "classNamespace_" + className;
+                var xmlDecl = "xml_" + className;
+
+                builder.Append(
+    $@"
+    {varToken} {classTypeDecl} = typeof({className});
+    {varToken} {declaringTypeNameDecl} =  {classTypeDecl}.DeclaringType.Name;
+    {varToken} {classNameDecl} = ""{className}"";
+    {varToken} {classNamespaceDecl} = {classTypeDecl}.Namespace;
+
+
+
+
+    {varToken} {xmlDecl} = @""{xml}""");
+
+                foreach (var kv in sessionKvList)
+                {
+                    var sessionKv = GetAllTypes(new GetAllTypes_InputOutput { Type = kv.Value.GetType() }).ToReturn;
+                    foreach (var type in sessionKv.Values)
+                    {
+                        var classTypeName = type.Name;
+                        builder.Append(
+@$"
+        .Replace( ""<{classTypeName}"", $""<{{{declaringTypeNameDecl}}}.{classTypeName}"")
+        .Replace(""</{classTypeName}"", $""</{{{declaringTypeNameDecl}}}.{classTypeName}"")");
+                    }
+                }
+
+                builder.Append(";");
+                builder.Append(
+    $@"
+    {xmlDecl} = Regex.Replace({xmlDecl}, ""(http://schemas.datacontract.org/2004/07/)[^\""]*"", ""$1"" + {classNamespaceDecl});
+    {classNameVarToken} {key} = null;
+    using (Stream stream = new MemoryStream())
+    {{
+        byte[] data = System.Text.Encoding.Unicode.GetBytes({xmlDecl});
+        stream.Write(data, 0, data.Length);
+        stream.Position = 0;
+        DataContractSerializer deserializer = new DataContractSerializer({classTypeDecl});
+        {key} = ({className})deserializer.ReadObject(stream);
+    }}
+#>
+");
+            });
+
+            return new GetIntro_Output { ParametersTemplate = builder.ToString(), ListOfXmlData = listOfXmlData };
+        }
+    }
+
+
+}

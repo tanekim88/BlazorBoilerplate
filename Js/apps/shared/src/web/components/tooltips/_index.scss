@@ -1,0 +1,182 @@
+.tooltip-right,
+.tooltip-bottom,
+.tooltip-top,
+.tooltip-left {
+  &::after {
+    content: "";
+    position: absolute;
+
+    border-width: 5px;
+    border-style: solid;
+  }
+}
+
+.tooltip-right {
+  top: -5px;
+  left: 125%;
+  /*    top: -5px;
+    left: 105%;*/
+  &::after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-color: transparent #555 transparent transparent;
+  }
+}
+
+.tooltip-bottom {
+  top: 135%;
+  left: 50%;
+  margin-left: -60px;
+  /*    top: 125%;
+    left: 50%;
+    margin-left: -60px;*/
+  &::after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: transparent transparent #555 transparent;
+  }
+}
+
+.tooltip-top {
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  /*    bottom: 115%;
+    left: 50%;
+    margin-left: -60px;*/
+  &::after {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: #555 transparent transparent transparent;
+  }
+}
+
+.tooltip-left {
+  top: -5px;
+  bottom: auto;
+  right: 128%;
+  /*    top: -5px;
+    bottom: auto;
+    right: 105%;*/
+  &::after {
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-color: transparent transparent transparent #555;
+  }
+}
+
+.tooltip {
+  position: relative;
+  /*display: inline-block;*/
+  /*border-bottom: 1px dotted #ccc;*/
+  color: #006080;
+
+  &:hover {
+    .tooltiptext-fade {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltiptext,
+    .tooltiptext-fade-bottomarrow,
+    .tooltiptext-fade-toparrow,
+    .tooltiptext-fade-leftarrow,
+    .tooltiptext-fade-rightarrow {
+      visibility: visible;
+    }
+  }
+
+  .tooltiptext,
+  .tooltiptext-fade {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+  }
+
+  .tooltiptext-fade {
+    opacity: 0;
+    transition: opacity .6s;
+  }
+
+  .tooltiptext-fade-bottomarrow,
+  .tooltiptext-fade-toparrow,
+  .tooltiptext-fade-leftarrow,
+  .tooltiptext-fade-rightarrow {
+    visibility: hidden;
+    width: 120px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      border-width: 5px;
+    }
+  }
+
+  .tooltiptext-fade-bottomarrow {
+    bottom: 130%;
+    left: 50%;
+    margin-left: -60px;
+
+    &::after {
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-color: black transparent transparent transparent;
+    }
+  }
+
+  .tooltiptext-fade-toparrow {
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+
+    &::after {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-color: transparent transparent black transparent;
+    }
+  }
+
+  .tooltiptext-fade-leftarrow {
+    top: -5px;
+    left: 110%;
+
+    &::after {
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-color: transparent black transparent transparent;
+    }
+  }
+
+  .tooltiptext-fade-rightarrow {
+    top: -5px;
+    right: 110%;
+
+    &::after {
+      top: 50%;
+      left: 100%;
+      margin-top: -5px;
+      border-color: transparent transparent transparent black;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+﻿@inherits MainLayoutBase
+
+@inject IMBAnimatedNavigationManager AnimatedNavigationService
+@inject IJSRuntime JsRuntime
+@inject IStringLocalizer<MainLayoutBase> S
+
+<MBDrawer @ref="@Drawer" IsDismissible="true" CloseOnNavigate="true" StartOpen="false">
+
+    <div class="mdc-list">
+        <MBListItem LeadingIcon="home" Label="Home" @onclick="@(() => { })"/>
+    </div>
+
+</MBDrawer>
+
+
+<div class="mdc-drawer-app-content w-full h-full">
+    <div class="@MaterialThemeSharedUiService.CurrentTheme w-full h-full">
+        <header class="mdc-top-app-bar static">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <MBTooltip TooltipType="@MBTooltipType.Span">
+                        <Target>
+                            <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href=""
+                                     aria-label="" Match="NavLinkMatch.All">
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#chat"/>
+                                </svg>
+                            </NavLink>
+                        </Target>
+                        <Content>
+                            GGDB
+                        </Content>
+                    </MBTooltip>
+                    @* <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+                        aria-label="Open navigation menu">menu</button> *@
+                    @* <span class="mdc-top-app-bar__title">GGDB</span> *@
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section flex justify-center">
+                    <MBTooltip TooltipType="@MBTooltipType.Span">
+                        <Target>
+                            <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="shop"
+                                     aria-label="" Match="NavLinkMatch.All">
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#bag"/>
+                                </svg>
+                            </NavLink>
+                        </Target>
+                        <Content>
+                            Market
+                        </Content>
+                    </MBTooltip>
+                    <MBTooltip TooltipType="@MBTooltipType.Span">
+                        <Target>
+                            <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="network"
+                                     aria-label="" Match="NavLinkMatch.All">
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#globe2"/>
+                                </svg>
+                            </NavLink>
+                        </Target>
+                        <Content>
+                            Network
+                        </Content>
+                    </MBTooltip>
+                    <MBTooltip TooltipType="@MBTooltipType.Span">
+                        <Target>
+                            <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="job"
+                                     aria-label="" Match="NavLinkMatch.All">
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#briefcase"/>
+                                </svg>
+                            </NavLink>
+                        </Target>
+                        <Content>
+                            Job
+                        </Content>
+                    </MBTooltip>
+                    <MBTooltip TooltipType="@MBTooltipType.Span">
+                        <Target>
+                            <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="debate"
+                                     aria-label="" Match="NavLinkMatch.All">
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#chat"/>
+                                </svg>
+                            </NavLink>
+                        </Target>
+                        <Content>
+                            Debate
+                        </Content>
+                    </MBTooltip>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+
+                    <AuthorizeView>
+                        <Authorized>
+                            <MBTooltip TooltipType="@MBTooltipType.Span">
+                                <Target>
+                                    <NavLink
+                                        class="material-icons mdc-top-app-bar__action-item mdc-icon-button flex items-center"
+                                        href="authentication/profile"
+                                        Match="NavLinkMatch.All">
+                                        <svg class="bi" width="32" height="32" fill="currentColor">
+                                            <use href="bootstrap-icons.svg#person-circle"/>
+                                        </svg>
+                                    </NavLink>
+                                </Target>
+                                <Content>
+                                    @context.User.Identity.Name
+                                </Content>
+                            </MBTooltip>
+                            <MBTooltip TooltipType="@MBTooltipType.Div">
+                                <Target>
+                                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" @onclick="BeginSignOut">
+                                        <svg class="bi" width="32" height="32" fill="currentColor">
+                                            <use href="bootstrap-icons.svg#power"/>
+                                        </svg>
+                                    </button>
+                                </Target>
+                                <Content>
+                                    @S[name: "Logout"]
+                                </Content>
+                            </MBTooltip>
+                        </Authorized>
+                        <NotAuthorized>
+
+                            <MBTooltip TooltipType="@MBTooltipType.Span">
+                                <Target>
+                                    <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/register"
+                                             aria-label="" Match="NavLinkMatch.All">
+                                        <svg class="bi" width="32" height="32" fill="currentColor">
+                                            <use xlink:href="bootstrap-icons.svg#person-plus"/>
+                                        </svg>
+                                    </NavLink>
+                                </Target>
+                                <Content>
+                                    Sign Up
+                                </Content>
+                            </MBTooltip>
+                            <MBTooltip TooltipType="@MBTooltipType.Span">
+                                <Target>
+                                    <NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/login"
+                                             aria-label="" Match="NavLinkMatch.All">
+                                        <svg class="bi" width="32" height="32" fill="currentColor">
+                                            <use xlink:href="bootstrap-icons.svg#box-arrow-in-right"/>
+                                        </svg>
+                                    </NavLink>
+                                </Target>
+                                <Content>
+                                    Sign In
+                                </Content>
+                            </MBTooltip>
+                        </NotAuthorized>
+                    </AuthorizeView>
+
+
+                </section>
+            </div>
+        </header>
+
+
+        @* <MBTopAppBar Title="Material.Blazor" NavIcon="menu" ScrollTarget="#main-content"
+            TopAppBarType="@MBTopAppBarType.Standard" class="mdc-top-app-bar--short-has-action-item mdc-elevation--z5">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+            aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title">Page title</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <MBIconButton @onclick="@OpenMenuAsync" Icon="more_vert" />
+            <div class="mdc-menu-surface--anchor">
+            <MBMenu @ref="Menu">
+            <MBMenuSelectionGroup @key="@MaterialThemeService.CurrentTheme">
+            <MBListItem Label="Material Default Theme" LeadingIcon="done"
+            IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "material-theme")"
+            @onclick="@(() => ThemeSetterAsync("default-theme"))" />
+            <MBListItem Label="Light Square Theme" LeadingIcon="done"
+            IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "light-square-theme")"
+            @onclick="@(() => ThemeSetterAsync("light-square-theme"))" />
+            <MBListItem Label="Dark Square Theme" LeadingIcon="done"
+            IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "dark-square-theme")"
+            @onclick="@(() => ThemeSetterAsync("dark-square-theme"))" />
+            <MBListItem Label="Rounded Theme" LeadingIcon="done"
+            IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "rounded-theme")"
+            @onclick="@(() => ThemeSetterAsync("rounded-theme"))" />
+            <MBListItem Label="Asymmetric Theme" LeadingIcon="done"
+            IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "asymmetric-theme")"
+            @onclick="@(() => ThemeSetterAsync("asymmetric-theme"))" />
+            </MBMenuSelectionGroup>
+            </MBMenu>
+            </div>
+            </section>
+            </MBTopAppBar> *@
+
+        <main class="w-full h-full" id="main-content">
+            @Body
+        </main>
+    </div>
+</div>

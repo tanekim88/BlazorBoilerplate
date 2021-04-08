@@ -1,0 +1,19 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: app-statestore
+  namespace: app
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: redis:6379
+  - name: redisPassword
+    secretKeyRef:
+      name: appsecrets
+      key: redisPassword
+  - name: actorStateStore
+    value: "true"
+auth:
+  secretStore: kubernetes

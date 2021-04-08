@@ -1,0 +1,1 @@
+{"version":3,"file":"webpack.dev.js","sourceRoot":"","sources":["../../../apps/blazor-app/webpack.dev.ts"],"names":[],"mappings":";;AAAA,uDAAmD;AACnD,uFAGuD;AACvD,iEAAsE;AAEtE,MAAM,WAAW,GAAG,IAAI,0BAAW,CAAC,uCAAsB,EAAE;IACxD,sDAAgC;IAChC,gDAA0B;CAC7B,CAAC,CAAC;AAEH,kBAAe,WAAW,CAAC,oBAAoB,CAAC;AAEhD,WAAW,CAAC,OAAO,EAAE,CAAC"}

@@ -1,0 +1,14 @@
+{
+    "folders": [
+        // {
+        //     "path": "."
+        // },
+        {
+            "path": "../apps/blazor-app"
+        },
+        {
+            "path": "../apps/shared"
+        }
+	],
+	"settings": {}
+}

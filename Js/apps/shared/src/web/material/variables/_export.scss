@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use './index' as *;
+
+// $to-export: (
+//     "materialColors": $material-colors,
+//     "textColors": $text-colors,
+//     "subTypes": $sub-types,
+//     "colorSchemes": $color-schemes,
+//     "textColorSchemes": $text-color-schemes,
+//     "colorsInput": $colors-input,
+// );
+
+// :export {
+//     @each $export-key, $export-value in $to-export {
+//         @if(type-of($export-value) == map){
+//             #{$export-key}: {
+//                 @each $key, $value in  $export-value {
+//                     #{$key}: $value;
+//                 }
+//             }
+//         }@else {
+//             #{$export-key}: $export-value;
+//         }
+//     }
+// }
