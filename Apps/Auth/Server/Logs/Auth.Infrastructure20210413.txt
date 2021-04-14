@@ -1,0 +1,17 @@
+2021-04-13 09:07:42.966 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":32132,"Version":"1.0.0"}2021-04-13 09:09:02.267 -04:00 [INF] HTTP GET / responded 200 in 238.8483 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFKGGGO0J:00000011","ConnectionId":"0HM7UFKGGGO0J","ProcessId":32132,"Version":"1.0.0"}2021-04-13 09:09:05.779 -04:00 [INF] HTTP GET /faviconsfavicon.png responded 404 in 7.1320 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFKGGGO0J:00000111","ConnectionId":"0HM7UFKGGGO0J","ProcessId":32132,"Version":"1.0.0"}2021-04-13 09:13:46.149 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":28320,"Version":"1.0.0"}2021-04-13 09:13:53.653 -04:00 [INF] HTTP GET / responded 200 in 367.8049 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":13,"ThreadId":13,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFNSLN6BA:0000000F","ConnectionId":"0HM7UFNSLN6BA","ProcessId":28320,"Version":"1.0.0"}2021-04-13 09:13:56.007 -04:00 [INF] HTTP GET /faviconsfavicon.png responded 404 in 10.5066 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFNSLN6BA:00000099","ConnectionId":"0HM7UFNSLN6BA","ProcessId":28320,"Version":"1.0.0"}2021-04-13 09:13:59.823 -04:00 [INF] HTTP GET / responded 200 in 20.3372 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFNSLN6BH:00000001","ConnectionId":"0HM7UFNSLN6BH","ProcessId":28320,"Version":"1.0.0"}2021-04-13 09:14:01.954 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 2.2391 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7UFNSLN6BH:000000FF","ConnectionId":"0HM7UFNSLN6BH","ProcessId":28320,"Version":"1.0.0"}

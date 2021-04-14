@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Data Source=.;Initial Catalog=Dev;User ID=sa;Password=Sql@1234;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    "DefaultConnection": "Data Source=.;Initial Catalog=Dev;User ID=sa;Password=Sql@1423;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
   },
   "AllowedHosts": "*",
   "Serilog": {
@@ -36,7 +36,30 @@
       "Application": "Sample"
     }
   },
- 
+  "Authentication": {
+    "Google": {
+      "ClientId": "968377613412-0p830k37rosj2f8112ecbsgnnt4cbhho.apps.googleusercontent.com",
+      "ClientSecret": "oJTrh-fH4JoSmaNKXdykbuLy"
+    },
+    "Facebook": {
+      "AppId": "1338696816285666",
+      "AppSecret": "e8d456e9bd5d978266468bf4eb326b68"
+    },
+    "Microsoft": {
+      "ClientId": "a7c2c242-6f2b-4007-9231-9add5b1cad3c",
+      "ClientSecret": "0IPA*+OfIK/PRsfwdAcOp/KQvizbm923"
+    },
+    "Twitter": {
+      "ConsumerAPIKey": "cgiiH1IbYx3ReiKIkgdp8OFT7",
+      "ConsumerSecret": "uFIBnOZdCrfgzwXJ7dCAU4qCIh7vqmDtQmQPTrcsBjU47GxbuE"
+    }
+  },
+  "Twilio": {
+    "AccountSid": "AC77862009f9681eb757aa46f62b68d27c",
+    "AuthToken": "05534db4e1d1dfb3ffc19f9cea28d513",
+    "PhoneNumber": "+13155054792",
+    "VerifyServiceSid": "VAe6d1b1459c9f41037bcc1bbeaedbf09f"
+  },
   "IdentityServer": {
     "Clients": {
       "BlazorApp.Client": {
