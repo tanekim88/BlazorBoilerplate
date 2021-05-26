@@ -2,7 +2,7 @@
 
 namespace __Entities_BoundedContext_Name__.IntegrationEvents
 {
-    public class Class1
+    public class __Entities_BoundedContext_Name__IntegrationEventsConfig
     {
     }
 }

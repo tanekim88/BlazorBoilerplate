@@ -43,7 +43,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
             //modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
             //%S:end UserAudit
 
-            var types = typeof(__Entities_BoundedContext_Name__DomainConfig).Assembly.GetTypes().Where(type =>
+            var types = typeof(__Entities_BoundedContext_Name__InfrastructureConfig).Assembly.GetTypes().Where(type =>
                 type.Namespace is not null && type.Namespace.Contains(".ValueObjects"));
 
             foreach (var idType in types)

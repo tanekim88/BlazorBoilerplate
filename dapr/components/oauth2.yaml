@@ -1,0 +1,29 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: oauth2
+  namespace: default
+spec:
+  type: middleware.http.oauth2
+  version: v1
+  metadata:
+  - name: clientId
+    value: "code"
+  - name: clientSecret
+    value: ""
+  - name: scopes
+    value: ""
+  - name: authURL
+    value: "https://"
+  - name: tokenURL
+    value: "<token exchange URL>"
+  - name: redirectURL
+    value: "<redirect URL>"
+  - name: authHeaderName
+    value: "<header name under which the secret token is saved>"
+    # forceHTTPS:
+    # This key is used to set HTTPS schema on redirect to your API method
+    # after Dapr successfully received Access Token from Identity Provider.
+    # By default, Dapr will use HTTP on this redirect.
+  - name: forceHTTPS
+    value: "<set to true if you invoke an API method through Dapr from https origin>"

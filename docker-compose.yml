@@ -1,6 +1,22 @@
 version: '3.4'
 
 services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  redis:
+    image: redis:alpine
+
+  seq:
+    image: datalust/seq:latest
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest 
+
+  zipkin:
+    image: openzipkin/zipkin-slim
+
+
   auth.server:
     image: ${DOCKER_REGISTRY-}authserver
     build:

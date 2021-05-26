@@ -15,6 +15,8 @@ namespace Auth.Server
     {
         public static void Main(string[] args)
         {
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+
             var host = CreateHostBuilder(args: args).Build();
             using (var scope = host.Services.CreateScope())
             {

@@ -6,13 +6,19 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-
+using System.Text.Json;
 
 namespace Auth.Server
 {
     public class Startup
     {
+        private readonly JsonSerializerOptions options = new JsonSerializerOptions()
+        {
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        };
+
+
         public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Environment = environment;

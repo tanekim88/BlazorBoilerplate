@@ -46,7 +46,7 @@ namespace Setup.Server
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseBlazorFrameworkFiles();
 

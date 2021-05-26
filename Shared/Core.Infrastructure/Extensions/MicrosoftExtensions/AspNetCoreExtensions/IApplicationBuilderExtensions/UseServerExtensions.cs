@@ -36,7 +36,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
 
             app.UseCors(policyName: "CorsPolicy");
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();

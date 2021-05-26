@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapr.Client" Version="1.1.0" />
+    <PackageReference Include="Dapr.Client" Version="1.2.0-rc01" />
+    <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.6.0-alpha.21070.5" />
   </ItemGroup>
 
   <ItemGroup>

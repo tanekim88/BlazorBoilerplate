@@ -35,7 +35,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
 

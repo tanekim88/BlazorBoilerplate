@@ -31,7 +31,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.Application.Class1).Assembly,
+                        typeof(__Entities_BoundedContext_Name__.Application.__Entities_BoundedContext_Name__ApplicationConfig).Assembly,
                     CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.Application)}",
                     GeneratorSymbol = "",
                     IsShared = false
@@ -87,7 +87,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.IntegrationEvents.Class1).Assembly,
+                        typeof(__Entities_BoundedContext_Name__.IntegrationEvents.__Entities_BoundedContext_Name__IntegrationEventsConfig).Assembly,
                     CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.IntegrationEvents)}",
                     GeneratorSymbol = "",
                     IsShared = false

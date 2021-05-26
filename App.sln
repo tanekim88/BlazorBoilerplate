@@ -256,6 +256,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.ArchTests", "BoundedC
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{7152E5A0-263C-4F67-8F33-8427E14EBD08}"
+	ProjectSection(SolutionItems) = preProject
+		tye.yaml = tye.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{40F2FB21-89FE-4CEC-BF07-6C2A7D865218}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{7C2D7D89-9540-4B88-A1F3-F1EEB2FEEDBF}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\email.yaml = dapr\components\email.yaml
+		dapr\components\oauth2-client-credential.yaml = dapr\components\oauth2-client-credential.yaml
+		dapr\components\oauth2.yaml = dapr\components\oauth2.yaml
+		dapr\components\pubsub.yaml = dapr\components\pubsub.yaml
+		dapr\components\secretstore.yaml = dapr\components\secretstore.yaml
+		dapr\components\statestore.yaml = dapr\components\statestore.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configurations", "configurations", "{0138F662-782D-43F1-85BA-4A147C3E2237}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\configurations\config.yaml = dapr\configurations\config.yaml
+		dapr\configurations\pipeline.yaml = dapr\configurations\pipeline.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1134,6 +1157,9 @@ Global
 		{FC662502-FDEE-4005-A886-3A7607D4096D} = {A8C9FD57-50AF-48BF-AC72-07A04428AFF7}
 		{AC3FDFDB-F874-4433-8F2C-9FD1D8154EF7} = {A8C9FD57-50AF-48BF-AC72-07A04428AFF7}
 		{6A6F6DF9-61F3-4819-8286-4D4F46DFA454} = {A8C9FD57-50AF-48BF-AC72-07A04428AFF7}
+		{40F2FB21-89FE-4CEC-BF07-6C2A7D865218} = {7152E5A0-263C-4F67-8F33-8427E14EBD08}
+		{7C2D7D89-9540-4B88-A1F3-F1EEB2FEEDBF} = {40F2FB21-89FE-4CEC-BF07-6C2A7D865218}
+		{0138F662-782D-43F1-85BA-4A147C3E2237} = {40F2FB21-89FE-4CEC-BF07-6C2A7D865218}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D7EDBD5-2FE0-41BC-8412-B7508EE92AE5}

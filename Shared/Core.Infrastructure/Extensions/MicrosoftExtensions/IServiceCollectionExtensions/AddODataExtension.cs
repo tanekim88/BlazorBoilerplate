@@ -13,12 +13,12 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
     {
         public static IServiceCollection AddCustomOData(this IServiceCollection services)
         {
-            services.AddOData(setupAction: opt =>
-                opt
-                    .AddModel(prefix: "odata", model: GetEdmModel(), configureAction: builder => { })
-                    .AddModel(prefix: "v{version}", model: GetEdmModel())
-                    .Filter().Select().Expand().OrderBy().Count()
-            );
+            //services.AddOData(setupAction: opt =>
+            //    opt
+            //        .AddModel(prefix: "odata", model: GetEdmModel(), configureAction: builder => { })
+            //        .AddModel(prefix: "v{version}", model: GetEdmModel())
+            //        .Filter().Select().Expand().OrderBy().Count()
+            //);
 
             return services;
         }
