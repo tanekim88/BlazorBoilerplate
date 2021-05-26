@@ -17,7 +17,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuild
         public static IConfigurationBuilder AddServerAppSettings(this IConfigurationBuilder config,
             IHostEnvironment env)
         {
-            var sharedAppSettings = new AppSettingsDto();
+            var sharedAppSettings = AppSettingsDto.GetAppSettingsDto(config.Build());
 
             var options = new JsonSerializerOptions
             {

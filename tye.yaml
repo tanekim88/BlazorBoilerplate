@@ -10,9 +10,9 @@ extensions:
 services:
   
   # The name will be used as the app-id. For a .NET project, Tye only needs the path to the project file.
-- name: blazorApp
+- name: BlazorApp
   project: Apps/BlazorApp/Server/BlazorApp.Server.csproj
-- name: auth
+- name: Auth
   project: Apps/Auth/Server/Auth.Server.csproj
   bindings:
     - port: 5000
