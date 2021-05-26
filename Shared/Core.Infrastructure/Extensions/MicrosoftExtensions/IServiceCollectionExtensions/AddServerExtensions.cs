@@ -41,7 +41,6 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
 
             services.AddCustomLocalization();
-            services.AddCustomOData();
             //services.AddCustomOpenIddictAuthentication(configuration);
 
             services.AddCustomRazorPages();

@@ -34,7 +34,6 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             services.AddCustomStores();
 
             services.AddCustomLocalization();
-            services.AddCustomOData();
             services.AddCustomAuthentication(configuration: configuration);
             services.AddCustomOpenIddictDbContextPool(configuration: configuration);
             services.AddCustomOpenIddictDbContext(configuration: configuration);

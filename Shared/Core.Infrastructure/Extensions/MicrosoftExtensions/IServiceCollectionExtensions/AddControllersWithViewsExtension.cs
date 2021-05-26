@@ -1,5 +1,6 @@
 ﻿
 
+using Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IMvcBuilderExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -8,8 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Text.RegularExpressions;
-
-
 
 namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
@@ -24,7 +23,9 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                         parameterTransformer: new SlugifyParameterTransformer()));
 
                 options.InputFormatters.Insert(index: 0, item: GetJsonPatchInputFormatter());
-            }).AddViewLocalization().AddDapr();
+            }).AddViewLocalization()
+            .AddCustomDapr()
+            .UseCustomOData();
 
             return services;
         }
