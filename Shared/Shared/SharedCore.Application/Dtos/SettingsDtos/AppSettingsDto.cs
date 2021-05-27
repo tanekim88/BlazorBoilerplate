@@ -21,13 +21,21 @@ namespace SharedCore.Application.Dtos.SettingsDtos
             }
         };
 
-        public static AppSettingsDto GetAppSettingsDto(IConfiguration configuration) {
+        public static AppSettingsDto GetAppSettingsDto(IConfiguration configuration)
+        {
             var sharedAppSettings = new AppSettingsDto();
             foreach (var projKeyValuePair in sharedAppSettings.Projects)
             {
                 var proj = new ProjectSettingsDto();
                 var url = configuration.GetServiceUri(projKeyValuePair.Key);
-                proj.Url = url.ToString();
+
+                proj.Url = projKeyValuePair.Value.Url;
+
+                if (url is not null)
+                {
+                    proj.Url = url.ToString();
+                }
+
                 sharedAppSettings.Projects[projKeyValuePair.Key] = proj;
             }
 
