@@ -11,8 +11,8 @@
 		<DockerfileContext>..\..\..</DockerfileContext>
 	</PropertyGroup>
 	<ItemGroup>
-		<Content Include="$(SolutionDir)sharedAppsettings.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
-		<Content Include="$(SolutionDir)sharedAppsettings.Development.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
+		<Content Include="$(ProjectDir)/../../../sharedAppsettings.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
+		<Content Include="$(ProjectDir)/../../../sharedAppsettings.Development.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
 	</ItemGroup>
 
 	<ItemGroup>

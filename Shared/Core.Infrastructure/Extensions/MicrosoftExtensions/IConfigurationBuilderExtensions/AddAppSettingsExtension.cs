@@ -33,8 +33,8 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuild
                 //.AddJsonStream(stream: sharedSettingsStream)
                 .AddJsonFile(path: "sharedAppsettings.json", optional: false)
                 .AddJsonFile(path: "appsettings.json", optional: false)
-                .AddJsonFile(path: $"sharedAppsettings.{env.EnvironmentName}.json", optional: false)
-                .AddJsonFile(path: $"appsettings.{env.EnvironmentName}.json", optional: false)
+                .AddJsonFile(path: $"sharedAppsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile(path: $"appsettings.{env.EnvironmentName}.json", optional: true)
                 ;
 
             return config;
