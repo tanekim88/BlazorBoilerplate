@@ -15,8 +15,24 @@ namespace BlazorApp.Client.Shared.Layouts
 {
     public class MainLayoutBase : LayoutComponentBase, IDisposable
     {
-        public const string materialDocRef =
-            "https://github.com/material-components/material-components-web/tree/master/packages/";
+
+        private int _tabIndex = 0;
+        public int TabIndex
+        {
+            get => _tabIndex;
+            set
+            {
+                if (value != _tabIndex)
+                {
+                    _tabIndex = value;
+
+                }
+            }
+        }
+
+        public bool StackIcons { get; set; } = false;
+
+        public string[] TabLabels { get; set; } = { "cat", "dog", "horse-head", "dove", "hippo", "kiwi-bird", "dragon" };
 
         [Inject] public IMaterialThemeSharedUiService MaterialThemeSharedUiService { get; set; }
         [Inject] private IMBAnimatedNavigationManager AnimatedNavigationService { get; set; }
