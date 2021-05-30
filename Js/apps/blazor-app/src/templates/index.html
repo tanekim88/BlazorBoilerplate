@@ -4,7 +4,8 @@
 <head>
     <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <link href="/_content/Material.Blazor/bundled.min.css" rel="stylesheet">
+    <link href="_content/Material.Blazor/Material.min.css" rel="stylesheet" />
+    <link href="_content/Material.Blazor/MaterialBlazor.min.css" rel="stylesheet" />
     <%= htmlWebpackPlugin.tags.headTags %>
     <link href="BlazorApp.Client.styles.css" rel="stylesheet" />
 </head>
@@ -19,7 +20,7 @@
     </div>
 
     <%= htmlWebpackPlugin.tags.bodyTags %>
-    <script src="_content/Material.Blazor/bundled.min.js"></script>
+    <script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>
     <script>
         mdc.tooltip.numbers.HIDE_DELAY_MS = 0
     </script>

@@ -12,6 +12,7 @@ namespace BlazorApp.Client
         public static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
+            builder.RootComponents.Add<App>("#app");
             builder.BuildClient();
             builder.BuildAuthClient();
 
