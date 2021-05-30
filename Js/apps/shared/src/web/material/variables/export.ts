@@ -70,7 +70,7 @@ export const materialVariables = toExport.variables.reduce((acc, curr) => {
 
         acc[jsName] = parsed;
     } else if (/\s?,\s+/.test(curr.compiledValue)) {
-        acc[jsName] = curr.compiledValue.split(/\s?,\s+/);
+        acc[jsName] = curr.compiledValue.split(/\s?"?,\s+"?\s*/);
     } else {
         acc[jsName] = curr.compiledValue;
     }
