@@ -7,9 +7,6 @@ import { CustomInjectable } from '@shared/src/functions/process-webpack-provider
 import { CustomInject } from '@shared/src/functions/process-webpack-providers';
 @CustomInjectable()
 export class WebpackPostcssImportService extends WebpackPostcssBaseService {
-    @CustomInject(EnvironmentService)
-    environmentService: EnvironmentService;
-
     constructor() {
         super(PostcssImport);
     }

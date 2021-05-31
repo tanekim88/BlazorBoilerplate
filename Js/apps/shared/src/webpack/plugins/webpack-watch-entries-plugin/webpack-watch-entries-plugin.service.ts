@@ -124,8 +124,6 @@ class DbEntry {
 }
 
 export class WebpackWatchEntriesPluginOptions extends DbEntry {
-    id: string;
-    outputPath?: string;
     watchOptions?: Watchpack.WatchOption
 }
 

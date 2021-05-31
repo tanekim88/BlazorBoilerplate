@@ -18,8 +18,6 @@ import { BlazorAppWebpackRulesService } from '../rules/webpack-rules/webpack-rul
 import { BlazorAppWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
 @CustomInjectable()
 export class BlazorAppWebpackSharedService extends WebpackSharedService {
-    @CustomInject(BlazorAppEnvironmentService)
-    protected environmentService: BlazorAppEnvironmentService;
 
     @CustomInject(BlazorAppWebpackRulesService)
     private blazorAppClientWebpackRulesService: BlazorAppWebpackRulesService;

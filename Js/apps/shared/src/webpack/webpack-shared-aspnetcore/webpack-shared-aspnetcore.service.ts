@@ -18,10 +18,6 @@ import { WebpackSharedService } from '../webpack-shared/webpack-shared.service';
 const rootDir = rootConfig.rootDir;
 @CustomInjectable()
 export class WebpackSharedAspnetcoreService extends WebpackSharedService {
-    @CustomInject(WebpackRulesService)
-    protected webpackRulesService: WebpackRulesService;
-    @CustomInject(WebpackPluginsService)
-    protected webpackPluginsService: WebpackPluginsService;
 
     createConfiguration(options?) {
         const entry = WebpackWatchEntriesPlugin.getEntries(
@@ -29,7 +25,7 @@ export class WebpackSharedAspnetcoreService extends WebpackSharedService {
                 {
                     patterns: [path.resolve(sharedPaths.src.web.material.toAbsolutePath(), 'native/**/index.ts')],
                     output: {
-                        path: path.resolve(this.environmentService.outputDir, 'native'),
+                        path: path.resolve(this.blazorAppEnvironmentService.outputDir, 'native'),
                         prefix: 'Shared_NativeMaterial'
                     },
                 },

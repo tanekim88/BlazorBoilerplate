@@ -15,14 +15,12 @@ import { WebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugin
 import { WebpackSharedBaseService } from '../webpack-shared-base/webpack-shared-base.service';
 import { sharedPaths } from '@shared/paths';
 import path from 'path';
+import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
 const rootDir = rootConfig.rootDir;
 @CustomInjectable()
 export class WebpackSharedService extends WebpackSharedBaseService {
-    @CustomInject(WebpackRulesService)
-    protected webpackRulesService: WebpackRulesService;
-    @CustomInject(WebpackPluginsService)
-    protected webpackPluginsService: WebpackPluginsService;
-
+    @CustomInject(BlazorAppEnvironmentService)
+    protected blazorAppEnvironmentService: BlazorAppEnvironmentService;
     createConfiguration(options?) {
         const entry = WebpackWatchEntriesPlugin.getEntries(
             [
@@ -62,7 +60,7 @@ export class WebpackSharedService extends WebpackSharedBaseService {
                     }
                 },
                 {
-                    patterns: [this.environmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath()],
+                    patterns: [this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath()],
                     ignoredFromWatch: true,
                     output:{
                         prefix: 'Shared_ServiceWorker'
