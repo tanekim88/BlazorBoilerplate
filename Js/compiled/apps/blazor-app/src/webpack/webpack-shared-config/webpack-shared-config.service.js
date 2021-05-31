@@ -36,7 +36,7 @@ let BlazorAppWebpackSharedConfigService = class BlazorAppWebpackSharedConfigServ
 __decorate([
     process_webpack_providers_2.CustomInject(environment_service_1.BlazorAppEnvironmentService),
     __metadata("design:type", environment_service_1.BlazorAppEnvironmentService)
-], BlazorAppWebpackSharedConfigService.prototype, "environmentService", void 0);
+], BlazorAppWebpackSharedConfigService.prototype, "blazorAppEnvironmentService", void 0);
 __decorate([
     process_webpack_providers_2.CustomInject(webpack_rules_service_1.BlazorAppWebpackRulesConfigService),
     __metadata("design:type", webpack_rules_service_1.BlazorAppWebpackRulesConfigService)

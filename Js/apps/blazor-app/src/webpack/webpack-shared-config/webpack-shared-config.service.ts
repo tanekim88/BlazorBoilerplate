@@ -19,7 +19,7 @@ import { BlazorAppWebpackPluginsConfigService } from '../plugins/webpack-plugins
 @CustomInjectable()
 export class BlazorAppWebpackSharedConfigService extends WebpackSharedConfigService {
     @CustomInject(BlazorAppEnvironmentService)
-    protected environmentService: BlazorAppEnvironmentService;
+    protected blazorAppEnvironmentService: BlazorAppEnvironmentService;
 
     @CustomInject(BlazorAppWebpackRulesConfigService)
     private blazorAppClientWebpackRulesConfigService: BlazorAppWebpackRulesConfigService;

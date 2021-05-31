@@ -3,7 +3,7 @@ import Tailwindcss from 'tailwindcss';
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
 import tailwindConfig from '@shared/tailwind.config';
-
+import resolveConfig from 'tailwindcss/resolveConfig'
 @CustomInjectable()
 export class WebpackTailwindcssService extends WebpackPostcssBaseService {
     constructor() {
@@ -11,9 +11,10 @@ export class WebpackTailwindcssService extends WebpackPostcssBaseService {
     }
 
     createOptions(options?: any): any {
-        console.dir(tailwindConfig);
+        const resolvedConfig =  resolveConfig(tailwindConfig);
+        console.dir(resolvedConfig);
         return this.mergeService.mergeOptions(super.createOptions(), {
-            config: tailwindConfig,
+            config: resolvedConfig,
         });
     }
 }

@@ -4,11 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const deepmerge_1 = __importDefault(require("deepmerge"));
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-// const plugin = require('tailwindcss/plugin');
-const plugin_1 = __importDefault(require("tailwindcss/plugin"));
 const export_1 = require("./src/web/material/variables/export");
 const tailwind_colors_1 = require("./src/web/tailwind/tailwind.colors");
+const path_1 = __importDefault(require("path"));
 const colorsInput = export_1.materialVariables['$colors-input'];
 const materialColors = export_1.materialVariables['$material-colors'];
 const subTypes = export_1.materialVariables['$sub-types'];
@@ -44,32 +42,34 @@ const defaultColors = {
 console.dir(tailwind_colors_1.tailwindColors);
 // console.dir(colorsUtilities);
 // console.dir(textColors);
+const purgePath = path_1.default.resolve(__dirname, './src/**/*.{js,jsx,ts,tsx,vue,html}');
 exports.default = deepmerge_1.default({}, {
+    mode: 'jit',
     // important: true,
-    purge: [],
+    purge: [
+        purgePath
+    ],
     theme: {
         extend: {
             colors: deepmerge_1.default(tailwind_colors_1.tailwindColors, defaultColors),
         },
     },
-    variants: {},
+    // variants: {
+    //     borderRadius: ['responsive', 'important']
+    // },
     plugins: [
-        // tailwindImportant(),
-        // tailwindcssElevation(['responsive'], {
-        //     // color: '77,192,181',
-        //     // opacityBoost: '0.23'
-        // }),
-        plugin_1.default(function ({ addUtilities, addComponents, e, prefix, config, addBase }) {
-            const newUtilities = {
-            // '.skew-10deg': {
-            //     transform: 'skewY(-10deg)',
-            // },
-            // '.skew-15deg': {
-            //     transform: 'skewY(-15deg)',
-            // },
-            };
-            // addUtilities(colorsUtilities);
-        }),
+    // tailwindcssElevation(['responsive'], {
+    //     // color: '77,192,181',
+    //     // opacityBoost: '0.23'
+    // }),
+    // plugin(function ({ addBase, config }) {
+    //     addBase({
+    //         h1: { fontSize: config('theme.fontSize.3xl') },
+    //         h2: { fontSize: config('theme.fontSize.2xl') },
+    //         h3: { fontSize: config('theme.fontSize.xl') },
+    //         h4: { fontSize: config('theme.fontSize.lg') },
+    //     });
+    // }),
     ],
 });
 //# sourceMappingURL=tailwind.config.js.map

@@ -391,6 +391,9 @@ class WebpackWatchEntriesPlugin {
     apply(compiler) {
         // compiler.hooks.afterCompile.tapAsync(this.constructor.name, this.afterCompile.bind(this));
         compiler.hooks.afterEnvironment.tap(WebpackWatchEntriesPlugin.name, () => {
+            if (compiler.watchFileSystem && compiler.watchFileSystem['close']) {
+                compiler.watchFileSystem['close']();
+            }
             compiler.watchFileSystem = new NodeWatchFileSystem(compiler.inputFileSystem, this.options);
         });
         compiler.hooks.compilation.tap(WebpackWatchEntriesPlugin.name, (compilation) => {
@@ -631,10 +634,10 @@ class NodeWatchFileSystem {
         console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         console.dir(entryFiles);
         console.dir(entryDirectories);
-        this.watcher.watch({ files: entryFiles, directories: entryDirectories, missing: [], startTime });
         if (oldWatcher) {
             oldWatcher.close();
         }
+        this.watcher.watch({ files: entryFiles, directories: entryDirectories, missing: [], startTime });
         return {
             close: () => {
                 if (this.watcher) {

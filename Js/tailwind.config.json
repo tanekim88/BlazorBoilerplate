@@ -1,5 +1,8 @@
 {
-    "purge": [],
+    "mode": "jit",
+    "purge": [
+        "C:\\App\\Js\\apps\\shared\\src\\**\\*.{js,jsx,ts,tsx,vue,html}"
+    ],
     "theme": {
         "extend": {
             "colors": {
@@ -365,9 +368,9 @@
             }
         }
     },
-    "variants": {},
     "plugins": [
         {}
     ],
-    "future": {}
+    "future": {},
+    "variants": {}
 }

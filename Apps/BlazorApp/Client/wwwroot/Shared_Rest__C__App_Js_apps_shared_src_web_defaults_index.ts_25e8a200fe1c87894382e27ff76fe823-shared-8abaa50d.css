@@ -84,20 +84,17 @@ body, app {
 .search:focus-within {
   width: 100%;
 }
-
 .search:focus-within .search__input {
   opacity: 1;
   z-index: initial;
   cursor: initial;
   width: calc(100% - var(--size));
 }
-
 .search:focus-within .search__submit {
   background: var(--clr-primary);
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-
 .search:focus-within .search__submit:hover, .search:focus-within .search__submit:focus {
   outline: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
@@ -119,17 +116,14 @@ body, app {
   /* Track */
   /* Handle */
 }
-
 .mb-custom-scrollbars ::-webkit-scrollbar {
   width: var(--mb-scroll-webkit-width);
   height: var(--mb-scroll-webkit-width);
 }
-
 .mb-custom-scrollbars ::-webkit-scrollbar-track {
   background-color: var(--mb-scroll-track-color);
   margin-right: var(--mb-scroll-webkit-margin-right);
 }
-
 .mb-custom-scrollbars ::-webkit-scrollbar-thumb {
   background: var(--mb-scroll-color);
   border-radius: var(--mb-scroll-webkit-border-radius);
@@ -508,7 +502,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-transparent a {
   color: var(--link-on-transparent-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -516,7 +509,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-transparent a:hover {
   color: var(--hover-on-link-on-transparent-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -536,7 +528,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-black a {
   color: var(--link-on-black-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -544,7 +535,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-black a:hover {
   color: var(--hover-on-link-on-black-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -564,7 +554,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-white a {
   color: var(--link-on-white-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -572,7 +561,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-white a:hover {
   color: var(--hover-on-link-on-white-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -592,7 +580,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-50 a {
   color: var(--link-on-red-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -600,7 +587,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-50 a:hover {
   color: var(--hover-on-link-on-red-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -620,7 +606,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-100 a {
   color: var(--link-on-red-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -628,7 +613,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-100 a:hover {
   color: var(--hover-on-link-on-red-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -648,7 +632,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-200 a {
   color: var(--link-on-red-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -656,7 +639,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-200 a:hover {
   color: var(--hover-on-link-on-red-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -676,7 +658,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-300 a {
   color: var(--link-on-red-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -684,7 +665,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-300 a:hover {
   color: var(--hover-on-link-on-red-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -704,7 +684,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-400 a {
   color: var(--link-on-red-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -712,7 +691,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-400 a:hover {
   color: var(--hover-on-link-on-red-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -732,7 +710,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-500 a {
   color: var(--link-on-red-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -740,7 +717,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-500 a:hover {
   color: var(--hover-on-link-on-red-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -760,7 +736,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-600 a {
   color: var(--link-on-red-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -768,7 +743,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-600 a:hover {
   color: var(--hover-on-link-on-red-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -788,7 +762,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-700 a {
   color: var(--link-on-red-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -796,7 +769,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-700 a:hover {
   color: var(--hover-on-link-on-red-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -816,7 +788,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-800 a {
   color: var(--link-on-red-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -824,7 +795,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-800 a:hover {
   color: var(--hover-on-link-on-red-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -844,7 +814,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-900 a {
   color: var(--link-on-red-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -852,7 +821,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-900 a:hover {
   color: var(--hover-on-link-on-red-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -872,7 +840,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red a {
   color: var(--link-on-red-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -880,7 +847,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red a:hover {
   color: var(--hover-on-link-on-red-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -900,7 +866,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-a100 a {
   color: var(--link-on-red-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -908,7 +873,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-a100 a:hover {
   color: var(--hover-on-link-on-red-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -928,7 +892,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-red-a200 a {
   color: var(--link-on-red-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -936,7 +899,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-red-a200 a:hover {
   color: var(--hover-on-link-on-red-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -956,7 +918,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-a400 a {
   color: var(--link-on-red-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -964,7 +925,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-a400 a:hover {
   color: var(--hover-on-link-on-red-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -984,7 +944,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-red-a700 a {
   color: var(--link-on-red-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -992,7 +951,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-red-a700 a:hover {
   color: var(--hover-on-link-on-red-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1012,7 +970,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-50 a {
   color: var(--link-on-pink-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1020,7 +977,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-50 a:hover {
   color: var(--hover-on-link-on-pink-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1040,7 +996,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-100 a {
   color: var(--link-on-pink-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1048,7 +1003,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-100 a:hover {
   color: var(--hover-on-link-on-pink-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1068,7 +1022,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-200 a {
   color: var(--link-on-pink-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1076,7 +1029,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-200 a:hover {
   color: var(--hover-on-link-on-pink-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1096,7 +1048,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-300 a {
   color: var(--link-on-pink-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1104,7 +1055,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-300 a:hover {
   color: var(--hover-on-link-on-pink-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1124,7 +1074,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-400 a {
   color: var(--link-on-pink-400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1132,7 +1081,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-400 a:hover {
   color: var(--hover-on-link-on-pink-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1152,7 +1100,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-500 a {
   color: var(--link-on-pink-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1160,7 +1107,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-500 a:hover {
   color: var(--hover-on-link-on-pink-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1180,7 +1126,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-600 a {
   color: var(--link-on-pink-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1188,7 +1133,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-600 a:hover {
   color: var(--hover-on-link-on-pink-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1208,7 +1152,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-700 a {
   color: var(--link-on-pink-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1216,7 +1159,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-700 a:hover {
   color: var(--hover-on-link-on-pink-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1236,7 +1178,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-800 a {
   color: var(--link-on-pink-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1244,7 +1185,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-800 a:hover {
   color: var(--hover-on-link-on-pink-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1264,7 +1204,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-900 a {
   color: var(--link-on-pink-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1272,7 +1211,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-900 a:hover {
   color: var(--hover-on-link-on-pink-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1292,7 +1230,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink a {
   color: var(--link-on-pink-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1300,7 +1237,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink a:hover {
   color: var(--hover-on-link-on-pink-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1320,7 +1256,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-a100 a {
   color: var(--link-on-pink-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1328,7 +1263,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-a100 a:hover {
   color: var(--hover-on-link-on-pink-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1348,7 +1282,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-pink-a200 a {
   color: var(--link-on-pink-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1356,7 +1289,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-pink-a200 a:hover {
   color: var(--hover-on-link-on-pink-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1376,7 +1308,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-a400 a {
   color: var(--link-on-pink-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1384,7 +1315,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-a400 a:hover {
   color: var(--hover-on-link-on-pink-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1404,7 +1334,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-pink-a700 a {
   color: var(--link-on-pink-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1412,7 +1341,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-pink-a700 a:hover {
   color: var(--hover-on-link-on-pink-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1432,7 +1360,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-50 a {
   color: var(--link-on-purple-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1440,7 +1367,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-50 a:hover {
   color: var(--hover-on-link-on-purple-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1460,7 +1386,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-100 a {
   color: var(--link-on-purple-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1468,7 +1393,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-100 a:hover {
   color: var(--hover-on-link-on-purple-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1488,7 +1412,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-200 a {
   color: var(--link-on-purple-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1496,7 +1419,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-200 a:hover {
   color: var(--hover-on-link-on-purple-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1516,7 +1438,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-300 a {
   color: var(--link-on-purple-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1524,7 +1445,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-300 a:hover {
   color: var(--hover-on-link-on-purple-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1544,7 +1464,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-400 a {
   color: var(--link-on-purple-400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1552,7 +1471,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-400 a:hover {
   color: var(--hover-on-link-on-purple-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1572,7 +1490,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-500 a {
   color: var(--link-on-purple-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1580,7 +1497,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-500 a:hover {
   color: var(--hover-on-link-on-purple-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1600,7 +1516,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-600 a {
   color: var(--link-on-purple-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1608,7 +1523,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-600 a:hover {
   color: var(--hover-on-link-on-purple-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1628,7 +1542,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-700 a {
   color: var(--link-on-purple-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1636,7 +1549,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-700 a:hover {
   color: var(--hover-on-link-on-purple-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1656,7 +1568,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-800 a {
   color: var(--link-on-purple-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1664,7 +1575,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-800 a:hover {
   color: var(--hover-on-link-on-purple-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1684,7 +1594,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-900 a {
   color: var(--link-on-purple-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1692,7 +1601,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-900 a:hover {
   color: var(--hover-on-link-on-purple-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1712,7 +1620,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple a {
   color: var(--link-on-purple-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1720,7 +1627,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple a:hover {
   color: var(--hover-on-link-on-purple-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1740,7 +1646,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-a100 a {
   color: var(--link-on-purple-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1748,7 +1653,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-a100 a:hover {
   color: var(--hover-on-link-on-purple-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1768,7 +1672,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-purple-a200 a {
   color: var(--link-on-purple-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1776,7 +1679,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-purple-a200 a:hover {
   color: var(--hover-on-link-on-purple-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1796,7 +1698,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-a400 a {
   color: var(--link-on-purple-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1804,7 +1705,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-a400 a:hover {
   color: var(--hover-on-link-on-purple-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1824,7 +1724,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-purple-a700 a {
   color: var(--link-on-purple-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1832,7 +1731,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-purple-a700 a:hover {
   color: var(--hover-on-link-on-purple-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1852,7 +1750,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-indigo-50 a {
   color: var(--link-on-indigo-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1860,7 +1757,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-indigo-50 a:hover {
   color: var(--hover-on-link-on-indigo-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1880,7 +1776,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-indigo-100 a {
   color: var(--link-on-indigo-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1888,7 +1783,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-indigo-100 a:hover {
   color: var(--hover-on-link-on-indigo-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1908,7 +1802,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-indigo-200 a {
   color: var(--link-on-indigo-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1916,7 +1809,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-indigo-200 a:hover {
   color: var(--hover-on-link-on-indigo-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1936,7 +1828,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-indigo-300 a {
   color: var(--link-on-indigo-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -1944,7 +1835,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-indigo-300 a:hover {
   color: var(--hover-on-link-on-indigo-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1964,7 +1854,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-400 a {
   color: var(--link-on-indigo-400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -1972,7 +1861,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-400 a:hover {
   color: var(--hover-on-link-on-indigo-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -1992,7 +1880,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-500 a {
   color: var(--link-on-indigo-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2000,7 +1887,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-500 a:hover {
   color: var(--hover-on-link-on-indigo-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2020,7 +1906,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-600 a {
   color: var(--link-on-indigo-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2028,7 +1913,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-600 a:hover {
   color: var(--hover-on-link-on-indigo-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2048,7 +1932,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-700 a {
   color: var(--link-on-indigo-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2056,7 +1939,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-700 a:hover {
   color: var(--hover-on-link-on-indigo-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2076,7 +1958,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-800 a {
   color: var(--link-on-indigo-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2084,7 +1965,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-800 a:hover {
   color: var(--hover-on-link-on-indigo-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2104,7 +1984,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-900 a {
   color: var(--link-on-indigo-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2112,7 +1991,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-900 a:hover {
   color: var(--hover-on-link-on-indigo-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2132,7 +2010,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo a {
   color: var(--link-on-indigo-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2140,7 +2017,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo a:hover {
   color: var(--hover-on-link-on-indigo-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2160,7 +2036,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-indigo-a100 a {
   color: var(--link-on-indigo-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2168,7 +2043,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-indigo-a100 a:hover {
   color: var(--hover-on-link-on-indigo-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2188,7 +2062,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-a200 a {
   color: var(--link-on-indigo-a200-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2196,7 +2069,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-a200 a:hover {
   color: var(--hover-on-link-on-indigo-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2216,7 +2088,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-a400 a {
   color: var(--link-on-indigo-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2224,7 +2095,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-a400 a:hover {
   color: var(--hover-on-link-on-indigo-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2244,7 +2114,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-indigo-a700 a {
   color: var(--link-on-indigo-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2252,7 +2121,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-indigo-a700 a:hover {
   color: var(--hover-on-link-on-indigo-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2272,7 +2140,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-50 a {
   color: var(--link-on-blue-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2280,7 +2147,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-50 a:hover {
   color: var(--hover-on-link-on-blue-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2300,7 +2166,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-100 a {
   color: var(--link-on-blue-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2308,7 +2173,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-100 a:hover {
   color: var(--hover-on-link-on-blue-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2328,7 +2192,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-200 a {
   color: var(--link-on-blue-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2336,7 +2199,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-200 a:hover {
   color: var(--hover-on-link-on-blue-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2356,7 +2218,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-300 a {
   color: var(--link-on-blue-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2364,7 +2225,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-300 a:hover {
   color: var(--hover-on-link-on-blue-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2384,7 +2244,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-400 a {
   color: var(--link-on-blue-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2392,7 +2251,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-400 a:hover {
   color: var(--hover-on-link-on-blue-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2412,7 +2270,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-500 a {
   color: var(--link-on-blue-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2420,7 +2277,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-500 a:hover {
   color: var(--hover-on-link-on-blue-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2440,7 +2296,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-600 a {
   color: var(--link-on-blue-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2448,7 +2303,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-600 a:hover {
   color: var(--hover-on-link-on-blue-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2468,7 +2322,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-700 a {
   color: var(--link-on-blue-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2476,7 +2329,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-700 a:hover {
   color: var(--hover-on-link-on-blue-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2496,7 +2348,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-800 a {
   color: var(--link-on-blue-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2504,7 +2355,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-800 a:hover {
   color: var(--hover-on-link-on-blue-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2524,7 +2374,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-900 a {
   color: var(--link-on-blue-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2532,7 +2381,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-900 a:hover {
   color: var(--hover-on-link-on-blue-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2552,7 +2400,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue a {
   color: var(--link-on-blue-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2560,7 +2407,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue a:hover {
   color: var(--hover-on-link-on-blue-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2580,7 +2426,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-a100 a {
   color: var(--link-on-blue-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2588,7 +2433,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-a100 a:hover {
   color: var(--hover-on-link-on-blue-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2608,7 +2452,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-blue-a200 a {
   color: var(--link-on-blue-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2616,7 +2459,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-blue-a200 a:hover {
   color: var(--hover-on-link-on-blue-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2636,7 +2478,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-a400 a {
   color: var(--link-on-blue-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2644,7 +2485,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-a400 a:hover {
   color: var(--hover-on-link-on-blue-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2664,7 +2504,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-a700 a {
   color: var(--link-on-blue-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2672,7 +2511,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-a700 a:hover {
   color: var(--hover-on-link-on-blue-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2692,7 +2530,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-blue-grey a {
   color: var(--link-on-blue-grey-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2700,7 +2537,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-blue-grey a:hover {
   color: var(--hover-on-link-on-blue-grey-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2720,7 +2556,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-50 a {
   color: var(--link-on-cyan-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2728,7 +2563,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-50 a:hover {
   color: var(--hover-on-link-on-cyan-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2748,7 +2582,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-100 a {
   color: var(--link-on-cyan-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2756,7 +2589,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-100 a:hover {
   color: var(--hover-on-link-on-cyan-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2776,7 +2608,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-200 a {
   color: var(--link-on-cyan-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2784,7 +2615,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-200 a:hover {
   color: var(--hover-on-link-on-cyan-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2804,7 +2634,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-300 a {
   color: var(--link-on-cyan-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2812,7 +2641,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-300 a:hover {
   color: var(--hover-on-link-on-cyan-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2832,7 +2660,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-400 a {
   color: var(--link-on-cyan-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2840,7 +2667,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-400 a:hover {
   color: var(--hover-on-link-on-cyan-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2860,7 +2686,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-500 a {
   color: var(--link-on-cyan-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -2868,7 +2693,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-500 a:hover {
   color: var(--hover-on-link-on-cyan-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2888,7 +2712,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-cyan-600 a {
   color: var(--link-on-cyan-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2896,7 +2719,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-cyan-600 a:hover {
   color: var(--hover-on-link-on-cyan-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2916,7 +2738,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-cyan-700 a {
   color: var(--link-on-cyan-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2924,7 +2745,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-cyan-700 a:hover {
   color: var(--hover-on-link-on-cyan-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2944,7 +2764,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-cyan-800 a {
   color: var(--link-on-cyan-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2952,7 +2771,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-cyan-800 a:hover {
   color: var(--hover-on-link-on-cyan-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -2972,7 +2790,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-cyan-900 a {
   color: var(--link-on-cyan-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -2980,7 +2797,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-cyan-900 a:hover {
   color: var(--hover-on-link-on-cyan-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3000,7 +2816,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan a {
   color: var(--link-on-cyan-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3008,7 +2823,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan a:hover {
   color: var(--hover-on-link-on-cyan-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3028,7 +2842,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-a100 a {
   color: var(--link-on-cyan-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3036,7 +2849,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-a100 a:hover {
   color: var(--hover-on-link-on-cyan-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3056,7 +2868,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-a200 a {
   color: var(--link-on-cyan-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3064,7 +2875,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-a200 a:hover {
   color: var(--hover-on-link-on-cyan-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3084,7 +2894,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-a400 a {
   color: var(--link-on-cyan-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3092,7 +2901,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-a400 a:hover {
   color: var(--hover-on-link-on-cyan-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3112,7 +2920,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-cyan-a700 a {
   color: var(--link-on-cyan-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3120,7 +2927,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-cyan-a700 a:hover {
   color: var(--hover-on-link-on-cyan-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3140,7 +2946,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-50 a {
   color: var(--link-on-teal-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3148,7 +2953,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-50 a:hover {
   color: var(--hover-on-link-on-teal-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3168,7 +2972,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-100 a {
   color: var(--link-on-teal-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3176,7 +2979,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-100 a:hover {
   color: var(--hover-on-link-on-teal-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3196,7 +2998,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-200 a {
   color: var(--link-on-teal-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3204,7 +3005,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-200 a:hover {
   color: var(--hover-on-link-on-teal-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3224,7 +3024,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-300 a {
   color: var(--link-on-teal-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3232,7 +3031,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-300 a:hover {
   color: var(--hover-on-link-on-teal-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3252,7 +3050,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-400 a {
   color: var(--link-on-teal-400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3260,7 +3057,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-400 a:hover {
   color: var(--hover-on-link-on-teal-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3280,7 +3076,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-500 a {
   color: var(--link-on-teal-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3288,7 +3083,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-500 a:hover {
   color: var(--hover-on-link-on-teal-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3308,7 +3102,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-600 a {
   color: var(--link-on-teal-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3316,7 +3109,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-600 a:hover {
   color: var(--hover-on-link-on-teal-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3336,7 +3128,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-700 a {
   color: var(--link-on-teal-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3344,7 +3135,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-700 a:hover {
   color: var(--hover-on-link-on-teal-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3364,7 +3154,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-800 a {
   color: var(--link-on-teal-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3372,7 +3161,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-800 a:hover {
   color: var(--hover-on-link-on-teal-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3392,7 +3180,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal-900 a {
   color: var(--link-on-teal-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3400,7 +3187,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal-900 a:hover {
   color: var(--hover-on-link-on-teal-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3420,7 +3206,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-teal a {
   color: var(--link-on-teal-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3428,7 +3213,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-teal a:hover {
   color: var(--hover-on-link-on-teal-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3448,7 +3232,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-a100 a {
   color: var(--link-on-teal-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3456,7 +3239,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-a100 a:hover {
   color: var(--hover-on-link-on-teal-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3476,7 +3258,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-a200 a {
   color: var(--link-on-teal-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3484,7 +3265,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-a200 a:hover {
   color: var(--hover-on-link-on-teal-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3504,7 +3284,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-a400 a {
   color: var(--link-on-teal-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3512,7 +3291,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-a400 a:hover {
   color: var(--hover-on-link-on-teal-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3532,7 +3310,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-teal-a700 a {
   color: var(--link-on-teal-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3540,7 +3317,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-teal-a700 a:hover {
   color: var(--hover-on-link-on-teal-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3560,7 +3336,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-50 a {
   color: var(--link-on-green-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3568,7 +3343,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-50 a:hover {
   color: var(--hover-on-link-on-green-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3588,7 +3362,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-100 a {
   color: var(--link-on-green-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3596,7 +3369,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-100 a:hover {
   color: var(--hover-on-link-on-green-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3616,7 +3388,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-200 a {
   color: var(--link-on-green-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3624,7 +3395,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-200 a:hover {
   color: var(--hover-on-link-on-green-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3644,7 +3414,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-300 a {
   color: var(--link-on-green-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3652,7 +3421,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-300 a:hover {
   color: var(--hover-on-link-on-green-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3672,7 +3440,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-400 a {
   color: var(--link-on-green-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3680,7 +3447,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-400 a:hover {
   color: var(--hover-on-link-on-green-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3700,7 +3466,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-500 a {
   color: var(--link-on-green-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3708,7 +3473,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-500 a:hover {
   color: var(--hover-on-link-on-green-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3728,7 +3492,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-green-600 a {
   color: var(--link-on-green-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3736,7 +3499,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-green-600 a:hover {
   color: var(--hover-on-link-on-green-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3756,7 +3518,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-green-700 a {
   color: var(--link-on-green-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3764,7 +3525,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-green-700 a:hover {
   color: var(--hover-on-link-on-green-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3784,7 +3544,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-green-800 a {
   color: var(--link-on-green-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3792,7 +3551,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-green-800 a:hover {
   color: var(--hover-on-link-on-green-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3812,7 +3570,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-green-900 a {
   color: var(--link-on-green-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3820,7 +3577,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-green-900 a:hover {
   color: var(--hover-on-link-on-green-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3840,7 +3596,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green a {
   color: var(--link-on-green-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3848,7 +3603,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green a:hover {
   color: var(--hover-on-link-on-green-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3868,7 +3622,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-a100 a {
   color: var(--link-on-green-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3876,7 +3629,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-a100 a:hover {
   color: var(--hover-on-link-on-green-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3896,7 +3648,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-a200 a {
   color: var(--link-on-green-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3904,7 +3655,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-a200 a:hover {
   color: var(--hover-on-link-on-green-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3924,7 +3674,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-green-a400 a {
   color: var(--link-on-green-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3932,7 +3681,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-green-a400 a:hover {
   color: var(--hover-on-link-on-green-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3952,7 +3700,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-green-a700 a {
   color: var(--link-on-green-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -3960,7 +3707,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-green-a700 a:hover {
   color: var(--hover-on-link-on-green-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -3980,7 +3726,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-50 a {
   color: var(--link-on-lime-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -3988,7 +3733,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-50 a:hover {
   color: var(--hover-on-link-on-lime-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4008,7 +3752,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-100 a {
   color: var(--link-on-lime-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4016,7 +3759,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-100 a:hover {
   color: var(--hover-on-link-on-lime-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4036,7 +3778,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-200 a {
   color: var(--link-on-lime-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4044,7 +3785,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-200 a:hover {
   color: var(--hover-on-link-on-lime-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4064,7 +3804,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-300 a {
   color: var(--link-on-lime-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4072,7 +3811,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-300 a:hover {
   color: var(--hover-on-link-on-lime-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4092,7 +3830,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-400 a {
   color: var(--link-on-lime-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4100,7 +3837,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-400 a:hover {
   color: var(--hover-on-link-on-lime-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4120,7 +3856,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-500 a {
   color: var(--link-on-lime-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4128,7 +3863,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-500 a:hover {
   color: var(--hover-on-link-on-lime-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4148,7 +3882,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-600 a {
   color: var(--link-on-lime-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4156,7 +3889,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-600 a:hover {
   color: var(--hover-on-link-on-lime-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4176,7 +3908,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-700 a {
   color: var(--link-on-lime-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4184,7 +3915,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-700 a:hover {
   color: var(--hover-on-link-on-lime-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4204,7 +3934,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-800 a {
   color: var(--link-on-lime-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4212,7 +3941,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-800 a:hover {
   color: var(--hover-on-link-on-lime-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4232,7 +3960,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-lime-900 a {
   color: var(--link-on-lime-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -4240,7 +3967,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-lime-900 a:hover {
   color: var(--hover-on-link-on-lime-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4260,7 +3986,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime a {
   color: var(--link-on-lime-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4268,7 +3993,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime a:hover {
   color: var(--hover-on-link-on-lime-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4288,7 +4012,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-a100 a {
   color: var(--link-on-lime-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4296,7 +4019,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-a100 a:hover {
   color: var(--hover-on-link-on-lime-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4316,7 +4038,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-a200 a {
   color: var(--link-on-lime-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4324,7 +4045,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-a200 a:hover {
   color: var(--hover-on-link-on-lime-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4344,7 +4064,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-a400 a {
   color: var(--link-on-lime-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4352,7 +4071,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-a400 a:hover {
   color: var(--hover-on-link-on-lime-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4372,7 +4090,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-lime-a700 a {
   color: var(--link-on-lime-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4380,7 +4097,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-lime-a700 a:hover {
   color: var(--hover-on-link-on-lime-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4400,7 +4116,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-50 a {
   color: var(--link-on-yellow-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4408,7 +4123,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-50 a:hover {
   color: var(--hover-on-link-on-yellow-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4428,7 +4142,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-100 a {
   color: var(--link-on-yellow-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4436,7 +4149,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-100 a:hover {
   color: var(--hover-on-link-on-yellow-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4456,7 +4168,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-200 a {
   color: var(--link-on-yellow-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4464,7 +4175,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-200 a:hover {
   color: var(--hover-on-link-on-yellow-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4484,7 +4194,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-300 a {
   color: var(--link-on-yellow-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4492,7 +4201,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-300 a:hover {
   color: var(--hover-on-link-on-yellow-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4512,7 +4220,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-400 a {
   color: var(--link-on-yellow-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4520,7 +4227,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-400 a:hover {
   color: var(--hover-on-link-on-yellow-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4540,7 +4246,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-500 a {
   color: var(--link-on-yellow-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4548,7 +4253,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-500 a:hover {
   color: var(--hover-on-link-on-yellow-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4568,7 +4272,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-600 a {
   color: var(--link-on-yellow-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4576,7 +4279,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-600 a:hover {
   color: var(--hover-on-link-on-yellow-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4596,7 +4298,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-700 a {
   color: var(--link-on-yellow-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4604,7 +4305,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-700 a:hover {
   color: var(--hover-on-link-on-yellow-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4624,7 +4324,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-800 a {
   color: var(--link-on-yellow-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4632,7 +4331,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-800 a:hover {
   color: var(--hover-on-link-on-yellow-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4652,7 +4350,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-900 a {
   color: var(--link-on-yellow-900-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4660,7 +4357,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-900 a:hover {
   color: var(--hover-on-link-on-yellow-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4680,7 +4376,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow a {
   color: var(--link-on-yellow-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4688,7 +4383,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow a:hover {
   color: var(--hover-on-link-on-yellow-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4708,7 +4402,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-a100 a {
   color: var(--link-on-yellow-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4716,7 +4409,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-a100 a:hover {
   color: var(--hover-on-link-on-yellow-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4736,7 +4428,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-a200 a {
   color: var(--link-on-yellow-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4744,7 +4435,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-a200 a:hover {
   color: var(--hover-on-link-on-yellow-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4764,7 +4454,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-a400 a {
   color: var(--link-on-yellow-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4772,7 +4461,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-a400 a:hover {
   color: var(--hover-on-link-on-yellow-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4792,7 +4480,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-yellow-a700 a {
   color: var(--link-on-yellow-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4800,7 +4487,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-yellow-a700 a:hover {
   color: var(--hover-on-link-on-yellow-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4820,7 +4506,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-50 a {
   color: var(--link-on-amber-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4828,7 +4513,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-50 a:hover {
   color: var(--hover-on-link-on-amber-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4848,7 +4532,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-100 a {
   color: var(--link-on-amber-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4856,7 +4539,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-100 a:hover {
   color: var(--hover-on-link-on-amber-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4876,7 +4558,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-200 a {
   color: var(--link-on-amber-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4884,7 +4565,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-200 a:hover {
   color: var(--hover-on-link-on-amber-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4904,7 +4584,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-300 a {
   color: var(--link-on-amber-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4912,7 +4591,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-300 a:hover {
   color: var(--hover-on-link-on-amber-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4932,7 +4610,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-400 a {
   color: var(--link-on-amber-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4940,7 +4617,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-400 a:hover {
   color: var(--hover-on-link-on-amber-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4960,7 +4636,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-500 a {
   color: var(--link-on-amber-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4968,7 +4643,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-500 a:hover {
   color: var(--hover-on-link-on-amber-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -4988,7 +4662,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-600 a {
   color: var(--link-on-amber-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -4996,7 +4669,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-600 a:hover {
   color: var(--hover-on-link-on-amber-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5016,7 +4688,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-700 a {
   color: var(--link-on-amber-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5024,7 +4695,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-700 a:hover {
   color: var(--hover-on-link-on-amber-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5044,7 +4714,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-800 a {
   color: var(--link-on-amber-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5052,7 +4721,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-800 a:hover {
   color: var(--hover-on-link-on-amber-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5072,7 +4740,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-900 a {
   color: var(--link-on-amber-900-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5080,7 +4747,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-900 a:hover {
   color: var(--hover-on-link-on-amber-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5100,7 +4766,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber a {
   color: var(--link-on-amber-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5108,7 +4773,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber a:hover {
   color: var(--hover-on-link-on-amber-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5128,7 +4792,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-a100 a {
   color: var(--link-on-amber-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5136,7 +4799,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-a100 a:hover {
   color: var(--hover-on-link-on-amber-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5156,7 +4818,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-a200 a {
   color: var(--link-on-amber-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5164,7 +4825,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-a200 a:hover {
   color: var(--hover-on-link-on-amber-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5184,7 +4844,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-a400 a {
   color: var(--link-on-amber-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5192,7 +4851,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-a400 a:hover {
   color: var(--hover-on-link-on-amber-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5212,7 +4870,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-amber-a700 a {
   color: var(--link-on-amber-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5220,7 +4877,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-amber-a700 a:hover {
   color: var(--hover-on-link-on-amber-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5240,7 +4896,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-50 a {
   color: var(--link-on-orange-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5248,7 +4903,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-50 a:hover {
   color: var(--hover-on-link-on-orange-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5268,7 +4922,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-100 a {
   color: var(--link-on-orange-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5276,7 +4929,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-100 a:hover {
   color: var(--hover-on-link-on-orange-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5296,7 +4948,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-200 a {
   color: var(--link-on-orange-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5304,7 +4955,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-200 a:hover {
   color: var(--hover-on-link-on-orange-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5324,7 +4974,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-300 a {
   color: var(--link-on-orange-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5332,7 +4981,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-300 a:hover {
   color: var(--hover-on-link-on-orange-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5352,7 +5000,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-400 a {
   color: var(--link-on-orange-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5360,7 +5007,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-400 a:hover {
   color: var(--hover-on-link-on-orange-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5380,7 +5026,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-500 a {
   color: var(--link-on-orange-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5388,7 +5033,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-500 a:hover {
   color: var(--hover-on-link-on-orange-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5408,7 +5052,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-600 a {
   color: var(--link-on-orange-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5416,7 +5059,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-600 a:hover {
   color: var(--hover-on-link-on-orange-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5436,7 +5078,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-700 a {
   color: var(--link-on-orange-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5444,7 +5085,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-700 a:hover {
   color: var(--hover-on-link-on-orange-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5464,7 +5104,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-800 a {
   color: var(--link-on-orange-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5472,7 +5111,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-800 a:hover {
   color: var(--hover-on-link-on-orange-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5492,7 +5130,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-orange-900 a {
   color: var(--link-on-orange-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5500,7 +5137,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-orange-900 a:hover {
   color: var(--hover-on-link-on-orange-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5520,7 +5156,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange a {
   color: var(--link-on-orange-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5528,7 +5163,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange a:hover {
   color: var(--hover-on-link-on-orange-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5548,7 +5182,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-a100 a {
   color: var(--link-on-orange-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5556,7 +5189,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-a100 a:hover {
   color: var(--hover-on-link-on-orange-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5576,7 +5208,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-a200 a {
   color: var(--link-on-orange-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5584,7 +5215,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-a200 a:hover {
   color: var(--hover-on-link-on-orange-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5604,7 +5234,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-a400 a {
   color: var(--link-on-orange-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5612,7 +5241,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-a400 a:hover {
   color: var(--hover-on-link-on-orange-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5632,7 +5260,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-orange-a700 a {
   color: var(--link-on-orange-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5640,7 +5267,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-orange-a700 a:hover {
   color: var(--hover-on-link-on-orange-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5660,7 +5286,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-brown-50 a {
   color: var(--link-on-brown-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5668,7 +5293,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-brown-50 a:hover {
   color: var(--hover-on-link-on-brown-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5688,7 +5312,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-brown-100 a {
   color: var(--link-on-brown-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5696,7 +5319,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-brown-100 a:hover {
   color: var(--hover-on-link-on-brown-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5716,7 +5338,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-brown-200 a {
   color: var(--link-on-brown-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5724,7 +5345,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-brown-200 a:hover {
   color: var(--hover-on-link-on-brown-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5744,7 +5364,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-brown-300 a {
   color: var(--link-on-brown-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5752,7 +5371,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-brown-300 a:hover {
   color: var(--hover-on-link-on-brown-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5772,7 +5390,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-400 a {
   color: var(--link-on-brown-400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5780,7 +5397,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-400 a:hover {
   color: var(--hover-on-link-on-brown-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5800,7 +5416,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-500 a {
   color: var(--link-on-brown-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5808,7 +5423,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-500 a:hover {
   color: var(--hover-on-link-on-brown-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5828,7 +5442,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-600 a {
   color: var(--link-on-brown-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5836,7 +5449,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-600 a:hover {
   color: var(--hover-on-link-on-brown-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5856,7 +5468,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-700 a {
   color: var(--link-on-brown-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5864,7 +5475,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-700 a:hover {
   color: var(--hover-on-link-on-brown-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5884,7 +5494,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-800 a {
   color: var(--link-on-brown-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5892,7 +5501,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-800 a:hover {
   color: var(--hover-on-link-on-brown-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5912,7 +5520,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown-900 a {
   color: var(--link-on-brown-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5920,7 +5527,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown-900 a:hover {
   color: var(--hover-on-link-on-brown-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5940,7 +5546,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-brown a {
   color: var(--link-on-brown-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -5948,7 +5553,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-brown a:hover {
   color: var(--hover-on-link-on-brown-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5968,7 +5572,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-50 a {
   color: var(--link-on-grey-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -5976,7 +5579,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-50 a:hover {
   color: var(--hover-on-link-on-grey-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -5996,7 +5598,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-100 a {
   color: var(--link-on-grey-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6004,7 +5605,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-100 a:hover {
   color: var(--hover-on-link-on-grey-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6024,7 +5624,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-200 a {
   color: var(--link-on-grey-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6032,7 +5631,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-200 a:hover {
   color: var(--hover-on-link-on-grey-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6052,7 +5650,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-300 a {
   color: var(--link-on-grey-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6060,7 +5657,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-300 a:hover {
   color: var(--hover-on-link-on-grey-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6080,7 +5676,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-400 a {
   color: var(--link-on-grey-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6088,7 +5683,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-400 a:hover {
   color: var(--hover-on-link-on-grey-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6108,7 +5702,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey-500 a {
   color: var(--link-on-grey-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6116,7 +5709,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey-500 a:hover {
   color: var(--hover-on-link-on-grey-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6136,7 +5728,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-grey-600 a {
   color: var(--link-on-grey-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6144,7 +5735,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-grey-600 a:hover {
   color: var(--hover-on-link-on-grey-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6164,7 +5754,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-grey-700 a {
   color: var(--link-on-grey-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6172,7 +5761,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-grey-700 a:hover {
   color: var(--hover-on-link-on-grey-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6192,7 +5780,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-grey-800 a {
   color: var(--link-on-grey-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6200,7 +5787,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-grey-800 a:hover {
   color: var(--hover-on-link-on-grey-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6220,7 +5806,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-grey-900 a {
   color: var(--link-on-grey-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6228,7 +5813,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-grey-900 a:hover {
   color: var(--hover-on-link-on-grey-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6248,7 +5832,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-grey a {
   color: var(--link-on-grey-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6256,7 +5839,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-grey a:hover {
   color: var(--hover-on-link-on-grey-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6276,7 +5858,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-50 a {
   color: var(--link-on-primary-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6284,7 +5865,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-50 a:hover {
   color: var(--hover-on-link-on-primary-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6304,7 +5884,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-100 a {
   color: var(--link-on-primary-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6312,7 +5891,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-100 a:hover {
   color: var(--hover-on-link-on-primary-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6332,7 +5910,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-200 a {
   color: var(--link-on-primary-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6340,7 +5917,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-200 a:hover {
   color: var(--hover-on-link-on-primary-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6360,7 +5936,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-300 a {
   color: var(--link-on-primary-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6368,7 +5943,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-300 a:hover {
   color: var(--hover-on-link-on-primary-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6388,7 +5962,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-400 a {
   color: var(--link-on-primary-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6396,7 +5969,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-400 a:hover {
   color: var(--hover-on-link-on-primary-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6416,7 +5988,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-500 a {
   color: var(--link-on-primary-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6424,7 +5995,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-500 a:hover {
   color: var(--hover-on-link-on-primary-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6444,7 +6014,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-600 a {
   color: var(--link-on-primary-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6452,7 +6021,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-600 a:hover {
   color: var(--hover-on-link-on-primary-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6472,7 +6040,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-700 a {
   color: var(--link-on-primary-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6480,7 +6047,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-700 a:hover {
   color: var(--hover-on-link-on-primary-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6500,7 +6066,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-800 a {
   color: var(--link-on-primary-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6508,7 +6073,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-800 a:hover {
   color: var(--hover-on-link-on-primary-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6528,7 +6092,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-900 a {
   color: var(--link-on-primary-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6536,7 +6099,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-900 a:hover {
   color: var(--hover-on-link-on-primary-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6556,7 +6118,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-trans-light a {
   color: var(--link-on-primary-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6564,7 +6125,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-trans-light a:hover {
   color: var(--hover-on-link-on-primary-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6584,7 +6144,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-trans a {
   color: var(--link-on-primary-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6592,7 +6151,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-trans a:hover {
   color: var(--hover-on-link-on-primary-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6612,7 +6170,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-trans-dark a {
   color: var(--link-on-primary-trans-dark-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6620,7 +6177,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-trans-dark a:hover {
   color: var(--hover-on-link-on-primary-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6640,7 +6196,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-a100 a {
   color: var(--link-on-primary-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6648,7 +6203,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-a100 a:hover {
   color: var(--hover-on-link-on-primary-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6668,7 +6222,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-primary-a200 a {
   color: var(--link-on-primary-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6676,7 +6229,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-primary-a200 a:hover {
   color: var(--hover-on-link-on-primary-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6696,7 +6248,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-a400 a {
   color: var(--link-on-primary-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6704,7 +6255,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-a400 a:hover {
   color: var(--hover-on-link-on-primary-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6724,7 +6274,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary-a700 a {
   color: var(--link-on-primary-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6732,7 +6281,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary-a700 a:hover {
   color: var(--hover-on-link-on-primary-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6752,7 +6300,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-primary a {
   color: var(--link-on-primary-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6760,7 +6307,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-primary a:hover {
   color: var(--hover-on-link-on-primary-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6780,7 +6326,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-50 a {
   color: var(--link-on-secondary-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6788,7 +6333,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-50 a:hover {
   color: var(--hover-on-link-on-secondary-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6808,7 +6352,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-100 a {
   color: var(--link-on-secondary-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6816,7 +6359,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-100 a:hover {
   color: var(--hover-on-link-on-secondary-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6836,7 +6378,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-200 a {
   color: var(--link-on-secondary-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6844,7 +6385,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-200 a:hover {
   color: var(--hover-on-link-on-secondary-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6864,7 +6404,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-300 a {
   color: var(--link-on-secondary-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6872,7 +6411,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-300 a:hover {
   color: var(--hover-on-link-on-secondary-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6892,7 +6430,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-400 a {
   color: var(--link-on-secondary-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6900,7 +6437,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-400 a:hover {
   color: var(--hover-on-link-on-secondary-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6920,7 +6456,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-500 a {
   color: var(--link-on-secondary-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -6928,7 +6463,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-500 a:hover {
   color: var(--hover-on-link-on-secondary-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6948,7 +6482,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-600 a {
   color: var(--link-on-secondary-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6956,7 +6489,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-600 a:hover {
   color: var(--hover-on-link-on-secondary-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -6976,7 +6508,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-700 a {
   color: var(--link-on-secondary-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -6984,7 +6515,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-700 a:hover {
   color: var(--hover-on-link-on-secondary-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7004,7 +6534,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-800 a {
   color: var(--link-on-secondary-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -7012,7 +6541,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-800 a:hover {
   color: var(--hover-on-link-on-secondary-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7032,7 +6560,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-900 a {
   color: var(--link-on-secondary-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -7040,7 +6567,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-900 a:hover {
   color: var(--hover-on-link-on-secondary-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7060,7 +6586,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-trans-light a {
   color: var(--link-on-secondary-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7068,7 +6593,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-trans-light a:hover {
   color: var(--hover-on-link-on-secondary-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7088,7 +6612,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-trans a {
   color: var(--link-on-secondary-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7096,7 +6619,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-trans a:hover {
   color: var(--hover-on-link-on-secondary-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7116,7 +6638,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-trans-dark a {
   color: var(--link-on-secondary-trans-dark-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -7124,7 +6645,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-trans-dark a:hover {
   color: var(--hover-on-link-on-secondary-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7144,7 +6664,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-a100 a {
   color: var(--link-on-secondary-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7152,7 +6671,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-a100 a:hover {
   color: var(--hover-on-link-on-secondary-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7172,7 +6690,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-a200 a {
   color: var(--link-on-secondary-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7180,7 +6697,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-a200 a:hover {
   color: var(--hover-on-link-on-secondary-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7200,7 +6716,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary-a400 a {
   color: var(--link-on-secondary-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7208,7 +6723,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary-a400 a:hover {
   color: var(--hover-on-link-on-secondary-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7228,7 +6742,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-secondary-a700 a {
   color: var(--link-on-secondary-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -7236,7 +6749,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-secondary-a700 a:hover {
   color: var(--hover-on-link-on-secondary-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7256,7 +6768,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-secondary a {
   color: var(--link-on-secondary-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7264,7 +6775,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-secondary a:hover {
   color: var(--hover-on-link-on-secondary-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7284,7 +6794,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-50 a {
   color: var(--link-on-background-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7292,7 +6801,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-50 a:hover {
   color: var(--hover-on-link-on-background-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7312,7 +6820,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-100 a {
   color: var(--link-on-background-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7320,7 +6827,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-100 a:hover {
   color: var(--hover-on-link-on-background-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7340,7 +6846,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-200 a {
   color: var(--link-on-background-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7348,7 +6853,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-200 a:hover {
   color: var(--hover-on-link-on-background-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7368,7 +6872,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-300 a {
   color: var(--link-on-background-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7376,7 +6879,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-300 a:hover {
   color: var(--hover-on-link-on-background-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7396,7 +6898,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-400 a {
   color: var(--link-on-background-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7404,7 +6905,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-400 a:hover {
   color: var(--hover-on-link-on-background-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7424,7 +6924,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-500 a {
   color: var(--link-on-background-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7432,7 +6931,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-500 a:hover {
   color: var(--hover-on-link-on-background-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7452,7 +6950,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-600 a {
   color: var(--link-on-background-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7460,7 +6957,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-600 a:hover {
   color: var(--hover-on-link-on-background-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7480,7 +6976,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-700 a {
   color: var(--link-on-background-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7488,7 +6983,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-700 a:hover {
   color: var(--hover-on-link-on-background-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7508,7 +7002,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-800 a {
   color: var(--link-on-background-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7516,7 +7009,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-800 a:hover {
   color: var(--hover-on-link-on-background-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7536,7 +7028,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-900 a {
   color: var(--link-on-background-900-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7544,7 +7035,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-900 a:hover {
   color: var(--hover-on-link-on-background-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7564,7 +7054,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-trans-light a {
   color: var(--link-on-background-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7572,7 +7061,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-trans-light a:hover {
   color: var(--hover-on-link-on-background-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7592,7 +7080,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-trans a {
   color: var(--link-on-background-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7600,7 +7087,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-trans a:hover {
   color: var(--hover-on-link-on-background-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7620,7 +7106,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-trans-dark a {
   color: var(--link-on-background-trans-dark-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7628,7 +7113,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-trans-dark a:hover {
   color: var(--hover-on-link-on-background-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7648,7 +7132,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-a100 a {
   color: var(--link-on-background-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7656,7 +7139,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-a100 a:hover {
   color: var(--hover-on-link-on-background-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7676,7 +7158,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-a200 a {
   color: var(--link-on-background-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7684,7 +7165,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-a200 a:hover {
   color: var(--hover-on-link-on-background-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7704,7 +7184,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-a400 a {
   color: var(--link-on-background-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7712,7 +7191,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-a400 a:hover {
   color: var(--hover-on-link-on-background-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7732,7 +7210,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background-a700 a {
   color: var(--link-on-background-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7740,7 +7217,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background-a700 a:hover {
   color: var(--hover-on-link-on-background-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7760,7 +7236,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-background a {
   color: var(--link-on-background-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7768,7 +7243,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-background a:hover {
   color: var(--hover-on-link-on-background-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7788,7 +7262,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-50 a {
   color: var(--link-on-surface-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7796,7 +7269,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-50 a:hover {
   color: var(--hover-on-link-on-surface-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7816,7 +7288,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-200 a {
   color: var(--link-on-surface-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7824,7 +7295,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-200 a:hover {
   color: var(--hover-on-link-on-surface-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7844,7 +7314,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-300 a {
   color: var(--link-on-surface-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7852,7 +7321,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-300 a:hover {
   color: var(--hover-on-link-on-surface-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7872,7 +7340,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-400 a {
   color: var(--link-on-surface-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7880,7 +7347,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-400 a:hover {
   color: var(--hover-on-link-on-surface-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7900,7 +7366,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-500 a {
   color: var(--link-on-surface-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7908,7 +7373,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-500 a:hover {
   color: var(--hover-on-link-on-surface-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7928,7 +7392,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-600 a {
   color: var(--link-on-surface-600-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7936,7 +7399,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-600 a:hover {
   color: var(--hover-on-link-on-surface-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7956,7 +7418,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-700 a {
   color: var(--link-on-surface-700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7964,7 +7425,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-700 a:hover {
   color: var(--hover-on-link-on-surface-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -7984,7 +7444,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-800 a {
   color: var(--link-on-surface-800-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -7992,7 +7451,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-800 a:hover {
   color: var(--hover-on-link-on-surface-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8012,7 +7470,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-900 a {
   color: var(--link-on-surface-900-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8020,7 +7477,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-900 a:hover {
   color: var(--hover-on-link-on-surface-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8040,7 +7496,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-trans-light a {
   color: var(--link-on-surface-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8048,7 +7503,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-trans-light a:hover {
   color: var(--hover-on-link-on-surface-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8068,7 +7522,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-trans a {
   color: var(--link-on-surface-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8076,7 +7529,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-trans a:hover {
   color: var(--hover-on-link-on-surface-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8096,7 +7548,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-trans-dark a {
   color: var(--link-on-surface-trans-dark-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8104,7 +7555,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-trans-dark a:hover {
   color: var(--hover-on-link-on-surface-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8124,7 +7574,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-a100 a {
   color: var(--link-on-surface-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8132,7 +7581,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-a100 a:hover {
   color: var(--hover-on-link-on-surface-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8152,7 +7600,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-a200 a {
   color: var(--link-on-surface-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8160,7 +7607,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-a200 a:hover {
   color: var(--hover-on-link-on-surface-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8180,7 +7626,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-a400 a {
   color: var(--link-on-surface-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8188,7 +7633,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-a400 a:hover {
   color: var(--hover-on-link-on-surface-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8208,7 +7652,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface-a700 a {
   color: var(--link-on-surface-a700-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8216,7 +7659,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface-a700 a:hover {
   color: var(--hover-on-link-on-surface-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8236,7 +7678,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-surface a {
   color: var(--link-on-surface-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8244,7 +7685,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-surface a:hover {
   color: var(--hover-on-link-on-surface-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8264,7 +7704,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-50 a {
   color: var(--link-on-error-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8272,7 +7711,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-50 a:hover {
   color: var(--hover-on-link-on-error-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8292,7 +7730,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-100 a {
   color: var(--link-on-error-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8300,7 +7737,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-100 a:hover {
   color: var(--hover-on-link-on-error-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8320,7 +7756,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-200 a {
   color: var(--link-on-error-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8328,7 +7763,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-200 a:hover {
   color: var(--hover-on-link-on-error-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8348,7 +7782,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-300 a {
   color: var(--link-on-error-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8356,7 +7789,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-300 a:hover {
   color: var(--hover-on-link-on-error-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8376,7 +7808,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-400 a {
   color: var(--link-on-error-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8384,7 +7815,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-400 a:hover {
   color: var(--hover-on-link-on-error-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8404,7 +7834,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-500 a {
   color: var(--link-on-error-500-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8412,7 +7841,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-500 a:hover {
   color: var(--hover-on-link-on-error-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8432,7 +7860,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-600 a {
   color: var(--link-on-error-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8440,7 +7867,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-600 a:hover {
   color: var(--hover-on-link-on-error-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8460,7 +7886,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-700 a {
   color: var(--link-on-error-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8468,7 +7893,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-700 a:hover {
   color: var(--hover-on-link-on-error-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8488,7 +7912,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-800 a {
   color: var(--link-on-error-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8496,7 +7919,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-800 a:hover {
   color: var(--hover-on-link-on-error-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8516,7 +7938,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-900 a {
   color: var(--link-on-error-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8524,7 +7945,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-900 a:hover {
   color: var(--hover-on-link-on-error-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8544,7 +7964,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-trans-light a {
   color: var(--link-on-error-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8552,7 +7971,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-trans-light a:hover {
   color: var(--hover-on-link-on-error-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8572,7 +7990,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-trans a {
   color: var(--link-on-error-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8580,7 +7997,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-trans a:hover {
   color: var(--hover-on-link-on-error-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8600,7 +8016,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-trans-dark a {
   color: var(--link-on-error-trans-dark-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8608,7 +8023,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-trans-dark a:hover {
   color: var(--hover-on-link-on-error-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8628,7 +8042,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-a100 a {
   color: var(--link-on-error-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8636,7 +8049,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-a100 a:hover {
   color: var(--hover-on-link-on-error-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8656,7 +8068,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-error-a200 a {
   color: var(--link-on-error-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8664,7 +8075,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-error-a200 a:hover {
   color: var(--hover-on-link-on-error-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8684,7 +8094,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-a400 a {
   color: var(--link-on-error-a400-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8692,7 +8101,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-a400 a:hover {
   color: var(--hover-on-link-on-error-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8712,7 +8120,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error-a700 a {
   color: var(--link-on-error-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8720,7 +8127,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error-a700 a:hover {
   color: var(--hover-on-link-on-error-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8740,7 +8146,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-error a {
   color: var(--link-on-error-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8748,7 +8153,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-error a:hover {
   color: var(--hover-on-link-on-error-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8768,7 +8172,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-50 a {
   color: var(--link-on-success-50-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8776,7 +8179,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-50 a:hover {
   color: var(--hover-on-link-on-success-50-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8796,7 +8198,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-100 a {
   color: var(--link-on-success-100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8804,7 +8205,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-100 a:hover {
   color: var(--hover-on-link-on-success-100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8824,7 +8224,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-200 a {
   color: var(--link-on-success-200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8832,7 +8231,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-200 a:hover {
   color: var(--hover-on-link-on-success-200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8852,7 +8250,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-300 a {
   color: var(--link-on-success-300-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8860,7 +8257,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-300 a:hover {
   color: var(--hover-on-link-on-success-300-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8880,7 +8276,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-400 a {
   color: var(--link-on-success-400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8888,7 +8283,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-400 a:hover {
   color: var(--hover-on-link-on-success-400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8908,7 +8302,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-500 a {
   color: var(--link-on-success-500-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -8916,7 +8309,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-500 a:hover {
   color: var(--hover-on-link-on-success-500-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8936,7 +8328,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-600 a {
   color: var(--link-on-success-600-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8944,7 +8335,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-600 a:hover {
   color: var(--hover-on-link-on-success-600-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8964,7 +8354,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-700 a {
   color: var(--link-on-success-700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -8972,7 +8361,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-700 a:hover {
   color: var(--hover-on-link-on-success-700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -8992,7 +8380,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-800 a {
   color: var(--link-on-success-800-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -9000,7 +8387,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-800 a:hover {
   color: var(--hover-on-link-on-success-800-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9020,7 +8406,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-900 a {
   color: var(--link-on-success-900-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -9028,7 +8413,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-900 a:hover {
   color: var(--hover-on-link-on-success-900-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9048,7 +8432,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-trans-light a {
   color: var(--link-on-success-trans-light-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9056,7 +8439,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-trans-light a:hover {
   color: var(--hover-on-link-on-success-trans-light-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9076,7 +8458,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-trans a {
   color: var(--link-on-success-trans-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9084,7 +8465,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-trans a:hover {
   color: var(--hover-on-link-on-success-trans-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9104,7 +8484,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-trans-dark a {
   color: var(--link-on-success-trans-dark-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -9112,7 +8491,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-trans-dark a:hover {
   color: var(--hover-on-link-on-success-trans-dark-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9132,7 +8510,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-a100 a {
   color: var(--link-on-success-a100-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9140,7 +8517,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-a100 a:hover {
   color: var(--hover-on-link-on-success-a100-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9160,7 +8536,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-a200 a {
   color: var(--link-on-success-a200-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9168,7 +8543,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-a200 a:hover {
   color: var(--hover-on-link-on-success-a200-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9188,7 +8562,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success-a400 a {
   color: var(--link-on-success-a400-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9196,7 +8569,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success-a400 a:hover {
   color: var(--hover-on-link-on-success-a400-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9216,7 +8588,6 @@ body, app {
   --mdc-theme-on-background: white;
   --mdc-theme-on-surface: white;
 }
-
 .bg-success-a700 a {
   color: var(--link-on-success-a700-color, skyblue);
   --mdc-theme-on-primary: skyblue;
@@ -9224,7 +8595,6 @@ body, app {
   --mdc-theme-on-background: skyblue;
   --mdc-theme-on-surface: skyblue;
 }
-
 .bg-success-a700 a:hover {
   color: var(--hover-on-link-on-success-a700-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;
@@ -9244,7 +8614,6 @@ body, app {
   --mdc-theme-on-background: #000000;
   --mdc-theme-on-surface: #000000;
 }
-
 .bg-success a {
   color: var(--link-on-success-color, #0000ff);
   --mdc-theme-on-primary: #0000ff;
@@ -9252,7 +8621,6 @@ body, app {
   --mdc-theme-on-background: #0000ff;
   --mdc-theme-on-surface: #0000ff;
 }
-
 .bg-success a:hover {
   color: var(--hover-on-link-on-success-color, #ff0000);
   --mdc-theme-on-primary: #ff0000;

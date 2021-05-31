@@ -17,14 +17,16 @@ const tailwindcss_1 = __importDefault(require("tailwindcss"));
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
 const tailwind_config_1 = __importDefault(require("@shared/tailwind.config"));
+const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
 let WebpackTailwindcssService = class WebpackTailwindcssService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(tailwindcss_1.default);
     }
     createOptions(options) {
-        console.dir(tailwind_config_1.default);
+        const resolvedConfig = resolveConfig_1.default(tailwind_config_1.default);
+        console.dir(resolvedConfig);
         return this.mergeService.mergeOptions(super.createOptions(), {
-            config: tailwind_config_1.default,
+            config: resolvedConfig,
         });
     }
 };

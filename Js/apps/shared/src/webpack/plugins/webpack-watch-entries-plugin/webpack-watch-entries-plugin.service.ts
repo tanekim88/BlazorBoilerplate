@@ -19,7 +19,6 @@ import { RawSource } from 'webpack-sources';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import loaderUtils from 'loader-utils';
-import { cwd } from 'node:process';
 
 const update = (target, process) => {
     return immutabilityHelper(target, process);

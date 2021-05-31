@@ -7,7 +7,7 @@ import plugin from 'tailwindcss/plugin';
 import { materialVariables } from './src/web/material/variables/export';
 import { tailwindColors } from './src/web/tailwind/tailwind.colors';
 import tailwindImportant from 'tailwindcss-important';
-
+import path from 'path';
 const colorsInput = materialVariables['$colors-input'];
 const materialColors = materialVariables['$material-colors'];
 const subTypes = materialVariables['$sub-types'];
@@ -45,11 +45,16 @@ console.dir(tailwindColors);
 // console.dir(colorsUtilities);
 // console.dir(textColors);
 
+const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,vue,html}');
+
 export default deepmerge(
     {},
     {
+        mode:'jit',
         // important: true,
-        purge: [],
+        purge: [
+            purgePath
+        ],
         theme: {
             extend: {
                 colors: deepmerge(tailwindColors, defaultColors),
@@ -58,25 +63,16 @@ export default deepmerge(
             // breakpoints: {},
             // lineHeight: {},
         },
-        variants: {},
+        // variants: {
+        //     borderRadius: ['responsive', 'important']
+
+        // },
         plugins: [
-            // tailwindImportant(),
             // tailwindcssElevation(['responsive'], {
             //     // color: '77,192,181',
             //     // opacityBoost: '0.23'
             // }),
-            plugin(function ({ addUtilities, addComponents, e, prefix, config, addBase }) {
-                const newUtilities = {
-                    // '.skew-10deg': {
-                    //     transform: 'skewY(-10deg)',
-                    // },
-                    // '.skew-15deg': {
-                    //     transform: 'skewY(-15deg)',
-                    // },
-                };
-
-                // addUtilities(colorsUtilities);
-            }),
+         
             // plugin(function ({ addBase, config }) {
             //     addBase({
             //         h1: { fontSize: config('theme.fontSize.3xl') },
