@@ -40,8 +40,8 @@ export class WebpackPostcssService {
     protected webpackRfsService: WebpackRfsService;
     createPostcssPlugins() {
         const plugins = [];
-        // plugins.push(this.webpackPostcssRfsAutopilotService.createPlugin());
-        // plugins.push(this.webpackRfsService.createPlugin());
+        plugins.push(this.webpackPostcssRfsAutopilotService.createPlugin());
+        plugins.push(this.webpackRfsService.createPlugin());
 
         plugins.push(this.webpackTailwindcssService.createPlugin());
         // plugins.push(this.webpackPostcssFunctionsService.createPlugin());

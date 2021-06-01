@@ -3,7 +3,7 @@ import tailwindcssElevation from 'tailwindcss-elevation';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 // const plugin = require('tailwindcss/plugin');
-import plugin from 'tailwindcss/plugin';
+const plugin = require('tailwindcss/plugin')
 import { materialVariables } from './src/web/material/variables/export';
 import { tailwindColors } from './src/web/tailwind/tailwind.colors';
 import tailwindImportant from 'tailwindcss-important';
@@ -45,16 +45,17 @@ console.dir(tailwindColors);
 // console.dir(colorsUtilities);
 // console.dir(textColors);
 
-const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,vue,html}');
+const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,html,cshtml}');
+
 
 export default deepmerge(
     {},
     {
-        mode:'jit',
+        // mode:'jit',
         // important: true,
-        purge: [
-            purgePath
-        ],
+        // purge: [
+        //     purgePath,
+        // ],
         theme: {
             extend: {
                 colors: deepmerge(tailwindColors, defaultColors),
@@ -63,16 +64,24 @@ export default deepmerge(
             // breakpoints: {},
             // lineHeight: {},
         },
-        // variants: {
-        //     borderRadius: ['responsive', 'important']
-
-        // },
+    
         plugins: [
+            // tailwindImportant(),
             // tailwindcssElevation(['responsive'], {
             //     // color: '77,192,181',
             //     // opacityBoost: '0.23'
             // }),
-         
+            plugin(function ({ addVariant, e}) {
+                addVariant('important', ({ container }) => {
+                    container.walkRules(rule => {
+                      rule.selector = `.\\!${rule.selector.slice(1)}`
+                      rule.walkDecls(decl => {
+                        decl.important = true
+                      })
+                    })
+                  })
+                // addUtilities(colorsUtilities);
+            }),
             // plugin(function ({ addBase, config }) {
             //     addBase({
             //         h1: { fontSize: config('theme.fontSize.3xl') },

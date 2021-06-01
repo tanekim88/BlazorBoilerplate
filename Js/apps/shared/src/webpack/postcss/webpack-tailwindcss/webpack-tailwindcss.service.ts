@@ -11,6 +11,7 @@ export class WebpackTailwindcssService extends WebpackPostcssBaseService {
     }
 
     createOptions(options?: any): any {
+        console.dir(tailwindConfig);
         const resolvedConfig =  resolveConfig(tailwindConfig);
         console.dir(resolvedConfig);
         return this.mergeService.mergeOptions(super.createOptions(), {

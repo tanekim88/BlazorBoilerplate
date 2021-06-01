@@ -1,7 +1,7 @@
 {
     "mode": "jit",
     "purge": [
-        "C:\\App\\Js\\apps\\shared\\src\\**\\*.{js,jsx,ts,tsx,vue,html}"
+        "C:\\App\\Js\\apps\\shared\\src\\**\\*.{js,jsx,ts,tsx,vue,html,cshtml}"
     ],
     "theme": {
         "extend": {
@@ -368,5 +368,7 @@
             }
         }
     },
-    "plugins": []
+    "plugins": {
+        "@tailwindcss/jit": {}
+    }
 }

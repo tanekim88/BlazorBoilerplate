@@ -19,7 +19,7 @@ import { AuthWebpackPluginsConfigService } from '../plugins/webpack-plugins/webp
 @CustomInjectable()
 export class AuthWebpackSharedConfigService extends WebpackSharedConfigService {
     @CustomInject(AuthEnvironmentService)
-    protected environmentService: AuthEnvironmentService;
+    protected authEnvironmentService: AuthEnvironmentService;
 
     @CustomInject(AuthWebpackRulesConfigService)
     private authWebpackRulesConfigService: AuthWebpackRulesConfigService;

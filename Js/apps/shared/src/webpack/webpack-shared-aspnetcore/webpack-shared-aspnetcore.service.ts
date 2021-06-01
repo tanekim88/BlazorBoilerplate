@@ -25,7 +25,7 @@ export class WebpackSharedAspnetcoreService extends WebpackSharedService {
                 {
                     patterns: [path.resolve(sharedPaths.src.web.material.toAbsolutePath(), 'native/**/index.ts')],
                     output: {
-                        path: path.resolve(this.blazorAppEnvironmentService.outputDir, 'native'),
+                        path: path.resolve(this.environmentService.outputDir, 'native'),
                         prefix: 'Shared_NativeMaterial'
                     },
                 },

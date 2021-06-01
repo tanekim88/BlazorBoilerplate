@@ -5,9 +5,11 @@
   --background: #eee;
   --surface: #fff;
 }
+
 .rounded-theme .mdc-button {
-  border-radius: 18px;
+  border-radius: 1.125rem;
 }
+
 .rounded-theme .mdc-button .mdc-button__ripple {
-  border-radius: 18px;
+  border-radius: 1.125rem;
 }

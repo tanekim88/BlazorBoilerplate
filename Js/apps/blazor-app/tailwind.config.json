@@ -1,9 +1,4 @@
 {
-    "mode": "jit",
-    "purge": [
-        "C:\\App\\Js\\apps\\shared\\src\\**\\*.{js,jsx,ts,tsx,vue,html}",
-        "C:\\App\\Js\\apps\\blazor-app\\src\\**\\*.{js,jsx,ts,tsx,vue,html}"
-    ],
     "theme": {
         "extend": {
             "colors": {
@@ -369,6 +364,9 @@
             }
         }
     },
+    "variants": [
+        "responsive"
+    ],
     "plugins": [
         {}
     ]

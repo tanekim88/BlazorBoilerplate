@@ -7,11 +7,11 @@ import path from 'path';
 
 
 const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,vue,html}');
-
+const purgePath2 = path.resolve( __dirname, '../../../Apps/BlazorApp/Client/**/*.{razor}');
 
 export default deepmerge(sharedConfig, {
     // future: {},
-    purge: [purgePath],
+    // purge: [purgePath, purgePath2],
     // theme: {
     //     extend: {
     //         // width: {},

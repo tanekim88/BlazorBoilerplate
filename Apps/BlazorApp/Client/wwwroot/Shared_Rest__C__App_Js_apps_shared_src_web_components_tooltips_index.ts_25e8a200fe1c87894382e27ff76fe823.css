@@ -9,60 +9,76 @@
 }
 
 .tooltip-right {
-  top: -5px;
+  top: -0.3125rem;
   left: 125%;
   /*    top: -5px;
     left: 105%;*/
 }
+
 .tooltip-right::after {
   top: 50%;
   right: 100%;
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   border-color: transparent #555 transparent transparent;
 }
 
 .tooltip-bottom {
   top: 135%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: calc(-1.5rem - 3vw);
   /*    top: 125%;
     left: 50%;
     margin-left: -60px;*/
 }
+
+@media (min-width: 1200px) {
+  .tooltip-bottom {
+    margin-left: -3.75rem;
+  }
+}
+
 .tooltip-bottom::after {
   bottom: 100%;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -0.3125rem;
   border-color: transparent transparent #555 transparent;
 }
 
 .tooltip-top {
   bottom: 125%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: calc(-1.5rem - 3vw);
   /*    bottom: 115%;
     left: 50%;
     margin-left: -60px;*/
 }
+
+@media (min-width: 1200px) {
+  .tooltip-top {
+    margin-left: -3.75rem;
+  }
+}
+
 .tooltip-top::after {
   top: 100%;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -0.3125rem;
   border-color: #555 transparent transparent transparent;
 }
 
 .tooltip-left {
-  top: -5px;
+  top: -0.3125rem;
   bottom: auto;
   right: 128%;
   /*    top: -5px;
     bottom: auto;
     right: 105%;*/
 }
+
 .tooltip-left::after {
   top: 50%;
   left: 100%;
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   border-color: transparent transparent transparent #555;
 }
 
@@ -72,10 +88,12 @@
   /*border-bottom: 1px dotted #ccc;*/
   color: #006080;
 }
+
 .tooltip:hover .tooltiptext-fade {
   visibility: visible;
   opacity: 1;
 }
+
 .tooltip:hover .tooltiptext,
 .tooltip:hover .tooltiptext-fade-bottomarrow,
 .tooltip:hover .tooltiptext-fade-toparrow,
@@ -83,6 +101,7 @@
 .tooltip:hover .tooltiptext-fade-rightarrow {
   visibility: visible;
 }
+
 .tooltip .tooltiptext,
 .tooltip .tooltiptext-fade {
   visibility: hidden;
@@ -91,14 +110,16 @@
   background-color: #555;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  padding: 0.3125rem 0;
+  border-radius: 0.375rem;
   z-index: 1;
 }
+
 .tooltip .tooltiptext-fade {
   opacity: 0;
   transition: opacity 0.6s;
 }
+
 .tooltip .tooltiptext-fade-bottomarrow,
 .tooltip .tooltiptext-fade-toparrow,
 .tooltip .tooltiptext-fade-leftarrow,
@@ -108,11 +129,12 @@
   background-color: #111;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  border-radius: 0.375rem;
+  padding: 0.3125rem 0;
   position: absolute;
   z-index: 1;
 }
+
 .tooltip .tooltiptext-fade-bottomarrow::after,
 .tooltip .tooltiptext-fade-toparrow::after,
 .tooltip .tooltiptext-fade-leftarrow::after,
@@ -122,45 +144,65 @@
   border-style: solid;
   border-width: 5px;
 }
+
 .tooltip .tooltiptext-fade-bottomarrow {
   bottom: 130%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: calc(-1.5rem - 3vw);
 }
+
+@media (min-width: 1200px) {
+  .tooltip .tooltiptext-fade-bottomarrow {
+    margin-left: -3.75rem;
+  }
+}
+
 .tooltip .tooltiptext-fade-bottomarrow::after {
   top: 100%;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -0.3125rem;
   border-color: black transparent transparent transparent;
 }
+
 .tooltip .tooltiptext-fade-toparrow {
   top: 150%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: calc(-1.5rem - 3vw);
 }
+
+@media (min-width: 1200px) {
+  .tooltip .tooltiptext-fade-toparrow {
+    margin-left: -3.75rem;
+  }
+}
+
 .tooltip .tooltiptext-fade-toparrow::after {
   bottom: 100%;
   left: 50%;
-  margin-left: -5px;
+  margin-left: -0.3125rem;
   border-color: transparent transparent black transparent;
 }
+
 .tooltip .tooltiptext-fade-leftarrow {
-  top: -5px;
+  top: -0.3125rem;
   left: 110%;
 }
+
 .tooltip .tooltiptext-fade-leftarrow::after {
   top: 50%;
   right: 100%;
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   border-color: transparent black transparent transparent;
 }
+
 .tooltip .tooltiptext-fade-rightarrow {
-  top: -5px;
+  top: -0.3125rem;
   right: 110%;
 }
+
 .tooltip .tooltiptext-fade-rightarrow::after {
   top: 50%;
   left: 100%;
-  margin-top: -5px;
+  margin-top: -0.3125rem;
   border-color: transparent transparent transparent black;
 }

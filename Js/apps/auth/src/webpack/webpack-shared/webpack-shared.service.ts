@@ -20,7 +20,7 @@ import { sharedPaths } from '@shared/paths';
 @CustomInjectable()
 export class AuthWebpackSharedService extends WebpackSharedService {
     @CustomInject(AuthEnvironmentService)
-    protected environmentService: AuthEnvironmentService;
+    protected authEnvironmentService: AuthEnvironmentService;
 
     @CustomInject(AuthWebpackRulesService)
     private authWebpackRulesService: AuthWebpackRulesService;
