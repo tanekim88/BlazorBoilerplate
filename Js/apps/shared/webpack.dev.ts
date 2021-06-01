@@ -4,6 +4,7 @@ import { WebpackBase } from './webpack.base';
 
 const webpackBase = new WebpackBase(WebpackModule, [WebpackDevService]);
 
+
 export default webpackBase.createWebpackConfigs;
 
 webpackBase.execute();
