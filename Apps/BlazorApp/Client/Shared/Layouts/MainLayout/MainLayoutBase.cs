@@ -4,6 +4,7 @@ using System;
 using System.Threading.Tasks;
 using Material.Blazor;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.JSInterop;
@@ -40,6 +41,15 @@ namespace BlazorApp.Client.Shared.Layouts
         [Inject] private NavigationManager Navigation { get; set; }
         [Inject] private SignOutSessionStateManager SignOutManager { get; set; }
 
+
+
+        public bool IsActive(string href, NavLinkMatch navLinkMatch = NavLinkMatch.Prefix)
+        {
+            var relativePath = Navigation.ToBaseRelativePath(Navigation.Uri).ToLower();
+            return navLinkMatch == NavLinkMatch.All ? relativePath == href.ToLower() : relativePath.StartsWith(href.ToLower());
+        }
+        public string GetTabIndActive(string href, NavLinkMatch navLinkMatch = NavLinkMatch.Prefix) => IsActive(href, navLinkMatch) ? "mdc-tab-indicator--active" : "";
+
         public MBDrawer Drawer { get; set; }
 
         public MBMenu Menu { get; set; }
@@ -59,6 +69,7 @@ namespace BlazorApp.Client.Shared.Layouts
         protected override Task OnInitializedAsync()
         {
             MaterialThemeSharedUiService.OnThemeChange += StateHasChanged;
+            Navigation.LocationChanged += (s, e) => StateHasChanged();
             return base.OnInitializedAsync();
         }
 

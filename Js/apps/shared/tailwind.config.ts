@@ -65,6 +65,7 @@ export default deepmerge(
             // lineHeight: {},
         },
     
+        variants:['responsive', 'important'],
         plugins: [
             // tailwindImportant(),
             // tailwindcssElevation(['responsive'], {

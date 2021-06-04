@@ -15,14 +15,14 @@
 
 <div class="mdc-drawer-app-content w-full h-full">
 	<div class="@MaterialThemeSharedUiService.CurrentTheme w-full h-full">
-		<header class="mdc-top-app-bar static bg-surface" style="height:20%">
+		<header class="mdc-top-app-bar static bg-surface">
 			<div class="mdc-top-app-bar__row h-full">
-				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start items-stretch">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 					<MBTooltip TooltipType="@MBTooltipType.Div">
 						<Target>
-							<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button h-full w-auto" style="aspect-ratio:1/1" href=""
+							<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href=""
 									 aria-label="" Match="NavLinkMatch.All">
-								<svg class="bi !w-full h-full" fill="currentColor">
+								<svg class="bi" fill="currentColor">
 									<use xlink:href="bootstrap-icons.svg#chat" />
 								</svg>
 							</NavLink>
@@ -35,27 +35,26 @@
 	 	aria-label="Open navigation menu">menu</button> *@
 					@* <span class="mdc-top-app-bar__title">GGDB</span> *@
 				</section>
-				<section class="flex justify-center items-stretch">
+				<section class="flex justify-center">
 					<div class="mdc-tab-bar flex items-stretch" role="tablist">
 						<div class="mdc-tab-scroller flex items-stretch">
 							<div class="mdc-tab-scroller__scroll-area">
 								<div class="mdc-tab-scroller__scroll-content">
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<button class="mdc-tab mdc-tab--active h-full" role="tab" aria-selected="true" tabindex="0">
-												<span class="mdc-tab__content">
-													<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="shop"
-															 aria-label="" Match="NavLinkMatch.All">
-														<svg class="bi" width="32" height="32" fill="currentColor">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="shop" Match="NavLinkMatch.All">
+												<div class="material-icons mdc-icon-button">
+													<span class="mdc-tab__content">
+														<svg fill="currentColor">
 															<use xlink:href="bootstrap-icons.svg#bag" />
 														</svg>
-													</NavLink>
-												</span>
-												<span class="mdc-tab-indicator mdc-tab-indicator--active">
-													<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline bg-primary"></span>
-												</span>
-												<span class="mdc-tab__ripple"></span>
-											</button>
+													</span>
+													<span class="mdc-tab-indicator @GetTabIndActive("shop")" >
+														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style="border-color:var(--primary);"></span>
+													</span>
+													<span class="mdc-tab__ripple"></span>
+												</div>
+											</NavLink>
 										</Target>
 										<Content>
 											Market
@@ -63,20 +62,20 @@
 									</MBTooltip>
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<button class="mdc-tab  h-full" role="tab" aria-selected="true" tabindex="0">
-												<span class="mdc-tab__content">
-													<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="network"
-															 aria-label="" Match="NavLinkMatch.All">
-														<svg class="bi" width="32" height="32" fill="currentColor">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="network" Match="NavLinkMatch.All">
+												<div class="material-icons mdc-icon-button">
+
+													<span class="mdc-tab__content">
+														<svg class="bi" fill="currentColor">
 															<use xlink:href="bootstrap-icons.svg#globe2" />
 														</svg>
-													</NavLink>
-												</span>
-												<span class="mdc-tab-indicator">
-													<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline  bg-primary"></span>
-												</span>
-												<span class="mdc-tab__ripple"></span>
-											</button>
+													</span>
+													<span class="mdc-tab-indicator @GetTabIndActive("network")">
+														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+													</span>
+													<span class="mdc-tab__ripple"></span>
+												</div>
+											</NavLink>
 										</Target>
 										<Content>
 											Network
@@ -85,42 +84,42 @@
 
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<button class="mdc-tab  h-full" role="tab" aria-selected="true" tabindex="0">
-												<span class="mdc-tab__content">
-													<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="job"
-															 aria-label="" Match="NavLinkMatch.All">
-														<svg class="bi" width="32" height="32" fill="currentColor">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="job" Match="NavLinkMatch.All">
+												<div class="material-icons mdc-icon-button">
+													<span class="mdc-tab__content">
+														<svg class="bi" fill="currentColor">
 															<use xlink:href="bootstrap-icons.svg#briefcase" />
 														</svg>
-													</NavLink>
-												</span>
-												<span class="mdc-tab-indicator">
-													<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline  bg-primary"></span>
-												</span>
-												<span class="mdc-tab__ripple"></span>
-											</button>
+													</span>
+													<span class="mdc-tab-indicator @GetTabIndActive("job")">
+														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+													</span>
+													<span class="mdc-tab__ripple"></span>
+												</div>
+											</NavLink>
 										</Target>
 										<Content>
 											Job
 										</Content>
 									</MBTooltip>
 
-									<MBTooltip TooltipType="@MBTooltipType.Span">
+									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<button class="mdc-tab  h-full" role="tab" aria-selected="true" tabindex="0">
-												<span class="mdc-tab__content">
-													<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="debate"
-															 aria-label="" Match="NavLinkMatch.All">
-														<svg class="bi" width="32" height="32" fill="currentColor">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0"
+													 href="debate"
+													 Match="NavLinkMatch.All">
+												<div class="material-icons mdc-icon-button">
+													<span class="mdc-tab__content">
+														<svg class="bi" fill="currentColor">
 															<use xlink:href="bootstrap-icons.svg#chat" />
 														</svg>
-													</NavLink>
-												</span>
-												<span class="mdc-tab-indicator">
-													<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline  bg-primary"></span>
-												</span>
-												<span class="mdc-tab__ripple"></span>
-											</button>
+													</span>
+													<span class="mdc-tab-indicator @GetTabIndActive("debate")">
+														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+													</span>
+													<span class="mdc-tab__ripple"></span>
+												</div>
+											</NavLink>
 										</Target>
 										<Content>
 											Debate
@@ -132,12 +131,11 @@
 					</div>
 				</section>
 				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-
 					<AuthorizeView>
 						<Authorized>
-							<MBTooltip TooltipType="@MBTooltipType.Span">
+							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
-									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button flex items-center"
+									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
 											 href="authentication/profile"
 											 Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
@@ -164,7 +162,7 @@
 						</Authorized>
 						<NotAuthorized>
 
-							<MBTooltip TooltipType="@MBTooltipType.Span">
+							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
 									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/register"
 											 aria-label="" Match="NavLinkMatch.All">
@@ -177,7 +175,7 @@
 									Sign Up
 								</Content>
 							</MBTooltip>
-							<MBTooltip TooltipType="@MBTooltipType.Span">
+							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
 									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/login"
 											 aria-label="" Match="NavLinkMatch.All">
@@ -234,10 +232,6 @@
 
 		<main class="w-full h-full" id="main-content">
 
-			<div style="height:100px;width:200px; background-color:red; display:flex; align-items:stretch;">
-				<div style="height:100%;  background-color:blue; aspect-ratio:1/2;">
-				</div>
-			</div>
 			@Body
 		</main>
 	</div>

@@ -1,0 +1,203 @@
+2021-06-01 03:56:27.098 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":33292,"Version":"1.0.0"}2021-06-01 03:57:50.512 -04:00 [INF] HTTP GET / responded 200 in 97.1742 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QBPSRS44:00000001","ConnectionId":"0HM94QBPSRS44","ProcessId":33292,"Version":"1.0.0"}2021-06-01 03:57:52.803 -04:00 [INF] HTTP GET /faviconsfavicon.png responded 404 in 51.8151 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":25,"ThreadId":25,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QBPSRS44:00000053","ConnectionId":"0HM94QBPSRS44","ProcessId":33292,"Version":"1.0.0"}2021-06-01 04:02:40.544 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":20604,"Version":"1.0.0"}2021-06-01 04:16:55.809 -04:00 [INF] HTTP GET / responded 200 in 85.2663 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":29,"ThreadId":29,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QMF91EIV:00000001","ConnectionId":"0HM94QMF91EIV","ProcessId":20604,"Version":"1.0.0"}2021-06-01 04:17:47.519 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31904,"Version":"1.0.0"}2021-06-01 04:17:53.033 -04:00 [INF] HTTP GET / responded 200 in 83.8141 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":13,"ThreadId":13,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QN0AMK8T:00000001","ConnectionId":"0HM94QN0AMK8T","ProcessId":31904,"Version":"1.0.0"}2021-06-01 04:22:08.411 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":36132,"Version":"1.0.0"}2021-06-01 04:22:51.019 -04:00 [INF] HTTP GET / responded 200 in 169.9506 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QPP2M5MD:00000001","ConnectionId":"0HM94QPP2M5MD","ProcessId":36132,"Version":"1.0.0"}2021-06-01 04:24:11.757 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":49864,"Version":"1.0.0"}2021-06-01 04:24:13.492 -04:00 [INF] HTTP GET / responded 200 in 303.2431 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":9,"ThreadId":9,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94QQHJGL3S:00000001","ConnectionId":"0HM94QQHJGL3S","ProcessId":49864,"Version":"1.0.0"}2021-06-01 04:26:02.977 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":54248,"Version":"1.0.0"}2021-06-01 04:43:21.231 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":40768,"Version":"1.0.0"}2021-06-01 07:28:56.192 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":2272,"Version":"1.0.0"}2021-06-01 07:29:24.401 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":28812,"Version":"1.0.0"}2021-06-01 07:34:11.778 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":11532,"Version":"1.0.0"}2021-06-01 07:34:55.437 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":32208,"Version":"1.0.0"}2021-06-01 07:35:51.721 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":2900,"Version":"1.0.0"}2021-06-01 07:36:34.637 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":33044,"Version":"1.0.0"}2021-06-01 07:37:00.160 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":54036,"Version":"1.0.0"}2021-06-01 07:37:04.288 -04:00 [INF] HTTP GET / responded 200 in 76.6351 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":13,"ThreadId":13,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94U6A2TO1S:00000001","ConnectionId":"0HM94U6A2TO1S","ProcessId":54036,"Version":"1.0.0"}2021-06-01 07:43:49.404 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":41300,"Version":"1.0.0"}2021-06-01 07:45:38.477 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":58836,"Version":"1.0.0"}2021-06-01 07:46:18.297 -04:00 [INF] HTTP GET / responded 200 in 95.2870 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UBF60V24:00000001","ConnectionId":"0HM94UBF60V24","ProcessId":58836,"Version":"1.0.0"}2021-06-01 07:47:51.829 -04:00 [INF] HTTP GET / responded 304 in 3.1641 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":29,"ThreadId":29,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UBF60V24:0000005B","ConnectionId":"0HM94UBF60V24","ProcessId":58836,"Version":"1.0.0"}2021-06-01 07:48:10.455 -04:00 [INF] HTTP GET /shop responded 200 in 14.8618 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":39,"ThreadId":39,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UBF60V24:0000006B","ConnectionId":"0HM94UBF60V24","ProcessId":58836,"Version":"1.0.0"}2021-06-01 07:49:02.325 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":52040,"Version":"1.0.0"}2021-06-01 07:49:04.004 -04:00 [INF] HTTP GET / responded 200 in 254.4697 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":16,"ThreadId":16,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UD0FVB8H:00000001","ConnectionId":"0HM94UD0FVB8H","ProcessId":52040,"Version":"1.0.0"}2021-06-01 07:54:53.344 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":1364,"Version":"1.0.0"}2021-06-01 07:56:01.317 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":60424,"Version":"1.0.0"}2021-06-01 07:56:08.568 -04:00 [INF] HTTP GET / responded 200 in 90.8213 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UGV3EJR1:00000001","ConnectionId":"0HM94UGV3EJR1","ProcessId":60424,"Version":"1.0.0"}2021-06-01 07:59:25.442 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":11124,"Version":"1.0.0"}2021-06-01 07:59:40.660 -04:00 [INF] HTTP GET / responded 200 in 90.5535 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UIUA0V48:00000001","ConnectionId":"0HM94UIUA0V48","ProcessId":11124,"Version":"1.0.0"}2021-06-01 08:01:11.282 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43616,"Version":"1.0.0"}2021-06-01 08:01:17.447 -04:00 [INF] HTTP GET / responded 200 in 78.2338 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UJR59HM2:00000001","ConnectionId":"0HM94UJR59HM2","ProcessId":43616,"Version":"1.0.0"}2021-06-01 08:04:11.153 -04:00 [INF] HTTP GET / responded 200 in 12.0094 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":27,"ThreadId":27,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UJR59HM3:00000001","ConnectionId":"0HM94UJR59HM3","ProcessId":43616,"Version":"1.0.0"}2021-06-01 08:05:49.017 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":60424,"Version":"1.0.0"}2021-06-01 08:05:49.839 -04:00 [INF] HTTP GET / responded 200 in 97.9674 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UMCAPGLA:00000001","ConnectionId":"0HM94UMCAPGLA","ProcessId":60424,"Version":"1.0.0"}2021-06-01 08:06:48.972 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":60904,"Version":"1.0.0"}2021-06-01 08:07:03.853 -04:00 [INF] HTTP GET / responded 200 in 151.8277 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UN2BLJRJ:00000001","ConnectionId":"0HM94UN2BLJRJ","ProcessId":60904,"Version":"1.0.0"}2021-06-01 08:08:00.435 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":56228,"Version":"1.0.0"}2021-06-01 08:10:43.117 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":40480,"Version":"1.0.0"}2021-06-01 08:10:58.154 -04:00 [INF] HTTP GET / responded 200 in 94.0660 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UP871RGP:00000001","ConnectionId":"0HM94UP871RGP","ProcessId":40480,"Version":"1.0.0"}2021-06-01 08:11:20.437 -04:00 [INF] HTTP GET / responded 304 in 1.4591 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UP871RGP:00000057","ConnectionId":"0HM94UP871RGP","ProcessId":40480,"Version":"1.0.0"}2021-06-01 08:12:14.705 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":58732,"Version":"1.0.0"}2021-06-01 08:12:18.205 -04:00 [INF] HTTP GET / responded 200 in 96.3526 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UQ02CILJ:00000001","ConnectionId":"0HM94UQ02CILJ","ProcessId":58732,"Version":"1.0.0"}2021-06-01 08:12:36.148 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43544,"Version":"1.0.0"}2021-06-01 08:12:37.725 -04:00 [INF] HTTP GET / responded 200 in 147.1429 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":13,"ThreadId":13,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UQ5RSQ3J:00000001","ConnectionId":"0HM94UQ5RSQ3J","ProcessId":43544,"Version":"1.0.0"}2021-06-01 08:12:53.262 -04:00 [INF] HTTP GET / responded 304 in 1.5086 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":15,"ThreadId":15,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UQ5RSQ3J:00000011","ConnectionId":"0HM94UQ5RSQ3J","ProcessId":43544,"Version":"1.0.0"}2021-06-01 08:13:40.998 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":42940,"Version":"1.0.0"}2021-06-01 08:14:04.653 -04:00 [INF] HTTP GET / responded 200 in 105.5011 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UQVPA28A:00000001","ConnectionId":"0HM94UQVPA28A","ProcessId":42940,"Version":"1.0.0"}2021-06-01 08:14:55.063 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":49204,"Version":"1.0.0"}2021-06-01 08:14:56.248 -04:00 [INF] HTTP GET / responded 200 in 110.2090 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":15,"ThreadId":15,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94URF583PJ:00000001","ConnectionId":"0HM94URF583PJ","ProcessId":49204,"Version":"1.0.0"}2021-06-01 08:15:53.424 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":45972,"Version":"1.0.0"}2021-06-01 08:15:57.038 -04:00 [INF] HTTP GET / responded 200 in 183.9071 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":15,"ThreadId":15,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94US17QF59:00000001","ConnectionId":"0HM94US17QF59","ProcessId":45972,"Version":"1.0.0"}2021-06-01 08:16:18.556 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":61084,"Version":"1.0.0"}2021-06-01 08:16:53.375 -04:00 [INF] HTTP GET /shop responded 200 in 178.2638 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94USI0D5VV:00000001","ConnectionId":"0HM94USI0D5VV","ProcessId":61084,"Version":"1.0.0"}2021-06-01 08:18:11.990 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":33884,"Version":"1.0.0"}2021-06-01 08:18:50.616 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":36676,"Version":"1.0.0"}2021-06-01 08:19:14.059 -04:00 [INF] HTTP GET /shop responded 200 in 122.2902 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":25,"ThreadId":25,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UTRVTBEJ:00000001","ConnectionId":"0HM94UTRVTBEJ","ProcessId":36676,"Version":"1.0.0"}2021-06-01 08:19:47.689 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":19424,"Version":"1.0.0"}2021-06-01 08:20:25.320 -04:00 [INF] HTTP GET /shop responded 304 in 165.1302 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UUH6J6GM:00000001","ConnectionId":"0HM94UUH6J6GM","ProcessId":19424,"Version":"1.0.0"}2021-06-01 08:21:42.832 -04:00 [INF] HTTP GET /shop responded 304 in 7.7544 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UUH6J6GM:00000011","ConnectionId":"0HM94UUH6J6GM","ProcessId":19424,"Version":"1.0.0"}2021-06-01 08:21:57.233 -04:00 [INF] HTTP GET /shop responded 304 in 12.6582 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":33,"ThreadId":33,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UUH6J6GM:00000067","ConnectionId":"0HM94UUH6J6GM","ProcessId":19424,"Version":"1.0.0"}2021-06-01 08:22:58.492 -04:00 [INF] HTTP GET /shop responded 304 in 2.1066 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":3,"ThreadId":3,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94UUH6J6GM:00000075","ConnectionId":"0HM94UUH6J6GM","ProcessId":19424,"Version":"1.0.0"}2021-06-01 08:23:32.192 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":59900,"Version":"1.0.0"}2021-06-01 08:25:25.385 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":55300,"Version":"1.0.0"}2021-06-01 08:26:05.560 -04:00 [INF] HTTP GET /shop responded 200 in 206.2689 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V1MJ2LRT:00000001","ConnectionId":"0HM94V1MJ2LRT","ProcessId":55300,"Version":"1.0.0"}2021-06-01 08:30:05.572 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":41592,"Version":"1.0.0"}2021-06-01 08:30:14.625 -04:00 [INF] HTTP GET /shop responded 200 in 81.4754 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V40S7MJ5:00000001","ConnectionId":"0HM94V40S7MJ5","ProcessId":41592,"Version":"1.0.0"}2021-06-01 08:34:29.001 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":45116,"Version":"1.0.0"}2021-06-01 08:34:32.741 -04:00 [INF] HTTP GET /shop responded 200 in 85.3418 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V6DPPDT5:00000001","ConnectionId":"0HM94V6DPPDT5","ProcessId":45116,"Version":"1.0.0"}2021-06-01 08:35:54.118 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":10236,"Version":"1.0.0"}2021-06-01 08:36:06.136 -04:00 [INF] HTTP GET /shop responded 200 in 82.4826 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V79KFIJI:00000001","ConnectionId":"0HM94V79KFIJI","ProcessId":10236,"Version":"1.0.0"}2021-06-01 08:36:51.296 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":57440,"Version":"1.0.0"}2021-06-01 08:39:19.653 -04:00 [INF] HTTP GET /shop responded 200 in 132.3690 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":16,"ThreadId":16,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V93977K8:00000001","ConnectionId":"0HM94V93977K8","ProcessId":57440,"Version":"1.0.0"}2021-06-01 08:40:14.148 -04:00 [INF] HTTP GET /shop responded 304 in 5.0982 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":16,"ThreadId":16,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94V93977K8:0000005B","ConnectionId":"0HM94V93977K8","ProcessId":57440,"Version":"1.0.0"}2021-06-01 08:45:01.763 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":17376,"Version":"1.0.0"}2021-06-01 08:45:42.959 -04:00 [INF] HTTP GET /shop responded 200 in 155.4869 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":13,"ThreadId":13,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM94VCLG7471:00000001","ConnectionId":"0HM94VCLG7471","ProcessId":17376,"Version":"1.0.0"}2021-06-01 09:11:08.280 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":22580,"Version":"1.0.0"}2021-06-01 09:26:10.346 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":56140,"Version":"1.0.0"}2021-06-01 09:26:37.592 -04:00 [INF] HTTP GET /shop responded 200 in 104.4986 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9503H2F600:00000001","ConnectionId":"0HM9503H2F600","ProcessId":56140,"Version":"1.0.0"}2021-06-01 09:27:38.379 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":54900,"Version":"1.0.0"}2021-06-01 09:29:44.681 -04:00 [INF] HTTP GET /shop responded 200 in 86.4422 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM95058QTRRN:00000001","ConnectionId":"0HM95058QTRRN","ProcessId":54900,"Version":"1.0.0"}2021-06-01 09:30:30.319 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":53064,"Version":"1.0.0"}2021-06-01 09:30:34.695 -04:00 [INF] HTTP GET /shop responded 200 in 104.1196 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9505NNMBM5:00000001","ConnectionId":"0HM9505NNMBM5","ProcessId":53064,"Version":"1.0.0"}2021-06-01 09:30:56.598 -04:00 [INF] HTTP GET /shop responded 304 in 2.5676 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9505NNMBM5:00000013","ConnectionId":"0HM9505NNMBM5","ProcessId":53064,"Version":"1.0.0"}2021-06-01 09:33:36.506 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":11604,"Version":"1.0.0"}2021-06-01 09:33:44.344 -04:00 [INF] HTTP GET /shop responded 200 in 83.0863 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9507G8HL7R:00000001","ConnectionId":"0HM9507G8HL7R","ProcessId":11604,"Version":"1.0.0"}2021-06-01 09:43:26.266 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":29964,"Version":"1.0.0"}2021-06-01 09:43:28.849 -04:00 [INF] HTTP GET /shop responded 200 in 89.2274 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM950CUEQ2RO:00000001","ConnectionId":"0HM950CUEQ2RO","ProcessId":29964,"Version":"1.0.0"}2021-06-01 09:44:20.336 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":61276,"Version":"1.0.0"}2021-06-01 09:45:15.320 -04:00 [INF] HTTP GET /shop responded 200 in 93.4864 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM950DU65FFV:00000001","ConnectionId":"0HM950DU65FFV","ProcessId":61276,"Version":"1.0.0"}2021-06-01 09:45:45.205 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":30084,"Version":"1.0.0"}2021-06-01 09:45:45.865 -04:00 [INF] HTTP GET /shop responded 200 in 99.5986 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM950E79DK05:00000001","ConnectionId":"0HM950E79DK05","ProcessId":30084,"Version":"1.0.0"}2021-06-01 09:59:44.555 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":56064,"Version":"1.0.0"}2021-06-01 10:00:07.447 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38704,"Version":"1.0.0"}2021-06-01 10:01:05.763 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":13608,"Version":"1.0.0"}2021-06-01 10:05:17.847 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":40992,"Version":"1.0.0"}2021-06-01 10:05:49.733 -04:00 [INF] HTTP GET /shop responded 200 in 80.4471 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM950PE2H3IO:00000001","ConnectionId":"0HM950PE2H3IO","ProcessId":40992,"Version":"1.0.0"}2021-06-01 11:54:55.002 -04:00 [INF] HTTP GET /network responded 200 in 11.7094 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":52,"ThreadId":52,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM950PE2H3IP:00000001","ConnectionId":"0HM950PE2H3IP","ProcessId":40992,"Version":"1.0.0"}

@@ -22,7 +22,7 @@ namespace Email.Infrastructure.DbContexts
             //%s:begin UserAudit
             //modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
             //%s:end UserAudit
-            var types = typeof(EmailDomainConfig).Assembly.GetTypes().Where(type => type.Namespace is not null && type.Namespace.Contains(".ValueObjects"));
+            var types = typeof(EmailInfrastructureConfig).Assembly.GetTypes().Where(type => type.Namespace is not null && type.Namespace.Contains(".ValueObjects"));
             foreach (var idType in types)
             {
                 modelBuilder.Entity(idType).HasNoKey();

@@ -2,7 +2,7 @@
 
 namespace Shared__Entities_BoundedContext_Name__.Application
 {
-    public class Class1
+    public class Shared__Entities_BoundedContext_Name__ApplicationConfig
     {
     }
 }

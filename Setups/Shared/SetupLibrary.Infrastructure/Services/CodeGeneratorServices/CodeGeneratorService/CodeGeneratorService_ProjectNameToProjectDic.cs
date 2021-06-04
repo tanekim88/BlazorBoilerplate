@@ -10,7 +10,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 {
     public partial class CodeGeneratorService
     {
-        public static List<string> newBoundedContextNames = new List<string> { "Email" };
+        public static List<string> newBoundedContextNames = new List<string> { "Email", "Shop", "Date" };
 
         public static List<TemplateProject> templateProjects = new List<TemplateProject> {
 
@@ -54,7 +54,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Domain.Class1).Assembly,
+                        typeof(Shared__Entities_BoundedContext_Name__.Domain.Shared__Entities_BoundedContext_Name__DomainConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Domain)}",
                     GeneratorSymbol = "",
                     IsShared = true
@@ -65,7 +65,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Application.Class1).Assembly,
+                        typeof(Shared__Entities_BoundedContext_Name__.Application.Shared__Entities_BoundedContext_Name__ApplicationConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Application)}",
                     GeneratorSymbol = "",
                     IsShared = true
@@ -76,7 +76,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Infrastructure.Class1).Assembly,
+                        typeof(Shared__Entities_BoundedContext_Name__.Infrastructure.Shared__Entities_BoundedContext_Name__InfrastructureConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Infrastructure)}",
                     GeneratorSymbol = "",
                     IsShared = true
