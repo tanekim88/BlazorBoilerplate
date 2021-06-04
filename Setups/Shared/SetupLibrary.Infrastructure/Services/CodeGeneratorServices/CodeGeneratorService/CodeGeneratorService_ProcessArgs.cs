@@ -24,6 +24,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     {
         public static async Task<int> ProcessArgs(string[] args, List<TemplateProject> dependentProjects)
         {
+            dependentProjects.Reverse();
             var cmd = new RootCommand
             {
                 new Option(aliases: new[] {"--gen", "-g"}, description: "Generate Code."),

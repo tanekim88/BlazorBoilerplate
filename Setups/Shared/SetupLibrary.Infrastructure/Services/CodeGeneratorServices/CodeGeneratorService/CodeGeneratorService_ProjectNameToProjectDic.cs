@@ -344,44 +344,63 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-                //new()
-                //{
-                //    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}",
-                //    Prefix = "Server",
-                //    Postfix = "",
-                //    Assembly = typeof(BlazorApp.Server.Program).Assembly,
-                //    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Server)}",
-                //    GeneratorSymbol = "BlazorServer"
-                //},
-                //new()
-                //{
-                //    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}",
-                //    Prefix = "",
-                //    Postfix = "",
-                //    Assembly = typeof(BlazorApp.Shared.Localizations.Resources.Resource).Assembly,
-                //    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Shared)}",
-                //    GeneratorSymbol = "BlazorShared",
-                //    IsShared = true
-                //},
-                //new()
-                //{
-                //    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}",
-                //    Prefix = "",
-                //    Postfix = "",
-                //    Assembly = typeof(BlazorApp.Client.Program).Assembly,
-                //    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Client)}",
-                //    GeneratorSymbol = "BlazorClient"
-                //}
-                //new TemplateProject
-                //{
-                //    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Test)}",
-                //    Prefix = "",
-                //    Postfix = $"",
-                //    Assembly = typeof(BlazorApp.Test.__Projects_Name___Temp_.Services.__Projects_Services_Groups_0_Name___Temp_.__Projects_Services_Name__Tests_Temp_).Assembly,
-                //    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Test)}",
-                //    GeneratorSymbol = "BlazorTest" 
-                //}
-            
+                new()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}",
+                    Prefix = "",
+                    Postfix = "",
+                    Assembly = typeof(BlazorApp.Server.Program).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Server)}",
+                    GeneratorSymbol = ""
+                },
+                new()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}",
+                    Prefix = "",
+                    Postfix = "",
+                    Assembly = typeof(BlazorApp.Shared.Localizations.Resources.Resource).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Shared)}",
+                    GeneratorSymbol = "",
+                    IsShared = true
+                },
+                new()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}",
+                    Prefix = "",
+                    Postfix = "",
+                    Assembly = typeof(BlazorApp.Client.Program).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Client)}",
+                    GeneratorSymbol = ""
+                },
+                new ()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.IntegrationTests)}",
+                    Prefix = "",
+                    Postfix = $"",
+                    Assembly = typeof(BlazorApp.IntegrationTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.IntegrationTests)}",
+                    GeneratorSymbol = ""
+                },
+                new ()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.ArchTests)}",
+                    Prefix = "",
+                    Postfix = $"",
+                    Assembly = typeof(BlazorApp.ArchTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.ArchTests)}",
+                    GeneratorSymbol = ""
+                },
+                new ()
+                {
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.UnitTests)}",
+                    Prefix = "",
+                    Postfix = $"",
+                    Assembly = typeof(BlazorApp.UnitTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.UnitTests)}",
+                    GeneratorSymbol = ""
+                }
+
+
         };
 
         static CodeGeneratorService()
@@ -422,7 +441,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
                         clonedProject.Files = new List<TemplateFile>();
 
-                
+
 
                         ProjectNameToProjectDic[clonedProject.Name] = clonedProject;
                     });
