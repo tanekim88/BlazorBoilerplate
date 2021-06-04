@@ -41,12 +41,12 @@ namespace Setup.Server
                 args: new[]
                 {
                     "-g",
-                    "-f", @"C:\Projects\Shared\Shared\SharedCore.Domain",
-                    "-f", @"C:\Projects\Shared\Shared\SharedCore.Application",
-                    "-f", @"C:\Projects\Shared\Shared\SharedCore.Infrastructure",
-                    "-f", @"C:\Projects\Shared\Core.Domain",
-                    "-f", @"C:\Projects\Shared\Core.Application",
-                    "-f", @"C:\Projects\Shared\Core.Infrastructure"
+                    "-f", @"C:\App\Shared\Shared\SharedCore.Domain",
+                    "-f", @"C:\App\Shared\Shared\SharedCore.Application",
+                    "-f", @"C:\App\Shared\Shared\SharedCore.Infrastructure",
+                    "-f", @"C:\App\Shared\Core.Domain",
+                    "-f", @"C:\App\Shared\Core.Application",
+                    "-f", @"C:\App\Shared\Core.Infrastructure"
                 },
                 dependentProjects: new List<TemplateProject>
                 {
@@ -65,12 +65,12 @@ namespace Setup.Server
                  args: new[]
                  {
                                         "-g",
-                                        "-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain",
-                                        "-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application",
-                                        "-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure",
-                                        "-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Auth.Domain",
-                                        //"-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Auth.Application",
-                                        "-f", @"C:\Projects\BoundedContexts\AuthBoundedContext\Auth.Infrastructure"
+                                        "-f", @"C:\App\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain",
+                                        "-f", @"C:\App\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application",
+                                        "-f", @"C:\App\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure",
+                                        "-f", @"C:\App\BoundedContexts\AuthBoundedContext\Auth.Domain",
+                                        //"-f", @"C:\App\BoundedContexts\AuthBoundedContext\Auth.Application",
+                                        "-f", @"C:\App\BoundedContexts\AuthBoundedContext\Auth.Infrastructure"
                  },
                  dependentProjects: new List<TemplateProject>
                  {
