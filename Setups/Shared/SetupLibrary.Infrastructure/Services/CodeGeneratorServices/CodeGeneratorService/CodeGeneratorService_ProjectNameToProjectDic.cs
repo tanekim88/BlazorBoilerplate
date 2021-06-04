@@ -56,7 +56,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Shared__Entities_BoundedContext_Name__.Domain.Shared__Entities_BoundedContext_Name__DomainConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Domain)}",
-                    GeneratorSymbol = "",
+                    GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
@@ -67,7 +67,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Shared__Entities_BoundedContext_Name__.Application.Shared__Entities_BoundedContext_Name__ApplicationConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Application)}",
-                    GeneratorSymbol = "",
+                    GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
@@ -78,7 +78,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Shared__Entities_BoundedContext_Name__.Infrastructure.Shared__Entities_BoundedContext_Name__InfrastructureConfig).Assembly,
                     CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Infrastructure)}",
-                    GeneratorSymbol = "",
+                    GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
@@ -173,7 +173,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Library.Domain.Class1).Assembly,
                     CodeName = $"{nameof(Library)}_{nameof(Library.Domain)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
@@ -184,7 +184,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces.IAssemblyService).Assembly,
                     CodeName = $"{nameof(Library)}_{nameof(Library.Application)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
@@ -195,7 +195,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Library.Infrastructure.Services.AssemblyServices.AssemblyService).Assembly,
                     CodeName = $"{nameof(Library)}_{nameof(Library.Infrastructure)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
 
@@ -245,7 +245,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Core.Domain.Interfaces.ServiceInterfaces.__Entities_Groups_00_Name__ServiceInterfaces.I__Entities_Name__DomainService_Gen_).Assembly,
                     CodeName = $"{nameof(Core)}_{nameof(Core.Domain)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
@@ -256,7 +256,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Core.Application.Interfaces.ServiceInterfaces.__Entities_Groups_00_Name__ServiceInterfaces.I__Entities_Name__ApplicationService_Gen_).Assembly,
                     CodeName = $"{nameof(Core)}_{nameof(Core.Application)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
@@ -267,7 +267,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Assembly =
                         typeof(Core.Infrastructure.DbContexts.ApplicationDbContext).Assembly,
                     CodeName = $"{nameof(Core)}_{nameof(Core.Infrastructure)}",
-                    GeneratorSymbol = "Shared",
+                    GeneratorSymbol = "",
                     IsShared = false
                 },
                 ///////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,776 @@
+
+<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output encoding="utf-8"#>
+<#@ assembly name="C:\Users\tanek\.nuget\packages\humanizer.core\2.8.26\lib\netstandard2.0\Humanizer.dll" #>
+<#@ assembly name="System.Collections" #>
+<#@ assembly name="System.Xml.ReaderWriter" #>
+<#@ assembly name="NetStandard" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Runtime" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Console" #>
+<#@ assembly name="System.Runtime.Serialization" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="Humanizer" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Runtime" #>
+<#@ import namespace="System.Runtime.Serialization" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Threading.Tasks" #>
+
+<# // System.Diagnostics.Debugger.Launch(); #>
+<# var Cache = new System.Collections.Concurrent.ConcurrentDictionary<string, object>(); #>
+<#
+
+TemplateData Data;
+{
+    var classType_TemplateData = typeof(TemplateData);
+    var declaringTypeName_TemplateData =  classType_TemplateData.DeclaringType.Name;
+    var className_TemplateData = "TemplateData";
+    var classNamespace_TemplateData = classType_TemplateData.Namespace;
+
+var xml_TemplateData = File.ReadAllText($@"C:\App\Setups\Setup\Server\Temp\637583943283198834__4__19b2fb0f-7ec6-435d-a6a6-7482a859f0ba.input._TemplateData_3121cea7-84ee-49bc-a8a1-a5ee50e34eb0.temp.txt.xml");
+xml_TemplateData = string.Format(xml_TemplateData, declaringTypeName_TemplateData,classNamespace_TemplateData);
+
+    using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new StringReader(xml_TemplateData)))
+    {
+        DataContractSerializer deserializer = new DataContractSerializer(classType_TemplateData);
+        Data = (TemplateData)deserializer.ReadObject(reader);
+    }
+}
+#>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+<# { #>
+
+
+//%S:begin Header
+//%S:end Header
+
+
+
+using SharedCore.Application.Interfaces.ServiceInterfaces;
+
+namespace SharedCore.Application.Services
+{
+    //%S:begin Attributes
+    //%S:end Attributes
+    public class SharedSampleApplicationService : ISharedSampleApplicationService
+
+    /*%S:begin BaseClass*//*%S:end BaseClass*/
+    {
+        //%S:begin Properties
+        //%S:end Properties
+
+
+        public SharedSampleApplicationService(
+            /*%S:begin ConstructorParameters*/
+            /*%S:end ConstructorParameters*/
+            )
+        {
+
+            /*%S:begin ConstructorBody*/
+            /*%S:end ConstructorBody*/
+        }
+
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+
+<# } #>
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+<# { #>
+//%S:begin Header
+//%S:end Header
+
+
+namespace SharedCore.Application.Interfaces.ServiceInterfaces
+{
+    public interface ISharedSampleApplicationService
+    /*%S:begin Interfaces*/ /*%S:end Interfaces*/
+    {
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+ 
+<# } #>
+<# { #>
+ <#
+
+    Data.Context.Project = Data.Projects.Where(project => project.Name == "Core.Domain").FirstOrDefault();
+
+    Data.Context.ApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && !project.IsShared).FirstOrDefault();
+    Data.Context.DomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && !project.IsShared).FirstOrDefault();
+    Data.Context.InfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && !project.IsShared).FirstOrDefault();
+
+    Data.Context.SharedApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedDomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedInfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && project.IsShared).FirstOrDefault();
+
+    Data.Context.File = Data.Files.Where(file => file.TemplatePath == @"C:\App\Shared\Core.Domain\Entities\__Entities_Groups_00_Name__Entities\__Entities_Name___Gen_.cs").FirstOrDefault();
+            Data.Context.Sections = new List<TemplateSection> {  };
+            Data.Context.TemplateSections = new List<TemplateSection> {  };
+            #>
+
+//%templateBegin: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__4baeeff1-b525-44f6-b7c7-0997bd7a3da0
+<# { #>
+//%t:begin Intro
+<# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "" && entity.Name == "Sample"); #>
+<# var interfaces = entity.Interfaces.Select(i => i.Name); #>
+<# var interfaces_by_comma = string.Join(",", interfaces); #>
+<# var primaryKeySignatures = entity.Properties.Where(property => property.IsPrimaryKey).Select(primaryKey => primaryKey.Signature);  #>
+
+<# var camelPrimaryKeyNames = primaryKeySignatures.Select(x => x.Name.Camelize()); #>
+<# var camelPrimaryKeyNames_by_slash = string.Join("/", camelPrimaryKeyNames); #>
+<# var camelPrimaryKeyNames_by_comma = string.Join(",", camelPrimaryKeyNames); #>
+
+<# var camelPrimaryKeyFullNames = primaryKeySignatures.Select(x => x.FullType + " " + x.Name.Camelize()); #>
+<# var camelPrimaryKeyFullNames_by_comma = string.Join(",", camelPrimaryKeyFullNames); #>
+
+<# var camelPrimaryKeyName_eq_entitiesName_dot_Names = primaryKeySignatures.Select(x => x.Name.Camelize() + " = " + entity.Name + "." + x.Name); #>
+<# var camelPrimaryKeyName_eq_entitiesName_dot_Names_by_comma = string.Join(",", camelPrimaryKeyName_eq_entitiesName_dot_Names); #>
+
+<# var entitiesName_dot_Names = primaryKeySignatures.Select(x =>  entity.Name  + "." + x.Name); #>
+<# var entitiesName_dot_Names_by_comma = string.Join(",", entitiesName_dot_Names); #>
+
+<# var constructorParameters = entity.Properties.Where(property => ( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id").Select(property => property.Signature.Type + " " + (property.Name.ToLower()[0] + property.Name.Substring(1)) + (property.IsNullable ? " = null": "")); #>
+<# var constructorParameters_by_comma = string.Join(",\n", constructorParameters); #>
+
+<# var constructorParametersForBody = entity.Properties.Where(property => ( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id")
+.Select(property => {
+   var fieldName = property.Name.ToLower()[0] + property.Name.Substring(1);
+   var toReturn = property.Name + " = " + fieldName;
+   if(property.IsEnumerableClass) { 
+       toReturn = "_" + fieldName + " = " + fieldName;
+           
+   }
+
+   return toReturn;
+
+}); #>
+<# var constructorParametersForBody_by_semicolumn = string.Join(";\n", constructorParametersForBody) + ";"; #>
+//%t:end Intro
+
+<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
+using <#= usedNamespace #>;
+<# } #>
+
+using Core.Domain.Entities;
+
+//%S:begin Header
+//%S:end Header
+using System.ComponentModel.DataAnnotations.Schema;
+
+using Core.Domain.Interfaces;
+using Core.Domain.ValueObjects.Ids;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.ObjectModel;
+using System.Collections.Generic;
+
+namespace Core.Domain.Entities
+{
+    public class Sample : Entity<SampleId>, IAggregateRoot
+    {
+        private Sample()
+        {
+        }
+
+        public Sample(
+        <#= constructorParameters_by_comma #>
+        <# if(constructorParameters.Count() > 0 && Data.Context.Sections.Exists(section => section.Name == "ConstructorParameters")) { #>
+        ,
+        <# } #>
+        /*%S:begin ConstructorParameters*/
+        /*%S:end ConstructorParameters*/
+        <# if(constructorParameters.Count() > 0 || Data.Context.Sections.Exists(section => section.Name == "ConstructorParameters")) { #>
+        ,
+        <# } #>
+        SampleId? id = null
+        )
+        {
+            if (id is null)
+            {
+                id = new SampleId();
+            }
+
+            Id = id;
+
+            <#= constructorParametersForBody_by_semicolumn #>
+
+            /*%S:begin ConstructorBody*/
+            /*%S:end ConstructorBody*/
+        }
+
+        <# foreach(var property in entity.Properties) { #> 
+        <# if( property.Name != "Id" ) { #>
+
+        <# foreach(var attribute in property.Attributes ) { #> 
+        <# if(attribute.IsDbType) { #>
+        <#= attribute.Signature.NameAndArgumentsInsideBrackets ?? "" #>
+        <# } #>
+        <# } #>
+
+        <# if(property.IsEnumerableClass) { #>
+        private readonly <#= property.Signature.Type #> _<#= property.Name.ToLower()[0] #><#= property.Name.Substring(1) #> = new List<<#=property.Signature.ChildType #>>(); 
+        public virtual IReadOnlyCollection<<#= property.Signature.ChildType #>> <#= property.Signature.Name #> => _<#= property.Name.ToLower()[0] #><#= property.Name.Substring(1) #>.AsReadOnly();
+        <# } else if(property.IsValueObject || !property.IsSimpleType) { #>
+        <#= property.Signature.AccessModifier ?? "" #> virtual <#= property.Signature.Type #> <#= property.Name #> { get; private set; } <#= !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" #>
+        <# } else  { #>
+        <#= property.Signature.AccessModifier ?? "" #>  <#= property.Signature.Type #> <#= property.Name #> { get; private set; } <#= !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" #>
+        <# } #>
+        <# } #>
+        <# } #>
+
+
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__4baeeff1-b525-44f6-b7c7-0997bd7a3da0
+ 
+<# } #>
+<# { #>
+ <#
+
+    Data.Context.Project = Data.Projects.Where(project => project.Name == "Core.Domain").FirstOrDefault();
+
+    Data.Context.ApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && !project.IsShared).FirstOrDefault();
+    Data.Context.DomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && !project.IsShared).FirstOrDefault();
+    Data.Context.InfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && !project.IsShared).FirstOrDefault();
+
+    Data.Context.SharedApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedDomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedInfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && project.IsShared).FirstOrDefault();
+
+    Data.Context.File = Data.Files.Where(file => file.TemplatePath == @"C:\App\Shared\Core.Domain\Services\__Entities_Groups_00_Name__Services\__Entities_Name__DomainService_Gen_.cs").FirstOrDefault();
+            Data.Context.Sections = new List<TemplateSection> {  };
+            Data.Context.TemplateSections = new List<TemplateSection> {  };
+            #>
+
+//%templateBegin: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__54b02477-33fa-4478-87bb-e2e15eab2a55
+<# { #>
+<# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "" && entity.Name == "Sample"); #>
+
+<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
+using <#= usedNamespace #>;
+<# } #>
+
+//%S:begin Header
+//%S:end Header
+
+//%t:begin Header
+//%t:end Header
+
+using Core.Domain.Interfaces.ServiceInterfaces;
+
+namespace Core.Domain.Services
+{
+    //%S:begin Attributes
+    //%S:end Attributes
+    public class SampleDomainService: ISampleDomainService
+    /*%S:begin BaseClass*//*%S:end BaseClass*/
+    {
+        //%S:begin Properties
+        //%S:end Properties
+
+
+        public SampleDomainService(
+            /*%S:begin ConstructorParameters*/
+            /*%S:end ConstructorParameters*/
+            )
+        {
+
+            /*%S:begin ConstructorBody*/
+            /*%S:end ConstructorBody*/
+        }
+
+        //%S:begin Body
+        //%S:end Body
+
+
+
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__54b02477-33fa-4478-87bb-e2e15eab2a55
+ 
+<# } #>
+<# { #>
+ <#
+
+    Data.Context.Project = Data.Projects.Where(project => project.Name == "Core.Domain").FirstOrDefault();
+
+    Data.Context.ApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && !project.IsShared).FirstOrDefault();
+    Data.Context.DomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && !project.IsShared).FirstOrDefault();
+    Data.Context.InfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && !project.IsShared).FirstOrDefault();
+
+    Data.Context.SharedApplicationProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Application" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedDomainProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Domain" && project.IsShared).FirstOrDefault();
+    Data.Context.SharedInfrastructureProject = Data.Projects.Where(project => project.BaseName == "Core" && project.Type == "Infrastructure" && project.IsShared).FirstOrDefault();
+
+    Data.Context.File = Data.Files.Where(file => file.TemplatePath == @"C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\__Entities_Groups_00_Name__ServiceInterfaces\I__Entities_Name__DomainService_Gen_.cs").FirstOrDefault();
+            Data.Context.Sections = new List<TemplateSection> {  };
+            Data.Context.TemplateSections = new List<TemplateSection> {  };
+            #>
+
+//%templateBegin: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__71a6bd3a-c369-49dc-8902-fff501698d4f
+<# { #>
+//%S:begin Header
+//%S:end Header
+
+<# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "" && entity.Name == "Sample"); #>
+
+<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
+using <#= usedNamespace #>;
+<# } #>
+
+namespace Core.Domain.Interfaces.ServiceInterfaces
+{
+    public interface ISampleDomainService
+    {
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__71a6bd3a-c369-49dc-8902-fff501698d4f
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__97004c72-397d-40f0-8ee0-8d667c9015b0
+<# { #>
+using Core.Domain;
+
+namespace Core.Domain.ValueObjects.Ids
+{
+    public class SampleId : TypedIdValueBase<SampleId>
+    {
+        public SampleId(int? id = null) : base(id)
+        {
+
+        }
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__97004c72-397d-40f0-8ee0-8d667c9015b0
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__77d49aa2-e41c-4531-abd1-f7f36d97f5b3
+<# { #>
+
+
+//%S:begin Header
+//%S:end Header
+
+
+
+using Core.Application.Interfaces.ServiceInterfaces;
+
+namespace Core.Application.Services
+{
+    //%S:begin Attributes
+    //%S:end Attributes
+    public class SampleApplicationService : ISampleApplicationService
+
+    /*%S:begin BaseClass*//*%S:end BaseClass*/
+    {
+        //%S:begin Properties
+        //%S:end Properties
+
+
+        public SampleApplicationService(
+            /*%S:begin ConstructorParameters*/
+            /*%S:end ConstructorParameters*/
+            )
+        {
+
+            /*%S:begin ConstructorBody*/
+            /*%S:end ConstructorBody*/
+        }
+
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__77d49aa2-e41c-4531-abd1-f7f36d97f5b3
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__5066e4b3-ff52-4c8b-a916-2ea13a736d14
+<# { #>
+//%S:begin Header
+//%S:end Header
+
+
+namespace Core.Application.Interfaces.ServiceInterfaces
+{
+    public interface ISampleApplicationService
+    /*%S:begin Interfaces*/ /*%S:end Interfaces*/
+    {
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__5066e4b3-ff52-4c8b-a916-2ea13a736d14
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__e45f98c6-ee9c-4b98-8336-f1fa195c8fca
+<# { #>
+/*%S:begin Header*/
+/*%S:end Header*/
+
+
+using Core.Domain.Entities;
+using Core.Domain.ValueObjects.Ids;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+
+
+namespace Core.Infrastructure.EntityTypeConfigurations
+{
+    public class SampleEntityTypeConfiguration : EntityTypeConfigurationBase<Sample, SampleId>
+    {
+        /*%S:begin Properties*/
+        /*%S:end Properties*/
+        public void Configure(EntityTypeBuilder<Sample> builder)
+        {
+            base.Configure(builder);
+
+            /*%S:begin Body*/
+            /*%S:end Body*/
+        }
+    }
+
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__e45f98c6-ee9c-4b98-8336-f1fa195c8fca
+ 
+<# } #>
+<# { #>
+ 
+//%templateBegin: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__0f325cbe-e603-4912-b716-8a14d4a2f421
+<# { #>
+
+
+using Microsoft.OData.ModelBuilder;
+
+
+
+namespace Core.Infrastructure.Extensions.MicrosoftExtensions.ODataExtensions.ODataConventionModelBuilderExtensions
+{
+    public static class SetEntitiesExtension
+    {
+        public static ODataConventionModelBuilder SetEntities(this ODataConventionModelBuilder builder)
+        {
+            <# foreach(var model in Data.Models) { #>
+            builder.EntitySet<<#=model.FullName#>>("<#= model.Name.Pluralize() #>");
+            <# } #>
+
+            return builder;
+        }
+    }
+}
+<# } #>
+//%templateEnd: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__0f325cbe-e603-4912-b716-8a14d4a2f421
+ 
+<# } #>
+<#+
+[DataContract(IsReference = true)]
+public class TemplateContext {
+   [DataMember] public TemplateProject Project { get; set; }
+   [DataMember] public TemplateProject ApplicationProject { get; set; }
+   [DataMember] public TemplateProject SharedApplicationProject { get; set; }
+   [DataMember] public TemplateProject DomainProject { get; set; }
+   [DataMember] public TemplateProject SharedDomainProject { get; set; }
+   [DataMember] public TemplateProject InfrastructureProject { get; set; }
+   [DataMember] public TemplateProject SharedInfrastructureProject { get; set; }
+   [DataMember] public TemplateFile File { get; set; }
+   [DataMember] public List<TemplateSection> Sections { get; set; }
+   [DataMember] public List<TemplateSection> TemplateSections { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateProject:TemplateBase {
+   [DataMember] public string Type { get; set; }
+   [DataMember] public bool IsShared { get; set; }
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string BaseName { get; set; }
+   [DataMember] public string CodeName { get; set; }
+   [DataMember] public string Prefix { get; set; }
+   [DataMember] public string Postfix { get; set; }
+   [DataMember] public string GeneratorSymbol { get; set; }
+   [DataMember] public string Path { get; set; }
+   [DataMember] public string DirPath { get; set; }
+   [DataMember] public List<TemplateFile> Files { get; set; }
+   [DataMember] public List<TemplateService> Services { get; set; }
+   [DataMember] public List<TemplateLocalization> Localizations { get; set; }
+   [DataMember] public List<TemplateModel> Models { get; set; }
+   [DataMember] public List<TemplateEntity> Entities { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateBase {
+   [DataMember] public List<TemplateGroup> Groups { get; set; }
+   [DataMember] public TemplateBoundedContext BoundedContext { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateGroup {
+   [DataMember] public string Name { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateBoundedContext {
+   [DataMember] public string Name { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateFile:TemplateBase {
+   [DataMember] public string TemplateName { get; set; }
+   [DataMember] public string GenType { get; set; }
+   [DataMember] public bool HasPartialRef { get; set; }
+   [DataMember] public bool ShouldOverWrite { get; set; }
+   [DataMember] public bool ShouldPartiallyOverWrite { get; set; }
+   [DataMember] public bool ShouldFinalize { get; set; }
+   [DataMember] public TemplateProject Project { get; set; }
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string Path { get; set; }
+   [DataMember] public string TemplatePath { get; set; }
+   [DataMember] public string XmlPath { get; set; }
+   [DataMember] public string Extension { get; set; }
+   [DataMember] public TemplateCodeType CodeType { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateCodeType {
+}
+
+[DataContract(IsReference = true)]
+public class TemplateDirectory:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string TemplatePath { get; set; }
+   [DataMember] public string Path { get; set; }
+   [DataMember] public bool ShouldOverwrite { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateService:TemplateBase {
+   [DataMember] public bool IsShared { get; set; }
+   [DataMember] public string Type { get; set; }
+   [DataMember] public string BaseName { get; set; }
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string Namespace { get; set; }
+   [DataMember] public TemplateProject Project { get; set; }
+   [DataMember] public List<TemplateMethod> Methods { get; set; }
+   [DataMember] public string ServiceLifetime { get; set; }
+   [DataMember] public List<TemplateConstructor> Constructors { get; set; }
+   [DataMember] public bool IsAbstract { get; set; }
+   [DataMember] public TemplateModel ModelCounterpart { get; set; }
+   [DataMember] public List<TemplateProperty> Properties { get; set; }
+   [DataMember] public List<TemplateInterface> Interfaces { get; set; }
+   [DataMember] public TemplateType ParentType { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateMethod:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public bool IsAdded { get; set; }
+   [DataMember] public bool IsModelMethod { get; set; }
+   [DataMember] public bool IsPublic { get; set; }
+   [DataMember] public TemplateMethodSignature Signature { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateMethodSignature:TemplateSignatureBase {
+   [DataMember] public List<string> Parameters { get; set; }
+   [DataMember] public List<string> FullParameters { get; set; }
+   [DataMember] public string FullTypeAndNameAndParameters { get; set; }
+   [DataMember] public string TypeAndNameAndParameters { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateSignatureBase:TemplateBase {
+   [DataMember] public string FullTypeAndName { get; set; }
+   [DataMember] public string TypeAndName { get; set; }
+   [DataMember] public string AccessModifier { get; set; }
+   [DataMember] public string FullType { get; set; }
+   [DataMember] public string Type { get; set; }
+   [DataMember] public string ChildType { get; set; }
+   [DataMember] public string ChildFullType { get; set; }
+   [DataMember] public string Name { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateConstructor:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public List<TemplateParameter> Parameters { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateParameter:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public TemplateParameterSignature Signature { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateParameterSignature:TemplateSignatureBase {
+}
+
+[DataContract(IsReference = true)]
+public class TemplateModel:TemplateBase {
+   [DataMember] public bool IsValueObject { get; set; }
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string BaseName { get; set; }
+   [DataMember] public TemplateModel BaseClass { get; set; }
+   [DataMember] public string FullName { get; set; }
+   [DataMember] public string BaseFullName { get; set; }
+   [DataMember] public string Namespace { get; set; }
+   [DataMember] public TemplateProject Project { get; set; }
+   [DataMember] public List<TemplateMethod> Methods { get; set; }
+   [DataMember] public List<TemplateProperty> Properties { get; set; }
+   [DataMember] public List<TemplateInterface> Interfaces { get; set; }
+   [DataMember] public List<TemplateAttribute> Attributes { get; set; }
+   [DataMember] public List<string> UsedNamespaces { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateProperty:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string BaseName { get; set; }
+   [DataMember] public bool IsEnumerableClass { get; set; }
+   [DataMember] public TemplatePropertySignature Signature { get; set; }
+   [DataMember] public bool IsPrimaryKey { get; set; }
+   [DataMember] public bool IsDictionaryType { get; set; }
+   [DataMember] public bool IsPublic { get; set; }
+   [DataMember] public bool IsValueObject { get; set; }
+   [DataMember] public bool IsNullable { get; set; }
+   [DataMember] public bool IsSimpleType { get; set; }
+   [DataMember] public bool IsVirtual { get; set; }
+   [DataMember] public bool IsDeclaredOnly { get; set; }
+   [DataMember] public bool HasPublicGetter { get; set; }
+   [DataMember] public bool HasPublicSetter { get; set; }
+   [DataMember] public List<TemplateAttribute> Attributes { get; set; }
+   [DataMember] public int Order { get; set; }
+   [DataMember] public int PrimaryKeyOrder { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplatePropertySignature:TemplateSignatureBase {
+   [DataMember] public string Initializer { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateAttribute {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public bool IsDbType { get; set; }
+   [DataMember] public TemplateAttributeSignature Signature { get; set; }
+   [DataMember] public List<TemplateAttributeProperty> Properties { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateAttributeSignature:TemplateSignatureBase {
+   [DataMember] public string NameAndArgumentsInsideBrackets { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateAttributeProperty {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public string Value { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateInterface:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public TemplateInterfaceSignature Signature { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateInterfaceSignature:TemplateSignatureBase {
+}
+
+[DataContract(IsReference = true)]
+public class TemplateType:TemplateBase {
+   [DataMember] public string Name { get; set; }
+   [DataMember] public List<TemplateConstructor> Constructors { get; set; }
+   [DataMember] public TemplateTypeSignature Signature { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateTypeSignature:TemplateSignatureBase {
+}
+
+[DataContract(IsReference = true)]
+public class TemplateLocalization:TemplateBase {
+   [DataMember] public string Key { get; set; }
+   [DataMember] public string PluralKey { get; set; }
+   [DataMember] public string Context { get; set; }
+   [DataMember] public string ContextCodeName { get; set; }
+   [DataMember] public string PluralRule { get; set; }
+   [DataMember] public string UnderscoredLanguageCode { get; set; }
+   [DataMember] public string Encoding { get; set; }
+   [DataMember] public List<TemplateLocalizationPluralForm> PluralForms { get; set; }
+   [DataMember] public string MethodName { get; set; }
+   [DataMember] public string LanguageCode { get; set; }
+   [DataMember] public string DotLanguageCode { get; set; }
+   [DataMember] public TemplateProject Project { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateLocalizationPluralForm:TemplateBase {
+   [DataMember] public int PluralFormIndex { get; set; }
+   [DataMember] public string Value { get; set; }
+   [DataMember] public TemplateProject Project { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateEntity:TemplateModel {
+   [DataMember] public bool ShouldNotGenerate { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateSection {
+   [DataMember] public string Name { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateData {
+   [DataMember] public List<TemplateLocalization> Localizations { get; set; }
+   [DataMember] public List<TemplateModel> Models { get; set; }
+   [DataMember] public List<TemplateEntity> Entities { get; set; }
+   [DataMember] public List<TemplateService> Services { get; set; }
+   [DataMember] public List<TemplateDbContext> DbContexts { get; set; }
+   [DataMember] public List<TemplateProject> Projects { get; set; }
+   [DataMember] public List<TemplateFile> Files { get; set; }
+   [DataMember] public TemplateContext Context { get; set; }
+}
+
+[DataContract(IsReference = true)]
+public class TemplateDbContext:TemplateService {
+}
+#>

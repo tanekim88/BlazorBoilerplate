@@ -1,0 +1,89 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+
+
+//%S:begin Header
+//%S:end Header
+
+
+
+using SharedCore.Application.Interfaces.ServiceInterfaces;
+
+namespace SharedCore.Application.Services
+{
+    //%S:begin Attributes
+    //%S:end Attributes
+    public class SharedSampleApplicationService : ISharedSampleApplicationService
+
+    /*%S:begin BaseClass*//*%S:end BaseClass*/
+    {
+        //%S:begin Properties
+        //%S:end Properties
+
+
+        public SharedSampleApplicationService(
+            /*%S:begin ConstructorParameters*/
+            /*%S:end ConstructorParameters*/
+            )
+        {
+
+            /*%S:begin ConstructorBody*/
+            /*%S:end ConstructorBody*/
+        }
+
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+ 
+
+
+ 
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+//%S:begin Header
+//%S:end Header
+
+
+namespace SharedCore.Application.Interfaces.ServiceInterfaces
+{
+    public interface ISharedSampleApplicationService
+    /*%S:begin Interfaces*/ /*%S:end Interfaces*/
+    {
+        //%S:begin Body
+        //%S:end Body
+    }
+}
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+ 
+
+
+ 
+
+//%templateBegin: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__4baeeff1-b525-44f6-b7c7-0997bd7a3da0
+//%t:begin Intro
