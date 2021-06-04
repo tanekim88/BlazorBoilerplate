@@ -35,7 +35,7 @@ namespace Setup.Server
                         //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedAuth)}.{nameof(SharedAuth.Infrastructure)}" ]
                }
             );
-            throw new Exception();
+            //throw new Exception();
 
             await CodeGeneratorService.ProcessArgs(
                 args: new[]
@@ -58,7 +58,7 @@ namespace Setup.Server
                     CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Infrastructure)}" ]
                 }
             );
-            throw new Exception();
+            //throw new Exception();
 
 
             await CodeGeneratorService.ProcessArgs(
@@ -82,23 +82,23 @@ namespace Setup.Server
                                         CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedAuth)}.{nameof(SharedAuth.Infrastructure)}" ]
                  }
              );
-            throw new Exception();
-
-
-            //await CodeGeneratorService.ProcessArgs(
-            //    args: new[] {"-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Server"},
-            //    dependentProjects: new List<TemplateProject>
-            //    {
-            //        CodeGeneratorService.ProjectNameToProjectDic
-            //            [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}"],
-            //        CodeGeneratorService.ProjectNameToProjectDic
-            //            [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}"],
-            //        CodeGeneratorService.ProjectNameToProjectDic
-            //            [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}"],
-            //        CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Library)],
-            //        CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Shared)]
-            //    });
             //throw new Exception();
+
+
+            await CodeGeneratorService.ProcessArgs(
+                args: new[] { "-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Server" },
+                dependentProjects: new List<TemplateProject>
+                {
+                    CodeGeneratorService.ProjectNameToProjectDic
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}"],
+                    CodeGeneratorService.ProjectNameToProjectDic
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}"],
+                    CodeGeneratorService.ProjectNameToProjectDic
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}"],
+                    CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Library)],
+                    CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Shared)]
+                });
+            throw new Exception();
 
             //await CodeGeneratorService.ProcessArgs(
             //    args: new[] {"-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Shared\Localizations"},
