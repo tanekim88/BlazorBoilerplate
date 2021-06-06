@@ -4,13 +4,13 @@ using Library.Infrastructure.Services.PathServices;
 using SetupLibrary.Application.Models;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text.RegularExpressions;
 
 namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 {
     public partial class CodeGeneratorService
     {
-        public static List<string> newBoundedContextNames = new List<string> { "Email", "Shop", "Date" };
+        public static List<string> newBoundedContextNames = new List<string> { "Email", "Shop" };
 
         public static List<TemplateProject> templateProjects = new List<TemplateProject> {
 
@@ -434,6 +434,10 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                 var finalValue = value.ToString()
                                 .Replace("__Entities_BoundedContext_Name__", boundedContextName)
                                 .Replace("__EBN__", boundedContextName);
+
+                                var codeType = TemplateCodeType.GetCodeTypeFromExtension(".cs");
+
+                                finalValue = codeType.RemoveTemplatePostfix(finalValue, true);
 
                                 prop.SetValue(clonedProject, finalValue);
                             }

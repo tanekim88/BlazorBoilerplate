@@ -76,8 +76,9 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             localization.DotLanguageCode = !string.IsNullOrEmpty(value: localization.LanguageCode)
                 ? "." + localization.LanguageCode
                 : "";
-            if (localization.Context != null)
+            if (localization.Context != null) { 
                 localization.ContextCodeName = localization.Context.Replace(oldChar: '.', newChar: ' ').Pascalize();
+            }
 
             localization.Project = project;
         }

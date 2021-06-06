@@ -35,7 +35,7 @@ TemplateData Data;
     var className_TemplateData = "TemplateData";
     var classNamespace_TemplateData = classType_TemplateData.Namespace;
 
-var xml_TemplateData = File.ReadAllText($@"C:\App\Setups\Setup\Server\Temp\637583943283198834__4__19b2fb0f-7ec6-435d-a6a6-7482a859f0ba.input._TemplateData_3121cea7-84ee-49bc-a8a1-a5ee50e34eb0.temp.txt.xml");
+var xml_TemplateData = File.ReadAllText($@"C:\App\Setups\Setup\Server\Temp\637585114089369398__4__54fc1eb7-607b-4ebc-aeb9-42e72234bb37.input._TemplateData_bce2ef18-6fac-4801-abc9-e47f25ae40e9.temp.txt.xml");
 xml_TemplateData = string.Format(xml_TemplateData, declaringTypeName_TemplateData,classNamespace_TemplateData);
 
     using (System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new StringReader(xml_TemplateData)))
@@ -47,7 +47,7 @@ xml_TemplateData = string.Format(xml_TemplateData, declaringTypeName_TemplateDat
 #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4601a4d8-c6be-45b8-a60e-e32c1b3de264
 <# { #>
 
 
@@ -86,12 +86,12 @@ namespace SharedCore.Application.Services
 }
 
 <# } #>
-//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4ec0ade1-eba8-4493-bb3a-7531361cc0b2
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Services\SharedSampleApplicationService.cs.tt.temp.txt__4601a4d8-c6be-45b8-a60e-e32c1b3de264
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+//%templateBegin: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__195ed252-91c3-4a48-a5ee-e21b11547ff5
 <# { #>
 //%S:begin Header
 //%S:end Header
@@ -107,7 +107,7 @@ namespace SharedCore.Application.Interfaces.ServiceInterfaces
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__d1181411-8e54-495f-9a00-3472d089b3a9
+//%templateEnd: C:\App\Shared\Shared\SharedCore.Application\Interfaces\SevriceInterfaces\ISharedSampleApplicationService.cs.tt.temp.txt__195ed252-91c3-4a48-a5ee-e21b11547ff5
  
 <# } #>
 <# { #>
@@ -128,7 +128,7 @@ namespace SharedCore.Application.Interfaces.ServiceInterfaces
             Data.Context.TemplateSections = new List<TemplateSection> {  };
             #>
 
-//%templateBegin: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__4baeeff1-b525-44f6-b7c7-0997bd7a3da0
+//%templateBegin: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__65755a5b-be3d-441a-ac4c-9e1f4326dfb0
 <# { #>
 //%t:begin Intro
 <# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "" && entity.Name == "Sample"); #>
@@ -243,7 +243,7 @@ namespace Core.Domain.Entities
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__4baeeff1-b525-44f6-b7c7-0997bd7a3da0
+//%templateEnd: C:\App\Shared\Core.Domain\Entities\Sample.cs.tt.temp.txt__65755a5b-be3d-441a-ac4c-9e1f4326dfb0
  
 <# } #>
 <# { #>
@@ -264,7 +264,7 @@ namespace Core.Domain.Entities
             Data.Context.TemplateSections = new List<TemplateSection> {  };
             #>
 
-//%templateBegin: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__54b02477-33fa-4478-87bb-e2e15eab2a55
+//%templateBegin: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__de2447fc-2307-4b9e-a410-73a7c4c32861
 <# { #>
 <# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "" && entity.Name == "Sample"); #>
 
@@ -309,7 +309,7 @@ namespace Core.Domain.Services
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__54b02477-33fa-4478-87bb-e2e15eab2a55
+//%templateEnd: C:\App\Shared\Core.Domain\Services\SampleDomainService.cs.tt.temp.txt__de2447fc-2307-4b9e-a410-73a7c4c32861
  
 <# } #>
 <# { #>
@@ -330,7 +330,7 @@ namespace Core.Domain.Services
             Data.Context.TemplateSections = new List<TemplateSection> {  };
             #>
 
-//%templateBegin: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__71a6bd3a-c369-49dc-8902-fff501698d4f
+//%templateBegin: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__75b70e8f-695d-43dc-9f14-d8451cae222c
 <# { #>
 //%S:begin Header
 //%S:end Header
@@ -350,12 +350,12 @@ namespace Core.Domain.Interfaces.ServiceInterfaces
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__71a6bd3a-c369-49dc-8902-fff501698d4f
+//%templateEnd: C:\App\Shared\Core.Domain\Interfaces\ServiceInterfaces\ISampleDomainService.cs.tt.temp.txt__75b70e8f-695d-43dc-9f14-d8451cae222c
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__97004c72-397d-40f0-8ee0-8d667c9015b0
+//%templateBegin: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__014d9aa6-07f6-4259-8a63-e74e07fa2aed
 <# { #>
 using Core.Domain;
 
@@ -370,12 +370,12 @@ namespace Core.Domain.ValueObjects.Ids
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__97004c72-397d-40f0-8ee0-8d667c9015b0
+//%templateEnd: C:\App\Shared\Core.Domain\ValueObjects\Ids\SampleId.cs.tt.temp.txt__014d9aa6-07f6-4259-8a63-e74e07fa2aed
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__77d49aa2-e41c-4531-abd1-f7f36d97f5b3
+//%templateBegin: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__0d054f89-02b5-4bba-b249-dc33d81755d6
 <# { #>
 
 
@@ -414,12 +414,12 @@ namespace Core.Application.Services
 }
 
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__77d49aa2-e41c-4531-abd1-f7f36d97f5b3
+//%templateEnd: C:\App\Shared\Core.Application\Services\SampleApplicationService.cs.tt.temp.txt__0d054f89-02b5-4bba-b249-dc33d81755d6
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__5066e4b3-ff52-4c8b-a916-2ea13a736d14
+//%templateBegin: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__714618c8-b56f-49f4-b85a-5e101b38bb88
 <# { #>
 //%S:begin Header
 //%S:end Header
@@ -435,12 +435,12 @@ namespace Core.Application.Interfaces.ServiceInterfaces
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__5066e4b3-ff52-4c8b-a916-2ea13a736d14
+//%templateEnd: C:\App\Shared\Core.Application\Interfaces\SevriceInterfaces\ISampleApplicationService.cs.tt.temp.txt__714618c8-b56f-49f4-b85a-5e101b38bb88
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__e45f98c6-ee9c-4b98-8336-f1fa195c8fca
+//%templateBegin: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__3a379268-0ac8-48b2-a4ca-86a1c8b3766d
 <# { #>
 /*%S:begin Header*/
 /*%S:end Header*/
@@ -469,12 +469,12 @@ namespace Core.Infrastructure.EntityTypeConfigurations
 
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__e45f98c6-ee9c-4b98-8336-f1fa195c8fca
+//%templateEnd: C:\App\Shared\Core.Infrastructure\EntityTypeConfigurations\SampleEntityTypeConfiguration.cs.tt.temp.txt__3a379268-0ac8-48b2-a4ca-86a1c8b3766d
  
 <# } #>
 <# { #>
  
-//%templateBegin: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__0f325cbe-e603-4912-b716-8a14d4a2f421
+//%templateBegin: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__7f648435-8048-4ddd-8392-96148a9eda3d
 <# { #>
 
 
@@ -497,7 +497,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.ODataExtensions.ODa
     }
 }
 <# } #>
-//%templateEnd: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__0f325cbe-e603-4912-b716-8a14d4a2f421
+//%templateEnd: C:\App\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\OdataExtensions\ODataConventionModelBuilderExtensions\SetEntitiesExtension.cs.tt.temp.txt__7f648435-8048-4ddd-8392-96148a9eda3d
  
 <# } #>
 <#+

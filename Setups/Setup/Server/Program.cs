@@ -27,15 +27,15 @@ namespace Setup.Server
                 },
                 dependentProjects: new List<TemplateProject>
                 {
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Auth)}.{nameof(Auth.Domain)}" ],
-                    ////CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Auth)}.{nameof(Auth.Application)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Auth)}.{nameof(Auth.Infrastructure)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedAuth)}.{nameof(SharedAuth.Domain)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedAuth)}.{nameof(SharedAuth.Application)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedAuth)}.{nameof(SharedAuth.Infrastructure)}" ]
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Infrastructure)}" ],
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Application)}" ],
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Domain)}" ],
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Infrastructure)}" ],
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Application)}" ],
+                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Domain)}" ],
                 }
             );
-            //throw new Exception();
+            throw new Exception();
 
             await CodeGeneratorService.ProcessArgs(
                 args: new[]
@@ -58,7 +58,7 @@ namespace Setup.Server
                     CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Domain)}" ],
                 }
             );
-            //throw new Exception();
+            throw new Exception();
 
 
             await CodeGeneratorService.ProcessArgs(

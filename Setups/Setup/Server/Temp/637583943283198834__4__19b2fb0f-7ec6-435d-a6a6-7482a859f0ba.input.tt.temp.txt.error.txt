@@ -1,3 +1,0 @@
-C:\App\Setups\Setup\Server\Temp\637583943283198834__4__19b2fb0f-7ec6-435d-a6a6-7482a859f0ba.input.tt.temp.txt(15,9) : warning CS0219: Compiling transformation: The variable 'className_TemplateData' is assigned but its value is never used
-C:\App\Setups\Setup\Server\Temp\637583943283198834__4__19b2fb0f-7ec6-435d-a6a6-7482a859f0ba.input.tt.temp.txt(104,0) : error : Running transformation: System.NullReferenceException: Object reference not set to an instance of an object.
-   at Microsoft.VisualStudio.TextTemplating3af9a782de3a41eeade6ef210ee87700.GeneratedTextTransformation.TransformText() in C:\App\Setups\Setup\Server\Temp\637583943283198834__4__19b2fb0f-7ec6-435d-a6a6-7482a859f0ba.input.tt.temp.txt:line 104

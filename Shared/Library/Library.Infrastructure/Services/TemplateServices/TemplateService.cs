@@ -38,7 +38,7 @@ namespace Library.Infrastructure.Services.TemplateServices
         public TemplateService(
             /*%s:begin ConstructorParameters*/
             IPathService PathService
-            /*%s:end ConstructorParameters*/
+        /*%s:end ConstructorParameters*/
         )
         {
             /*%s:begin ConstructorBody*/
@@ -83,7 +83,7 @@ namespace Library.Infrastructure.Services.TemplateServices
                 "System.Runtime.Serialization"
             };
 
-            return new GetRequiredAssemblyPathsOutput {Payload = assembyPaths};
+            return new GetRequiredAssemblyPathsOutput { Payload = assembyPaths };
         }
 
 
@@ -107,7 +107,7 @@ namespace Library.Infrastructure.Services.TemplateServices
             };
 
 
-            return new GetUsedNamepacesOutput {Payload = namespaces};
+            return new GetUsedNamepacesOutput { Payload = namespaces };
         }
 
         public async Task<ParseTemplateOutput> ParseTemplate(
@@ -150,7 +150,9 @@ namespace Library.Infrastructure.Services.TemplateServices
             if (!string.IsNullOrEmpty(value: inputContent))
             {
                 var parentDir = Directory.GetParent(path: inputFile).FullName;
-                if (!Directory.Exists(path: parentDir)) Directory.CreateDirectory(path: parentDir);
+                if (!Directory.Exists(path: parentDir)) {
+                    Directory.CreateDirectory(path: parentDir); 
+                }
 
                 File.WriteAllText(path: inputFile, contents: inputContent);
             }

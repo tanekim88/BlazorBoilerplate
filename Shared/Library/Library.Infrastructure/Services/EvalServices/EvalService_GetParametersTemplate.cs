@@ -45,9 +45,11 @@ namespace Library.Infrastructure.Services.EvalServices
                     var id = Guid.NewGuid();
                     var xmlFilePath = $@"{xmlFilePathPrefix}_{className}_{id}.temp.txt.xml";
                     var parentDirPath = Directory.GetParent(path: xmlFilePath).FullName;
-                    if (!Directory.Exists(path: parentDirPath)) Directory.CreateDirectory(path: parentDirPath);
+                    if (!Directory.Exists(path: parentDirPath)) { 
+                        Directory.CreateDirectory(path: parentDirPath);
+                    }
 
-                    return new XmlData {Key = key, Xml = xml, ClassName = className, FilePath = xmlFilePath};
+                    return new XmlData { Key = key, Xml = xml, ClassName = className, FilePath = xmlFilePath };
                 }
             }).ToList();
 
@@ -73,7 +75,7 @@ namespace Library.Infrastructure.Services.EvalServices
 
                 foreach (var kv in sessionKvList)
                 {
-                    var sessionKv = GetAllTypes(type : kv.Value.GetType())
+                    var sessionKv = GetAllTypes(type: kv.Value.GetType())
                         .Dic;
                     foreach (var type in sessionKv.Values)
                     {
@@ -139,7 +141,7 @@ var {xmlDecl} = File.ReadAllText($@""{xmlFilePath}"");
 
             builder.Append(value: "#>\n");
 
-            return new GetIntroOutput {ParametersTemplate = builder.ToString(), ListOfXmlData = listOfXmlData};
+            return new GetIntroOutput { ParametersTemplate = builder.ToString(), ListOfXmlData = listOfXmlData };
         }
     }
 }

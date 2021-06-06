@@ -22,7 +22,9 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             var posDirPath = Path.Combine(path1: project.DirPath, path2: "Localizations", path3: "Customs",
                 path4: "Pos");
 
-            if (!Directory.Exists(path: posDirPath)) Directory.CreateDirectory(path: posDirPath);
+            if (!Directory.Exists(path: posDirPath)) { 
+                Directory.CreateDirectory(path: posDirPath);
+            }
 
             var files = Directory.EnumerateFiles(path: posDirPath, searchPattern: "*.po",
                 searchOption: SearchOption.AllDirectories);
