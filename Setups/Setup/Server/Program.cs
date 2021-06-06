@@ -35,7 +35,7 @@ namespace Setup.Server
                     //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Domain)}" ],
                 }
             );
-            throw new Exception();
+            //throw new Exception();
 
             await CodeGeneratorService.ProcessArgs(
                 args: new[]
