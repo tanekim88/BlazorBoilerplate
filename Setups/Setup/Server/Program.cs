@@ -22,17 +22,10 @@ namespace Setup.Server
                 args: new[]
                 {
                                 "-g",
-                                "-f", @"C:\App\BoundedContexts\__EBN__BoundedContext_gen_",
-                                //"-f", @"C:\App\BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Infrastructure\DbContexts\__Entities_BoundedContext_Name__DbContext_Gen_.cs",
+                                "-f", @"C:\App\BoundedContexts\__EBN__BoundedContext_gen_",           
                 },
                 dependentProjects: new List<TemplateProject>
                 {
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Infrastructure)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Application)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(SharedCore)}.{nameof(SharedCore.Domain)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Infrastructure)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Application)}" ],
-                    //CodeGeneratorService.ProjectNameToProjectDic[key: $"{nameof(Core)}.{nameof(Core.Domain)}" ],
                 }
             );
             //throw new Exception();
