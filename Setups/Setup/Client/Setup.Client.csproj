@@ -14,12 +14,12 @@
 		<PackageReference Include="Mapster" Version="7.2.0" />
 		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.6" />
 		<PackageReference Include="MediatR" Version="9.0.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-preview.4.21253.5" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-preview.4.21253.5" PrivateAssets="all" />
-		<PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.6.0-alpha.21070.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-preview.5.21301.17" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-preview.5.21301.17" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.7.0-alpha.21279.2" />
 		<PackageReference Include="protobuf-net" Version="3.0.101" />
 		<PackageReference Include="Refit.HttpClientFactory" Version="6.0.38" />
-		<PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.4.21253.7" />
+		<PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.5.21301.5" />
 	</ItemGroup>
 
 	<ItemGroup>
