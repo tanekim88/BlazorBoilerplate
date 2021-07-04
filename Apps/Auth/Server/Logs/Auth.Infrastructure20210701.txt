@@ -162,4 +162,19 @@
 
 {"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HM9SRSR3LUK2:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HM9SRSR3LUK2","CustomId":14,"ThreadId":14,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":30772,"Version":"1.0.0"}2021-07-01 18:26:11.639 -04:00 [INF] HTTP GET / responded 200 in 268.6361 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":15,"ThreadId":15,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9SRSR3LUK3:00000001","ConnectionId":"0HM9SRSR3LUK3","ProcessId":30772,"Version":"1.0.0"}
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":15,"ThreadId":15,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9SRSR3LUK3:00000001","ConnectionId":"0HM9SRSR3LUK3","ProcessId":30772,"Version":"1.0.0"}2021-07-01 19:52:54.352 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__Entities_Name__Id_AuthGen_] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38828,"Version":"1.0.0"}2021-07-01 19:56:32.202 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__Entities_Name__Id_AuthGen_] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":39248,"Version":"1.0.0"}2021-07-01 20:00:39.304 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__Entities_Name__Id_AuthGen_] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":40120,"Version":"1.0.0"}

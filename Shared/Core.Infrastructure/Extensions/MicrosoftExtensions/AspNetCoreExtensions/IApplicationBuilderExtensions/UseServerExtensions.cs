@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-
+using SharedCore.Application.Services.__Entities_Groups_00_Name__Services;
 
 namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IServiceCollectionExtensions
 {
@@ -55,6 +55,11 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
 
             app.UseEndpoints(configure: endpoints =>
             {
+                if (env.IsDevelopment()) {
+                    endpoints.MapGrpcReflectionService();
+                }
+
+                endpoints.MapGrpcService<GreeterService>();
                 //endpoints.MapGraphQL();
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();

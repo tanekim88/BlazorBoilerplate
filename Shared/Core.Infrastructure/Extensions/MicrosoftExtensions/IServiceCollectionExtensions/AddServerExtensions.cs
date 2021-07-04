@@ -18,6 +18,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         public static IServiceCollection AddCustomServer(
             this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
+            services.AddGrpc();
             services.AddHttpContextAccessor();
             services.AddHttpClient();
             services.AddDatabaseDeveloperPageExceptionFilter();
