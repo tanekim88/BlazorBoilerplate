@@ -52,14 +52,16 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
 
             app.UseWebSockets();
 
+            // must be added after UseRouting and before UseEndpoints 
+            app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true});
 
             app.UseEndpoints(configure: endpoints =>
             {
                 if (env.IsDevelopment()) {
-                    endpoints.MapGrpcReflectionService();
+                    endpoints.MapGrpcReflectionService().EnableGrpcWeb();
                 }
 
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<GreeterService>().EnableGrpcWeb();
                 //endpoints.MapGraphQL();
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();

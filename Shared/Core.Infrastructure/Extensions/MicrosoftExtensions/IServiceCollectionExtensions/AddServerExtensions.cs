@@ -19,6 +19,8 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
             services.AddGrpc();
+            services.AddGrpcReflection();
+
             services.AddHttpContextAccessor();
             services.AddHttpClient();
             services.AddDatabaseDeveloperPageExceptionFilter();
