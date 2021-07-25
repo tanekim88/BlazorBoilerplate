@@ -12,7 +12,6 @@ namespace SharedAuth.Application.Services.__Entities_Groups_00_Name__Services
     //%S:begin Attributes
     //%S:end Attributes
     public class Shared__Entities_Name__ApplicationService_AuthGen_ : IShared__Entities_Name__ApplicationService_AuthGen_
-
     /*%S:begin BaseClass*//*%S:end BaseClass*/
     {
         //%S:begin Properties

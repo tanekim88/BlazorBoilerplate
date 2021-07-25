@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_css_minimizer_plugin_service_1 = require("./webpack-css-minimizer-plugin.service");
+import { Test } from '@nestjs/testing';
+import { WebpackCssMinimizerPluginService } from './webpack-css-minimizer-plugin.service';
 describe('WebpackCssMinimizerPluginService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_css_minimizer_plugin_service_1.WebpackCssMinimizerPluginService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackCssMinimizerPluginService],
         }).compile();
-        service = module.get(webpack_css_minimizer_plugin_service_1.WebpackCssMinimizerPluginService);
+        service = module.get(WebpackCssMinimizerPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

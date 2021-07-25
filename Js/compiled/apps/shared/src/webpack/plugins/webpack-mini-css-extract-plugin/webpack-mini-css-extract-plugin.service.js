@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11,18 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackMiniCssExtractPluginService = exports.WebpackMiniCssExtractPluginConfigService = void 0;
-const common_1 = require("@nestjs/common");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const mini_css_extract_plugin_1 = __importDefault(require("mini-css-extract-plugin"));
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-let WebpackMiniCssExtractPluginConfigService = class WebpackMiniCssExtractPluginConfigService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+import { Optional } from '@nestjs/common';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+let WebpackMiniCssExtractPluginConfigService = class WebpackMiniCssExtractPluginConfigService extends WebpackPluginBaseService {
     constructor(classConstructor) {
-        super(classConstructor ?? mini_css_extract_plugin_1.default);
+        super(classConstructor ?? MiniCssExtractPlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -32,14 +26,14 @@ let WebpackMiniCssExtractPluginConfigService = class WebpackMiniCssExtractPlugin
     }
 };
 WebpackMiniCssExtractPluginConfigService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
-    __param(0, common_1.Optional()),
+    CustomInjectable(),
+    __param(0, Optional()),
     __metadata("design:paramtypes", [Object])
 ], WebpackMiniCssExtractPluginConfigService);
-exports.WebpackMiniCssExtractPluginConfigService = WebpackMiniCssExtractPluginConfigService;
-let WebpackMiniCssExtractPluginService = class WebpackMiniCssExtractPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+export { WebpackMiniCssExtractPluginConfigService };
+let WebpackMiniCssExtractPluginService = class WebpackMiniCssExtractPluginService extends WebpackPluginBaseService {
     constructor(classConstructor) {
-        super(classConstructor ?? mini_css_extract_plugin_1.default);
+        super(classConstructor ?? MiniCssExtractPlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -49,9 +43,9 @@ let WebpackMiniCssExtractPluginService = class WebpackMiniCssExtractPluginServic
     }
 };
 WebpackMiniCssExtractPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
-    __param(0, common_1.Optional()),
+    CustomInjectable(),
+    __param(0, Optional()),
     __metadata("design:paramtypes", [Object])
 ], WebpackMiniCssExtractPluginService);
-exports.WebpackMiniCssExtractPluginService = WebpackMiniCssExtractPluginService;
+export { WebpackMiniCssExtractPluginService };
 //# sourceMappingURL=webpack-mini-css-extract-plugin.service.js.map

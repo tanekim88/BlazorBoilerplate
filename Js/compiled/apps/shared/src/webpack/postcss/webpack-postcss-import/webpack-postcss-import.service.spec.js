@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_postcss_import_service_1 = require("./webpack-postcss-import.service");
+import { Test } from '@nestjs/testing';
+import { WebpackPostcssImportService } from './webpack-postcss-import.service';
 describe('WebpackPostcssImportService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_postcss_import_service_1.WebpackPostcssImportService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackPostcssImportService],
         }).compile();
-        service = module.get(webpack_postcss_import_service_1.WebpackPostcssImportService);
+        service = module.get(WebpackPostcssImportService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

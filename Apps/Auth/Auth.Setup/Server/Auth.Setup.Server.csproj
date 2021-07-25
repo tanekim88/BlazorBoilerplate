@@ -39,6 +39,10 @@
 	<ItemGroup>
 		<PackageReference Include="Dapr.AspNetCore" Version="1.2.0" />
 		<PackageReference Include="Dapr.Client" Version="1.2.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.38.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0-preview.5.21301.17" />
 		<PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.1.0" />

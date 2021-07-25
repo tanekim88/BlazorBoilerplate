@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_postcss_rfs_autopilot_service_1 = require("./webpack-postcss-rfs-autopilot.service");
+import { Test } from '@nestjs/testing';
+import { WebpackPostcssRfsAutopilotService } from './webpack-postcss-rfs-autopilot.service';
 describe('WebpackPostcssRfsAutopilotService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_postcss_rfs_autopilot_service_1.WebpackPostcssRfsAutopilotService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackPostcssRfsAutopilotService],
         }).compile();
-        service = module.get(webpack_postcss_rfs_autopilot_service_1.WebpackPostcssRfsAutopilotService);
+        service = module.get(WebpackPostcssRfsAutopilotService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

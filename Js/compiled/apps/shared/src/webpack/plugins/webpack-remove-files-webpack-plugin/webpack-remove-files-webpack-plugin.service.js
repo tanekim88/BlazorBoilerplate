@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackRemoveFilesWebpackPluginService = exports.WebpackPreRemoveFilesWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
-let WebpackPreRemoveFilesWebpackPluginService = class WebpackPreRemoveFilesWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackPreRemoveFilesWebpackPluginService = class WebpackPreRemoveFilesWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
         super(RemoveFilesWebpackPlugin);
     }
@@ -32,11 +29,11 @@ let WebpackPreRemoveFilesWebpackPluginService = class WebpackPreRemoveFilesWebpa
     }
 };
 WebpackPreRemoveFilesWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPreRemoveFilesWebpackPluginService);
-exports.WebpackPreRemoveFilesWebpackPluginService = WebpackPreRemoveFilesWebpackPluginService;
-let WebpackRemoveFilesWebpackPluginService = class WebpackRemoveFilesWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+export { WebpackPreRemoveFilesWebpackPluginService };
+let WebpackRemoveFilesWebpackPluginService = class WebpackRemoveFilesWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
         super(RemoveFilesWebpackPlugin);
     }
@@ -55,8 +52,8 @@ let WebpackRemoveFilesWebpackPluginService = class WebpackRemoveFilesWebpackPlug
     }
 };
 WebpackRemoveFilesWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackRemoveFilesWebpackPluginService);
-exports.WebpackRemoveFilesWebpackPluginService = WebpackRemoveFilesWebpackPluginService;
+export { WebpackRemoveFilesWebpackPluginService };
 //# sourceMappingURL=webpack-remove-files-webpack-plugin.service.js.map

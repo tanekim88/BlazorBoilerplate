@@ -1,55 +1,52 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackPluginsModule = void 0;
-const webpack_clean_webpack_plugin_service_1 = require("./webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service");
-const webpack_copy_webpack_plugin_service_1 = require("./webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service");
-const webpack_favicons_webpack_plugin_service_1 = require("./webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service");
-const webpack_html_webpack_plugin_service_1 = require("./webpack-html-webpack-plugin/webpack-html-webpack-plugin.service");
-const webpack_mini_css_extract_plugin_service_1 = require("./webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service");
-const webpack_plugins_service_1 = require("./webpack-plugins/webpack-plugins.service");
-const webpack_webpack_fix_style_only_entries_service_1 = require("./webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service");
-const webpack_workbox_webpack_plugin_service_1 = require("./webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_remove_files_webpack_plugin_service_1 = require("./webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service");
-const webpack_tsconfig_paths_webpack_plugin_service_1 = require("./webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
-const webpack_webpack_chokidar_plugin_service_1 = require("./webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service");
-const webpack_watch_entries_plugin_service_1 = require("./webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const webpack_plugins_module_1 = require("@shared/src/webpack/plugins/webpack-plugins.module");
-const webpack_html_webpack_customizer_plugin_service_1 = require("./webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service");
+import { AuthWebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service';
+import { AuthWebpackCopyWebpackPluginService } from './webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
+import { AuthWebpackFaviconsWebpackPluginService } from './webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
+import { AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath } from './webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { AuthWebpackMiniCssExtractPluginService, AuthWebpackMiniCssExtractPluginConfigService, } from './webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
+import { AuthWebpackPluginsService, AuthWebpackPluginsConfigService, } from './webpack-plugins/webpack-plugins.service';
+import { AuthWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
+import { AuthWebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
+import { CustomModule } from '@shared/src/functions/process-providers';
+import { AuthWebpackPreRemoveFilesWebpackPluginService, AuthWebpackRemoveFilesWebpackPluginService, } from './webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
+import { AuthWebpackTsconfigPathsWebpackPluginService } from './webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
+import { AuthWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
+import { AuthWebpackWatchEntriesPluginConfigService, AuthWebpackWatchEntriesPluginService, } from './webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackPluginsModule } from '@shared/src/webpack/plugins/webpack-plugins.module';
+import { AuthWebpackHtmlWebpackCustomizerPluginService } from './webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
 let AuthWebpackPluginsModule = class AuthWebpackPluginsModule {
 };
 AuthWebpackPluginsModule = __decorate([
-    process_webpack_providers_1.CustomModule({
+    CustomModule({
         providers: [
             // authWebpackExtractSvgSpriteWebpackPluginService,
             // authWebpackSvgSpriteLoaderPluginService,
             // authWebpackSvgSpriteLoaderPluginService,
-            webpack_clean_webpack_plugin_service_1.AuthWebpackCleanWebpackPluginService,
-            webpack_copy_webpack_plugin_service_1.AuthWebpackCopyWebpackPluginService,
-            webpack_favicons_webpack_plugin_service_1.AuthWebpackFaviconsWebpackPluginService,
-            webpack_html_webpack_plugin_service_1.AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath,
-            webpack_mini_css_extract_plugin_service_1.AuthWebpackMiniCssExtractPluginService,
-            webpack_plugins_service_1.AuthWebpackPluginsConfigService,
-            webpack_plugins_service_1.AuthWebpackPluginsService,
-            webpack_mini_css_extract_plugin_service_1.AuthWebpackMiniCssExtractPluginConfigService,
-            webpack_remove_files_webpack_plugin_service_1.AuthWebpackPreRemoveFilesWebpackPluginService,
-            webpack_remove_files_webpack_plugin_service_1.AuthWebpackRemoveFilesWebpackPluginService,
-            webpack_tsconfig_paths_webpack_plugin_service_1.AuthWebpackTsconfigPathsWebpackPluginService,
-            webpack_watch_entries_plugin_service_1.AuthWebpackWatchEntriesPluginConfigService,
-            webpack_watch_entries_plugin_service_1.AuthWebpackWatchEntriesPluginService,
-            webpack_webpack_chokidar_plugin_service_1.AuthWebpackWebpackChokidarPluginService,
-            webpack_webpack_fix_style_only_entries_service_1.AuthWebpackWebpackFixStyleOnlyEntriesService,
-            webpack_workbox_webpack_plugin_service_1.AuthWebpackWorkboxWebpackPluginService,
-            webpack_html_webpack_customizer_plugin_service_1.AuthWebpackHtmlWebpackCustomizerPluginService,
+            AuthWebpackCleanWebpackPluginService,
+            AuthWebpackCopyWebpackPluginService,
+            AuthWebpackFaviconsWebpackPluginService,
+            AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath,
+            AuthWebpackMiniCssExtractPluginService,
+            AuthWebpackPluginsConfigService,
+            AuthWebpackPluginsService,
+            AuthWebpackMiniCssExtractPluginConfigService,
+            AuthWebpackPreRemoveFilesWebpackPluginService,
+            AuthWebpackRemoveFilesWebpackPluginService,
+            AuthWebpackTsconfigPathsWebpackPluginService,
+            AuthWebpackWatchEntriesPluginConfigService,
+            AuthWebpackWatchEntriesPluginService,
+            AuthWebpackWebpackChokidarPluginService,
+            AuthWebpackWebpackFixStyleOnlyEntriesService,
+            AuthWebpackWorkboxWebpackPluginService,
+            AuthWebpackHtmlWebpackCustomizerPluginService,
         ],
-        imports: [webpack_plugins_module_1.WebpackPluginsModule],
+        imports: [WebpackPluginsModule],
     })
 ], AuthWebpackPluginsModule);
-exports.AuthWebpackPluginsModule = AuthWebpackPluginsModule;
+export { AuthWebpackPluginsModule };
 //# sourceMappingURL=webpack-plugins.module.js.map

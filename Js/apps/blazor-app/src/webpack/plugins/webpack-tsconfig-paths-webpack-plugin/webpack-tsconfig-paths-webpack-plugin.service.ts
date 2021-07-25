@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { WebpackTsconfigPathsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
 
 @CustomInjectable()

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,26 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackCopyWebpackPluginService = void 0;
-const path_1 = __importDefault(require("path"));
-const webpack_copy_webpack_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const paths_1 = require("@auth/paths");
-const environment_service_1 = require("@auth/src/modules/environment/environment/environment.service");
-let AuthWebpackCopyWebpackPluginService = class AuthWebpackCopyWebpackPluginService extends webpack_copy_webpack_plugin_service_1.WebpackCopyWebpackPluginService {
+import path from 'path';
+import { WebpackCopyWebpackPluginService } from '@shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { authPaths } from '@auth/paths';
+import { AuthEnvironmentService } from '@auth/src/modules/environment/environment/environment.service';
+let AuthWebpackCopyWebpackPluginService = class AuthWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             patterns: [
                 {
-                    from: path_1.default.resolve(paths_1.authPaths.src.toAbsolutePath(), 'appsettings.json'),
+                    from: path.resolve(authPaths.src.toAbsolutePath(), 'appsettings.json'),
                     to: '',
                 },
                 {
-                    from: path_1.default.resolve(paths_1.authPaths.src.toAbsolutePath(), 'appsettings.Development.json'),
+                    from: path.resolve(authPaths.src.toAbsolutePath(), 'appsettings.Development.json'),
                     to: '',
                 },
             ],
@@ -35,11 +29,11 @@ let AuthWebpackCopyWebpackPluginService = class AuthWebpackCopyWebpackPluginServ
     }
 };
 __decorate([
-    process_webpack_providers_1.CustomInject(environment_service_1.AuthEnvironmentService),
-    __metadata("design:type", environment_service_1.AuthEnvironmentService)
+    CustomInject(AuthEnvironmentService),
+    __metadata("design:type", AuthEnvironmentService)
 ], AuthWebpackCopyWebpackPluginService.prototype, "authEnvironmentService", void 0);
 AuthWebpackCopyWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], AuthWebpackCopyWebpackPluginService);
-exports.AuthWebpackCopyWebpackPluginService = AuthWebpackCopyWebpackPluginService;
+export { AuthWebpackCopyWebpackPluginService };
 //# sourceMappingURL=webpack-copy-webpack-plugin.service.js.map

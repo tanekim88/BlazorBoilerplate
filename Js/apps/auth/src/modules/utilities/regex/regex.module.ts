@@ -1,4 +1,4 @@
-import { CustomModule } from '@shared/src/functions/process-webpack-providers';
+import { CustomModule } from '@shared/src/functions/process-providers';
 import { AuthRegexService } from './regex/regex.service';
 
 @CustomModule({

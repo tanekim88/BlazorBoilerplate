@@ -1,68 +1,62 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.mergeCustomizer = void 0;
-const merge_command_option_1 = require("./merge-command-option");
-const lodash_1 = __importDefault(require("lodash"));
-function mergeCustomizer(mergeDefault = merge_command_option_1.MergeCommandOption.append) {
+import { MergeCommandOption } from './merge-command-option';
+import _ from 'lodash';
+export function mergeCustomizer(mergeDefault = MergeCommandOption.append) {
     return (objValue, srcValue, key, object, source, stack) => {
         // if (srcValue && srcValue[0]?.name === 'prepend') {
         //     debugger;
         // }
-        if (lodash_1.default.isNil(objValue)) {
+        if (_.isNil(objValue)) {
             return srcValue;
         }
-        if (lodash_1.default.isObject(objValue) && lodash_1.default.isObject(srcValue)) {
-            if ((lodash_1.default.isArray(objValue) && !lodash_1.default.isArray(srcValue)) || (!lodash_1.default.isArray(objValue) && lodash_1.default.isArray(srcValue))) {
+        if (_.isObject(objValue) && _.isObject(srcValue)) {
+            if ((_.isArray(objValue) && !_.isArray(srcValue)) || (!_.isArray(objValue) && _.isArray(srcValue))) {
                 throw new Error('Property type mismatch.');
             }
         }
         if (typeof srcValue === 'string') {
             return srcValue;
         }
-        if (lodash_1.default.isArray(objValue)) {
+        if (_.isArray(objValue)) {
             if (objValue.length > 0) {
                 let toReturn = [];
                 objValue.forEach((s) => {
-                    if (s[0]?.token !== merge_command_option_1.MergeCommandOption.token) {
+                    if (s[0]?.token !== MergeCommandOption.token) {
                         s = [mergeDefault, [s]];
                     }
                     const command = s[0];
                     switch (command) {
-                        case merge_command_option_1.MergeCommandOption.prepend:
+                        case MergeCommandOption.prepend:
                             toReturn = [].concat(s[1]).concat(toReturn);
                             break;
-                        case merge_command_option_1.MergeCommandOption.overwrite:
+                        case MergeCommandOption.overwrite:
                             toReturn = [];
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.overwriteCommandsOnly:
-                            toReturn = toReturn.filter((t) => t[0]?.token !== merge_command_option_1.MergeCommandOption.token);
+                        case MergeCommandOption.overwriteCommandsOnly:
+                            toReturn = toReturn.filter((t) => t[0]?.token !== MergeCommandOption.token);
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.getOverwritten:
+                        case MergeCommandOption.getOverwritten:
                             break;
-                        case merge_command_option_1.MergeCommandOption.append:
+                        case MergeCommandOption.append:
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteFirstOne:
+                        case MergeCommandOption.deleteFirstOne:
                             toReturn.shift();
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteFirstN:
+                        case MergeCommandOption.deleteFirstN:
                             toReturn.splice(0, s[1][0]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteLastOne:
+                        case MergeCommandOption.deleteLastOne:
                             toReturn.pop();
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteLastN:
+                        case MergeCommandOption.deleteLastN:
                             toReturn.splice(toReturn.length - s[1][0]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.makeThemUnique:
-                            toReturn = lodash_1.default.uniq(toReturn);
+                        case MergeCommandOption.makeThemUnique:
+                            toReturn = _.uniq(toReturn);
                             break;
-                        case merge_command_option_1.MergeCommandOption.customMerge:
+                        case MergeCommandOption.customMerge:
                             toReturn = s[1][0](toReturn);
                             break;
                         default:
@@ -72,46 +66,46 @@ function mergeCustomizer(mergeDefault = merge_command_option_1.MergeCommandOptio
                 });
                 objValue = toReturn;
             }
-            if (lodash_1.default.isArray(srcValue) && srcValue.length > 0) {
+            if (_.isArray(srcValue) && srcValue.length > 0) {
                 let toReturn = objValue;
                 srcValue.forEach((s) => {
-                    if (s[0]?.token !== merge_command_option_1.MergeCommandOption.token) {
+                    if (s[0]?.token !== MergeCommandOption.token) {
                         s = [mergeDefault, s];
                     }
                     const command = s[0];
                     switch (command) {
-                        case merge_command_option_1.MergeCommandOption.prepend:
+                        case MergeCommandOption.prepend:
                             toReturn = [].concat(s[1]).concat(toReturn);
                             break;
-                        case merge_command_option_1.MergeCommandOption.overwrite:
+                        case MergeCommandOption.overwrite:
                             toReturn = [];
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.overwriteCommandsOnly:
-                            toReturn = toReturn.filter((t) => t[0]?.token !== merge_command_option_1.MergeCommandOption.token);
+                        case MergeCommandOption.overwriteCommandsOnly:
+                            toReturn = toReturn.filter((t) => t[0]?.token !== MergeCommandOption.token);
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.getOverwritten:
+                        case MergeCommandOption.getOverwritten:
                             break;
-                        case merge_command_option_1.MergeCommandOption.append:
+                        case MergeCommandOption.append:
                             toReturn = toReturn.concat(s[1]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteFirstOne:
+                        case MergeCommandOption.deleteFirstOne:
                             toReturn.shift();
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteFirstN:
+                        case MergeCommandOption.deleteFirstN:
                             toReturn.splice(0, s[1][0]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteLastOne:
+                        case MergeCommandOption.deleteLastOne:
                             toReturn.pop();
                             break;
-                        case merge_command_option_1.MergeCommandOption.deleteLastN:
+                        case MergeCommandOption.deleteLastN:
                             toReturn.splice(toReturn.length - s[1][0]);
                             break;
-                        case merge_command_option_1.MergeCommandOption.makeThemUnique:
-                            toReturn = lodash_1.default.uniq(toReturn);
+                        case MergeCommandOption.makeThemUnique:
+                            toReturn = _.uniq(toReturn);
                             break;
-                        case merge_command_option_1.MergeCommandOption.customMerge:
+                        case MergeCommandOption.customMerge:
                             toReturn = s[1][0](toReturn);
                             break;
                         default:
@@ -124,5 +118,4 @@ function mergeCustomizer(mergeDefault = merge_command_option_1.MergeCommandOptio
         }
     };
 }
-exports.mergeCustomizer = mergeCustomizer;
 //# sourceMappingURL=merge-with-customizer.js.map

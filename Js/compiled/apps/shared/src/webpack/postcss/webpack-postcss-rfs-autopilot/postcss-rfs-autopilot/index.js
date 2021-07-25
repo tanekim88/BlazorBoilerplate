@@ -1,8 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const postcss = require('postcss');
-const helper_1 = require("./utilities/helper");
-exports.default = postcss.plugin('postcss-rfs-autopilot', ({ includedRules, excludedRules, includedSelectors, excludedSelectors, includedUnits, excludedUnits, silentConsole }) => {
+import { shouldBeTransformed } from './utilities/helper';
+export default postcss.plugin('postcss-rfs-autopilot', ({ includedRules, excludedRules, includedSelectors, excludedSelectors, includedUnits, excludedUnits, silentConsole }) => {
     const options = {
         includedRules: includedRules || [
             '*'
@@ -22,7 +20,7 @@ exports.default = postcss.plugin('postcss-rfs-autopilot', ({ includedRules, excl
     // options.includedUnits = filterIdenticalValues(options.includedUnits, options.excludedUnits)
     return (root, result) => {
         root.walkDecls((decl) => {
-            if (helper_1.shouldBeTransformed(decl, options)) {
+            if (shouldBeTransformed(decl, options)) {
                 decl.value = `rfs(${decl.value})`;
             }
         });

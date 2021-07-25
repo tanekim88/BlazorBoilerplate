@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -23,6 +23,10 @@
 		<PackageReference Include="EPPlus" Version="5.7.0" />
 		<PackageReference Include="GreenDonut" Version="12.0.0-preview.22" />
 		<PackageReference Include="Grpc.AspNetCore" Version="2.38.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.38.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="HotChocolate" Version="12.0.0-preview.22" />
 		<PackageReference Include="HotChocolate.AspNetCore" Version="12.0.0-preview.22" />
 		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.0.0-preview.22" />

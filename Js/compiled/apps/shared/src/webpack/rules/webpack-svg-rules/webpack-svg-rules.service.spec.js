@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_svg_rules_service_1 = require("./webpack-svg-rules.service");
+import { Test } from '@nestjs/testing';
+import { WebpackSvgRulesService } from './webpack-svg-rules.service';
 describe('WebpackSvgRulesService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_svg_rules_service_1.WebpackSvgRulesService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackSvgRulesService],
         }).compile();
-        service = module.get(webpack_svg_rules_service_1.WebpackSvgRulesService);
+        service = module.get(WebpackSvgRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

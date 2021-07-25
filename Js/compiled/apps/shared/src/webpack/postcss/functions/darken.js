@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.customDarken = void 0;
 const color = require('css-color-converter');
-const customDarken = (value, frac) => {
+export const customDarken = (value, frac) => {
     const darken = 1 - parseFloat(frac);
     const rgba = color(value).toRgbaArray();
     const r = rgba[0] * darken;
@@ -10,5 +7,4 @@ const customDarken = (value, frac) => {
     const b = rgba[2] * darken;
     return color([r, g, b]).toHexString();
 };
-exports.customDarken = customDarken;
 //# sourceMappingURL=darken.js.map

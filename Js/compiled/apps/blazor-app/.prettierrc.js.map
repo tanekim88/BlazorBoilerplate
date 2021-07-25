@@ -1,1 +1,1 @@
-{"version":3,"file":".prettierrc.js","sourceRoot":"","sources":["../../../apps/blazor-app/.prettierrc.ts"],"names":[],"mappings":";;;;;AAAA,sEAA+C;AAC/C,0DAAkC;AAElC,kBAAe,mBAAS,CAAC,qBAAY,EAAE,EAAE,CAAC,CAAC"}
+{"version":3,"file":".prettierrc.js","sourceRoot":"","sources":["../../../apps/blazor-app/.prettierrc.ts"],"names":[],"mappings":"AAAA,OAAO,YAAY,MAAM,qBAAqB,CAAC;AAC/C,OAAO,SAAS,MAAM,WAAW,CAAC;AAElC,eAAe,SAAS,CAAC,YAAY,EAAE,EAAE,CAAC,CAAC"}

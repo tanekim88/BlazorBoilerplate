@@ -1,7 +1,7 @@
 import { RuleSetRule } from 'webpack';
 import { WebpackSvgRulesService } from '@shared/src/webpack/rules/webpack-svg-rules/webpack-svg-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class AuthWebpackSvgRulesService extends WebpackSvgRulesService {

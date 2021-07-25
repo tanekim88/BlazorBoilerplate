@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_watch_entries_plugin_service_1 = require("./webpack-watch-entries-plugin.service");
+import { Test } from '@nestjs/testing';
+import { BlazorAppWebpackWatchEntriesPluginConfigService } from './webpack-watch-entries-plugin.service';
 describe('BlazorAppWebpackWatchEntriesPluginConfigService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_watch_entries_plugin_service_1.BlazorAppWebpackWatchEntriesPluginConfigService],
+        const module = await Test.createTestingModule({
+            providers: [BlazorAppWebpackWatchEntriesPluginConfigService],
         }).compile();
-        service = module.get(webpack_watch_entries_plugin_service_1.BlazorAppWebpackWatchEntriesPluginConfigService);
+        service = module.get(BlazorAppWebpackWatchEntriesPluginConfigService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

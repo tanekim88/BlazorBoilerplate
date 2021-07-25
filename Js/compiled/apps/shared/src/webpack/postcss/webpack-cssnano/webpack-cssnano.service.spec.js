@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_cssnano_service_1 = require("./webpack-cssnano.service");
+import { Test } from '@nestjs/testing';
+import { WebpackCssnanoService } from './webpack-cssnano.service';
 describe('WebpackCssnanoService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_cssnano_service_1.WebpackCssnanoService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackCssnanoService],
         }).compile();
-        service = module.get(webpack_cssnano_service_1.WebpackCssnanoService);
+        service = module.get(WebpackCssnanoService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

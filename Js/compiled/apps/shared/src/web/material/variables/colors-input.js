@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.colorSchemes = exports.colorsInput = void 0;
-exports.colorsInput = {
+export const colorsInput = {
     "primary": "blue",
     "secondary": "green",
     "background": "yellow",
@@ -9,5 +6,5 @@ exports.colorsInput = {
     "error": "red",
     "success": "green",
 };
-exports.colorSchemes = Object.keys(exports.colorsInput);
+export const colorSchemes = Object.keys(colorsInput);
 //# sourceMappingURL=colors-input.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,17 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackProvidePluginService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const webpack_1 = __importDefault(require("webpack"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-let WebpackProvidePluginService = class WebpackProvidePluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+import webpack from 'webpack';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackProvidePluginService = class WebpackProvidePluginService extends WebpackPluginBaseService {
     constructor() {
-        super(webpack_1.default.ProvidePlugin);
+        super(webpack.ProvidePlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -28,8 +22,8 @@ let WebpackProvidePluginService = class WebpackProvidePluginService extends webp
     }
 };
 WebpackProvidePluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackProvidePluginService);
-exports.WebpackProvidePluginService = WebpackProvidePluginService;
+export { WebpackProvidePluginService };
 //# sourceMappingURL=webpack-provide-plugin.service.js.map

@@ -1,12 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackBase = void 0;
-const core_1 = require("@nestjs/core");
-const webpack_1 = __importDefault(require("webpack"));
-class WebpackBase {
+import { NestFactory } from '@nestjs/core';
+import webpack from 'webpack';
+export class WebpackBase {
     /**
      *
      */
@@ -20,7 +14,7 @@ class WebpackBase {
         if (options?.mode) {
             process.env.NODE_ENV = options?.mode;
         }
-        const app = await core_1.NestFactory.create(this.webpackModule);
+        const app = await NestFactory.create(this.webpackModule);
         await app.init();
         return this.services.map((service) => {
             const svc = app.get(service);
@@ -33,7 +27,7 @@ class WebpackBase {
             (async () => {
                 const configs = await this.createWebpackConfigs();
                 console.dir(configs);
-                const compiler = webpack_1.default(configs);
+                const compiler = webpack(configs);
                 const watching = compiler.watch({
                     // Example watchOptions
                     aggregateTimeout: 300,
@@ -58,5 +52,4 @@ class WebpackBase {
         }
     }
 }
-exports.WebpackBase = WebpackBase;
 //# sourceMappingURL=webpack.base.js.map

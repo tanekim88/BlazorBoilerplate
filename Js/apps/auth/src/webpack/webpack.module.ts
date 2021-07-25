@@ -1,5 +1,5 @@
 import { ModulesModule } from '@shared/src/modules/modules.module';
-import { CustomModule } from '@shared/src/functions/process-webpack-providers';
+import { CustomModule } from '@shared/src/functions/process-providers';
 
 import { WebpackModule } from '@shared/src/webpack/webpack.module';
 import { AuthModulesModule } from '../modules/modules.module';

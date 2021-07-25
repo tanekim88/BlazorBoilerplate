@@ -15,7 +15,7 @@ import { WebpackPostcssSimpleVarsService } from './webpack-postcss-simple-vars/w
 import { WebpackRfsService } from './webpack-rfs/webpack-rfs.service';
 import { WebpackStylelintService } from './webpack-stylelint/webpack-stylelint.service';
 import { WebpackTailwindcssService } from './webpack-tailwindcss/webpack-tailwindcss.service';
-import { CustomModule } from '../../functions/process-webpack-providers';
+import { CustomModule } from '../../functions/process-providers';
 
 import { WebpackPostcssService } from './webpack-postcss/webpack-postcss.service';
 import { WebpackPostcssPurgecssService } from './webpack-postcss-purgecss/webpack-postcss-purgecss.service';

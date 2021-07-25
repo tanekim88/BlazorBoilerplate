@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_csv_rules_service_1 = require("./webpack-csv-rules.service");
+import { Test } from '@nestjs/testing';
+import { AuthWebpackCsvRulesService } from './webpack-csv-rules.service';
 describe('AuthWebpackCsvRulesService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_csv_rules_service_1.AuthWebpackCsvRulesService],
+        const module = await Test.createTestingModule({
+            providers: [AuthWebpackCsvRulesService],
         }).compile();
-        service = module.get(webpack_csv_rules_service_1.AuthWebpackCsvRulesService);
+        service = module.get(AuthWebpackCsvRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

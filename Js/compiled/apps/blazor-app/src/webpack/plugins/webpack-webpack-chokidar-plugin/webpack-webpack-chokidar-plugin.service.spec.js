@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_webpack_chokidar_plugin_service_1 = require("./webpack-webpack-chokidar-plugin.service");
+import { Test } from '@nestjs/testing';
+import { BlazorAppWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin.service';
 describe('BlazorAppWebpackWebpackChokidarPluginService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_webpack_chokidar_plugin_service_1.BlazorAppWebpackWebpackChokidarPluginService],
+        const module = await Test.createTestingModule({
+            providers: [BlazorAppWebpackWebpackChokidarPluginService],
         }).compile();
-        service = module.get(webpack_webpack_chokidar_plugin_service_1.BlazorAppWebpackWebpackChokidarPluginService);
+        service = module.get(BlazorAppWebpackWebpackChokidarPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

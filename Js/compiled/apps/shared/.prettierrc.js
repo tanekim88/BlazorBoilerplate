@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const settings = {
     semi: true,
     trailingComma: 'all',
@@ -8,5 +6,5 @@ const settings = {
     tabWidth: 4,
     endOfLine: 'auto',
 };
-exports.default = settings;
+export default settings;
 //# sourceMappingURL=.prettierrc.js.map

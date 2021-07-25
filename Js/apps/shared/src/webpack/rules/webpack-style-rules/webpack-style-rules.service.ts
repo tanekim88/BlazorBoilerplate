@@ -4,8 +4,8 @@ import { WebpackRulesBaseService } from '../webpack-rules-base/webpack-rules-bas
 import sass from 'sass';
 
 import { WebpackPostcssService } from '../../postcss/webpack-postcss/webpack-postcss.service';
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 
 import { sharedPaths } from '@shared/paths';
 import { rootPaths } from '@root/paths';

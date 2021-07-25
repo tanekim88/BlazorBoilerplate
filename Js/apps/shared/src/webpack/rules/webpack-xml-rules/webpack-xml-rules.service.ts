@@ -1,6 +1,6 @@
 import { WebpackRulesBaseService } from '../webpack-rules-base/webpack-rules-base.service';
 import { RuleSetRule } from 'webpack';
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackXmlRulesService extends WebpackRulesBaseService {

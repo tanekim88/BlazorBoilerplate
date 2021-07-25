@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,31 +7,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EnvironmentService = void 0;
-const path_1 = __importDefault(require("path"));
-const configs_1 = require("../../../../configs");
-const merge_service_1 = require("../../utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const configs_base_1 = require("../../../../configs.base");
-const paths_1 = require("@root/paths");
+import path from 'path';
+import { LOCAL_CONFIG } from '../../../../configs';
+import { MergeService } from '../../utilities/merge/merge/merge.service';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { ConfigBase } from '../../../../configs.base';
+import { RootPaths, rootPaths } from '@root/paths';
 let EnvironmentService = class EnvironmentService {
     onModuleInit() {
-        const relPath = path_1.default.relative(paths_1.rootPaths.toAbsolutePath(), this.localConfig.rootDir);
-        const splitted = relPath.split(path_1.default.sep);
+        const relPath = path.relative(rootPaths.toAbsolutePath(), this.localConfig.rootDir);
+        const splitted = relPath.split(path.sep);
         this.localPaths = splitted.reduce((acc, curr) => {
             acc = acc[curr];
             return acc;
-        }, paths_1.rootPaths);
-        const RelPath = path_1.default.relative(paths_1.RootPaths.toAbsolutePath(), this.localConfig.RootDir);
-        const Splitted = RelPath.split(path_1.default.sep);
+        }, rootPaths);
+        const RelPath = path.relative(RootPaths.toAbsolutePath(), this.localConfig.RootDir);
+        const Splitted = RelPath.split(path.sep);
         this.LocalPaths = Splitted.reduce((acc, curr) => {
             acc = acc[curr];
             return acc;
-        }, paths_1.RootPaths);
+        }, RootPaths);
         this.createEnvironments();
     }
     createEnvironments() {
@@ -45,15 +39,15 @@ let EnvironmentService = class EnvironmentService {
     }
 };
 __decorate([
-    process_webpack_providers_1.CustomInject(configs_1.LOCAL_CONFIG),
-    __metadata("design:type", configs_base_1.ConfigBase)
+    CustomInject(LOCAL_CONFIG),
+    __metadata("design:type", ConfigBase)
 ], EnvironmentService.prototype, "localConfig", void 0);
 __decorate([
-    process_webpack_providers_1.CustomInject(merge_service_1.MergeService),
-    __metadata("design:type", merge_service_1.MergeService)
+    CustomInject(MergeService),
+    __metadata("design:type", MergeService)
 ], EnvironmentService.prototype, "mergeService", void 0);
 EnvironmentService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], EnvironmentService);
-exports.EnvironmentService = EnvironmentService;
+export { EnvironmentService };
 //# sourceMappingURL=environment.service.js.map

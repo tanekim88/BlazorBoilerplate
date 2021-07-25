@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const environment_service_1 = require("./environment.service");
+import { Test } from '@nestjs/testing';
+import { EnvironmentService } from './environment.service';
 describe('EnvironmentService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [environment_service_1.EnvironmentService],
+        const module = await Test.createTestingModule({
+            providers: [EnvironmentService],
         }).compile();
-        service = module.get(environment_service_1.EnvironmentService);
+        service = module.get(EnvironmentService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

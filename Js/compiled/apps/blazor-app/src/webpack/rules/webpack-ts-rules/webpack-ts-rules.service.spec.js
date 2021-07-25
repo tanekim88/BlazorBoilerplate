@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_ts_rules_service_1 = require("./webpack-ts-rules.service");
+import { Test } from '@nestjs/testing';
+import { BlazorAppWebpackTsRulesService } from './webpack-ts-rules.service';
 describe('BlazorAppWebpackTsRulesService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_ts_rules_service_1.BlazorAppWebpackTsRulesService],
+        const module = await Test.createTestingModule({
+            providers: [BlazorAppWebpackTsRulesService],
         }).compile();
-        service = module.get(webpack_ts_rules_service_1.BlazorAppWebpackTsRulesService);
+        service = module.get(BlazorAppWebpackTsRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

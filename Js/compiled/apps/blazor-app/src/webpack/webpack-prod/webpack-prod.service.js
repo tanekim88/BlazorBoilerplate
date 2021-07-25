@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,39 +7,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BlazorAppWebpackProdService = exports.BlazorAppWebpackProdConfigService = void 0;
-const webpack_prod_service_1 = require("@shared/src/webpack/webpack-prod/webpack-prod.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const webpack_shared_config_service_1 = require("../webpack-shared-config/webpack-shared-config.service");
-const webpack_shared_service_1 = require("../webpack-shared/webpack-shared.service");
-let BlazorAppWebpackProdBaseService = class BlazorAppWebpackProdBaseService extends webpack_prod_service_1.WebpackProdService {
+import { WebpackProdService } from '@shared/src/webpack/webpack-prod/webpack-prod.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { BlazorAppWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
+import { BlazorAppWebpackSharedService } from '../webpack-shared/webpack-shared.service';
+let BlazorAppWebpackProdBaseService = class BlazorAppWebpackProdBaseService extends WebpackProdService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {}, options);
     }
 };
 BlazorAppWebpackProdBaseService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], BlazorAppWebpackProdBaseService);
-class BlazorAppWebpackProdConfigService extends BlazorAppWebpackProdBaseService {
+export class BlazorAppWebpackProdConfigService extends BlazorAppWebpackProdBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedConfigService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_shared_config_service_1.BlazorAppWebpackSharedConfigService),
-    __metadata("design:type", webpack_shared_config_service_1.BlazorAppWebpackSharedConfigService)
+    CustomInject(BlazorAppWebpackSharedConfigService),
+    __metadata("design:type", BlazorAppWebpackSharedConfigService)
 ], BlazorAppWebpackProdConfigService.prototype, "blazorAppClientWebpackSharedConfigService", void 0);
-exports.BlazorAppWebpackProdConfigService = BlazorAppWebpackProdConfigService;
-class BlazorAppWebpackProdService extends BlazorAppWebpackProdBaseService {
+export class BlazorAppWebpackProdService extends BlazorAppWebpackProdBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_shared_service_1.BlazorAppWebpackSharedService),
-    __metadata("design:type", webpack_shared_service_1.BlazorAppWebpackSharedService)
+    CustomInject(BlazorAppWebpackSharedService),
+    __metadata("design:type", BlazorAppWebpackSharedService)
 ], BlazorAppWebpackProdService.prototype, "blazorAppClientWebpackSharedService", void 0);
-exports.BlazorAppWebpackProdService = BlazorAppWebpackProdService;
 //# sourceMappingURL=webpack-prod.service.js.map

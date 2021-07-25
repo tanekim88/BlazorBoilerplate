@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,13 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssCombineDuplicatedSelectorsService = void 0;
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 // import PostcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 const PostcssCombineDuplicatedSelectors = require('postcss-combine-duplicated-selectors');
-let WebpackPostcssCombineDuplicatedSelectorsService = class WebpackPostcssCombineDuplicatedSelectorsService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+let WebpackPostcssCombineDuplicatedSelectorsService = class WebpackPostcssCombineDuplicatedSelectorsService extends WebpackPostcssBaseService {
     /**
      *
      */
@@ -28,8 +25,8 @@ let WebpackPostcssCombineDuplicatedSelectorsService = class WebpackPostcssCombin
     }
 };
 WebpackPostcssCombineDuplicatedSelectorsService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPostcssCombineDuplicatedSelectorsService);
-exports.WebpackPostcssCombineDuplicatedSelectorsService = WebpackPostcssCombineDuplicatedSelectorsService;
+export { WebpackPostcssCombineDuplicatedSelectorsService };
 //# sourceMappingURL=webpack-postcss-combine-duplicated-selectors.service.js.map

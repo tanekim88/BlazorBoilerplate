@@ -2,7 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import { Compiler } from 'webpack';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import {
     WebpackHtmlWebpackCustomizerPlugin,
     WebpackHtmlWebpackCustomizerPluginService,

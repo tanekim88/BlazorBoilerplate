@@ -1,4 +1,4 @@
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { WebpackFaviconsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
 import { AuthEnvironmentService } from '../../../modules/environment/environment/environment.service';
 

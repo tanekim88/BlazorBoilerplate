@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,17 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssPurgecssService = void 0;
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const postcss_purgecss_1 = __importDefault(require("@fullhuman/postcss-purgecss"));
-let WebpackPostcssPurgecssService = class WebpackPostcssPurgecssService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import PurgeCss from '@fullhuman/postcss-purgecss';
+let WebpackPostcssPurgecssService = class WebpackPostcssPurgecssService extends WebpackPostcssBaseService {
     constructor() {
-        super(postcss_purgecss_1.default);
+        super(PurgeCss);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -27,8 +21,8 @@ let WebpackPostcssPurgecssService = class WebpackPostcssPurgecssService extends 
     }
 };
 WebpackPostcssPurgecssService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPostcssPurgecssService);
-exports.WebpackPostcssPurgecssService = WebpackPostcssPurgecssService;
+export { WebpackPostcssPurgecssService };
 //# sourceMappingURL=webpack-postcss-purgecss.service.js.map

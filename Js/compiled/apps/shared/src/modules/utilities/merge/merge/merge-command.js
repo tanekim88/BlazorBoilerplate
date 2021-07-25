@@ -1,41 +1,37 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MergeCommand = void 0;
-const merge_command_option_1 = require("./merge-command-option");
-class MergeCommand {
+import { MergeCommandOption } from './merge-command-option';
+export class MergeCommand {
     static append(...args) {
-        return [merge_command_option_1.MergeCommandOption.append, args];
+        return [MergeCommandOption.append, args];
     }
     static prepend(...args) {
-        return [merge_command_option_1.MergeCommandOption.prepend, args];
+        return [MergeCommandOption.prepend, args];
     }
     static overwrite(...args) {
-        return [merge_command_option_1.MergeCommandOption.overwrite, args];
+        return [MergeCommandOption.overwrite, args];
     }
     static overwriteCommandsOnly(...args) {
-        return [merge_command_option_1.MergeCommandOption.overwriteCommandsOnly, args];
+        return [MergeCommandOption.overwriteCommandsOnly, args];
     }
     static getOverwritten(...args) {
-        return [merge_command_option_1.MergeCommandOption.getOverwritten, args];
+        return [MergeCommandOption.getOverwritten, args];
     }
     static deleteLastOne() {
-        return [merge_command_option_1.MergeCommandOption.deleteLastOne];
+        return [MergeCommandOption.deleteLastOne];
     }
     static deleteFirstOne() {
-        return [merge_command_option_1.MergeCommandOption.deleteFirstOne];
+        return [MergeCommandOption.deleteFirstOne];
     }
     static deleteFirstN(n) {
-        return [merge_command_option_1.MergeCommandOption.deleteFirstN, n];
+        return [MergeCommandOption.deleteFirstN, n];
     }
     static deleteLastN(n) {
-        return [merge_command_option_1.MergeCommandOption.deleteLastN, n];
+        return [MergeCommandOption.deleteLastN, n];
     }
     static makeThemUnique() {
-        return [merge_command_option_1.MergeCommandOption.makeThemUnique];
+        return [MergeCommandOption.makeThemUnique];
     }
 }
-exports.MergeCommand = MergeCommand;
 MergeCommand.customMerge = (func) => {
-    return [merge_command_option_1.MergeCommandOption.customMerge, func];
+    return [MergeCommandOption.customMerge, func];
 };
 //# sourceMappingURL=merge-command.js.map

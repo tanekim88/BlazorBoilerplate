@@ -1,5 +1,5 @@
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 import { WebpackDevService } from '@shared/src/webpack/webpack-dev/webpack-dev.service';
 import { BlazorAppWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
 import { BlazorAppWebpackSharedService } from '../webpack-shared/webpack-shared.service';

@@ -1,36 +1,31 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 const final = {
     lint: 'eslint "*/**/*.{js,ts,tsx}" --quiet --fix',
 };
-const fs_1 = __importDefault(require("fs"));
-const package_json_1 = __importDefault(require("../package.json"));
-const package_json_2 = __importDefault(require("@blazor-app/package.json"));
-const package_json_3 = __importDefault(require("@auth/package.json"));
-const package_json_4 = __importDefault(require("@shared/package.json"));
-const path_1 = __importDefault(require("path"));
-const symlink_dir_1 = __importDefault(require("symlink-dir"));
-const configs_1 = require("@root/configs");
+import fs from 'fs';
+import packageJson from '../package.json';
+import blazorPackageJson from '@blazor-app/package.json';
+import authPackageJson from '@auth/package.json';
+import sharedPackageJson from '@shared/package.json';
+import path from 'path';
+import symlinkDir from 'symlink-dir';
+import { rootConfig } from '@root/configs';
 const childs = [
     {
         folderName: 'shared',
         shortName: 'shared',
-        packageJson: package_json_4.default,
+        packageJson: sharedPackageJson,
         folderPath: './apps/shared',
     },
     {
         folderName: 'blazor-app',
         shortName: 'blazor',
-        packageJson: package_json_2.default,
+        packageJson: blazorPackageJson,
         folderPath: './apps/blazor-app',
     },
     {
         folderName: 'auth',
         shortName: 'auth',
-        packageJson: package_json_3.default,
+        packageJson: authPackageJson,
         folderPath: './apps/auth',
     },
 ];
@@ -210,20 +205,20 @@ const childScript = commandObjs.reduce((acc, curr) => {
     acc[curr.name] = curr.command;
     return acc;
 }, {});
-package_json_1.default.scripts = final;
-const rootDir = configs_1.rootConfig.rootDir;
+packageJson.scripts = final;
+const rootDir = rootConfig.rootDir;
 childs.forEach((child) => {
-    const childFolderPath = path_1.default.resolve(rootDir, `${child.folderPath}`);
+    const childFolderPath = path.resolve(rootDir, `${child.folderPath}`);
     const folderName = child.folderName;
     const childPackageJson = child.packageJson;
     childPackageJson.scripts = childScript;
-    childPackageJson.dependencies = package_json_1.default.dependencies;
-    childPackageJson.devDependencies = package_json_1.default.devDependencies;
-    fs_1.default.writeFileSync(path_1.default.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
-    symlink_dir_1.default(path_1.default.resolve(rootDir, 'node_modules'), path_1.default.resolve(childFolderPath, 'node_modules')).then((result) => {
+    childPackageJson.dependencies = packageJson.dependencies;
+    childPackageJson.devDependencies = packageJson.devDependencies;
+    fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
+    symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules')).then((result) => {
         // console.dir(result);
     });
 });
-fs_1.default.writeFileSync('package.json', JSON.stringify(package_json_1.default, null, 4), 'utf8');
+fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4), 'utf8');
 require('./generate-paths');
 //# sourceMappingURL=generate-scripts.js.map

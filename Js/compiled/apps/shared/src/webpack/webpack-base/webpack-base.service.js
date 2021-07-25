@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,22 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackBaseService = void 0;
-const webpack_1 = __importDefault(require("webpack"));
-const environment_service_1 = require("../../modules/environment/environment/environment.service");
-const merge_service_1 = require("../../modules/utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
+import webpack from 'webpack';
+import { EnvironmentService } from '../../modules/environment/environment/environment.service';
+import { MergeService } from '../../modules/utilities/merge/merge/merge.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackBaseService = class WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions({}, options);
     }
     excuteWebpack(configs) {
-        const compiler = webpack_1.default(configs);
+        const compiler = webpack(configs);
         const watching = compiler.watch({
         // Example watchOptions
         // aggregateTimeout: 300,
@@ -44,15 +38,15 @@ let WebpackBaseService = class WebpackBaseService {
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(merge_service_1.MergeService),
-    __metadata("design:type", merge_service_1.MergeService)
+    CustomInject(MergeService),
+    __metadata("design:type", MergeService)
 ], WebpackBaseService.prototype, "mergeService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(environment_service_1.EnvironmentService),
-    __metadata("design:type", environment_service_1.EnvironmentService)
+    CustomInject(EnvironmentService),
+    __metadata("design:type", EnvironmentService)
 ], WebpackBaseService.prototype, "environmentService", void 0);
 WebpackBaseService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackBaseService);
-exports.WebpackBaseService = WebpackBaseService;
+export { WebpackBaseService };
 //# sourceMappingURL=webpack-base.service.js.map

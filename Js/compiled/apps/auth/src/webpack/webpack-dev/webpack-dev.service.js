@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,39 +7,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackDevService = exports.AuthWebpackDevConfigService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const webpack_dev_service_1 = require("@shared/src/webpack/webpack-dev/webpack-dev.service");
-const webpack_shared_config_service_1 = require("../webpack-shared-config/webpack-shared-config.service");
-const webpack_shared_service_1 = require("../webpack-shared/webpack-shared.service");
-let AuthWebpackDevBaseService = class AuthWebpackDevBaseService extends webpack_dev_service_1.WebpackDevService {
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { WebpackDevService } from '@shared/src/webpack/webpack-dev/webpack-dev.service';
+import { AuthWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
+import { AuthWebpackSharedService } from '../webpack-shared/webpack-shared.service';
+let AuthWebpackDevBaseService = class AuthWebpackDevBaseService extends WebpackDevService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {}, options);
     }
 };
 AuthWebpackDevBaseService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], AuthWebpackDevBaseService);
-class AuthWebpackDevConfigService extends AuthWebpackDevBaseService {
+export class AuthWebpackDevConfigService extends AuthWebpackDevBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.authWebpackSharedConfigService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_shared_config_service_1.AuthWebpackSharedConfigService),
-    __metadata("design:type", webpack_shared_config_service_1.AuthWebpackSharedConfigService)
+    CustomInject(AuthWebpackSharedConfigService),
+    __metadata("design:type", AuthWebpackSharedConfigService)
 ], AuthWebpackDevConfigService.prototype, "authWebpackSharedConfigService", void 0);
-exports.AuthWebpackDevConfigService = AuthWebpackDevConfigService;
-class AuthWebpackDevService extends AuthWebpackDevBaseService {
+export class AuthWebpackDevService extends AuthWebpackDevBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.authWebpackSharedService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_shared_service_1.AuthWebpackSharedService),
-    __metadata("design:type", webpack_shared_service_1.AuthWebpackSharedService)
+    CustomInject(AuthWebpackSharedService),
+    __metadata("design:type", AuthWebpackSharedService)
 ], AuthWebpackDevService.prototype, "authWebpackSharedService", void 0);
-exports.AuthWebpackDevService = AuthWebpackDevService;
 //# sourceMappingURL=webpack-dev.service.js.map

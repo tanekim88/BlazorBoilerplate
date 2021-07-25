@@ -1,13 +1,7 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.extractor = void 0;
-const compiler_1 = __importDefault(require("svelte/compiler"));
-const { parse, walk } = compiler_1.default;
-const path_1 = __importDefault(require("path"));
-const fs_1 = __importDefault(require("fs"));
+import compiler from 'svelte/compiler';
+const { parse, walk } = compiler;
+import path from 'path';
+import fs from 'fs';
 function flatten(arr) {
     return arr.reduce(function (flat, toFlatten) {
         return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
@@ -19,13 +13,13 @@ function getProp(node, attr) {
     return (node.attributes.find((a) => a.name === attr) || {}).value;
 }
 function getPath(name, root = './src/components') {
-    return path_1.default.resolve(root, name, 'variants.js');
+    return path.resolve(root, name, 'variants.js');
 }
 const defs = {};
 function getComponent(name) {
     try {
         let componentPath = getPath(name);
-        if (!fs_1.default.existsSync(componentPath)) {
+        if (!fs.existsSync(componentPath)) {
             componentPath = getPath(name, './node_modules/smelte/src/components');
         }
         return require(componentPath);
@@ -37,12 +31,12 @@ function getComponent(name) {
     }
 }
 function getComponentCodes(name) {
-    const root = ['./src/components', './node_modules/smelte/src/components'].filter((v) => fs_1.default.existsSync(v));
+    const root = ['./src/components', './node_modules/smelte/src/components'].filter((v) => fs.existsSync(v));
     return flatten(root.map((v) => {
-        const dir = fs_1.default.readdirSync(v);
+        const dir = fs.readdirSync(v);
         return dir
-            .filter((w) => fs_1.default.readdirSync(path_1.default.join(v, w)).includes(name + '.svelte'))
-            .map((w) => path_1.default.join(v, w, name + '.svelte'));
+            .filter((w) => fs.readdirSync(path.join(v, w)).includes(name + '.svelte'))
+            .map((w) => path.join(v, w, name + '.svelte'));
     }));
 }
 function classesPerComponent(colors) {
@@ -67,7 +61,7 @@ const whitelist = [
     // /w\-.\/7/
     ...flatten(['xl:w', 'lg:w', 'md:w', 'sm:w', 'w'].map((v) => [1, 2, 3, 4, 5, 6].map((w) => v + '-' + w + '/7'))),
 ];
-function extractor(content, ownColors = ['primary', 'white', 'gray']) {
+export function extractor(content, ownColors = ['primary', 'white', 'gray']) {
     let ast;
     const usedColors = {};
     const usedComponents = new Set();
@@ -100,7 +94,7 @@ function extractor(content, ownColors = ['primary', 'white', 'gray']) {
     // already checked
     const recursiveCrawl = [...usedComponents].map((v) => {
         const cont = getComponentCodes(v);
-        return cont.map((w) => extractor(fs_1.default.readFileSync(w, { encoding: 'utf-8' }), usedColors[v]));
+        return cont.map((w) => extractor(fs.readFileSync(w, { encoding: 'utf-8' }), usedColors[v]));
     });
     return [
         ...flatten(recursiveCrawl),
@@ -111,5 +105,4 @@ function extractor(content, ownColors = ['primary', 'white', 'gray']) {
         ...whitelist,
     ];
 }
-exports.extractor = extractor;
 //# sourceMappingURL=css-extractor.js.map

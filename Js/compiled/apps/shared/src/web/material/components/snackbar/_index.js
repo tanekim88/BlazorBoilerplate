@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("./_index.scss");
-const snackbar_1 = require("@material/snackbar");
+import './_index.scss';
+import { MDCSnackbar } from '@material/snackbar';
 [].map.call(document.querySelectorAll('.mdc-snackbar'), function (el) {
-    const snackbar = new snackbar_1.MDCSnackbar(el);
+    const snackbar = new MDCSnackbar(el);
     // snackbar.open();
 });
 //# sourceMappingURL=_index.js.map

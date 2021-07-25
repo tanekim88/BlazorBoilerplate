@@ -1,16 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.shouldBeTransformed = exports.isIncluded = exports.hasWrappedInRFS = void 0;
 const chalk = require('chalk');
 const hasWrappedInRFS = (decl) => /^rfs/g.test(decl.value);
-exports.hasWrappedInRFS = hasWrappedInRFS;
 const isIncluded = (decl, inclusionRules) => {
     if (inclusionRules.includes('*')) {
         return true;
     }
     return inclusionRules.some(unit => RegExp(unit).test(decl));
 };
-exports.isIncluded = isIncluded;
 const log = (msg, msgType, silentConsole) => {
     if (silentConsole === true) {
         return;
@@ -46,5 +41,5 @@ const shouldBeTransformed = (decl, options) => {
     log(`${messageTemplate} has been wrapped with rfs()`, 'success', options.silentConsole);
     return true;
 };
-exports.shouldBeTransformed = shouldBeTransformed;
+export { hasWrappedInRFS, isIncluded, shouldBeTransformed };
 //# sourceMappingURL=helper.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,19 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackSharedConfigService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const paths_1 = require("@auth/paths");
-const webpack_watch_entries_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const webpack_shared_config_service_1 = require("@shared/src/webpack/webpack-shared-config/webpack-shared-config.service");
-const environment_service_1 = require("../../modules/environment/environment/environment.service");
-const webpack_rules_service_1 = require("../rules/webpack-rules/webpack-rules.service");
-const webpack_plugins_service_1 = require("../plugins/webpack-plugins/webpack-plugins.service");
-let AuthWebpackSharedConfigService = class AuthWebpackSharedConfigService extends webpack_shared_config_service_1.WebpackSharedConfigService {
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { authPaths } from '@auth/paths';
+import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginConfigService, } from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackSharedConfigService } from '@shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
+import { AuthEnvironmentService } from '../../modules/environment/environment/environment.service';
+import { AuthWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
+import { AuthWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';
+let AuthWebpackSharedConfigService = class AuthWebpackSharedConfigService extends WebpackSharedConfigService {
     createConfiguration(options) {
-        const entry = webpack_watch_entries_plugin_service_1.WebpackWatchEntriesPlugin.getEntries([], webpack_watch_entries_plugin_service_1.WebpackWatchEntriesPluginConfigService.name);
+        const entry = WebpackWatchEntriesPlugin.getEntries([], WebpackWatchEntriesPluginConfigService.name);
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             entry,
             module: {
@@ -28,25 +25,25 @@ let AuthWebpackSharedConfigService = class AuthWebpackSharedConfigService extend
             },
             plugins: this.authWebpackPluginsConfigService.createPlugins(),
             resolveLoader: {
-                modules: [paths_1.authPaths.node_modules.toAbsolutePath()],
+                modules: [authPaths.node_modules.toAbsolutePath()],
             },
         }, options);
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(environment_service_1.AuthEnvironmentService),
-    __metadata("design:type", environment_service_1.AuthEnvironmentService)
-], AuthWebpackSharedConfigService.prototype, "environmentService", void 0);
+    CustomInject(AuthEnvironmentService),
+    __metadata("design:type", AuthEnvironmentService)
+], AuthWebpackSharedConfigService.prototype, "authEnvironmentService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_rules_service_1.AuthWebpackRulesConfigService),
-    __metadata("design:type", webpack_rules_service_1.AuthWebpackRulesConfigService)
+    CustomInject(AuthWebpackRulesConfigService),
+    __metadata("design:type", AuthWebpackRulesConfigService)
 ], AuthWebpackSharedConfigService.prototype, "authWebpackRulesConfigService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_plugins_service_1.AuthWebpackPluginsConfigService),
-    __metadata("design:type", webpack_plugins_service_1.AuthWebpackPluginsConfigService)
+    CustomInject(AuthWebpackPluginsConfigService),
+    __metadata("design:type", AuthWebpackPluginsConfigService)
 ], AuthWebpackSharedConfigService.prototype, "authWebpackPluginsConfigService", void 0);
 AuthWebpackSharedConfigService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], AuthWebpackSharedConfigService);
-exports.AuthWebpackSharedConfigService = AuthWebpackSharedConfigService;
+export { AuthWebpackSharedConfigService };
 //# sourceMappingURL=webpack-shared-config.service.js.map

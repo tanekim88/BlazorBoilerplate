@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';

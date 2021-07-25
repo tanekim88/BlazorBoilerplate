@@ -1,4 +1,5 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using GrpcService1;
 using Material.Blazor;
@@ -12,6 +13,7 @@ using SharedPresentation.Application.Interfaces.MatherialThemeServiceInterfaces;
 using System;
 using System.Net.Http;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.WebAssemblyHostBuilderExtensions
 {
@@ -25,7 +27,24 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             {
                 var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler()));
                 var baseUri = services.GetRequiredService<NavigationManager>().BaseUri;
-                var channel = GrpcChannel.ForAddress(baseUri, new GrpcChannelOptions { HttpClient = httpClient });
+
+
+                //var credentials = CallCredentials.FromInterceptor((context, metadata) =>
+                //{
+                //    if (!string.IsNullOrEmpty(_token))
+                //    {
+                //        metadata.Add("Authorization", $"Bearer {_token}");
+                //    }
+                //    return Task.CompletedTask;
+                //});
+
+                // SslCredentials is used here because this channel is using TLS.
+                // CallCredentials can't be used with ChannelCredentials.Insecure on non-TLS channels.
+
+                var channel = GrpcChannel.ForAddress(baseUri, new GrpcChannelOptions {
+                    HttpClient = httpClient ,
+                    //Credentials = ChannelCredentials.Create(new SslCredentials(), credentials)
+                });
                 return new Greeter.GreeterClient(channel);
             });
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -6,7 +6,19 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Protos\EntityModelProtos\Entities\__Entities_Groups_00_Name__EntityModelProtos\__Entities_Name__Proto.proto.txt" />
+	</ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\EntityModelProtos\Entities\__Entities_Groups_00_Name__EntityModelProtos\__Entities_Name__Proto.proto.txt" />
+		<Protobuf Include="Protos\ServiceProtos\__Entities_Groups_00_Name__ApplicationServiceProtos\__Entities_Name__ApplicationServiceProto.proto.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Dapr.Client" Version="1.2.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.38.1">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="HotChocolate.Types" Version="12.0.0-preview.22" />
 		<PackageReference Include="Humanizer" Version="2.11.10" />
 		<PackageReference Include="Mapster" Version="7.2.0" />

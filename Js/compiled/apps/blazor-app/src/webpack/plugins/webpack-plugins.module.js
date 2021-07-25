@@ -1,53 +1,50 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.BlazorAppWebpackPluginsModule = void 0;
-const webpack_clean_webpack_plugin_service_1 = require("./webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service");
-const webpack_copy_webpack_plugin_service_1 = require("./webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service");
-const webpack_favicons_webpack_plugin_service_1 = require("./webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service");
-const webpack_html_webpack_plugin_service_1 = require("./webpack-html-webpack-plugin/webpack-html-webpack-plugin.service");
-const webpack_mini_css_extract_plugin_service_1 = require("./webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service");
-const webpack_plugins_service_1 = require("./webpack-plugins/webpack-plugins.service");
-const webpack_webpack_fix_style_only_entries_service_1 = require("./webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service");
-const webpack_workbox_webpack_plugin_service_1 = require("./webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_remove_files_webpack_plugin_service_1 = require("./webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service");
-const webpack_tsconfig_paths_webpack_plugin_service_1 = require("./webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
-const webpack_webpack_chokidar_plugin_service_1 = require("./webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service");
-const webpack_watch_entries_plugin_service_1 = require("./webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const webpack_plugins_module_1 = require("@shared/src/webpack/plugins/webpack-plugins.module");
+import { BlazorAppWebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service';
+import { BlazorAppWebpackCopyWebpackPluginService } from './webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
+import { BlazorAppWebpackFaviconsWebpackPluginService } from './webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
+import { BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath } from './webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { BlazorAppWebpackMiniCssExtractPluginService, BlazorAppWebpackMiniCssExtractPluginConfigService, } from './webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
+import { BlazorAppWebpackPluginsService, BlazorAppWebpackPluginsConfigService, } from './webpack-plugins/webpack-plugins.service';
+import { BlazorAppWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
+import { BlazorAppWebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
+import { CustomModule } from '@shared/src/functions/process-providers';
+import { BlazorAppWebpackPreRemoveFilesWebpackPluginService, BlazorAppWebpackRemoveFilesWebpackPluginService, } from './webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
+import { BlazorAppWebpackTsconfigPathsWebpackPluginService } from './webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
+import { BlazorAppWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
+import { BlazorAppWebpackWatchEntriesPluginConfigService, BlazorAppWebpackWatchEntriesPluginService, } from './webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackPluginsModule } from '@shared/src/webpack/plugins/webpack-plugins.module';
 let BlazorAppWebpackPluginsModule = class BlazorAppWebpackPluginsModule {
 };
 BlazorAppWebpackPluginsModule = __decorate([
-    process_webpack_providers_1.CustomModule({
+    CustomModule({
         providers: [
             // blazorAppClientWebpackExtractSvgSpriteWebpackPluginService,
             // blazorAppClientWebpackSvgSpriteLoaderPluginService,
             // blazorAppClientWebpackSvgSpriteLoaderPluginService,
-            webpack_clean_webpack_plugin_service_1.BlazorAppWebpackCleanWebpackPluginService,
-            webpack_copy_webpack_plugin_service_1.BlazorAppWebpackCopyWebpackPluginService,
-            webpack_favicons_webpack_plugin_service_1.BlazorAppWebpackFaviconsWebpackPluginService,
-            webpack_html_webpack_plugin_service_1.BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath,
-            webpack_mini_css_extract_plugin_service_1.BlazorAppWebpackMiniCssExtractPluginService,
-            webpack_plugins_service_1.BlazorAppWebpackPluginsConfigService,
-            webpack_plugins_service_1.BlazorAppWebpackPluginsService,
-            webpack_mini_css_extract_plugin_service_1.BlazorAppWebpackMiniCssExtractPluginConfigService,
-            webpack_remove_files_webpack_plugin_service_1.BlazorAppWebpackPreRemoveFilesWebpackPluginService,
-            webpack_remove_files_webpack_plugin_service_1.BlazorAppWebpackRemoveFilesWebpackPluginService,
-            webpack_tsconfig_paths_webpack_plugin_service_1.BlazorAppWebpackTsconfigPathsWebpackPluginService,
-            webpack_watch_entries_plugin_service_1.BlazorAppWebpackWatchEntriesPluginConfigService,
-            webpack_watch_entries_plugin_service_1.BlazorAppWebpackWatchEntriesPluginService,
-            webpack_webpack_chokidar_plugin_service_1.BlazorAppWebpackWebpackChokidarPluginService,
-            webpack_webpack_fix_style_only_entries_service_1.BlazorAppWebpackWebpackFixStyleOnlyEntriesService,
-            webpack_workbox_webpack_plugin_service_1.BlazorAppWebpackWorkboxWebpackPluginService,
+            BlazorAppWebpackCleanWebpackPluginService,
+            BlazorAppWebpackCopyWebpackPluginService,
+            BlazorAppWebpackFaviconsWebpackPluginService,
+            BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath,
+            BlazorAppWebpackMiniCssExtractPluginService,
+            BlazorAppWebpackPluginsConfigService,
+            BlazorAppWebpackPluginsService,
+            BlazorAppWebpackMiniCssExtractPluginConfigService,
+            BlazorAppWebpackPreRemoveFilesWebpackPluginService,
+            BlazorAppWebpackRemoveFilesWebpackPluginService,
+            BlazorAppWebpackTsconfigPathsWebpackPluginService,
+            BlazorAppWebpackWatchEntriesPluginConfigService,
+            BlazorAppWebpackWatchEntriesPluginService,
+            BlazorAppWebpackWebpackChokidarPluginService,
+            BlazorAppWebpackWebpackFixStyleOnlyEntriesService,
+            BlazorAppWebpackWorkboxWebpackPluginService,
         ],
-        imports: [webpack_plugins_module_1.WebpackPluginsModule],
+        imports: [WebpackPluginsModule],
     })
 ], BlazorAppWebpackPluginsModule);
-exports.BlazorAppWebpackPluginsModule = BlazorAppWebpackPluginsModule;
+export { BlazorAppWebpackPluginsModule };
 //# sourceMappingURL=webpack-plugins.module.js.map

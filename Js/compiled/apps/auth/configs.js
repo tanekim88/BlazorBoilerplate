@@ -1,13 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.authConfig = exports.AuthConfig = void 0;
-const configs_base_1 = require("@shared/configs.base");
-const paths_1 = require("./paths");
-class AuthConfig extends configs_base_1.ConfigBase {
+import { ConfigBase } from '@shared/configs.base';
+import { authPaths, AuthPaths } from './paths';
+export class AuthConfig extends ConfigBase {
     constructor() {
         super(...arguments);
-        this.rootDir = paths_1.authPaths.toAbsolutePath();
-        this.RootDir = paths_1.AuthPaths.toAbsolutePath();
+        this.rootDir = authPaths.toAbsolutePath();
+        this.RootDir = AuthPaths.toAbsolutePath();
         this.projectName = 'Auth';
         this.title = 'App title';
         this.name = 'App name';
@@ -17,6 +14,5 @@ class AuthConfig extends configs_base_1.ConfigBase {
         this.description = 'app desc';
     }
 }
-exports.AuthConfig = AuthConfig;
-exports.authConfig = new AuthConfig();
+export const authConfig = new AuthConfig();
 //# sourceMappingURL=configs.js.map

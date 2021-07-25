@@ -3,7 +3,7 @@ import path from 'path';
 import { LOCAL_CONFIG } from '../../../../configs';
 import { MergeService } from '../../utilities/merge/merge/merge.service';
 
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { ConfigBase } from '../../../../configs.base';
 import { RootPaths, rootPaths } from '@root/paths';
 import { sharedPaths } from '@shared/paths';

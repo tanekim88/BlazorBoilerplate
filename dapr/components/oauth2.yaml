@@ -14,7 +14,7 @@ spec:
   - name: scopes
     value: ""
   - name: authURL
-    value: "https://"
+    value: "https://localhost:5000/auth"
   - name: tokenURL
     value: "<token exchange URL>"
   - name: redirectURL

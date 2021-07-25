@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,13 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackProdService = void 0;
-const webpack_base_service_1 = require("../webpack-base/webpack-base.service");
-const webpack_minimizers_service_1 = require("../minimizers/webpack-minimizers/webpack-minimizers.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-let WebpackProdService = class WebpackProdService extends webpack_base_service_1.WebpackBaseService {
+import { WebpackBaseService } from '../webpack-base/webpack-base.service';
+import { WebpackMinimizersService } from '../minimizers/webpack-minimizers/webpack-minimizers.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+let WebpackProdService = class WebpackProdService extends WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             output: {
@@ -31,11 +28,11 @@ let WebpackProdService = class WebpackProdService extends webpack_base_service_1
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_minimizers_service_1.WebpackMinimizersService),
-    __metadata("design:type", webpack_minimizers_service_1.WebpackMinimizersService)
+    CustomInject(WebpackMinimizersService),
+    __metadata("design:type", WebpackMinimizersService)
 ], WebpackProdService.prototype, "webpackMinimizersService", void 0);
 WebpackProdService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackProdService);
-exports.WebpackProdService = WebpackProdService;
+export { WebpackProdService };
 //# sourceMappingURL=webpack-prod.service.js.map

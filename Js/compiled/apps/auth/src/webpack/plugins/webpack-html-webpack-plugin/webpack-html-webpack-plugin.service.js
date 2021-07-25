@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,14 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = void 0;
-const webpack_html_webpack_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const paths_1 = require("@auth/paths");
-const configs_1 = require("@auth/configs");
-const environment_service_1 = require("@auth/src/modules/environment/environment/environment.service");
-let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends webpack_html_webpack_plugin_service_1.WebpackHtmlWebpackPluginService {
+import { WebpackHtmlWebpackPluginService } from '@shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { authPaths, AuthPaths } from '@auth/paths';
+import { authConfig } from '@auth/configs';
+import { AuthEnvironmentService } from '@auth/src/modules/environment/environment/environment.service';
+let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
@@ -23,10 +20,10 @@ let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class Auth
         const isProduction = this.authEnvironmentService.isProduction;
         return [
             this.createPlugin({
-                title: configs_1.authConfig.title,
-                filename: paths_1.AuthPaths.Pages.Shared['_Layout.cshtml'].toAbsolutePath(),
+                title: authConfig.title,
+                filename: AuthPaths.Pages.Shared['_Layout.cshtml'].toAbsolutePath(),
                 // Required
-                template: paths_1.authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
+                template: authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
                 inject: false,
                 scriptLoading: 'defer',
                 //favicon: webpackConstants.srcFaviconPath,
@@ -60,11 +57,11 @@ let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class Auth
     }
 };
 __decorate([
-    process_webpack_providers_1.CustomInject(environment_service_1.AuthEnvironmentService),
-    __metadata("design:type", environment_service_1.AuthEnvironmentService)
+    CustomInject(AuthEnvironmentService),
+    __metadata("design:type", AuthEnvironmentService)
 ], AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath.prototype, "authEnvironmentService", void 0);
 AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath);
-exports.AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath;
+export { AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath };
 //# sourceMappingURL=webpack-html-webpack-plugin.service.js.map

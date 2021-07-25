@@ -1,8 +1,8 @@
 import { RuleSetRule } from 'webpack';
 import { MergeService } from '../../../modules/utilities/merge/merge/merge.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 import { EnvironmentService } from '@shared/src/modules/environment/environment/environment.service';
 import { RegexService } from '@shared/src/modules/utilities/regex/regex/regex.service';
 @CustomInjectable()

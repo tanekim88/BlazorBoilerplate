@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,25 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackCopyWebpackPluginService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const copy_webpack_plugin_1 = __importDefault(require("copy-webpack-plugin"));
-const path_1 = __importDefault(require("path"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const paths_1 = require("@shared/paths");
-let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import path from 'path';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { sharedPaths } from '@shared/paths';
+let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
-        super(copy_webpack_plugin_1.default);
+        super(CopyWebpackPlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             patterns: [
                 {
-                    from: path_1.default.resolve(paths_1.sharedPaths.node_modules.toAbsolutePath(), 'bootstrap-icons/bootstrap-icons.svg'),
+                    from: path.resolve(sharedPaths.node_modules.toAbsolutePath(), 'bootstrap-icons/bootstrap-icons.svg'),
                     to: '',
                 },
             ],
@@ -34,8 +28,8 @@ let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService exte
     }
 };
 WebpackCopyWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackCopyWebpackPluginService);
-exports.WebpackCopyWebpackPluginService = WebpackCopyWebpackPluginService;
+export { WebpackCopyWebpackPluginService };
 //# sourceMappingURL=webpack-copy-webpack-plugin.service.js.map

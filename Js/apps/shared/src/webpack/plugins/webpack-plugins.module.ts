@@ -8,7 +8,7 @@ import { WebpackMiniCssExtractPluginService } from './webpack-mini-css-extract-p
 import { WebpackPluginsService, WebpackPluginsConfigService } from './webpack-plugins/webpack-plugins.service';
 import { WebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
 import { WebpackPluginBaseService } from './webpack-plugin-base/webpack-plugin-base.service';
-import { CustomModule } from '../../functions/process-webpack-providers';
+import { CustomModule } from '../../functions/process-providers';
 
 import {
     WebpackPreRemoveFilesWebpackPluginService,

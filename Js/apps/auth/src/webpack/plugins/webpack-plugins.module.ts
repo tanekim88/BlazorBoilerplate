@@ -14,7 +14,7 @@ import {
 } from './webpack-plugins/webpack-plugins.service';
 import { AuthWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
 import { AuthWebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
-import { CustomModule } from '@shared/src/functions/process-webpack-providers';
+import { CustomModule } from '@shared/src/functions/process-providers';
 import {
     AuthWebpackPreRemoveFilesWebpackPluginService,
     AuthWebpackRemoveFilesWebpackPluginService,

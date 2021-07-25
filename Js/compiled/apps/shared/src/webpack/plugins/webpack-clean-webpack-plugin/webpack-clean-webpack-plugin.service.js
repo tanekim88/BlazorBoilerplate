@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,24 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackCleanWebpackPluginService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const clean_webpack_plugin_1 = require("clean-webpack-plugin");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
-const path_1 = __importDefault(require("path"));
-const configs_1 = require("@shared/configs");
+import path from 'path';
+import { configs } from '@shared/configs';
 // import { configsCollections } from '@shared/configs-collection';
-let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService extends WebpackPluginBaseService {
     /**
      *
      */
     constructor() {
-        super(clean_webpack_plugin_1.CleanWebpackPlugin);
+        super(CleanWebpackPlugin);
     }
     createOptions(options) {
         const notToDelete = [
@@ -35,10 +29,10 @@ let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService ex
             'tailwind.config.json',
             'tailwind.config.js',
         ];
-        const filesNotToDelete = configs_1.configs.allRootDirs.map((rootDir) => {
+        const filesNotToDelete = configs.allRootDirs.map((rootDir) => {
             return notToDelete.map((file) => {
-                const relRootPath = path_1.default.relative(this.environmentService.outputDir, rootDir);
-                return path_1.default.join(relRootPath, file);
+                const relRootPath = path.relative(this.environmentService.outputDir, rootDir);
+                return path.join(relRootPath, file);
             });
         });
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -101,8 +95,8 @@ let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService ex
     }
 };
 WebpackCleanWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackCleanWebpackPluginService);
-exports.WebpackCleanWebpackPluginService = WebpackCleanWebpackPluginService;
+export { WebpackCleanWebpackPluginService };
 //# sourceMappingURL=webpack-clean-webpack-plugin.service.js.map

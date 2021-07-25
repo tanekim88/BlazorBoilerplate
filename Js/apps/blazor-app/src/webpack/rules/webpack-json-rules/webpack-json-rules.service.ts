@@ -1,7 +1,7 @@
 import { RuleSetRule } from 'webpack';
 import { WebpackJsonRulesService } from '@shared/src/webpack/rules/webpack-json-rules/webpack-json-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class BlazorAppWebpackJsonRulesService extends WebpackJsonRulesService {

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,19 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssImportService = void 0;
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const postcss_import_1 = __importDefault(require("postcss-import"));
-const environment_service_1 = require("../../../modules/environment/environment/environment.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-let WebpackPostcssImportService = class WebpackPostcssImportService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
+import PostcssImport from 'postcss-import';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackPostcssImportService = class WebpackPostcssImportService extends WebpackPostcssBaseService {
     constructor() {
-        super(postcss_import_1.default);
+        super(PostcssImport);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -31,13 +23,9 @@ let WebpackPostcssImportService = class WebpackPostcssImportService extends webp
         }, options);
     }
 };
-__decorate([
-    process_webpack_providers_2.CustomInject(environment_service_1.EnvironmentService),
-    __metadata("design:type", environment_service_1.EnvironmentService)
-], WebpackPostcssImportService.prototype, "environmentService", void 0);
 WebpackPostcssImportService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPostcssImportService);
-exports.WebpackPostcssImportService = WebpackPostcssImportService;
+export { WebpackPostcssImportService };
 //# sourceMappingURL=webpack-postcss-import.service.js.map

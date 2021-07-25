@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,25 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssForService = void 0;
-const postcss_for_1 = __importDefault(require("postcss-for"));
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-let WebpackPostcssForService = class WebpackPostcssForService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+import PostcssFor from 'postcss-for';
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackPostcssForService = class WebpackPostcssForService extends WebpackPostcssBaseService {
     constructor() {
-        super(postcss_for_1.default);
+        super(PostcssFor);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
 WebpackPostcssForService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPostcssForService);
-exports.WebpackPostcssForService = WebpackPostcssForService;
+export { WebpackPostcssForService };
 //# sourceMappingURL=webpack-postcss-for.service.js.map

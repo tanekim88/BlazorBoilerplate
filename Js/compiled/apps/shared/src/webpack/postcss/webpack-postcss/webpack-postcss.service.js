@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,27 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssService = void 0;
-const environment_service_1 = require("../../../modules/environment/environment/environment.service");
-const webpack_cssnano_service_1 = require("../webpack-cssnano/webpack-cssnano.service");
-const webpack_postcss_font_magician_service_1 = require("../webpack-postcss-font-magician/webpack-postcss-font-magician.service");
-const webpack_postcss_functions_service_1 = require("../webpack-postcss-functions/webpack-postcss-functions.service");
-const webpack_postcss_preset_env_service_1 = require("../webpack-postcss-preset-env/webpack-postcss-preset-env.service");
-const webpack_postcss_reporter_service_1 = require("../webpack-postcss-reporter/webpack-postcss-reporter.service");
-const webpack_postcss_rfs_autopilot_service_1 = require("../webpack-postcss-rfs-autopilot/webpack-postcss-rfs-autopilot.service");
-const webpack_rfs_service_1 = require("../webpack-rfs/webpack-rfs.service");
-const webpack_tailwindcss_service_1 = require("../webpack-tailwindcss/webpack-tailwindcss.service");
+import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
+import { WebpackCssnanoService } from '../webpack-cssnano/webpack-cssnano.service';
+import { WebpackPostcssFontMagicianService } from '../webpack-postcss-font-magician/webpack-postcss-font-magician.service';
+import { WebpackPostcssFunctionsService } from '../webpack-postcss-functions/webpack-postcss-functions.service';
+import { WebpackPostcssPresetEnvService } from '../webpack-postcss-preset-env/webpack-postcss-preset-env.service';
+import { WebpackPostcssReporterService } from '../webpack-postcss-reporter/webpack-postcss-reporter.service';
+import { WebpackPostcssRfsAutopilotService } from '../webpack-postcss-rfs-autopilot/webpack-postcss-rfs-autopilot.service';
+import { WebpackRfsService } from '../webpack-rfs/webpack-rfs.service';
+import { WebpackTailwindcssService } from '../webpack-tailwindcss/webpack-tailwindcss.service';
 // Sealed class.
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const webpack_postcss_purgecss_service_1 = require("../webpack-postcss-purgecss/webpack-postcss-purgecss.service");
-const webpack_postcss_combine_duplicated_selectors_service_1 = require("../webpack-postcss-combine-duplicated-selectors/webpack-postcss-combine-duplicated-selectors.service");
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { WebpackPostcssPurgecssService } from '../webpack-postcss-purgecss/webpack-postcss-purgecss.service';
+import { WebpackPostcssCombineDuplicatedSelectorsService } from '../webpack-postcss-combine-duplicated-selectors/webpack-postcss-combine-duplicated-selectors.service';
 let WebpackPostcssService = class WebpackPostcssService {
     createPostcssPlugins() {
         const plugins = [];
-        // plugins.push(this.webpackPostcssRfsAutopilotService.createPlugin());
-        // plugins.push(this.webpackRfsService.createPlugin());
+        plugins.push(this.webpackPostcssRfsAutopilotService.createPlugin());
+        plugins.push(this.webpackRfsService.createPlugin());
         plugins.push(this.webpackTailwindcssService.createPlugin());
         // plugins.push(this.webpackPostcssFunctionsService.createPlugin());
         // plugins.push(this.webpackPostcssFontMagicianService.createPlugin());
@@ -45,51 +42,51 @@ let WebpackPostcssService = class WebpackPostcssService {
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_cssnano_service_1.WebpackCssnanoService),
-    __metadata("design:type", webpack_cssnano_service_1.WebpackCssnanoService)
+    CustomInject(WebpackCssnanoService),
+    __metadata("design:type", WebpackCssnanoService)
 ], WebpackPostcssService.prototype, "webpackCssNanoService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_reporter_service_1.WebpackPostcssReporterService),
-    __metadata("design:type", webpack_postcss_reporter_service_1.WebpackPostcssReporterService)
+    CustomInject(WebpackPostcssReporterService),
+    __metadata("design:type", WebpackPostcssReporterService)
 ], WebpackPostcssService.prototype, "webpackPostcssReporterService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(environment_service_1.EnvironmentService),
-    __metadata("design:type", environment_service_1.EnvironmentService)
+    CustomInject(EnvironmentService),
+    __metadata("design:type", EnvironmentService)
 ], WebpackPostcssService.prototype, "environmentService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_purgecss_service_1.WebpackPostcssPurgecssService),
-    __metadata("design:type", webpack_postcss_purgecss_service_1.WebpackPostcssPurgecssService)
+    CustomInject(WebpackPostcssPurgecssService),
+    __metadata("design:type", WebpackPostcssPurgecssService)
 ], WebpackPostcssService.prototype, "webpackPostcssPurgecssService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_preset_env_service_1.WebpackPostcssPresetEnvService),
-    __metadata("design:type", webpack_postcss_preset_env_service_1.WebpackPostcssPresetEnvService)
+    CustomInject(WebpackPostcssPresetEnvService),
+    __metadata("design:type", WebpackPostcssPresetEnvService)
 ], WebpackPostcssService.prototype, "webpackPostcssPresetEnvService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_combine_duplicated_selectors_service_1.WebpackPostcssCombineDuplicatedSelectorsService),
-    __metadata("design:type", webpack_postcss_combine_duplicated_selectors_service_1.WebpackPostcssCombineDuplicatedSelectorsService)
+    CustomInject(WebpackPostcssCombineDuplicatedSelectorsService),
+    __metadata("design:type", WebpackPostcssCombineDuplicatedSelectorsService)
 ], WebpackPostcssService.prototype, "webpackPostcssCombineDuplicatedSelectorsService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_functions_service_1.WebpackPostcssFunctionsService),
-    __metadata("design:type", webpack_postcss_functions_service_1.WebpackPostcssFunctionsService)
+    CustomInject(WebpackPostcssFunctionsService),
+    __metadata("design:type", WebpackPostcssFunctionsService)
 ], WebpackPostcssService.prototype, "webpackPostcssFunctionsService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_font_magician_service_1.WebpackPostcssFontMagicianService),
-    __metadata("design:type", webpack_postcss_font_magician_service_1.WebpackPostcssFontMagicianService)
+    CustomInject(WebpackPostcssFontMagicianService),
+    __metadata("design:type", WebpackPostcssFontMagicianService)
 ], WebpackPostcssService.prototype, "webpackPostcssFontMagicianService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_tailwindcss_service_1.WebpackTailwindcssService),
-    __metadata("design:type", webpack_tailwindcss_service_1.WebpackTailwindcssService)
+    CustomInject(WebpackTailwindcssService),
+    __metadata("design:type", WebpackTailwindcssService)
 ], WebpackPostcssService.prototype, "webpackTailwindcssService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_postcss_rfs_autopilot_service_1.WebpackPostcssRfsAutopilotService),
-    __metadata("design:type", webpack_postcss_rfs_autopilot_service_1.WebpackPostcssRfsAutopilotService)
+    CustomInject(WebpackPostcssRfsAutopilotService),
+    __metadata("design:type", WebpackPostcssRfsAutopilotService)
 ], WebpackPostcssService.prototype, "webpackPostcssRfsAutopilotService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_rfs_service_1.WebpackRfsService),
-    __metadata("design:type", webpack_rfs_service_1.WebpackRfsService)
+    CustomInject(WebpackRfsService),
+    __metadata("design:type", WebpackRfsService)
 ], WebpackPostcssService.prototype, "webpackRfsService", void 0);
 WebpackPostcssService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackPostcssService);
-exports.WebpackPostcssService = WebpackPostcssService;
+export { WebpackPostcssService };
 //# sourceMappingURL=webpack-postcss.service.js.map

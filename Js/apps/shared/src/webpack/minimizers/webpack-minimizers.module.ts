@@ -4,7 +4,7 @@ import { WebpackCssMinimizerPluginService } from './webpack-css-minimizer-plugin
 import { WebpackOptimizeCssAssetsPluginService } from './webpack-optimize-css-assets-plugin/webpack-optimize-css-assets-plugin.service';
 import { WebpackTerserPluginService } from './webpack-terser-plugin/webpack-terser-plugin.service';
 import { WebpackMinimizersService } from './webpack-minimizers/webpack-minimizers.service';
-import { CustomModule } from '../../functions/process-webpack-providers';
+import { CustomModule } from '../../functions/process-providers';
 
 @CustomModule({
     providers: [

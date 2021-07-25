@@ -7,7 +7,7 @@ import { WebpackPostcssModule } from './postcss/webpack-postcss.module';
 import { WebpackRulesModule } from './rules/webpack-rules.module';
 import { ModulesModule } from '../modules/modules.module';
 import { WebpackBaseService } from './webpack-base/webpack-base.service';
-import { CustomModule } from '../functions/process-webpack-providers';
+import { CustomModule } from '../functions/process-providers';
 
 import { WebpackSharedConfigService } from './webpack-shared-config/webpack-shared-config.service';
 

@@ -3,8 +3,8 @@ import { WebpackCssMinimizerPluginService } from '../webpack-css-minimizer-plugi
 import { WebpackOptimizeCssAssetsPluginService } from '../webpack-optimize-css-assets-plugin/webpack-optimize-css-assets-plugin.service';
 import { WebpackTerserPluginService } from '../webpack-terser-plugin/webpack-terser-plugin.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackMinimizersService {

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,20 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackClosureWebpackPluginService = void 0;
-const closure_webpack_plugin_1 = __importDefault(require("closure-webpack-plugin"));
-const webpack_plugin_base_service_1 = require("../../plugins/webpack-plugin-base/webpack-plugin-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+import ClosurePlugin from 'closure-webpack-plugin';
+import { WebpackPluginBaseService } from '../../plugins/webpack-plugin-base/webpack-plugin-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 // new ClosurePlugin({
 //     test: /.js/,
 // });
-let WebpackClosureWebpackPluginService = class WebpackClosureWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackClosureWebpackPluginService = class WebpackClosureWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
-        super(closure_webpack_plugin_1.default);
+        super(ClosurePlugin);
     }
     createManyOptions(options1, options2) {
         const optionsOverride = [
@@ -42,10 +36,10 @@ let WebpackClosureWebpackPluginService = class WebpackClosureWebpackPluginServic
     }
 };
 WebpackClosureWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackClosureWebpackPluginService);
-exports.WebpackClosureWebpackPluginService = WebpackClosureWebpackPluginService;
+export { WebpackClosureWebpackPluginService };
 //platform - native, java or javascript.Controls which version to use of closure - compiler.By default the plugin will attempt to automatically choose the fastest option available.
 //JAVASCRIPT does not require the JVM to be installed.Not all flags are supported.
 //JAVA utilizes the jvm.Utilizes multiple threads for parsing and results in faster compilation for large builds.

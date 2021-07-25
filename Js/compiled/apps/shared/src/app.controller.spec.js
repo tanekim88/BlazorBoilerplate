@@ -1,16 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
+import { Test } from '@nestjs/testing';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 describe('AppController', () => {
     let appController;
     beforeEach(async () => {
-        const app = await testing_1.Test.createTestingModule({
-            controllers: [app_controller_1.AppController],
-            providers: [app_service_1.AppService],
+        const app = await Test.createTestingModule({
+            controllers: [AppController],
+            providers: [AppService],
         }).compile();
-        appController = app.get(app_controller_1.AppController);
+        appController = app.get(AppController);
     });
     describe('root', () => {
         it('should return "Hello World!"', () => {

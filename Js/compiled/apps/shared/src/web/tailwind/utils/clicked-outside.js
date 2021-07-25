@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const store_1 = require("svelte/store");
-function clickedOutside() {
+import { writable } from 'svelte/store';
+export default function clickedOutside() {
     if (!window)
-        return store_1.writable(false);
-    const store = store_1.writable(false);
+        return writable(false);
+    const store = writable(false);
     return {
         subscribe: store.subscribe,
         action: function (node) {
@@ -16,5 +14,4 @@ function clickedOutside() {
         },
     };
 }
-exports.default = clickedOutside;
 //# sourceMappingURL=clicked-outside.js.map

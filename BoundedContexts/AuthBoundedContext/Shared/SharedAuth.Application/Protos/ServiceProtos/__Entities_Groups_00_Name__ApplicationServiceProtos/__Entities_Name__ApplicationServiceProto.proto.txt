@@ -1,0 +1,24 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Protos.ServiceProtos.__Entities_Groups_00_Name__ApplicationServiceProtos";
+
+package __Entities_Name__ApplicationServiceProto;
+
+
+// The request message containing the user's name.
+message __Entities_Name__ApplicationServiceInput {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message __Entities_Name__ApplicationServiceOutput {
+  string message = 1;
+}
+
+
+// The greeting service definition.
+service __Entities_Name__ApplicationServiceProto {
+  // Sends a greeting
+  rpc LoginAsync (__Entities_Name__ApplicationServiceInput) returns (__Entities_Name__ApplicationServiceOutput);
+}
+

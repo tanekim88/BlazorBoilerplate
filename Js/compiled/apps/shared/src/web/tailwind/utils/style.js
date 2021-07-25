@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = {
+export default {
     addUtility({ prop = 'caret-color', className = '.caret', defaultVariant = 500 }) {
         return function ({ e, addUtilities, theme }) {
             const colors = theme('colors');

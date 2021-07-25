@@ -1,6 +1,6 @@
 import { WebpackBaseService } from '../webpack-base/webpack-base.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { Configuration } from 'webpack';
 
 @CustomInjectable()

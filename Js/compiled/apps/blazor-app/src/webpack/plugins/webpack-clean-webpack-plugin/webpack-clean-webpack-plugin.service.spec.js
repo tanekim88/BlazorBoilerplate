@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_clean_webpack_plugin_service_1 = require("./webpack-clean-webpack-plugin.service");
+import { Test } from '@nestjs/testing';
+import { BlazorAppWebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin.service';
 describe('BlazorAppWebpackCleanWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_clean_webpack_plugin_service_1.BlazorAppWebpackCleanWebpackPluginService],
+        const module = await Test.createTestingModule({
+            providers: [BlazorAppWebpackCleanWebpackPluginService],
         }).compile();
-        service = module.get(webpack_clean_webpack_plugin_service_1.BlazorAppWebpackCleanWebpackPluginService);
+        service = module.get(BlazorAppWebpackCleanWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

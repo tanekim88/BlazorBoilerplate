@@ -1,7 +1,7 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { LOCAL_CONFIG } from '@shared/configs';
 import { ConfigBase } from '@shared/configs.base';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { MergeService } from '../../utilities/merge/merge/merge.service';
 import path from 'path';
 import { sharedPaths } from '@shared/paths';

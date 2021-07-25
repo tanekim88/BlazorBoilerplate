@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_prod_service_1 = require("./webpack-prod.service");
+import { Test } from '@nestjs/testing';
+import { BlazorAppWebpackProdService } from './webpack-prod.service';
 describe('BlazorAppWebpackProdService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_prod_service_1.BlazorAppWebpackProdService],
+        const module = await Test.createTestingModule({
+            providers: [BlazorAppWebpackProdService],
         }).compile();
-        service = module.get(webpack_prod_service_1.BlazorAppWebpackProdService);
+        service = module.get(BlazorAppWebpackProdService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

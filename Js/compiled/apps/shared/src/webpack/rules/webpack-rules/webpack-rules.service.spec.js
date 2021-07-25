@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_rules_service_1 = require("./webpack-rules.service");
+import { Test } from '@nestjs/testing';
+import { WebpackRulesService } from './webpack-rules.service';
 describe('WebpackRulesService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_rules_service_1.WebpackRulesService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackRulesService],
         }).compile();
-        service = module.get(webpack_rules_service_1.WebpackRulesService);
+        service = module.get(WebpackRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

@@ -1,58 +1,33 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 var WebpackWatchEntriesPluginConfigService_1, WebpackWatchEntriesPluginService_1;
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackWatchEntriesPlugin = exports.GlobalDb = exports.WebpackWatchEntriesPluginOptions = exports.PatternsCollection = exports.Extension = exports.WebpackWatchEntriesPluginService = exports.WebpackWatchEntriesPluginConfigService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const webpack_1 = require("webpack");
-const path_1 = __importDefault(require("path"));
-const glob_base_1 = __importDefault(require("glob-base"));
-const glob_1 = __importDefault(require("glob"));
-const fs_1 = __importDefault(require("fs"));
-const lodash_1 = __importDefault(require("lodash"));
-const deepmerge_1 = __importDefault(require("deepmerge"));
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+import { Compilation } from 'webpack';
+import path from 'path';
+import globBase from 'glob-base';
+import glob from 'glob';
+import fs from 'fs';
+import _ from 'lodash';
+import deepMerge from 'deepmerge';
 const IGNORE_TIME_ENTRY = 'ignore';
-const sanitize_filename_1 = __importDefault(require("sanitize-filename"));
-const watchpack_1 = __importDefault(require("watchpack"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const immutability_helper_1 = __importDefault(require("immutability-helper"));
-const webpack_sources_1 = require("webpack-sources");
-const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
-const loader_utils_1 = __importDefault(require("loader-utils"));
+import sanitizeFilename from 'sanitize-filename';
+import Watchpack from 'watchpack';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import immutabilityHelper from 'immutability-helper';
+import { RawSource } from 'webpack-sources';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import loaderUtils from 'loader-utils';
 const update = (target, process) => {
-    return immutability_helper_1.default(target, process);
+    return immutabilityHelper(target, process);
 };
-let WebpackWatchEntriesPluginConfigService = WebpackWatchEntriesPluginConfigService_1 = class WebpackWatchEntriesPluginConfigService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackWatchEntriesPluginConfigService = WebpackWatchEntriesPluginConfigService_1 = class WebpackWatchEntriesPluginConfigService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackWatchEntriesPlugin);
     }
@@ -64,11 +39,11 @@ let WebpackWatchEntriesPluginConfigService = WebpackWatchEntriesPluginConfigServ
     }
 };
 WebpackWatchEntriesPluginConfigService = WebpackWatchEntriesPluginConfigService_1 = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackWatchEntriesPluginConfigService);
-exports.WebpackWatchEntriesPluginConfigService = WebpackWatchEntriesPluginConfigService;
-let WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService_1 = class WebpackWatchEntriesPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+export { WebpackWatchEntriesPluginConfigService };
+let WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService_1 = class WebpackWatchEntriesPluginService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackWatchEntriesPlugin);
     }
@@ -80,24 +55,21 @@ let WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService_1 = clas
     }
 };
 WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService_1 = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackWatchEntriesPluginService);
-exports.WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService;
-class Extension {
+export { WebpackWatchEntriesPluginService };
+export class Extension {
 }
-exports.Extension = Extension;
 class Output {
 }
-class PatternsCollection {
+export class PatternsCollection {
 }
-exports.PatternsCollection = PatternsCollection;
 class DbEntry {
 }
-class WebpackWatchEntriesPluginOptions extends DbEntry {
+export class WebpackWatchEntriesPluginOptions extends DbEntry {
 }
-exports.WebpackWatchEntriesPluginOptions = WebpackWatchEntriesPluginOptions;
-class GlobalDb {
+export class GlobalDb {
     get state() {
         return GlobalDb._state;
     }
@@ -136,7 +108,7 @@ class GlobalDb {
         }
         this.state = update(this.state, {
             [id]: {
-                $set: deepmerge_1.default(this.state[id], dbEntry),
+                $set: deepMerge(this.state[id], dbEntry),
             },
         });
         return this.state;
@@ -182,7 +154,7 @@ class GlobalDb {
         let { patternsCollection, dependsOn } = this.state[id] ?? {};
         patternsCollection = patternsCollection ?? [];
         dependsOn = dependsOn ?? [];
-        if (lodash_1.default.isEmpty(patternsCollection) && lodash_1.default.isEmpty(dependsOn)) {
+        if (_.isEmpty(patternsCollection) && _.isEmpty(dependsOn)) {
             return [];
         }
         return patternsCollection.concat(...dependsOn.map((dependentId) => {
@@ -194,7 +166,7 @@ class GlobalDb {
         const originalOutputPath = dbEntry.outputPath;
         let ignoredFromWatch = dbEntry.ignoredFromWatch ?? [];
         ignoredFromWatch = ignoredFromWatch.map((i) => {
-            return i.split(path_1.default.sep).join(path_1.default.posix.sep);
+            return i.split(path.sep).join(path.posix.sep);
         });
         const directories = [];
         const files = [];
@@ -223,52 +195,52 @@ class GlobalDb {
             }
             const { output, patterns, patternsOptions, excludeFromHtmlWebpackPlugin, exportable, ignoredFromWatch: ignoredFromWatchArg, watchThePatternsOnly } = patternsCollection;
             if (ignoredFromWatchArg) {
-                ignoredFromWatch = ignoredFromWatch.concat(patterns.map((pattern) => pattern.split(path_1.default.sep).join(path_1.default.posix.sep)));
+                ignoredFromWatch = ignoredFromWatch.concat(patterns.map((pattern) => pattern.split(path.sep).join(path.posix.sep)));
             }
             else {
                 patterns.forEach((pattern) => {
                     if (typeof pattern === 'string') {
-                        const globBaseOptions = glob_base_1.default(pattern);
+                        const globBaseOptions = globBase(pattern);
                         // Dont add if its already in the directories
                         const entryFiles = {};
-                        glob_1.default.sync(pattern, patternsOptions).forEach(function (file) {
+                        glob.sync(pattern, patternsOptions).forEach(function (file) {
                             let chunkId = '';
                             if (watchThePatternsOnly) {
-                                files.push(path_1.default.resolve(file));
+                                files.push(path.resolve(file));
                             }
                             if (output.path) {
-                                const relativeBase = path_1.default.relative(originalOutputPath, output.path);
+                                const relativeBase = path.relative(originalOutputPath, output.path);
                                 if (output.relativeTo) {
-                                    const relativeToBase = path_1.default.relative(output.relativeTo, file);
-                                    chunkId = path_1.default.relative(relativeBase, relativeToBase);
+                                    const relativeToBase = path.relative(output.relativeTo, file);
+                                    chunkId = path.relative(relativeBase, relativeToBase);
                                 }
                                 else {
                                     chunkId = relativeBase;
                                 }
                                 if (output.preserveFilename) {
-                                    let fileBaseName = path_1.default.basename(file);
-                                    const extname = path_1.default.extname(file);
+                                    let fileBaseName = path.basename(file);
+                                    const extname = path.extname(file);
                                     if (extname) {
                                         fileBaseName = fileBaseName.replace(new RegExp(extname + '$'), '');
                                     }
-                                    chunkId = path_1.default.join(chunkId, fileBaseName);
+                                    chunkId = path.join(chunkId, fileBaseName);
                                 }
                                 else {
-                                    chunkId = path_1.default.join(chunkId, sanitize_filename_1.default(file, { replacement: '_' }));
+                                    chunkId = path.join(chunkId, sanitizeFilename(file, { replacement: '_' }));
                                 }
                             }
                             else {
-                                chunkId = sanitize_filename_1.default(file, { replacement: '_' });
+                                chunkId = sanitizeFilename(file, { replacement: '_' });
                             }
                             if (!output.preserveFilename) {
-                                const fileContent = fs_1.default.readFileSync(file, 'utf-8');
-                                const contentHash = loader_utils_1.default.getHashDigest(fileContent);
+                                const fileContent = fs.readFileSync(file, 'utf-8');
+                                const contentHash = loaderUtils.getHashDigest(fileContent);
                                 chunkId += '_' + contentHash;
                             }
                             if (output.prefix) {
                                 chunkId = output.prefix + '__' + chunkId;
                             }
-                            entryFiles[chunkId] = path_1.default.resolve(file);
+                            entryFiles[chunkId] = path.resolve(file);
                             const matchCount = (file.match(/shared/gi) || []).length;
                             chunkIdToDetailsMap[chunkId] = {
                                 output: output,
@@ -299,7 +271,7 @@ class GlobalDb {
                         // Set the globbed entryFiles
                         entry = Object.assign(entry, entryFiles);
                         const filesToAdd = Object.values(entryFiles) ?? [];
-                        const directory = path_1.default.resolve(globBaseOptions.base);
+                        const directory = path.resolve(globBaseOptions.base);
                         if (!directories.includes(directory) && pattern.includes('*') && !watchThePatternsOnly) {
                             directories.push(directory);
                         }
@@ -310,11 +282,11 @@ class GlobalDb {
                             if (extension.ignoredFromWatch && extension.name) {
                                 [extension.name].forEach((ext) => {
                                     if (ext) {
-                                        const patternExtension = path_1.default.extname(pattern);
+                                        const patternExtension = path.extname(pattern);
                                         let ignoredToAdd = patternExtension
                                             ? pattern.replace(new RegExp(patternExtension + '$'), ext)
                                             : pattern + extension.name;
-                                        ignoredToAdd = ignoredToAdd.split(path_1.default.sep).join(path_1.default.posix.sep);
+                                        ignoredToAdd = ignoredToAdd.split(path.sep).join(path.posix.sep);
                                         ignoredFromWatch = ignoredFromWatch.concat(ignoredToAdd);
                                     }
                                 });
@@ -333,13 +305,12 @@ class GlobalDb {
         toReturn.extnameToChunkIdsMap = extnameToChunkIdsMap;
         toReturn.excludedChunkIds = excludedChunkIds;
         toReturn.exportableChunkIds = exportableChunkIds;
-        toReturn.files = lodash_1.default.uniq(files);
+        toReturn.files = _.uniq(files);
         toReturn.directories = directories;
-        toReturn.ignoredFromWatch = lodash_1.default.uniq(ignoredFromWatch);
+        toReturn.ignoredFromWatch = _.uniq(ignoredFromWatch);
         return toReturn;
     }
 }
-exports.GlobalDb = GlobalDb;
 GlobalDb._state = {};
 class Db extends GlobalDb {
     constructor(id) {
@@ -366,7 +337,7 @@ const globalDb = new Proxy(new GlobalDb(), {
         return true;
     },
 });
-class WebpackWatchEntriesPlugin {
+export class WebpackWatchEntriesPlugin {
     constructor(options) {
         this.options = options;
         this.db = new Db(options.id);
@@ -405,7 +376,7 @@ class WebpackWatchEntriesPlugin {
                         [file]: chunk.id,
                     },
                     extnameToChunkIdsMap: {
-                        [`${path_1.default.extname(file)}`]: [chunk.id],
+                        [`${path.extname(file)}`]: [chunk.id],
                     },
                     chunkIdToDetailsMap: {
                         [chunk.id]: {
@@ -429,7 +400,7 @@ class WebpackWatchEntriesPlugin {
                 }
                 this.db.mergeLocalState(arg);
             });
-            compilation.hooks.processAssets.tap({ name: WebpackWatchEntriesPlugin.name, stage: webpack_1.Compilation.PROCESS_ASSETS_STAGE_ADDITIONS }, async (assets) => {
+            compilation.hooks.processAssets.tap({ name: WebpackWatchEntriesPlugin.name, stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONS }, async (assets) => {
                 const dbEntry = this.db.getDbEntry();
                 for (const fileName of Object.keys(assets)) {
                     const entryMap = dbEntry.entryMap;
@@ -440,9 +411,9 @@ class WebpackWatchEntriesPlugin {
                         entryDetails?.output?.extensions?.forEach(async (extension) => {
                             if (extension?.name === '.json') {
                                 const originalFilePath = entryMap[chunkId];
-                                const originalFilePathExt = path_1.default.extname(originalFilePath);
+                                const originalFilePathExt = path.extname(originalFilePath);
                                 if (['.js', '.ts'].includes(originalFilePathExt)) {
-                                    const extname = path_1.default.extname(fileName);
+                                    const extname = path.extname(fileName);
                                     let jsonRelPath = fileName;
                                     if (extname) {
                                         jsonRelPath = jsonRelPath.replace(new RegExp(extname + '$'), '.json');
@@ -453,9 +424,9 @@ class WebpackWatchEntriesPlugin {
                                     let json = {};
                                     try {
                                         delete require.cache[originalFilePath];
-                                        json = (await Promise.resolve().then(() => __importStar(require(originalFilePath)))).default;
+                                        json = (await import(originalFilePath)).default;
                                         const finalSource = JSON.stringify(json, undefined, 4);
-                                        const rawSarouce = new webpack_sources_1.RawSource(finalSource);
+                                        const rawSarouce = new RawSource(finalSource);
                                         if (compilation.getAsset(jsonRelPath)) {
                                             compilation.updateAsset(jsonRelPath, rawSarouce);
                                         }
@@ -479,7 +450,7 @@ class WebpackWatchEntriesPlugin {
                     }
                 }
             });
-            html_webpack_plugin_1.default.getHooks(compilation).beforeAssetTagGeneration.tapAsync('HtmlWebpackCustomizer', // <-- Set a meaningful name here for stacktraces
+            HtmlWebpackPlugin.getHooks(compilation).beforeAssetTagGeneration.tapAsync('HtmlWebpackCustomizer', // <-- Set a meaningful name here for stacktraces
             (data, cb) => {
                 const dbEntry = this.db.getDbEntry();
                 const jsToExclude = [];
@@ -530,20 +501,19 @@ class WebpackWatchEntriesPlugin {
         });
     }
 }
-exports.WebpackWatchEntriesPlugin = WebpackWatchEntriesPlugin;
 class NodeWatchFileSystem {
     constructor(inputFileSystem, options) {
         this.inputFileSystem = inputFileSystem;
         this.options = options;
         const entries = globalDb.getDbEntry(this.options.id);
         const ignoredFromWatch = entries.ignoredFromWatch ?? [];
-        this.watcherOptions = deepmerge_1.default({
+        this.watcherOptions = deepMerge({
             aggregateTimeout: 0,
             poll: true,
             followSymlinks: false,
             ignored: ['**/*.js'].concat(ignoredFromWatch ?? []),
         }, options?.watcherOptions ?? {});
-        this.watcher = new watchpack_1.default(this.watcherOptions);
+        this.watcher = new Watchpack(this.watcherOptions);
     }
     /**
      * @param {Iterable<string>} files watched files
@@ -584,7 +554,7 @@ class NodeWatchFileSystem {
         const oldWatcher = this.watcher;
         const ignoredFromWatch = entries.ignoredFromWatch ?? [];
         options.ignored = ignoredFromWatch;
-        this.watcher = new watchpack_1.default(options);
+        this.watcher = new Watchpack(options);
         if (callbackUndelayed) {
             this.watcher.once('change', callbackUndelayed);
         }
@@ -612,10 +582,10 @@ class NodeWatchFileSystem {
             console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRRRR');
             console.dir(filePath);
             console.dir(explanation);
-            if (path_1.default.extname(filePath) === '.scss') {
+            if (path.extname(filePath) === '.scss') {
                 const toDelete = filePath.replace(/\.scss$/, '.css');
-                if (fs_1.default.existsSync(toDelete)) {
-                    fs_1.default.unlinkSync(toDelete);
+                if (fs.existsSync(toDelete)) {
+                    fs.unlinkSync(toDelete);
                 }
             }
             // filePath: the removed file or directory

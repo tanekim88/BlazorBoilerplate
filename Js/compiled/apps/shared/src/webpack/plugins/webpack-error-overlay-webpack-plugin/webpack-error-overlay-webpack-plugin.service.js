@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11,13 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackErrorOverlayWebpackPluginService = void 0;
-const common_1 = require("@nestjs/common");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
+import { Optional } from '@nestjs/common';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
-let WebpackErrorOverlayWebpackPluginService = class WebpackErrorOverlayWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackErrorOverlayWebpackPluginService = class WebpackErrorOverlayWebpackPluginService extends WebpackPluginBaseService {
     constructor(classConstructor) {
         super(classConstructor ?? ErrorOverlayPlugin);
     }
@@ -26,9 +23,9 @@ let WebpackErrorOverlayWebpackPluginService = class WebpackErrorOverlayWebpackPl
     }
 };
 WebpackErrorOverlayWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
-    __param(0, common_1.Optional()),
+    CustomInjectable(),
+    __param(0, Optional()),
     __metadata("design:paramtypes", [Object])
 ], WebpackErrorOverlayWebpackPluginService);
-exports.WebpackErrorOverlayWebpackPluginService = WebpackErrorOverlayWebpackPluginService;
+export { WebpackErrorOverlayWebpackPluginService };
 //# sourceMappingURL=webpack-error-overlay-webpack-plugin.service.js.map

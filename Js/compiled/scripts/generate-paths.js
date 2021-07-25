@@ -1,23 +1,18 @@
-"use strict";
 // class Apps {
 //     SharedLibrary = new SharedLibrary();
 //     BlazorApp = new BlazorApp();
 //     IdentityServer = new IdentityServer();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 //     toString = () => 'abc';
 // }
 // const a = new Apps();
 // class SharedLibrary {}
 // class BlazorApp {}
 // class IdentityServer {}
-require("reflect-metadata");
-const configs_1 = require("@root/configs");
-const path_1 = __importDefault(require("path"));
-const fs_1 = __importDefault(require("fs"));
-const rootDir = configs_1.rootConfig.rootDir;
+import 'reflect-metadata';
+import { rootConfig } from '@root/configs';
+import path from 'path';
+import fs from 'fs';
+const rootDir = rootConfig.rootDir;
 const blackListedFolders = ['bin', 'node_modules', 'obj', '.vs', 'dist', 'compiled', 'modules'];
 const blackListedFiles = ['.map'];
 const getAllFiles = function (dirPath, toReturn = {
@@ -34,16 +29,16 @@ const getAllFiles = function (dirPath, toReturn = {
     if (!topDir) {
         topDir = dirPath;
     }
-    const files = fs_1.default.readdirSync(dirPath);
+    const files = fs.readdirSync(dirPath);
     files.forEach(function (file) {
         const typeKey = 'readonly ' + file;
-        const fullPath = path_1.default.join(dirPath, file);
+        const fullPath = path.join(dirPath, file);
         if (!blackListedFiles.every((b) => file.endsWith(b))) {
             toReturn[file] = {
                 toAbsolutePath: fullPath,
                 // toString: fullPath,
                 // '[Symbol.toStringTag]': fullPath,
-                toRelativePath: path_1.default.relative(topDir, fullPath),
+                toRelativePath: path.relative(topDir, fullPath),
             };
             toType[typeKey] = {
                 toAbsolutePath: 'string',
@@ -53,14 +48,14 @@ const getAllFiles = function (dirPath, toReturn = {
             };
         }
         if (blackListedFolders.every((b) => !file.endsWith(b))) {
-            if (fs_1.default.statSync(fullPath).isDirectory()) {
+            if (fs.statSync(fullPath).isDirectory()) {
                 [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
             }
         }
     });
     return [toReturn, toType];
 };
-const newRootPath = path_1.default.join(rootDir, '..');
+const newRootPath = path.join(rootDir, '..');
 const [toReturn, toType] = getAllFiles(newRootPath);
 const createProxyScript = `
     function createProxy(obj) {
@@ -98,5 +93,5 @@ const content = json
 const finalContent = `export const RootPaths:RootPathsType = createProxy( ` +
     content +
     `);\nexport const rootPaths = RootPaths.Js;`;
-fs_1.default.writeFileSync('paths.ts', createProxyScript + finalType + finalContent);
+fs.writeFileSync('paths.ts', createProxyScript + finalType + finalContent);
 //# sourceMappingURL=generate-paths.js.map

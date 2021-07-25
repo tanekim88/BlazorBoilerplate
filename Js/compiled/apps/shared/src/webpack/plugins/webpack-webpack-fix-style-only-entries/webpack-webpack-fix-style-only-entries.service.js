@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackWebpackFixStyleOnlyEntriesService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
-let WebpackWebpackFixStyleOnlyEntriesService = class WebpackWebpackFixStyleOnlyEntriesService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+let WebpackWebpackFixStyleOnlyEntriesService = class WebpackWebpackFixStyleOnlyEntriesService extends WebpackPluginBaseService {
     constructor() {
         super(FixStyleOnlyEntriesPlugin);
     }
@@ -26,8 +23,8 @@ let WebpackWebpackFixStyleOnlyEntriesService = class WebpackWebpackFixStyleOnlyE
     }
 };
 WebpackWebpackFixStyleOnlyEntriesService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackWebpackFixStyleOnlyEntriesService);
-exports.WebpackWebpackFixStyleOnlyEntriesService = WebpackWebpackFixStyleOnlyEntriesService;
+export { WebpackWebpackFixStyleOnlyEntriesService };
 //# sourceMappingURL=webpack-webpack-fix-style-only-entries.service.js.map

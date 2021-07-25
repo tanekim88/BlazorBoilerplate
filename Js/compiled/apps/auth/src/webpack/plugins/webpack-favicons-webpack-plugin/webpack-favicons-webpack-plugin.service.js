@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackFaviconsWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_favicons_webpack_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service");
-const environment_service_1 = require("../../../modules/environment/environment/environment.service");
-let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPluginService extends webpack_favicons_webpack_plugin_service_1.WebpackFaviconsWebpackPluginService {
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { WebpackFaviconsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
+import { AuthEnvironmentService } from '../../../modules/environment/environment/environment.service';
+let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             logo: this.authEnvironmentService.logoPath,
@@ -21,11 +18,11 @@ let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPl
     }
 };
 __decorate([
-    process_webpack_providers_1.CustomInject(environment_service_1.AuthEnvironmentService),
-    __metadata("design:type", environment_service_1.AuthEnvironmentService)
+    CustomInject(AuthEnvironmentService),
+    __metadata("design:type", AuthEnvironmentService)
 ], AuthWebpackFaviconsWebpackPluginService.prototype, "authEnvironmentService", void 0);
 AuthWebpackFaviconsWebpackPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], AuthWebpackFaviconsWebpackPluginService);
-exports.AuthWebpackFaviconsWebpackPluginService = AuthWebpackFaviconsWebpackPluginService;
+export { AuthWebpackFaviconsWebpackPluginService };
 //# sourceMappingURL=webpack-favicons-webpack-plugin.service.js.map

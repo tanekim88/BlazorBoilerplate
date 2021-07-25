@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,12 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssBaseService = void 0;
-const merge_service_1 = require("../../../modules/utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const environment_service_1 = require("@shared/src/modules/environment/environment/environment.service");
+import { MergeService } from '../../../modules/utilities/merge/merge/merge.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { EnvironmentService } from '@shared/src/modules/environment/environment/environment.service';
 let WebpackPostcssBaseService = class WebpackPostcssBaseService {
     constructor(ConstructorClass) {
         this.ConstructorClass = ConstructorClass;
@@ -26,16 +23,16 @@ let WebpackPostcssBaseService = class WebpackPostcssBaseService {
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(merge_service_1.MergeService),
-    __metadata("design:type", merge_service_1.MergeService)
+    CustomInject(MergeService),
+    __metadata("design:type", MergeService)
 ], WebpackPostcssBaseService.prototype, "mergeService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(environment_service_1.EnvironmentService),
-    __metadata("design:type", environment_service_1.EnvironmentService)
+    CustomInject(EnvironmentService),
+    __metadata("design:type", EnvironmentService)
 ], WebpackPostcssBaseService.prototype, "environmentService", void 0);
 WebpackPostcssBaseService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [Object])
 ], WebpackPostcssBaseService);
-exports.WebpackPostcssBaseService = WebpackPostcssBaseService;
+export { WebpackPostcssBaseService };
 //# sourceMappingURL=webpack-postcss-base.service.js.map

@@ -1,7 +1,7 @@
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackSvgSpriteLoaderPluginService extends WebpackPluginBaseService {

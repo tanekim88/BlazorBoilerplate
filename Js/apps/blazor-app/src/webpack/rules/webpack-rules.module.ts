@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 
 
 import { WebpackRulesModule } from '@shared/src/webpack/rules/webpack-rules.module';
-import { CustomModule } from '@shared/src/functions/process-webpack-providers';
+import { CustomModule } from '@shared/src/functions/process-providers';
 import { BlazorAppWebpackRulesConfigService, BlazorAppWebpackRulesService } from './webpack-rules/webpack-rules.service';
 import { BlazorAppWebpackCsvRulesService } from './webpack-csv-rules/webpack-csv-rules.service';
 import { BlazorAppWebpackFontRulesService } from './webpack-font-rules/webpack-font-rules.service';

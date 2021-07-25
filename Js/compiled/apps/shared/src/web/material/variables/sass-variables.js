@@ -1,21 +1,18 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.sassVariables = void 0;
-const tailwind_colors_1 = require("../../tailwind/tailwind.colors");
-const export_1 = require("./export");
+import { colors, texts } from '../../tailwind/tailwind.colors';
+import { materialVariables } from './export';
 // import { colorTypes } from './color-types';
 // import { colorSchemes, colorsInput } from './colors-input';
 // import { textColorSchemes } from './text-color-schemes';
 // import { textsInput } from './texts-input';
-const colorSchemes = export_1.materialVariables['$color-schemes'];
-const textColorSchemes = export_1.materialVariables['$text-color-schemes'];
-const colorTypes = export_1.materialVariables['$color-types'];
-const colorsInput = export_1.materialVariables['$colors-input'];
-const textsInput = export_1.materialVariables['$texts-input'];
-console.dir(tailwind_colors_1.colors);
-console.dir(tailwind_colors_1.texts);
-const textC = tailwind_colors_1.texts;
-exports.sassVariables = {
+const colorSchemes = materialVariables['$color-schemes'];
+const textColorSchemes = materialVariables['$text-color-schemes'];
+const colorTypes = materialVariables['$color-types'];
+const colorsInput = materialVariables['$colors-input'];
+const textsInput = materialVariables['$texts-input'];
+console.dir(colors);
+console.dir(texts);
+const textC = texts;
+export const sassVariables = {
     base: '16px',
     spacing: '1rem',
     breakpoints: {
@@ -29,8 +26,8 @@ exports.sassVariables = {
         text: '1rem',
         title: '2rem',
     },
-    colors: tailwind_colors_1.colors,
-    texts: tailwind_colors_1.texts,
+    colors: colors,
+    texts: texts,
     schema: {
         'texts-input': textsInput,
         'colors-input': colorsInput,

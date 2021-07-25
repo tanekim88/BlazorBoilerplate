@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_stylelint_service_1 = require("./webpack-stylelint.service");
+import { Test } from '@nestjs/testing';
+import { WebpackStylelintService } from './webpack-stylelint.service';
 describe('WebpackStylelintService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_stylelint_service_1.WebpackStylelintService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackStylelintService],
         }).compile();
-        service = module.get(webpack_stylelint_service_1.WebpackStylelintService);
+        service = module.get(WebpackStylelintService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

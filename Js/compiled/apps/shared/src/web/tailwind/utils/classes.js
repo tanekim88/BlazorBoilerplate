@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.filterProps = exports.ClassBuilder = void 0;
 const noDepth = ['white', 'black', 'transparent'];
 function getClass(prop, color, depth, defaultDepth) {
     if (noDepth.includes(color)) {
@@ -8,7 +5,7 @@ function getClass(prop, color, depth, defaultDepth) {
     }
     return `${prop}-${color}-${depth || defaultDepth} `;
 }
-function utils(color, defaultDepth = 500) {
+export default function utils(color, defaultDepth = 500) {
     return {
         bg: (depth) => getClass('bg', color, depth, defaultDepth),
         border: (depth) => getClass('border', color, depth, defaultDepth),
@@ -16,8 +13,7 @@ function utils(color, defaultDepth = 500) {
         caret: (depth) => getClass('caret', color, depth, defaultDepth),
     };
 }
-exports.default = utils;
-class ClassBuilder {
+export class ClassBuilder {
     constructor(classes, defaultClasses) {
         this.defaults = (typeof classes === 'function' ? classes(defaultClasses) : classes) || defaultClasses;
         this.classes = this.defaults;
@@ -58,11 +54,9 @@ class ClassBuilder {
         }
     }
 }
-exports.ClassBuilder = ClassBuilder;
 const defaultReserved = ['class', 'add', 'remove', 'replace', 'value'];
-function filterProps(reserved, props) {
+export function filterProps(reserved, props) {
     const r = [...reserved, ...defaultReserved];
     return Object.keys(props).reduce((acc, cur) => cur.includes('$$') || cur.includes('Class') || r.includes(cur) ? acc : { ...acc, [cur]: props[cur] }, {});
 }
-exports.filterProps = filterProps;
 //# sourceMappingURL=classes.js.map

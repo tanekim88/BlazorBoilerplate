@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 
 namespace SharedCore.Application.Services.__Entities_Groups_00_Name__Services
 {
-    //%S:begin Attributes
-
     public class GreeterService : Greeter.GreeterBase
 
     {

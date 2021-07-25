@@ -1,6 +1,6 @@
 import path from 'path';
 import { WebpackCopyWebpackPluginService } from '@shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { authPaths } from '@auth/paths';
 import { AuthEnvironmentService } from '@auth/src/modules/environment/environment/environment.service';
 

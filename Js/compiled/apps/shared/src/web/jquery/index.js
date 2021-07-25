@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("./_index.scss");
-require("jquery");
-require("jquery-validation");
-require("jquery-validation-unobtrusive");
+import './_index.scss';
+import 'jquery';
+import 'jquery-validation';
+import 'jquery-validation-unobtrusive';
 //# sourceMappingURL=index.js.map

@@ -1,25 +1,19 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.texts = exports.colors = exports.tailwindColors = void 0;
-const tinycolor2_1 = __importDefault(require("tinycolor2"));
-const color_1 = require("./utils/color");
-const deepmerge_1 = __importDefault(require("deepmerge"));
-const export_1 = require("../material/variables/export");
-const node_sass_1 = __importDefault(require("node-sass"));
-const lodash_1 = __importDefault(require("lodash"));
-const colorsInput = export_1.materialVariables['$colors-input'];
-const textsInput = export_1.materialVariables['$texts-input'];
-const materialColors = export_1.materialVariables['$material-colors'];
-const subTypes = export_1.materialVariables['$color-types'];
-const textColorSchemes = export_1.materialVariables['$text-color-schemes'];
-const textLinkColorsInput = export_1.materialVariables['$text-links-input'];
+import tinycolor from 'tinycolor2';
+import { generate } from './utils/color';
+import deepmerge from 'deepmerge';
+import { materialVariables } from '../material/variables/export';
+import sass from 'node-sass';
+import _ from 'lodash';
+const colorsInput = materialVariables['$colors-input'];
+const textsInput = materialVariables['$texts-input'];
+const materialColors = materialVariables['$material-colors'];
+const subTypes = materialVariables['$color-types'];
+const textColorSchemes = materialVariables['$text-color-schemes'];
+const textLinkColorsInput = materialVariables['$text-links-input'];
 console.log('CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC');
-console.dir(export_1.materialVariables);
+console.dir(materialVariables);
 const lightenDarkenDegree = 15;
-const customColors = color_1.generate(colorsInput);
+const customColors = generate(colorsInput);
 const convertedMaterialColors = Object.keys(materialColors).reduce((acc, curr) => {
     const lastIndexOf = curr.lastIndexOf('-');
     if (!acc[curr] && lastIndexOf === -1) {
@@ -50,9 +44,9 @@ Object.keys(colorsInput).forEach((key) => {
     }
     customColors[key]['DEFAULT'] = customColors[key][500];
 });
-exports.tailwindColors = deepmerge_1.default(convertedMaterialColors, customColors);
-exports.colors = Object.keys(exports.tailwindColors).reduce((acc, curr) => {
-    const color = exports.tailwindColors[curr];
+export const tailwindColors = deepmerge(convertedMaterialColors, customColors);
+export const colors = Object.keys(tailwindColors).reduce((acc, curr) => {
+    const color = tailwindColors[curr];
     const toReturn = Object.keys(color).reduce((acc2, curr2) => {
         const finalColor = color[curr2];
         let key = curr;
@@ -66,8 +60,8 @@ exports.colors = Object.keys(exports.tailwindColors).reduce((acc, curr) => {
     return acc;
 }, {});
 // export const colorsUtilities = {};
-exports.texts = Object.keys(exports.colors).reduce((acc, label) => {
-    const color = exports.colors[label];
+export const texts = Object.keys(colors).reduce((acc, label) => {
+    const color = colors[label];
     const isDark = isColorDark(color);
     const textColor = textsInput[isDark ? 'light' : 'dark'];
     const textLinkColor = textLinkColorsInput[isDark ? 'light' : 'dark'];
@@ -82,11 +76,11 @@ exports.texts = Object.keys(exports.colors).reduce((acc, label) => {
     return acc;
 }, {});
 function isColorDark(color) {
-    const c = /color:\s*(.+);/m.exec(node_sass_1.default.renderSync({ data: `body{color:${color}}`, outputStyle: 'compact' }).css.toString())[1];
-    return tinycolor2_1.default(c).isDark();
+    const c = /color:\s*(.+);/m.exec(sass.renderSync({ data: `body{color:${color}}`, outputStyle: 'compact' }).css.toString())[1];
+    return tinycolor(c).isDark();
 }
 function getCssObj(obj) {
-    return lodash_1.default.omitBy(obj, (value, key) => {
+    return _.omitBy(obj, (value, key) => {
         return key.startsWith('&');
     });
 }

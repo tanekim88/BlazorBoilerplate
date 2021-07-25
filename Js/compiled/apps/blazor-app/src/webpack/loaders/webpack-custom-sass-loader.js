@@ -1,13 +1,8 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const sass_loader_1 = __importDefault(require("sass-loader"));
-const sanitize_filename_1 = __importDefault(require("sanitize-filename"));
+import sassLoader from 'sass-loader';
+import sanitizeFileName from 'sanitize-filename';
 const db = {};
 exports.default = function loader(content) {
-    const id = sanitize_filename_1.default(this.resourcePath, {
+    const id = sanitizeFileName(this.resourcePath, {
         replacement: '_',
     });
     const localSet = new Set();
@@ -45,7 +40,7 @@ exports.default = function loader(content) {
         };
     }
     this.async['done'] = true;
-    const sassLoader2 = sass_loader_1.default.bind(this);
+    const sassLoader2 = sassLoader.bind(this);
     sassLoader2(content);
 };
 //# sourceMappingURL=webpack-custom-sass-loader.js.map

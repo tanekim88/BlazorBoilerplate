@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,16 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackHtmlWebpackCustomizerPlugin = exports.AuthWebpackHtmlWebpackCustomizerPluginService = void 0;
-const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_html_webpack_customizer_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service");
-const paths_1 = require("@auth/paths");
-let AuthWebpackHtmlWebpackCustomizerPluginService = class AuthWebpackHtmlWebpackCustomizerPluginService extends webpack_html_webpack_customizer_plugin_service_1.WebpackHtmlWebpackCustomizerPluginService {
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { WebpackHtmlWebpackCustomizerPlugin, WebpackHtmlWebpackCustomizerPluginService, } from '@shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
+import { authPaths } from '@auth/paths';
+let AuthWebpackHtmlWebpackCustomizerPluginService = class AuthWebpackHtmlWebpackCustomizerPluginService extends WebpackHtmlWebpackCustomizerPluginService {
     constructor() {
         super(AuthWebpackHtmlWebpackCustomizerPlugin);
     }
@@ -29,19 +23,19 @@ let AuthWebpackHtmlWebpackCustomizerPluginService = class AuthWebpackHtmlWebpack
     }
 };
 AuthWebpackHtmlWebpackCustomizerPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], AuthWebpackHtmlWebpackCustomizerPluginService);
-exports.AuthWebpackHtmlWebpackCustomizerPluginService = AuthWebpackHtmlWebpackCustomizerPluginService;
-class AuthWebpackHtmlWebpackCustomizerPlugin extends webpack_html_webpack_customizer_plugin_service_1.WebpackHtmlWebpackCustomizerPlugin {
+export { AuthWebpackHtmlWebpackCustomizerPluginService };
+export class AuthWebpackHtmlWebpackCustomizerPlugin extends WebpackHtmlWebpackCustomizerPlugin {
     apply(compiler) {
         compiler.hooks.compilation.tap(AuthWebpackHtmlWebpackCustomizerPlugin.name, (compilation) => {
             // Static Plugin interface |compilation |HOOK NAME | register listener
-            html_webpack_plugin_1.default.getHooks(compilation).alterAssetTagGroups.tapAsync('HtmlWebpackCustomizer', // <-- Set a meaningful name here for stacktraces
+            HtmlWebpackPlugin.getHooks(compilation).alterAssetTagGroups.tapAsync('HtmlWebpackCustomizer', // <-- Set a meaningful name here for stacktraces
             (data, cb) => {
                 super.processData(data, compiler);
                 const template = data.plugin.options?.template;
-                if (template?.endsWith(paths_1.authPaths.src.templates['_Layout.cshtml'].toAbsolutePath())) {
+                if (template?.endsWith(authPaths.src.templates['_Layout.cshtml'].toAbsolutePath())) {
                     data.headTags = data.headTags.filter((d) => {
                         const href = d.attributes?.href;
                         if (href && (href.startsWith('/Shared_Material__') || href.startsWith('/Auth__'))) {
@@ -62,5 +56,4 @@ class AuthWebpackHtmlWebpackCustomizerPlugin extends webpack_html_webpack_custom
         });
     }
 }
-exports.AuthWebpackHtmlWebpackCustomizerPlugin = AuthWebpackHtmlWebpackCustomizerPlugin;
 //# sourceMappingURL=webpack-html-webpack-customizer-plugin.service.js.map

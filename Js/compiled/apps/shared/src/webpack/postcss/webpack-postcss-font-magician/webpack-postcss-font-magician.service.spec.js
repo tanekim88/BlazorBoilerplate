@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_postcss_font_magician_service_1 = require("./webpack-postcss-font-magician.service");
+import { Test } from '@nestjs/testing';
+import { WebpackPostcssFontMagicianService } from './webpack-postcss-font-magician.service';
 describe('WebpackPostcssFontMagicianService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_postcss_font_magician_service_1.WebpackPostcssFontMagicianService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackPostcssFontMagicianService],
         }).compile();
-        service = module.get(webpack_postcss_font_magician_service_1.WebpackPostcssFontMagicianService);
+        service = module.get(WebpackPostcssFontMagicianService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

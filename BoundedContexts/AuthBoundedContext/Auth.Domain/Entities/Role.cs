@@ -1,17 +1,10 @@
 //%t:begin Intro
 //%t:end Intro
-using Auth.Domain.Entities;
 using Auth.Domain.ValueObjects.Ids;
-using System;
-using Core.Domain.Entities;
 //%s:begin Header
 //%s:end Header
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Auth.Domain.ValueObjects.Ids;
 using Core.Domain;
 using Core.Domain.Interfaces;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
 namespace Auth.Domain.Entities

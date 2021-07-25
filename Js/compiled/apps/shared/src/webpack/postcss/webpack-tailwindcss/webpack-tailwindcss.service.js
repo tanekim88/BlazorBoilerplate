@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,22 +7,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackTailwindcssService = void 0;
-const tailwindcss_1 = __importDefault(require("tailwindcss"));
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const tailwind_config_1 = __importDefault(require("@shared/tailwind.config"));
-const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
-let WebpackTailwindcssService = class WebpackTailwindcssService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+import Tailwindcss from 'tailwindcss';
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import fs from 'fs';
+import { sharedPaths } from '@shared/paths';
+const fileToRemove = sharedPaths['tailwind.config.json'].toAbsolutePath();
+if (fs.existsSync(fileToRemove)) {
+    fs.unlinkSync(fileToRemove);
+}
+import tailwindConfig from '@shared/tailwind.config';
+import resolveConfig from 'tailwindcss/resolveConfig';
+let WebpackTailwindcssService = class WebpackTailwindcssService extends WebpackPostcssBaseService {
     constructor() {
-        super(tailwindcss_1.default);
+        super(Tailwindcss);
     }
     createOptions(options) {
-        const resolvedConfig = resolveConfig_1.default(tailwind_config_1.default);
+        console.dir(tailwindConfig);
+        const resolvedConfig = resolveConfig(tailwindConfig);
         console.dir(resolvedConfig);
         return this.mergeService.mergeOptions(super.createOptions(), {
             config: resolvedConfig,
@@ -31,8 +32,8 @@ let WebpackTailwindcssService = class WebpackTailwindcssService extends webpack_
     }
 };
 WebpackTailwindcssService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackTailwindcssService);
-exports.WebpackTailwindcssService = WebpackTailwindcssService;
+export { WebpackTailwindcssService };
 //# sourceMappingURL=webpack-tailwindcss.service.js.map

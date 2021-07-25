@@ -1,9 +1,6 @@
 import { Configuration } from 'webpack';
 
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
-
 import { blazorAppPaths } from '@blazor-app/paths';
 import {
     Patterns,
@@ -15,6 +12,7 @@ import { WebpackSharedConfigService } from '@shared/src/webpack/webpack-shared-c
 import { BlazorAppEnvironmentService } from '../../modules/environment/environment/environment.service';
 import { BlazorAppWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
 import { BlazorAppWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class BlazorAppWebpackSharedConfigService extends WebpackSharedConfigService {

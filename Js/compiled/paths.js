@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.rootPaths = exports.RootPaths = void 0;
 function createProxy(obj) {
     return new Proxy(obj, {
         set: (target, prop, value) => {
@@ -14,7 +11,7 @@ function createProxy(obj) {
         },
     });
 }
-exports.RootPaths = createProxy({
+export const RootPaths = createProxy({
     toAbsolutePath: () => "C:\\App",
     toRelativePath: () => "",
     ".dockerignore": {
@@ -36458,5 +36455,5 @@ exports.RootPaths = createProxy({
         toRelativePath: () => "tye.yaml"
     }
 });
-exports.rootPaths = exports.RootPaths.Js;
+export const rootPaths = RootPaths.Js;
 //# sourceMappingURL=paths.js.map

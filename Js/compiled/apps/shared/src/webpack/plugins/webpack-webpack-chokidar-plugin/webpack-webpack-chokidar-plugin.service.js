@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,16 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackWebpackChokidarPluginService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 // const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
-const chokidar_1 = __importDefault(require("chokidar"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-let WebpackWebpackChokidarPluginService = class WebpackWebpackChokidarPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+import chokidar from 'chokidar';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackWebpackChokidarPluginService = class WebpackWebpackChokidarPluginService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackChokidarPlugin);
     }
@@ -48,10 +42,10 @@ let WebpackWebpackChokidarPluginService = class WebpackWebpackChokidarPluginServ
     }
 };
 WebpackWebpackChokidarPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackWebpackChokidarPluginService);
-exports.WebpackWebpackChokidarPluginService = WebpackWebpackChokidarPluginService;
+export { WebpackWebpackChokidarPluginService };
 class WebpackChokidarPlugin {
     constructor(options = {}) {
         this.options = options;
@@ -60,7 +54,7 @@ class WebpackChokidarPlugin {
         let asyncEntry;
         const options = this.options;
         compiler.hooks.afterCompile.tap(this.constructor.name, function (compilation) {
-            const watcher = chokidar_1.default.watch(options.watchFileRegex, {
+            const watcher = chokidar.watch(options.watchFileRegex, {
                 persistent: options.persistance || true,
                 ignored: options.ignored || false,
                 ignoreInitial: options.ignoreInitial || false,

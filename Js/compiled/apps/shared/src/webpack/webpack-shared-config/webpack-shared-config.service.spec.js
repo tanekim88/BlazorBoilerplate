@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_shared_config_service_1 = require("./webpack-shared-config.service");
+import { Test } from '@nestjs/testing';
+import { WebpackSharedConfigService } from './webpack-shared-config.service';
 describe('WebpackSharedConfigService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_shared_config_service_1.WebpackSharedConfigService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackSharedConfigService],
         }).compile();
-        service = module.get(webpack_shared_config_service_1.WebpackSharedConfigService);
+        service = module.get(WebpackSharedConfigService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

@@ -1,0 +1,1 @@
+{"version":3,"file":"vite.prod.js","sourceRoot":"","sources":["../../../apps/shared/vite.prod.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,eAAe,EAAE,MAAM,wCAAwC,CAAC;AACzE,OAAO,EAAE,UAAU,EAAE,MAAM,wBAAwB,CAAC;AAGpD,OAAO,EAAE,QAAQ,EAAE,MAAM,aAAa,CAAC;AACvC,MAAM,QAAQ,GAAG,IAAI,QAAQ,CAAC,UAAU,EAAE,CAAC,eAAe,CAAC,CAAC,CAAC;AAE7D,QAAQ,CAAC,KAAK,EAAE,CAAC"}

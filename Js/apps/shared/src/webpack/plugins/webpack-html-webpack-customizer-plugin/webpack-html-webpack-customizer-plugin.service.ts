@@ -3,7 +3,7 @@ import HtmlWebpackPlugin, { HtmlTagObject } from 'html-webpack-plugin';
 import path from 'path';
 import { Compiler } from 'webpack';
 import fs from 'fs';
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { Optional } from '@nestjs/common';
 
 @CustomInjectable()

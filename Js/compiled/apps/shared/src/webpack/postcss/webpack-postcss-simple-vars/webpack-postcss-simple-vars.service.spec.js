@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const webpack_postcss_simple_vars_service_1 = require("./webpack-postcss-simple-vars.service");
+import { Test } from '@nestjs/testing';
+import { WebpackPostcssSimpleVarsService } from './webpack-postcss-simple-vars.service';
 describe('WebpackPostcssSimpleVarsService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [webpack_postcss_simple_vars_service_1.WebpackPostcssSimpleVarsService],
+        const module = await Test.createTestingModule({
+            providers: [WebpackPostcssSimpleVarsService],
         }).compile();
-        service = module.get(webpack_postcss_simple_vars_service_1.WebpackPostcssSimpleVarsService);
+        service = module.get(WebpackPostcssSimpleVarsService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

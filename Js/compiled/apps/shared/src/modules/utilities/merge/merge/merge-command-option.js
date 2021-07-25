@@ -1,9 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MergeCommandOption = void 0;
-class MergeCommandOption {
+export class MergeCommandOption {
 }
-exports.MergeCommandOption = MergeCommandOption;
 MergeCommandOption.token = {};
 MergeCommandOption.append = { name: 'append', token: MergeCommandOption.token };
 MergeCommandOption.prepend = { name: 'prepend', token: MergeCommandOption.token };

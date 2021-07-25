@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import { WebpackHtmlWebpackPluginService } from '@shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { blazorAppPaths } from '@blazor-app/paths';
 import { blazorAppConfig } from '@blazor-app/configs';
 import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.materialColorsNested = void 0;
-exports.materialColorsNested = {
+export const materialColorsNested = {
     "transparent": "transparent",
     "black": "#000000",
     "white": "#ffffff",

@@ -1,4 +1,4 @@
-import { CustomModule } from '../../functions/process-webpack-providers';
+import { CustomModule } from '../../functions/process-providers';
 import { MergeModule } from './merge/merge.module';
 
 import { RegexModule } from './regex/regex.module';

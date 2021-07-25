@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,44 +7,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthWebpackMiniCssExtractPluginService = exports.AuthWebpackMiniCssExtractPluginConfigService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const mini_css_extract_plugin_1 = __importDefault(require("mini-css-extract-plugin"));
-const webpack_mini_css_extract_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service");
-let AuthWebpackMiniCssExtractPluginConfigService = class AuthWebpackMiniCssExtractPluginConfigService extends webpack_mini_css_extract_plugin_service_1.WebpackMiniCssExtractPluginConfigService {
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { WebpackMiniCssExtractPluginService, WebpackMiniCssExtractPluginConfigService, } from '@shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
+let AuthWebpackMiniCssExtractPluginConfigService = class AuthWebpackMiniCssExtractPluginConfigService extends WebpackMiniCssExtractPluginConfigService {
     /**
      *
      */
     constructor() {
-        super(mini_css_extract_plugin_1.default);
+        super(MiniCssExtractPlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
 AuthWebpackMiniCssExtractPluginConfigService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], AuthWebpackMiniCssExtractPluginConfigService);
-exports.AuthWebpackMiniCssExtractPluginConfigService = AuthWebpackMiniCssExtractPluginConfigService;
-let AuthWebpackMiniCssExtractPluginService = class AuthWebpackMiniCssExtractPluginService extends webpack_mini_css_extract_plugin_service_1.WebpackMiniCssExtractPluginService {
+export { AuthWebpackMiniCssExtractPluginConfigService };
+let AuthWebpackMiniCssExtractPluginService = class AuthWebpackMiniCssExtractPluginService extends WebpackMiniCssExtractPluginService {
     /**
      *
      */
     constructor() {
-        super(mini_css_extract_plugin_1.default);
+        super(MiniCssExtractPlugin);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
 AuthWebpackMiniCssExtractPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], AuthWebpackMiniCssExtractPluginService);
-exports.AuthWebpackMiniCssExtractPluginService = AuthWebpackMiniCssExtractPluginService;
+export { AuthWebpackMiniCssExtractPluginService };
 //# sourceMappingURL=webpack-mini-css-extract-plugin.service.js.map

@@ -7,8 +7,8 @@ import { WebpackSvgRulesService } from '../webpack-svg-rules/webpack-svg-rules.s
 import { WebpackTsRulesService } from '../webpack-ts-rules/webpack-ts-rules.service';
 import { WebpackXmlRulesService } from '../webpack-xml-rules/webpack-xml-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
-import { CustomInject } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 @CustomInjectable()
 export class WebpackRulesConfigService {
     @CustomInject(WebpackStyleRulesService)

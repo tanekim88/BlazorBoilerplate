@@ -1,12 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const webpack_base_1 = require("@shared/webpack.base");
-const webpack_dev_service_1 = require("./src/webpack/webpack-dev/webpack-dev.service");
-const webpack_module_1 = require("./src/webpack/webpack.module");
-const webpackBase = new webpack_base_1.WebpackBase(webpack_module_1.AuthWebpackModule, [
-    webpack_dev_service_1.AuthWebpackDevConfigService,
-    webpack_dev_service_1.AuthWebpackDevService,
+import { WebpackBase } from '@shared/webpack.base';
+import { AuthWebpackDevConfigService, AuthWebpackDevService, } from './src/webpack/webpack-dev/webpack-dev.service';
+import { AuthWebpackModule } from './src/webpack/webpack.module';
+const webpackBase = new WebpackBase(AuthWebpackModule, [
+    AuthWebpackDevConfigService,
+    AuthWebpackDevService,
 ]);
-exports.default = webpackBase.createWebpackConfigs;
+export default webpackBase.createWebpackConfigs;
 webpackBase.execute();
 //# sourceMappingURL=webpack.prod.js.map

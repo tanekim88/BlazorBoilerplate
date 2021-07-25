@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const testing_1 = require("@nestjs/testing");
-const regex_service_1 = require("./regex.service");
+import { Test } from '@nestjs/testing';
+import { RegexService } from './regex.service';
 describe('RegexService', () => {
     let service;
     beforeEach(async () => {
-        const module = await testing_1.Test.createTestingModule({
-            providers: [regex_service_1.RegexService],
+        const module = await Test.createTestingModule({
+            providers: [RegexService],
         }).compile();
-        service = module.get(regex_service_1.RegexService);
+        service = module.get(RegexService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

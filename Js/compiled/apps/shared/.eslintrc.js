@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const settings = {
     root: true,
     parser: '@typescript-eslint/parser',
@@ -40,5 +38,5 @@ const settings = {
     },
     ignorePatterns: ['**/compiled/**/*', '**/node_modules/**/*'],
 };
-exports.default = settings;
+export default settings;
 //# sourceMappingURL=.eslintrc.js.map

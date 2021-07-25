@@ -1,21 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("./_index.scss");
-const list_1 = require("@material/list");
-const drawer_1 = require("@material/drawer");
-const top_app_bar_1 = require("@material/top-app-bar");
+import './_index.scss';
+import { MDCList } from '@material/list';
+import { MDCDrawer } from '@material/drawer';
+import { MDCTopAppBar } from '@material/top-app-bar';
 const appBarEl = document.getElementById('app-bar');
 const mainContentEl = document.getElementById('main-content');
 if (mainContentEl && appBarEl) {
-    const topAppBar = top_app_bar_1.MDCTopAppBar.attachTo(appBarEl);
+    const topAppBar = MDCTopAppBar.attachTo(appBarEl);
     [].map.call(document.querySelectorAll('.mdc-drawer'), function (el) {
-        const drawer = drawer_1.MDCDrawer.attachTo(el);
+        const drawer = MDCDrawer.attachTo(el);
         topAppBar.setScrollTarget(mainContentEl);
         topAppBar.listen('MDCTopAppBar:nav', () => {
             drawer.open = !drawer.open;
         });
         [].map.call(el.querySelectorAll('.mdc-list'), function (el2) {
-            const list = list_1.MDCList.attachTo(el2);
+            const list = MDCList.attachTo(el2);
             list.wrapFocus = true;
             el2.addEventListener('click', (event) => {
                 mainContentEl.querySelector('input, button').focus();

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.hideListAction = void 0;
-function hideListAction(node, cb) {
+export function hideListAction(node, cb) {
     const onWindowClick = (e) => {
         if (!node.contains(e.target)) {
             cb();
@@ -14,5 +11,4 @@ function hideListAction(node, cb) {
         },
     };
 }
-exports.hideListAction = hideListAction;
 //# sourceMappingURL=hide-list-action.js.map

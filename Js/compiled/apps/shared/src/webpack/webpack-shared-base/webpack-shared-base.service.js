@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,18 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackSharedBaseService = void 0;
-const webpack_rules_service_1 = require("../rules/webpack-rules/webpack-rules.service");
-const webpack_base_service_1 = require("../webpack-base/webpack-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const configs_1 = require("@root/configs");
-const paths_1 = require("@shared/paths");
-const webpack_plugins_service_1 = require("../plugins/webpack-plugins/webpack-plugins.service");
-const webpack_tsconfig_paths_webpack_plugin_service_1 = require("../plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
-const rootDir = configs_1.rootConfig.rootDir;
-let WebpackSharedBaseService = class WebpackSharedBaseService extends webpack_base_service_1.WebpackBaseService {
+import { WebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
+import { WebpackBaseService } from '../webpack-base/webpack-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
+import { rootConfig } from '@root/configs';
+import { sharedPaths } from '@shared/paths';
+import { WebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
+import { WebpackTsconfigPathsWebpackPluginService } from '../plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
+const rootDir = rootConfig.rootDir;
+let WebpackSharedBaseService = class WebpackSharedBaseService extends WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             output: {
@@ -39,7 +36,7 @@ let WebpackSharedBaseService = class WebpackSharedBaseService extends webpack_ba
             },
             resolveLoader: {
                 modules: [
-                    paths_1.sharedPaths.src.webpack.loaders.toAbsolutePath(),
+                    sharedPaths.src.webpack.loaders.toAbsolutePath(),
                     this.environmentService.localPaths.src.webpack.loaders.toAbsolutePath(),
                     this.environmentService.localPaths.node_modules.toAbsolutePath(),
                 ],
@@ -51,19 +48,19 @@ let WebpackSharedBaseService = class WebpackSharedBaseService extends webpack_ba
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_rules_service_1.WebpackRulesService),
-    __metadata("design:type", webpack_rules_service_1.WebpackRulesService)
+    CustomInject(WebpackRulesService),
+    __metadata("design:type", WebpackRulesService)
 ], WebpackSharedBaseService.prototype, "webpackRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_plugins_service_1.WebpackPluginsService),
-    __metadata("design:type", webpack_plugins_service_1.WebpackPluginsService)
+    CustomInject(WebpackPluginsService),
+    __metadata("design:type", WebpackPluginsService)
 ], WebpackSharedBaseService.prototype, "webpackPluginsService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_tsconfig_paths_webpack_plugin_service_1.WebpackTsconfigPathsWebpackPluginService),
-    __metadata("design:type", webpack_tsconfig_paths_webpack_plugin_service_1.WebpackTsconfigPathsWebpackPluginService)
+    CustomInject(WebpackTsconfigPathsWebpackPluginService),
+    __metadata("design:type", WebpackTsconfigPathsWebpackPluginService)
 ], WebpackSharedBaseService.prototype, "webpackTsconfigPathsWebpackPluginService", void 0);
 WebpackSharedBaseService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackSharedBaseService);
-exports.WebpackSharedBaseService = WebpackSharedBaseService;
+export { WebpackSharedBaseService };
 //# sourceMappingURL=webpack-shared-base.service.js.map

@@ -1,13 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.blazorAppConfig = exports.BlazorAppConfig = void 0;
-const configs_base_1 = require("@shared/configs.base");
-const paths_1 = require("./paths");
-class BlazorAppConfig extends configs_base_1.ConfigBase {
+import { ConfigBase } from '@shared/configs.base';
+import { BlazorAppPaths, blazorAppPaths } from './paths';
+export class BlazorAppConfig extends ConfigBase {
     constructor() {
         super(...arguments);
-        this.rootDir = paths_1.blazorAppPaths.toAbsolutePath();
-        this.RootDir = paths_1.BlazorAppPaths.toAbsolutePath();
+        this.rootDir = blazorAppPaths.toAbsolutePath();
+        this.RootDir = BlazorAppPaths.toAbsolutePath();
         this.projectName = 'blazorApp';
         this.title = 'App title';
         this.name = 'App name';
@@ -17,6 +14,5 @@ class BlazorAppConfig extends configs_base_1.ConfigBase {
         this.description = 'app desc';
     }
 }
-exports.BlazorAppConfig = BlazorAppConfig;
-exports.blazorAppConfig = new BlazorAppConfig();
+export const blazorAppConfig = new BlazorAppConfig();
 //# sourceMappingURL=configs.js.map

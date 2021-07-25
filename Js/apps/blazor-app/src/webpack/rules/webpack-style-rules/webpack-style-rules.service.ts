@@ -2,7 +2,7 @@ import { RuleSetRule } from 'webpack';
 
 import { WebpackStyleRulesService } from '@shared/src/webpack/rules/webpack-style-rules/webpack-style-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-webpack-providers';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { MergeCommand } from '@shared/src/modules/utilities/merge/merge/merge-command';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BlazorAppPaths, blazorAppPaths } from '@blazor-app/paths';

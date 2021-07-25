@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.topMenu = exports.navMenu = void 0;
-exports.navMenu = [
+export const navMenu = [
     { to: '/components/text-fields', text: 'Text fields' },
     { to: '/components/buttons', text: 'Buttons' },
     { to: '/components/selection-controls', text: 'Selection controls' },
@@ -26,7 +23,7 @@ exports.navMenu = [
     { to: '/breakpoints', text: 'Breakpoints' },
     { to: '/dark-mode', text: 'Dark mode' },
 ];
-exports.topMenu = [
+export const topMenu = [
     { to: '/components', text: 'Components' },
     { to: '/typography', text: 'Typography' },
     { to: '/color', text: 'Color' },

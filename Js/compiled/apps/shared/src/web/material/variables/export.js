@@ -1,25 +1,19 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.materialVariables = void 0;
-const sass_export_1 = require("sass-export");
-const paths_1 = require("@shared/paths");
-const scss_parser_1 = __importDefault(require("scss-parser"));
-const node_sass_1 = __importDefault(require("node-sass"));
-const tinycolor2_1 = __importDefault(require("tinycolor2"));
+import { exporter } from 'sass-export';
+import { sharedPaths } from '@shared/paths';
+import scssParser from 'scss-parser';
+import sass from 'node-sass';
+import tinycolor from 'tinycolor2';
 const options = {
     inputFiles: [
-        paths_1.sharedPaths.src.web.material.variables['_material-colors.scss'].toAbsolutePath(),
-        paths_1.sharedPaths.src.web.material.variables['_color-types.scss'].toAbsolutePath(),
-        paths_1.sharedPaths.src.web.material.variables['_texts-input.scss'].toAbsolutePath(),
-        paths_1.sharedPaths.src.web.material.variables['_colors-input.scss'].toAbsolutePath(),
-        paths_1.sharedPaths.src.web.material.variables['_text-color-schemes.scss'].toAbsolutePath(),
+        sharedPaths.src.web.material.variables['_material-colors.scss'].toAbsolutePath(),
+        sharedPaths.src.web.material.variables['_color-types.scss'].toAbsolutePath(),
+        sharedPaths.src.web.material.variables['_texts-input.scss'].toAbsolutePath(),
+        sharedPaths.src.web.material.variables['_colors-input.scss'].toAbsolutePath(),
+        sharedPaths.src.web.material.variables['_text-color-schemes.scss'].toAbsolutePath(),
     ],
 };
 // import toExport from './index.json';
-const toExport = sass_export_1.exporter(options).getStructured();
+const toExport = exporter(options).getStructured();
 function parseAst(ast) {
     const toReturn = {};
     switch (ast.type) {
@@ -61,11 +55,11 @@ function parseAst(ast) {
             return ast.value;
     }
 }
-exports.materialVariables = toExport.variables.reduce((acc, curr) => {
+export const materialVariables = toExport.variables.reduce((acc, curr) => {
     // const jsName = changeCase.camelCase(curr.nam);
     const jsName = curr.name;
     if (curr.mapValue) {
-        const parsed = parseAst(scss_parser_1.default.parse(curr.value));
+        const parsed = parseAst(scssParser.parse(curr.value));
         acc[jsName] = parsed;
     }
     else if (/\s?,\s+/.test(curr.compiledValue)) {
@@ -77,7 +71,7 @@ exports.materialVariables = toExport.variables.reduce((acc, curr) => {
     return acc;
 }, {});
 function getHexColor(color) {
-    const c = /color:\s*(.+);/m.exec(node_sass_1.default.renderSync({ data: `body{color:${color}}`, outputStyle: 'compact' }).css.toString())[1];
-    return tinycolor2_1.default(c).toHexString();
+    const c = /color:\s*(.+);/m.exec(sass.renderSync({ data: `body{color:${color}}`, outputStyle: 'compact' }).css.toString())[1];
+    return tinycolor(c).toHexString();
 }
 //# sourceMappingURL=export.js.map

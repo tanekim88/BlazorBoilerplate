@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const webpack_dev_service_1 = require("./src/webpack/webpack-dev/webpack-dev.service");
-const webpack_module_1 = require("./src/webpack/webpack.module");
-const webpack_base_1 = require("./webpack.base");
-const webpackBase = new webpack_base_1.WebpackBase(webpack_module_1.WebpackModule, [webpack_dev_service_1.WebpackDevService]);
-exports.default = webpackBase.createWebpackConfigs;
+import { WebpackDevService } from './src/webpack/webpack-dev/webpack-dev.service';
+import { WebpackModule } from './src/webpack/webpack.module';
+import { WebpackBase } from './webpack.base';
+const webpackBase = new WebpackBase(WebpackModule, [WebpackDevService]);
+export default webpackBase.createWebpackConfigs;
 webpackBase.execute();
 // import typescript from 'typescript';
 // import fs from 'fs';

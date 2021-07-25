@@ -1,4 +1,4 @@
-import { CustomModule } from '../../functions/process-webpack-providers';
+import { CustomModule } from '../../functions/process-providers';
 
 import { EnvironmentService } from './environment/environment.service';
 

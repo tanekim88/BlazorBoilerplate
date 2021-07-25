@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.textLinksInput = exports.textsInput = void 0;
-exports.textsInput = {
+export const textsInput = {
     dark: {
         primary: {
             color: 'rgba(black, 0.87)',
@@ -37,7 +34,7 @@ exports.textsInput = {
         },
     },
 };
-exports.textLinksInput = {
+export const textLinksInput = {
     dark: {
         primary: {
             color: 'rgba(blue, 0.87)',

@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,17 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackPostcssSimpleVarsService = void 0;
-const postcss_simple_vars_1 = __importDefault(require("postcss-simple-vars"));
-const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-let WebpackPostcssSimpleVarsService = class WebpackPostcssSimpleVarsService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
+import PostcssSimpleVars from 'postcss-simple-vars';
+import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackPostcssSimpleVarsService = class WebpackPostcssSimpleVarsService extends WebpackPostcssBaseService {
     constructor() {
-        super(postcss_simple_vars_1.default);
+        super(PostcssSimpleVars);
     }
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -27,8 +21,8 @@ let WebpackPostcssSimpleVarsService = class WebpackPostcssSimpleVarsService exte
     }
 };
 WebpackPostcssSimpleVarsService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackPostcssSimpleVarsService);
-exports.WebpackPostcssSimpleVarsService = WebpackPostcssSimpleVarsService;
+export { WebpackPostcssSimpleVarsService };
 //# sourceMappingURL=webpack-postcss-simple-vars.service.js.map

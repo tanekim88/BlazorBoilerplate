@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,11 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackErrorHandlerPlugin = exports.WebpackErrorHandlerPluginService = void 0;
-const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-let WebpackErrorHandlerPluginService = class WebpackErrorHandlerPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
+import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+let WebpackErrorHandlerPluginService = class WebpackErrorHandlerPluginService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackErrorHandlerPlugin);
     }
@@ -21,11 +18,11 @@ let WebpackErrorHandlerPluginService = class WebpackErrorHandlerPluginService ex
     }
 };
 WebpackErrorHandlerPluginService = __decorate([
-    process_webpack_providers_1.CustomInjectable(),
+    CustomInjectable(),
     __metadata("design:paramtypes", [])
 ], WebpackErrorHandlerPluginService);
-exports.WebpackErrorHandlerPluginService = WebpackErrorHandlerPluginService;
-class WebpackErrorHandlerPlugin {
+export { WebpackErrorHandlerPluginService };
+export class WebpackErrorHandlerPlugin {
     /**
      * Install Plugin
      * @param {Object} compiler
@@ -37,5 +34,4 @@ class WebpackErrorHandlerPlugin {
         // });
     }
 }
-exports.WebpackErrorHandlerPlugin = WebpackErrorHandlerPlugin;
 //# sourceMappingURL=webpack-error-handler-plugin.service.js.map

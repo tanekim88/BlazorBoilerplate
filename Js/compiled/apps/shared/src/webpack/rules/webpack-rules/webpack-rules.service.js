@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,18 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebpackRulesService = exports.WebpackRulesConfigService = void 0;
-const webpack_csv_rules_service_1 = require("../webpack-csv-rules/webpack-csv-rules.service");
-const webpack_font_rules_service_1 = require("../webpack-font-rules/webpack-font-rules.service");
-const webpack_image_rules_service_1 = require("../webpack-image-rules/webpack-image-rules.service");
-const webpack_json_rules_service_1 = require("../webpack-json-rules/webpack-json-rules.service");
-const webpack_style_rules_service_1 = require("../webpack-style-rules/webpack-style-rules.service");
-const webpack_svg_rules_service_1 = require("../webpack-svg-rules/webpack-svg-rules.service");
-const webpack_ts_rules_service_1 = require("../webpack-ts-rules/webpack-ts-rules.service");
-const webpack_xml_rules_service_1 = require("../webpack-xml-rules/webpack-xml-rules.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
+import { WebpackCsvRulesService } from '../webpack-csv-rules/webpack-csv-rules.service';
+import { WebpackFontRulesService } from '../webpack-font-rules/webpack-font-rules.service';
+import { WebpackImageRulesService } from '../webpack-image-rules/webpack-image-rules.service';
+import { WebpackJsonRulesService } from '../webpack-json-rules/webpack-json-rules.service';
+import { WebpackStyleRulesService } from '../webpack-style-rules/webpack-style-rules.service';
+import { WebpackSvgRulesService } from '../webpack-svg-rules/webpack-svg-rules.service';
+import { WebpackTsRulesService } from '../webpack-ts-rules/webpack-ts-rules.service';
+import { WebpackXmlRulesService } from '../webpack-xml-rules/webpack-xml-rules.service';
+import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackRulesConfigService = class WebpackRulesConfigService {
     createRules() {
         const toReturn = [
@@ -35,41 +32,41 @@ let WebpackRulesConfigService = class WebpackRulesConfigService {
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_style_rules_service_1.WebpackStyleRulesService),
-    __metadata("design:type", webpack_style_rules_service_1.WebpackStyleRulesService)
+    CustomInject(WebpackStyleRulesService),
+    __metadata("design:type", WebpackStyleRulesService)
 ], WebpackRulesConfigService.prototype, "webpackStyleRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_csv_rules_service_1.WebpackCsvRulesService),
-    __metadata("design:type", webpack_csv_rules_service_1.WebpackCsvRulesService)
+    CustomInject(WebpackCsvRulesService),
+    __metadata("design:type", WebpackCsvRulesService)
 ], WebpackRulesConfigService.prototype, "webpackCsvRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_font_rules_service_1.WebpackFontRulesService),
-    __metadata("design:type", webpack_font_rules_service_1.WebpackFontRulesService)
+    CustomInject(WebpackFontRulesService),
+    __metadata("design:type", WebpackFontRulesService)
 ], WebpackRulesConfigService.prototype, "webpackFontRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_image_rules_service_1.WebpackImageRulesService),
-    __metadata("design:type", webpack_image_rules_service_1.WebpackImageRulesService)
+    CustomInject(WebpackImageRulesService),
+    __metadata("design:type", WebpackImageRulesService)
 ], WebpackRulesConfigService.prototype, "webpackImageRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_json_rules_service_1.WebpackJsonRulesService),
-    __metadata("design:type", webpack_json_rules_service_1.WebpackJsonRulesService)
+    CustomInject(WebpackJsonRulesService),
+    __metadata("design:type", WebpackJsonRulesService)
 ], WebpackRulesConfigService.prototype, "webpackJsonRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_svg_rules_service_1.WebpackSvgRulesService),
-    __metadata("design:type", webpack_svg_rules_service_1.WebpackSvgRulesService)
+    CustomInject(WebpackSvgRulesService),
+    __metadata("design:type", WebpackSvgRulesService)
 ], WebpackRulesConfigService.prototype, "webpackSvgRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_ts_rules_service_1.WebpackTsRulesService),
-    __metadata("design:type", webpack_ts_rules_service_1.WebpackTsRulesService)
+    CustomInject(WebpackTsRulesService),
+    __metadata("design:type", WebpackTsRulesService)
 ], WebpackRulesConfigService.prototype, "webpackTsRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_xml_rules_service_1.WebpackXmlRulesService),
-    __metadata("design:type", webpack_xml_rules_service_1.WebpackXmlRulesService)
+    CustomInject(WebpackXmlRulesService),
+    __metadata("design:type", WebpackXmlRulesService)
 ], WebpackRulesConfigService.prototype, "webpackXmlRulesService", void 0);
 WebpackRulesConfigService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackRulesConfigService);
-exports.WebpackRulesConfigService = WebpackRulesConfigService;
+export { WebpackRulesConfigService };
 let WebpackRulesService = class WebpackRulesService {
     createRules() {
         const toReturn = [
@@ -86,39 +83,39 @@ let WebpackRulesService = class WebpackRulesService {
     }
 };
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_style_rules_service_1.WebpackStyleRulesService),
-    __metadata("design:type", webpack_style_rules_service_1.WebpackStyleRulesService)
+    CustomInject(WebpackStyleRulesService),
+    __metadata("design:type", WebpackStyleRulesService)
 ], WebpackRulesService.prototype, "webpackStyleRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_csv_rules_service_1.WebpackCsvRulesService),
-    __metadata("design:type", webpack_csv_rules_service_1.WebpackCsvRulesService)
+    CustomInject(WebpackCsvRulesService),
+    __metadata("design:type", WebpackCsvRulesService)
 ], WebpackRulesService.prototype, "webpackCsvRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_font_rules_service_1.WebpackFontRulesService),
-    __metadata("design:type", webpack_font_rules_service_1.WebpackFontRulesService)
+    CustomInject(WebpackFontRulesService),
+    __metadata("design:type", WebpackFontRulesService)
 ], WebpackRulesService.prototype, "webpackFontRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_image_rules_service_1.WebpackImageRulesService),
-    __metadata("design:type", webpack_image_rules_service_1.WebpackImageRulesService)
+    CustomInject(WebpackImageRulesService),
+    __metadata("design:type", WebpackImageRulesService)
 ], WebpackRulesService.prototype, "webpackImageRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_json_rules_service_1.WebpackJsonRulesService),
-    __metadata("design:type", webpack_json_rules_service_1.WebpackJsonRulesService)
+    CustomInject(WebpackJsonRulesService),
+    __metadata("design:type", WebpackJsonRulesService)
 ], WebpackRulesService.prototype, "webpackJsonRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_svg_rules_service_1.WebpackSvgRulesService),
-    __metadata("design:type", webpack_svg_rules_service_1.WebpackSvgRulesService)
+    CustomInject(WebpackSvgRulesService),
+    __metadata("design:type", WebpackSvgRulesService)
 ], WebpackRulesService.prototype, "webpackSvgRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_ts_rules_service_1.WebpackTsRulesService),
-    __metadata("design:type", webpack_ts_rules_service_1.WebpackTsRulesService)
+    CustomInject(WebpackTsRulesService),
+    __metadata("design:type", WebpackTsRulesService)
 ], WebpackRulesService.prototype, "webpackTsRulesService", void 0);
 __decorate([
-    process_webpack_providers_2.CustomInject(webpack_xml_rules_service_1.WebpackXmlRulesService),
-    __metadata("design:type", webpack_xml_rules_service_1.WebpackXmlRulesService)
+    CustomInject(WebpackXmlRulesService),
+    __metadata("design:type", WebpackXmlRulesService)
 ], WebpackRulesService.prototype, "webpackXmlRulesService", void 0);
 WebpackRulesService = __decorate([
-    process_webpack_providers_1.CustomInjectable()
+    CustomInjectable()
 ], WebpackRulesService);
-exports.WebpackRulesService = WebpackRulesService;
+export { WebpackRulesService };
 //# sourceMappingURL=webpack-rules.service.js.map
