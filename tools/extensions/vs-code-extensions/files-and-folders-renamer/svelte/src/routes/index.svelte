@@ -1,14 +1,16 @@
 <script lang="typescript">
 	import { Mapping } from '../../../src/data-provider';
 	import { tsvscode } from 'src/global';
-	import { async } from 'rxjs';
+
 	window.addEventListener('message', async (event) => {
 		const message = event.data;
 		switch (message.type) {
-			case 'preview':
+			case 'source-fetched':
+				break;
+			case 'preview-fetched':
 				previewItems = message.value;
 				break;
-			case 'commit':
+			case 'commit-done':
 				break;
 		}
 	});
@@ -23,11 +25,13 @@
 	async function sendFetchPreviewCommand() {
 		isPreviewLoading = true;
 		const fromInput = new RegExp(from, 'gi');
+
 		const result = await tsvscode.postMessage({
 			type: 'fetch-preview',
 			value: {
-				from,
-				to
+				from: fromInput,
+				to,
+				source
 			}
 		});
 		isPreviewLoading = false;
@@ -35,7 +39,9 @@
 
 	async function sendCommitCommand() {
 		isCommitLoading = true;
+
 		if (!previewItems) {
+			await sendFetchPreviewCommand();
 		}
 
 		const result = await tsvscode.postMessage({

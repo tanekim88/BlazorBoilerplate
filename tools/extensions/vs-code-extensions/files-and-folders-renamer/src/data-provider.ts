@@ -10,13 +10,13 @@ export interface Mapping {
 class DataProvider {
   fetchPreview(
     arg: {
-      sourcePath: string,
+      source: string,
       from: RegExp,
       to: string
     }) {
-    const { sourcePath, from, to } = arg;
+    const { source, from, to } = arg;
 
-    const mappings = this.getAllFilesAndFoldersMappings(sourcePath, from, to);
+    const mappings = this.getAllFilesAndFoldersMappings(source, from, to);
     return mappings;
   }
 

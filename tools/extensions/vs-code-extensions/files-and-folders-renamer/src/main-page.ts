@@ -63,6 +63,51 @@ export class MainPage {
     // Listen for when the panel is disposed
     // This happens when the user closes the panel or when the panel is closed programatically
     this._panel.onDidDispose(() => this.dispose(), null, this._disposables);
+
+    const webview = this._panel.webview
+    webview.onDidReceiveMessage(async (data) => {
+      switch (data.type) {
+        case "fetch-preview": {
+          if (!data.value) {
+            return;
+          }
+
+          const previews = await dataProvider.fetchPreview(data.value);
+
+          await webview.postMessage({
+            type: 'preview-fetched',
+            value: previews
+          });
+
+          break;
+        }
+        case "commit": {
+          if (!data.value) {
+            return;
+          }
+
+          await dataProvider.commit(data.value);
+
+          await webview.postMessage({
+            type: 'commit-done',
+            value: true
+          });
+
+          break;
+        }
+        case 'fetch-source': {
+          if (!data.value) {
+            return;
+          }
+          await webview.postMessage({
+            type: 'source-fetched',
+            value: extensionUri.fsPath
+          });
+
+          break;
+        }
+      }
+    });
   }
 
   public dispose() {
@@ -81,26 +126,7 @@ export class MainPage {
     const webview = this._panel.webview;
 
     this._panel.webview.html = this._getHtmlForWebview(webview);
-    webview.onDidReceiveMessage(async (data) => {
-      switch (data.type) {
-        case "fetch-preview": {
-          if (!data.value) {
-            return;
-          }
 
-          await dataProvider.fetchPreview(data.value);
-          break;
-        }
-        case "commit": {
-          if (!data.value) {
-            return;
-          }
-
-          await dataProvider.commit(data.value);
-          break;
-        }
-      }
-    });
   }
 
   ranOnce = false;
