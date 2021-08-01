@@ -6,17 +6,41 @@ export interface Mapping {
   from: string,
   to: string
 }
+export interface Options {
+  includeFiles: boolean,
+  includeFolders: boolean,
+  isGlobal: boolean,
+  isRegex: boolean,
+  caseInsensitive: boolean
+}
 
 class DataProvider {
   fetchPreview(
     arg: {
       source: string,
-      from: RegExp,
-      to: string
+      from: string,
+      to: string,
+      options: Options
     }) {
-    const { source, from, to } = arg;
+    let { source, from, to, options } = arg;
 
-    const mappings = this.getAllFilesAndFoldersMappings(source, from, to);
+    let regexOptions = '';
+
+    if (options.isGlobal) {
+      regexOptions += 'g';
+    }
+
+    if (options.caseInsensitive) {
+      regexOptions += 'i';
+    }
+
+    if (!options.isRegex) {
+      from = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    let regexFrom = new RegExp(from, regexOptions);
+
+    const mappings = this.getAllFilesAndFoldersMappings(source, regexFrom, to, options);
     return mappings;
   }
 
@@ -26,24 +50,22 @@ class DataProvider {
     });
   }
 
-  private getAllFilesAndFoldersMappings(srcPath: string, fromInput: RegExp, toInput: string, mappings: Mapping[] = []) {
-    if (!fromInput.test(srcPath)) {
-      return mappings;
-    }
+  private getAllFilesAndFoldersMappings(srcPath: string, fromInput: RegExp, toInput: string, options: Options, mappings: Mapping[] = []) {
 
-    const to = srcPath.replace(fromInput, toInput);
-
-    mappings.push({
-      from: srcPath,
-      to
-    });
 
     if (fs.statSync(srcPath).isDirectory()) {
       const filesOrDirNames = fs.readdirSync(srcPath);
 
       filesOrDirNames.forEach((fileOrDirName) => {
         const fullPath = path.join(srcPath, fileOrDirName);
-        this.getAllFilesAndFoldersMappings(fullPath, fromInput, toInput, mappings);
+        this.getAllFilesAndFoldersMappings(fullPath, fromInput, toInput, options, mappings);
+      });
+    } else if(fromInput.test(srcPath)){
+      const to = srcPath.replace(fromInput, toInput);
+
+      mappings.push({
+        from: srcPath,
+        to
       });
     }
 

@@ -73,9 +73,6 @@ export class MainPage {
           if (!data.value) {
             return;
           }
-
-          data.value.from = new RegExp(data.value.from, 'gi');
-
           const previews = await dataProvider.fetchPreview(data.value);
 
           await webview.postMessage({

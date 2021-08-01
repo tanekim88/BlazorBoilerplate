@@ -14,6 +14,7 @@
 					previewItems = message.value;
 					break;
 				case 'commit-done':
+					previewItems = undefined;
 					break;
 			}
 		});
@@ -23,6 +24,13 @@
 	let source;
 	let from;
 	let to;
+	let options = {
+		includeFiles: true,
+		includeFolders: true,
+		isGlobal: true,
+		isRegex: true,
+		caseInsensitive: false
+	};
 	let previewItems: Mapping[];
 	let isPreviewLoading = false;
 	let isCommitLoading = false;
@@ -34,7 +42,8 @@
 			value: {
 				from,
 				to,
-				source
+				source,
+				options
 			}
 		});
 		isPreviewLoading = false;
@@ -68,6 +77,8 @@
 <form on:submit|preventDefault={() => {}}>
 	<h1>{source}</h1>
 	<h3>From</h3>
+	<h3>Regex</h3>
+	<input type="checkbox" checked={options.isRegex} />
 	<input bind:value={from} required />
 	<h3>To</h3>
 	<input bind:value={to} required />
@@ -82,6 +93,13 @@
 			await sendCommitCommand();
 		}}>Commit</button
 	>
+
+	<h3>Case Insensitive</h3>
+	<input type="checkbox" checked={options.caseInsensitive} />
+	<h3>Include files</h3>
+	<input type="checkbox" checked={options.includeFiles} />
+	<h3>Include folders</h3>
+	<input type="checkbox" checked={options.includeFolders} />
 
 	{#if isPreviewLoading}
 		Loading...

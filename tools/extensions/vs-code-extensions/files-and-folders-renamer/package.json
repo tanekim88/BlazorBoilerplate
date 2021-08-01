@@ -54,6 +54,12 @@
 					"when": "true",
 					"command": "files-and-folders-renamer.open-rename-files-and-folders-form"
 				}
+			],
+			"commandPalette": [
+				{
+					"command": "files-and-folders-renamer.open-rename-files-and-folders-form",
+					"when": "false"
+				}
 			]
 		}
 	},

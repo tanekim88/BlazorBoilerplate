@@ -3,20 +3,20 @@
 	<head>
 		<base href="https://file%2B.vscode-resource.vscode-webview.net/c%3A/App/tools/extensions/vs-code-extensions/files-and-folders-renamer/svelte/build/">
 		<meta charset="utf-8" />
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="icon" href="/favicon.png" />
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 
 		
 
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="modulepreload" href="./_app/start-686dd39b.js">
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="modulepreload" href="./_app/chunks/vendor-d405148d.js">
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="modulepreload" href="./_app/layout.svelte-fdbaffb8.js">
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="modulepreload" href="./_app/pages/index.svelte-57eb8c37.js">
-		<link nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" rel="stylesheet" href="./_app/assets/start-a8cd1609.css">
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="modulepreload" href="./_app/start-47274f85.js">
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="modulepreload" href="./_app/chunks/vendor-d405148d.js">
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="modulepreload" href="./_app/layout.svelte-fdbaffb8.js">
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="modulepreload" href="./_app/pages/index.svelte-c8e7ec98.js">
+		<link nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" rel="stylesheet" href="./_app/assets/start-a8cd1609.css">
 
-		<script nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39" type="module">
-			import { start } from "./_app/start-686dd39b.js";
+		<script nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv" type="module">
+			import { start } from "./_app/start-47274f85.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":"/."},
@@ -30,7 +30,7 @@
 					error: null,
 					nodes: [
 						import("./_app/layout.svelte-fdbaffb8.js"),
-						import("./_app/pages/index.svelte-57eb8c37.js")
+						import("./_app/pages/index.svelte-c8e7ec98.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -42,9 +42,9 @@
 			});
 		</script>
 	
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline' https://*.vscode-webview.net; script-src 'nonce-6VL347ukoxw39eEKv3NDdmQew0gdmV39' https://*.vscode-webview.net;">
+				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline' https://*.vscode-webview.net; script-src 'nonce-SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv' https://*.vscode-webview.net;">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script nonce="6VL347ukoxw39eEKv3NDdmQew0gdmV39">
+				<script nonce="SjvrdsWvj1Wacv8ctA3e0H6DbnxEeFfv">
 					const tsvscode = acquireVsCodeApi();
 				</script></head>
 	<body>
@@ -53,12 +53,21 @@
 
 <form><h1>undefined</h1>
 	<h3>From</h3>
+	<h3>Regex</h3>
+	<input type="checkbox" checked>
 	<input required>
 	<h3>To</h3>
 	<input required>
 
 	<button>Preview</button>
 	<button>Commit</button>
+
+	<h3>Case Insensitive</h3>
+	<input type="checkbox" >
+	<h3>Include files</h3>
+	<input type="checkbox" checked>
+	<h3>Include folders</h3>
+	<input type="checkbox" checked>
 
 	</form>
 
