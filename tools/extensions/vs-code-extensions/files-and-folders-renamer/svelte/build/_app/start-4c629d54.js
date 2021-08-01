@@ -557,7 +557,7 @@ class Root extends SvelteComponent {
 }
 let scriptRel;
 const seen = {};
-const base = "https://file%2B.vscode-resource.vscode-webview.net/c%3A/App/tools/extensions/vs-code-extensions/files-and-folders-renamer/svelte/build/_app/";
+const base = "@_appDirPath/";
 const __vitePreload = function preload(baseModule, deps) {
   if (!deps || deps.length === 0) {
     return baseModule();
@@ -595,7 +595,7 @@ const __vitePreload = function preload(baseModule, deps) {
 const c = [
   () => __vitePreload(() => import("./layout.svelte-fdbaffb8.js"), true ? ["layout.svelte-fdbaffb8.js","chunks/vendor-d405148d.js"] : void 0),
   () => __vitePreload(() => import("./error.svelte-93a85e48.js"), true ? ["error.svelte-93a85e48.js","chunks/vendor-d405148d.js"] : void 0),
-  () => __vitePreload(() => import("./pages/index.svelte-c8e7ec98.js"), true ? ["pages/index.svelte-c8e7ec98.js","chunks/vendor-d405148d.js"] : void 0),
+  () => __vitePreload(() => import("./pages/index.svelte-e7ca3c63.js"), true ? ["pages/index.svelte-e7ca3c63.js","chunks/vendor-d405148d.js"] : void 0),
   () => __vitePreload(() => import("./pages/sidebar.svelte-426306c9.js"), true ? ["pages/sidebar.svelte-426306c9.js","chunks/vendor-d405148d.js"] : void 0)
 ];
 const routes = [

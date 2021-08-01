@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 import * as fs from 'fs';
 import * as path from 'path';
 
-export interface Mapping {
+export interface previewItem {
   from: string,
   to: string
 }
@@ -40,39 +40,60 @@ class DataProvider {
 
     let regexFrom = new RegExp(from, regexOptions);
 
-    const mappings = this.getAllFilesAndFoldersMappings(source, regexFrom, to, options);
-    return mappings;
+    const previewItems = this.getAllFilesAndFolderspreviewItems(source, regexFrom, to, options);
+    return previewItems;
   }
 
-  commit(mappings: Mapping[]) {
-    mappings.reverse().forEach(mapping => {
-      do {
-        let basenameOfTo = path.basename(mapping.to);
-        let dirnameOfTo = path.dirname(mapping.to);
-        let dirnameOfFrom = path.dirname(mapping.from);
-        const finalTo = path.join(dirnameOfFrom, basenameOfTo);
-        fs.renameSync(mapping.from, finalTo);
+  commit(args: {
+    previewItems: previewItem[],
+    source: string,
+    from: string,
+    to: string, options: Options
+  }) {
+    let { previewItems, options} = args;
 
-        mapping = {
+    if (!previewItems) {
+      previewItems = this.fetchPreview(args);
+    }
+
+    previewItems.reverse().forEach(previewItem => {
+      do {
+        const isDirectory = fs.statSync(previewItem.from).isDirectory();
+
+        let basenameOfTo = path.basename(previewItem.to);
+        let dirnameOfTo = path.dirname(previewItem.to);
+        let basenameOfFrom = path.basename(previewItem.from);
+        let dirnameOfFrom = path.dirname(previewItem.from);
+        const finalTo = path.join(dirnameOfFrom, basenameOfTo);
+
+        const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory)
+          && basenameOfFrom !== basenameOfTo;
+
+        if (shouldExecute) {
+          fs.renameSync(previewItem.from, finalTo);
+        }
+
+        previewItem = {
           from: dirnameOfFrom,
           to: dirnameOfTo
         };
 
-      } while (mapping.from !== mapping.to);
+      } while (previewItem.from !== previewItem.to);
     });
   }
 
-  private getAllFilesAndFoldersMappings(srcPath: string, fromInput: RegExp, toInput: string, options: Options, mappings: Mapping[] = []) {
+
+  private getAllFilesAndFolderspreviewItems(srcPath: string, fromInput: RegExp, toInput: string, options: Options, previewItems: previewItem[] = []) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
-    const shouldIncludeInMapping = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
+    const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
     if (fromInput.test(srcPath)) {
       const to = srcPath.replace(fromInput, toInput);
-      if (shouldIncludeInMapping) {
-        if (mappings.length > 0 && srcPath.startsWith(mappings[mappings.length - 1].from)) {
-          mappings.pop();
+      if (shouldIncludeInpreviewItem) {
+        if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].from)) {
+          previewItems.pop();
         }
 
-        mappings.push({
+        previewItems.push({
           from: srcPath,
           to
         });
@@ -84,11 +105,11 @@ class DataProvider {
 
       filesOrDirNames.forEach((fileOrDirName) => {
         const fullPath = path.join(srcPath, fileOrDirName);
-        this.getAllFilesAndFoldersMappings(fullPath, fromInput, toInput, options, mappings);
+        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems);
       });
     }
 
-    return mappings;
+    return previewItems;
   }
 }
 

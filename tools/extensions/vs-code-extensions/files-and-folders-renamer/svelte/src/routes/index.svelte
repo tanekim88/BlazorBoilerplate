@@ -58,7 +58,13 @@
 
 		const result = await tsvscode.postMessage({
 			type: 'commit',
-			value: previewItems
+			value: {
+				from,
+				to,
+				source,
+				options,
+				previewItems
+			}
 		});
 		isCommitLoading = false;
 	}

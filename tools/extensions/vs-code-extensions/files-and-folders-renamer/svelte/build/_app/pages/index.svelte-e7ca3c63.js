@@ -478,7 +478,10 @@ function instance($$self, $$props, $$invalidate) {
       if (!previewItems) {
         yield sendFetchPreviewCommand();
       }
-      yield tsvscode.postMessage({ type: "commit", value: previewItems });
+      yield tsvscode.postMessage({
+        type: "commit",
+        value: { from, to, source, options, previewItems }
+      });
     });
   }
   function sendFetchSourceCommand() {
