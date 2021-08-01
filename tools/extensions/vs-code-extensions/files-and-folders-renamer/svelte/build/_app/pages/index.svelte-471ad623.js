@@ -1,12 +1,12 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, e as element, t as text, k as space, c as claim_element, a as children, g as claim_text, d as detach, n as claim_space, b as attr, f as insert_hydration, H as append_hydration, J as set_input_value, K as listen, L as prevent_default, h as set_data, I as noop, M as run_all, A as onMount, N as destroy_each } from "../chunks/vendor-d405148d.js";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[15] = list[i];
+  child_ctx[18] = list[i];
   return child_ctx;
 }
 function create_if_block_1(ctx) {
   let div;
-  let each_value = ctx[3];
+  let each_value = ctx[4];
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
     each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
@@ -33,8 +33,8 @@ function create_if_block_1(ctx) {
       }
     },
     p(ctx2, dirty) {
-      if (dirty & 8) {
-        each_value = ctx2[3];
+      if (dirty & 16) {
+        each_value = ctx2[4];
         let i;
         for (i = 0; i < each_value.length; i += 1) {
           const child_ctx = get_each_context(ctx2, each_value, i);
@@ -80,11 +80,11 @@ function create_if_block(ctx) {
 }
 function create_each_block(ctx) {
   let div0;
-  let t0_value = ctx[15].from + "";
+  let t0_value = ctx[18].from + "";
   let t0;
   let t1;
   let div1;
-  let t2_value = ctx[15].to + "";
+  let t2_value = ctx[18].to + "";
   let t2;
   let t3;
   let hr;
@@ -121,9 +121,9 @@ function create_each_block(ctx) {
       insert_hydration(target, hr, anchor);
     },
     p(ctx2, dirty) {
-      if (dirty & 8 && t0_value !== (t0_value = ctx2[15].from + ""))
+      if (dirty & 16 && t0_value !== (t0_value = ctx2[18].from + ""))
         set_data(t0, t0_value);
-      if (dirty & 8 && t2_value !== (t2_value = ctx2[15].to + ""))
+      if (dirty & 16 && t2_value !== (t2_value = ctx2[18].to + ""))
         set_data(t2, t2_value);
     },
     d(detaching) {
@@ -152,6 +152,7 @@ function create_fragment(ctx) {
   let t4;
   let t5;
   let input0;
+  let input0_checked_value;
   let t6;
   let input1;
   let t7;
@@ -184,9 +185,9 @@ function create_fragment(ctx) {
   let mounted;
   let dispose;
   function select_block_type(ctx2, dirty) {
-    if (ctx2[4])
+    if (ctx2[5])
       return create_if_block;
-    if (ctx2[3])
+    if (ctx2[4])
       return create_if_block_1;
   }
   let current_block_type = select_block_type(ctx);
@@ -304,15 +305,12 @@ function create_fragment(ctx) {
     },
     h() {
       attr(input0, "type", "checkbox");
-      input0.checked = ctx[5].isRegex;
+      input0.checked = input0_checked_value = ctx[3].isRegex;
       input1.required = true;
       input2.required = true;
       attr(input3, "type", "checkbox");
-      input3.checked = ctx[5].caseInsensitive;
       attr(input4, "type", "checkbox");
-      input4.checked = ctx[5].includeFiles;
       attr(input5, "type", "checkbox");
-      input5.checked = ctx[5].includeFolders;
     },
     m(target, anchor) {
       insert_hydration(target, form, anchor);
@@ -346,16 +344,19 @@ function create_fragment(ctx) {
       append_hydration(h33, t15);
       append_hydration(form, t16);
       append_hydration(form, input3);
+      input3.checked = ctx[3].caseInsensitive;
       append_hydration(form, t17);
       append_hydration(form, h34);
       append_hydration(h34, t18);
       append_hydration(form, t19);
       append_hydration(form, input4);
+      input4.checked = ctx[3].includeFiles;
       append_hydration(form, t20);
       append_hydration(form, h35);
       append_hydration(h35, t21);
       append_hydration(form, t22);
       append_hydration(form, input5);
+      input5.checked = ctx[3].includeFolders;
       append_hydration(form, t23);
       if (if_block)
         if_block.m(form, null);
@@ -365,6 +366,9 @@ function create_fragment(ctx) {
           listen(input2, "input", ctx[9]),
           listen(button0, "click", prevent_default(ctx[10])),
           listen(button1, "click", prevent_default(ctx[11])),
+          listen(input3, "change", ctx[12]),
+          listen(input4, "change", ctx[13]),
+          listen(input5, "change", ctx[14]),
           listen(form, "submit", prevent_default(submit_handler))
         ];
         mounted = true;
@@ -373,11 +377,23 @@ function create_fragment(ctx) {
     p(ctx2, [dirty]) {
       if (dirty & 1)
         set_data(t0, ctx2[0]);
+      if (dirty & 8 && input0_checked_value !== (input0_checked_value = ctx2[3].isRegex)) {
+        input0.checked = input0_checked_value;
+      }
       if (dirty & 2 && input1.value !== ctx2[1]) {
         set_input_value(input1, ctx2[1]);
       }
       if (dirty & 4 && input2.value !== ctx2[2]) {
         set_input_value(input2, ctx2[2]);
+      }
+      if (dirty & 8) {
+        input3.checked = ctx2[3].caseInsensitive;
+      }
+      if (dirty & 8) {
+        input4.checked = ctx2[3].includeFiles;
+      }
+      if (dirty & 8) {
+        input5.checked = ctx2[3].includeFolders;
       }
       if (current_block_type === (current_block_type = select_block_type(ctx2)) && if_block) {
         if_block.p(ctx2, dirty);
@@ -442,10 +458,10 @@ function instance($$self, $$props, $$invalidate) {
           $$invalidate(0, source = message.value);
           break;
         case "preview-fetched":
-          $$invalidate(3, previewItems = message.value);
+          $$invalidate(4, previewItems = message.value);
           break;
         case "commit-done":
-          $$invalidate(3, previewItems = void 0);
+          $$invalidate(4, previewItems = void 0);
           break;
       }
     }));
@@ -465,12 +481,12 @@ function instance($$self, $$props, $$invalidate) {
   let isPreviewLoading = false;
   function sendFetchPreviewCommand() {
     return __awaiter(this, void 0, void 0, function* () {
-      $$invalidate(4, isPreviewLoading = true);
+      $$invalidate(5, isPreviewLoading = true);
       yield tsvscode.postMessage({
         type: "fetch-preview",
         value: { from, to, source, options }
       });
-      $$invalidate(4, isPreviewLoading = false);
+      $$invalidate(5, isPreviewLoading = false);
     });
   }
   function sendCommitCommand() {
@@ -506,19 +522,34 @@ function instance($$self, $$props, $$invalidate) {
   const click_handler_1 = async () => {
     await sendCommitCommand();
   };
+  function input3_change_handler() {
+    options.caseInsensitive = this.checked;
+    $$invalidate(3, options);
+  }
+  function input4_change_handler() {
+    options.includeFiles = this.checked;
+    $$invalidate(3, options);
+  }
+  function input5_change_handler() {
+    options.includeFolders = this.checked;
+    $$invalidate(3, options);
+  }
   return [
     source,
     from,
     to,
+    options,
     previewItems,
     isPreviewLoading,
-    options,
     sendFetchPreviewCommand,
     sendCommitCommand,
     input1_input_handler,
     input2_input_handler,
     click_handler,
-    click_handler_1
+    click_handler_1,
+    input3_change_handler,
+    input4_change_handler,
+    input5_change_handler
   ];
 }
 class Routes extends SvelteComponent {

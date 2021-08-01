@@ -101,11 +101,11 @@
 	>
 
 	<h3>Case Insensitive</h3>
-	<input type="checkbox" checked={options.caseInsensitive} />
+	<input type="checkbox" bind:checked={options.caseInsensitive} />
 	<h3>Include files</h3>
-	<input type="checkbox" checked={options.includeFiles} />
+	<input type="checkbox" bind:checked={options.includeFiles} />
 	<h3>Include folders</h3>
-	<input type="checkbox" checked={options.includeFolders} />
+	<input type="checkbox" bind:checked={options.includeFolders} />
 
 	{#if isPreviewLoading}
 		Loading...

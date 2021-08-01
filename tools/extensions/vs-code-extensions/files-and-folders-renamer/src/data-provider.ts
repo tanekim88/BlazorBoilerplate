@@ -50,7 +50,7 @@ class DataProvider {
     from: string,
     to: string, options: Options
   }) {
-    let { previewItems, options} = args;
+    let { previewItems, options } = args;
 
     if (!previewItems) {
       previewItems = this.fetchPreview(args);
@@ -86,8 +86,13 @@ class DataProvider {
   private getAllFilesAndFolderspreviewItems(srcPath: string, fromInput: RegExp, toInput: string, options: Options, previewItems: previewItem[] = []) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
-    if (fromInput.test(srcPath)) {
-      const to = srcPath.replace(fromInput, toInput);
+
+    const basename = path.basename(srcPath);
+    const dirname = path.dirname(srcPath);
+
+    if (fromInput.test(basename)) {
+      const toBasename = basename.replace(fromInput, toInput);
+      const to = path.join(dirname, toBasename);
       if (shouldIncludeInpreviewItem) {
         if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].from)) {
           previewItems.pop();
