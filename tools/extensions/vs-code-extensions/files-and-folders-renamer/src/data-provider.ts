@@ -51,7 +51,13 @@ class DataProvider {
   }
 
   private getAllFilesAndFoldersMappings(srcPath: string, fromInput: RegExp, toInput: string, options: Options, mappings: Mapping[] = []) {
-
+    if(fromInput.test(srcPath)){
+      const to = srcPath.replace(fromInput, toInput);
+      mappings.push({
+        from: srcPath,
+        to
+      });
+    }
 
     if (fs.statSync(srcPath).isDirectory()) {
       const filesOrDirNames = fs.readdirSync(srcPath);
@@ -60,14 +66,7 @@ class DataProvider {
         const fullPath = path.join(srcPath, fileOrDirName);
         this.getAllFilesAndFoldersMappings(fullPath, fromInput, toInput, options, mappings);
       });
-    } else if(fromInput.test(srcPath)){
-      const to = srcPath.replace(fromInput, toInput);
-
-      mappings.push({
-        from: srcPath,
-        to
-      });
-    }
+    } 
 
     return mappings;
   }

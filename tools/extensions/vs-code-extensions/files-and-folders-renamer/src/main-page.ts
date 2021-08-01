@@ -16,9 +16,14 @@ export class MainPage {
   private readonly _extensionUri: vscode.Uri;
   private _disposables: vscode.Disposable[] = [];
 
-  public static createOrShow(extensionUri: vscode.Uri, sourceUri: vscode.Uri) {
+  public static async createOrShow(extensionUri: vscode.Uri, sourceUri: vscode.Uri) {
     const column = vscode.window.activeTextEditor?.viewColumn;
-    MainPage._sourceUri = sourceUri;
+    if (MainPage._sourceUri !== sourceUri) {
+      MainPage._sourceUri = sourceUri;
+      await MainPage.sendPostFetchedEvent(MainPage.currentPanel?._panel.webview);
+
+    }
+
     // If we already have a panel, show it.
     if (MainPage.currentPanel) {
       MainPage.currentPanel._panel.reveal(column);
@@ -59,6 +64,7 @@ export class MainPage {
     this._panel = panel;
     this._extensionUri = extensionUri;
 
+
     // Set the webview's initial html content
     this._update();
 
@@ -97,14 +103,17 @@ export class MainPage {
           break;
         }
         case 'fetch-source': {
-          await webview.postMessage({
-            type: 'source-fetched',
-            value: MainPage._sourceUri?.fsPath
-          });
+          await MainPage.sendPostFetchedEvent(webview);
 
           break;
         }
       }
+    });
+  }
+  public static async sendPostFetchedEvent(webview: vscode.Webview | undefined) {
+    await webview?.postMessage({
+      type: 'source-fetched',
+      value: MainPage._sourceUri?.fsPath
     });
   }
 
