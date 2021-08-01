@@ -1,7 +1,7 @@
 <script lang="typescript">
 	import { onMount } from 'svelte';
 
-	import { PreviewItem } from '../../../src/data-provider';
+	import { Options, PreviewItem } from '../../../src/data-provider';
 	import diff from 'fast-diff';
 	onMount(async () => {
 		window.addEventListener('message', async (event) => {
@@ -16,8 +16,12 @@
 						const to = previewItem.to;
 						const from = previewItem.from;
 						previewItem.diffs = diff(from, to);
-						console.dir(previewItem.to);
-						console.dir(previewItem.diffs);
+						previewItem.contents?.forEach((content) => {
+							const toContext = content.toContext;
+							const fromContext = content.fromContext;
+
+							content.contextDiffs = diff(fromContext, toContext);
+						});
 					});
 					break;
 				case 'commit-done':
@@ -31,12 +35,15 @@
 	let source;
 	let from;
 	let to;
-	let options = {
+	let options: Options = {
 		includeFiles: true,
 		includeFolders: true,
 		isGlobal: true,
 		isRegex: true,
-		caseInsensitive: false
+		caseInsensitive: false,
+		includeContents: false,
+		contextLinesDepth: 0,
+		showLineNumbers: false
 	};
 	let previewItems: PreviewItem[];
 	let isPreviewLoading = false;
@@ -113,6 +120,14 @@
 	<input type="checkbox" bind:checked={options.includeFiles} />
 	<h3>Include folders</h3>
 	<input type="checkbox" bind:checked={options.includeFolders} />
+	<h3>Include contents</h3>
+	<input type="checkbox" bind:checked={options.includeContents} />
+	{#if options.includeContents}
+		<h3>Context lines depth</h3>
+		<input type="number" bind:value={options.contextLinesDepth} />
+		<h3>Show line numbers</h3>
+		<input type="checkbox" bind:checked={options.showLineNumbers} />
+	{/if}
 
 	{#if isPreviewLoading}
 		Loading...
@@ -134,6 +149,28 @@
 							<span>{diff[1]}</span>
 						{/if}
 					{/each}
+					{#if previewItem.contents}
+						<hr/>
+						{#each previewItem.contents as content}
+							<div>
+								<div>
+									{content.fromContext}
+								</div>
+								<div>
+									{#each content.contextDiffs as contextDiff}
+										{#if diff[0] === -1}
+											<del style="background-color: red; color:white">{contextDiff[1]}</del>
+										{:else if diff[0] === 1}
+											<ins style="background-color: green; color:white">{contextDiff[1]}</ins
+											>
+										{:else}
+											<span>{contextDiff[1]}</span>
+										{/if}
+									{/each}
+								</div>
+							</div>
+						{/each}
+					{/if}
 				</div>
 				<hr />
 			{/each}

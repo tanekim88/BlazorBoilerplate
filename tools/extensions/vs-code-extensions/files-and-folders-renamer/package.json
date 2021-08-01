@@ -107,6 +107,7 @@
 		"vscode-test": "^1.5.2"
 	},
 	"dependencies": {
+		"fast-diff": "^1.2.0",
 		"rxjs": "^7.3.0"
 	}
 }
