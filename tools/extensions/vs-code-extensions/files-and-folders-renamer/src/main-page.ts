@@ -2,11 +2,13 @@ import * as vscode from "vscode";
 import * as fs from 'fs';
 import * as path from 'path';
 import { dataProvider } from "./data-provider";
+
 export class MainPage {
   /**
    * Track the currently panel. Only allow a single panel to exist at a time.
    */
   public static currentPanel: MainPage | undefined;
+  public static _sourceUri: vscode.Uri;
 
   public static readonly viewType = "main";
 
@@ -14,9 +16,9 @@ export class MainPage {
   private readonly _extensionUri: vscode.Uri;
   private _disposables: vscode.Disposable[] = [];
 
-  public static createOrShow(extensionUri: vscode.Uri) {
+  public static createOrShow(extensionUri: vscode.Uri, sourceUri: vscode.Uri) {
     const column = vscode.window.activeTextEditor?.viewColumn;
-
+    MainPage._sourceUri = sourceUri;
     // If we already have a panel, show it.
     if (MainPage.currentPanel) {
       MainPage.currentPanel._panel.reveal(column);
@@ -101,7 +103,7 @@ export class MainPage {
           }
           await webview.postMessage({
             type: 'source-fetched',
-            value: extensionUri.fsPath
+            value: MainPage._sourceUri.fsPath
           });
 
           break;
