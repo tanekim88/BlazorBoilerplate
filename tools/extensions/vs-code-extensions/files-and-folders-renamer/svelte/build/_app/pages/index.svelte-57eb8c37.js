@@ -360,10 +360,9 @@ function instance($$self, $$props, $$invalidate) {
   function sendFetchPreviewCommand() {
     return __awaiter(this, void 0, void 0, function* () {
       $$invalidate(4, isPreviewLoading = true);
-      const fromInput = new RegExp(from, "gi");
       yield tsvscode.postMessage({
         type: "fetch-preview",
-        value: { from: fromInput, to, source }
+        value: { from, to, source }
       });
       $$invalidate(4, isPreviewLoading = false);
     });

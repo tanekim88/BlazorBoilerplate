@@ -595,7 +595,7 @@ const __vitePreload = function preload(baseModule, deps) {
 const c = [
   () => __vitePreload(() => import("./layout.svelte-fdbaffb8.js"), true ? ["layout.svelte-fdbaffb8.js","chunks/vendor-d405148d.js"] : void 0),
   () => __vitePreload(() => import("./error.svelte-93a85e48.js"), true ? ["error.svelte-93a85e48.js","chunks/vendor-d405148d.js"] : void 0),
-  () => __vitePreload(() => import("./pages/index.svelte-6a5cef33.js"), true ? ["pages/index.svelte-6a5cef33.js","chunks/vendor-d405148d.js"] : void 0),
+  () => __vitePreload(() => import("./pages/index.svelte-57eb8c37.js"), true ? ["pages/index.svelte-57eb8c37.js","chunks/vendor-d405148d.js"] : void 0),
   () => __vitePreload(() => import("./pages/sidebar.svelte-426306c9.js"), true ? ["pages/sidebar.svelte-426306c9.js","chunks/vendor-d405148d.js"] : void 0)
 ];
 const routes = [

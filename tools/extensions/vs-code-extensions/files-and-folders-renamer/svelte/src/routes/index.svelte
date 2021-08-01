@@ -29,12 +29,10 @@
 
 	async function sendFetchPreviewCommand() {
 		isPreviewLoading = true;
-		const fromInput = new RegExp(from, 'gi');
-
 		const result = await tsvscode.postMessage({
 			type: 'fetch-preview',
 			value: {
-				from: fromInput,
+				from,
 				to,
 				source
 			}
