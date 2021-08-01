@@ -45,7 +45,7 @@ class DataProvider {
   }
 
   commit(mappings: Mapping[]) {
-    mappings.forEach(mapping => {
+    mappings.reverse().forEach(mapping => {
       fs.renameSync(mapping.from, mapping.to);
     });
   }
