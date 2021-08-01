@@ -57,6 +57,7 @@ class DataProvider {
       previewItems = this.fetchPreview(args);
     }
 
+    const changeTracker: { [src: string]: string } = {};
     previewItems.reverse().forEach(previewItem => {
       do {
         const isDirectory = fs.statSync(previewItem.from).isDirectory();
@@ -65,6 +66,8 @@ class DataProvider {
         let dirnameOfTo = path.dirname(previewItem.to);
         let basenameOfFrom = path.basename(previewItem.from);
         let dirnameOfFrom = path.dirname(previewItem.from);
+        const cachedDirnameOfFrom = changeTracker[dirnameOfFrom];
+        dirnameOfFrom = cachedDirnameOfFrom ?? dirnameOfFrom;
         const finalTo = path.join(dirnameOfFrom, basenameOfTo);
 
         const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory)
@@ -73,6 +76,7 @@ class DataProvider {
         if (shouldExecute) {
           try {
             fs.renameSync(previewItem.from, finalTo);
+            changeTracker[previewItem.from] = finalTo;
           } catch (e) { }
         }
 

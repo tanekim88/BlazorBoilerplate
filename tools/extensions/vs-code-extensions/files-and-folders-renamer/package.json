@@ -17,6 +17,9 @@
 		"onView:sidebar"
 	],
 	"main": "./out/extension.js",
+	"files": [
+		"out"
+	],
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
@@ -67,12 +70,14 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
+		"compile": "tsc -p ./ && cd svelte && npm run build",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js",
-		"dev": "ts-node ./src/watch.ts"
+		"dev": "ts-node ./src/watch.ts",
+		"package": "npm run compile && vsce package",
+		"publish": "vsce publish"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.13",
@@ -98,6 +103,7 @@
 		"tsconfig-paths": "^3.10.1",
 		"tslib": "^2.0.0",
 		"typescript": "^4.3.2",
+		"vsce": "^1.96.1",
 		"vscode-test": "^1.5.2"
 	},
 	"dependencies": {
