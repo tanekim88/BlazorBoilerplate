@@ -1,7 +1,8 @@
 import chokidar from 'chokidar';
 import { debounceTime, Subject, throttleTime } from 'rxjs';
 import { execSync } from 'child_process';
-
+import path from 'path';
+const watchPath = path.resolve(__dirname, '..', 'svelte');
 const subj = new Subject<void>();
 
 subj.pipe(throttleTime(5000)).subscribe(() => {
@@ -9,7 +10,7 @@ subj.pipe(throttleTime(5000)).subscribe(() => {
     console.log('Refreshed! :)')
 });
 // One-liner for current directory
-chokidar.watch('./svelte', {
+chokidar.watch(watchPath, {
     ignored: [/node_modules|build/, /\.svelte-kit/]
 }).on('all', (event, path) => {
     console.log(event, path);

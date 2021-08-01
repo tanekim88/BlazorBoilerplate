@@ -98,7 +98,7 @@ export function getViteConfig(){
 		// 	}
 		// ],
 		build: {
-			cssCodeSplit: false,
+			// cssCodeSplit: false,
 			// assetsInlineLimit: 100000000,
 			rollupOptions: {
 				// inlineDynamicImports: true,

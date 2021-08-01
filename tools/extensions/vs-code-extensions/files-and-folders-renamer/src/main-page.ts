@@ -98,12 +98,9 @@ export class MainPage {
           break;
         }
         case 'fetch-source': {
-          if (!data.value) {
-            return;
-          }
           await webview.postMessage({
             type: 'source-fetched',
-            value: MainPage._sourceUri.fsPath
+            value: MainPage._sourceUri?.fsPath
           });
 
           break;

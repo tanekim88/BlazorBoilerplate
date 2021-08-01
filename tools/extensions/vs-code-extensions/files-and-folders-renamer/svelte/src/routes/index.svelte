@@ -1,18 +1,23 @@
 <script lang="typescript">
-	import { Mapping } from '../../../src/data-provider';
-	import { tsvscode } from 'src/global';
+	import { onMount } from 'svelte';
 
-	window.addEventListener('message', async (event) => {
-		const message = event.data;
-		switch (message.type) {
-			case 'source-fetched':
-				break;
-			case 'preview-fetched':
-				previewItems = message.value;
-				break;
-			case 'commit-done':
-				break;
-		}
+	import { Mapping } from '../../../src/data-provider';
+
+	onMount(async () => {
+		window.addEventListener('message', async (event) => {
+			const message = event.data;
+			switch (message.type) {
+				case 'source-fetched':
+					source = message.value;
+					break;
+				case 'preview-fetched':
+					previewItems = message.value;
+					break;
+				case 'commit-done':
+					break;
+			}
+		});
+		await sendFetchSourceCommand();
 	});
 
 	let source;
@@ -46,6 +51,16 @@
 
 		const result = await tsvscode.postMessage({
 			type: 'commit',
+			value: previewItems
+		});
+		isCommitLoading = false;
+	}
+
+	async function sendFetchSourceCommand() {
+		isCommitLoading = true;
+
+		const result = await tsvscode.postMessage({
+			type: 'fetch-source',
 			value: previewItems
 		});
 		isCommitLoading = false;

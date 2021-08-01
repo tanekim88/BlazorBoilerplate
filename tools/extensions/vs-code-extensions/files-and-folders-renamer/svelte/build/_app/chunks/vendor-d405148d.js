@@ -165,6 +165,12 @@ function insert_hydration(target, node, anchor) {
 function detach(node) {
   node.parentNode.removeChild(node);
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
 }
@@ -277,6 +283,9 @@ function set_data(text2, data) {
   data = "" + data;
   if (text2.wholeText !== data)
     text2.data = data;
+}
+function set_input_value(input, value) {
+  input.value = value == null ? "" : value;
 }
 let current_component;
 function set_current_component(component) {
@@ -582,4 +591,4 @@ function writable(value, start = noop) {
   }
   return { set, update: update2, subscribe };
 }
-export { onMount as A, assign as B, writable as C, create_slot as D, update_slot_base as E, get_all_dirty_from_scope as F, get_slot_changes as G, append_hydration as H, noop as I, listen as J, prevent_default as K, run_all as L, SvelteComponent as S, children as a, attr as b, claim_element as c, detach as d, element as e, insert_hydration as f, claim_text as g, set_data as h, init as i, create_component as j, space as k, empty as l, claim_component as m, claim_space as n, mount_component as o, get_spread_update as p, get_spread_object as q, group_outros as r, safe_not_equal as s, text as t, transition_out as u, destroy_component as v, check_outros as w, transition_in as x, setContext as y, afterUpdate as z };
+export { onMount as A, assign as B, writable as C, create_slot as D, update_slot_base as E, get_all_dirty_from_scope as F, get_slot_changes as G, append_hydration as H, noop as I, set_input_value as J, listen as K, prevent_default as L, run_all as M, destroy_each as N, SvelteComponent as S, children as a, attr as b, claim_element as c, detach as d, element as e, insert_hydration as f, claim_text as g, set_data as h, init as i, create_component as j, space as k, empty as l, claim_component as m, claim_space as n, mount_component as o, get_spread_update as p, get_spread_object as q, group_outros as r, safe_not_equal as s, text as t, transition_out as u, destroy_component as v, check_outros as w, transition_in as x, setContext as y, afterUpdate as z };
