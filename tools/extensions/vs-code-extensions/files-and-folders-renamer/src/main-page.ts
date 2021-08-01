@@ -18,11 +18,8 @@ export class MainPage {
 
   public static async createOrShow(extensionUri: vscode.Uri, sourceUri: vscode.Uri) {
     const column = vscode.window.activeTextEditor?.viewColumn;
-    if (MainPage._sourceUri !== sourceUri) {
-      MainPage._sourceUri = sourceUri;
-      await MainPage.sendPostFetchedEvent(MainPage.currentPanel?._panel.webview);
-
-    }
+    
+    MainPage._sourceUri = sourceUri;
 
     // If we already have a panel, show it.
     if (MainPage.currentPanel) {
@@ -133,7 +130,7 @@ export class MainPage {
     const webview = this._panel.webview;
 
     this._panel.webview.html = this._getHtmlForWebview(webview);
-
+    await MainPage.sendPostFetchedEvent(MainPage.currentPanel?._panel.webview);
   }
 
   ranOnce = false;

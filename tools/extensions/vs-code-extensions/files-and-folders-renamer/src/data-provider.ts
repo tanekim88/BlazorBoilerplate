@@ -46,27 +46,47 @@ class DataProvider {
 
   commit(mappings: Mapping[]) {
     mappings.reverse().forEach(mapping => {
-      fs.renameSync(mapping.from, mapping.to);
+      do {
+        let basenameOfTo = path.basename(mapping.to);
+        let dirnameOfTo = path.dirname(mapping.to);
+        let dirnameOfFrom = path.dirname(mapping.from);
+        const finalTo = path.join(dirnameOfFrom, basenameOfTo);
+        fs.renameSync(mapping.from, finalTo);
+
+        mapping = {
+          from: dirnameOfFrom,
+          to: dirnameOfTo
+        };
+
+      } while (mapping.from !== mapping.to);
     });
   }
 
   private getAllFilesAndFoldersMappings(srcPath: string, fromInput: RegExp, toInput: string, options: Options, mappings: Mapping[] = []) {
-    if(fromInput.test(srcPath)){
+    const isDirectory = fs.statSync(srcPath).isDirectory();
+    const shouldIncludeInMapping = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
+    if (fromInput.test(srcPath)) {
       const to = srcPath.replace(fromInput, toInput);
-      mappings.push({
-        from: srcPath,
-        to
-      });
+      if (shouldIncludeInMapping) {
+        if (mappings.length > 0 && srcPath.startsWith(mappings[mappings.length - 1].from)) {
+          mappings.pop();
+        }
+
+        mappings.push({
+          from: srcPath,
+          to
+        });
+      }
     }
 
-    if (fs.statSync(srcPath).isDirectory()) {
+    if (isDirectory) {
       const filesOrDirNames = fs.readdirSync(srcPath);
 
       filesOrDirNames.forEach((fileOrDirName) => {
         const fullPath = path.join(srcPath, fileOrDirName);
         this.getAllFilesAndFoldersMappings(fullPath, fromInput, toInput, options, mappings);
       });
-    } 
+    }
 
     return mappings;
   }
