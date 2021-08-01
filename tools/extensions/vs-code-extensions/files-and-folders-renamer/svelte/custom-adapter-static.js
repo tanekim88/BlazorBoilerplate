@@ -3,9 +3,12 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import fs from 'fs';
 import adapterStatic from '@sveltejs/adapter-static';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const buildDirPath = path.resolve(__dirname, 'build');
+
+const outDir = path.resolve(__dirname, '..', 'out');
+const buildDirPath = path.resolve(outDir, 'svelte');
 const _appDirPath = path.resolve(buildDirPath, '_app');
 
 const cspSource = '@cspSource';

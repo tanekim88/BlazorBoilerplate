@@ -18,7 +18,7 @@ export class MainPage {
 
   public static async createOrShow(extensionUri: vscode.Uri, sourceUri: vscode.Uri) {
     const column = vscode.window.activeTextEditor?.viewColumn;
-    
+
     MainPage._sourceUri = sourceUri;
 
     // If we already have a panel, show it.
@@ -139,14 +139,22 @@ export class MainPage {
     // // And the uri we use to load this script in the webview
 
     // Uri to load styles into webview
-    const buildDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+    let svelteDirPath = vscode.Uri.joinPath(
       this._extensionUri,
-      "svelte",
-      'build'
-    ));
+      "svelte"
+    );
+
+    if (!fs.existsSync(path.join(svelteDirPath.fsPath,'index.html'))) {
+      svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+        this._extensionUri,
+        "out", "svelte"
+      ));
+    }
+
+
 
     const htmlUri = webview.asWebviewUri(vscode.Uri.joinPath(
-      buildDirPath,
+      svelteDirPath,
       "index.html"
     ));
 
@@ -157,7 +165,7 @@ export class MainPage {
     }
 
     const _appDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
-      buildDirPath,
+      svelteDirPath,
       "_app"
     ));
 
@@ -170,7 +178,7 @@ export class MainPage {
 
     // update the base URI tag
     html = html.replace(/@_appDirPath/g, _appDirPath.toString());
-    html = html.replace(/@buildDirPath/g, buildDirPath.toString());
+    html = html.replace(/@buildDirPath/g, svelteDirPath.toString());
     html = html.replace(/@cspSource/g, webview.cspSource);
 
     fs.writeFileSync(htmlUri.fsPath, html);

@@ -1,8 +1,8 @@
 <script lang="typescript">
 	import { onMount } from 'svelte';
 
-	import { Mapping } from '../../../src/data-provider';
-
+	import { PreviewItem } from '../../../src/data-provider';
+	import diff from 'fast-diff';
 	onMount(async () => {
 		window.addEventListener('message', async (event) => {
 			const message = event.data;
@@ -12,6 +12,13 @@
 					break;
 				case 'preview-fetched':
 					previewItems = message.value;
+					previewItems.forEach((previewItem) => {
+						const to = previewItem.to;
+						const from = previewItem.from;
+						previewItem.diffs = diff(from, to);
+						console.dir(previewItem.to);
+						console.dir(previewItem.diffs);
+					});
 					break;
 				case 'commit-done':
 					previewItems = undefined;
@@ -31,7 +38,7 @@
 		isRegex: true,
 		caseInsensitive: false
 	};
-	let previewItems: Mapping[];
+	let previewItems: PreviewItem[];
 	let isPreviewLoading = false;
 	let isCommitLoading = false;
 
@@ -110,13 +117,23 @@
 	{#if isPreviewLoading}
 		Loading...
 	{:else if previewItems}
+		<hr />
 		<div>
+			<h3>Preview</h3>
 			{#each previewItems as previewItem}
 				<div>
 					{previewItem.from}
 				</div>
 				<div>
-					{previewItem.to}
+					{#each previewItem.diffs as diff}
+						{#if diff[0] === -1}
+							<del style="background-color: red; color:white">{diff[1]}</del>
+						{:else if diff[0] === 1}
+							<ins style="background-color: green; color:white">{diff[1]}</ins>
+						{:else}
+							<span>{diff[1]}</span>
+						{/if}
+					{/each}
 				</div>
 				<hr />
 			{/each}

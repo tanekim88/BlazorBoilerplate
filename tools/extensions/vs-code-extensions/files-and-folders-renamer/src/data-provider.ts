@@ -2,9 +2,10 @@ import * as vscode from "vscode";
 import * as fs from 'fs';
 import * as path from 'path';
 
-export interface previewItem {
+export interface PreviewItem {
   from: string,
-  to: string
+  to: string,
+  diffs?: [number, string][]
 }
 export interface Options {
   includeFiles: boolean,
@@ -40,12 +41,12 @@ class DataProvider {
 
     let regexFrom = new RegExp(from, regexOptions);
 
-    const previewItems = this.getAllFilesAndFolderspreviewItems(source, regexFrom, to, options);
+    const previewItems = this.getAllFilesAndFolderspreviewItems(source, regexFrom, to ?? '', options);
     return previewItems;
   }
 
   commit(args: {
-    previewItems: previewItem[],
+    previewItems: PreviewItem[],
     source: string,
     from: string,
     to: string, options: Options
@@ -70,7 +71,9 @@ class DataProvider {
           && basenameOfFrom !== basenameOfTo;
 
         if (shouldExecute) {
-          fs.renameSync(previewItem.from, finalTo);
+          try {
+            fs.renameSync(previewItem.from, finalTo);
+          } catch (e) { }
         }
 
         previewItem = {
@@ -83,7 +86,7 @@ class DataProvider {
   }
 
 
-  private getAllFilesAndFolderspreviewItems(srcPath: string, fromInput: RegExp, toInput: string, options: Options, previewItems: previewItem[] = []) {
+  private getAllFilesAndFolderspreviewItems(srcPath: string, fromInput: RegExp, toInput: string, options: Options, previewItems: PreviewItem[] = []) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
 
@@ -92,10 +95,12 @@ class DataProvider {
 
     if (fromInput.test(basename)) {
       const toBasename = basename.replace(fromInput, toInput);
-      const to = path.join(dirname, toBasename);
       if (shouldIncludeInpreviewItem) {
+        let to = path.join(dirname, toBasename);
+
         if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].from)) {
-          previewItems.pop();
+          const parentDirname = previewItems.pop()?.to;
+          to = path.join(parentDirname!, toBasename);
         }
 
         previewItems.push({

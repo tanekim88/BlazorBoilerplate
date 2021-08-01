@@ -3,6 +3,8 @@
 	"displayName": "Files and Folders Renamer",
 	"description": "Renames files and folders",
 	"version": "0.0.1",
+	"publisher": "tane",
+	"repository": {},
 	"engines": {
 		"vscode": "^1.58.0"
 	},

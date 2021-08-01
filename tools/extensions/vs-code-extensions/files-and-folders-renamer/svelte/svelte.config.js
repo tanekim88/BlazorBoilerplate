@@ -1,8 +1,17 @@
 import preprocess from 'svelte-preprocess';
 
 import { getViteConfig } from './vite-config.js';
-import {customAdapterStatic} from './custom-adapter-static.js';
+import { customAdapterStatic } from './custom-adapter-static.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const outDir = path.resolve(__dirname, '..', 'out');
+const buildDirPath = path.resolve(outDir, 'svelte');
+console.dir(buildDirPath);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// options passed to svelte.compile (https://svelte.dev/docs#svelte_compile)
@@ -15,10 +24,10 @@ const config = {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		adapter: customAdapterStatic({
-					assets: 'build',
-					pages: 'build',
-					fallback: null
-				}),
+			assets: buildDirPath,
+			pages: buildDirPath,
+			fallback: null
+		}),
 		amp: false,
 		// appDir: '_app',
 		files: {
@@ -83,4 +92,3 @@ const config = {
 };
 
 export default config;
-
