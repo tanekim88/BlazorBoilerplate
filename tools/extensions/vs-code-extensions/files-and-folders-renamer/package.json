@@ -1,0 +1,98 @@
+{
+	"name": "files-and-folders-renamer",
+	"displayName": "Files and Folders Renamer",
+	"description": "Renames files and folders",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.58.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:files-and-folders-renamer.open-rename-files-and-folders-form",
+		"onCommand:files-and-folders-renamer.refresh",
+		"onView:sidebar"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "sidebar-view",
+					"title": "Sidebar View",
+					"icon": "assets/heart.svg"
+				}
+			]
+		},
+		"views": {
+			"sidebar-view": [
+				{
+					"type": "webview",
+					"id": "sidebar",
+					"name": "Sidebar",
+					"icon": "assets/heart.svg",
+					"contextualTitle": "Sidebar contextual Title"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "files-and-folders-renamer.open-rename-files-and-folders-form",
+				"title": "Rename Files and Folders",
+				"category": "renamer"
+			},
+			{
+				"command": "files-and-folders-renamer.refresh",
+				"title": "Refresh",
+				"category": "renamer"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "true",
+					"command": "files-and-folders-renamer.open-rename-files-and-folders-form"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"dev": "ts-node ./src/watch.ts"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.13",
+		"@sveltejs/kit": "next",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.58.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"chokidar": "^3.5.2",
+		"eslint": "^7.27.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-svelte3": "^3.2.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"prettier": "~2.2.1",
+		"prettier-plugin-svelte": "^2.2.0",
+		"svelte": "^3.34.0",
+		"svelte-check": "^2.0.0",
+		"svelte-preprocess": "^4.0.0",
+		"ts-node": "^10.1.0",
+		"tsconfig-paths": "^3.10.1",
+		"tslib": "^2.0.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"rxjs": "^7.3.0"
+	}
+}
