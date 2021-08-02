@@ -1,111 +1,109 @@
 <script lang="typescript">
-	import { onMount } from 'svelte';
-
-	import { Options, PreviewItem } from '../../../src/data-provider';
+	import { onDestroy, onMount } from 'svelte';
+	import { MainState } from '../../../src/data-provider';
 	import diff from 'fast-diff';
+
+	onDestroy(() => {
+		tsvscode['setState'](state);
+	});
+
+	let state: MainState = {
+		source: '',
+		from: undefined,
+		to: undefined,
+		options: {
+			includeFiles: true,
+			includeFolders: true,
+			isGlobal: true,
+			isRegex: true,
+			caseInsensitive: false,
+			includeContents: false,
+			contextLinesDepth: 0,
+			showLineNumbers: false
+		},
+		previewItems: [],
+		isPreviewLoading: false,
+		isCommitLoading: false
+	};
 	onMount(async () => {
 		window.addEventListener('message', async (event) => {
 			const message = event.data;
 			switch (message.type) {
-				case 'source-fetched':
-					source = message.value;
+				case 'state-received':
+					const options = state.options;
+					state = message.value;
+					if(!state.options){
+						state.options = options;
+					}
 					break;
-				case 'preview-fetched':
-					previewItems = message.value;
-					previewItems.forEach((previewItem) => {
-						const to = previewItem.to;
-						const from = previewItem.from;
-						previewItem.diffs = diff(from, to);
-						previewItem.contents?.forEach((content) => {
-							const toContext = content.toContext;
-							const fromContext = content.fromContext;
+				case 'preview-received':
+					state.previewItems = message.value;
+					state.previewItems.forEach((previewItem) => {
+						if (previewItem.to) {
+							previewItem.diffs = diff(previewItem.from, previewItem.to);
+						}
 
-							content.contextDiffs = diff(fromContext, toContext);
+						previewItem.contents?.forEach((content) => {
+							content.contextDiffs = diff(content.fromContext, content.toContext);
 						});
+						console.dir(previewItem.contents);
 					});
 					break;
 				case 'commit-done':
-					previewItems = undefined;
+					state.previewItems = undefined;
 					break;
 			}
 		});
-		await sendFetchSourceCommand();
+		await sendGetStateCommand();
 	});
-
-	let source;
-	let from;
-	let to;
-	let options: Options = {
-		includeFiles: true,
-		includeFolders: true,
-		isGlobal: true,
-		isRegex: true,
-		caseInsensitive: false,
-		includeContents: false,
-		contextLinesDepth: 0,
-		showLineNumbers: false
-	};
-	let previewItems: PreviewItem[];
-	let isPreviewLoading = false;
-	let isCommitLoading = false;
-
-	async function sendFetchPreviewCommand() {
-		isPreviewLoading = true;
+	
+	async function sendGetPreviewCommand() {
+		state.isPreviewLoading = true;
 		const result = await tsvscode.postMessage({
-			type: 'fetch-preview',
-			value: {
-				from,
-				to,
-				source,
-				options
-			}
+			type: 'get-preview',
+			value: state
 		});
-		isPreviewLoading = false;
+		state.isPreviewLoading = false;
 	}
 
 	async function sendCommitCommand() {
-		isCommitLoading = true;
+		state.isCommitLoading = true;
 
-		if (!previewItems) {
-			await sendFetchPreviewCommand();
+		if (!state.previewItems) {
+			await sendGetPreviewCommand();
 		}
 
 		const result = await tsvscode.postMessage({
 			type: 'commit',
-			value: {
-				from,
-				to,
-				source,
-				options,
-				previewItems
-			}
+			value: state
 		});
-		isCommitLoading = false;
+		state.isCommitLoading = false;
 	}
 
-	async function sendFetchSourceCommand() {
-		isCommitLoading = true;
+	async function sendGetStateCommand() {
+		state.isCommitLoading = true;
 
 		const result = await tsvscode.postMessage({
-			type: 'fetch-source',
-			value: previewItems
+			type: 'get-state',
+			value: undefined
 		});
-		isCommitLoading = false;
+
+		state.isCommitLoading = false;
 	}
 </script>
 
 <form on:submit|preventDefault={() => {}}>
-	<h1>{source}</h1>
+	<h1>{state.source}</h1>
 	<h3>From</h3>
 	<h3>Regex</h3>
-	<input type="checkbox" checked={options.isRegex} />
-	<input bind:value={from} required />
+	<input type="checkbox" checked={state.options.isRegex} />
+	<input bind:value={state.from} required />
 	<h3>To</h3>
-	<input bind:value={to} required />
+	<input bind:value={state.to} required />
 
 	<button
 		on:click|preventDefault={async () => {
-			await sendFetchPreviewCommand();
+			await sendGetPreviewCommand();
 		}}>Preview</button
 	>
 	<button
@@ -115,42 +113,44 @@
 	>
 
 	<h3>Case Insensitive</h3>
-	<input type="checkbox" bind:checked={options.caseInsensitive} />
+	<input type="checkbox" bind:checked={state.options.caseInsensitive} />
 	<h3>Include files</h3>
-	<input type="checkbox" bind:checked={options.includeFiles} />
+	<input type="checkbox" bind:checked={state.options.includeFiles} />
 	<h3>Include folders</h3>
-	<input type="checkbox" bind:checked={options.includeFolders} />
+	<input type="checkbox" bind:checked={state.options.includeFolders} />
 	<h3>Include contents</h3>
-	<input type="checkbox" bind:checked={options.includeContents} />
-	{#if options.includeContents}
+	<input type="checkbox" bind:checked={state.options.includeContents} />
+	{#if state.options.includeContents}
 		<h3>Context lines depth</h3>
-		<input type="number" bind:value={options.contextLinesDepth} />
+		<input type="number" bind:value={state.options.contextLinesDepth} />
 		<h3>Show line numbers</h3>
-		<input type="checkbox" bind:checked={options.showLineNumbers} />
+		<input type="checkbox" bind:checked={state.options.showLineNumbers} />
 	{/if}
 
-	{#if isPreviewLoading}
+	{#if state.isPreviewLoading}
 		Loading...
-	{:else if previewItems}
+	{:else if state.previewItems}
 		<hr />
 		<div>
 			<h3>Preview</h3>
-			{#each previewItems as previewItem}
+			{#each state.previewItems as previewItem}
 				<div>
 					{previewItem.from}
 				</div>
 				<div>
-					{#each previewItem.diffs as diff}
-						{#if diff[0] === -1}
-							<del style="background-color: red; color:white">{diff[1]}</del>
-						{:else if diff[0] === 1}
-							<ins style="background-color: green; color:white">{diff[1]}</ins>
-						{:else}
-							<span>{diff[1]}</span>
-						{/if}
-					{/each}
+					{#if previewItem.diffs}
+						{#each previewItem.diffs as diff}
+							{#if diff[0] === -1}
+								<del style="background-color: red; color:white">{diff[1]}</del>
+							{:else if diff[0] === 1}
+								<ins style="background-color: green; color:white">{diff[1]}</ins>
+							{:else}
+								<span>{diff[1]}</span>
+							{/if}
+						{/each}
+					{/if}
 					{#if previewItem.contents}
-						<hr/>
+						<hr />
 						{#each previewItem.contents as content}
 							<div>
 								<div>
@@ -158,11 +158,10 @@
 								</div>
 								<div>
 									{#each content.contextDiffs as contextDiff}
-										{#if diff[0] === -1}
+										{#if contextDiff[0] === -1}
 											<del style="background-color: red; color:white">{contextDiff[1]}</del>
-										{:else if diff[0] === 1}
-											<ins style="background-color: green; color:white">{contextDiff[1]}</ins
-											>
+										{:else if contextDiff[0] === 1}
+											<ins style="background-color: green; color:white">{contextDiff[1]}</ins>
 										{:else}
 											<span>{contextDiff[1]}</span>
 										{/if}

@@ -5,9 +5,14 @@ import path from 'path';
 const watchPath = path.resolve(__dirname, '..', 'svelte');
 const subj = new Subject<void>();
 
-subj.pipe(throttleTime(5000)).subscribe(() => {
+function refresh(){
     execSync('cd svelte && npm run build');
     console.log('Refreshed! :)')
+}
+
+refresh();
+subj.pipe(throttleTime(5000)).subscribe(() => {
+    refresh();
 });
 // One-liner for current directory
 chokidar.watch(watchPath, {

@@ -39,7 +39,7 @@ export function customAdapterStatic({ pages = 'build', assets = pages, fallback 
 				let startJsFileContent = fs.readFileSync(startJsFilePath, { encoding: 'utf8' });
 				startJsFileContent = startJsFileContent.replace(
 					/\/_app\//,
-					`@_appDirPath/;`
+					`@_appDirPath/`
 				);
 
 				fs.writeFileSync(startJsFilePath, startJsFileContent);

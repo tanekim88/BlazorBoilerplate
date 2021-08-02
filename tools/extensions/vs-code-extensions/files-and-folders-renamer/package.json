@@ -12,11 +12,11 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:files-and-folders-renamer.open-rename-files-and-folders-form",
+		"onCommand:files-and-folders-renamer.open-rename-files-and-folders-view",
 		"onCommand:files-and-folders-renamer.refresh",
 		"onView:sidebar"
 	],
-	"main": "./out/extension.js",
+	"main": "./out/src/extension.js",
 	"files": [
 		"out"
 	],
@@ -43,7 +43,7 @@
 		},
 		"commands": [
 			{
-				"command": "files-and-folders-renamer.open-rename-files-and-folders-form",
+				"command": "files-and-folders-renamer.open-rename-files-and-folders-view",
 				"title": "Rename Files and Folders",
 				"category": "renamer"
 			},
@@ -57,12 +57,12 @@
 			"explorer/context": [
 				{
 					"when": "true",
-					"command": "files-and-folders-renamer.open-rename-files-and-folders-form"
+					"command": "files-and-folders-renamer.open-rename-files-and-folders-view"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "files-and-folders-renamer.open-rename-files-and-folders-form",
+					"command": "files-and-folders-renamer.open-rename-files-and-folders-view",
 					"when": "true"
 				}
 			]

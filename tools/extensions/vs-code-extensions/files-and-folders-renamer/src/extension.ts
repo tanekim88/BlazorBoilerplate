@@ -1,8 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { MainPage } from './main-page';
-import { Sidebar } from './sidebar';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -21,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('files-and-folders-renamer.open-rename-files-and-folders-form', async (uri: vscode.Uri) => {
+		vscode.commands.registerCommand('files-and-folders-renamer.open-rename-files-and-folders-view', async (uri: vscode.Uri) => {
 			MainPage.createOrShow(context.extensionUri, uri);
 		}));
 
@@ -48,17 +46,17 @@ export function activate(context: vscode.ExtensionContext) {
 			}, 500);
 		}));
 
-	// if (vscode.window.registerWebviewPanelSerializer) {
-	// 	// Make sure we register a serializer in activation event
-	// 	vscode.window.registerWebviewPanelSerializer(MainPage.viewType, {
-	// 		async deserializeWebviewPanel(webviewPanel: vscode.WebviewPanel, state: any) {
-	// 			console.log(`Got state: ${state}`);
-	// 			// Reset the webview options so we use latest uri for `localResourceRoots`.
-	// 			webviewPanel.webview.options = getWebviewOptions(context.extensionUri);
-	// 			MainPage.revive(webviewPanel, context.extensionUri);
-	// 		}
-	// 	});
-	// }
+	if (vscode.window.registerWebviewPanelSerializer) {
+		// Make sure we register a serializer in activation event
+		vscode.window.registerWebviewPanelSerializer(MainPage.viewType, {
+			async deserializeWebviewPanel(webviewPanel: vscode.WebviewPanel, state: any) {
+				console.log(`Got state: ${state}`);
+				// Reset the webview options so we use latest uri for `localResourceRoots`.
+				webviewPanel.webview.options = getWebviewOptions(context.extensionUri);
+				MainPage.revive(webviewPanel, context.extensionUri, state);
+			}
+		});
+	}
 }
 
 function getWebviewOptions(extensionUri: vscode.Uri): vscode.WebviewOptions {

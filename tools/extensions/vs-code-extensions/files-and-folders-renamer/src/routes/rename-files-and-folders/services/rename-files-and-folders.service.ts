@@ -1,44 +1,15 @@
 import vscode from "vscode";
 import fs from 'fs';
 import path from 'path';
-import diff from 'fast-diff';
-export interface PreviewItem {
-  from: string,
-  to?: string,
-  diffs?: [number, string][],
-  contents?: Content[];
-}
-interface Content {
-  fromIndex: number,
-  fromLastIndex: number,
-  toContent: string,
-  fromContext: string,
-  toContext: string,
-  contextDiffs?: [number, string][]
-}
-export interface MainState {
-  source: string;
-  from: string;
-  to: string;
-  options: Options;
-  previewItems: PreviewItem[];
-  isPreviewLoading: boolean;
-  isCommitLoading: boolean;
-}
-export interface Options {
-  includeFiles: boolean,
-  includeFolders: boolean,
-  isGlobal: boolean,
-  isRegex: boolean,
-  caseInsensitive: boolean,
-  includeContents: boolean,
-  contextLinesDepth: number,
-  showLineNumbers: boolean
-}
 
-const newLineRegex = /\r?\n/g;
-class DataProvider {
-  getPreview(arg: MainState) {
+import { RenameFilesAndFoldersState } from "../models/rename-files-and-folders-state";
+import { RenameFilesAndFoldersContent } from "../models/rename-files-and-folders-content";
+import { RenameFilesAndFoldersPreviewItem } from "../models/rename-files-and-folders-preview-item";
+import { RenameFilesAndFoldersOptions } from "../models/rename-files-and-folders-options";
+
+
+class RenameFilesAndFoldersService {
+  getPreviews(arg: RenameFilesAndFoldersState) {
     let { source, from, to, options } = arg;
 
     let regexOptions = '';
@@ -61,11 +32,11 @@ class DataProvider {
     return previewItems;
   }
 
-  commit(args: MainState) {
+  commit(args: RenameFilesAndFoldersState) {
     let { previewItems, options } = args;
 
     if (!previewItems) {
-      previewItems = this.getPreview(args);
+      previewItems = this.getPreviews(args);
     }
 
     const changeTracker: { [src: string]: string } = {};
@@ -116,13 +87,15 @@ class DataProvider {
   }
 
 
-  private getAllFilesAndFolderspreviewItems(srcPath: string, fromInput: RegExp, toInput: string, options: Options, previewItems: PreviewItem[] = []) {
+  private getAllFilesAndFolderspreviewItems(
+    srcPath: string, fromInput: RegExp, toInput: string, 
+    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = []) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
 
     const fromBasename = path.basename(srcPath);
     const fromDirname = path.dirname(srcPath);
-    let toPush: PreviewItem | undefined;
+    let toPush: RenameFilesAndFoldersPreviewItem | undefined;
 
     if (fromInput.test(fromBasename)) {
       const toBasename = fromBasename.replace(fromInput, toInput);
@@ -158,7 +131,7 @@ class DataProvider {
         const contentLength = content.length;
         fromInput.lastIndex = 0;
         let cont = fromInput.exec(content);
-        const contents: Content[] = [];
+        const contents: RenameFilesAndFoldersContent[] = [];
 
         while (cont) {
           const index = cont!.index;
@@ -230,4 +203,4 @@ class DataProvider {
   }
 }
 
-export const dataProvider = new DataProvider();
+export const renameFilesAndFoldersService = new RenameFilesAndFoldersService();

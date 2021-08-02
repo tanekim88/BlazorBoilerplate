@@ -4,11 +4,11 @@ import * as path from 'path';
 import { dataProvider, PreviewItem, MainState } from "./data-provider";
 
 
-export class MainPage {
+export class Index {
   /**
    * Track the currently panel. Only allow a single panel to exist at a time.
    */
-  public static currentPanel: MainPage | undefined;
+  public static currentPanel: Index | undefined;
   public static _sourceUri: vscode.Uri;
 
   public static readonly viewType = "main";
