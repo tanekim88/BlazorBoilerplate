@@ -4,12 +4,12 @@ import path from 'path';
 import { RenameFilesAndFoldersState } from "./models/rename-files-and-folders-state";
 import { renameFilesAndFoldersEvents } from "./events";
 
-type SymbolIndex = {
-  [key: symbol | string]: string // works
-}
-
-export class RenameFilesAndFoldersView {
-  public static cache: { [key: Symbol | string]: vscode.WebviewPanel } = {};
+export class RenameFilesAndFolders {
+  public static viewType = 'Rename Files And Folders View';
+  private static _cache: any = {};
+  public static getCachedPanel(key: Symbol) {
+    return RenameFilesAndFolders._cache[key as any];
+  }
 
   public static defaultOptions = {
     // Enable javascript in the webview
@@ -21,25 +21,27 @@ export class RenameFilesAndFoldersView {
     //   vscode.Uri.joinPath(extensionUri, "out"),
     // ],
   };
+  public key: Symbol;
 
   private readonly _panel: vscode.WebviewPanel;
   private _state: RenameFilesAndFoldersState | undefined;
   private readonly _extensionUri: vscode.Uri;
 
-  public constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri, state?: RenameFilesAndFoldersState) {
+  public constructor(extensionUri: vscode.Uri, panel?: vscode.WebviewPanel, state?: RenameFilesAndFoldersState) {
+    this.key = Symbol();
     this._extensionUri = extensionUri;
 
     const column = vscode.window.activeTextEditor?.viewColumn;
-
     this._state = state;
 
-    // Otherwise, create a new panel.
     this._panel = panel ?? vscode.window.createWebviewPanel(
-      "main",
+      RenameFilesAndFolders.viewType,
       "Rename Form",
       column || vscode.ViewColumn.One,
-      RenameFilesAndFoldersView.defaultOptions
+      RenameFilesAndFolders.defaultOptions
     );
+
+    RenameFilesAndFolders._cache[this.key as any] = this._panel;
 
     // Set the webview's initial html content
     this._panel.webview.html = this._getHtmlForWebview();
@@ -67,6 +69,7 @@ export class RenameFilesAndFoldersView {
 
     const htmlUri = webview.asWebviewUri(vscode.Uri.joinPath(
       svelteDirPath,
+      "rename-files-and-folders",
       "index.html"
     ));
 

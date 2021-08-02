@@ -1,6 +1,9 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import vscode from 'vscode';
+import { RenameFilesAndFolders } from './routes/rename-files-and-folders';
+import { RenameFilesAndFoldersState } from './routes/rename-files-and-folders/models/rename-files-and-folders-state';
+import { Sidebar } from './routes/sidebar';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -19,8 +22,8 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('files-and-folders-renamer.open-rename-files-and-folders-view', async (uri: vscode.Uri) => {
-			MainPage.createOrShow(context.extensionUri, uri);
+		vscode.commands.registerCommand('files-and-folders-renamer.view-rename-files-and-folders', async (uri: vscode.Uri) => {
+			new RenameFilesAndFolders(context.extensionUri);
 		}));
 
 
@@ -35,8 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
 			// 	"workbench.view.extension.sidebar-view"
 			// );
 
-			MainPage.kill();
-			MainPage.createOrShow(context.extensionUri, uri);
+			new RenameFilesAndFolders(context.extensionUri);
 
 
 			setTimeout(() => {
@@ -48,12 +50,16 @@ export function activate(context: vscode.ExtensionContext) {
 
 	if (vscode.window.registerWebviewPanelSerializer) {
 		// Make sure we register a serializer in activation event
-		vscode.window.registerWebviewPanelSerializer(MainPage.viewType, {
-			async deserializeWebviewPanel(webviewPanel: vscode.WebviewPanel, state: any) {
+		vscode.window.registerWebviewPanelSerializer(RenameFilesAndFolders.viewType, {
+			async deserializeWebviewPanel(webviewPanel: vscode.WebviewPanel, state: RenameFilesAndFoldersState) {
+
 				console.log(`Got state: ${state}`);
 				// Reset the webview options so we use latest uri for `localResourceRoots`.
 				webviewPanel.webview.options = getWebviewOptions(context.extensionUri);
-				MainPage.revive(webviewPanel, context.extensionUri, state);
+
+
+				state.extensionUri = context.extensionUri;
+				new RenameFilesAndFolders(context.extensionUri, webviewPanel, state);
 			}
 		});
 	}

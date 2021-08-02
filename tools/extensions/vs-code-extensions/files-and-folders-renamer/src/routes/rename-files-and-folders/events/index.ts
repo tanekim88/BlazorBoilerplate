@@ -11,7 +11,7 @@ class RenameFilesAndFoldersEvents {
                     if (!data.value) {
                         return;
                     }
-                    const previews = await renameFilesAndFoldersService.getPreview(data.value);
+                    const previews = await renameFilesAndFoldersService.getPreviews(data.value);
 
                     await webviewService.postMessage(webview, 'preview-received', previews);
                     break;

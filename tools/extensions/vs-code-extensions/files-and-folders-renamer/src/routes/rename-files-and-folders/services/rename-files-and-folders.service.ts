@@ -23,10 +23,10 @@ class RenameFilesAndFoldersService {
     }
 
     if (!options.isRegex) {
-      from = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      from = from?.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
-    let regexFrom = new RegExp(from, regexOptions);
+    let regexFrom = new RegExp(from!, regexOptions);
 
     const previewItems = this.getAllFilesAndFolderspreviewItems(source, regexFrom, to ?? '', options);
     return previewItems;
@@ -163,7 +163,6 @@ class RenameFilesAndFoldersService {
 
           let fromContext = content.slice(contextIndex, contextLastIndex);
           const sliceIndex = index - contextIndex;
-          const sliceLastIndex = contextLastIndex - index;
 
           const fromContent = content.slice(index, lastIndex);
 
