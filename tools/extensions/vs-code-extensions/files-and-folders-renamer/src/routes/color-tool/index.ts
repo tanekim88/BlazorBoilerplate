@@ -1,14 +1,14 @@
 import vscode, { Webview } from "vscode";
 import fs from 'fs';
 import path from 'path';
-import { defaultRenameFilesAndFoldersState, RenameFilesAndFoldersState } from "./models/rename-files-and-folders-state";
-import { renameFilesAndFoldersEvents } from "./events";
+import { colorToolEvents } from "./events";
+import { ColorToolState, defaultColorToolState } from "./models/color-tool-state";
 
-export class FilesAndFoldersRenamer {
-  public static viewType = 'Rename Files And Folders View';
+export class ColorTool {
+  public static viewType = 'Color Tool';
   private static _cache: any = {};
   public static getCachedPanel(key: Symbol) {
-    return FilesAndFoldersRenamer._cache[key as any];
+    return ColorTool._cache[key as any];
   }
 
   public static defaultOptions = {
@@ -24,28 +24,28 @@ export class FilesAndFoldersRenamer {
   public key: Symbol;
 
   private readonly _panel: vscode.WebviewPanel;
-  _state: RenameFilesAndFoldersState | undefined;
+  _state: ColorToolState | undefined;
   public static _extensionUri: vscode.Uri;
 
-  public constructor(state: RenameFilesAndFoldersState = defaultRenameFilesAndFoldersState, panel?: vscode.WebviewPanel) {
+  public constructor(state: ColorToolState = defaultColorToolState, panel?: vscode.WebviewPanel) {
     this.key = Symbol();
 
     if (state.extensionUri) {
-      FilesAndFoldersRenamer._extensionUri = state.extensionUri;
+      ColorTool._extensionUri = state.extensionUri;
     }
 
-    state ??= defaultRenameFilesAndFoldersState;
+    state ??= defaultColorToolState;
     const column = vscode.window.activeTextEditor?.viewColumn;
     this._state = state;
 
     this._panel = panel ?? vscode.window.createWebviewPanel(
-      FilesAndFoldersRenamer.viewType,
+      ColorTool.viewType,
       "Rename Form",
       column || vscode.ViewColumn.One,
-      FilesAndFoldersRenamer.defaultOptions
+      ColorTool.defaultOptions
     );
 
-    FilesAndFoldersRenamer._cache[this.key as any] = this._panel;
+    ColorTool._cache[this.key as any] = this._panel;
 
     // Set the webview's initial html content
     this._panel.webview.html = this._getHtmlForWebview();
@@ -55,7 +55,7 @@ export class FilesAndFoldersRenamer {
 
     const webview = this._panel.webview;
 
-    renameFilesAndFoldersEvents.listen(webview, state);
+    colorToolEvents.listen(webview, state);
   }
 
   public dispose() {
@@ -67,13 +67,13 @@ export class FilesAndFoldersRenamer {
   private _getHtmlForWebview() {
     const webview = this._panel.webview;
     let svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
-      FilesAndFoldersRenamer._extensionUri,
+      ColorTool._extensionUri,
       "svelte"
     ));
 
     if (!fs.existsSync(path.join(svelteDirPath.fsPath, 'index.html'))) {
       svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
-        FilesAndFoldersRenamer._extensionUri,
+        ColorTool._extensionUri,
         'out',
         "svelte"
       ));

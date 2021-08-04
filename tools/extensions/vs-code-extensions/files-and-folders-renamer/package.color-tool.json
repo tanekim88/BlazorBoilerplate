@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:color-tool.view-rename-files-and-folders",
+		"onCommand:color-tool.display-colors",
 		"onCommand:color-tool.refresh",
 		"onView:sidebar"
 	],
@@ -43,7 +43,7 @@
 		},
 		"commands": [
 			{
-				"command": "color-tool.view-rename-files-and-folders",
+				"command": "color-tool.display-colors",
 				"title": "Rename Files and Folders",
 				"category": "renamer"
 			},
@@ -57,12 +57,12 @@
 			"explorer/context": [
 				{
 					"when": "true",
-					"command": "color-tool.view-rename-files-and-folders"
+					"command": "color-tool.display-colors"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "color-tool.view-rename-files-and-folders",
+					"command": "color-tool.display-colors",
 					"when": "true"
 				}
 			]
