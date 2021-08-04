@@ -57,7 +57,7 @@ export function customAdapterStatic({ pages = 'build', assets = pages, fallback 
 				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline' ${cspSource}; script-src 'nonce-${nonce}' ${cspSource};">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<script nonce="${nonce}">
-					const tsvscode = acquireVsCodeApi();
+					const webview = acquireVsCodeApi();
 				</script>`;
 
 				const bodyHtml = ``;

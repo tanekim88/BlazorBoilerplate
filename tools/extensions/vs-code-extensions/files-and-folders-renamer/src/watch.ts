@@ -11,7 +11,7 @@ function refresh(){
 }
 
 refresh();
-subj.pipe(throttleTime(5000)).subscribe(() => {
+subj.pipe(throttleTime(10000)).subscribe(() => {
     refresh();
 });
 // One-liner for current directory
@@ -19,7 +19,7 @@ chokidar.watch(watchPath, {
     ignored: [/node_modules|build/, /\.svelte-kit/]
 }).on('all', (event, path) => {
     console.log(event, path);
-    if (event === 'change') {
+    if (event === 'change' || event === 'unlink') {
         subj.next();
     }
 });

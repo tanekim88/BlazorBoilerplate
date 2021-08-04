@@ -12,6 +12,22 @@ const __dirname = dirname(__filename);
 const outDir = path.resolve(__dirname, '..', 'out');
 const buildDirPath = path.resolve(outDir, 'svelte');
 console.dir(buildDirPath);
+
+const replace = [
+	['process.env.NODE_ENV', JSON.stringify(process.env.NODE_ENV)]
+];
+if(process.env.NODE_ENV ==='development'){
+	replace.push(
+		[
+			/webview([^-\w])/g,
+			`({ 
+				setState: (obj: any) => {},
+				getState: () => {},
+				postMessage: () => {}
+			})$1`
+		]);
+}
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// options passed to svelte.compile (https://svelte.dev/docs#svelte_compile)
@@ -42,20 +58,20 @@ const config = {
 		// host: null,
 		// hostHeader: null,
 		// hydrate unless disabled on page
-		hydrate: async ({ page }) => {
-			const leaf = await page;
-			return 'hydrate' in leaf ? !!leaf.hydrate : true;
-		},
+		// hydrate: async ({ page }) => {
+		// 	const leaf = await page;
+		// 	return 'hydrate' in leaf ? !!leaf.hydrate : true;
+		// },
 		package: {
 			dir: 'package',
 			emitTypes: true,
 			exports: {
 				include: ['**'],
-				exclude: ['_*', '**/_*']
+				exclude: ['_*', '**/_*', '**/*.scss']
 			},
 			files: {
 				include: ['**'],
-				exclude: []
+				exclude: ['**/*.scss']
 			}
 		},
 		paths: {
@@ -70,10 +86,10 @@ const config = {
 		// 	pages: ['*']
 		// },
 		// route unless disabled on page
-		router: async ({ page }) => {
-			const leaf = await page;
-			return 'router' in leaf ? !!leaf.router : true;
-		},
+		// router: async ({ page }) => {
+		// 	const leaf = await page;
+		// 	return 'router' in leaf ? !!leaf.router : true;
+		// },
 		serviceWorker: {
 			exclude: []
 		},
@@ -88,7 +104,15 @@ const config = {
 	},
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess()
+	preprocess: [
+		preprocess({
+			postcss: true,
+			scss: {
+				includePaths: ['src', 'node_modules']
+			},
+			replace
+		})
+	]
 };
 
 export default config;

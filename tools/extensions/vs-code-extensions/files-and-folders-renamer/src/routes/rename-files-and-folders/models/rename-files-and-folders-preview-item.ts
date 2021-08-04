@@ -1,8 +1,9 @@
-import { RenameFilesAndFoldersContent } from "./rename-files-and-folders-content";
+import { RenameFilesAndFoldersContentDiffsByLineNumber } from "./rename-files-and-folders-content-diffs-by-line-number";
 
 export interface RenameFilesAndFoldersPreviewItem {
-    from: string,
-    to?: string,
-    diffs?: [number, string][],
-    contents?: RenameFilesAndFoldersContent[];
+    pathFrom: string,
+    pathTo?: string,
+    pathDiffs?: [number, string][],
+    lineNumbersWithChange?: number[];
+    contentDiffsLookup?: { [lineNumber: number]: RenameFilesAndFoldersContentDiffsByLineNumber }
 }

@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import vscode from 'vscode';
 import { RenameFilesAndFolders } from './routes/rename-files-and-folders';
-import { RenameFilesAndFoldersState } from './routes/rename-files-and-folders/models/rename-files-and-folders-state';
+import { defaultRenameFilesAndFoldersState, RenameFilesAndFoldersState } from './routes/rename-files-and-folders/models/rename-files-and-folders-state';
 import { Sidebar } from './routes/sidebar';
 
 // this method is called when your extension is activated
@@ -23,7 +23,10 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('files-and-folders-renamer.view-rename-files-and-folders', async (uri: vscode.Uri) => {
-			new RenameFilesAndFolders(context.extensionUri);
+			const state = Object.assign({}, defaultRenameFilesAndFoldersState, {
+				extensionUri: context.extensionUri, sourcePath: uri.fsPath
+			});
+			new RenameFilesAndFolders(state);
 		}));
 
 
@@ -38,9 +41,10 @@ export function activate(context: vscode.ExtensionContext) {
 			// 	"workbench.view.extension.sidebar-view"
 			// );
 
-			new RenameFilesAndFolders(context.extensionUri);
-
-
+			const state = Object.assign({}, defaultRenameFilesAndFoldersState, {
+				extensionUri: context.extensionUri, sourcePath: uri?.fsPath
+			});
+			new RenameFilesAndFolders(state);
 			setTimeout(() => {
 				vscode.commands.executeCommand(
 					"workbench.action.webview.openDeveloperTools"
@@ -57,9 +61,9 @@ export function activate(context: vscode.ExtensionContext) {
 				// Reset the webview options so we use latest uri for `localResourceRoots`.
 				webviewPanel.webview.options = getWebviewOptions(context.extensionUri);
 
+				state ??= defaultRenameFilesAndFoldersState;
 
-				state.extensionUri = context.extensionUri;
-				new RenameFilesAndFolders(context.extensionUri, webviewPanel, state);
+				new RenameFilesAndFolders(state, webviewPanel);
 			}
 		});
 	}

@@ -1,0 +1,16 @@
+form {
+	// background-color: white;
+}
+
+:global(.mdc-floating-label){
+	color: grey !important;
+}
+
+:global(.mdc-floating-label--float-above){
+	transform: translateY(-25px) scale(0.8) !important;
+	overflow: visible;
+}
+
+:global(.mdc-notched-outline__notch){
+	border-color: transparent !important;
+}

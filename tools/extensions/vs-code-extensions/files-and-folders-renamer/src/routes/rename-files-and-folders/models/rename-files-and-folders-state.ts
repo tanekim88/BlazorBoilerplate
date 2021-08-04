@@ -2,29 +2,31 @@ import { RenameFilesAndFoldersOptions } from "./rename-files-and-folders-options
 import { RenameFilesAndFoldersPreviewItem } from "./rename-files-and-folders-preview-item";
 import vscode from 'vscode';
 export interface RenameFilesAndFoldersState {
-    source: string;
-    from: string | undefined;
-    to: string | undefined;
+    sourcePath: string;
+    fromInput: string;
+    fromRegexInput?: RegExp;
+    toInput: string;
     options: RenameFilesAndFoldersOptions;
     previewItems: RenameFilesAndFoldersPreviewItem[];
+
     isPreviewLoading: boolean;
     isCommitLoading: boolean;
     extensionUri?: vscode.Uri;
 }
 
 export const defaultRenameFilesAndFoldersState: RenameFilesAndFoldersState = {
-    source: '',
-    from: undefined,
-    to: undefined,
+    sourcePath: '',
+    fromInput: '',
+    toInput: '',
     options: {
         includeFiles: true,
         includeFolders: true,
         isGlobal: true,
-        isRegex: true,
+        isRegex: false,
         caseInsensitive: false,
         includeContents: false,
         contextLinesDepth: 0,
-        showLineNumbers: false
+        showLineNumbers: true
     },
     previewItems: [],
     isPreviewLoading: false,

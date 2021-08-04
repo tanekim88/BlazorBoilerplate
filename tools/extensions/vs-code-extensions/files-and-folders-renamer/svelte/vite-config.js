@@ -103,7 +103,7 @@ export function getViteConfig(){
 			rollupOptions: {
 				// inlineDynamicImports: true,
 			},
-			minify: true
+			minify: false
 		},
 		optimizeDeps:{
 			esbuildOptions:{

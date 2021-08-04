@@ -1,13 +1,18 @@
 <script lang="typescript">
-	import { onDestroy, onMount } from 'svelte';
-	import diff from 'fast-diff';
+	import { afterUpdate, onDestroy, onMount } from 'svelte';
 	import { defaultRenameFilesAndFoldersState } from '../../../../src/routes/rename-files-and-folders/models/rename-files-and-folders-state';
-
+	import { webviewService } from '../../../../src/services/webview-service';
+	import FilledTextField from '$lib/components/FilledTextField.svelte';
+	import OutlinedTextField from '$lib/components/OutlinedTextField.svelte';
+	import NumberInput from '$lib/components/NumberInput.svelte';
+	import TextButton from '$lib/components/TextButton.svelte';
+	import Checkbox from '$lib/components/Checkbox.svelte';
 	onDestroy(() => {
-		tsvscode['setState'](state);
+		webview.setState(state);
 	});
 
 	let state = defaultRenameFilesAndFoldersState;
+
 	onMount(async () => {
 		window.addEventListener('message', async (event) => {
 			const message = event.data;
@@ -18,96 +23,110 @@
 					if (!state.options) {
 						state.options = options;
 					}
+
 					break;
 				case 'preview-received':
 					state.previewItems = message.value;
-					state.previewItems.forEach((previewItem) => {
-						if (previewItem.to) {
-							previewItem.diffs = diff(previewItem.from, previewItem.to);
-						}
-
-						previewItem.contents?.forEach((content) => {
-							content.contextDiffs = diff(content.fromContext, content.toContext);
-						});
-						console.dir(previewItem.contents);
-					});
 					break;
 				case 'commit-done':
 					state.previewItems = undefined;
 					break;
 			}
 		});
-		await sendGetStateCommand();
-	});
 
+		const stateFetched = webview.getState();
+		if (stateFetched) {
+			state = stateFetched;
+		} else {
+			await sendGetStateCommand();
+		}
+	});
+	afterUpdate(() => {
+		webview.setState(state);
+	});
 	async function sendGetPreviewCommand() {
 		state.isPreviewLoading = true;
-		const result = await tsvscode.postMessage({
-			type: 'get-preview',
-			value: state
-		});
+		await webviewService.postMessage(webview, 'get-preview', state);
 		state.isPreviewLoading = false;
 	}
 
 	async function sendCommitCommand() {
 		state.isCommitLoading = true;
-
 		if (!state.previewItems) {
 			await sendGetPreviewCommand();
 		}
-
-		const result = await tsvscode.postMessage({
-			type: 'commit',
-			value: state
-		});
+		await webviewService.postMessage(webview, 'commit', state);
 		state.isCommitLoading = false;
 	}
 
 	async function sendGetStateCommand() {
 		state.isCommitLoading = true;
-
-		const result = await tsvscode.postMessage({
-			type: 'get-state',
-			value: undefined
-		});
-
+		await webviewService.postMessage(webview, 'get-state', undefined);
 		state.isCommitLoading = false;
 	}
 </script>
 
-<form on:submit|preventDefault={() => {}}>
-	<h1>{state.source}</h1>
-	<h3>From</h3>
-	<h3>Regex</h3>
-	<input type="checkbox" checked={state.options.isRegex} />
-	<input bind:value={state.from} required />
-	<h3>To</h3>
-	<input bind:value={state.to} required />
+<form
+	on:submit|preventDefault={() => {}}
+	class="h-full w-full px-10 flex flex-col items-start gap-3 pt-3"
+>
+	<h1 class="theme-on-primary">{state.sourcePath}</h1>
+	<div class="w-full">
+		<div class="mdc-form-field flex w-full">
+			<OutlinedTextField
+				label={'From'}
+				bind:value={state.fromInput}
+				required
+				class="flex-1 bg-white"
+			/>
+			<Checkbox label={'Regex'} bind:checked={state.options.isRegex} />
+		</div>
+	</div>
+	<div class="w-full">
+		<div class="mdc-form-field w-full">
+			<OutlinedTextField label={'To'} bind:value={state.toInput} class="w-full bg-white" />
+		</div>
+	</div>
 
-	<button
-		on:click|preventDefault={async () => {
-			await sendGetPreviewCommand();
-		}}>Preview</button
-	>
-	<button
-		on:click|preventDefault={async () => {
-			await sendCommitCommand();
-		}}>Commit</button
-	>
+	<div class="flex gap-3">
+		<TextButton
+			on:click={async () => {
+				await sendGetPreviewCommand();
+			}}>Preview</TextButton
+		>
 
-	<h3>Case Insensitive</h3>
-	<input type="checkbox" bind:checked={state.options.caseInsensitive} />
-	<h3>Include files</h3>
-	<input type="checkbox" bind:checked={state.options.includeFiles} />
-	<h3>Include folders</h3>
-	<input type="checkbox" bind:checked={state.options.includeFolders} />
-	<h3>Include contents</h3>
-	<input type="checkbox" bind:checked={state.options.includeContents} />
+		<TextButton
+			on:click={async () => {
+				await sendCommitCommand();
+			}}>Commit</TextButton
+		>
+	</div>
+
+	<div>
+		<div class="mdc-form-field">
+			<Checkbox label={'Case Insensitive'} bind:checked={state.options.caseInsensitive} />
+		</div>
+		<div class="mdc-form-field">
+			<Checkbox label={'Include files'} bind:checked={state.options.includeFiles} />
+		</div>
+	</div>
+	<div>
+		<div class="mdc-form-field">
+			<Checkbox label={'Include folders'} bind:checked={state.options.includeFolders} />
+		</div>
+		<div class="mdc-form-field">
+			<Checkbox label={'Include contents'} bind:checked={state.options.includeContents} />
+		</div>
+	</div>
 	{#if state.options.includeContents}
-		<h3>Context lines depth</h3>
-		<input type="number" bind:value={state.options.contextLinesDepth} />
-		<h3>Show line numbers</h3>
-		<input type="checkbox" bind:checked={state.options.showLineNumbers} />
+		<div>
+			<div class="mdc-form-field">
+				<Checkbox label={'Show line numbers'} bind:checked={state.options.showLineNumbers} />
+			</div>
+			<div class="mdc-form-field">
+				<NumberInput label={'Context lines depth'} bind:value={state.options.contextLinesDepth} />
+			</div>
+		</div>
 	{/if}
 
 	{#if state.isPreviewLoading}
@@ -118,44 +137,47 @@
 			<h3>Preview</h3>
 			{#each state.previewItems as previewItem}
 				<div>
-					{previewItem.from}
+					{previewItem.pathFrom}
 				</div>
 				<div>
-					{#if previewItem.diffs}
-						{#each previewItem.diffs as diff}
-							{#if diff[0] === -1}
-								<del style="background-color: red; color:white">{diff[1]}</del>
-							{:else if diff[0] === 1}
-								<ins style="background-color: green; color:white">{diff[1]}</ins>
-							{:else}
-								<span>{diff[1]}</span>
+					{#each previewItem.pathDiffs || [] as diff}
+						{#if diff[0] === -1}
+							<del style="background-color: red; color:white">{diff[1]}</del>
+						{:else if diff[0] === 1}
+							<ins style="background-color: green; color:white">{diff[1]}</ins>
+						{:else}
+							<span>{diff[1]}</span>
+						{/if}
+					{/each}
+				</div>
+				<div>
+					{#each previewItem?.lineNumbersWithChange || [] as lineNumberWithChange}
+						{#each Array.from(new Array(state.options.contextLinesDepth * 2 + 1), (x, i) => lineNumberWithChange - state.options.contextLinesDepth + i) as lineNumber}
+							{#if previewItem.contentDiffsLookup[lineNumber]}
+								{#if state.options.showLineNumbers}
+									<span>{lineNumber}:&nbsp;</span>
+								{/if}
+
+								{#each previewItem.contentDiffsLookup[lineNumber]?.diffs || [] as diff}
+									{#if diff[0] === -1}
+										<del style="background-color: red; color:white">{diff[1]}</del>
+									{:else if diff[0] === 1}
+										<ins style="background-color: green; color:white">{diff[1]}</ins>
+									{:else}
+										<span>{diff[1]}</span>
+									{/if}
+								{/each}
 							{/if}
 						{/each}
-					{/if}
-					{#if previewItem.contents}
-						<hr />
-						{#each previewItem.contents as content}
-							<div>
-								<div>
-									{content.fromContext}
-								</div>
-								<div>
-									{#each content.contextDiffs as contextDiff}
-										{#if contextDiff[0] === -1}
-											<del style="background-color: red; color:white">{contextDiff[1]}</del>
-										{:else if contextDiff[0] === 1}
-											<ins style="background-color: green; color:white">{contextDiff[1]}</ins>
-										{:else}
-											<span>{contextDiff[1]}</span>
-										{/if}
-									{/each}
-								</div>
-							</div>
-						{/each}
-					{/if}
+					{/each}
 				</div>
+
 				<hr />
 			{/each}
 		</div>
 	{/if}
 </form>
+
+<style lang="scss">
+	@use './_index.scss';
+</style>

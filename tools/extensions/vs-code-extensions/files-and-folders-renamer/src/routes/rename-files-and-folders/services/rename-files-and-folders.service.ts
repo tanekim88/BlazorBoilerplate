@@ -1,16 +1,31 @@
-import vscode from "vscode";
 import fs from 'fs';
 import path from 'path';
 
 import { RenameFilesAndFoldersState } from "../models/rename-files-and-folders-state";
-import { RenameFilesAndFoldersContent } from "../models/rename-files-and-folders-content";
+
 import { RenameFilesAndFoldersPreviewItem } from "../models/rename-files-and-folders-preview-item";
 import { RenameFilesAndFoldersOptions } from "../models/rename-files-and-folders-options";
-
+import diff from "fast-diff";
+import { RenameFilesAndFoldersContentDiffsByLineNumber } from "../models/rename-files-and-folders-content-diffs-by-line-number";
 
 class RenameFilesAndFoldersService {
   getPreviews(arg: RenameFilesAndFoldersState) {
-    let { source, from, to, options } = arg;
+    let { sourcePath, toInput, options } = arg;
+
+    this.processStateArgs(arg);
+
+    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options);
+    previewItems.forEach((previewItem) => {
+      if (previewItem.pathTo) {
+        previewItem.pathDiffs = diff(previewItem.pathFrom, previewItem.pathTo);
+      }
+    });
+
+    return previewItems;
+  }
+
+  processStateArgs(arg: RenameFilesAndFoldersState) {
+    let { fromInput: from, options } = arg;
 
     let regexOptions = '';
 
@@ -25,42 +40,41 @@ class RenameFilesAndFoldersService {
     if (!options.isRegex) {
       from = from?.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
+    let fromRegexInput = new RegExp(from!, regexOptions);
 
-    let regexFrom = new RegExp(from!, regexOptions);
-
-    const previewItems = this.getAllFilesAndFolderspreviewItems(source, regexFrom, to ?? '', options);
-    return previewItems;
+    arg.fromRegexInput = fromRegexInput;
   }
 
   commit(args: RenameFilesAndFoldersState) {
+    this.processStateArgs(args);
+
     let { previewItems, options } = args;
 
     if (!previewItems) {
-      previewItems = this.getPreviews(args);
+      const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
+      previewItems = this.getPreviews(newArgs);
     }
 
     const changeTracker: { [src: string]: string } = {};
     previewItems.reverse().forEach(previewItem => {
 
       if (options.includeContents) {
-        let content = fs.readFileSync(previewItem.from, { encoding: 'utf8' });
-        previewItem.contents?.reverse().forEach(contentData => {
-          content = content.slice(0, contentData.fromIndex) + contentData.toContent + content.slice(contentData.fromLastIndex);
-        });
-        fs.writeFileSync(previewItem.from, content);
+        let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' });
+        content = content.replace(args.fromRegexInput!, args.toInput);
+        fs.writeFileSync(previewItem.pathFrom, content);
       }
 
       do {
-        if (!previewItem.to) {
+        if (!previewItem.pathTo) {
           break;
         }
 
-        const isDirectory = fs.statSync(previewItem.from).isDirectory();
+        const isDirectory = fs.statSync(previewItem.pathFrom).isDirectory();
 
-        let basenameOfTo = path.basename(previewItem.to);
-        let dirnameOfTo = path.dirname(previewItem.to);
-        let basenameOfFrom = path.basename(previewItem.from);
-        let dirnameOfFrom = path.dirname(previewItem.from);
+        let basenameOfTo = path.basename(previewItem.pathTo);
+        let dirnameOfTo = path.dirname(previewItem.pathTo);
+        let basenameOfFrom = path.basename(previewItem.pathFrom);
+        let dirnameOfFrom = path.dirname(previewItem.pathFrom);
         const cachedDirnameOfFrom = changeTracker[dirnameOfFrom];
         dirnameOfFrom = cachedDirnameOfFrom ?? dirnameOfFrom;
         const finalTo = path.join(dirnameOfFrom, basenameOfTo);
@@ -70,25 +84,23 @@ class RenameFilesAndFoldersService {
 
         if (shouldExecute) {
           try {
-            fs.renameSync(previewItem.from, finalTo);
-            changeTracker[previewItem.from] = finalTo;
+            fs.renameSync(previewItem.pathFrom, finalTo);
+            changeTracker[previewItem.pathFrom] = finalTo;
           } catch (e) { }
         }
 
         previewItem = {
-          from: dirnameOfFrom,
-          to: dirnameOfTo
+          pathFrom: dirnameOfFrom,
+          pathTo: dirnameOfTo
         };
 
-      } while (previewItem.from !== previewItem.to);
-
-
+      } while (previewItem.pathFrom !== previewItem.pathTo);
     });
   }
 
 
   private getAllFilesAndFolderspreviewItems(
-    srcPath: string, fromInput: RegExp, toInput: string, 
+    srcPath: string, fromInput: RegExp, toInput: string,
     options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = []) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
@@ -102,14 +114,14 @@ class RenameFilesAndFoldersService {
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
 
-        if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].from)) {
-          const parentDirname = previewItems.pop()?.to;
+        if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].pathFrom)) {
+          const parentDirname = previewItems.pop()?.pathTo;
           to = path.join(parentDirname!, toBasename);
         }
 
         toPush = {
-          from: srcPath,
-          to
+          pathFrom: srcPath,
+          pathTo: to
         };
       }
     }
@@ -127,68 +139,80 @@ class RenameFilesAndFoldersService {
       });
     } else {
       if (options.includeContents) {
+
         const content = fs.readFileSync(srcPath, { encoding: 'utf8' });
-        const contentLength = content.length;
-        fromInput.lastIndex = 0;
-        let cont = fromInput.exec(content);
-        const contents: RenameFilesAndFoldersContent[] = [];
+        let lineNumber = 1;
 
-        while (cont) {
-          const index = cont!.index;
-          const lastIndex = fromInput.lastIndex;
-          cont = fromInput.exec(content);
+        const modified = content.replace(fromInput, toInput);
+        const result = diff(content, modified);
+        const lineNumberToDataCache: {
+          [name: number]: RenameFilesAndFoldersContentDiffsByLineNumber
+        } = {} as any;
+        result.forEach(d => {
+          const text = d[1];
+          const editState = d[0];
 
-          let contextIndex = index;
-          let contextLastIndex = lastIndex;
+          const reg = /(?<partTextSegment>[^\r\n]*)(?<newLine>\r?\n)?/g;
 
+          let r = reg.exec(text);
+          while (r && r[0]?.length) {
+            if (!lineNumberToDataCache[lineNumber]) {
+              lineNumberToDataCache[lineNumber] = { diffs: [], fromContext: '', containsDiff: false, lineNumber };
+            }
+            const partText = r[0];
+            if (partText) {
+              switch (editState) {
+                case 0:
+                  lineNumberToDataCache[lineNumber].fromContext += partText;
 
-          let currentContextLinesDepth = 0;
-          while (currentContextLinesDepth < (options.contextLinesDepth + 1) && contextIndex > 0) {
-            contextIndex = content.lastIndexOf('\n', Math.max(0, contextIndex - 1));
-            contextIndex = Math.max(0, contextIndex);
-            if (contextIndex > 0 && content[contextIndex - 1] === '\r') {
-              contextIndex -= 1;
+                  lineNumberToDataCache[lineNumber].diffs.push([0, partText]);
+                  break;
+                case -1:
+                  lineNumberToDataCache[lineNumber].fromContext += partText;
+                  lineNumberToDataCache[lineNumber].diffs.push([-1, partText]);
+                  lineNumberToDataCache[lineNumber].containsDiff = true;
+                  break;
+                case 1:
+                  lineNumberToDataCache[lineNumber].diffs.push([1, partText]);
+                  lineNumberToDataCache[lineNumber].containsDiff = true;
+                  break;
+              }
+
+              {
+                // let content: RenameFilesAndFoldersContent = {
+
+                // };
+              }
+            }
+            const newLine = r.groups?.newLine;
+            if (newLine) {
+              lineNumber += 1;
             }
 
-            contextLastIndex = content.indexOf('\n', Math.min(contentLength, contextLastIndex + 1));
-            if (contextLastIndex === -1) {
-              contextLastIndex = contentLength;
-            } else {
-              contextLastIndex += 1;
+            r = reg.exec(text);
+          };
+        });
+
+        const lineNumbersWithChange: number[] = [];
+        const contentDiffsLookup: { [lineNumber: number]: RenameFilesAndFoldersContentDiffsByLineNumber } = {};
+        const allLineNumbers = Object.keys(lineNumberToDataCache);
+        allLineNumbers.forEach(key => {
+          const lineNumber = Number(key);
+
+          if (lineNumberToDataCache[lineNumber].containsDiff) {
+            lineNumbersWithChange.push(lineNumber);
+            const minLineNumber = Math.max(1, lineNumber - options.contextLinesDepth);
+            const maxLineNumber = Math.min(Number(allLineNumbers[allLineNumbers.length - 1]), lineNumber + options.contextLinesDepth);
+            for (let tempLineNumber = minLineNumber; tempLineNumber <= maxLineNumber; tempLineNumber++) {
+              if (!contentDiffsLookup[tempLineNumber]) {
+                contentDiffsLookup[tempLineNumber] = lineNumberToDataCache[tempLineNumber];
+              }
             }
-
-            currentContextLinesDepth += 1;
-          }
-
-
-          let fromContext = content.slice(contextIndex, contextLastIndex);
-          const sliceIndex = index - contextIndex;
-
-          const fromContent = content.slice(index, lastIndex);
-
-          const toContent = fromContent.replace(fromInput, toInput);
-
-          let toContext = fromContext.slice(0, sliceIndex) + toContent + fromContext.slice(sliceIndex + fromContent.length);
-          fromContext = fromContext.replace(/^\r?\n|\r?\n$/g, '');
-          toContext = toContext.replace(/^\r?\n|\r?\n$/g, '');
-          contents.push({
-            fromIndex: index,
-            fromLastIndex: lastIndex,
-            toContent,
-            fromContext,
-            toContext
-          });
-
-        };
-
-        if (contents.length > 0) {
-          if (!toPush) {
-            toPush = {
-              from: srcPath,
-            }
-          }
-
-          toPush.contents = contents;
+          };
+        });
+        if (toPush) {
+          toPush.lineNumbersWithChange = lineNumbersWithChange;
+          toPush.contentDiffsLookup = contentDiffsLookup;
         }
       }
 

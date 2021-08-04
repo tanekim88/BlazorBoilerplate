@@ -1,7 +1,7 @@
 import vscode, { Webview } from "vscode";
 import fs from 'fs';
 import path from 'path';
-import { RenameFilesAndFoldersState } from "./models/rename-files-and-folders-state";
+import { defaultRenameFilesAndFoldersState, RenameFilesAndFoldersState } from "./models/rename-files-and-folders-state";
 import { renameFilesAndFoldersEvents } from "./events";
 
 export class RenameFilesAndFolders {
@@ -24,13 +24,17 @@ export class RenameFilesAndFolders {
   public key: Symbol;
 
   private readonly _panel: vscode.WebviewPanel;
-  private _state: RenameFilesAndFoldersState | undefined;
-  private readonly _extensionUri: vscode.Uri;
+  _state: RenameFilesAndFoldersState | undefined;
+  public static _extensionUri: vscode.Uri;
 
-  public constructor(extensionUri: vscode.Uri, panel?: vscode.WebviewPanel, state?: RenameFilesAndFoldersState) {
+  public constructor(state: RenameFilesAndFoldersState = defaultRenameFilesAndFoldersState, panel?: vscode.WebviewPanel) {
     this.key = Symbol();
-    this._extensionUri = extensionUri;
 
+    if (state.extensionUri) {
+      RenameFilesAndFolders._extensionUri = state.extensionUri;
+    }
+
+    state ??= defaultRenameFilesAndFoldersState;
     const column = vscode.window.activeTextEditor?.viewColumn;
     this._state = state;
 
@@ -62,10 +66,18 @@ export class RenameFilesAndFolders {
 
   private _getHtmlForWebview() {
     const webview = this._panel.webview;
-    const svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
-      this._extensionUri,
-      "src", "svelte"
+    let svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+      RenameFilesAndFolders._extensionUri,
+      "svelte"
     ));
+
+    if (!fs.existsSync(path.join(svelteDirPath.fsPath, 'index.html'))) {
+      svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+        RenameFilesAndFolders._extensionUri,
+        'out',
+        "svelte"
+      ));
+    }
 
     const htmlUri = webview.asWebviewUri(vscode.Uri.joinPath(
       svelteDirPath,

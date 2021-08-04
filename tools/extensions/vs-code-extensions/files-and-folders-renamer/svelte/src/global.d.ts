@@ -2,7 +2,11 @@
 
 import type { Webview } from "vscode";
 
-declare global{
-    const tsvscode: Webview;
+interface ExtendedWebview extends Webview {
+    setState: (obj: any) => void
+    getState: () => any
+}
+declare global {
+    const webview: ExtendedWebview;
 
 }
