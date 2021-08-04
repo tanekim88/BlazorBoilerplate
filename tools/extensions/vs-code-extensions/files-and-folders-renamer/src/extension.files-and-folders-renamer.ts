@@ -10,7 +10,7 @@ import { Sidebar } from './routes/sidebar';
 export function activate(context: vscode.ExtensionContext) {
 	// const item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right);
 	// item.text = "$(beaker) Great";
-	// item.command = "color-tool.open-rename-files-and-folders-form";
+	// item.command = "files-and-folders-renamer.open-rename-files-and-folders-form";
 	// item.show();
 
 	const sidebar = new Sidebar(context.extensionUri);
@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 	);
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('color-tool.display-colors', async (uri: vscode.Uri) => {
+		vscode.commands.registerCommand('files-and-folders-renamer.view-rename-files-and-folders', async (uri: vscode.Uri) => {
 			const state = Object.assign({}, defaultRenameFilesAndFoldersState, {
 				extensionUri: context.extensionUri, sourcePath: uri.fsPath
 			});
@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand('color-tool.refresh', async (uri: vscode.Uri) => {
+		vscode.commands.registerCommand('files-and-folders-renamer.refresh', async (uri: vscode.Uri) => {
 
 			// await vscode.commands.executeCommand(
 			// 	"workbench.action.closeSidebar"

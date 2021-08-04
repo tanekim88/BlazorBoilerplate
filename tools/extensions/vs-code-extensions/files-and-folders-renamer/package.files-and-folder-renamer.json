@@ -1,7 +1,7 @@
 {
-	"name": "color-tool",
-	"displayName": "Color tool",
-	"description": "Color tool",
+	"name": "files-and-folders-renamer",
+	"displayName": "Files and Folders Renamer",
+	"description": "Renames files and folders",
 	"version": "0.0.1",
 	"publisher": "tane",
 	"repository": {},
@@ -12,8 +12,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:color-tool.display-colors",
-		"onCommand:color-tool.refresh",
+		"onCommand:files-and-folders-renamer.view-rename-files-and-folders",
+		"onCommand:files-and-folders-renamer.refresh",
 		"onView:sidebar"
 	],
 	"main": "./out/src/extension.js",
@@ -43,12 +43,12 @@
 		},
 		"commands": [
 			{
-				"command": "color-tool.display-colors",
+				"command": "files-and-folders-renamer.view-rename-files-and-folders",
 				"title": "Rename Files and Folders",
 				"category": "renamer"
 			},
 			{
-				"command": "color-tool.refresh",
+				"command": "files-and-folders-renamer.refresh",
 				"title": "Refresh",
 				"category": "renamer"
 			}
@@ -57,12 +57,12 @@
 			"explorer/context": [
 				{
 					"when": "true",
-					"command": "color-tool.display-colors"
+					"command": "files-and-folders-renamer.view-rename-files-and-folders"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "color-tool.display-colors",
+					"command": "files-and-folders-renamer.view-rename-files-and-folders",
 					"when": "true"
 				}
 			]
