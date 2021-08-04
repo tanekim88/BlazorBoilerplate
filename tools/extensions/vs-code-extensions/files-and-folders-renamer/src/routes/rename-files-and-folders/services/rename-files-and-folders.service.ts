@@ -115,8 +115,9 @@ class RenameFilesAndFoldersService {
         let to = path.join(fromDirname, toBasename);
 
         if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].pathFrom)) {
+          const toPostFix =fromDirname.substr(previewItems[0].pathFrom.length);
           const parentDirname = previewItems.pop()?.pathTo;
-          to = path.join(parentDirname!, toBasename);
+          to = path.join(parentDirname!,toPostFix, toBasename);
         }
 
         toPush = {
