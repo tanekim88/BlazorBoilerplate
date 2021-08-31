@@ -1,13 +1,13 @@
 
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 import path from 'path';
-import { configs } from '@shared/configs';
+import { configs } from '#shared/configs';
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
 import sanitizeFilename from 'sanitize-filename';
-// import { configsCollections } from '@shared/configs-collection';
+// import { configsCollections } from '#shared/configs-collection';
 import {Plugin} from 'vite';
 import isString from 'lodash/isString';
 import partition from 'lodash/partition';

@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge';
-import sharedConfig from '@shared/tailwind.config';
+import sharedConfig from '#shared/tailwind.config';
 import path from 'path';
 // const elevation = tailwindcssElevation(['responsive']);
 // console.dir(tailwindcssElevation(['responsive']));

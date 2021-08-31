@@ -2,7 +2,7 @@ import PostcssEach from 'postcss-each';
 
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackPostcssEachService extends WebpackPostcssBaseService {

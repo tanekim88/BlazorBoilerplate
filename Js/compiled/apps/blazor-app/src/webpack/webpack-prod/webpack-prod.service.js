@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { WebpackProdService } from '@shared/src/webpack/webpack-prod/webpack-prod.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { WebpackProdService } from '#shared/src/webpack/webpack-prod/webpack-prod.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { BlazorAppWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
 import { BlazorAppWebpackSharedService } from '../webpack-shared/webpack-shared.service';
 let BlazorAppWebpackProdBaseService = class BlazorAppWebpackProdBaseService extends WebpackProdService {

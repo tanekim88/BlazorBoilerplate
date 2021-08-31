@@ -14,7 +14,7 @@
 
 // class IdentityServer {}
 import 'reflect-metadata';
-import { rootConfig } from '@root/configs';
+import { rootConfig } from '#root/configs';
 import path from 'path';
 import fs from 'fs';
 

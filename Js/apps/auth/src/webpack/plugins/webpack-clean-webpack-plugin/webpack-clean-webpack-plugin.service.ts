@@ -1,5 +1,5 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { WebpackCleanWebpackPluginService } from '@shared/src/webpack/plugins/webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { WebpackCleanWebpackPluginService } from '#shared/src/webpack/plugins/webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service';
 
 @CustomInjectable()
 export class AuthWebpackCleanWebpackPluginService extends WebpackCleanWebpackPluginService {

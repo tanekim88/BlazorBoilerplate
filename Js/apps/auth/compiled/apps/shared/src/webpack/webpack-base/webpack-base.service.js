@@ -16,8 +16,8 @@ exports.WebpackBaseService = void 0;
 const webpack_1 = __importDefault(require("webpack"));
 const environment_service_1 = require("../../modules/environment/environment/environment.service");
 const merge_service_1 = require("../../modules/utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 let WebpackBaseService = class WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions({}, options);

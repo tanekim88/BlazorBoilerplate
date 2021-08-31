@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackRulesService = exports.AuthWebpackRulesConfigService = void 0;
-const webpack_rules_service_1 = require("@shared/src/webpack/rules/webpack-rules/webpack-rules.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const webpack_rules_service_1 = require("#shared/src/webpack/rules/webpack-rules/webpack-rules.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let AuthWebpackRulesConfigService = class AuthWebpackRulesConfigService extends webpack_rules_service_1.WebpackRulesConfigService {
 };
 AuthWebpackRulesConfigService = __decorate([

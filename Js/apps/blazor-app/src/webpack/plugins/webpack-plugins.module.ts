@@ -14,7 +14,7 @@ import {
 } from './webpack-plugins/webpack-plugins.service';
 import { BlazorAppWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
 import { BlazorAppWebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
-import { CustomModule } from '@shared/src/functions/process-providers';
+import { CustomModule } from '#shared/src/functions/process-providers';
 import {
     BlazorAppWebpackPreRemoveFilesWebpackPluginService,
     BlazorAppWebpackRemoveFilesWebpackPluginService,
@@ -25,7 +25,7 @@ import {
     BlazorAppWebpackWatchEntriesPluginConfigService,
     BlazorAppWebpackWatchEntriesPluginService,
 } from './webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { WebpackPluginsModule } from '@shared/src/webpack/plugins/webpack-plugins.module';
+import { WebpackPluginsModule } from '#shared/src/webpack/plugins/webpack-plugins.module';
 
 @CustomModule({
     providers: [

@@ -2,7 +2,7 @@ import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-
 
 import webpack from 'webpack';
 import path from 'path';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackProvidePluginService extends WebpackPluginBaseService {

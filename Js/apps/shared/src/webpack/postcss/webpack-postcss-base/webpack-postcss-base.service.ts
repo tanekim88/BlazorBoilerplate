@@ -1,8 +1,8 @@
 import { MergeService } from '../../../modules/utilities/merge/merge/merge.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
-import { EnvironmentService } from '@shared/src/modules/environment/environment/environment.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
+import { EnvironmentService } from '#shared/src/modules/environment/environment/environment.service';
 @CustomInjectable()
 export class WebpackPostcssBaseService {
     @CustomInject(MergeService)

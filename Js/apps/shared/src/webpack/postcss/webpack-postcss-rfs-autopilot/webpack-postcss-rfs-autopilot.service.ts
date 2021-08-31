@@ -1,7 +1,7 @@
 import PostcssRfsAutopilot from './postcss-rfs-autopilot';
 
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 const numbers = [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64];
 

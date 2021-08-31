@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackWebpackPwaManifestService = class WebpackWebpackPwaManifestService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackPwaManifest);

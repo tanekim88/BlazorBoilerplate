@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 

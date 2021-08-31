@@ -1,7 +1,7 @@
-import { ModulesModule } from '@shared/src/modules/modules.module';
-import { CustomModule } from '@shared/src/functions/process-providers';
+import { ModulesModule } from '#shared/src/modules/modules.module';
+import { CustomModule } from '#shared/src/functions/process-providers';
 
-import { WebpackModule } from '@shared/src/webpack/webpack.module';
+import { WebpackModule } from '#shared/src/webpack/webpack.module';
 import { BlazorAppModulesModule } from '../modules/modules.module';
 import { BlazorAppWebpackPluginsModule } from './plugins/webpack-plugins.module';
 import { BlazorAppWebpackRulesModule } from './rules/webpack-rules.module';

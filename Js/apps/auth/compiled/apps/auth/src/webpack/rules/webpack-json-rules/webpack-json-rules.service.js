@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackJsonRulesService = void 0;
-const webpack_json_rules_service_1 = require("@shared/src/webpack/rules/webpack-json-rules/webpack-json-rules.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const webpack_json_rules_service_1 = require("#shared/src/webpack/rules/webpack-json-rules/webpack-json-rules.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let AuthWebpackJsonRulesService = class AuthWebpackJsonRulesService extends webpack_json_rules_service_1.WebpackJsonRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);

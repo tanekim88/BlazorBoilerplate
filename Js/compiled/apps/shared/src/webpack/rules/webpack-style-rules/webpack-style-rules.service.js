@@ -10,12 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { WebpackRulesBaseService } from '../webpack-rules-base/webpack-rules-base.service';
 import sass from 'sass';
 import { WebpackPostcssService } from '../../postcss/webpack-postcss/webpack-postcss.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
-import { sharedPaths } from '@shared/paths';
-import { rootPaths } from '@root/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
+import { sharedPaths } from '#shared/paths';
+import { rootPaths } from '#root/paths';
 import nodeSassUtils from 'node-sass-utils';
-import { sassVariables } from '@shared/src/web/material/variables/sass-variables';
+import { sassVariables } from '#shared/src/web/material/variables/sass-variables';
 const sassUtils = nodeSassUtils(sass);
 let WebpackStyleRulesService = class WebpackStyleRulesService extends WebpackRulesBaseService {
     webpackPostcssService;

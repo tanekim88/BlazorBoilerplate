@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackRfsService = void 0;
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const rfs_1 = __importDefault(require("rfs"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackRfsService = class WebpackRfsService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(rfs_1.default);

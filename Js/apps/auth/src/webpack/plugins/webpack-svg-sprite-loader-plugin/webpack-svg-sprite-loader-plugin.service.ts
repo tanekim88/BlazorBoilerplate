@@ -1,7 +1,7 @@
-import { WebpackSvgSpriteLoaderPluginService } from '@shared/src/webpack/plugins/webpack-svg-sprite-loader-plugin/webpack-svg-sprite-loader-plugin.service';
+import { WebpackSvgSpriteLoaderPluginService } from '#shared/src/webpack/plugins/webpack-svg-sprite-loader-plugin/webpack-svg-sprite-loader-plugin.service';
 
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class AuthWebpackSvgSpriteLoaderPluginService extends WebpackSvgSpriteLoaderPluginService {

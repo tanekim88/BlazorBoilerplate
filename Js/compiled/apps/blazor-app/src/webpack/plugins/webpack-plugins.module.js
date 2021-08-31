@@ -12,12 +12,12 @@ import { BlazorAppWebpackMiniCssExtractPluginService, BlazorAppWebpackMiniCssExt
 import { BlazorAppWebpackPluginsService, BlazorAppWebpackPluginsConfigService, } from './webpack-plugins/webpack-plugins.service';
 import { BlazorAppWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
 import { BlazorAppWebpackWorkboxWebpackPluginService } from './webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
-import { CustomModule } from '@shared/src/functions/process-providers';
+import { CustomModule } from '#shared/src/functions/process-providers';
 import { BlazorAppWebpackPreRemoveFilesWebpackPluginService, BlazorAppWebpackRemoveFilesWebpackPluginService, } from './webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
 import { BlazorAppWebpackTsconfigPathsWebpackPluginService } from './webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
 import { BlazorAppWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
 import { BlazorAppWebpackWatchEntriesPluginConfigService, BlazorAppWebpackWatchEntriesPluginService, } from './webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { WebpackPluginsModule } from '@shared/src/webpack/plugins/webpack-plugins.module';
+import { WebpackPluginsModule } from '#shared/src/webpack/plugins/webpack-plugins.module';
 let BlazorAppWebpackPluginsModule = class BlazorAppWebpackPluginsModule {
 };
 BlazorAppWebpackPluginsModule = __decorate([

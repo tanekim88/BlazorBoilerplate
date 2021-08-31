@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackSvgSpriteLoaderPluginService = void 0;
-const webpack_svg_sprite_loader_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-svg-sprite-loader-plugin/webpack-svg-sprite-loader-plugin.service");
+const webpack_svg_sprite_loader_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-svg-sprite-loader-plugin/webpack-svg-sprite-loader-plugin.service");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let AuthWebpackSvgSpriteLoaderPluginService = class AuthWebpackSvgSpriteLoaderPluginService extends webpack_svg_sprite_loader_plugin_service_1.WebpackSvgSpriteLoaderPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);

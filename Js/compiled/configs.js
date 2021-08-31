@@ -1,4 +1,4 @@
-import { ConfigBase } from '@shared/configs.base';
+import { ConfigBase } from '#shared/configs.base';
 import path from 'path';
 class RootConfig extends ConfigBase {
     rootDir = __dirname;

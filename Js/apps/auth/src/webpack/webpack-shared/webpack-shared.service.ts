@@ -1,22 +1,22 @@
 import { Configuration } from 'webpack';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 
 import {
     Patterns,
     WebpackWatchEntriesPlugin,
     WebpackWatchEntriesPluginService,
-} from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 
-import { WebpackSharedService } from '@shared/src/webpack/webpack-shared/webpack-shared.service';
-import { AuthPaths, authPaths } from '@auth/paths';
+import { WebpackSharedService } from '#shared/src/webpack/webpack-shared/webpack-shared.service';
+import { AuthPaths, authPaths } from '#auth/paths';
 
 import path from 'path';
 import { AuthEnvironmentService } from '../../modules/environment/environment/environment.service';
 import { AuthWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 import { AuthWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
-import { sharedPaths } from '@shared/paths';
+import { sharedPaths } from '#shared/paths';
 @CustomInjectable()
 export class AuthWebpackSharedService extends WebpackSharedService {
     @CustomInject(AuthEnvironmentService)

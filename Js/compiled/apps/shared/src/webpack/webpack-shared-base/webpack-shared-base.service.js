@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 import { WebpackBaseService } from '../webpack-base/webpack-base.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
-import { rootConfig } from '@root/configs';
-import { sharedPaths } from '@shared/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
+import { rootConfig } from '#root/configs';
+import { sharedPaths } from '#shared/paths';
 import { WebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
 import { WebpackTsconfigPathsWebpackPluginService } from '../plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
 const rootDir = rootConfig.rootDir;

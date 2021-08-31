@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthEnvironmentModule = void 0;
-const configs_1 = require("@shared/configs");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const configs_1 = require("#shared/configs");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const configs_2 = require("../../../configs");
 const environment_service_1 = require("./environment/environment.service");
 console.dir(configs_2.authConfig);

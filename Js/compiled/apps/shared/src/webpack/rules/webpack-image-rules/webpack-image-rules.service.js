@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { WebpackRulesBaseService } from '../webpack-rules-base/webpack-rules-base.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackImageRulesService = class WebpackImageRulesService extends WebpackRulesBaseService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {

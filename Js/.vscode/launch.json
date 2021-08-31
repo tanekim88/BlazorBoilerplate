@@ -9,7 +9,10 @@
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "node",
-            "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only", "-r", "tsconfig-paths/register"],
+            "runtimeArgs": [
+                "--loader" ,"ts-node/esm", "--experimental-specifier-resolution=node", "--experimental-modules", "--no-warnings"
+
+            ],
             "args": ["${relativeFile}"],
             "cwd": "${workspaceRoot}",
             "internalConsoleOptions": "openOnSessionStart",

@@ -1,6 +1,6 @@
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 import Rfs from 'rfs';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackRfsService extends WebpackPostcssBaseService {

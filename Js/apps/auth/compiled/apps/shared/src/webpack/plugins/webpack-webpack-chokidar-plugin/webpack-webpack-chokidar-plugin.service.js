@@ -16,7 +16,7 @@ exports.WebpackWebpackChokidarPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 // const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
 const chokidar_1 = __importDefault(require("chokidar"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackWebpackChokidarPluginService = class WebpackWebpackChokidarPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(WebpackChokidarPlugin);

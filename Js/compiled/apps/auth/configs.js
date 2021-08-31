@@ -1,4 +1,4 @@
-import { ConfigBase } from '@shared/configs.base';
+import { ConfigBase } from '#shared/configs.base';
 import { authPaths, AuthPaths } from './paths';
 export class AuthConfig extends ConfigBase {
     rootDir = authPaths.toAbsolutePath();

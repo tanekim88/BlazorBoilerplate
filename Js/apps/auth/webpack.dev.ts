@@ -1,4 +1,4 @@
-import { WebpackBase } from '@shared/webpack.base';
+import { WebpackBase } from '#shared/webpack.base';
 import {
     AuthWebpackDevConfigService,
     AuthWebpackDevService,

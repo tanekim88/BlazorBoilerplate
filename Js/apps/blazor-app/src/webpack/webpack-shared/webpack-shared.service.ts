@@ -1,16 +1,16 @@
 import { Configuration } from 'webpack';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 
 import {
     Patterns,
     WebpackWatchEntriesPlugin,
     WebpackWatchEntriesPluginService,
-} from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 
-import { WebpackSharedService } from '@shared/src/webpack/webpack-shared/webpack-shared.service';
-import { BlazorAppPaths, blazorAppPaths } from '@blazor-app/paths';
+import { WebpackSharedService } from '#shared/src/webpack/webpack-shared/webpack-shared.service';
+import { BlazorAppPaths, blazorAppPaths } from '#blazor-app/paths';
 
 import path from 'path';
 import { BlazorAppEnvironmentService } from '../../modules/environment/environment/environment.service';

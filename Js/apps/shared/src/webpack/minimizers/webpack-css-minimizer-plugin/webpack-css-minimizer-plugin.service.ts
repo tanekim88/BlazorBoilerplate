@@ -2,7 +2,7 @@ import { WebpackPluginBaseService } from '../../plugins/webpack-plugin-base/webp
 
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackCssMinimizerPluginService extends WebpackPluginBaseService {

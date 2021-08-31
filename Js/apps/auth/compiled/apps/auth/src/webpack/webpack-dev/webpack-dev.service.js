@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackDevService = exports.AuthWebpackDevConfigService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
-const webpack_dev_service_1 = require("@shared/src/webpack/webpack-dev/webpack-dev.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
+const webpack_dev_service_1 = require("#shared/src/webpack/webpack-dev/webpack-dev.service");
 const webpack_shared_config_service_1 = require("../webpack-shared-config/webpack-shared-config.service");
 const webpack_shared_service_1 = require("../webpack-shared/webpack-shared.service");
 let AuthWebpackDevBaseService = class AuthWebpackDevBaseService extends webpack_dev_service_1.WebpackDevService {

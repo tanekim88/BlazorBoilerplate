@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { WebpackHtmlWebpackPluginService } from '@shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
-import { blazorAppPaths } from '@blazor-app/paths';
-import { blazorAppConfig } from '@blazor-app/configs';
-import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
+import { WebpackHtmlWebpackPluginService } from '#shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { blazorAppPaths } from '#blazor-app/paths';
+import { blazorAppConfig } from '#blazor-app/configs';
+import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
     blazorAppClientEnvironmentService;
     createOptions(options) {

@@ -3,12 +3,12 @@ const final = {
 };
 import fs from 'fs';
 import packageJson from '../package.json';
-import blazorPackageJson from '@blazor-app/package.json';
-import authPackageJson from '@auth/package.json';
-import sharedPackageJson from '@shared/package.json';
+import blazorPackageJson from '#blazor-app/package.json';
+import authPackageJson from '#auth/package.json';
+import sharedPackageJson from '#shared/package.json';
 import path from 'path';
 import symlinkDir from 'symlink-dir';
-import { rootConfig } from '@root/configs';
+import { rootConfig } from '#root/configs';
 const childs = [
     {
         folderName: 'shared',
@@ -123,6 +123,28 @@ const commandObjs = [
     {
         name: 'watch:prod:webpack',
         command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" webpack --mode=production --watch --config webpack.prod.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'build:vite',
+        command: 
+        // 'cross-env TS_NODE_PROJECT="tsconfig.json" vite --mode development --config vite.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
+        'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --config vite.dev.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'build:prod:vite',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --config vite.prod.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'watch:vite',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --watch --config vite.dev.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'watch:prod:vite',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --watch --config vite.prod.ts',
         includes: [...childShortNames],
     },
     {

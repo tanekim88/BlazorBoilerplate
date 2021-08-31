@@ -1,7 +1,7 @@
-import { WebpackProdService } from '@shared/src/webpack/webpack-prod/webpack-prod.service';
+import { WebpackProdService } from '#shared/src/webpack/webpack-prod/webpack-prod.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { AuthWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
 import { AuthWebpackSharedService } from '../webpack-shared/webpack-shared.service';
 

@@ -1,7 +1,7 @@
 import { RuleSetRule } from 'webpack';
-import { WebpackCsvRulesService } from '@shared/src/webpack/rules/webpack-csv-rules/webpack-csv-rules.service';
+import { WebpackCsvRulesService } from '#shared/src/webpack/rules/webpack-csv-rules/webpack-csv-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class AuthWebpackCsvRulesService extends WebpackCsvRulesService {

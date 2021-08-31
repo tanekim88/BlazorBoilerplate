@@ -1,4 +1,4 @@
-import { RootPaths, rootPaths } from "@root/paths";
+import { RootPaths, rootPaths } from "#root/paths";
 
 export const authPaths = rootPaths.apps.auth;
 

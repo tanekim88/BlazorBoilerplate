@@ -4,14 +4,14 @@ const final = {
 import fs from 'fs';
 import packageJson from '../package.json';
 
-import blazorPackageJson from '@blazor-app/package.json';
-import authPackageJson from '@auth/package.json';
-import sharedPackageJson from '@shared/package.json';
+import blazorPackageJson from '#blazor-app/package.json';
+import authPackageJson from '#auth/package.json';
+import sharedPackageJson from '#shared/package.json';
 
 import path from 'path';
 
 import symlinkDir from 'symlink-dir';
-import { rootConfig } from '@root/configs';
+import { rootConfig } from '#root/configs';
 
 const childs = [
     {
@@ -272,4 +272,4 @@ childs.forEach((child) => {
 
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4), 'utf8');
 
-require('./generate-paths');
+import './generate-paths';

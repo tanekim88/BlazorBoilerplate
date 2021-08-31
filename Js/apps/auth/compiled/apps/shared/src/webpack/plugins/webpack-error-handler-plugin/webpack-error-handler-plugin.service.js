@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackErrorHandlerPlugin = exports.WebpackErrorHandlerPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackErrorHandlerPluginService = class WebpackErrorHandlerPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(WebpackErrorHandlerPlugin);

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
 import { VitePluginGlobInputService } from '../vite-plugin-glob-input/vite-plugin-glob-input.service';
 let VitePluginsService = class VitePluginsService {

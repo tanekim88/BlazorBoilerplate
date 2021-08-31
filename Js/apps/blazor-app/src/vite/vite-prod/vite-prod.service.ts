@@ -1,7 +1,7 @@
 
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
-import { ViteProdService } from '@shared/src/vite/vite-prod/vite-prod.service';
+import { ViteProdService } from '#shared/src/vite/vite-prod/vite-prod.service';
 import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
 
 @CustomInjectable()

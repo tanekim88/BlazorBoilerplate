@@ -1,4 +1,4 @@
-import { CustomModule } from '@shared/src/functions/process-providers';
+import { CustomModule } from '#shared/src/functions/process-providers';
 
 import { AuthMergeService } from './merge/merge.service';
 

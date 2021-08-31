@@ -1,7 +1,7 @@
 import ClosurePlugin from 'closure-webpack-plugin';
 import { WebpackPluginBaseService } from '../../plugins/webpack-plugin-base/webpack-plugin-base.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 // new ClosurePlugin({
 //     test: /.js/,

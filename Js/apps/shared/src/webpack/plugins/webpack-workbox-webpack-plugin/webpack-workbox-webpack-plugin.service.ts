@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import WorkboxWebpackPlugin, { InjectManifestOptions } from 'workbox-webpack-plugin';
 
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';

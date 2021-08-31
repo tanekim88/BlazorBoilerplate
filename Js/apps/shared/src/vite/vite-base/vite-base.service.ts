@@ -2,8 +2,8 @@ import vite, { ConfigEnv, UserConfig } from 'vite';
 import { EnvironmentService } from '../../modules/environment/environment/environment.service';
 import { MergeService } from '../../modules/utilities/merge/merge/merge.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { VitePluginsService } from '../vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()

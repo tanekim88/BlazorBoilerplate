@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 const ExtractSvgSpriteWebpackPlugin = require('extract-svg-sprite-webpack-plugin');
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackExtractSvgSpriteWebpackPluginService = class WebpackExtractSvgSpriteWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
         super(ExtractSvgSpriteWebpackPlugin);

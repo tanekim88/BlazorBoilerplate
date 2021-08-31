@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackImageRulesService = void 0;
 const webpack_rules_base_service_1 = require("../webpack-rules-base/webpack-rules-base.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackImageRulesService = class WebpackImageRulesService extends webpack_rules_base_service_1.WebpackRulesBaseService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {

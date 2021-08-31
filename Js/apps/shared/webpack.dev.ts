@@ -15,7 +15,7 @@ webpackBase.execute();
 // import path from 'path';
 // import { register } from 'tsconfig-paths';
 // import { identityServerConfig } from './configs';
-// import { rootConfig } from '@root/configs';
+// import { rootConfig } from '#root/configs';
 
 // const rootTsConfigPath = path.resolve(rootConfig.rootDir, 'tsconfig.json');
 // const rootTsConfig = typescript.parseConfigFileTextToJson(rootTsConfigPath, fs.readFileSync(rootTsConfigPath, 'utf8'));

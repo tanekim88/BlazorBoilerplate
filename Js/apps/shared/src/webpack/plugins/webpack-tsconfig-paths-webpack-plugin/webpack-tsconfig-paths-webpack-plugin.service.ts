@@ -1,6 +1,6 @@
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackTsconfigPathsWebpackPluginService extends WebpackPluginBaseService {

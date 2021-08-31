@@ -1,9 +1,9 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 import {
     WebpackWatchEntriesPluginConfigService,
     WebpackWatchEntriesPluginService,
-} from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 
 @CustomInjectable()
 export class BlazorAppWebpackWatchEntriesPluginConfigService extends WebpackWatchEntriesPluginConfigService {

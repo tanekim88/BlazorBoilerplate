@@ -1,8 +1,8 @@
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 
 import SVGSpritemapPlugin from 'svg-spritemap-webpack-plugin';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { sharedPaths } from '@shared/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { sharedPaths } from '#shared/paths';
 import path from 'path';
 
 @CustomInjectable()

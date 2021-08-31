@@ -10,7 +10,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MergeService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const lodash_1 = __importDefault(require("lodash"));
 const merge_with_customizer_1 = require("./merge-with-customizer");
 let MergeService = class MergeService {

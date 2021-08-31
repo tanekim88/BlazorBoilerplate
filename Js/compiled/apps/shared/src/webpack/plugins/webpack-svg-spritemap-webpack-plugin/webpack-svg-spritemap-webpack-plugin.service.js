@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import SVGSpritemapPlugin from 'svg-spritemap-webpack-plugin';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { sharedPaths } from '@shared/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { sharedPaths } from '#shared/paths';
 import path from 'path';
 let WebpackSvgSpriteMapWebpackPluginService = class WebpackSvgSpriteMapWebpackPluginService extends WebpackPluginBaseService {
     constructor() {

@@ -1,5 +1,5 @@
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 import PurgeCss from '@fullhuman/postcss-purgecss';
 

@@ -16,8 +16,8 @@ exports.WebpackPostcssImportService = void 0;
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const postcss_import_1 = __importDefault(require("postcss-import"));
 const environment_service_1 = require("../../../modules/environment/environment/environment.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 let WebpackPostcssImportService = class WebpackPostcssImportService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(postcss_import_1.default);

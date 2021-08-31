@@ -4,7 +4,7 @@ import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-
 
 import chokidar from 'chokidar';
 import { Compiler } from 'webpack';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackWebpackChokidarPluginService extends WebpackPluginBaseService {

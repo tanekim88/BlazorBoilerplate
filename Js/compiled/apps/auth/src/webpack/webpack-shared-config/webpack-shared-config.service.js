@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
-import { authPaths } from '@auth/paths';
-import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginConfigService, } from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { WebpackSharedConfigService } from '@shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
+import { authPaths } from '#auth/paths';
+import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginConfigService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackSharedConfigService } from '#shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
 import { AuthEnvironmentService } from '../../modules/environment/environment/environment.service';
 import { AuthWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
 import { AuthWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';

@@ -10,11 +10,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackStyleRulesService = void 0;
-const webpack_style_rules_service_1 = require("@shared/src/webpack/rules/webpack-style-rules/webpack-style-rules.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const merge_command_1 = require("@shared/src/modules/utilities/merge/merge/merge-command");
+const webpack_style_rules_service_1 = require("#shared/src/webpack/rules/webpack-style-rules/webpack-style-rules.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const merge_command_1 = require("#shared/src/modules/utilities/merge/merge/merge-command");
 const mini_css_extract_plugin_1 = __importDefault(require("mini-css-extract-plugin"));
-const paths_1 = require("@auth/paths");
+const paths_1 = require("#auth/paths");
 const path_1 = __importDefault(require("path"));
 let AuthWebpackStyleRulesService = class AuthWebpackStyleRulesService extends webpack_style_rules_service_1.WebpackStyleRulesService {
     createRule(options) {

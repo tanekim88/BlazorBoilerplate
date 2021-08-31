@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackRemoveFilesWebpackPluginService = exports.AuthWebpackPreRemoveFilesWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const webpack_remove_files_webpack_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_remove_files_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service");
 const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
 let AuthWebpackPreRemoveFilesWebpackPluginService = class AuthWebpackPreRemoveFilesWebpackPluginService extends webpack_remove_files_webpack_plugin_service_1.WebpackPreRemoveFilesWebpackPluginService {
     createOptions(options) {

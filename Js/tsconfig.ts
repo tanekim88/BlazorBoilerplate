@@ -44,22 +44,22 @@
         types: ['jest', 'node', 'vite/client'],
         baseUrl: './',
         paths: {
-            "@shared/*": [
+            "#shared/*": [
                 "./apps/shared/*"
             ],
-            "@auth/*": [
+            "#auth/*": [
                 "./apps/auth/*"
             ],
-            "@blazor-app/*": [
+            "#blazor-app/*": [
                 "./apps/blazor-app/*"
             ],
-            "@Auth/*": [
+            "#Auth/*": [
                 "../Apps/Auth/Server/*"
             ],
-            "@BlazorApp/*": [
+            "#BlazorApp/*": [
                 "../Apps/BlazorApp/Client/*"
             ],
-            "@root/*": [
+            "#root/*": [
                 "*"
             ]
         },
@@ -70,9 +70,9 @@
         ".eslintrc.ts",
         ".prettierrc.ts",
         ".stylelintrc.ts",
-        "@shared/.eslintrc.ts",
-        "@shared/.prettierrc.ts",
-        "@shared/.stylelintrc.ts",
+        "#shared/.eslintrc.ts",
+        "#shared/.prettierrc.ts",
+        "#shared/.stylelintrc.ts",
         "./apps/auth/.eslintrc.ts",
         "./apps/auth/.prettierrc.ts",
         "./apps/auth/.stylelintrc.ts",

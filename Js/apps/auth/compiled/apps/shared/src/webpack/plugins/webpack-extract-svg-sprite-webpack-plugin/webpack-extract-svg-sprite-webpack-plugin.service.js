@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackExtractSvgSpriteWebpackPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const ExtractSvgSpriteWebpackPlugin = require('extract-svg-sprite-webpack-plugin');
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackExtractSvgSpriteWebpackPluginService = class WebpackExtractSvgSpriteWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(ExtractSvgSpriteWebpackPlugin);

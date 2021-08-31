@@ -14,12 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackSharedAspnetcoreService = void 0;
 const webpack_rules_service_1 = require("../rules/webpack-rules/webpack-rules.service");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 const webpack_watch_entries_plugin_service_1 = require("../plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const configs_1 = require("@root/configs");
+const configs_1 = require("#root/configs");
 const webpack_plugins_service_1 = require("../plugins/webpack-plugins/webpack-plugins.service");
-const paths_1 = require("@shared/paths");
+const paths_1 = require("#shared/paths");
 const path_1 = __importDefault(require("path"));
 const webpack_shared_service_1 = require("../webpack-shared/webpack-shared.service");
 const rootDir = configs_1.rootConfig.rootDir;

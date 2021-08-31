@@ -17,7 +17,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackHtmlWebpackPluginService = void 0;
 const common_1 = require("@nestjs/common");
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 let WebpackHtmlWebpackPluginService = class WebpackHtmlWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {

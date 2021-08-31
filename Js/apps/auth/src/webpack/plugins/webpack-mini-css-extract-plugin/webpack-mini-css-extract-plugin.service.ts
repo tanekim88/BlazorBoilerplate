@@ -1,9 +1,9 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
     WebpackMiniCssExtractPluginService,
     WebpackMiniCssExtractPluginConfigService,
-} from '@shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
 
 @CustomInjectable()
 export class AuthWebpackMiniCssExtractPluginConfigService extends WebpackMiniCssExtractPluginConfigService {

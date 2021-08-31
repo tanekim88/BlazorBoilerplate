@@ -1,17 +1,17 @@
 import { Configuration } from 'webpack';
 
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 
-import { authPaths } from '@auth/paths';
+import { authPaths } from '#auth/paths';
 import {
     Patterns,
     WebpackWatchEntriesPlugin,
     WebpackWatchEntriesPluginConfigService,
-} from '@shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 
-import { WebpackSharedConfigService } from '@shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
+import { WebpackSharedConfigService } from '#shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
 import { AuthEnvironmentService } from '../../modules/environment/environment/environment.service';
 import { AuthWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
 import { AuthWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';

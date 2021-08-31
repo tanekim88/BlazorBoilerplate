@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { ViteBaseService } from '../Vite-base/Vite-base.service';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { ViteSharedService } from '../vite-shared/vite-shared.service';
 let ViteProdService = class ViteProdService extends ViteBaseService {
     viteSharedService;

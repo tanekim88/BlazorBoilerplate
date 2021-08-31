@@ -2,13 +2,13 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import { Compiler } from 'webpack';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import {
     WebpackHtmlWebpackCustomizerPlugin,
     WebpackHtmlWebpackCustomizerPluginService,
-} from '@shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
 
-import { authPaths } from '@auth/paths';
+import { authPaths } from '#auth/paths';
 
 @CustomInjectable()
 export class AuthWebpackHtmlWebpackCustomizerPluginService extends WebpackHtmlWebpackCustomizerPluginService {

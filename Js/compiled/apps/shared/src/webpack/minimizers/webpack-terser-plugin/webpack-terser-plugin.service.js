@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../../plugins/webpack-plugin-base/webpack-plugin-base.service';
 import TerserPlugins from 'terser-webpack-plugin';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackTerserPluginService = class WebpackTerserPluginService extends WebpackPluginBaseService {
     constructor() {
         super(TerserPlugins);

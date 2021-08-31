@@ -1,8 +1,8 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import {
     WebpackRemoveFilesWebpackPluginService,
     WebpackPreRemoveFilesWebpackPluginService,
-} from '@shared/src/webpack/plugins/webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
+} from '#shared/src/webpack/plugins/webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
 
 const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
 

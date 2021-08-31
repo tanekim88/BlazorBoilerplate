@@ -1,7 +1,7 @@
-import { authPaths } from '@auth/paths';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { authPaths } from '#auth/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { InjectManifestOptions } from 'workbox-webpack-plugin';
-import { WebpackWorkboxWebpackPluginService } from '@shared/src/webpack/plugins/webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
+import { WebpackWorkboxWebpackPluginService } from '#shared/src/webpack/plugins/webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
 
 @CustomInjectable()
 export class AuthWebpackWorkboxWebpackPluginService extends WebpackWorkboxWebpackPluginService {

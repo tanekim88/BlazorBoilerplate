@@ -1,7 +1,7 @@
 import PostcssSimpleVars from 'postcss-simple-vars';
 
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class WebpackPostcssSimpleVarsService extends WebpackPostcssBaseService {

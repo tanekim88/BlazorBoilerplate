@@ -15,8 +15,8 @@ import { WebpackStyleRulesService } from '../webpack-style-rules/webpack-style-r
 import { WebpackSvgRulesService } from '../webpack-svg-rules/webpack-svg-rules.service';
 import { WebpackTsRulesService } from '../webpack-ts-rules/webpack-ts-rules.service';
 import { WebpackXmlRulesService } from '../webpack-xml-rules/webpack-xml-rules.service';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 let WebpackRulesConfigService = class WebpackRulesConfigService {
     webpackStyleRulesService;
     webpackCsvRulesService;

@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 
 
-import { WebpackRulesModule } from '@shared/src/webpack/rules/webpack-rules.module';
-import { CustomModule } from '@shared/src/functions/process-providers';
+import { WebpackRulesModule } from '#shared/src/webpack/rules/webpack-rules.module';
+import { CustomModule } from '#shared/src/functions/process-providers';
 import { AuthWebpackRulesConfigService, AuthWebpackRulesService } from './webpack-rules/webpack-rules.service';
 import { AuthWebpackCsvRulesService } from './webpack-csv-rules/webpack-csv-rules.service';
 import { AuthWebpackFontRulesService } from './webpack-font-rules/webpack-font-rules.service';

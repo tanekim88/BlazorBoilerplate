@@ -1,5 +1,5 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { WebpackTsconfigPathsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { WebpackTsconfigPathsWebpackPluginService } from '#shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
 
 @CustomInjectable()
 export class AuthWebpackTsconfigPathsWebpackPluginService extends WebpackTsconfigPathsWebpackPluginService {

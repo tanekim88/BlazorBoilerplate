@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 import {
     Patterns,
@@ -6,9 +6,9 @@ import {
     WebpackWatchEntriesPluginConfigService,
 } from '../plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 import { Configuration } from 'webpack';
-import { rootConfig } from '@root/configs';
-import { sharedPaths } from '@shared/paths';
-import { rootPaths } from '@root/paths';
+import { rootConfig } from '#root/configs';
+import { sharedPaths } from '#shared/paths';
+import { rootPaths } from '#root/paths';
 
 import { WebpackSharedBaseService } from '../webpack-shared-base/webpack-shared-base.service';
 

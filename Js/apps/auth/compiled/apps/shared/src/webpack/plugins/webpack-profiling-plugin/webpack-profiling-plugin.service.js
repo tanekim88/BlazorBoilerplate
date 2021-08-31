@@ -16,7 +16,7 @@ exports.WebpackProfilingPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const webpack_1 = __importDefault(require("webpack"));
 const path_1 = __importDefault(require("path"));
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackProfilingPluginService = class WebpackProfilingPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(webpack_1.default.debug.ProfilingPlugin);

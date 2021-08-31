@@ -1,21 +1,21 @@
 import { WebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import {
     Patterns,
     WebpackWatchEntriesPlugin,
     WebpackWatchEntriesPluginService,
 } from '../plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 import { Configuration } from 'webpack';
-import { rootConfig } from '@root/configs';
+import { rootConfig } from '#root/configs';
 
 import { WebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
 
 import { WebpackSharedBaseService } from '../webpack-shared-base/webpack-shared-base.service';
-import { sharedPaths } from '@shared/paths';
+import { sharedPaths } from '#shared/paths';
 import path from 'path';
-import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
+import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
 const rootDir = rootConfig.rootDir;
 @CustomInjectable()
 export class WebpackSharedService extends WebpackSharedBaseService {

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 // const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
 import chokidar from 'chokidar';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackWebpackChokidarPluginService = class WebpackWebpackChokidarPluginService extends WebpackPluginBaseService {
     constructor() {
         super(WebpackChokidarPlugin);

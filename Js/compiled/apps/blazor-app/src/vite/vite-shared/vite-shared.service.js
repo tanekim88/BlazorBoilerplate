@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { BlazorAppPaths, blazorAppPaths } from '@blazor-app/paths';
-import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
+import { BlazorAppPaths, blazorAppPaths } from '#blazor-app/paths';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import path from 'path';
-import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
-import { ViteSharedService } from '@shared/src/vite/vite-shared/vite-shared.service';
+import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
+import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 let BlazorAppViteSharedService = class BlazorAppViteSharedService extends ViteSharedService {
     blazorAppEnvironmentService;
     createConfiguration(options) {

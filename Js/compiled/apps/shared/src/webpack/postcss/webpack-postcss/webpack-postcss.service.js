@@ -17,8 +17,8 @@ import { WebpackPostcssRfsAutopilotService } from '../webpack-postcss-rfs-autopi
 import { WebpackRfsService } from '../webpack-rfs/webpack-rfs.service';
 import { WebpackTailwindcssService } from '../webpack-tailwindcss/webpack-tailwindcss.service';
 // Sealed class.
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { CustomInject } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { WebpackPostcssPurgecssService } from '../webpack-postcss-purgecss/webpack-postcss-purgecss.service';
 import { WebpackPostcssCombineDuplicatedSelectorsService } from '../webpack-postcss-combine-duplicated-selectors/webpack-postcss-combine-duplicated-selectors.service';
 let WebpackPostcssService = class WebpackPostcssService {

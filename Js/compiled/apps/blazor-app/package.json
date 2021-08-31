@@ -4,6 +4,7 @@
     "description": "Blazor app description",
     "main": "index.js",
     "private": true,
+    "type": "module",
     "scripts": {
         "setup": "ts-node -r tsconfig-paths/register ./scripts/generate-scripts.ts",
         "prebuild": "rimraf dist",

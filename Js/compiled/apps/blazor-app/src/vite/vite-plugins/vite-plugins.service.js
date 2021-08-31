@@ -4,8 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { CustomInjectable } from '@shared/src/functions/process-providers';
-import { VitePluginsService } from '@shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends VitePluginsService {
 };
 BlazorAppVitePluginsService = __decorate([

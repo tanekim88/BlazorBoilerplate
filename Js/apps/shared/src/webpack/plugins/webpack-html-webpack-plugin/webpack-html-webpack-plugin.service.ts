@@ -1,5 +1,5 @@
 import { Optional } from '@nestjs/common';
-import { CustomInjectable } from '@shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 

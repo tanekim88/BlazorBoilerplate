@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackExtractSvgSpriteWebpackPluginService = void 0;
-const webpack_extract_svg_sprite_webpack_plugin_service_1 = require("@shared/src/webpack/plugins/webpack-extract-svg-sprite-webpack-plugin/webpack-extract-svg-sprite-webpack-plugin.service");
+const webpack_extract_svg_sprite_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-extract-svg-sprite-webpack-plugin/webpack-extract-svg-sprite-webpack-plugin.service");
 const ExtractSvgSpriteWebpackPlugin = require('extract-svg-sprite-webpack-plugin');
-const process_webpack_providers_1 = require("@shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let AuthWebpackExtractSvgSpriteWebpackPluginService = class AuthWebpackExtractSvgSpriteWebpackPluginService extends webpack_extract_svg_sprite_webpack_plugin_service_1.WebpackExtractSvgSpriteWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
