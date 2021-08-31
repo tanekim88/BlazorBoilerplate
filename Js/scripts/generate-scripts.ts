@@ -136,6 +136,31 @@ const commandObjs = [
         includes: [...childShortNames],
     },
     {
+        name: 'build:vite',
+        command:
+            // 'cross-env TS_NODE_PROJECT="tsconfig.json" vite --mode development --config vite.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --config vite.dev.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'build:prod:vite',
+        command:
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --config vite.prod.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'watch:vite',
+        command:
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --watch --config vite.dev.ts',
+        includes: [...childShortNames],
+    },
+    {
+        name: 'watch:prod:vite',
+        command:
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --watch --config vite.prod.ts',
+        includes: [...childShortNames],
+    },
+    {
         name: 'start:pwa',
         command: 'http-server dist',
         includes: [...childShortNames],
