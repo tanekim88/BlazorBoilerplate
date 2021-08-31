@@ -51,6 +51,9 @@ export default deepmerge({}, {
         extend: {
             colors: deepmerge(tailwindColors, defaultColors),
         },
+        // fontSize: {},
+        // breakpoints: {},
+        // lineHeight: {},
     },
     variants: ['responsive', 'important'],
     plugins: [
@@ -70,6 +73,14 @@ export default deepmerge({}, {
             });
             // addUtilities(colorsUtilities);
         }),
+        // plugin(function ({ addBase, config }) {
+        //     addBase({
+        //         h1: { fontSize: config('theme.fontSize.3xl') },
+        //         h2: { fontSize: config('theme.fontSize.2xl') },
+        //         h3: { fontSize: config('theme.fontSize.xl') },
+        //         h4: { fontSize: config('theme.fontSize.lg') },
+        //     });
+        // }),
     ],
 });
 //# sourceMappingURL=tailwind.config.js.map

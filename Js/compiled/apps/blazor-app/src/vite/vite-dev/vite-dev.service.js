@@ -11,14 +11,24 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { ViteDevService } from '@shared/src/vite/vite-dev/vite-dev.service';
 import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
 let BlazorAppViteDevService = class BlazorAppViteDevService extends ViteDevService {
+    blazorAppViteSharedService;
     createConfiguration(options) {
-        return this.mergeService.mergeOptions(super.createConfiguration(), this.blazorAppClientViteSharedService.createConfiguration(), {}, options);
+        return this.mergeService.mergeOptions(super.createConfiguration(), this.blazorAppViteSharedService.createConfiguration(), {
+            build: {
+                minify: false
+            }
+        }, options);
+    }
+    createManyConfigurations() {
+        return [
+            this.createConfiguration({})
+        ];
     }
 };
 __decorate([
     CustomInject(BlazorAppViteSharedService),
     __metadata("design:type", BlazorAppViteSharedService)
-], BlazorAppViteDevService.prototype, "blazorAppClientViteSharedService", void 0);
+], BlazorAppViteDevService.prototype, "blazorAppViteSharedService", void 0);
 BlazorAppViteDevService = __decorate([
     CustomInjectable()
 ], BlazorAppViteDevService);

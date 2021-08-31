@@ -11,9 +11,10 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { WebpackFaviconsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
 import { BlazorAppEnvironmentService } from '../../../modules/environment/environment/environment.service';
 let BlazorAppWebpackFaviconsWebpackPluginService = class BlazorAppWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
+    blazorAppEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
-            logo: this.blazorAppEnvironmentService.logoPath,
+            logo: this.blazorAppEnvironmentService.logoPath, // svg works t
         }, options);
     }
 };

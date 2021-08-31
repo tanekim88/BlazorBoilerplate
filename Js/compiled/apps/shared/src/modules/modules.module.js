@@ -7,11 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { UtilitiesModule } from './utilities/utilities.module';
 import { EnvironmentModule } from './environment/environment.module';
 import { CustomModule } from '../functions/process-providers';
+import { PostcssModule } from './postcss/postcss.module';
 let ModulesModule = class ModulesModule {
 };
 ModulesModule = __decorate([
     CustomModule({
-        imports: [UtilitiesModule, EnvironmentModule],
+        imports: [UtilitiesModule, EnvironmentModule, PostcssModule],
         providers: [],
     })
 ], ModulesModule);

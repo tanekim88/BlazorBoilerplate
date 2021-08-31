@@ -12,6 +12,7 @@ let BlazorAppWebpackWorkboxWebpackPluginService = class BlazorAppWebpackWorkboxW
         return this.mergeService.mergeOptions(super.createOptions(), {
             swSrc: blazorAppPaths.src['service-worker']['index.ts'].toAbsolutePath(),
             swDest: 'service-worker.js',
+            // include: [this.environmentService.environments.localEnvironment.absolutePaths.src_logo_logoPath]
         }, options);
     }
 };

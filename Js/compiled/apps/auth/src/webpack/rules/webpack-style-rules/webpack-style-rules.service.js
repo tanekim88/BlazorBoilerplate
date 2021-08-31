@@ -24,6 +24,7 @@ let AuthWebpackStyleRulesService = class AuthWebpackStyleRulesService extends We
                         AuthPaths.Views.toAbsolutePath(),
                         AuthPaths.Areas.toAbsolutePath(),
                         AuthPaths.Pages.toAbsolutePath(),
+                        // authServerPaths.Pages.toAbsolutePath(),
                     ],
                     endsWithTheseWords: ['scss', 'css'],
                 }),

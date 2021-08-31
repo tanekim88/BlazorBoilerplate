@@ -42,6 +42,7 @@ let WebpackHtmlWebpackPluginService = class WebpackHtmlWebpackPluginService exte
             },
             base: {
                 href: '/',
+                //'target': '_blank'
             },
             minify: {
                 collapseWhitespace: this.environmentService.isProduction,

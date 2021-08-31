@@ -13,6 +13,7 @@ import { authPaths, AuthPaths } from '@auth/paths';
 import { authConfig } from '@auth/configs';
 import { AuthEnvironmentService } from '@auth/src/modules/environment/environment/environment.service';
 let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
+    authEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
@@ -38,6 +39,7 @@ let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class Auth
                 // ] as any,
                 base: {
                     href: '/',
+                    //'target': '_blank'
                 },
                 minify: {
                     collapseWhitespace: isProduction,

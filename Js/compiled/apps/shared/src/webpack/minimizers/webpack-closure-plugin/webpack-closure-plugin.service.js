@@ -21,6 +21,7 @@ let WebpackClosureWebpackPluginService = class WebpackClosureWebpackPluginServic
         const optionsOverride = [
             {
                 mode: 'STANDARD',
+                // platform: ['javascript', 'native'],
             },
             {},
         ];

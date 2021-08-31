@@ -30,8 +30,8 @@ export class MergeCommand {
     static makeThemUnique() {
         return [MergeCommandOption.makeThemUnique];
     }
+    static customMerge = (func) => {
+        return [MergeCommandOption.customMerge, func];
+    };
 }
-MergeCommand.customMerge = (func) => {
-    return [MergeCommandOption.customMerge, func];
-};
 //# sourceMappingURL=merge-command.js.map

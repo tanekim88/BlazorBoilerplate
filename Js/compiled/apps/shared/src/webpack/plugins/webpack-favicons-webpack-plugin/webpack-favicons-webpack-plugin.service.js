@@ -80,7 +80,7 @@ let WebpackFaviconsWebpackPluginService = class WebpackFaviconsWebpackPluginServ
                     favicons: true,
                     firefox: true,
                     windows: true,
-                    yandex: true,
+                    yandex: true, // Create Yandex browser icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
                 },
             },
         }, options);

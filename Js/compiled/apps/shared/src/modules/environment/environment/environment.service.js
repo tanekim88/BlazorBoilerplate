@@ -14,6 +14,14 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { ConfigBase } from '../../../../configs.base';
 import { RootPaths, rootPaths } from '@root/paths';
 let EnvironmentService = class EnvironmentService {
+    localConfig;
+    mergeService;
+    isProduction;
+    isDevelopment;
+    localPaths;
+    LocalPaths;
+    outputDir;
+    logoPath;
     onModuleInit() {
         const relPath = path.relative(rootPaths.toAbsolutePath(), this.localConfig.rootDir);
         const splitted = relPath.split(path.sep);

@@ -21,6 +21,7 @@ BlazorAppWebpackProdBaseService = __decorate([
     CustomInjectable()
 ], BlazorAppWebpackProdBaseService);
 export class BlazorAppWebpackProdConfigService extends BlazorAppWebpackProdBaseService {
+    blazorAppClientWebpackSharedConfigService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedConfigService.createConfiguration(), super.createConfiguration(), {}, options);
     }
@@ -30,6 +31,7 @@ __decorate([
     __metadata("design:type", BlazorAppWebpackSharedConfigService)
 ], BlazorAppWebpackProdConfigService.prototype, "blazorAppClientWebpackSharedConfigService", void 0);
 export class BlazorAppWebpackProdService extends BlazorAppWebpackProdBaseService {
+    blazorAppClientWebpackSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedService.createConfiguration(), super.createConfiguration(), {}, options);
     }

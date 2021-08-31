@@ -12,19 +12,16 @@ import { EnvironmentService } from '../../modules/environment/environment/enviro
 import { MergeService } from '../../modules/utilities/merge/merge/merge.service';
 import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { CustomInject } from '@shared/src/functions/process-providers';
-import path from 'path';
+import { VitePluginsService } from '../vite-plugins/vite-plugins/vite-plugins.service';
 let ViteBaseService = class ViteBaseService {
+    mergeService;
+    environmentService;
+    vitePluginsService;
     createConfiguration(options) {
+        const plugins = this.vitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions({
-            root: path.join(__dirname, "src"),
             build: {
-                outDir: path.join(__dirname, "dist"),
-                rollupOptions: {
-                    input: {
-                        main: path.resolve(__dirname, "src", "index.html"),
-                        sub: path.resolve(__dirname, "src", "sub/index2.html"),
-                    },
-                },
+                rollupOptions: {},
                 watch: {},
                 assetsInlineLimit: 4096,
                 cssCodeSplit: true,
@@ -33,7 +30,7 @@ let ViteBaseService = class ViteBaseService {
             css: {
                 preprocessorOptions: {
                     scss: {
-                        additionalData: `$injectedColor: orange;`
+                    // additionalData:`$injectedColor: orange;`
                     }
                 },
                 postcss: {}
@@ -43,15 +40,12 @@ let ViteBaseService = class ViteBaseService {
                 exclude: [],
                 keepNames: false
             },
-            plugins: [
-            // VitePluginGlobInput({
-            // })
-            ],
+            plugins,
             resolve: {
-                alias: [{
-                        find: '@blazorApp',
-                        replacement: './blazorApp'
-                    }]
+            // alias:[{
+            //   find:'@blazorApp',
+            //   replacement:'./blazorApp'
+            // }]
             }
         }, options);
     }
@@ -75,6 +69,10 @@ __decorate([
     CustomInject(EnvironmentService),
     __metadata("design:type", EnvironmentService)
 ], ViteBaseService.prototype, "environmentService", void 0);
+__decorate([
+    CustomInject(VitePluginsService),
+    __metadata("design:type", VitePluginsService)
+], ViteBaseService.prototype, "vitePluginsService", void 0);
 ViteBaseService = __decorate([
     CustomInjectable()
 ], ViteBaseService);

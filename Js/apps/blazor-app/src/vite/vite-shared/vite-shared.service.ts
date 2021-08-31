@@ -5,11 +5,11 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { ViteBaseService } from '@shared/src/vite/vite-base/vite-base.service';
 import { UserConfig } from 'vite';
 import path from 'path';
-import sanitizeFilename from 'sanitize-filename';
-import { vitePluginGlobInput } from '@shared/src/vite/plugins/vite-plugin-glob-input.service';
+
 import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
+import { ViteSharedService } from '@shared/src/vite/vite-shared/vite-shared.service';
 @CustomInjectable()
-export class BlazorAppViteSharedService extends ViteBaseService {
+export class BlazorAppViteSharedService extends ViteSharedService {
     @CustomInject(BlazorAppEnvironmentService)
     protected blazorAppEnvironmentService: BlazorAppEnvironmentService;
     
@@ -18,7 +18,6 @@ export class BlazorAppViteSharedService extends ViteBaseService {
             super.createConfiguration(),{   
                 root:blazorAppPaths.toAbsolutePath(),
                 plugins:[
-                    vitePluginGlobInput()
                 ],
             } as UserConfig,
             options,

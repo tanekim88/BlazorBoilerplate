@@ -16,6 +16,8 @@ import path from 'path';
 import { BlazorAppWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 import { BlazorAppWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
 let BlazorAppWebpackSharedService = class BlazorAppWebpackSharedService extends WebpackSharedService {
+    blazorAppClientWebpackRulesService;
+    blazorAppClientWebpackPluginsService;
     createConfiguration(options) {
         const entry = WebpackWatchEntriesPlugin.getEntries([
             path.resolve(BlazorAppPaths.Pages.toAbsolutePath(), '**/*.scss'),

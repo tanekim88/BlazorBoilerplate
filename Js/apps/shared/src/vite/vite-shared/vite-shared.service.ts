@@ -34,8 +34,4 @@ export class ViteSharedService extends ViteBaseService {
             options,
         );
     }
-
-    createManyConfigurations(){
-        return [];
-    }
 }

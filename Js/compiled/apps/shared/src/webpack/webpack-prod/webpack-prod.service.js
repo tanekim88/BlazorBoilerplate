@@ -12,6 +12,7 @@ import { WebpackMinimizersService } from '../minimizers/webpack-minimizers/webpa
 import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackProdService = class WebpackProdService extends WebpackBaseService {
+    webpackMinimizersService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             output: {
@@ -24,6 +25,7 @@ let WebpackProdService = class WebpackProdService extends WebpackBaseService {
                 minimizer: this.webpackMinimizersService.createMinimizers(),
                 usedExports: true,
             },
+            // plugins: this.webpackPluginsService.createPlugins(),
         }, options);
     }
 };

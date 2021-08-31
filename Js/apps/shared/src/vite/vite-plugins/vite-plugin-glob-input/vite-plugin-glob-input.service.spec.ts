@@ -1,15 +1,16 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { WebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin.service';
+import { VitePluginGlobInputService } from './vite-plugin-glob-input.service';
 
-describe('WebpackCleanWebpackPluginService', () => {
-    let service: WebpackCleanWebpackPluginService;
+
+describe('VitePluginGlobInputService', () => {
+    let service: VitePluginGlobInputService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [WebpackCleanWebpackPluginService],
+            providers: [VitePluginGlobInputService],
         }).compile();
 
-        service = module.get<WebpackCleanWebpackPluginService>(WebpackCleanWebpackPluginService);
+        service = module.get<VitePluginGlobInputService>(VitePluginGlobInputService);
     });
 
     it('should be defined', () => {

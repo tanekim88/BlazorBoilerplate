@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { WebpackPluginsService } from './webpack-plugins.service';
+import { VitePluginsService } from './vite-plugins.service';
 
-describe('WebpackPluginsService', () => {
-    let service: WebpackPluginsService;
+describe('VitePluginsService', () => {
+    let service: VitePluginsService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [WebpackPluginsService],
+            providers: [VitePluginsService],
         }).compile();
 
-        service = module.get<WebpackPluginsService>(WebpackPluginsService);
+        service = module.get<VitePluginsService>(VitePluginsService);
     });
 
     it('should be defined', () => {

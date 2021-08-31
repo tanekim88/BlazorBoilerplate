@@ -21,6 +21,7 @@ AuthWebpackProdBaseService = __decorate([
     CustomInjectable()
 ], AuthWebpackProdBaseService);
 export class AuthWebpackProdConfigService extends AuthWebpackProdBaseService {
+    authWebpackSharedConfigService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.authWebpackSharedConfigService.createConfiguration(), super.createConfiguration(), {}, options);
     }
@@ -30,6 +31,7 @@ __decorate([
     __metadata("design:type", AuthWebpackSharedConfigService)
 ], AuthWebpackProdConfigService.prototype, "authWebpackSharedConfigService", void 0);
 export class AuthWebpackProdService extends AuthWebpackProdBaseService {
+    authWebpackSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.authWebpackSharedService.createConfiguration(), super.createConfiguration(), {}, options);
     }

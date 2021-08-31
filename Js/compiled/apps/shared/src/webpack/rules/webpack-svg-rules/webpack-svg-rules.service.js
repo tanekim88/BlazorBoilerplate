@@ -12,6 +12,13 @@ let WebpackSvgRulesService = class WebpackSvgRulesService extends WebpackRulesBa
             test: /\.svg$/,
             use: [
                 'file-loader',
+                //   {
+                //     loader: 'url-loader',
+                //     options: {
+                //       generator: (content) => svgToMiniDataURI(content.toString())
+                //       //   quality: 85,
+                //     }
+                //   }
             ],
         }, options);
     }

@@ -99,6 +99,10 @@ export function CustomInject(token) {
     };
 }
 export class CustumContainer {
+    /**
+     *
+     */
+    container;
     async init(module) {
         const app = await NestFactory.create(module);
         await app.init();

@@ -1,6 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import webpack from 'webpack';
 export class WebpackBase {
+    webpackModule;
+    services;
     /**
      *
      */
@@ -37,7 +39,7 @@ export class WebpackBase {
                         console.error(err);
                     }
                     console.log(stats.toString({
-                        colors: true,
+                        colors: true, // Shows colors in the console
                     }));
                 });
                 // compiler.compilers[0].hooks.beforeCompile.tapAsync('MyPlugin', (params, callback) => {

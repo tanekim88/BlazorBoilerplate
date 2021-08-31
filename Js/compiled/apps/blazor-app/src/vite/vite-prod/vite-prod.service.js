@@ -11,8 +11,12 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { ViteProdService } from '@shared/src/vite/vite-prod/vite-prod.service';
 import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
 let BlazorAppViteProdService = class BlazorAppViteProdService extends ViteProdService {
+    blazorAppClientViteSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), this.blazorAppClientViteSharedService.createConfiguration(), {}, options);
+    }
+    createManyConfigurations() {
+        return [];
     }
 };
 __decorate([

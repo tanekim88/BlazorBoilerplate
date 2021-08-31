@@ -14,6 +14,11 @@ import { MergeService } from '../../utilities/merge/merge/merge.service';
 import path from 'path';
 import { rootPaths } from '@root/paths';
 let PathService = class PathService {
+    localConfig;
+    mergeService;
+    localPaths;
+    outputDir;
+    logoPath;
     onModuleInit() {
         this.localPaths = rootPaths[path.basename(this.localConfig.rootDir)];
         this.createEnvironments();

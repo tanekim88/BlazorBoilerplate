@@ -37,6 +37,7 @@ WebpackHtmlWebpackCustomizerPluginService = __decorate([
 ], WebpackHtmlWebpackCustomizerPluginService);
 export { WebpackHtmlWebpackCustomizerPluginService };
 export class WebpackHtmlWebpackCustomizerPlugin {
+    options;
     constructor(options) {
         this.options = options;
     }

@@ -1,10 +1,5 @@
 import { CustomInjectable } from '@shared/src/functions/process-providers';
-import {
-    WebpackPluginsService,
-    WebpackPluginsConfigService,
-} from '@shared/src/webpack/plugins/webpack-plugins/webpack-plugins.service';
-
-
+import { VitePluginsService } from '@shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()
-export class BlazorAppWebpackPluginsService extends WebpackPluginsService {}
+export class BlazorAppVitePluginsService extends VitePluginsService {}

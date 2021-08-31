@@ -60,7 +60,7 @@ registerRoute(/\.(?:png|gif|jpg|jpeg|svg)$/, new CacheFirst({
         new ExpirationPlugin({
             maxEntries: 1000,
             maxAgeSeconds: MONTH_IN_SECONDS,
-            purgeOnQuotaError: true,
+            purgeOnQuotaError: true, // Automatically cleanup if quota is exceeded.
         }),
     ],
 }));

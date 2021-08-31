@@ -47,6 +47,7 @@ WebpackWebpackChokidarPluginService = __decorate([
 ], WebpackWebpackChokidarPluginService);
 export { WebpackWebpackChokidarPluginService };
 class WebpackChokidarPlugin {
+    options;
     constructor(options = {}) {
         this.options = options;
     }

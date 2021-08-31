@@ -11,6 +11,9 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
 import { MergeService } from '../../../modules/utilities/merge/merge/merge.service';
 let WebpackPluginBaseService = class WebpackPluginBaseService {
+    ConstructorClass;
+    mergeService;
+    environmentService;
     constructor(ConstructorClass) {
         this.ConstructorClass = ConstructorClass;
     }

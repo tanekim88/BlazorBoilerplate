@@ -16,6 +16,9 @@ import { AuthEnvironmentService } from '../../modules/environment/environment/en
 import { AuthWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
 import { AuthWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';
 let AuthWebpackSharedConfigService = class AuthWebpackSharedConfigService extends WebpackSharedConfigService {
+    authEnvironmentService;
+    authWebpackRulesConfigService;
+    authWebpackPluginsConfigService;
     createConfiguration(options) {
         const entry = WebpackWatchEntriesPlugin.getEntries([], WebpackWatchEntriesPluginConfigService.name);
         return this.mergeService.mergeOptions(super.createConfiguration(), {

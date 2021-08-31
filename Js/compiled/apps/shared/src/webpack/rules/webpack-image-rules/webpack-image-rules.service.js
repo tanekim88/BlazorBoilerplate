@@ -25,6 +25,7 @@ let WebpackImageRulesService = class WebpackImageRulesService extends WebpackRul
                         //   return `data:${mimetype}${encoding ? `;${encoding}` : ''},${content.toString(encoding)}`;
                         // }
                         fallback: require.resolve('responsive-loader'),
+                        // quality: 85
                     },
                 },
             ],

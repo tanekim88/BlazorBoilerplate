@@ -1,5 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 export class ViteBase {
+    viteModule;
+    services;
     constructor(viteModule, services) {
         this.viteModule = viteModule;
         this.services = services;

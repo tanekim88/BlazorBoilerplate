@@ -13,6 +13,7 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { blazorAppPaths } from '@blazor-app/paths';
 import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackCopyWebpackPluginService = class BlazorAppWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
+    blazorAppClientEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             patterns: [

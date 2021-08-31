@@ -11,9 +11,10 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { WebpackFaviconsWebpackPluginService } from '@shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
 import { AuthEnvironmentService } from '../../../modules/environment/environment/environment.service';
 let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
+    authEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
-            logo: this.authEnvironmentService.logoPath,
+            logo: this.authEnvironmentService.logoPath, // svg works t
         }, options);
     }
 };

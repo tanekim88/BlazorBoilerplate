@@ -1,15 +1,15 @@
 export class MergeCommandOption {
+    static token = {};
+    static append = { name: 'append', token: MergeCommandOption.token };
+    static prepend = { name: 'prepend', token: MergeCommandOption.token };
+    static overwrite = { name: 'overwrite', token: MergeCommandOption.token };
+    static overwriteCommandsOnly = { name: 'overwriteCommandsOnly', token: MergeCommandOption.token };
+    static getOverwritten = { name: 'getOverwritten', token: MergeCommandOption.token };
+    static deleteLastOne = { name: 'deleteLastOne', token: MergeCommandOption.token };
+    static deleteFirstOne = { name: 'deleteFirstOne', token: MergeCommandOption.token };
+    static deleteFirstN = { name: 'deleteFirstN', token: MergeCommandOption.token };
+    static deleteLastN = { name: 'deleteLastN', token: MergeCommandOption.token };
+    static makeThemUnique = { name: 'makeThemUnique', token: MergeCommandOption.token };
+    static customMerge = { name: 'customMerge', token: MergeCommandOption.token };
 }
-MergeCommandOption.token = {};
-MergeCommandOption.append = { name: 'append', token: MergeCommandOption.token };
-MergeCommandOption.prepend = { name: 'prepend', token: MergeCommandOption.token };
-MergeCommandOption.overwrite = { name: 'overwrite', token: MergeCommandOption.token };
-MergeCommandOption.overwriteCommandsOnly = { name: 'overwriteCommandsOnly', token: MergeCommandOption.token };
-MergeCommandOption.getOverwritten = { name: 'getOverwritten', token: MergeCommandOption.token };
-MergeCommandOption.deleteLastOne = { name: 'deleteLastOne', token: MergeCommandOption.token };
-MergeCommandOption.deleteFirstOne = { name: 'deleteFirstOne', token: MergeCommandOption.token };
-MergeCommandOption.deleteFirstN = { name: 'deleteFirstN', token: MergeCommandOption.token };
-MergeCommandOption.deleteLastN = { name: 'deleteLastN', token: MergeCommandOption.token };
-MergeCommandOption.makeThemUnique = { name: 'makeThemUnique', token: MergeCommandOption.token };
-MergeCommandOption.customMerge = { name: 'customMerge', token: MergeCommandOption.token };
 //# sourceMappingURL=merge-command-option.js.map

@@ -13,6 +13,7 @@ import { blazorAppPaths } from '@blazor-app/paths';
 import { blazorAppConfig } from '@blazor-app/configs';
 import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
+    blazorAppClientEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
@@ -38,6 +39,7 @@ let BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class
                 // ] as any,
                 base: {
                     href: '/',
+                    //'target': '_blank'
                 },
                 minify: {
                     collapseWhitespace: isProduction,

@@ -7,25 +7,20 @@ import { authConfig } from '@auth/configs';
 import path from 'path';
 import { sharedPaths } from './paths';
 class SharedConfig extends ConfigBase {
-    constructor() {
-        super(...arguments);
-        this.rootDir = sharedPaths.toAbsolutePath();
-        this.RootDir = sharedPaths.toAbsolutePath();
-        this.projectName = path.basename(__dirname);
-        this.name = 'Shared Library';
-        this.title = 'App title';
-        this.shortName = 'App short name';
-        this.developerName = 'Tane Kim';
-        this.developerUrl = 'www.taneware.com';
-        this.description = 'app desc';
-        this.dependentProjects = [];
-    }
+    rootDir = sharedPaths.toAbsolutePath();
+    RootDir = sharedPaths.toAbsolutePath();
+    projectName = path.basename(__dirname);
+    name = 'Shared Library';
+    title = 'App title';
+    shortName = 'App short name';
+    developerName = 'Tane Kim';
+    developerUrl = 'www.taneware.com';
+    description = 'app desc';
+    dependentProjects = [];
 }
 export const sharedConfig = new SharedConfig();
 class Configs {
-    constructor() {
-        this.allConfigs = [rootConfig, sharedConfig, blazorAppConfig, authConfig];
-    }
+    allConfigs = [rootConfig, sharedConfig, blazorAppConfig, authConfig];
     get allRootDirs() {
         return this.allConfigs.map((config) => config.rootDir);
     }

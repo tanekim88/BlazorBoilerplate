@@ -11,8 +11,17 @@ import { ViteBaseService } from '../vite-base/vite-base.service';
 import { CustomInject, CustomInjectable } from '@shared/src/functions/process-providers';
 import { ViteSharedService } from '../vite-shared/vite-shared.service';
 let ViteDevService = class ViteDevService extends ViteBaseService {
+    viteSharedService;
     createConfiguration(options) {
-        return this.mergeService.mergeOptions(super.createConfiguration(), this.viteSharedService.createConfiguration(), {}, options);
+        return this.mergeService.mergeOptions(super.createConfiguration(), this.viteSharedService.createConfiguration(), {
+            mode: 'development',
+            build: {
+                minify: false,
+            }
+        }, options);
+    }
+    createManyConfigurations() {
+        return [];
     }
 };
 __decorate([

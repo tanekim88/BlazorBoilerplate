@@ -1,15 +1,15 @@
 export class MergeCommandOption {
+    static token = {};
+    static append = { token: MergeCommandOption.token };
+    static prepend = { token: MergeCommandOption.token };
+    static overwrite = { token: MergeCommandOption.token };
+    static overwriteCommandsOnly = { token: MergeCommandOption.token };
+    static getOverwritten = { token: MergeCommandOption.token };
+    static deleteLastOne = { token: MergeCommandOption.token };
+    static deleteFirstOne = { token: MergeCommandOption.token };
+    static deleteFirstN = { token: MergeCommandOption.token };
+    static deleteLastN = { token: MergeCommandOption.token };
+    static makeThemUnique = { token: MergeCommandOption.token };
+    static customMerge = { token: MergeCommandOption.token };
 }
-MergeCommandOption.token = {};
-MergeCommandOption.append = { token: MergeCommandOption.token };
-MergeCommandOption.prepend = { token: MergeCommandOption.token };
-MergeCommandOption.overwrite = { token: MergeCommandOption.token };
-MergeCommandOption.overwriteCommandsOnly = { token: MergeCommandOption.token };
-MergeCommandOption.getOverwritten = { token: MergeCommandOption.token };
-MergeCommandOption.deleteLastOne = { token: MergeCommandOption.token };
-MergeCommandOption.deleteFirstOne = { token: MergeCommandOption.token };
-MergeCommandOption.deleteFirstN = { token: MergeCommandOption.token };
-MergeCommandOption.deleteLastN = { token: MergeCommandOption.token };
-MergeCommandOption.makeThemUnique = { token: MergeCommandOption.token };
-MergeCommandOption.customMerge = { token: MergeCommandOption.token };
 //# sourceMappingURL=merge-command-option.js.map

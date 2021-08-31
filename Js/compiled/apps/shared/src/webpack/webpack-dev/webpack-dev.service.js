@@ -12,6 +12,7 @@ let WebpackDevService = class WebpackDevService extends WebpackBaseService {
             mode: 'development',
             // devtool: 'inline-source-map',
             devtool: 'eval',
+            // devtool: 'eval-cheap-module-source-map',
         }, options);
     }
 };

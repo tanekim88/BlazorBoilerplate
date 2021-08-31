@@ -8,6 +8,7 @@ import { CustomModule } from "../functions/process-providers";
 import { ModulesModule } from "../modules/modules.module";
 import { ViteBaseService } from "./vite-base/vite-base.service";
 import { ViteDevService } from "./vite-dev/vite-dev.service";
+import { VitePluginsService } from "./vite-plugins/vite-plugins/vite-plugins.service";
 import { ViteProdService } from "./vite-prod/vite-prod.service";
 import { ViteSharedService } from "./vite-shared/vite-shared.service";
 let ViteModule = class ViteModule {
@@ -19,7 +20,8 @@ ViteModule = __decorate([
             ViteProdService,
             ViteDevService,
             ViteSharedService,
-            ViteBaseService
+            ViteBaseService,
+            VitePluginsService
         ],
     })
 ], ViteModule);

@@ -60,16 +60,50 @@ WebpackWatchEntriesPluginService = WebpackWatchEntriesPluginService_1 = __decora
 ], WebpackWatchEntriesPluginService);
 export { WebpackWatchEntriesPluginService };
 export class Extension {
+    name;
+    ignoredFromWatch;
+    preserveOriginalOutput;
 }
 class Output {
+    path;
+    relativeTo;
+    file;
+    preserveFilename;
+    extensions;
+    prefix;
 }
 export class PatternsCollection {
+    patterns;
+    output;
+    patternsOptions;
+    excludeFromHtmlWebpackPlugin;
+    exportable;
+    ignoredFromWatch;
+    ignoredPatterns;
+    watchThePatternsOnly;
 }
 class DbEntry {
+    id;
+    dependsOn;
+    ignoredFromWatch;
+    patternsCollection;
+    directories;
+    files;
+    outputPath;
+    chunkIdToDetailsMap;
+    originalFilePathToFileInfoMap;
+    extnameToChunkIdsMap;
+    extnameToExcludedChunkIdsMap;
+    excludedChunkIds;
+    entryMap;
+    fileToChunkIdMap;
+    exportableChunkIds;
 }
 export class WebpackWatchEntriesPluginOptions extends DbEntry {
+    watchOptions;
 }
 export class GlobalDb {
+    static _state = {};
     get state() {
         return GlobalDb._state;
     }
@@ -311,8 +345,8 @@ export class GlobalDb {
         return toReturn;
     }
 }
-GlobalDb._state = {};
 class Db extends GlobalDb {
+    id;
     constructor(id) {
         super();
         this.id = id;
@@ -338,6 +372,8 @@ const globalDb = new Proxy(new GlobalDb(), {
     },
 });
 export class WebpackWatchEntriesPlugin {
+    options;
+    db;
     constructor(options) {
         this.options = options;
         this.db = new Db(options.id);
@@ -502,6 +538,10 @@ export class WebpackWatchEntriesPlugin {
     }
 }
 class NodeWatchFileSystem {
+    inputFileSystem;
+    options;
+    watcher;
+    watcherOptions;
     constructor(inputFileSystem, options) {
         this.inputFileSystem = inputFileSystem;
         this.options = options;

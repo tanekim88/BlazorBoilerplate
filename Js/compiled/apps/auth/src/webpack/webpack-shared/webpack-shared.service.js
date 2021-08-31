@@ -18,6 +18,9 @@ import { AuthWebpackRulesService } from '../rules/webpack-rules/webpack-rules.se
 import { AuthWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
 import { sharedPaths } from '@shared/paths';
 let AuthWebpackSharedService = class AuthWebpackSharedService extends WebpackSharedService {
+    authEnvironmentService;
+    authWebpackRulesService;
+    authWebpackPluginsService;
     createConfiguration(options) {
         const entry = WebpackWatchEntriesPlugin.getEntries([
             {

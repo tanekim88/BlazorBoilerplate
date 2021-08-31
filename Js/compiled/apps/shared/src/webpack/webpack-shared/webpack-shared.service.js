@@ -17,6 +17,7 @@ import path from 'path';
 import { BlazorAppEnvironmentService } from '@blazor-app/src/modules/environment/environment/environment.service';
 const rootDir = rootConfig.rootDir;
 let WebpackSharedService = class WebpackSharedService extends WebpackSharedBaseService {
+    blazorAppEnvironmentService;
     createConfiguration(options) {
         const entry = WebpackWatchEntriesPlugin.getEntries([
             {

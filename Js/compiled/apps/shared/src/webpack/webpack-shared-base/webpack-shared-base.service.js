@@ -17,6 +17,9 @@ import { WebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugin
 import { WebpackTsconfigPathsWebpackPluginService } from '../plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
 const rootDir = rootConfig.rootDir;
 let WebpackSharedBaseService = class WebpackSharedBaseService extends WebpackBaseService {
+    webpackRulesService;
+    webpackPluginsService;
+    webpackTsconfigPathsWebpackPluginService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             output: {

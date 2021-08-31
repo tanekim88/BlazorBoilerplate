@@ -14,6 +14,10 @@ import { WebpackTerserPluginService } from '../webpack-terser-plugin/webpack-ter
 import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackMinimizersService = class WebpackMinimizersService {
+    webpackClosurePluginService;
+    webpackCssMinimizerPluginService;
+    webpackOptimizeCssAssetsPluginService;
+    webpackTerserPluginService;
     createMinimizers() {
         const minimizers = [];
         minimizers.push(this.webpackTerserPluginService.createPlugin());

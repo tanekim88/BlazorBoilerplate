@@ -18,6 +18,7 @@ import nodeSassUtils from 'node-sass-utils';
 import { sassVariables } from '@shared/src/web/material/variables/sass-variables';
 const sassUtils = nodeSassUtils(sass);
 let WebpackStyleRulesService = class WebpackStyleRulesService extends WebpackRulesBaseService {
+    webpackPostcssService;
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {
             test: /\.(s[ac]ss|css)$/i,
@@ -50,6 +51,10 @@ let WebpackStyleRulesService = class WebpackStyleRulesService extends WebpackRul
                                     return sassUtils.castToSass(result);
                                 },
                             },
+                            // importer: (url: string, prev, done) => {
+                            //     url = url.replace('~', this.environmentService.localPaths.node_modules + '/');
+                            //     return { file: url };
+                            // },
                         },
                     },
                 },

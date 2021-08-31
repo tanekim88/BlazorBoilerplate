@@ -13,6 +13,9 @@ import { CustomInject } from '@shared/src/functions/process-providers';
 import { EnvironmentService } from '@shared/src/modules/environment/environment/environment.service';
 import { RegexService } from '@shared/src/modules/utilities/regex/regex/regex.service';
 let WebpackRulesBaseService = class WebpackRulesBaseService {
+    mergeService;
+    regexService;
+    environmentService;
     createRules(options) {
         const toReturn = options ?? [];
         return toReturn.map((x) => {

@@ -18,6 +18,14 @@ import { WebpackXmlRulesService } from '../webpack-xml-rules/webpack-xml-rules.s
 import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackRulesConfigService = class WebpackRulesConfigService {
+    webpackStyleRulesService;
+    webpackCsvRulesService;
+    webpackFontRulesService;
+    webpackImageRulesService;
+    webpackJsonRulesService;
+    webpackSvgRulesService;
+    webpackTsRulesService;
+    webpackXmlRulesService;
     createRules() {
         const toReturn = [
             ...this.webpackCsvRulesService.createRules(),
@@ -68,6 +76,14 @@ WebpackRulesConfigService = __decorate([
 ], WebpackRulesConfigService);
 export { WebpackRulesConfigService };
 let WebpackRulesService = class WebpackRulesService {
+    webpackStyleRulesService;
+    webpackCsvRulesService;
+    webpackFontRulesService;
+    webpackImageRulesService;
+    webpackJsonRulesService;
+    webpackSvgRulesService;
+    webpackTsRulesService;
+    webpackXmlRulesService;
     createRules() {
         const toReturn = [
             ...this.webpackStyleRulesService.createRules(),

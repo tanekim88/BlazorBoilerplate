@@ -6,6 +6,9 @@ export default deepmerge(sharedConfig, {
     theme: {
         // colors,
         extend: {},
+        // fontSize: {},
+        // breakpoints: {},
+        // lineHeight: {},
     },
     variants: {},
     plugins: [],

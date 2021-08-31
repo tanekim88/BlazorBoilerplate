@@ -6,19 +6,19 @@ const settings = {
         ecmaVersion: 2020,
         sourceType: 'module',
         ecmaFeatures: {
-            jsx: true,
+            jsx: true, // Allows for the parsing of JSX
         },
     },
     settings: {
         react: {
-            version: 'detect',
+            version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
         },
     },
     extends: [
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
+        'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
     ],
     rules: {
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs

@@ -27,6 +27,24 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { WebpackProvidePluginService } from '../webpack-provide-plugin/webpack-provide-plugin.service';
 import { WebpackSvgSpriteMapWebpackPluginService } from '../webpack-svg-spritemap-webpack-plugin/webpack-svg-spritemap-webpack-plugin.service';
 let WebpackPluginsConfigService = class WebpackPluginsConfigService {
+    environmentService;
+    webpackCopyWebpackPluginService;
+    // @CustomInject(WebpackExtractSvgSpriteWebpackPluginService)
+    // protected webpackExtractSvgSpriteWebpackPluginService: WebpackExtractSvgSpriteWebpackPluginService;
+    webpackFaviconsWebpackPluginService;
+    webpackHtmlWebpackPluginService;
+    webpackPreMiniCssExtractPluginService;
+    webpackPreRemoveFilesWebpackPluginService;
+    // @CustomInject(WebpackSvgSpriteLoaderPluginService)
+    // protected webpackSvgSpriteLoaderPluginService: WebpackSvgSpriteLoaderPluginService;
+    webpackWebpackFixStyleOnlyEntriesService;
+    webpackWorkboxWebpackPluginService;
+    webpackTsconfigPathsWebpackPluginService;
+    webpackWebpackChokidarPluginService;
+    webpackWatchEntriesPluginConfigService;
+    webpackErrorOverlayWebpackPluginService;
+    webpackProfilingPluginService;
+    webpackWebpackBundleAnalyzerService;
     /**
      *
      */
@@ -109,6 +127,28 @@ WebpackPluginsConfigService = __decorate([
 ], WebpackPluginsConfigService);
 export { WebpackPluginsConfigService };
 let WebpackPluginsService = class WebpackPluginsService {
+    wnvironmentService;
+    webpackCleanWebpackPluginService;
+    webpackCopyWebpackPluginService;
+    // @CustomInject(WebpackExtractSvgSpriteWebpackPluginService)
+    // protected webpackExtractSvgSpriteWebpackPluginService: WebpackExtractSvgSpriteWebpackPluginService;
+    webpackFaviconsWebpackPluginService;
+    webpackHtmlWebpackPluginService;
+    webpackMiniCssExtractPluginService;
+    webpackRemoveFilesWebpackPluginService;
+    // @CustomInject(WebpackSvgSpriteLoaderPluginService)
+    // protected webpackSvgSpriteLoaderPluginService: WebpackSvgSpriteLoaderPluginService;
+    webpackWebpackFixStyleOnlyEntriesService;
+    webpackWorkboxWebpackPluginService;
+    webpackTsconfigPathsWebpackPluginService;
+    webpackWebpackChokidarPluginService;
+    webpackWatchEntriesPluginService;
+    webpackErrorOverlayWebpackPluginService;
+    webpackHtmlWebpackCustomizerPluginService;
+    webpackProfilingPluginService;
+    webpackWebpackBundleAnalyzerService;
+    webpackProvidePluginService;
+    webpackSvgSpriteMapWebpackPluginService;
     /**
      *
      */

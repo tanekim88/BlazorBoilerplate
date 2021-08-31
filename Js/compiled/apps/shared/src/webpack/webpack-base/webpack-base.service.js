@@ -13,6 +13,8 @@ import { MergeService } from '../../modules/utilities/merge/merge/merge.service'
 import { CustomInjectable } from '@shared/src/functions/process-providers';
 import { CustomInject } from '@shared/src/functions/process-providers';
 let WebpackBaseService = class WebpackBaseService {
+    mergeService;
+    environmentService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions({}, options);
     }
@@ -24,7 +26,7 @@ let WebpackBaseService = class WebpackBaseService {
         // poll: undefined
         }, (err, stats) => {
             console.log(stats.toString({
-                colors: true,
+                colors: true, // Shows colors in the console
             }));
         });
         // compiler.compilers[0].hooks.beforeCompile.tapAsync('MyPlugin', (params, callback) => {

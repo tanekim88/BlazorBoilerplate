@@ -13,6 +13,7 @@ import { CustomInject, CustomInjectable } from '@shared/src/functions/process-pr
 import { authPaths } from '@auth/paths';
 import { AuthEnvironmentService } from '@auth/src/modules/environment/environment/environment.service';
 let AuthWebpackCopyWebpackPluginService = class AuthWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
+    authEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             patterns: [

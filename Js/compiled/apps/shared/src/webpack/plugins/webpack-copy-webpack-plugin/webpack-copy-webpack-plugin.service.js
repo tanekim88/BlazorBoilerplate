@@ -23,6 +23,7 @@ let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService exte
                     from: path.resolve(sharedPaths.node_modules.toAbsolutePath(), 'bootstrap-icons/bootstrap-icons.svg'),
                     to: '',
                 },
+                // { from: path.resolve(rootWebpackConstants.nodesModuleDir, '@fortawesome/fontawesome-free/sprites'), to: '' },
             ],
         }, options);
     }
