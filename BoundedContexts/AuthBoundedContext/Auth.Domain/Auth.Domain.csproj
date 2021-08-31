@@ -8,40 +8,40 @@
 	<ItemGroup>
 		<PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.1.0" />
-		<PackageReference Include="Dapr.AspNetCore" Version="1.2.0" />
-		<PackageReference Include="Dapr.Client" Version="1.2.0" />
-		<PackageReference Include="Grpc.Tools" Version="2.38.1">
+		<PackageReference Include="Dapr.AspNetCore" Version="1.3.0" />
+		<PackageReference Include="Dapr.Client" Version="1.3.0" />
+		<PackageReference Include="Grpc.Tools" Version="2.40.0-pre1">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="MediatR" Version="9.0.0" />
-		<PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.7.0-alpha.21279.2" />
+		<PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.9.0-alpha.21380.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-		<PackageReference Include="HotChocolate.Types" Version="12.0.0-preview.22" />
+		<PackageReference Include="HotChocolate.Types" Version="12.0.0-rc.0" />
 		<PackageReference Include="Humanizer" Version="2.11.10" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
-		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.6" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-preview.5.21301.17" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-preview.5.21301.17" PrivateAssets="all" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0-preview.5.21301.17" />
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-preview.5.21301.17" />
+		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-preview.7.21378.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-preview.7.21378.6" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0-preview.7.21378.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-preview.7.21378.6" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.0-preview.5.21301.9" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-preview.5.21301.5" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0-preview.5.21301.5" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0-preview.5.21301.5" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.0-preview.5.21301.17" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.0-preview.5.21301.17" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0-preview.5.21301.17" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.0-preview.7.21378.4" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.0-preview.7.21378.6" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.0-preview.7.21378.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0-preview.7.21378.6" />
 		<PackageReference Include="Pluralize.NET" Version="1.0.2" />
 		<PackageReference Include="protobuf-net" Version="3.0.101" />
 		<PackageReference Include="protobuf-net.Grpc" Version="1.0.152" />
-		<PackageReference Include="Refit.HttpClientFactory" Version="6.0.38" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="6.0.94" />
 
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.0-preview.5.21301.17" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.0-preview.7.21378.6" />
 		<PackageReference Include="StrawberryShake" Version="11.0.0-preview.137" />
-		<PackageReference Include="System.IO.Pipelines" Version="6.0.0-preview.5.21301.5" />
-		<PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.5.21301.5" />
+		<PackageReference Include="System.IO.Pipelines" Version="6.0.0-preview.7.21377.19" />
+		<PackageReference Include="System.Net.Http.Json" Version="6.0.0-preview.7.21377.19" />
 	</ItemGroup>
 
 	<ItemGroup>
