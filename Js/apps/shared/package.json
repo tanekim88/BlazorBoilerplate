@@ -11,7 +11,7 @@
         "#blazor-app/*": "./../blazor-app/*",
         "#Auth/*": "./../../Apps/Auth/Server/*",
         "#BlazorApp/*": "./../../Apps/BlazorApp/Client/*",
-        "#root/*": "./../../*"
+        "#root/*": "../*"
     },
     "scripts": {
         "setup": "ts-node -r tsconfig-paths/register ./scripts/generate-scripts.ts",
