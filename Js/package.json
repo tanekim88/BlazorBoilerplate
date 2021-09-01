@@ -10,9 +10,9 @@
     "type": "module",
     "imports": {
         "#root/*": "./absolute-root/Js/*",
-        "#auth/*": "./absolute-root/Js/apps/auth/*",
-        "#blazor-app/*": "./absolute-root/Js/apps/blazor-app/*",
-        "#shared/*": "./absolute-root/Js/apps/shared/*",
+        "#auth/*": "./apps/auth/*",
+        "#blazor-app/*": "./apps/blazor-app/*",
+        "#shared/*": "./apps/shared/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },

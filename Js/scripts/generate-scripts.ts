@@ -215,17 +215,20 @@ const AppsDir = path.resolve(absRootDir, 'Apps');
 await symlinkDir(absRootDir, path.resolve(rootDir, 'absolute-root'));
 
 packageJson.imports = {} as any;
-
+const childImports = {} as any;
 packageJson.imports["#root/*"] = "./absolute-root/Js/*";
 
 childs.forEach(async (child) => {
     const folderName = child.folderName;
-    packageJson.imports[`#${folderName}/*`] = `./absolute-root/Js/apps/${folderName}/*`
+    packageJson.imports[`#${folderName}/*`] = `./apps/${folderName}/*`
+    childImports[`#${folderName}/*`] = `./absolute-root/Js/apps/${folderName}/*`
 });
+
 const files = fs.readdirSync(AppsDir);
 
 files.forEach(function (folderName) {
     packageJson.imports[`#${folderName}/*`] = `./absolute-root/Apps/${folderName}/*`
+    childImports[`#${folderName}/*`] = `./absolute-root/Apps/${folderName}/*`
 });
 
 
@@ -236,7 +239,7 @@ childs.forEach(async (child) => {
     childPackageJson.scripts = childScript as any;
     childPackageJson.dependencies = packageJson.dependencies as any;
     childPackageJson.devDependencies = packageJson.devDependencies as any;
-    childPackageJson.imports = { ...packageJson.imports };
+    childPackageJson.imports = { ...childImports };
     delete childPackageJson.imports[`#${folderName}/*`];
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
 

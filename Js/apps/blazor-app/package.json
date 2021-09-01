@@ -6,7 +6,6 @@
     "private": true,
     "type": "module",
     "imports": {
-        "#root/*": "./absolute-root/Js/*",
         "#auth/*": "./absolute-root/Js/apps/auth/*",
         "#shared/*": "./absolute-root/Js/apps/shared/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
