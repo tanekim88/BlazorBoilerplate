@@ -47,28 +47,30 @@ const getAllFiles = function (
     const files = fs.readdirSync(dirPath);
 
     files.forEach(function (file) {
-        const typeKey = 'readonly ' + file;
-        const fullPath = path.join(dirPath, file);
+        if (file !== 'absolute-root') {
+            const typeKey = 'readonly ' + file;
+            const fullPath = path.join(dirPath, file);
 
-        if (!blackListedFiles.every((b) => file.endsWith(b))) {
-            toReturn[file] = {
-                toAbsolutePath: fullPath,
-                // toString: fullPath,
-                // '[Symbol.toStringTag]': fullPath,
-                toRelativePath: path.relative(topDir, fullPath),
-            };
+            if (!blackListedFiles.every((b) => file.endsWith(b))) {
+                toReturn[file] = {
+                    toAbsolutePath: fullPath,
+                    // toString: fullPath,
+                    // '[Symbol.toStringTag]': fullPath,
+                    toRelativePath: path.relative(topDir, fullPath),
+                };
 
-            toType[typeKey] = {
-                toAbsolutePath: 'string',
-                // toString: 'string',
-                // '[Symbol.toStringTag]': 'string',
-                toRelativePath: 'string',
-            };
-        }
+                toType[typeKey] = {
+                    toAbsolutePath: 'string',
+                    // toString: 'string',
+                    // '[Symbol.toStringTag]': 'string',
+                    toRelativePath: 'string',
+                };
+            }
 
-        if (blackListedFolders.every((b) => !file.endsWith(b))) {
-            if (fs.statSync(fullPath).isDirectory()) {
-                [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
+            if (blackListedFolders.every((b) => !file.endsWith(b))) {
+                if (fs.statSync(fullPath).isDirectory()) {
+                    [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
+                }
             }
         }
     });
@@ -76,7 +78,7 @@ const getAllFiles = function (
     return [toReturn, toType];
 };
 
-const newRootPath = path.join(rootDir,'..');
+const newRootPath = path.join(rootDir, '..');
 
 const [toReturn, toType] = getAllFiles(newRootPath);
 
