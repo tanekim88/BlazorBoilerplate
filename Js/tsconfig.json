@@ -47,35 +47,15 @@
             "vite/client"
         ],
         "baseUrl": "./",
-        "paths": {
-            "#shared/*": [
-                "./apps/shared/*"
-            ],
-            "#auth/*": [
-                "./apps/auth/*"
-            ],
-            "#blazor-app/*": [
-                "./apps/blazor-app/*"
-            ],
-            "#Auth/*": [
-                "../Apps/Auth/Server/*"
-            ],
-            "#BlazorApp/*": [
-                "../Apps/BlazorApp/Client/*"
-            ],
-            "#root/*": [
-                "*"
-            ]
-        }
     },
     "include": [
         "**/*",
         ".eslintrc.ts",
         ".prettierrc.ts",
         ".stylelintrc.ts",
-        "#shared/.eslintrc.ts",
-        "#shared/.prettierrc.ts",
-        "#shared/.stylelintrc.ts",
+        "./apps/shared/.eslintrc.ts",
+        "./apps/shared/.prettierrc.ts",
+        "./apps/shared/.stylelintrc.ts",
         "./apps/auth/.eslintrc.ts",
         "./apps/auth/.prettierrc.ts",
         "./apps/auth/.stylelintrc.ts",

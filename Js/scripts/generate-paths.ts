@@ -21,7 +21,7 @@ import fs from 'fs';
 
 const rootDir = rootConfig.rootDir;
 
-const blackListedFolders = ['bin', 'node_modules', 'obj', '.vs', 'dist', 'compiled', 'modules'];
+const blackListedFolders = ['bin', 'node_modules', 'obj', '.vs', 'dist', 'compiled', 'modules', '.git'];
 const blackListedFiles = ['.map'];
 
 const getAllFiles = function (
