@@ -17,62 +17,19 @@ export default {
         emitDecoratorMetadata: true,
         lib: [
             "ESNext",
-            'DOM',
-            // 'ES2015.Core',
-            // 'ES2015.Collection',
-            // 'ES2015.Generator',
-            // 'ES2015.Iterable',
-            // 'ES2015.Promise',
-            // 'ES2015.Proxy',
-            // 'ES2015.Reflect',
-            // 'ES2015.Symbol',
-            // 'ES2015.Symbol.WellKnown',
-            // 'ES2016.Array.Include',
-            // 'ES2017.object',
-            // 'ES2017.Intl',
-            // 'ES2017.SharedMemory',
-            // 'ES2017.String',
-            // 'ES2017.TypedArrays',
-            // 'ES2018.Intl',
-            // 'ES2018.Promise',
-            // 'ES2018.RegExp',
-            // 'ESNext.AsyncIterable',
-            // 'ESNext.Array',
-            // 'ESNext.Intl',
-            // 'ESNext.Symbol',
+            'DOM'
         ],
         types: ['jest', 'node', 'vite/client'],
-        baseUrl: './',
-        paths: {
-            "#shared/*": [
-                "./apps/shared/*"
-            ],
-            "#auth/*": [
-                "./apps/auth/*"
-            ],
-            "#blazor-app/*": [
-                "./apps/blazor-app/*"
-            ],
-            "#Auth/*": [
-                "../Apps/Auth/Server/*"
-            ],
-            "#BlazorApp/*": [
-                "../Apps/BlazorApp/Client/*"
-            ],
-            "#root/*": [
-                "*"
-            ]
-        },
-        // plugins: [{ name: 'typescript-plugin-css-modules' }],
+        baseUrl: './'
     },
     include: [
         "**/*",
         ".eslintrc.ts",
         ".prettierrc.ts",
         ".stylelintrc.ts",
-        "#shared/.eslintrc.ts",
-        "#shared/.prettierrc.ts",
-        "#shared/.stylelintrc.ts",
+        "./apps/shared/.eslintrc.ts",
+        "./apps/shared/.prettierrc.ts",
+        "./apps/shared/.stylelintrc.ts",
         "./apps/auth/.eslintrc.ts",
         "./apps/auth/.prettierrc.ts",
         "./apps/auth/.stylelintrc.ts",

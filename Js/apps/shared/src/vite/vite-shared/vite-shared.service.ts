@@ -1,4 +1,4 @@
-import { ViteBaseService } from '../Vite-base/Vite-base.service';
+import { ViteBaseService } from '../vite-base/vite-base.service';
 
 
 import { CustomInjectable } from '#shared/src/functions/process-providers';

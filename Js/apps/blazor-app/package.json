@@ -6,7 +6,9 @@
     "private": true,
     "type": "module",
     "imports": {
+        "#root/*": "./absolute-root/Js/*",
         "#auth/*": "./absolute-root/Js/apps/auth/*",
+        "#blazor-app/*": "./*",
         "#shared/*": "./absolute-root/Js/apps/shared/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"

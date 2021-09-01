@@ -45,7 +45,8 @@ console.dir(tailwindColors);
 // console.dir(colorsUtilities);
 // console.dir(textColors);
 
-const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,html,cshtml}');
+
+// const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,html,cshtml}');
 
 
 export default deepmerge(

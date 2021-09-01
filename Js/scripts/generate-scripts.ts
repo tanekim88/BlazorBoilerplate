@@ -22,7 +22,6 @@ const childs = fs.readdirSync(appsDir).map(appDir => {
     }
 });
 
-
 const appDirNames = childs.map((x) => x.folderName);
 
 const commandObjs = [
@@ -217,6 +216,7 @@ await symlinkDir(absRootDir, path.resolve(rootDir, 'absolute-root'));
 packageJson.imports = {} as any;
 const childImports = {} as any;
 packageJson.imports["#root/*"] = "./absolute-root/Js/*";
+childImports["#root/*"] = "./absolute-root/Js/*";
 
 childs.forEach(async (child) => {
     const folderName = child.folderName;
@@ -240,7 +240,7 @@ childs.forEach(async (child) => {
     childPackageJson.dependencies = packageJson.dependencies as any;
     childPackageJson.devDependencies = packageJson.devDependencies as any;
     childPackageJson.imports = { ...childImports };
-    delete childPackageJson.imports[`#${folderName}/*`];
+    childPackageJson.imports[`#${folderName}/*`] = `./*`;
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
 
     await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));

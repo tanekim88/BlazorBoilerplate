@@ -15911,11 +15911,6 @@
                     toRelativePath:()=> string
                 }
 ,
-                readonly "vite.dev.ts.js": {
-                    toAbsolutePath:()=> string,
-                    toRelativePath:()=> string
-                }
-,
                 readonly "vite.prod.ts": {
                     toAbsolutePath:()=> string,
                     toRelativePath:()=> string
@@ -15976,11 +15971,6 @@
         }
 ,
         readonly "node_modules": {
-            toAbsolutePath:()=> string,
-            toRelativePath:()=> string
-        }
-,
-        readonly "nx": {
             toAbsolutePath:()=> string,
             toRelativePath:()=> string
         }
@@ -40234,10 +40224,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts",
                     toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts"
                 },
-                "vite.dev.ts.js": {
-                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts.js",
-                    toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts.js"
-                },
                 "vite.prod.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.prod.ts",
                     toRelativePath:()=> "Js\\apps\\shared\\vite.prod.ts"
@@ -40287,10 +40273,6 @@ export const RootPaths:RootPathsType = createProxy( {
         "node_modules": {
             toAbsolutePath:()=> "C:\\App\\Js\\node_modules",
             toRelativePath:()=> "Js\\node_modules"
-        },
-        "nx": {
-            toAbsolutePath:()=> "C:\\App\\Js\\nx",
-            toRelativePath:()=> "Js\\nx"
         },
         "package copy.json": {
             toAbsolutePath:()=> "C:\\App\\Js\\package copy.json",

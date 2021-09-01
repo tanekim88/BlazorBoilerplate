@@ -9,7 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var WebpackWatchEntriesPluginConfigService_1, WebpackWatchEntriesPluginService_1;
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
-import { Compilation } from 'webpack';
+import webpack from 'webpack';
+const Compilation = webpack.Compilation;
 import path from 'path';
 import globBase from 'glob-base';
 import glob from 'glob';

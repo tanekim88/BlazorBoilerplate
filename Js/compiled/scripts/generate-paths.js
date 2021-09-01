@@ -1,19 +1,9 @@
-// class Apps {
-//     SharedLibrary = new SharedLibrary();
-//     BlazorApp = new BlazorApp();
-//     IdentityServer = new IdentityServer();
-//     toString = () => 'abc';
-// }
-// const a = new Apps();
-// class SharedLibrary {}
-// class BlazorApp {}
-// class IdentityServer {}
 import 'reflect-metadata';
 import { rootConfig } from '#root/configs';
 import path from 'path';
 import fs from 'fs';
 const rootDir = rootConfig.rootDir;
-const blackListedFolders = ['bin', 'node_modules', 'obj', '.vs', 'dist', 'compiled', 'modules'];
+const blackListedFolders = ['bin', 'node_modules', 'obj', '.vs', 'dist', 'compiled', 'modules', '.git'];
 const blackListedFiles = ['.map'];
 const getAllFiles = function (dirPath, toReturn = {
     toAbsolutePath: dirPath,

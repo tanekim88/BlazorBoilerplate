@@ -1,6 +1,7 @@
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 
-import { Compilation, Compiler } from 'webpack';
+import webpack, { Compiler } from 'webpack';
+const Compilation = webpack.Compilation;
 import path from 'path';
 import globBase from 'glob-base';
 import glob from 'glob';
@@ -85,7 +86,7 @@ export class PatternsCollection {
     ignoredFromWatch?: boolean;
 
     ignoredPatterns?: string[];
-    watchThePatternsOnly?:boolean;
+    watchThePatternsOnly?: boolean;
 }
 
 export type Patterns = PatternsCollection | string;
@@ -310,7 +311,7 @@ export class GlobalDb {
                             let chunkId = '';
 
 
-                            if(watchThePatternsOnly){
+                            if (watchThePatternsOnly) {
                                 files.push(path.resolve(file));
                             }
 
@@ -340,13 +341,13 @@ export class GlobalDb {
                                 chunkId = sanitizeFilename(file, { replacement: '_' });
                             }
 
-                            if(!output.preserveFilename){
+                            if (!output.preserveFilename) {
                                 const fileContent = fs.readFileSync(file, 'utf-8');
                                 const contentHash = loaderUtils.getHashDigest(fileContent);
                                 chunkId += '_' + contentHash;
                             }
 
-                            if(output.prefix){
+                            if (output.prefix) {
                                 chunkId = output.prefix + '__' + chunkId;
                             }
 
@@ -360,19 +361,19 @@ export class GlobalDb {
                             };
 
                             if (output.extensions) {
-                                output.extensions.forEach(extension =>{
-                                    
+                                output.extensions.forEach(extension => {
+
                                     if (!extnameToChunkIdsMap[`${extension}`]) {
                                         extnameToChunkIdsMap[`${extension}`] = [];
                                     }
-    
+
                                     extnameToChunkIdsMap[`${extension}`].push(chunkId);
                                 })
                             }
 
                             if (excludeFromHtmlWebpackPlugin) {
 
-                                output.extensions.forEach(extension =>{
+                                output.extensions.forEach(extension => {
 
                                     if (!extnameToExcludedChunkIdsMap[`${extension}`]) {
                                         extnameToExcludedChunkIdsMap[`${extension}`] = [];
@@ -402,9 +403,9 @@ export class GlobalDb {
                         }
 
                         [{
-                            name:'.js',
-                            ignoredFromWatch:true
-                        } as Extension].concat( output.extensions ?? [])?.forEach(extension =>{                       
+                            name: '.js',
+                            ignoredFromWatch: true
+                        } as Extension].concat(output.extensions ?? [])?.forEach(extension => {
                             if (extension.ignoredFromWatch && extension.name) {
                                 [extension.name].forEach((ext) => {
                                     if (ext) {
@@ -505,10 +506,10 @@ export class WebpackWatchEntriesPlugin {
         // compiler.hooks.afterCompile.tapAsync(this.constructor.name, this.afterCompile.bind(this));
 
         compiler.hooks.afterEnvironment.tap(WebpackWatchEntriesPlugin.name, () => {
-            if(compiler.watchFileSystem && compiler.watchFileSystem['close']){
+            if (compiler.watchFileSystem && compiler.watchFileSystem['close']) {
                 compiler.watchFileSystem['close']();
             }
-            
+
             compiler.watchFileSystem = new NodeWatchFileSystem(compiler.inputFileSystem, this.options);
         });
 
@@ -562,31 +563,31 @@ export class WebpackWatchEntriesPlugin {
                         if (chunkId) {
                             const entryDetails = dbEntry.chunkIdToDetailsMap[chunkId];
 
-                            entryDetails?.output?.extensions?.forEach(async extension =>{  
+                            entryDetails?.output?.extensions?.forEach(async extension => {
                                 if (extension?.name === '.json') {
                                     const originalFilePath = entryMap[chunkId];
                                     const originalFilePathExt = path.extname(originalFilePath);
-    
+
                                     if (['.js', '.ts'].includes(originalFilePathExt)) {
                                         const extname = path.extname(fileName);
-    
+
                                         let jsonRelPath = fileName;
                                         if (extname) {
                                             jsonRelPath = jsonRelPath.replace(new RegExp(extname + '$'), '.json');
                                         } else {
                                             jsonRelPath += '.json';
                                         }
-    
+
                                         let json = {};
                                         try {
                                             delete require.cache[originalFilePath];
-    
+
                                             json = (await import(originalFilePath)).default;
-    
+
                                             const finalSource = JSON.stringify(json, undefined, 4);
-    
+
                                             const rawSarouce = new RawSource(finalSource) as any;
-    
+
                                             if (compilation.getAsset(jsonRelPath)) {
                                                 compilation.updateAsset(jsonRelPath, rawSarouce);
                                             } else {
@@ -605,7 +606,7 @@ export class WebpackWatchEntriesPlugin {
                                 }
                             });
 
-                      
+
                         }
                     }
                 },
@@ -620,14 +621,14 @@ export class WebpackWatchEntriesPlugin {
 
                     const template = data.plugin.options.template;
 
-                    if(!dbEntry.files?.includes(template)){
+                    if (!dbEntry.files?.includes(template)) {
 
                         dbEntry.files.push(template);
 
-                        if(compiler.watchFileSystem && compiler.watchFileSystem['close']){
+                        if (compiler.watchFileSystem && compiler.watchFileSystem['close']) {
                             compiler.watchFileSystem['close']();
                         }
-                        
+
                         compiler.watchFileSystem = new NodeWatchFileSystem(compiler.inputFileSystem, this.options);
                     }
 
@@ -680,20 +681,20 @@ export class WebpackWatchEntriesPlugin {
 
 class NodeWatchFileSystem {
     watcher;
-    watcherOptions:Watchpack.WatchOptions;
+    watcherOptions: Watchpack.WatchOptions;
 
     constructor(private inputFileSystem, private options) {
         const entries = globalDb.getDbEntry(this.options.id);
 
         const ignoredFromWatch = entries.ignoredFromWatch ?? [];
 
-        this.watcherOptions =  deepMerge({
+        this.watcherOptions = deepMerge({
             aggregateTimeout: 0,
             poll: true,
             followSymlinks: false,
             ignored: ['**/*.js'].concat(ignoredFromWatch ?? []),
         }, options?.watcherOptions ?? {});
-  
+
         this.watcher = new Watchpack(this.watcherOptions);
     }
 
@@ -739,7 +740,7 @@ class NodeWatchFileSystem {
 
         const oldWatcher = this.watcher;
 
-        
+
         const ignoredFromWatch = entries.ignoredFromWatch ?? [];
         options.ignored = ignoredFromWatch;
         this.watcher = new Watchpack(options);
@@ -804,12 +805,12 @@ class NodeWatchFileSystem {
         console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         console.dir(entryFiles);
         console.dir(entryDirectories);
-        
+
         if (oldWatcher) {
             oldWatcher.close();
         }
-        
-        this.watcher.watch({ files: entryFiles, directories: entryDirectories, missing:[], startTime });
+
+        this.watcher.watch({ files: entryFiles, directories: entryDirectories, missing: [], startTime });
 
 
         return {
@@ -825,11 +826,11 @@ class NodeWatchFileSystem {
                 }
             },
             getAggregatedRemovals: () => {
-				return this.watcher && this.watcher.aggregatedRemovals;
-			},
-			getAggregatedChanges: () => {
-				return this.watcher && this.watcher.aggregatedChanges;
-			},
+                return this.watcher && this.watcher.aggregatedRemovals;
+            },
+            getAggregatedChanges: () => {
+                return this.watcher && this.watcher.aggregatedChanges;
+            },
             getFileTimeInfoEntries: () => {
                 if (this.watcher) {
                     return this.watcher.getTimeInfoEntries();
@@ -847,8 +848,8 @@ class NodeWatchFileSystem {
         };
     }
 
-    close(){
-        if(this.watcher){
+    close() {
+        if (this.watcher) {
 
             this.watcher.close();
         }

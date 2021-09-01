@@ -9,6 +9,10 @@ import { authConfig } from '#auth/configs';
 // import { identityServerConfig } from '@IdentityServer/configs';
 import path from 'path';
 import { sharedPaths } from './paths';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(filename);
 
 class SharedConfig extends ConfigBase {
     rootDir = sharedPaths.toAbsolutePath();
