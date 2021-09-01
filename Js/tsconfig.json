@@ -87,6 +87,7 @@
         "**/node_modules/*",
         "node_modules/*",
         "**/compiled/*",
-        "**/styles/*"
+        "**/styles/*",
+        "**/absolute-root/*"
     ]
 }

@@ -80,5 +80,5 @@
         "./apps/blazor-app/.prettierrc.ts",
         "./apps/blazor-app/.stylelintrc.ts",
     ],
-    exclude: ['**/node_modules/*', 'node_modules/*', '**/compiled/*', '**/styles/*'],
+    exclude: ['**/node_modules/*', 'node_modules/*', '**/compiled/*', '**/styles/*','**/absolute-root/*'],
 };

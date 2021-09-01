@@ -15,6 +15,7 @@ const childs = [
         shortName: 'shared',
         packageJson: sharedPackageJson,
         folderPath: './apps/shared',
+        isShared: true
     },
     {
         folderName: 'blazor-app',
@@ -33,7 +34,7 @@ const childShortNames = childs.map((x) => x.shortName);
 const commandObjs = [
     {
         name: 'setup',
-        command: 'ts-node -r tsconfig-paths/register ./scripts/generate-scripts.ts',
+        command: 'node  --loader ts-node/esm ./scripts/generate-scripts.ts',
         includes: [''],
     },
     {
@@ -88,7 +89,7 @@ const commandObjs = [
     },
     {
         name: 'test:debug',
-        command: 'node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand',
+        command: 'node --inspect-brk --loader ts-node/esm node_modules/.bin/jest --runInBand',
         includes: [...childShortNames],
     },
     {
@@ -104,62 +105,30 @@ const commandObjs = [
     },
     /////////////////////////////////////////////////////////////////////////////////////////////
     {
-        name: 'build:webpack',
-        command: 
-        // 'cross-env TS_NODE_PROJECT="tsconfig.json" webpack --mode development --config webpack.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
-        'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" webpack --mode=development --config webpack.dev.ts',
-        includes: [...childShortNames],
-    },
-    {
-        name: 'build:prod:webpack',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" webpack --mode=production --config webpack.prod.ts',
-        includes: [...childShortNames],
-    },
-    {
-        name: 'watch:webpack',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" webpack --mode=development --watch --config webpack.dev.ts',
-        includes: [...childShortNames],
-    },
-    {
-        name: 'watch:prod:webpack',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" webpack --mode=production --watch --config webpack.prod.ts',
-        includes: [...childShortNames],
-    },
-    {
         name: 'build:vite',
         command: 
         // 'cross-env TS_NODE_PROJECT="tsconfig.json" vite --mode development --config vite.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
-        'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --config vite.dev.ts',
+        'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --config vite.dev.ts',
         includes: [...childShortNames],
     },
     {
         name: 'build:prod:vite',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --config vite.prod.ts',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --config vite.prod.ts',
         includes: [...childShortNames],
     },
     {
         name: 'watch:vite',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=development --watch --config vite.dev.ts',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --watch --config vite.dev.ts',
         includes: [...childShortNames],
     },
     {
         name: 'watch:prod:vite',
-        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 -r tsconfig-paths/register" vite --mode=production --watch --config vite.prod.ts',
+        command: 'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --watch --config vite.prod.ts',
         includes: [...childShortNames],
     },
     {
         name: 'start:pwa',
         command: 'http-server dist',
-        includes: [...childShortNames],
-    },
-    {
-        name: 'start:webpack:devserver',
-        command: 'webpack-dev-server --open --config webpack.dev.ts',
-        includes: [...childShortNames],
-    },
-    {
-        name: 'start:webpack:devserver:prod',
-        command: 'webpack-dev-server --open --config webpack.prod.ts',
         includes: [...childShortNames],
     },
     {
@@ -204,7 +173,7 @@ const commandObjs = [
     },
     {
         name: 'generate:paths',
-        command: 'ts-node -r tsconfig-paths/register ./scripts/generate-paths.ts',
+        command: 'node --loader ts-node/esm ./scripts/generate-paths.ts',
         includes: [''],
     },
 ];
@@ -229,18 +198,31 @@ const childScript = commandObjs.reduce((acc, curr) => {
 }, {});
 packageJson.scripts = final;
 const rootDir = rootConfig.rootDir;
-childs.forEach((child) => {
+const absRootDir = path.resolve(rootConfig.rootDir, '..');
+const AppsDir = path.resolve(absRootDir, 'Apps');
+await symlinkDir(absRootDir, path.resolve(rootDir, 'absolute-root'));
+packageJson.imports = {};
+packageJson.imports["#root/*"] = "./absolute-root/Js/*";
+childs.forEach(async (child) => {
+    const folderName = child.folderName;
+    packageJson.imports[`#${folderName}/*`] = `./absolute-root/Js/${folderName}/*`;
+});
+const files = fs.readdirSync(AppsDir);
+files.forEach(function (folderName) {
+    packageJson.imports[`#${folderName}/*`] = `./absolute-root/Apps/${folderName}/*`;
+});
+childs.forEach(async (child) => {
     const childFolderPath = path.resolve(rootDir, `${child.folderPath}`);
     const folderName = child.folderName;
     const childPackageJson = child.packageJson;
     childPackageJson.scripts = childScript;
     childPackageJson.dependencies = packageJson.dependencies;
     childPackageJson.devDependencies = packageJson.devDependencies;
+    childPackageJson.imports = packageJson.imports;
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
-    symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules')).then((result) => {
-        // console.dir(result);
-    });
+    await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));
+    await symlinkDir(absRootDir, path.resolve(childFolderPath, 'absolute-root'));
 });
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4), 'utf8');
-require('./generate-paths');
+import './generate-paths';
 //# sourceMappingURL=generate-scripts.js.map

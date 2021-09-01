@@ -31,25 +31,27 @@ const getAllFiles = function (dirPath, toReturn = {
     }
     const files = fs.readdirSync(dirPath);
     files.forEach(function (file) {
-        const typeKey = 'readonly ' + file;
-        const fullPath = path.join(dirPath, file);
-        if (!blackListedFiles.every((b) => file.endsWith(b))) {
-            toReturn[file] = {
-                toAbsolutePath: fullPath,
-                // toString: fullPath,
-                // '[Symbol.toStringTag]': fullPath,
-                toRelativePath: path.relative(topDir, fullPath),
-            };
-            toType[typeKey] = {
-                toAbsolutePath: 'string',
-                // toString: 'string',
-                // '[Symbol.toStringTag]': 'string',
-                toRelativePath: 'string',
-            };
-        }
-        if (blackListedFolders.every((b) => !file.endsWith(b))) {
-            if (fs.statSync(fullPath).isDirectory()) {
-                [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
+        if (file !== 'absolute-root') {
+            const typeKey = 'readonly ' + file;
+            const fullPath = path.join(dirPath, file);
+            if (!blackListedFiles.every((b) => file.endsWith(b))) {
+                toReturn[file] = {
+                    toAbsolutePath: fullPath,
+                    // toString: fullPath,
+                    // '[Symbol.toStringTag]': fullPath,
+                    toRelativePath: path.relative(topDir, fullPath),
+                };
+                toType[typeKey] = {
+                    toAbsolutePath: 'string',
+                    // toString: 'string',
+                    // '[Symbol.toStringTag]': 'string',
+                    toRelativePath: 'string',
+                };
+            }
+            if (blackListedFolders.every((b) => !file.endsWith(b))) {
+                if (fs.statSync(fullPath).isDirectory()) {
+                    [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
+                }
             }
         }
     });
