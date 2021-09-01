@@ -4,7 +4,6 @@ import deepmerge from 'deepmerge';
 const plugin = require('tailwindcss/plugin');
 import { materialVariables } from './src/web/material/variables/export';
 import { tailwindColors } from './src/web/tailwind/tailwind.colors';
-import path from 'path';
 const colorsInput = materialVariables['$colors-input'];
 const materialColors = materialVariables['$material-colors'];
 const subTypes = materialVariables['$sub-types'];
@@ -40,7 +39,7 @@ const defaultColors = {
 console.dir(tailwindColors);
 // console.dir(colorsUtilities);
 // console.dir(textColors);
-const purgePath = path.resolve(__dirname, './src/**/*.{js,jsx,ts,tsx,html,cshtml}');
+// const purgePath = path.resolve( __dirname, './src/**/*.{js,jsx,ts,tsx,html,cshtml}');
 export default deepmerge({}, {
     // mode:'jit',
     // important: true,

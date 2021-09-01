@@ -1,38 +1,36 @@
 import { NestFactory } from '@nestjs/core';
+import vite from 'vite';
 export class ViteBase {
     viteModule;
-    services;
-    constructor(viteModule, services) {
+    service;
+    constructor(viteModule, service) {
         this.viteModule = viteModule;
-        this.services = services;
-        this.createViteConfigs = this.createViteConfigs.bind(this);
+        this.service = service;
+        this.createViteConfig = this.createViteConfig.bind(this);
         this.build = this.build.bind(this);
         this.watch = this.watch.bind(this);
     }
-    async createViteConfigs(env, options) {
+    async createViteConfig(env, options) {
         if (options?.mode) {
             process.env.NODE_ENV = options?.mode;
         }
         const app = await NestFactory.create(this.viteModule);
         await app.init();
-        return this.services.map((service) => {
-            const svc = app.get(service);
-            const config = svc.createConfiguration();
-            return config;
-        });
+        const svc = app.get(this.service);
+        const config = svc.createConfiguration();
+        return config;
     }
-    build() {
+    async build() {
         if (process.env.NODE_ENV) {
-            (async () => {
-                const configs = await this.createViteConfigs();
-            })();
+            const config = await this.createViteConfig();
+            await vite.build(config);
         }
     }
-    watch() {
+    async watch() {
         if (process.env.NODE_ENV) {
-            (async () => {
-                const configs = await this.createViteConfigs();
-            })();
+            const config = await this.createViteConfig();
+            const s = await vite.createServer(config);
+            await s.listen(5001);
         }
     }
 }

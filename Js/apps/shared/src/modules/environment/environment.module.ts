@@ -1,3 +1,4 @@
+import { LOCAL_CONFIG, sharedConfig } from '#shared/configs';
 import { CustomModule } from '../../functions/process-providers';
 
 import { EnvironmentService } from './environment/environment.service';

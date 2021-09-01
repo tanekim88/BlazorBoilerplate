@@ -10,8 +10,7 @@
             "request": "launch",
             "runtimeExecutable": "node",
             "runtimeArgs": [
-                "--loader" ,"ts-node/esm", "--experimental-specifier-resolution=node", "--experimental-modules", "--no-warnings"
-
+                "--loader" ,"ts-node/esm", "--experimental-specifier-resolution=node"
             ],
             "args": ["${relativeFile}"],
             "cwd": "${workspaceRoot}",

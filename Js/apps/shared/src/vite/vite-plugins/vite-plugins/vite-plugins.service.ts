@@ -5,16 +5,16 @@ import { VitePluginGlobInputService } from '../vite-plugin-glob-input/vite-plugi
 
 @CustomInjectable()
 export class VitePluginsService {
-    @CustomInject(EnvironmentService)
-    protected environmentService: EnvironmentService;
+    // @CustomInject(EnvironmentService)
+    // protected environmentService: EnvironmentService;
 
-    @CustomInject(VitePluginGlobInputService)
-    protected vitePluginGlobInputService: VitePluginGlobInputService;
+    // @CustomInject(VitePluginGlobInputService)
+    // protected vitePluginGlobInputService: VitePluginGlobInputService;
 
     createManyPlugins() {
         let plugins = [];
         // prePlugins.push(this.webpackWebpackWatchFilesPluginService.createPlugin());
-        plugins.push(this.vitePluginGlobInputService.createPlugin());
+        // plugins.push(this.vitePluginGlobInputService.createPlugin());
 
         return plugins;
     }

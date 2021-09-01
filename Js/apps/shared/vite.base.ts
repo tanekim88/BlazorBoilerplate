@@ -5,45 +5,47 @@ import { ViteModule } from './src/vite/vite.module';
 import { WebpackBaseService } from './src/webpack/webpack-base/webpack-base.service';
 
 import { WebpackModule } from './src/webpack/webpack.module';
+import vite from 'vite'
 
 export class ViteBase {
 
-    constructor(private viteModule: { new (): ViteModule }, private services: { new (): ViteBaseService }[]) {
-        this.createViteConfigs = this.createViteConfigs.bind(this);
+    constructor(private viteModule: { new(): ViteModule }, private service: { new(): ViteBaseService }) {
+        this.createViteConfig = this.createViteConfig.bind(this);
         this.build = this.build.bind(this);
         this.watch = this.watch.bind(this);
     }
 
-    async createViteConfigs(env?, options?) {
+    async createViteConfig(env?, options?) {
         if (options?.mode) {
             process.env.NODE_ENV = options?.mode;
         }
 
         const app = await NestFactory.create(this.viteModule);
+
         await app.init();
 
-        return this.services.map((service) => {
-            const svc = app.get(service);
 
-            const config = svc.createConfiguration();
-            
-            return config;
-        });
+        const svc = app.get(this.service);
+
+        const config = svc.createConfiguration();
+
+        return config;
+
     }
 
-    build() {
+    async build() {
         if (process.env.NODE_ENV) {
-            (async () => {
-                const configs = await this.createViteConfigs();
-            })();
+            const config = await this.createViteConfig();
+            await vite.build(config)
         }
     }
 
-    watch() {
+    async watch() {
         if (process.env.NODE_ENV) {
-            (async () => {
-                const configs = await this.createViteConfigs();
-            })();
+
+            const config = await this.createViteConfig();
+            const s = await vite.createServer(config)
+            await s.listen(5001);
         }
     }
 }

@@ -10,6 +10,7 @@ export class ViteDevService extends ViteBaseService {
     protected viteSharedService: ViteSharedService;
     
     createConfiguration(options?:UserConfig) {
+
         return this.mergeService.mergeOptions(
             super.createConfiguration(),
             this.viteSharedService.createConfiguration(),

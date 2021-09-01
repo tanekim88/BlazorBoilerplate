@@ -4,7 +4,7 @@ import { ViteModule } from './src/vite/vite.module';
 
 
 import { ViteBase } from './vite.base';
-const viteBase = new ViteBase(ViteModule, [ViteDevService]);
+const viteBase = new ViteBase(ViteModule, ViteDevService);
 
-viteBase.build();
+await viteBase.build();
 

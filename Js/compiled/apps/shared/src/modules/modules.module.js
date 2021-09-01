@@ -12,7 +12,7 @@ let ModulesModule = class ModulesModule {
 };
 ModulesModule = __decorate([
     CustomModule({
-        imports: [UtilitiesModule, EnvironmentModule, PostcssModule],
+        imports: [UtilitiesModule, EnvironmentModule, PostcssModule,],
         providers: [],
     })
 ], ModulesModule);

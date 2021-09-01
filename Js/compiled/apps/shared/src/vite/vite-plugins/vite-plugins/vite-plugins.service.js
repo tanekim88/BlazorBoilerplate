@@ -4,30 +4,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
-import { VitePluginGlobInputService } from '../vite-plugin-glob-input/vite-plugin-glob-input.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let VitePluginsService = class VitePluginsService {
-    environmentService;
-    vitePluginGlobInputService;
+    // @CustomInject(EnvironmentService)
+    // protected environmentService: EnvironmentService;
+    // @CustomInject(VitePluginGlobInputService)
+    // protected vitePluginGlobInputService: VitePluginGlobInputService;
     createManyPlugins() {
         let plugins = [];
         // prePlugins.push(this.webpackWebpackWatchFilesPluginService.createPlugin());
-        plugins.push(this.vitePluginGlobInputService.createPlugin());
+        // plugins.push(this.vitePluginGlobInputService.createPlugin());
         return plugins;
     }
 };
-__decorate([
-    CustomInject(EnvironmentService),
-    __metadata("design:type", EnvironmentService)
-], VitePluginsService.prototype, "environmentService", void 0);
-__decorate([
-    CustomInject(VitePluginGlobInputService),
-    __metadata("design:type", VitePluginGlobInputService)
-], VitePluginsService.prototype, "vitePluginGlobInputService", void 0);
 VitePluginsService = __decorate([
     CustomInjectable()
 ], VitePluginsService);
