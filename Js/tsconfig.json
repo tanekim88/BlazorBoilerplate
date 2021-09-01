@@ -47,6 +47,26 @@
             "vite/client"
         ],
         "baseUrl": "./",
+        "paths": {
+            "#shared/*": [
+                "./apps/shared/*"
+            ],
+            "#auth/*": [
+                "./apps/auth/*"
+            ],
+            "#blazor-app/*": [
+                "./apps/blazor-app/*"
+            ],
+            "#Auth/*": [
+                "../Apps/Auth/Server/*"
+            ],
+            "#BlazorApp/*": [
+                "../Apps/BlazorApp/Client/*"
+            ],
+            "#root/*": [
+                "*"
+            ]
+        }
     },
     "include": [
         "**/*",

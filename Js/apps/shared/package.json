@@ -7,9 +7,8 @@
     "type": "module",
     "imports": {
         "#root/*": "./absolute-root/Js/*",
-        "#shared/*": "./absolute-root/Js/shared/*",
-        "#blazor-app/*": "./absolute-root/Js/blazor-app/*",
-        "#auth/*": "./absolute-root/Js/auth/*",
+        "#auth/*": "./absolute-root/Js/apps/auth/*",
+        "#blazor-app/*": "./absolute-root/Js/apps/blazor-app/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },

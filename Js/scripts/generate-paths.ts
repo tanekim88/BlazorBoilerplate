@@ -1,18 +1,3 @@
-// class Apps {
-//     SharedLibrary = new SharedLibrary();
-//     BlazorApp = new BlazorApp();
-//     IdentityServer = new IdentityServer();
-
-//     toString = () => 'abc';
-// }
-
-// const a = new Apps();
-
-// class SharedLibrary {}
-
-// class BlazorApp {}
-
-// class IdentityServer {}
 import 'reflect-metadata';
 import { rootConfig } from '#root/configs';
 import path from 'path';

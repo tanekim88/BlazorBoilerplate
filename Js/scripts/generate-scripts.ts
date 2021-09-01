@@ -4,38 +4,26 @@ const final = {
 import fs from 'fs';
 import packageJson from '../package.json';
 
-import blazorPackageJson from '#blazor-app/package.json';
-import authPackageJson from '#auth/package.json';
-import sharedPackageJson from '#shared/package.json';
-
 import path from 'path';
 
 import symlinkDir from 'symlink-dir';
 import { rootConfig } from '#root/configs';
 
-const childs = [
-    {
-        folderName: 'shared',
-        shortName: 'shared',
-        packageJson: sharedPackageJson,
-        folderPath: './apps/shared',
-        isShared: true
-    },
-    {
-        folderName: 'blazor-app',
-        shortName: 'blazor',
-        packageJson: blazorPackageJson,
-        folderPath: './apps/blazor-app',
-    },
-    {
-        folderName: 'auth',
-        shortName: 'auth',
-        packageJson: authPackageJson,
-        folderPath: './apps/auth',
-    },
-];
+const appsDir = path.resolve(rootConfig.rootDir, 'apps');
+const childs = fs.readdirSync(appsDir).map(appDir => {
+    const absDir = path.resolve(appsDir, appDir);
+    const packageJsonPath = path.resolve(absDir, 'package.json');
+    const packageJsonStr = fs.readFileSync(packageJsonPath, 'utf-8');
+    const packageJson = JSON.parse(packageJsonStr);
+    return {
+        folderName: appDir,
+        packageJson: packageJson,
+        folderPath: `./apps/${appDir}`
+    }
+});
 
-const childShortNames = childs.map((x) => x.shortName);
+
+const appDirNames = childs.map((x) => x.folderName);
 
 const commandObjs = [
     {
@@ -46,69 +34,69 @@ const commandObjs = [
     {
         name: 'prebuild',
         command: 'rimraf dist',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'build',
         command: 'nest build',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'format',
         command: 'prettier --write "src/**/*.ts" "test/**/*.ts"',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'start',
         command: 'nest start',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'start:dev',
         command: 'nest start --watch --debug --progress',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'start:debug',
         command: 'nest start --debug --watch',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'start:prod',
         command: 'node dist/main',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'test',
         command: 'jest',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'test:watch',
         command: 'jest --watch',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'test:cov',
         command: 'jest --coverage',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'test:debug',
         command: 'node --inspect-brk --loader ts-node/esm node_modules/.bin/jest --runInBand',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'test:e2e',
         command: 'jest --config ./test/jest-e2e.json',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'lint',
         // command: "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
         command:
             'cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint **/*.ts --fix --no-eslintrc -c .eslintrc.json',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     /////////////////////////////////////////////////////////////////////////////////////////////
     {
@@ -116,71 +104,71 @@ const commandObjs = [
         command:
             // 'cross-env TS_NODE_PROJECT="tsconfig.json" vite --mode development --config vite.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
             'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --config vite.dev.ts',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'build:prod:vite',
         command:
             'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --config vite.prod.ts',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'watch:vite',
         command:
             'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --watch --config vite.dev.ts',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'watch:prod:vite',
         command:
             'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --watch --config vite.prod.ts',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'start:pwa',
         command: 'http-server dist',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'watch',
         command: '',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'watch:dotnet',
         command: 'dotnet watch run',
-        includes: [...childShortNames],
+        includes: [...appDirNames],
     },
     {
         name: 'inst',
         command: 'npm install',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
     {
         name: 'inst:force',
         command: 'npm install --force',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
     {
         name: 'uninst',
         command: 'npm uninstall',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
 
     {
         name: 'init',
         command: 'npm install -D concurrently npm-run-all',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
     {
         name: 'nuke',
         command: 'rimraf node_modules',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
     {
         name: 'reset',
         command: 'npm run nuke && npm run init && npm run inst',
-        includes: ['', ...childShortNames],
+        includes: ['', ...appDirNames],
     },
     {
         name: 'generate:paths',
@@ -199,13 +187,13 @@ commandObjs.forEach((commandObj) => {
     final[`${commandObj.name}`] = commandObj.command;
 
     childs.forEach((target) => {
-        final[`${commandObj.name}:${target.shortName}`] = `cd ${target.folderPath ?? target.folderName
+        final[`${commandObj.name}:${target.folderName}`] = `cd ${target.folderPath ?? target.folderName
             } && npm run {commandName}`.replace('{commandName}', commandObj.name);
 
-        if (commandObj.includes.indexOf(target.shortName) !== -1) {
+        if (commandObj.includes.indexOf(target.folderName) !== -1) {
             scriptForAll += '"{commandName} -- {@}" '.replace(
                 '{commandName}',
-                `${commandObj.name}:${target.shortName}`,
+                `${commandObj.name}:${target.folderName}`,
             );
         }
     });
@@ -232,7 +220,7 @@ packageJson.imports["#root/*"] = "./absolute-root/Js/*";
 
 childs.forEach(async (child) => {
     const folderName = child.folderName;
-    packageJson.imports[`#${folderName}/*`] = `./absolute-root/Js/${folderName}/*`
+    packageJson.imports[`#${folderName}/*`] = `./absolute-root/Js/apps/${folderName}/*`
 });
 const files = fs.readdirSync(AppsDir);
 
@@ -248,7 +236,8 @@ childs.forEach(async (child) => {
     childPackageJson.scripts = childScript as any;
     childPackageJson.dependencies = packageJson.dependencies as any;
     childPackageJson.devDependencies = packageJson.devDependencies as any;
-    childPackageJson.imports = packageJson.imports as any;
+    childPackageJson.imports = { ...packageJson.imports };
+    delete childPackageJson.imports[`#${folderName}/*`];
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
 
     await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));
