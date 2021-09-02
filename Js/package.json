@@ -9,7 +9,7 @@
     "main": "index.js",
     "type": "module",
     "imports": {
-        "#root/*": "./absolute-root/Js/*",
+        "#root/*": "./*",
         "#auth/*": "./apps/auth/*",
         "#blazor-app/*": "./apps/blazor-app/*",
         "#shared/*": "./apps/shared/*",

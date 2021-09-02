@@ -4408,212 +4408,7 @@
 ,
                 readonly "wwwroot": {
                     toAbsolutePath:()=> string,
-                    toRelativePath:()=> string,
-                    readonly "appsettings.Development.json": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "appsettings.json": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "bootstrap-icons.svg": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "favicons": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string,
-                        readonly "favicon.png": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:()=> string
-                        }
-
-                    }
-,
-                    readonly "index.html": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "service-worker.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-632166b2.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-8abaa50d.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-f62782bf.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-48cf4a9c.css": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-9800bc2c.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "vendors-node_modules_fortawesome_fontawesome-free_js_brands_js.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "vendors-node_modules_fortawesome_fontawesome-free_js_fontawesome_js.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "vendors-node_modules_fortawesome_fontawesome-free_js_solid_js.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "vendors-node_modules_jquery-validation-unobtrusive_dist_jquery_validate_unobtrusive_js.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-,
-                    readonly "vendors-node_modules_jquery_dist_jquery_js.js": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:()=> string
-                    }
-
+                    toRelativePath:()=> string
                 }
 ,
                 readonly "_Imports.razor": {
@@ -11921,6 +11716,11 @@
                             toAbsolutePath:()=> string,
                             toRelativePath:()=> string
                         }
+,
+                        readonly "index.webpack.html": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:()=> string
+                        }
 
                     }
 ,
@@ -15907,6 +15707,11 @@
                 }
 ,
                 readonly "vite.dev.ts": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:()=> string
+                }
+,
+                readonly "vite.dev.ts.js": {
                     toAbsolutePath:()=> string,
                     toRelativePath:()=> string
                 }
@@ -31022,171 +30827,7 @@ export const RootPaths:RootPathsType = createProxy( {
                 },
                 "wwwroot": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot",
-                    toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot",
-                    "appsettings.Development.json": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\appsettings.Development.json",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\appsettings.Development.json"
-                    },
-                    "appsettings.json": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\appsettings.json",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\appsettings.json"
-                    },
-                    "bootstrap-icons.svg": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg"
-                    },
-                    "favicons": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicons",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\favicons",
-                        "favicon.png": {
-                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicons\\favicon.png",
-                            toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\favicons\\favicon.png"
-                        }
-                    },
-                    "index.html": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\index.html"
-                    },
-                    "service-worker.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_components_tooltip_index.ts_8926a0296d497f540cc2a05b53b7496b.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_asymetric-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_dark-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_default-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_light-square-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_themes_rounded-theme_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Material__C__App_Js_apps_shared_src_web_material_variables_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-632166b2.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-632166b2.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-632166b2.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_bootstrap_index.ts_25e8a200fe1c87894382e27ff76fe823-share-719ba0b8.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_btn_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_components_tooltips_index.ts_25e8a200fe1c87894382e27ff76fe823.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-8abaa50d.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-8abaa50d.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-8abaa50d.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-f62782bf.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-f62782bf.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_defaults_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-f62782bf.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_fontawesome_index.ts_c3b29aa2f24a7b09348d2c0e5f0eea90.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_jquery_index.ts_9382906145f688753c7c376236cf9471.js"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-48cf4a9c.css": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-48cf4a9c.css",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-48cf4a9c.css"
-                    },
-                    "Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-9800bc2c.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-9800bc2c.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\Shared_Rest__C__App_Js_apps_shared_src_web_tailwind_index.ts_25e8a200fe1c87894382e27ff76fe823-shared-9800bc2c.js"
-                    },
-                    "vendors-node_modules_fortawesome_fontawesome-free_js_brands_js.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_brands_js.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_brands_js.js"
-                    },
-                    "vendors-node_modules_fortawesome_fontawesome-free_js_fontawesome_js.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_fontawesome_js.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_fontawesome_js.js"
-                    },
-                    "vendors-node_modules_fortawesome_fontawesome-free_js_solid_js.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_solid_js.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_fortawesome_fontawesome-free_js_solid_js.js"
-                    },
-                    "vendors-node_modules_jquery-validation-unobtrusive_dist_jquery_validate_unobtrusive_js.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_jquery-validation-unobtrusive_dist_jquery_validate_unobtrusive_js.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_jquery-validation-unobtrusive_dist_jquery_validate_unobtrusive_js.js"
-                    },
-                    "vendors-node_modules_jquery_dist_jquery_js.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_jquery_dist_jquery_js.js",
-                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\vendors-node_modules_jquery_dist_jquery_js.js"
-                    }
+                    toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot"
                 },
                 "_Imports.razor": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\_Imports.razor",
@@ -37033,6 +36674,10 @@ export const RootPaths:RootPathsType = createProxy( {
                         "index.html": {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html",
                             toRelativePath:()=> "Js\\apps\\blazor-app\\src\\templates\\index.html"
+                        },
+                        "index.webpack.html": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html",
+                            toRelativePath:()=> "Js\\apps\\blazor-app\\src\\templates\\index.webpack.html"
                         }
                     },
                     "vite": {
@@ -40223,6 +39868,10 @@ export const RootPaths:RootPathsType = createProxy( {
                 "vite.dev.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts",
                     toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts"
+                },
+                "vite.dev.ts.js": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts.js",
+                    toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts.js"
                 },
                 "vite.prod.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.prod.ts",

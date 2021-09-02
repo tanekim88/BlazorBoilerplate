@@ -37,7 +37,8 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                     cleanCssOptions: {
                         format: 'beautify'
                     },
-                    emptyOutDir: true
+                    emptyOutDir: true,
+                    
                 },
                 server: {
                     port: 4010

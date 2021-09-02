@@ -215,7 +215,7 @@ await symlinkDir(absRootDir, path.resolve(rootDir, 'absolute-root'));
 
 packageJson.imports = {} as any;
 const childImports = {} as any;
-packageJson.imports["#root/*"] = "./absolute-root/Js/*";
+packageJson.imports["#root/*"] = "./*";
 childImports["#root/*"] = "./absolute-root/Js/*";
 
 childs.forEach(async (child) => {

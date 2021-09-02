@@ -15,7 +15,7 @@
             "args": ["${relativeFile}"],
             "cwd": "${workspaceRoot}",
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": ["node_modules/**"],
+            "skipFiles": ["node_modules1/**"],
             "env": {
                 "NODE_ENV": "development"
             }
