@@ -1,16 +1,13 @@
 
-
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
-import path, { relative } from 'path';
-import { configs } from '#shared/configs';
+import { relative } from 'path';
+
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
-import sanitizeFilename from 'sanitize-filename';
+
 // import { configsCollections } from '#shared/configs-collection';
 import { normalizePath, Plugin, UserConfig } from 'vite';
-import isString from 'lodash/isString';
-import partition from 'lodash/partition';
+
 import fastGlob from 'fast-glob';
 import { createFilter } from '@rollup/pluginutils';
 import { Node } from 'estree';
@@ -84,20 +81,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       name: 'vite-plugin-glob-input',
       options(conf) {
         let input = options.inputs.flatMap(input => {
-          const ouputDir = normalizePath(conf.output[0].dir);
-          const relativeTo = input.inPlace ? '' : normalizePath(input.relativeTo);
-
-          return fastGlob
+          input.include = input.include.map(p => normalizePath(p));
+          const toReturn = fastGlob
             .sync(input.include, input.globOptions).map(entry => {
-              let relPath
-              if (input.inPlace) {
-                relPath = relative(ouputDir, entry as any);
-              } else {
-                relPath = relative(relativeTo, entry as any);
-              }
-
               return entry;
             })
+
+          return toReturn;
         })
 
         conf.input = input;

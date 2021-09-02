@@ -32,7 +32,7 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {
-                        from: this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath(),
+                        include: [this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath()
                     }
                 ]
