@@ -17,11 +17,6 @@
     type RootPathsType = {
     toAbsolutePath:()=> string,
     toRelativePath:()=> string,
-    readonly ".dockerignore": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
-,
     readonly ".git": {
         toAbsolutePath:()=> string,
         toRelativePath:()=> string
@@ -4408,7 +4403,32 @@
 ,
                 readonly "wwwroot": {
                     toAbsolutePath:()=> string,
-                    toRelativePath:()=> string
+                    toRelativePath:()=> string,
+                    readonly "assets": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:()=> string,
+                        readonly "index.1b54bc75.js": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:()=> string
+                        }
+
+                    }
+,
+                    readonly "src": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:()=> string,
+                        readonly "templates": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:()=> string,
+                            readonly "index.html": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:()=> string
+                            }
+
+                        }
+
+                    }
+
                 }
 ,
                 readonly "_Imports.razor": {
@@ -4421,6 +4441,11 @@
             readonly "Server": {
                 toAbsolutePath:()=> string,
                 toRelativePath:()=> string,
+                readonly ".vs": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:()=> string
+                }
+,
                 readonly "appsettings.Development.json": {
                     toAbsolutePath:()=> string,
                     toRelativePath:()=> string
@@ -8322,11 +8347,6 @@
 
     }
 ,
-    readonly "Create-DockerfileSolutionRestore.ps1": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
-,
     readonly "dapr": {
         toAbsolutePath:()=> string,
         toRelativePath:()=> string,
@@ -10717,29 +10737,49 @@
 
     }
 ,
-    readonly "docker-compose.dcproj": {
+    readonly "Docker": {
         toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
+        toRelativePath:()=> string,
+        readonly ".dockerignore": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
 ,
-    readonly "docker-compose.dcproj.user": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
+        readonly "Create-DockerfileSolutionRestore.ps1": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
 ,
-    readonly "docker-compose.override.yml": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
+        readonly "docker-compose.dcproj": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
 ,
-    readonly "docker-compose.yml": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
-    }
+        readonly "docker-compose.dcproj.user": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
 ,
-    readonly "DockerfileSolutionRestore.txt": {
-        toAbsolutePath:()=> string,
-        toRelativePath:()=> string
+        readonly "docker-compose.override.yml": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
+,
+        readonly "docker-compose.yml": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
+,
+        readonly "DockerfileSolutionRestore.txt": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
+,
+        readonly "obj": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
+
     }
 ,
     readonly "identityServer_dev_sqlServer.bat": {
@@ -11755,6 +11795,11 @@
                         readonly "vite-plugins": {
                             toAbsolutePath:()=> string,
                             toRelativePath:()=> string,
+                            readonly "vite-plugins.module.ts": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:()=> string
+                            }
+,
                             readonly "vite-plugins.service.spec.ts": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:()=> string
@@ -12630,6 +12675,21 @@
 
                             }
 ,
+                            readonly "vite-plugin-html": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:()=> string,
+                                readonly "vite-plugin-html.service.spec.ts": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:()=> string
+                                }
+,
+                                readonly "vite-plugin-html.service.ts": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:()=> string
+                                }
+
+                            }
+,
                             readonly "vite-plugins": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:()=> string,
@@ -12643,6 +12703,11 @@
                                     toRelativePath:()=> string
                                 }
 
+                            }
+,
+                            readonly "vite-plugins.module.ts": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:()=> string
                             }
 
                         }
@@ -15711,11 +15776,6 @@
                     toRelativePath:()=> string
                 }
 ,
-                readonly "vite.dev.ts.js": {
-                    toAbsolutePath:()=> string,
-                    toRelativePath:()=> string
-                }
-,
                 readonly "vite.prod.ts": {
                     toAbsolutePath:()=> string,
                     toRelativePath:()=> string
@@ -15765,6 +15825,11 @@
             toRelativePath:()=> string
         }
 ,
+        readonly "index.html": {
+            toAbsolutePath:()=> string,
+            toRelativePath:()=> string
+        }
+,
         readonly "lerna.json": {
             toAbsolutePath:()=> string,
             toRelativePath:()=> string
@@ -15776,11 +15841,6 @@
         }
 ,
         readonly "node_modules": {
-            toAbsolutePath:()=> string,
-            toRelativePath:()=> string
-        }
-,
-        readonly "package copy.json": {
             toAbsolutePath:()=> string,
             toRelativePath:()=> string
         }
@@ -27312,10 +27372,6 @@
 export const RootPaths:RootPathsType = createProxy( {
     toAbsolutePath:()=> "C:\\App",
     toRelativePath:()=> "",
-    ".dockerignore": {
-        toAbsolutePath:()=> "C:\\App\\.dockerignore",
-        toRelativePath:()=> ".dockerignore"
-    },
     ".git": {
         toAbsolutePath:()=> "C:\\App\\.git",
         toRelativePath:()=> ".git"
@@ -30827,7 +30883,27 @@ export const RootPaths:RootPathsType = createProxy( {
                 },
                 "wwwroot": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot",
-                    toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot"
+                    toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot",
+                    "assets": {
+                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets",
+                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\assets",
+                        "index.1b54bc75.js": {
+                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js",
+                            toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js"
+                        }
+                    },
+                    "src": {
+                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\src",
+                        toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\src",
+                        "templates": {
+                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\src\\templates",
+                            toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\src\\templates",
+                            "index.html": {
+                                toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\src\\templates\\index.html",
+                                toRelativePath:()=> "Apps\\BlazorApp\\Client\\wwwroot\\src\\templates\\index.html"
+                            }
+                        }
+                    }
                 },
                 "_Imports.razor": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\_Imports.razor",
@@ -30837,6 +30913,10 @@ export const RootPaths:RootPathsType = createProxy( {
             "Server": {
                 toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Server",
                 toRelativePath:()=> "Apps\\BlazorApp\\Server",
+                ".vs": {
+                    toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Server\\.vs",
+                    toRelativePath:()=> "Apps\\BlazorApp\\Server\\.vs"
+                },
                 "appsettings.Development.json": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.Development.json",
                     toRelativePath:()=> "Apps\\BlazorApp\\Server\\appsettings.Development.json"
@@ -33956,10 +34036,6 @@ export const RootPaths:RootPathsType = createProxy( {
             }
         }
     },
-    "Create-DockerfileSolutionRestore.ps1": {
-        toAbsolutePath:()=> "C:\\App\\Create-DockerfileSolutionRestore.ps1",
-        toRelativePath:()=> "Create-DockerfileSolutionRestore.ps1"
-    },
     "dapr": {
         toAbsolutePath:()=> "C:\\App\\dapr",
         toRelativePath:()=> "dapr",
@@ -35872,25 +35948,41 @@ export const RootPaths:RootPathsType = createProxy( {
             }
         }
     },
-    "docker-compose.dcproj": {
-        toAbsolutePath:()=> "C:\\App\\docker-compose.dcproj",
-        toRelativePath:()=> "docker-compose.dcproj"
-    },
-    "docker-compose.dcproj.user": {
-        toAbsolutePath:()=> "C:\\App\\docker-compose.dcproj.user",
-        toRelativePath:()=> "docker-compose.dcproj.user"
-    },
-    "docker-compose.override.yml": {
-        toAbsolutePath:()=> "C:\\App\\docker-compose.override.yml",
-        toRelativePath:()=> "docker-compose.override.yml"
-    },
-    "docker-compose.yml": {
-        toAbsolutePath:()=> "C:\\App\\docker-compose.yml",
-        toRelativePath:()=> "docker-compose.yml"
-    },
-    "DockerfileSolutionRestore.txt": {
-        toAbsolutePath:()=> "C:\\App\\DockerfileSolutionRestore.txt",
-        toRelativePath:()=> "DockerfileSolutionRestore.txt"
+    "Docker": {
+        toAbsolutePath:()=> "C:\\App\\Docker",
+        toRelativePath:()=> "Docker",
+        ".dockerignore": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\.dockerignore",
+            toRelativePath:()=> "Docker\\.dockerignore"
+        },
+        "Create-DockerfileSolutionRestore.ps1": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\Create-DockerfileSolutionRestore.ps1",
+            toRelativePath:()=> "Docker\\Create-DockerfileSolutionRestore.ps1"
+        },
+        "docker-compose.dcproj": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\docker-compose.dcproj",
+            toRelativePath:()=> "Docker\\docker-compose.dcproj"
+        },
+        "docker-compose.dcproj.user": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\docker-compose.dcproj.user",
+            toRelativePath:()=> "Docker\\docker-compose.dcproj.user"
+        },
+        "docker-compose.override.yml": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\docker-compose.override.yml",
+            toRelativePath:()=> "Docker\\docker-compose.override.yml"
+        },
+        "docker-compose.yml": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\docker-compose.yml",
+            toRelativePath:()=> "Docker\\docker-compose.yml"
+        },
+        "DockerfileSolutionRestore.txt": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\DockerfileSolutionRestore.txt",
+            toRelativePath:()=> "Docker\\DockerfileSolutionRestore.txt"
+        },
+        "obj": {
+            toAbsolutePath:()=> "C:\\App\\Docker\\obj",
+            toRelativePath:()=> "Docker\\obj"
+        }
     },
     "identityServer_dev_sqlServer.bat": {
         toAbsolutePath:()=> "C:\\App\\identityServer_dev_sqlServer.bat",
@@ -36706,6 +36798,10 @@ export const RootPaths:RootPathsType = createProxy( {
                         "vite-plugins": {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\vite\\vite-plugins",
                             toRelativePath:()=> "Js\\apps\\blazor-app\\src\\vite\\vite-plugins",
+                            "vite-plugins.module.ts": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\vite\\vite-plugins\\vite-plugins.module.ts",
+                                toRelativePath:()=> "Js\\apps\\blazor-app\\src\\vite\\vite-plugins\\vite-plugins.module.ts"
+                            },
                             "vite-plugins.service.spec.ts": {
                                 toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\vite\\vite-plugins\\vite-plugins.service.spec.ts",
                                 toRelativePath:()=> "Js\\apps\\blazor-app\\src\\vite\\vite-plugins\\vite-plugins.service.spec.ts"
@@ -37406,6 +37502,18 @@ export const RootPaths:RootPathsType = createProxy( {
                                     toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts"
                                 }
                             },
+                            "vite-plugin-html": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html",
+                                toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html",
+                                "vite-plugin-html.service.spec.ts": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.spec.ts",
+                                    toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.spec.ts"
+                                },
+                                "vite-plugin-html.service.ts": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.ts",
+                                    toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.ts"
+                                }
+                            },
                             "vite-plugins": {
                                 toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins",
                                 toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins",
@@ -37417,6 +37525,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins\\vite-plugins.service.ts",
                                     toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins\\vite-plugins.service.ts"
                                 }
+                            },
+                            "vite-plugins.module.ts": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins.module.ts",
+                                toRelativePath:()=> "Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugins.module.ts"
                             }
                         },
                         "vite-prod": {
@@ -39869,10 +39981,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts",
                     toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts"
                 },
-                "vite.dev.ts.js": {
-                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.dev.ts.js",
-                    toRelativePath:()=> "Js\\apps\\shared\\vite.dev.ts.js"
-                },
                 "vite.prod.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\vite.prod.ts",
                     toRelativePath:()=> "Js\\apps\\shared\\vite.prod.ts"
@@ -39911,6 +40019,10 @@ export const RootPaths:RootPathsType = createProxy( {
             toAbsolutePath:()=> "C:\\App\\Js\\configs.ts",
             toRelativePath:()=> "Js\\configs.ts"
         },
+        "index.html": {
+            toAbsolutePath:()=> "C:\\App\\Js\\index.html",
+            toRelativePath:()=> "Js\\index.html"
+        },
         "lerna.json": {
             toAbsolutePath:()=> "C:\\App\\Js\\lerna.json",
             toRelativePath:()=> "Js\\lerna.json"
@@ -39922,10 +40034,6 @@ export const RootPaths:RootPathsType = createProxy( {
         "node_modules": {
             toAbsolutePath:()=> "C:\\App\\Js\\node_modules",
             toRelativePath:()=> "Js\\node_modules"
-        },
-        "package copy.json": {
-            toAbsolutePath:()=> "C:\\App\\Js\\package copy.json",
-            toRelativePath:()=> "Js\\package copy.json"
         },
         "package-lock.json": {
             toAbsolutePath:()=> "C:\\App\\Js\\package-lock.json",

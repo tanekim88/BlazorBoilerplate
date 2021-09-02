@@ -2,9 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { ViteBaseService } from './src/vite/vite-base/vite-base.service';
 import { ViteModule } from './src/vite/vite.module';
 
-import { WebpackBaseService } from './src/webpack/webpack-base/webpack-base.service';
-
-import { WebpackModule } from './src/webpack/webpack.module';
 import vite from 'vite'
 
 export class ViteBase {

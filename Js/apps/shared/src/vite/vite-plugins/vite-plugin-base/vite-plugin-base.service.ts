@@ -10,7 +10,16 @@ export class VitePluginBaseService {
     @CustomInject(EnvironmentService)
     protected environmentService: EnvironmentService;
 
-    createPlugin<T = any>(...options: T[]): Plugin {
+    createOptions(options?) {
+        return this.mergeService.mergeOptions(
+            {
+
+            },
+            options,
+        );
+    }
+
+    createPlugin(...options: any): Plugin {
         return {} as any
     }
 }
