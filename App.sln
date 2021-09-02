@@ -254,7 +254,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.IntegrationTests", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.ArchTests", "BoundedContexts\EmailBoundedContext\Tests\Email.ArchTests\Email.ArchTests.csproj", "{6A6F6DF9-61F3-4819-8286-4D4F46DFA454}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{7152E5A0-263C-4F67-8F33-8427E14EBD08}"
 	ProjectSection(SolutionItems) = preProject
