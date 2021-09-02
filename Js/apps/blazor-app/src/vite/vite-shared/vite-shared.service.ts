@@ -12,53 +12,41 @@ import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.serv
 export class BlazorAppViteSharedService extends ViteSharedService {
     @CustomInject(BlazorAppEnvironmentService)
     protected blazorAppEnvironmentService: BlazorAppEnvironmentService;
-    
-    createConfiguration(options?:UserConfig) {
-        return this.mergeService.mergeOptions(
-            super.createConfiguration(),{   
-                root:blazorAppPaths.toAbsolutePath(),
-                plugins:[
-                ],
-            } as UserConfig,
-            options,
-        );
-    }
 
-    createTsToJsConfiguration(){
-        const toReturn =  this.createConfiguration({
-                root:blazorAppPaths.toAbsolutePath(),
+    createConfiguration(options?: UserConfig) {
+        return this.mergeService.mergeOptions(
+            super.createConfiguration(), {
+                root: blazorAppPaths.toAbsolutePath(),
                 build: {
                     outDir: BlazorAppPaths.wwwroot.toAbsolutePath(),
                     rollupOptions: {
-                      input: [
-                        path.resolve(this.blazorAppEnvironmentService.LocalPaths.toAbsolutePath(), '*.ts'),
-                      ],
+                        input: [
+                            this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()
+                        ],
+                        external: [
+ 
+                        ]
                     },
-                    watch:{
-                      
+                    watch: {
+
                     },
-                    assetsInlineLimit:4096,
-                    cssCodeSplit:false,
-                    sourcemap:false,
-                    minify:false,
-                    cleanCssOptions:{
-                        format:'beautify'
-                    }
+                    assetsInlineLimit: 4096,
+                    cssCodeSplit: true,
+                    sourcemap: true,
+                    minify: false,
+                    cleanCssOptions: {
+                        format: 'beautify'
+                    },
+                    emptyOutDir: true
                 },
-                server:{
-                    port:4010
+                server: {
+                    port: 4010
                 },
                 optimizeDeps: {
-                    keepNames:true,
+                    keepNames: true,
                 }
-            });
-
-        return toReturn;
-    }
-
-    createManyConfigurations(){
-        return [
-            this.createTsToJsConfiguration()
-        ];
+            } as UserConfig,
+            options,
+        );
     }
 }

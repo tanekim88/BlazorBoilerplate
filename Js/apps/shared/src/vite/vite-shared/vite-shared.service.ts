@@ -8,13 +8,14 @@ import { UserConfig } from 'vite';
 export class ViteSharedService extends ViteBaseService {
   
     createConfiguration(options?:UserConfig) {
+
         return this.mergeService.mergeOptions(
             super.createConfiguration(),{
                 plugins:[
                     
                 ],
                 resolve:{
-                    extensions:['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+                    
                 },
                 css:{
                     preprocessorOptions:{

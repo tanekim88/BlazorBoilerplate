@@ -10,10 +10,8 @@ export class ViteDevService extends ViteBaseService {
     protected viteSharedService: ViteSharedService;
     
     createConfiguration(options?:UserConfig) {
-
         return this.mergeService.mergeOptions(
             super.createConfiguration(),
-            this.viteSharedService.createConfiguration(),
             {
                 mode:'development',
                 build:{
@@ -23,9 +21,5 @@ export class ViteDevService extends ViteBaseService {
             } as UserConfig,
             options,
         );
-    }
-
-    createManyConfigurations(){
-        return [];
     }
 }

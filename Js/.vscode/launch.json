@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Run current ts",
-            "type": "node",
+            "type": "pwa-node",
             "request": "launch",
             "runtimeExecutable": "node",
             "runtimeArgs": [

@@ -21,15 +21,4 @@ export class BlazorAppViteDevService extends ViteDevService {
             options,
         );
     }
-
-    createManyConfigurations(){
-        return [
-            this.createConfiguration(
-                {
- 
-                }
-            )
-
-        ];
-    }
 }

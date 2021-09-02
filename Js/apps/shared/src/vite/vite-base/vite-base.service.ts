@@ -52,6 +52,7 @@ export class ViteBaseService {
         //   find:'@blazorApp',
         //   replacement:'./blazorApp'
         // }]
+        extensions:['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
       }
     } as UserConfig, options);
   }
