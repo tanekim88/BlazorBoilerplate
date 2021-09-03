@@ -27,7 +27,7 @@ const appDirNames = childs.map((x) => x.folderName);
 const commandObjs = [
     {
         name: 'setup',
-        command: 'node  --loader ts-node/esm ./scripts/generate-scripts.ts',
+        command: 'node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts',
         includes: [''],
     },
     {
@@ -82,7 +82,7 @@ const commandObjs = [
     },
     {
         name: 'test:debug',
-        command: 'node --inspect-brk --loader ts-node/esm node_modules/.bin/jest --runInBand',
+        command: 'node --inspect-brk --loader ts-node/esm --experimental-specifier-resolution=node node_modules/.bin/jest --runInBand',
         includes: [...appDirNames],
     },
     {
@@ -102,25 +102,25 @@ const commandObjs = [
         name: 'build:vite',
         command:
             // 'cross-env TS_NODE_PROJECT="tsconfig.json" vite --mode development --config vite.dev.ts  -r ts-node/register --config-register tsconfig-paths/register',
-            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --config vite.dev.ts',
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" --experimental-specifier-resolution=node vite --mode=development --config vite.dev.ts',
         includes: [...appDirNames],
     },
     {
         name: 'build:prod:vite',
         command:
-            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --config vite.prod.ts',
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" --experimental-specifier-resolution=node vite --mode=production --config vite.prod.ts',
         includes: [...appDirNames],
     },
     {
         name: 'watch:vite',
         command:
-            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=development --watch --config vite.dev.ts',
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" --experimental-specifier-resolution=node vite --mode=development --watch --config vite.dev.ts',
         includes: [...appDirNames],
     },
     {
         name: 'watch:prod:vite',
         command:
-            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" vite --mode=production --watch --config vite.prod.ts',
+            'cross-env NODE_OPTIONS="--max_old_space_size=4096 --loader ts-node/esm" --experimental-specifier-resolution=node vite --mode=production --watch --config vite.prod.ts',
         includes: [...appDirNames],
     },
     {
@@ -171,7 +171,7 @@ const commandObjs = [
     },
     {
         name: 'generate:paths',
-        command: 'node --loader ts-node/esm ./scripts/generate-paths.ts',
+        command: 'node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-paths.ts',
         includes: [''],
     },
 ];
