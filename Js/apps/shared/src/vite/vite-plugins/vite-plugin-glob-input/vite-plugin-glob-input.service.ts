@@ -1,7 +1,7 @@
 
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
-import { relative, resolve } from 'path';
+import { relative, resolve, join } from 'path';
 
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
 
@@ -14,12 +14,13 @@ import { Node } from 'estree';
 import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
-
+import fs from 'fs'
 export interface VitePluginGlobInputOptions {
   inputs: {
     include: string[],
     sourceMap?: boolean,
-    relativeTo: string,
+    relativeTo?: string,
+    projectRoot?: string,
     inPlace?: boolean,
     globOptions?: {
       ignore?: string[]
@@ -89,7 +90,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       options(conf) {
         let input = options.inputs.flatMap(input => {
           input.include = input.include.map(p => normalizePath(p));
-          input.relativeTo = normalizePath(input.relativeTo);
+          input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
+
+          input.projectRoot = input.projectRoot && normalizePath(input.projectRoot);
+
           const toReturn = fastGlob
             .sync(input.include, Object.assign({}, input.globOptions, {
               stats: false,
@@ -110,12 +114,44 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
       },
       generateBundle(option, bundle, isWrite: boolean) {
-
+        console.dir(bundle);
       },
-
+      resolveImportMeta(property, { moduleId }) {
+        if (property === 'url') {
+          return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
+        }
+        return null;
+      },
       outputOptions(outputOptions) {
         console.dir(outputOptions);
         return outputOptions;
+      },
+      augmentChunkHash(chunkInfo) {
+        if (chunkInfo.name === 'foo') {
+          return Date.now().toString();
+        }
+      },
+      resolveFileUrl(arg: { chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string }) {
+        console.dir(arg);
+        for (const input of options.inputs) {
+          if (input.relativeTo) {
+            const rel = relative(input.projectRoot, input.relativeTo);
+            // const ileName = relative(rel, fileName);
+            // newKey = relative(rel, key);
+          }
+        }
+        return null;
+      },
+      resolveAssetUrl(arg) {
+        console.dir(arg);
+        // for (const input of options.inputs) {
+        //   if (input.relativeTo) {
+        //     const rel = relative(input.projectRoot, input.relativeTo);
+        //     // const ileName = relative(rel, fileName);
+        //     // newKey = relative(rel, key);
+        //   }
+        // }
+        return null;
       },
       writeBundle(option, bundle): void {
         console.dir(options);
@@ -132,9 +168,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
 
             // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
-            if (input.relativeTo) {
-              file.fileName = relative(input.relativeTo, file.fileName);
-            }
+
             // file.imports.map((imported: string) => {
             //   if (!filter(imported)) {
             //     return imported;
@@ -143,43 +177,54 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             //   return relative(options.relativeTo , imported) || imported;
             // });
 
-            if (file.code) {
-              const magicString = new MagicString(file.code);
-              const ast = this.parse(file.code, {
-                ecmaVersion: 12,
-                sourceType: 'module',
-              });
+            // if (file.code) {
+            //   const magicString = new MagicString(file.code);
+            //   const ast = this.parse(file.code, {
+            //     ecmaVersion: 12,
+            //     sourceType: 'module',
+            //   });
 
-              walk(ast, {
-                enter(node) {
-                  if (
-                    [
-                      NodeType.ImportDeclaration,
-                      NodeType.CallExpression,
-                      NodeType.ExportAllDeclaration,
-                      NodeType.ExportNamedDeclaration,
-                    ].includes(node.type as NodeType)
-                  ) {
-                    const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
+            //   walk(ast, {
+            //     enter(node) {
+            //       if (
+            //         [
+            //           NodeType.ImportDeclaration,
+            //           NodeType.CallExpression,
+            //           NodeType.ExportAllDeclaration,
+            //           NodeType.ExportNamedDeclaration,
+            //         ].includes(node.type as NodeType)
+            //       ) {
+            //         const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
 
-                    if (req) {
-                      const { start, end } = req;
-                      const newPath = req.value;
-                      magicString.overwrite(start, end, `'${newPath}'`);
-                    }
-                  }
-                },
-              });
+            //         if (req) {
+            //           const { start, end } = req;
+            //           const newPath = req.value;
+            //           magicString.overwrite(start, end, `'${newPath}'`);
+            //         }
+            //       }
+            //     },
+            //   });
 
-              if (sourceMaps) {
-                file.map = magicString.generateMap();
-              }
+            //   if (sourceMaps) {
+            //     file.map = magicString.generateMap();
+            //   }
 
-              file.code = magicString.toString();
+            //   file.code = magicString.toString();
+            // }
+
+            let newKey = key;
+            if (input.relativeTo) {
+              const rel = relative(input.projectRoot, input.relativeTo);
+              file.fileName = relative(rel, file.fileName);
+              newKey = relative(rel, key);
             }
 
-            delete bundle[key];
-            bundle[key] = file;
+            if (key !== newKey) {
+              delete bundle[key];
+              bundle[newKey] = file;
+              fs.unlinkSync(resolve(option.dir, key));
+              fs.writeFileSync(resolve(option.dir, newKey), file.source);
+            }
           }
         }
       }

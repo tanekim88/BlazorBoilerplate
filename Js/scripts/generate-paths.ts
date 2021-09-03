@@ -63,6 +63,7 @@ const newRootPath = path.join(rootDir, '..');
 const [toReturn, toType] = getAllFiles(newRootPath);
 
 const createProxyScript = `
+    import path from 'path';
     function createProxy(obj) {
         return new Proxy(obj, {
             set: (target, prop, value) => {
@@ -97,7 +98,7 @@ const content = json
     // .replace(/"toString":/g, 'toString:()=>')
     // .replace(/"\[Symbol.toStringTag\]":/g, '[Symbol.toStringTag]: ()=>')
     .replace(/"toAbsolutePath":/g, 'toAbsolutePath:()=>')
-    .replace(/"toRelativePath":(\s*\"[^"]*\")/g, `toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo, $1) :  path.relative("${newRootPath}", $1) }`);
+    .replace(/"toRelativePath":(\s*\"[^"]*\")/g, `toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo, $1) :  path.relative(${JSON.stringify(newRootPath)}, $1) }`);
 const finalContent =
     `export const RootPaths:RootPathsType = createProxy( ` +
     content +
