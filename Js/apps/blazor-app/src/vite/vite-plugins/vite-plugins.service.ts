@@ -34,7 +34,6 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                     {
                         include: [this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
-                        projectRoot: this.blazorAppEnvironmentService.localPaths.toAbsolutePath()
                     }
                 ]
             })

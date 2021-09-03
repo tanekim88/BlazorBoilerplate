@@ -3,33 +3,35 @@ import { ViteBaseService } from '../vite-base/vite-base.service';
 
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
+import { RootPaths } from '#root/paths';
 
 @CustomInjectable()
 export class ViteSharedService extends ViteBaseService {
-  
-    createConfiguration(options?:UserConfig) {
+
+    createConfiguration(options?: UserConfig) {
 
         return this.mergeService.mergeOptions(
-            super.createConfiguration(),{
-                plugins:[
-                    
+            super.createConfiguration(), {
+                root: RootPaths.toAbsolutePath(),
+                plugins: [
+
                 ],
-                resolve:{
-                    
+                resolve: {
+
                 },
-                css:{
-                    preprocessorOptions:{
+                css: {
+                    preprocessorOptions: {
                         scss: {
                             // additionalData: `$injectedColor: orange;`
-                          }
+                        }
                     }
                 },
-                json:{
-                    namedExports:true,
-                    stringify:false
+                json: {
+                    namedExports: true,
+                    stringify: false
                 },
-                esbuild:{
-                    
+                esbuild: {
+
                 }
             } as UserConfig,
             options,

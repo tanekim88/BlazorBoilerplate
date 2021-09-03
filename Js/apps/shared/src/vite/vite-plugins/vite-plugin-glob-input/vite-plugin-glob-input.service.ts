@@ -15,12 +15,13 @@ import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
 import fs from 'fs'
+import { RootPaths } from '#root/paths';
 export interface VitePluginGlobInputOptions {
   inputs: {
     include: string[],
     sourceMap?: boolean,
     relativeTo?: string,
-    projectRoot?: string,
+    root?: string,
     inPlace?: boolean,
     globOptions?: {
       ignore?: string[]
@@ -34,11 +35,6 @@ enum NodeType {
   ImportDeclaration = 'ImportDeclaration',
   ExportNamedDeclaration = 'ExportNamedDeclaration',
   ExportAllDeclaration = 'ExportAllDeclaration',
-}
-
-const outputFileName = (filePath) => {
-  const chunkId = sanitizeFilename(filePath, { replacement: '_' });
-  return chunkId;
 }
 
 export function isEmpty(array: any[] | undefined) {
@@ -92,7 +88,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           input.include = input.include.map(p => normalizePath(p));
           input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
 
-          input.projectRoot = input.projectRoot && normalizePath(input.projectRoot);
+          input.root = input.root ? normalizePath(input.root) : normalizePath(RootPaths.toAbsolutePath());
 
           const toReturn = fastGlob
             .sync(input.include, Object.assign({}, input.globOptions, {
@@ -135,7 +131,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(arg);
         for (const input of options.inputs) {
           if (input.relativeTo) {
-            const rel = relative(input.projectRoot, input.relativeTo);
+            const rel = relative(input.root, input.relativeTo);
             // const ileName = relative(rel, fileName);
             // newKey = relative(rel, key);
           }
@@ -203,7 +199,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             let newKey = key;
             if (input.relativeTo) {
-              const rel = relative(input.projectRoot, input.relativeTo);
+              const rel = relative(input.root, input.relativeTo);
               file.fileName = relative(rel, file.fileName);
               newKey = relative(rel, key);
             }
@@ -231,7 +227,7 @@ function cleanEmptyFoldersRecursively(folder) {
   }
   var files = fs.readdirSync(folder);
   if (files.length > 0) {
-    files.forEach(function(file) {
+    files.forEach(function (file) {
       var fullPath = join(folder, file);
       cleanEmptyFoldersRecursively(fullPath);
     });

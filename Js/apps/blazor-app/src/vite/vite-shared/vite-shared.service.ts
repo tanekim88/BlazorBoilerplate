@@ -9,6 +9,7 @@ import path from 'path';
 import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
 import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { BlazorAppVitePluginsService } from '../vite-plugins/vite-plugins.service';
+import { RootPaths, rootPaths } from '#root/paths';
 @CustomInjectable()
 export class BlazorAppViteSharedService extends ViteSharedService {
     @CustomInject(BlazorAppEnvironmentService)
@@ -19,7 +20,7 @@ export class BlazorAppViteSharedService extends ViteSharedService {
         const plugins = this.blazorAppVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
-                root: blazorAppPaths.toAbsolutePath(),
+ 
                 build: {
                     outDir: BlazorAppPaths.wwwroot.toAbsolutePath(),
                     rollupOptions: {
