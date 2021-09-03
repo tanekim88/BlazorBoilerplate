@@ -110,27 +110,27 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         return conf;
       },
 
-      buildStart() {
+      // buildStart() {
 
-      },
-      generateBundle(option, bundle, isWrite: boolean) {
-        console.dir(bundle);
-      },
-      resolveImportMeta(property, { moduleId }) {
-        if (property === 'url') {
-          return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
-        }
-        return null;
-      },
-      outputOptions(outputOptions) {
-        console.dir(outputOptions);
-        return outputOptions;
-      },
-      augmentChunkHash(chunkInfo) {
-        if (chunkInfo.name === 'foo') {
-          return Date.now().toString();
-        }
-      },
+      // },
+      // generateBundle(option, bundle, isWrite: boolean) {
+      //   console.dir(bundle);
+      // },
+      // resolveImportMeta(property, { moduleId }) {
+      //   if (property === 'url') {
+      //     return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
+      //   }
+      //   return null;
+      // },
+      // outputOptions(outputOptions) {
+      //   console.dir(outputOptions);
+      //   return outputOptions;
+      // },
+      // augmentChunkHash(chunkInfo) {
+      //   if (chunkInfo.name === 'foo') {
+      //     return Date.now().toString();
+      //   }
+      // },
       resolveFileUrl(arg: { chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string }) {
         console.dir(arg);
         for (const input of options.inputs) {
@@ -140,17 +140,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             // newKey = relative(rel, key);
           }
         }
-        return null;
-      },
-      resolveAssetUrl(arg) {
-        console.dir(arg);
-        // for (const input of options.inputs) {
-        //   if (input.relativeTo) {
-        //     const rel = relative(input.projectRoot, input.relativeTo);
-        //     // const ileName = relative(rel, fileName);
-        //     // newKey = relative(rel, key);
-        //   }
-        // }
         return null;
       },
       writeBundle(option, bundle): void {
@@ -227,11 +216,37 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
           }
         }
+
+
+        cleanEmptyFoldersRecursively(option.dir);
       }
     });
   }
 }
+function cleanEmptyFoldersRecursively(folder) {
 
+  var isDir = fs.statSync(folder).isDirectory();
+  if (!isDir) {
+    return;
+  }
+  var files = fs.readdirSync(folder);
+  if (files.length > 0) {
+    files.forEach(function(file) {
+      var fullPath = join(folder, file);
+      cleanEmptyFoldersRecursively(fullPath);
+    });
+
+    // re-evaluate files; after deleting subfolder
+    // we may have parent folder empty now
+    files = fs.readdirSync(folder);
+  }
+
+  if (files.length == 0) {
+    console.log("removing: ", folder);
+    fs.rmdirSync(folder);
+    return;
+  }
+}
 // acorn:undefined
 // acornInjectPlugins:undefined
 // cache:{modules: Array(0)}
