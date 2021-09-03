@@ -1,9 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
-import { statSync, readFileSync, writeFileSync, readdirSync, unlinkSync } from 'fs';
-import { relative, basename, join, dirname } from 'path';
-import hasha from 'hasha';
-import cheerio from 'cheerio';
+
 // const cheerio = require('cheerio');
 
 
@@ -30,10 +27,6 @@ export class VitePluginHtmlService extends VitePluginBaseService {
             argOptions,
         ) as VitePluginHtmlOptions;
 
-        // const { template, filename, externals, inject, publicPath } = options;
-        // let destFile = options.destFile
-
-
         return {
             name: 'html',
             transformIndexHtml(html) {
@@ -41,9 +34,9 @@ export class VitePluginHtmlService extends VitePluginBaseService {
                 externals.forEach(external => {
                     let pos = external.pos;
                     if (!pos) {
-                        pos = external.html.includes('</') ? 'before' : 'after'
+                        pos = external.insertAt.includes('</') ? 'before' : 'after'
                     }
-                    const replaceWith = external.pos == 'after' ? `$0${external.html}` : `${external.html}$0`
+                    const replaceWith = pos == 'after' ? `$&\n${external.html}` : `${external.html}\n$&`
                     html = html.replace(
                         external.insertAt,
                         replaceWith

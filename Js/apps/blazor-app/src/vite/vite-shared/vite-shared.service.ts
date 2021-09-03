@@ -46,7 +46,10 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                 optimizeDeps: {
                     keepNames: true,
                 },
-                plugins
+                plugins,
+                css:{
+                    // postcss
+                }
             } as UserConfig,
             options,
         );

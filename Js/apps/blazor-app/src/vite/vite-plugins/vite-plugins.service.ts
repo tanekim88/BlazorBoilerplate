@@ -25,9 +25,11 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                     { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
                     { html: '<script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>', insertAt: '</body>' },
                     {
-                        html: `<script>
-                        MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
-                        </script>`, insertAt: '</body>'
+                        html: `
+                        <script>
+                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                        </script>
+                        `, insertAt: '</body>'
                     },
                     { html: '<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>', insertAt: '</body>' },
                     { html: '<script src="_framework/blazor.webassembly.js"></script>', insertAt: '</body>' },
