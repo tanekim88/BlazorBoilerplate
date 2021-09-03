@@ -20,13 +20,18 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
         return [
             this.vitePluginHtmlService.createPlugin({
                 externals: [
-                    // the type can be 'js' or 'css',
-                    // and you can pass a pos field to control the the position in which the file will be inserted.
-                    // the xxxx1.js will be inserted before the bundle,
-                    // and the xxxx2.js will be inserted after the bundle as default
-                    // you can set an `inject` field here to cover the outer `inject`
-                    { type: 'js', file: '//xxxx1.js', pos: 'before' },
-                    { type: 'js', file: '//xxxx2.js' }
+                    { html: '<link href="_content/Material.Blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.Blazor/MaterialBlazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
+                    { html: '<script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>', insertAt: '</body>' },
+                    {
+                        html: `<script>
+                        MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                        </script>`, insertAt: '</body>'
+                    },
+                    { html: '<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>', insertAt: '</body>' },
+                    { html: '<script src="_framework/blazor.webassembly.js"></script>', insertAt: '</body>' },
+                    { html: '<script>navigator.serviceWorker.register("service-worker.js");</script>', insertAt: '</body>' },
                 ]
             }),
             this.vitePluginGlobInputService.createPlugin({

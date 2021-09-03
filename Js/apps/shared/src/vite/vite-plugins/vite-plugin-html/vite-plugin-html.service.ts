@@ -6,31 +6,9 @@ import hasha from 'hasha';
 import cheerio from 'cheerio';
 // const cheerio = require('cheerio');
 
-function traverse(dir, list) {
-    const dirList = readdirSync(dir);
-    dirList.forEach(node => {
-        const file = `${dir}/${node}`;
-        if (statSync(file).isDirectory()) {
-            traverse(file, list);
-        } else {
-            if (/\.js$/.test(file)) {
-                list.push({ type: 'js', file });
-            } else if (/\.css$/.test(file)) {
-                list.push({ type: 'css', file });
-            }
-        }
-    });
-}
-
-function isURL(url) {
-    return /^(((https|http|ftp|rtsp|mms):)?\/\/)+[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&_~`@[\]\':+!]*([^<>\"\"])*$/.test(url);
-}
 
 export interface VitePluginHtmlOptions {
-    externals?: { type: 'js' | 'css', file: string, pos?: 'before' | 'after' }[],
-    inject?: string,
-    publicPath?: string,
-    destFile?: string
+    externals: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
 }
 
 @Injectable()
@@ -59,10 +37,19 @@ export class VitePluginHtmlService extends VitePluginBaseService {
         return {
             name: 'html',
             transformIndexHtml(html) {
-                return html.replace(
-                    /.*/,
-                    `<title>Title replaced!</title>`
-                )
+                const externals = options.externals ?? [];
+                externals.forEach(external => {
+                    let pos = external.pos;
+                    if (!pos) {
+                        pos = external.html.includes('</') ? 'before' : 'after'
+                    }
+                    const replaceWith = external.pos == 'after' ? `$0${external.html}` : `${external.html}$0`
+                    html = html.replace(
+                        external.insertAt,
+                        replaceWith
+                    )
+                });
+                return html;
             },
             enforce: 'post' as any
         };

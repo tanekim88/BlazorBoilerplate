@@ -14,7 +14,7 @@
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
     "scripts": {
-        "setup": "node  --loader ts-node/esm ./scripts/generate-scripts.ts",
+        "setup": "node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts",
         "prebuild": "rimraf dist",
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -25,13 +25,13 @@
         "test": "jest",
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
-        "test:debug": "node --inspect-brk --loader ts-node/esm node_modules/.bin/jest --runInBand",
+        "test:debug": "node --inspect-brk --loader ts-node/esm --experimental-specifier-resolution=node node_modules/.bin/jest --runInBand",
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "lint": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint **/*.ts --fix --no-eslintrc -c .eslintrc.json",
-        "build:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" vite --mode=development --config vite.dev.ts",
-        "build:prod:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" vite --mode=production --config vite.prod.ts",
-        "watch:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" vite --mode=development --watch --config vite.dev.ts",
-        "watch:prod:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" vite --mode=production --watch --config vite.prod.ts",
+        "build:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" --experimental-specifier-resolution=node vite --mode=development --config vite.dev.ts",
+        "build:prod:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" --experimental-specifier-resolution=node vite --mode=production --config vite.prod.ts",
+        "watch:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" --experimental-specifier-resolution=node vite --mode=development --watch --config vite.dev.ts",
+        "watch:prod:vite": "cross-env NODE_OPTIONS=\"--max_old_space_size=4096 --loader ts-node/esm\" --experimental-specifier-resolution=node vite --mode=production --watch --config vite.prod.ts",
         "start:pwa": "http-server dist",
         "watch": "",
         "watch:dotnet": "dotnet watch run",
@@ -41,7 +41,7 @@
         "init": "npm install -D concurrently npm-run-all",
         "nuke": "rimraf node_modules",
         "reset": "npm run nuke && npm run init && npm run inst",
-        "generate:paths": "node --loader ts-node/esm ./scripts/generate-paths.ts"
+        "generate:paths": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-paths.ts"
     },
     "keywords": [],
     "author": "",
