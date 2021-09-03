@@ -1,7 +1,7 @@
 
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
-import { relative } from 'path';
+import { relative, resolve } from 'path';
 
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
 
@@ -13,6 +13,7 @@ import { createFilter } from '@rollup/pluginutils';
 import { Node } from 'estree';
 import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
+import sanitizeFilename from 'sanitize-filename';
 
 export interface VitePluginGlobInputOptions {
   inputs: {
@@ -33,6 +34,12 @@ enum NodeType {
   ExportNamedDeclaration = 'ExportNamedDeclaration',
   ExportAllDeclaration = 'ExportAllDeclaration',
 }
+
+const outputFileName = (filePath) => {
+  const chunkId = sanitizeFilename(filePath, { replacement: '_' });
+  return chunkId;
+}
+
 export function isEmpty(array: any[] | undefined) {
   return !array || array.length === 0;
 }
@@ -82,36 +89,52 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       options(conf) {
         let input = options.inputs.flatMap(input => {
           input.include = input.include.map(p => normalizePath(p));
+          input.relativeTo = normalizePath(input.relativeTo);
           const toReturn = fastGlob
-            .sync(input.include, input.globOptions).map(entry => {
-              return entry;
+            .sync(input.include, Object.assign({}, input.globOptions, {
+              stats: false,
+
+            })).map(entry => {
+              return (entry);
             })
 
           return toReturn;
         })
 
         conf.input = input;
+        options['cache'] = input;
         return conf;
       },
 
       buildStart() {
 
       },
-      generateBundle(options, bundle, isWrite: boolean) {
+      generateBundle(option, bundle, isWrite: boolean) {
+
+      },
+
+      outputOptions(outputOptions) {
+        console.dir(outputOptions);
+        return outputOptions;
+      },
+      writeBundle(option, bundle): void {
+        console.dir(options);
+        console.dir(bundle);
+
         const files = Object.entries<any>(bundle);
         for (const [key, file] of files) {
           for (const input of options.inputs) {
 
             const sourceMaps = input.sourceMap !== false;
-            const ignore = input.globOptions?.ignore ?? [];
-            const filter = createFilter(input.include, ignore);
 
-            if (!filter(file.facadeModuleId)) {
+            if (file.type === 'chunk') {
               continue;
             }
 
-            file.facadeModuleId = relative(options.relativeTo, file.facadeModuleId);
-            file.fileName = relative(options.relativeTo, file.fileName);
+            // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
+            if (input.relativeTo) {
+              file.fileName = relative(input.relativeTo, file.fileName);
+            }
             // file.imports.map((imported: string) => {
             //   if (!filter(imported)) {
             //     return imported;
@@ -141,7 +164,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
                     if (req) {
                       const { start, end } = req;
-                      const newPath = relative(input.relativeTo, req.value);
+                      const newPath = req.value;
                       magicString.overwrite(start, end, `'${newPath}'`);
                     }
                   }
@@ -156,10 +179,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
 
             delete bundle[key];
-            bundle[relative(input.relativeTo, key)] = file;
+            bundle[key] = file;
           }
         }
-      },
+      }
     });
   }
 }

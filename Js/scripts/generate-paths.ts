@@ -22,13 +22,8 @@ const getAllFiles = function (
         // toString: 'string',
         // '[Symbol.toStringTag]': 'string',
         toRelativePath: 'string',
-    },
-    topDir = null,
-) {
-    if (!topDir) {
-        topDir = dirPath;
     }
-
+) {
     const files = fs.readdirSync(dirPath);
 
     files.forEach(function (file) {
@@ -41,7 +36,7 @@ const getAllFiles = function (
                     toAbsolutePath: fullPath,
                     // toString: fullPath,
                     // '[Symbol.toStringTag]': fullPath,
-                    toRelativePath: path.relative(topDir, fullPath),
+                    toRelativePath: fullPath,
                 };
 
                 toType[typeKey] = {
@@ -54,7 +49,7 @@ const getAllFiles = function (
 
             if (blackListedFolders.every((b) => !file.endsWith(b))) {
                 if (fs.statSync(fullPath).isDirectory()) {
-                    [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey], topDir);
+                    [toReturn[file], toType[typeKey]] = getAllFiles(fullPath, toReturn[file], toType[typeKey]);
                 }
             }
         }
@@ -90,7 +85,7 @@ const type = jsonType
     // .replace(/"toString": "string"/g, 'toString:()=> string')
     // .replace(/"\[Symbol.toStringTag\]": "string"/g, '[Symbol.toStringTag]:()=> string')
     .replace(/"toAbsolutePath": "string"/g, 'toAbsolutePath:()=> string')
-    .replace(/"toRelativePath": "string"/g, 'toRelativePath:()=> string')
+    .replace(/"toRelativePath": "string"/g, 'toRelativePath:(relativeTo?:string)=> string')
     .replace(/"readonly /g, 'readonly "')
     // .replace(/\}/g, '} | string\n');
     .replace(/\}/g, '}\n');
@@ -102,7 +97,7 @@ const content = json
     // .replace(/"toString":/g, 'toString:()=>')
     // .replace(/"\[Symbol.toStringTag\]":/g, '[Symbol.toStringTag]: ()=>')
     .replace(/"toAbsolutePath":/g, 'toAbsolutePath:()=>')
-    .replace(/"toRelativePath":/g, 'toRelativePath:()=>');
+    .replace(/"toRelativePath":(\s*\"[^"]*\")/g, `toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo, $1) :  path.relative("${newRootPath}", $1) }`);
 const finalContent =
     `export const RootPaths:RootPathsType = createProxy( ` +
     content +

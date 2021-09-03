@@ -23,13 +23,8 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                 build: {
                     outDir: BlazorAppPaths.wwwroot.toAbsolutePath(),
                     rollupOptions: {
-                        input: [
-                            this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath(),
-                            
-                        ],
-                        external: [
- 
-                        ]
+                        input: [],
+                        external: []
                     },
                     watch: {
 
