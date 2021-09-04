@@ -66,22 +66,21 @@ export class FilesAndFoldersRenamer {
 
   private _getHtmlForWebview() {
     const webview = this._panel.webview;
-    let svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+    let solidDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
       FilesAndFoldersRenamer._extensionUri,
-      "svelte"
+      "solid"
     ));
 
-    if (!fs.existsSync(path.join(svelteDirPath.fsPath, 'index.html'))) {
-      svelteDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+    if (!fs.existsSync(path.join(solidDirPath.fsPath, 'index.html'))) {
+      solidDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
         FilesAndFoldersRenamer._extensionUri,
         'out',
-        "svelte"
+        "solid"
       ));
     }
 
     const htmlUri = webview.asWebviewUri(vscode.Uri.joinPath(
-      svelteDirPath,
-      "rename-files-and-folders",
+      solidDirPath,
       "index.html"
     ));
 
@@ -92,7 +91,7 @@ export class FilesAndFoldersRenamer {
     }
 
     const _appDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
-      svelteDirPath,
+      solidDirPath,
       "_app"
     ));
 
@@ -105,7 +104,7 @@ export class FilesAndFoldersRenamer {
 
     // update the base URI tag
     html = html.replace(/@_appDirPath/g, _appDirPath.toString());
-    html = html.replace(/@buildDirPath/g, svelteDirPath.toString());
+    html = html.replace(/@buildDirPath/g, solidDirPath.toString());
     html = html.replace(/@cspSource/g, webview.cspSource);
 
     fs.writeFileSync(htmlUri.fsPath, html);

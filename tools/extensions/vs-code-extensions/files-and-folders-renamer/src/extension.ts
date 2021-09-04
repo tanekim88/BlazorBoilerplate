@@ -13,20 +13,24 @@ export function activate(context: vscode.ExtensionContext) {
 	// item.command = "files-and-folders-renamer.open-rename-files-and-folders-form";
 	// item.show();
 
-	const sidebar = new Sidebar(context.extensionUri);
-	context.subscriptions.push(
-		vscode.window.registerWebviewViewProvider(
-			"sidebar",
-			sidebar
-		)
-	);
+	// const sidebar = new Sidebar(context.extensionUri);
+	// context.subscriptions.push(
+	// 	vscode.window.registerWebviewViewProvider(
+	// 		"sidebar",
+	// 		sidebar
+	// 	)
+	// );
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand('files-and-folders-renamer.view-rename-files-and-folders', async (uri: vscode.Uri) => {
-			const state = Object.assign({}, defaultRenameFilesAndFoldersState, {
-				extensionUri: context.extensionUri, sourcePath: uri.fsPath
-			});
-			new FilesAndFoldersRenamer(state);
+			console.dir(defaultRenameFilesAndFoldersState)
+			console.dir(context);
+			if (uri) {
+				const state = Object.assign({}, defaultRenameFilesAndFoldersState, {
+					extensionUri: context.extensionUri, sourcePath: uri.fsPath
+				});
+				new FilesAndFoldersRenamer(state);
+			}
 		}));
 
 
