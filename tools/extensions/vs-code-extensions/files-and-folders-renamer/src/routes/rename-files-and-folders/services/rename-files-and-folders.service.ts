@@ -14,12 +14,21 @@ class RenameFilesAndFoldersService {
 
     this.processStateArgs(arg);
 
-    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options);
+    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options, [], undefined, true);
     previewItems.forEach((previewItem) => {
       if (previewItem.pathTo) {
         previewItem.pathDiffs = diff(previewItem.pathFrom, previewItem.pathTo);
       }
     });
+
+    return previewItems;
+  }
+  getPreDataForCommit(arg: RenameFilesAndFoldersState) {
+    let { sourcePath, toInput, options } = arg;
+
+    this.processStateArgs(arg);
+
+    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options, [], undefined, false);
 
     return previewItems;
   }
@@ -52,11 +61,11 @@ class RenameFilesAndFoldersService {
 
     if (!previewItems) {
       const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
-      previewItems = this.getPreviews(newArgs);
+      previewItems = this.getPreDataForCommit(newArgs);
     }
 
     const changeTracker: { [src: string]: string } = {};
-    previewItems.reverse().forEach(previewItem => {
+    previewItems.forEach(previewItem => {
 
       if (options.includeContents) {
         let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' });
@@ -101,7 +110,7 @@ class RenameFilesAndFoldersService {
 
   private getAllFilesAndFolderspreviewItems(
     srcPath: string, fromInput: RegExp, toInput: string,
-    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = [], parentItem: any = undefined) {
+    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = [], parentItem: any = undefined, isForPreview = true) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
 
@@ -113,19 +122,24 @@ class RenameFilesAndFoldersService {
       const toBasename = fromBasename.replace(fromInput, toInput);
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
+        let from = srcPath;
 
         if (parentItem && srcPath.startsWith(parentItem.pathFrom)) {
           const parentDirname = parentItem.pathTo;
 
-          if (previewItems?.length > 0 && previewItems[previewItems.length - 1]?.pathFrom === parentItem.pathFrom) {
-            previewItems.pop();
+          if (isForPreview) {
+            if (previewItems?.length > 0 && previewItems[previewItems.length - 1]?.pathFrom === parentItem.pathFrom) {
+              previewItems.pop();
+            }
+          } else {
+            from = path.join(parentDirname!, path.sep, fromBasename);;
           }
 
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
         toPush = {
-          pathFrom: srcPath,
+          pathFrom: from,
           pathTo: to
         };
       }
