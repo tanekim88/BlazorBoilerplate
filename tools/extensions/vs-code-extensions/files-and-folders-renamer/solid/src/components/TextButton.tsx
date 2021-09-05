@@ -11,20 +11,19 @@ interface Props {
   required?;
   class?;
   onClick?;
+  icon?;
+  children?;
 }
 
 const TextButton: Component<Props> = (props: Props) => {
-
-  let id = `text-button-${uid()}`;
-
   onMount(() => {
 
   })
   return (
-    <button class="mdc-button" >
+    <button class="mdc-button" onClick={props.onClick}>
       <span class="mdc-button__ripple"></span>
-      <slot name="icon" />
-      <span class="mdc-button__label"><slot /></span>
+      {props.icon}
+      <span class="mdc-button__label">{props.children}</span>
     </button>
   );
 };

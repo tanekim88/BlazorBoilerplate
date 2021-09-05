@@ -85,13 +85,13 @@ export class FilesAndFoldersRenamer {
 
     let html = fs.readFileSync(htmlUri.fsPath, { encoding: 'utf8' });
 
-    let b = webview.asWebviewUri(vscode.Uri.joinPath(
-      FilesAndFoldersRenamer._extensionUri,
-      "src","routes", "rename-files-and-folders",
-      "index.html"
-    ));
+    // let b = webview.asWebviewUri(vscode.Uri.joinPath(
+    //   FilesAndFoldersRenamer._extensionUri,
+    //   "src","routes", "rename-files-and-folders",
+    //   "index.html"
+    // ));
 
-    html =  fs.readFileSync(b.fsPath, { encoding: 'utf8' });
+    // html =  fs.readFileSync(b.fsPath, { encoding: 'utf8' });
     if (html.indexOf('@buildDirPath') === -1) {
       return html;
     }

@@ -6,7 +6,7 @@ import styles from "./App.module.css";
 
 const Sidebar: Component = () => {
   return (
-    <div class={styles.App}>
+    <div>
 
     </div >
   );

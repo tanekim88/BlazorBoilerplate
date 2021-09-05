@@ -23,7 +23,7 @@ function checkValid({ element, validators = [] }, setErrors, errorClass) {
 }
 
 export function useForm({ errorClass }) {
-  const [errors, setErrors] = createStore({}),
+  const [errors, setErrors] = createStore({} as any),
     fields = {};
 
   const validate = (ref, accessor) => {

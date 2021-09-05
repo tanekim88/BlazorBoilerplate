@@ -2,22 +2,26 @@
 
 
 import type { Component } from "solid-js";
+import { uid } from "uid";
 
 
 interface Props {
     checked;
     label;
+    onChange?;
 }
 
 const Checkbox: Component<Props> = (props: Props) => {
+    let id = `checkbox-${uid()}`;
     return (
-        <div class={styles.App}>
+        <div class="mdc-form-field">
             <div class="mdc-checkbox">
                 <input
                     type="checkbox"
                     class="mdc-checkbox__native-control"
-                    id="{id}"
+                    id={id}
                     checked={props.checked}
+                    onchange={props.onChange}
                 />
                 <div class="mdc-checkbox__background">
                     <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
@@ -29,7 +33,7 @@ const Checkbox: Component<Props> = (props: Props) => {
                     </svg>
                 </div>
             </div>
-            <label for="{id}">{props.label}</label>
+            <label for={id}>{props.label}</label>
         </div >
     );
 };

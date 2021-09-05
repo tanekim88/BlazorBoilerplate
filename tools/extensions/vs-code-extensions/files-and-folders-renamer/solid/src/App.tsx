@@ -1,5 +1,5 @@
 import { Component, onMount, onCleanup, createEffect, Switch } from "solid-js";
-import { createStore } from "solid-js/store";
+import { createStore, produce } from "solid-js/store";
 import logo from "./logo.svg";
 
 import FilledTextField from './components/FilledTextField';
@@ -9,38 +9,17 @@ import TextButton from './components/TextButton';
 import Checkbox from './components/Checkbox';
 import { render } from "solid-js/web";
 import { useForm } from "./validation";
-import { defaultRenameFilesAndFoldersState } from "../../src/routes/rename-files-and-folders/models/rename-files-and-folders-state";
+import { defaultRenameFilesAndFoldersState, RenameFilesAndFoldersState } from "../../src/routes/rename-files-and-folders/models/rename-files-and-folders-state";
 import { webviewService } from "../../src/services/webview-service";
 
 import { Show, For, Match } from 'solid-js';
-let state = defaultRenameFilesAndFoldersState;
-
-
-
-async function sendGetPreviewCommand() {
-  state.isPreviewLoading = true;
-  await webviewService.postMessage(webview, 'get-preview', state);
-  state.isPreviewLoading = false;
-}
-
-async function sendCommitCommand() {
-  state.isCommitLoading = true;
-  if (!state.previewItems) {
-    await sendGetPreviewCommand();
-  }
-  await webviewService.postMessage(webview, 'commit', state);
-  state.isCommitLoading = false;
-}
-
-async function sendGetStateCommand() {
-  state.isCommitLoading = true;
-  await webviewService.postMessage(webview, 'get-state', undefined);
-  state.isCommitLoading = false;
-}
 
 
 
 const App: Component = () => {
+
+  const [state, setState] = createStore(defaultRenameFilesAndFoldersState);
+
   createEffect(() => {
     webview.setState(state);
   });
@@ -50,24 +29,24 @@ const App: Component = () => {
       switch (message.type) {
         case 'state-received':
           const options = state.options;
-          state = message.value;
+          setState(message.value);
           if (!state.options) {
             state.options = options;
           }
 
           break;
         case 'preview-received':
-          state.previewItems = message.value;
+          setState(produce<RenameFilesAndFoldersState>(state => state.previewItems = message.value));
           break;
         case 'commit-done':
-          state.previewItems = undefined;
+          setState(produce<RenameFilesAndFoldersState>(state => state.previewItems = undefined));
           break;
       }
     });
 
     const stateFetched = webview.getState();
     if (stateFetched) {
-      state = stateFetched;
+      setState(stateFetched);
     } else {
       await sendGetStateCommand();
     }
@@ -76,79 +55,129 @@ const App: Component = () => {
     webview.setState(state);
   });
 
-
+  const ErrorMessage = ({ error }) => <span class="error-message">{error}</span>;
   const { validate, formSubmit, errors } = useForm({
     errorClass: "error-input"
   });
-  const [fields, setFields] = createStore(undefined);
-  const fn = (form) => {
-    // form.submit()
+
+  const onSubmit = (form) => {
+    if (errors) {
+      console.dir(errors);
+    }
+    console.dir(state);
     console.log("Done");
   };
-  const userNameExists = async ({ value }) => {
+  const required = async ({ value }) => {
 
-    return 'hi';
+    if (/^\s*$/.test(value ?? '')) {
+      return 'This field is required';
+    }
+
+    return false;
   };
-  const matchesPassword = ({ value }) =>
-    value === fields.password ? false : "Passwords must Match";
+
+
+  async function sendGetPreviewCommand() {
+    setState(produce<RenameFilesAndFoldersState>(state => state.isPreviewLoading = true));
+    await webviewService.postMessage(webview, 'get-preview', state);
+    setState(produce<RenameFilesAndFoldersState>(state => state.isPreviewLoading = false));
+  }
+
+  async function sendCommitCommand() {
+    setState(produce<RenameFilesAndFoldersState>(state => state.isCommitLoading = true));
+    if (!state.previewItems) {
+      await sendGetPreviewCommand();
+    }
+    await webviewService.postMessage(webview, 'commit', state);
+    setState(produce<RenameFilesAndFoldersState>(state => state.isCommitLoading = false));
+  }
+
+  async function sendGetStateCommand() {
+    setState(produce<RenameFilesAndFoldersState>(state => state.isCommitLoading = true));
+    await webviewService.postMessage(webview, 'get-state', undefined);
+    setState(produce<RenameFilesAndFoldersState>(state => state.isCommitLoading = false));
+  }
+
 
   return (
-    <div class={styles.App}>
+    <div>
 
-      <form use:formSubmit={fn}
-        class="h-full w-full px-10 flex flex-col items-start gap-3 pt-3"
+      <form use:formSubmit={onSubmit}
+        class=""
       >
         <h1 class="theme-on-primary">{state.sourcePath}</h1>
-        <div class="w-full">
-          <div class="mdc-form-field flex w-full">
-            <OutlinedTextField
-              label={'From'}
-              value={state.fromInput}
-              setValue={() => { }}
-              required
-              class="flex-1 bg-white"
-              validate={[userNameExists]}
-            />
-            <Checkbox label={'Regex'} checked={state.options.isRegex} />
-          </div>
+        <div class="">
+          <OutlinedTextField
+            label={'From'}
+            name={'from'}
+            value={state.fromInput}
+            setValue={() => { }}
+            required
+            class=""
+            validate={[required]}
+            onInput={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.fromInput = e.target.value))}
+          />
         </div>
-        <div class="w-full">
-          <div class="mdc-form-field w-full">
-            <OutlinedTextField
-              label={'To'} value={state.toInput}
-              setValue={() => { }}
-              class="w-full bg-white" />
-          </div>
+        <div>
+          <Checkbox label={'Regex'} checked={state.options.isRegex} />
+        </div>
+        <div>
+          {errors.from && <ErrorMessage error={errors.from} />}
+        </div>
+        <div class="">
+          <OutlinedTextField
+            label={'To'}
+            name={'to'}
+            value={state.toInput}
+            setValue={() => { }}
+            required
+            class=""
+            validate={[required]}
+            onInput={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.toInput = e.target.value))}
+          />
+        </div>
+        <div>
+          {errors.to && <ErrorMessage error={errors.to} />}
         </div>
 
-        <div class="flex gap-3">
+        <div class="">
           <TextButton
             onClick={async () => {
               await sendGetPreviewCommand();
-            }}>Preview</TextButton
-          >
+            }}>Preview</TextButton>
 
           <TextButton
             onClick={async () => {
               await sendCommitCommand();
-            }}>Commit</TextButton
-          >
+            }}>Commit</TextButton>
         </div>
 
         <div>
           <div class="mdc-form-field">
-            <Checkbox label={'Case Insensitive'} checked={state.options.caseInsensitive} />
+            <Checkbox label={'Case Insensitive'}
+              checked={state.options.caseInsensitive}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.caseInsensitive = e.target.value))}
+            />
           </div>
           <div class="mdc-form-field">
-            <Checkbox label={'Include files'} checked={state.options.includeFiles} />
+            <Checkbox label={'Include files'}
+              checked={state.options.includeFiles}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFiles = e.target.value))}
+            />
           </div>
         </div>
         <div>
           <div class="mdc-form-field">
-            <Checkbox label={'Include folders'} checked={state.options.includeFolders} />
+            <Checkbox label={'Include folders'}
+              checked={state.options.includeFolders}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFolders = e.target.value))}
+            />
           </div>
           <div class="mdc-form-field">
-            <Checkbox label={'Include contents'} checked={state.options.includeContents} />
+            <Checkbox label={'Include contents'}
+              checked={state.options.includeContents}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeContents = e.target.value))}
+            />
           </div>
         </div>
         <Show
@@ -156,7 +185,10 @@ const App: Component = () => {
         >
           <div>
             <div class="mdc-form-field">
-              <Checkbox label={'Show line numbers'} checked={state.options.showLineNumbers} />
+              <Checkbox label={'Show line numbers'}
+                checked={state.options.showLineNumbers}
+                onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.showLineNumbers = e.target.value))}
+              />
             </div>
             <div class="mdc-form-field">
               <NumberInput label={'Context lines depth'} value={state.options.contextLinesDepth} />
