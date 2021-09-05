@@ -1,4 +1,8 @@
 const virtualFileId = '@my-virtual-file'
+
+
+
+
 export function getViteConfig(){
 	return ({
 		plugins:[

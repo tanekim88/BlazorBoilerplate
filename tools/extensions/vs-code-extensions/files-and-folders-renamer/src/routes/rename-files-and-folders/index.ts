@@ -50,7 +50,6 @@ export class FilesAndFoldersRenamer {
     // Set the webview's initial html content
     this._panel.webview.html = this._getHtmlForWebview();
 
-
     this._panel.onDidDispose(() => this.dispose(), null);
 
     const webview = this._panel.webview;
@@ -71,7 +70,7 @@ export class FilesAndFoldersRenamer {
       "solid"
     ));
 
-    if (!fs.existsSync(path.join(solidDirPath.fsPath, 'index.html'))) {
+    if (!fs.existsSync(path.join(solidDirPath.fsPath, 'assets'))) {
       solidDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
         FilesAndFoldersRenamer._extensionUri,
         'out',
@@ -86,24 +85,31 @@ export class FilesAndFoldersRenamer {
 
     let html = fs.readFileSync(htmlUri.fsPath, { encoding: 'utf8' });
 
+    let b = webview.asWebviewUri(vscode.Uri.joinPath(
+      FilesAndFoldersRenamer._extensionUri,
+      "src","routes", "rename-files-and-folders",
+      "index.html"
+    ));
+
+    html =  fs.readFileSync(b.fsPath, { encoding: 'utf8' });
     if (html.indexOf('@buildDirPath') === -1) {
       return html;
     }
 
-    const _appDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
+    const assetsDirPath = webview.asWebviewUri(vscode.Uri.joinPath(
       solidDirPath,
-      "_app"
+      "assets"
     ));
 
-    const startJsFileBasename = fs.readdirSync(_appDirPath.fsPath).filter(f => f.startsWith('start-'))[0];
-    const startJsFilePath = path.join(_appDirPath.fsPath, startJsFileBasename);
-    let startJsFileContent = fs.readFileSync(startJsFilePath, { encoding: 'utf8' });
-    startJsFileContent = startJsFileContent.replace(/@_appDirPath/g, _appDirPath.toString());
-    fs.writeFileSync(startJsFilePath, startJsFileContent);
+    // const startJsFileBasename = fs.readdirSync(assetsDirPath.fsPath).filter(f => f.startsWith('start-'))[0];
+    // const startJsFilePath = path.join(assetsDirPath.fsPath, startJsFileBasename);
+    // let startJsFileContent = fs.readFileSync(startJsFilePath, { encoding: 'utf8' });
+    // startJsFileContent = startJsFileContent.replace(/@assetsDirPath/g, assetsDirPath.toString());
+    // fs.writeFileSync(startJsFilePath, startJsFileContent);
 
 
-    // update the base URI tag
-    html = html.replace(/@_appDirPath/g, _appDirPath.toString());
+    // // update the base URI tag
+    // html = html.replace(/@assetsDirPath/g, assetsDirPath.toString());
     html = html.replace(/@buildDirPath/g, solidDirPath.toString());
     html = html.replace(/@cspSource/g, webview.cspSource);
 
