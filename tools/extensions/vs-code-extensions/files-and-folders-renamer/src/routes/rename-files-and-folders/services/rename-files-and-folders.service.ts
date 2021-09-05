@@ -101,7 +101,7 @@ class RenameFilesAndFoldersService {
 
   private getAllFilesAndFolderspreviewItems(
     srcPath: string, fromInput: RegExp, toInput: string,
-    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = []) {
+    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = [], parentItem: any = undefined) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
 
@@ -114,10 +114,14 @@ class RenameFilesAndFoldersService {
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
 
-        if (previewItems.length > 0 && srcPath.startsWith(previewItems[previewItems.length - 1].pathFrom)) {
-          const toPostFix =fromDirname.substr(previewItems[0].pathFrom.length);
-          const parentDirname = previewItems.pop()?.pathTo;
-          to = path.join(parentDirname!,toPostFix, toBasename);
+        if (parentItem && srcPath.startsWith(parentItem.pathFrom)) {
+          const parentDirname = parentItem.pathTo;
+
+          if (previewItems?.length > 0 && previewItems[previewItems.length - 1]?.pathFrom === parentItem.pathFrom) {
+            previewItems.pop();
+          }
+
+          to = path.join(parentDirname!, path.sep, toBasename);
         }
 
         toPush = {
@@ -136,7 +140,7 @@ class RenameFilesAndFoldersService {
 
       filesOrDirNames.forEach((fileOrDirName) => {
         const fullPath = path.join(srcPath, fileOrDirName);
-        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems);
+        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPush);
       });
     } else {
       if (options.includeContents) {

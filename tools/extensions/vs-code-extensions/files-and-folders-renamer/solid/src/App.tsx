@@ -1,5 +1,5 @@
 import { Component, onMount, onCleanup, createEffect, Switch } from "solid-js";
-import { createStore, produce } from "solid-js/store";
+import { $RAW, createStore, produce } from "solid-js/store";
 import logo from "./logo.svg";
 
 import FilledTextField from './components/FilledTextField';
@@ -17,24 +17,18 @@ import { Show, For, Match } from 'solid-js';
 
 
 const App: Component = () => {
+  const stateFetched = webview.getState();
+  console.dir(stateFetched)
 
-  const [state, setState] = createStore(defaultRenameFilesAndFoldersState);
+  const [state, setState] = createStore(stateFetched);
 
   createEffect(() => {
-    webview.setState(state);
+    webview.setState(state[$RAW]);
   });
   onMount(async () => {
     window.addEventListener('message', async (event) => {
       const message = event.data;
       switch (message.type) {
-        case 'state-received':
-          const options = state.options;
-          setState(message.value);
-          if (!state.options) {
-            state.options = options;
-          }
-
-          break;
         case 'preview-received':
           setState(produce<RenameFilesAndFoldersState>(state => state.previewItems = message.value));
           break;
@@ -44,13 +38,8 @@ const App: Component = () => {
       }
     });
 
-    const stateFetched = webview.getState();
-    if (stateFetched) {
-      setState(stateFetched);
-    } else {
-      await sendGetStateCommand();
-    }
-  })
+
+  });
   onCleanup(async () => {
     webview.setState(state);
   });
@@ -79,7 +68,7 @@ const App: Component = () => {
 
   async function sendGetPreviewCommand() {
     setState(produce<RenameFilesAndFoldersState>(state => state.isPreviewLoading = true));
-    await webviewService.postMessage(webview, 'get-preview', state);
+    await webviewService.postMessage(webview, 'get-preview', state[$RAW]);
     setState(produce<RenameFilesAndFoldersState>(state => state.isPreviewLoading = false));
   }
 
@@ -88,7 +77,7 @@ const App: Component = () => {
     if (!state.previewItems) {
       await sendGetPreviewCommand();
     }
-    await webviewService.postMessage(webview, 'commit', state);
+    await webviewService.postMessage(webview, 'commit', state[$RAW]);
     setState(produce<RenameFilesAndFoldersState>(state => state.isCommitLoading = false));
   }
 

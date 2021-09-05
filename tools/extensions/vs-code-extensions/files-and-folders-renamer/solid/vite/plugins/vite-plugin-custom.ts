@@ -28,6 +28,7 @@ export default function customPlugin(args) {
 				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https: data:; style-src 'unsafe-inline' ${cspSource}; script-src 'nonce-${nonce}' ${cspSource};">
 				<script nonce="${nonce}">
 					const webview = acquireVsCodeApi();
+                    webview.setState({});
 				</script>`;
 
             const bodyHtml = ``;

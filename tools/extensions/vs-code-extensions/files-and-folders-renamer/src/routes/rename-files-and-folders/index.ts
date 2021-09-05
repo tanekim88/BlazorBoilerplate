@@ -85,13 +85,8 @@ export class FilesAndFoldersRenamer {
 
     let html = fs.readFileSync(htmlUri.fsPath, { encoding: 'utf8' });
 
-    // let b = webview.asWebviewUri(vscode.Uri.joinPath(
-    //   FilesAndFoldersRenamer._extensionUri,
-    //   "src","routes", "rename-files-and-folders",
-    //   "index.html"
-    // ));
+    html = html.replace(/webview.setState(.*);/g, `webview.setState(${JSON.stringify(this._state)});`);
 
-    // html =  fs.readFileSync(b.fsPath, { encoding: 'utf8' });
     if (html.indexOf('@buildDirPath') === -1) {
       return html;
     }
@@ -101,17 +96,9 @@ export class FilesAndFoldersRenamer {
       "assets"
     ));
 
-    // const startJsFileBasename = fs.readdirSync(assetsDirPath.fsPath).filter(f => f.startsWith('start-'))[0];
-    // const startJsFilePath = path.join(assetsDirPath.fsPath, startJsFileBasename);
-    // let startJsFileContent = fs.readFileSync(startJsFilePath, { encoding: 'utf8' });
-    // startJsFileContent = startJsFileContent.replace(/@assetsDirPath/g, assetsDirPath.toString());
-    // fs.writeFileSync(startJsFilePath, startJsFileContent);
-
-
-    // // update the base URI tag
-    // html = html.replace(/@assetsDirPath/g, assetsDirPath.toString());
     html = html.replace(/@buildDirPath/g, solidDirPath.toString());
     html = html.replace(/@cspSource/g, webview.cspSource);
+
 
     fs.writeFileSync(htmlUri.fsPath, html);
 
