@@ -59,10 +59,10 @@ class RenameFilesAndFoldersService {
 
     let { previewItems, options } = args;
 
-    if (!previewItems) {
-      const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
-      previewItems = this.getPreDataForCommit(newArgs);
-    }
+
+    const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
+    previewItems = this.getPreDataForCommit(newArgs);
+
 
     const changeTracker: { [src: string]: string } = {};
     previewItems.forEach(previewItem => {
@@ -154,7 +154,7 @@ class RenameFilesAndFoldersService {
 
       filesOrDirNames.forEach((fileOrDirName) => {
         const fullPath = path.join(srcPath, fileOrDirName);
-        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPush);
+        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPush, isForPreview);
       });
     } else {
       if (options.includeContents) {
