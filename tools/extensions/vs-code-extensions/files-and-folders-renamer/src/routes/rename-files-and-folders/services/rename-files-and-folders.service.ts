@@ -58,21 +58,23 @@ class RenameFilesAndFoldersService {
         content = content.replace(args.fromRegexInput!, args.toInput);
         fs.writeFileSync(previewItem.pathFrom, content);
       }
-        const isDirectory = fs.statSync(previewItem.pathFrom).isDirectory();
+      const isDirectory = fs.statSync(previewItem.pathFrom).isDirectory();
 
-        const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory);
+      const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory);
 
-        if (shouldExecute) {
-          try {
-            if (previewItem.hasBlankName && options.deleteIfResultingNameIsBlank) {
+      if (shouldExecute) {
+        try {
+          if (previewItem.hasBlankName) {
+            if (options.deleteIfResultingNameIsBlank) {
               fs.unlinkSync(previewItem.pathFrom);
-            } else {
-              fs.renameSync(previewItem.pathFrom, previewItem.pathTo!);
             }
-          } catch (e) {
-            console.error(e);
-           }
+          } else {
+            fs.renameSync(previewItem.pathFrom, previewItem.pathTo!);
+          }
+        } catch (e) {
+          console.error(e);
         }
+      }
     });
   }
 
