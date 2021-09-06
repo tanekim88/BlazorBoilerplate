@@ -15,7 +15,7 @@ interface Props {
   children?;
 }
 
-const TextButton: Component<Props> = (props: Props) => {
+export const TextButton: Component<Props> = (props: Props) => {
   onMount(() => {
 
   })
@@ -28,4 +28,3 @@ const TextButton: Component<Props> = (props: Props) => {
   );
 };
 
-export default TextButton;

@@ -14,21 +14,9 @@ class RenameFilesAndFoldersService {
 
     this.processStateArgs(arg);
 
-    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options, [], undefined, true);
-    previewItems.forEach((previewItem) => {
-      if (previewItem.pathTo) {
-        previewItem.pathDiffs = diff(previewItem.pathFrom, previewItem.pathTo);
-      }
-    });
+    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options, [], undefined);
 
-    return previewItems;
-  }
-  getPreDataForCommit(arg: RenameFilesAndFoldersState) {
-    let { sourcePath, toInput, options } = arg;
 
-    this.processStateArgs(arg);
-
-    const previewItems = this.getAllFilesAndFolderspreviewItems(sourcePath, arg.fromRegexInput!, toInput ?? '', options, [], undefined, false);
 
     return previewItems;
   }
@@ -59,14 +47,13 @@ class RenameFilesAndFoldersService {
 
     let { previewItems, options } = args;
 
-
-    const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
-    previewItems = this.getPreDataForCommit(newArgs);
-
+    if (!previewItems || previewItems?.length === 0) {
+      const newArgs = Object.assign({}, args, { options: Object.assign({}, args.options, { includeContents: false } as RenameFilesAndFoldersOptions) });
+      previewItems = this.getPreviews(newArgs);
+    }
 
     const changeTracker: { [src: string]: string } = {};
     previewItems.forEach(previewItem => {
-
       if (options.includeContents) {
         let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' });
         content = content.replace(args.fromRegexInput!, args.toInput);
@@ -93,13 +80,19 @@ class RenameFilesAndFoldersService {
 
         if (shouldExecute) {
           try {
-            fs.renameSync(previewItem.pathFrom, finalTo);
+            if (previewItem.hasBlankName && options.deleteIfResultingNameIsBlank) {
+              fs.unlinkSync(previewItem.pathFrom);
+            } else {
+              fs.renameSync(previewItem.pathFrom, finalTo);
+            }
+
             changeTracker[previewItem.pathFrom] = finalTo;
           } catch (e) { }
         }
 
         previewItem = {
           pathFrom: dirnameOfFrom,
+          pathFromForPreview: '',
           pathTo: dirnameOfTo
         };
 
@@ -107,56 +100,45 @@ class RenameFilesAndFoldersService {
     });
   }
 
-
   private getAllFilesAndFolderspreviewItems(
     srcPath: string, fromInput: RegExp, toInput: string,
-    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = [], parentItem: any = undefined, isForPreview = true) {
+    options: RenameFilesAndFoldersOptions, previewItems: RenameFilesAndFoldersPreviewItem[] = [], parentItem: any = undefined) {
     const isDirectory = fs.statSync(srcPath).isDirectory();
     const shouldIncludeInpreviewItem = options.includeFiles && !isDirectory || options.includeFolders && isDirectory;
 
     const fromBasename = path.basename(srcPath);
     const fromDirname = path.dirname(srcPath);
-    let toPush: RenameFilesAndFoldersPreviewItem | undefined;
+    let toPushForPreview: RenameFilesAndFoldersPreviewItem | undefined;
 
     if (fromInput.test(fromBasename)) {
       const toBasename = fromBasename.replace(fromInput, toInput);
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
-        let from = srcPath;
-
-        if (parentItem && srcPath.startsWith(parentItem.pathFrom)) {
+        let fromForFinalItem = srcPath;
+        if (parentItem && srcPath.startsWith(parentItem.pathFromForPreview)) {
           const parentDirname = parentItem.pathTo;
 
-          if (isForPreview) {
-            if (previewItems?.length > 0 && previewItems[previewItems.length - 1]?.pathFrom === parentItem.pathFrom) {
-              previewItems.pop();
-            }
-          } else {
-            from = path.join(parentDirname!, path.sep, fromBasename);;
+          if (previewItems?.length > 0 && previewItems[previewItems.length - 1]?.pathFromForPreview === parentItem.pathFromForPreview) {
+            previewItems[previewItems.length - 1].isForPreview = false;
           }
+
+          fromForFinalItem = path.join(parentDirname!, path.sep, fromBasename);
 
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
-        toPush = {
-          pathFrom: from,
-          pathTo: to
+        toPushForPreview = {
+          pathFrom: fromForFinalItem,
+          pathFromForPreview: srcPath,
+          pathTo: to,
+          isForPreview: true,
+          hasBlankName: toBasename === ''
         };
       }
     }
 
-    if (isDirectory) {
-      if (toPush) {
-        previewItems.push(toPush);
-      }
+    if (!isDirectory) {
 
-      const filesOrDirNames = fs.readdirSync(srcPath);
-
-      filesOrDirNames.forEach((fileOrDirName) => {
-        const fullPath = path.join(srcPath, fileOrDirName);
-        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPush, isForPreview);
-      });
-    } else {
       if (options.includeContents) {
 
         const content = fs.readFileSync(srcPath, { encoding: 'utf8' });
@@ -229,17 +211,30 @@ class RenameFilesAndFoldersService {
             }
           };
         });
-        if (toPush) {
-          toPush.lineNumbersWithChange = lineNumbersWithChange;
-          toPush.contentDiffsLookup = contentDiffsLookup;
+        if (toPushForPreview) {
+          toPushForPreview.lineNumbersWithChange = lineNumbersWithChange;
+          toPushForPreview.contentDiffsLookup = contentDiffsLookup;
         }
-      }
-
-      if (toPush) {
-        previewItems.push(toPush);
       }
     }
 
+    if (toPushForPreview) {
+      if (toPushForPreview.pathTo) {
+        toPushForPreview.pathDiffs = diff(toPushForPreview.pathFromForPreview, toPushForPreview.pathTo);
+      }
+      previewItems.push(toPushForPreview);
+    }
+
+    if (isDirectory) {
+      if (!toPushForPreview?.hasBlankName) {
+        const filesOrDirNames = fs.readdirSync(srcPath);
+
+        filesOrDirNames.forEach((fileOrDirName) => {
+          const fullPath = path.join(srcPath, fileOrDirName);
+          this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPushForPreview);
+        });
+      }
+    }
 
     return previewItems;
   }

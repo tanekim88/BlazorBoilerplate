@@ -14,7 +14,7 @@ export class FilesAndFoldersRenamer {
   public static defaultOptions = {
     // Enable javascript in the webview
     enableScripts: true,
-
+    retainContextWhenHidden: true
     // localResourceRoots: [
     //   vscode.Uri.joinPath(extensionUri, "svelte", "build"),
     //   vscode.Uri.joinPath(extensionUri, "src", "styles"),

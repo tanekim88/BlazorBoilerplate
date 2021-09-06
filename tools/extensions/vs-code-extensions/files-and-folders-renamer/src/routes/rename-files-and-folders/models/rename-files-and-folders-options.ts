@@ -6,6 +6,7 @@ export interface RenameFilesAndFoldersOptions {
     caseInsensitive: boolean,
     includeContents: boolean,
     contextLinesDepth: number,
-    showLineNumbers: boolean
+    showLineNumbers: boolean,
+    deleteIfResultingNameIsBlank: boolean,
   }
   

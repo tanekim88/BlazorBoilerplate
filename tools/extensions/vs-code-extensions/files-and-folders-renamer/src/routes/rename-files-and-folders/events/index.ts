@@ -21,9 +21,9 @@ class RenameFilesAndFoldersEvents {
                         return;
                     }
 
-                    await renameFilesAndFoldersService.commit(data.value);
+                    const previews = await renameFilesAndFoldersService.commit(data.value);
 
-                    await webviewService.postMessage(webview, 'commit-done', true);
+                    await webviewService.postMessage(webview, 'commit-done', previews);
                     break;
                 }
                 case 'get-state': {

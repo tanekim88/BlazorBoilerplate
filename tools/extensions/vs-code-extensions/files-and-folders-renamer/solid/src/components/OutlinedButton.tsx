@@ -12,7 +12,7 @@ interface Props {
   onClick?;
 }
 
-const OutlinedButton: Component<Props> = (props: Props) => {
+export const OutlinedButton: Component<Props> = (props: Props) => {
 
   let id = `text-button-${uid()}`;
 
@@ -27,5 +27,3 @@ const OutlinedButton: Component<Props> = (props: Props) => {
     </button>
   );
 };
-
-export default OutlinedButton;

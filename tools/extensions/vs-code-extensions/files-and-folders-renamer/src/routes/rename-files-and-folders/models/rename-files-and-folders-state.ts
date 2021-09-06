@@ -8,9 +8,7 @@ export interface RenameFilesAndFoldersState {
     toInput: string;
     options: RenameFilesAndFoldersOptions;
     previewItems: RenameFilesAndFoldersPreviewItem[];
-
     isPreviewLoading: boolean;
-    isCommitLoading: boolean;
     extensionUri?: vscode.Uri;
 }
 
@@ -26,9 +24,9 @@ export const defaultRenameFilesAndFoldersState: RenameFilesAndFoldersState = {
         caseInsensitive: false,
         includeContents: false,
         contextLinesDepth: 0,
-        showLineNumbers: true
+        showLineNumbers: true,
+        deleteIfResultingNameIsBlank: false
     },
     previewItems: [],
     isPreviewLoading: false,
-    isCommitLoading: false
 }

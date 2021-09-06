@@ -17,7 +17,7 @@ interface Props {
   required;
 }
 
-const FilledTextField: Component<Props> = (props: Props) => {
+export const FilledTextField: Component<Props> = (props: Props) => {
   let id = `filled-text-field-${uid()}`;
 
   onMount(() => {
@@ -35,5 +35,3 @@ const FilledTextField: Component<Props> = (props: Props) => {
     </label>
   );
 };
-
-export default FilledTextField;

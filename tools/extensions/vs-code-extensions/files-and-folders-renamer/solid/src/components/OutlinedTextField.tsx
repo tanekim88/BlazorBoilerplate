@@ -16,7 +16,7 @@ interface Props {
   onInput?;
 }
 
-const OutlinedTextField: Component<Props> = (props: Props) => {
+export const OutlinedTextField: Component<Props> = (props: Props) => {
   const { validate, formSubmit, errors } = useForm({
     errorClass: "error-input"
   });
@@ -49,4 +49,3 @@ const OutlinedTextField: Component<Props> = (props: Props) => {
   );
 };
 
-export default OutlinedTextField;

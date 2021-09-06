@@ -11,7 +11,7 @@ interface Props {
   required;
 }
 
-const OutlinedTextArea: Component<Props> = (props: Props) => {
+export const OutlinedTextArea: Component<Props> = (props: Props) => {
 
   let id = `text-button-${uid()}`;
 
@@ -33,4 +33,3 @@ const OutlinedTextArea: Component<Props> = (props: Props) => {
   );
 };
 
-export default OutlinedTextArea;
