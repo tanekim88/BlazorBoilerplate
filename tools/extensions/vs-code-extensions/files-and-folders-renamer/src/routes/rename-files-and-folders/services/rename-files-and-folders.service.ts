@@ -52,53 +52,27 @@ class RenameFilesAndFoldersService {
       previewItems = this.getPreviews(newArgs);
     }
 
-    const changeTracker: { [src: string]: string } = {};
     previewItems.forEach(previewItem => {
       if (options.includeContents) {
         let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' });
         content = content.replace(args.fromRegexInput!, args.toInput);
         fs.writeFileSync(previewItem.pathFrom, content);
       }
-
-      do {
-        if (!previewItem.pathTo) {
-          break;
-        }
-
         const isDirectory = fs.statSync(previewItem.pathFrom).isDirectory();
 
-        let basenameOfTo = path.basename(previewItem.pathTo);
-        let dirnameOfTo = path.dirname(previewItem.pathTo);
-        let basenameOfFrom = path.basename(previewItem.pathFrom);
-        let dirnameOfFrom = path.dirname(previewItem.pathFrom);
-        const cachedDirnameOfFrom = changeTracker[dirnameOfFrom];
-        dirnameOfFrom = cachedDirnameOfFrom ?? dirnameOfFrom;
-        const finalTo = path.join(dirnameOfFrom, basenameOfTo);
-
-        const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory)
-          && basenameOfFrom !== basenameOfTo;
+        const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory);
 
         if (shouldExecute) {
           try {
             if (previewItem.hasBlankName && options.deleteIfResultingNameIsBlank) {
               fs.unlinkSync(previewItem.pathFrom);
             } else {
-              fs.renameSync(previewItem.pathFrom, finalTo);
+              fs.renameSync(previewItem.pathFrom, previewItem.pathTo!);
             }
-
-            changeTracker[previewItem.pathFrom] = finalTo;
           } catch (e) {
             console.error(e);
            }
         }
-
-        previewItem = {
-          pathFrom: dirnameOfFrom,
-          pathFromForPreview: '',
-          pathTo: dirnameOfTo
-        };
-
-      } while (previewItem.pathFrom !== previewItem.pathTo);
     });
   }
 
