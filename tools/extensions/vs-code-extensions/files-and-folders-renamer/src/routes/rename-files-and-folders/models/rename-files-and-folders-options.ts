@@ -9,5 +9,7 @@ export interface RenameFilesAndFoldersOptions {
     showLineNumbers: boolean,
     deleteIfResultingNameIsBlank: boolean,
     deleteIfResultingNameHasBlankPrefix: boolean,
+    removeBlankPrefixIfResultingNameHasBlankPrefix: boolean
+    skipIfResultingNameHasBlankPrefix: boolean
   }
   

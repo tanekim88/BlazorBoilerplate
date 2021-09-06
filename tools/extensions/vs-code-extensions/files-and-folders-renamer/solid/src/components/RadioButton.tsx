@@ -23,7 +23,8 @@ export const RadioButton: Component<Props> = (props: Props) => {
     onMount(() => {
         radio = new MDCRadio(radio);
         formField = new MDCFormField(formField);
-    })
+        formField.input = radio;
+    });
 
     return (
         <div class="mdc-form-field" ref={formField}>

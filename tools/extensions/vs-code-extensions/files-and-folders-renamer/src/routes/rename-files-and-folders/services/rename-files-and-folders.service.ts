@@ -60,13 +60,23 @@ class RenameFilesAndFoldersService {
 
       if (options.includeFiles && !previewItem.isDirectory || options.includeFolders && previewItem.isDirectory) {
         try {
-          if (previewItem.hasBlankName) {
-            if (options.deleteIfResultingNameIsBlank) {
+          let deleted = false;
+          if (previewItem.hasBlankName && options.deleteIfResultingNameIsBlank) {
+            fs.unlinkSync(previewItem.pathFrom);
+            deleted = true;
+          }
+
+          if (previewItem.hasBlankPrefixName) {
+            if (options.deleteIfResultingNameHasBlankPrefix) {
               fs.unlinkSync(previewItem.pathFrom);
+              deleted = true;
             }
-          } else {
+          }
+
+          if (!deleted) {
             fs.renameSync(previewItem.pathFrom, previewItem.pathTo!);
           }
+
         } catch (e) {
           console.error(e);
         }
@@ -85,14 +95,19 @@ class RenameFilesAndFoldersService {
     const fromBasename = path.basename(srcPath);
     const fromDirname = path.dirname(srcPath);
     let toPushForPreview: RenameFilesAndFoldersPreviewItem | undefined;
-    
+
     let hasBlankName = false;
     let hasBlankPrefixName = false;
     if (fromInput.test(fromBasename)) {
-      const toBasename = fromBasename.replace(fromInput, toInput);
+      let toBasename = fromBasename.replace(fromInput, toInput);
+
       hasBlankName = /^\s*$/.test(toBasename);
-      hasBlankPrefixName = /^\s+[^\s]*$/.test(toBasename);
-      
+      hasBlankPrefixName = /^\s+[^\s]+\s*$/.test(toBasename);
+
+      if (hasBlankPrefixName && options.removeBlankPrefixIfResultingNameHasBlankPrefix) {
+        toBasename = toBasename.replace(/^\s*/, '');
+      }
+
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
         let fromForFinalItem = srcPath;
@@ -108,8 +123,13 @@ class RenameFilesAndFoldersService {
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
-        
-        if (!options.deleteIfResultingNameIsBlank && !hasBlankName || options.deleteIfResultingNameIsBlank) {
+
+        if (
+          !options.skipIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
+          options.removeBlankPrefixIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
+          !options.deleteIfResultingNameIsBlank && !hasBlankName ||
+          options.deleteIfResultingNameIsBlank
+        ) {
           toPushForPreview = {
             pathFrom: fromForFinalItem,
             pathFromForPreview: srcPath,
@@ -212,10 +232,10 @@ class RenameFilesAndFoldersService {
     }
 
     if (isDirectory && !hasBlankName) {
-        fs.readdirSync(srcPath).forEach((fileOrDirName) => {
-          const fullPath = path.join(srcPath, fileOrDirName);
-          this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPushForPreview);
-        });
+      fs.readdirSync(srcPath).forEach((fileOrDirName) => {
+        const fullPath = path.join(srcPath, fileOrDirName);
+        this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPushForPreview);
+      });
     }
 
     return previewItems;

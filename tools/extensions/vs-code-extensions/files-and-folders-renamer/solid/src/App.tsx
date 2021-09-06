@@ -5,6 +5,7 @@ import { OutlinedTextField } from './components/OutlinedTextField';
 
 import { TextButton } from './components/TextButton';
 import { Checkbox } from './components/Checkbox';
+import { RadioButton } from './components/RadioButton';
 import { render } from "solid-js/web";
 import { useForm } from "./validation";
 import { RenameFilesAndFoldersState } from "../../src/routes/rename-files-and-folders/models/rename-files-and-folders-state";
@@ -158,18 +159,23 @@ const App: Component = () => {
 
         </div>
         <div>
-
-          <Checkbox label={'Delete if resulting name is prefixed by blank.'}
-            checked={state.options.includeContents}
-            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameHasBlankPrefix = e.target.checked))}
+          <RadioButton label={'Skip if resulting name is prefixed by blank.'}
+            checked={state.options.skipIfResultingNameHasBlankPrefix}
+            name={'blank-name'}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.skipIfResultingNameHasBlankPrefix = e.target.checked))}
           />
 
-
-          <Checkbox label={'Remove blank prefix if resulting name is prefixed by blank.'}
-            checked={state.options.includeContents}
-            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameHasBlankPrefix = e.target.checked))}
+          <RadioButton label={'Remove blank prefix if resulting name is prefixed by blank.'}
+            checked={state.options.removeBlankPrefixIfResultingNameHasBlankPrefix}
+            name={'blank-name'}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.removeBlankPrefixIfResultingNameHasBlankPrefix = e.target.checked))}
           />
 
+          <RadioButton label={'Delete if resulting name is prefixed by blank.'}
+            checked={state.options.deleteIfResultingNameHasBlankPrefix}
+            name={'blank-name'}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameHasBlankPrefix = e.target.checked))}
+          />
         </div>
         <div>
 

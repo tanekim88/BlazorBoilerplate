@@ -26,7 +26,9 @@ export const defaultRenameFilesAndFoldersState: RenameFilesAndFoldersState = {
         contextLinesDepth: 0,
         showLineNumbers: true,
         deleteIfResultingNameIsBlank: false,
-        deleteIfResultingNameHasBlankPrefix: false
+        deleteIfResultingNameHasBlankPrefix: false,
+        removeBlankPrefixIfResultingNameHasBlankPrefix: false,
+        skipIfResultingNameHasBlankPrefix: true
     },
     previewItems: [],
     isPreviewLoading: false,
