@@ -72,6 +72,8 @@ class RenameFilesAndFoldersService {
         }
       }
     });
+
+    return previewItems;
   }
 
   private getAllFilesAndFolderspreviewItems(
@@ -105,7 +107,7 @@ class RenameFilesAndFoldersService {
         }
 
         
-        if (!options.deleteIfResultingNameIsBlank && !hasBlankName || options.deleteIfResultingNameIsBlank && hasBlankName) {
+        if (!options.deleteIfResultingNameIsBlank && !hasBlankName || options.deleteIfResultingNameIsBlank) {
           toPushForPreview = {
             pathFrom: fromForFinalItem,
             pathFromForPreview: srcPath,
