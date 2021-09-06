@@ -83,9 +83,12 @@ class RenameFilesAndFoldersService {
     const fromBasename = path.basename(srcPath);
     const fromDirname = path.dirname(srcPath);
     let toPushForPreview: RenameFilesAndFoldersPreviewItem | undefined;
-
+    
+    let hasBlankName = false;
     if (fromInput.test(fromBasename)) {
       const toBasename = fromBasename.replace(fromInput, toInput);
+      hasBlankName = /^(\s*|\s+[^\s]*)$/.test(toBasename);
+
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
         let fromForFinalItem = srcPath;
@@ -101,9 +104,8 @@ class RenameFilesAndFoldersService {
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
-        const hasBlankName = /^\s*/.test(toBasename);
-
-        if (!(options.deleteIfResultingNameIsBlank && hasBlankName)) {
+        
+        if (!options.deleteIfResultingNameIsBlank && !hasBlankName || options.deleteIfResultingNameIsBlank && hasBlankName) {
           toPushForPreview = {
             pathFrom: fromForFinalItem,
             pathFromForPreview: srcPath,
@@ -204,7 +206,7 @@ class RenameFilesAndFoldersService {
       previewItems.push(toPushForPreview);
     }
 
-    if (isDirectory && !toPushForPreview?.hasBlankName) {
+    if (isDirectory && !hasBlankName) {
         fs.readdirSync(srcPath).forEach((fileOrDirName) => {
           const fullPath = path.join(srcPath, fileOrDirName);
           this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPushForPreview);
