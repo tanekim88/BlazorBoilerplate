@@ -6,7 +6,7 @@
 	"publisher": "tane",
 	"repository": {},
 	"engines": {
-		"vscode": "^1.58.0"
+		"vscode": "^1.60.0"
 	},
 	"categories": [
 		"Other"
@@ -100,7 +100,7 @@
 		"prettier-plugin-svelte": "^2.4.0",
 		"svelte": "^3.42.4",
 		"svelte-check": "^2.2.5",
-		"svelte-preprocess": "^4.9.0",
+		"svelte-preprocess": "^4.9.1",
 		"ts-node": "^10.2.1",
 		"tsconfig-paths": "^3.11.0",
 		"tslib": "^2.3.1",
