@@ -54,15 +54,11 @@ class RenameFilesAndFoldersService {
 
     previewItems.forEach(previewItem => {
       if (options.includeContents) {
-        let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' });
-        content = content.replace(args.fromRegexInput!, args.toInput);
+        let content = fs.readFileSync(previewItem.pathFrom, { encoding: 'utf8' }).replace(args.fromRegexInput!, args.toInput);
         fs.writeFileSync(previewItem.pathFrom, content);
       }
-      const isDirectory = fs.statSync(previewItem.pathFrom).isDirectory();
 
-      const shouldExecute = (options.includeFiles && !isDirectory || options.includeFolders && isDirectory);
-
-      if (shouldExecute) {
+      if (options.includeFiles && !previewItem.isDirectory || options.includeFolders && previewItem.isDirectory) {
         try {
           if (previewItem.hasBlankName) {
             if (options.deleteIfResultingNameIsBlank) {
@@ -110,7 +106,8 @@ class RenameFilesAndFoldersService {
           pathFromForPreview: srcPath,
           pathTo: to,
           isForPreview: true,
-          hasBlankName: toBasename === ''
+          hasBlankName: toBasename === '',
+          isDirectory: isDirectory
         };
       }
     }

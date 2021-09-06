@@ -10,4 +10,5 @@ export interface RenameFilesAndFoldersPreviewItem {
     isForPreview?: boolean;
     isToMove?: boolean;
     hasBlankName?: boolean;
+    isDirectory?: boolean;
 }
