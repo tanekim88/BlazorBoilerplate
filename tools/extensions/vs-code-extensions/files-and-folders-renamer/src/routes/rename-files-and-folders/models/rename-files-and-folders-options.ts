@@ -8,5 +8,6 @@ export interface RenameFilesAndFoldersOptions {
     contextLinesDepth: number,
     showLineNumbers: boolean,
     deleteIfResultingNameIsBlank: boolean,
+    deleteIfResultingNameHasBlankPrefix: boolean,
   }
   

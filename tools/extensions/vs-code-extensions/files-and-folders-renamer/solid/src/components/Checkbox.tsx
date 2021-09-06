@@ -14,7 +14,7 @@ interface Props {
 export const Checkbox: Component<Props> = (props: Props) => {
     let id = `checkbox-${uid()}`;
     return (
-        <>
+        <div class="mdc-form-field">
             <div class="mdc-checkbox">
                 <input
                     type="checkbox"
@@ -34,6 +34,6 @@ export const Checkbox: Component<Props> = (props: Props) => {
                 </div>
             </div>
             <label for={id}>{props.label}</label>
-        </>
+        </div>
     );
 };

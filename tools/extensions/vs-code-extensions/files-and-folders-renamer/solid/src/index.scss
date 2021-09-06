@@ -1,6 +1,7 @@
 @use './styles/material/checkbox';
 @use './styles/material/textfield';
 @use './styles/material/button';
+@use './styles/material/radio-button';
 
 .mdc-floating-label--float-above{
 	transform: translateY(-25px) scale(0.8) !important;

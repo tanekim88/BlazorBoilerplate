@@ -33,7 +33,6 @@ export const NumberInput: Component<Props> = (props: Props) => {
         onChange={props.onChange} />
       <span class="mdc-line-ripple" />
     </label>
-
   );
 };
 

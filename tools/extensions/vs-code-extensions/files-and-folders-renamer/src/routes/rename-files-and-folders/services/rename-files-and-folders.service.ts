@@ -87,10 +87,12 @@ class RenameFilesAndFoldersService {
     let toPushForPreview: RenameFilesAndFoldersPreviewItem | undefined;
     
     let hasBlankName = false;
+    let hasBlankPrefixName = false;
     if (fromInput.test(fromBasename)) {
       const toBasename = fromBasename.replace(fromInput, toInput);
-      hasBlankName = /^(\s*|\s+[^\s]*)$/.test(toBasename);
-
+      hasBlankName = /^\s*$/.test(toBasename);
+      hasBlankPrefixName = /^\s+[^\s]*$/.test(toBasename);
+      
       if (shouldIncludeInpreviewItem) {
         let to = path.join(fromDirname, toBasename);
         let fromForFinalItem = srcPath;
@@ -114,6 +116,7 @@ class RenameFilesAndFoldersService {
             pathTo: to,
             isForPreview: true,
             hasBlankName,
+            hasBlankPrefixName,
             isDirectory: isDirectory
           };
         }

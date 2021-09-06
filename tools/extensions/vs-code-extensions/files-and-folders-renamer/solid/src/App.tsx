@@ -17,8 +17,7 @@ import { OutlinedNumberInput } from "./components/OutlinedNumberInput";
 
 const App: Component = () => {
   const stateFetched = webview.getState();
-  console.log("222222222222222")
-  console.dir(stateFetched);
+
 
   const [state, setState2] = createStore<RenameFilesAndFoldersState>(stateFetched);
   function setState(args) {
@@ -85,7 +84,7 @@ const App: Component = () => {
         class=""
       >
         <h1 class="theme-on-primary">{state.sourcePath}</h1>
-        <div class="mdc-form-field">
+        <div class="">
           <OutlinedTextField
             label={'From'}
             name={'from'}
@@ -97,13 +96,13 @@ const App: Component = () => {
             onInput={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.fromInput = e.target.value))}
           />
         </div>
-        <div class="mdc-form-field">
-          <Checkbox label={'Regex'} checked={state.options.isRegex} />
-        </div>
+
+        <Checkbox label={'Regex'} checked={state.options.isRegex} />
+
         <div>
           {errors.from && <ErrorMessage error={errors.from} />}
         </div>
-        <div class="mdc-form-field">
+        <div class="">
           <OutlinedTextField
             label={'To'}
             name={'to'}
@@ -117,71 +116,84 @@ const App: Component = () => {
           {errors.to && <ErrorMessage error={errors.to} />}
         </div>
 
-        <div class="mdc-form-field">
+        <div class="">
           <TextButton
             onClick={async () => {
               await sendGetPreviewCommand();
             }}>Preview</TextButton>
         </div>
-        <div class="mdc-form-field">
+        <div class="">
           <TextButton
             onClick={async () => {
               await sendCommitCommand();
             }}>Commit</TextButton>
         </div>
+        <div>
 
-        <div>
-          <div class="mdc-form-field">
-            <Checkbox label={'Include files'}
-              checked={state.options.includeFiles}
-              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFiles = e.target.checked))}
-            />
-          </div>
-          <div class="mdc-form-field">
-            <Checkbox label={'Include folders'}
-              checked={state.options.includeFolders}
-              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFolders = e.target.checked))}
-            />
-          </div>
+          <Checkbox label={'Include files'}
+            checked={state.options.includeFiles}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFiles = e.target.checked))}
+          />
+
+          <Checkbox label={'Include folders'}
+            checked={state.options.includeFolders}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeFolders = e.target.checked))}
+          />
+
         </div>
         <div>
-          <div class="mdc-form-field">
-            <Checkbox label={'Case Insensitive'}
-              checked={state.options.caseInsensitive}
-              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.caseInsensitive = e.target.checked))}
-            />
-          </div>
-          <div class="mdc-form-field">
-            <Checkbox label={'Delete if resulting name is blank.'}
-              checked={state.options.includeContents}
-              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameIsBlank = e.target.checked))}
-            />
-          </div>
+
+          <Checkbox label={'Case Insensitive'}
+            checked={state.options.caseInsensitive}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.caseInsensitive = e.target.checked))}
+          />
+
         </div>
         <div>
-          <div class="mdc-form-field">
-            <Checkbox label={'Include contents'}
-              checked={state.options.includeContents}
-              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeContents = e.target.checked))}
-            />
-          </div>
+
+          <Checkbox label={'Delete if resulting name is blank.'}
+            checked={state.options.includeContents}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameIsBlank = e.target.checked))}
+          />
+
+        </div>
+        <div>
+
+          <Checkbox label={'Delete if resulting name is prefixed by blank.'}
+            checked={state.options.includeContents}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameHasBlankPrefix = e.target.checked))}
+          />
+
+
+          <Checkbox label={'Remove blank prefix if resulting name is prefixed by blank.'}
+            checked={state.options.includeContents}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.deleteIfResultingNameHasBlankPrefix = e.target.checked))}
+          />
+
+        </div>
+        <div>
+
+          <Checkbox label={'Include contents'}
+            checked={state.options.includeContents}
+            onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.includeContents = e.target.checked))}
+          />
+
         </div>
         <Show
           when={state.options.includeContents}
         >
           <>
-            <div class="mdc-form-field">
-              <OutlinedNumberInput label={'Context lines depth'}
-                value={state.options.contextLinesDepth}
-                onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.contextLinesDepth = e.target.value))}
-              />
-            </div>
-            <div class="mdc-form-field">
-              <Checkbox label={'Show line numbers'}
-                checked={state.options.showLineNumbers}
-                onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.showLineNumbers = e.target.checked))}
-              />
-            </div>
+
+            <OutlinedNumberInput label={'Context lines depth'}
+              value={state.options.contextLinesDepth}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.contextLinesDepth = e.target.value))}
+            />
+
+            <Checkbox label={'Show line numbers'}
+              checked={state.options.showLineNumbers}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.showLineNumbers = e.target.checked))}
+            />
+
           </>
         </Show>
         <Switch fallback={<>Loading...</>}>
