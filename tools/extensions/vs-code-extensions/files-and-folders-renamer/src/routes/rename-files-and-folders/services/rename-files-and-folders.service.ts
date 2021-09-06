@@ -5,7 +5,7 @@ import { RenameFilesAndFoldersState } from "../models/rename-files-and-folders-s
 
 import { RenameFilesAndFoldersPreviewItem } from "../models/rename-files-and-folders-preview-item";
 import { RenameFilesAndFoldersOptions } from "../models/rename-files-and-folders-options";
-import diff from "./diff";
+import diff from "fast-diff";
 import { RenameFilesAndFoldersContentDiffsByLineNumber } from "../models/rename-files-and-folders-content-diffs-by-line-number";
 
 class RenameFilesAndFoldersService {
