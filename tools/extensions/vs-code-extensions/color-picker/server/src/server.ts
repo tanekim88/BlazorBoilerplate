@@ -1,3 +1,4 @@
+// https://github.com/microsoft/vscode/issues/34341
 import {
 	createConnection,
 	TextDocuments,

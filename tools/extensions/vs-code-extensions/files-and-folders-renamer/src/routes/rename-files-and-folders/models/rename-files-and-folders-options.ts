@@ -6,6 +6,7 @@ export interface RenameFilesAndFoldersOptions {
     caseInsensitive: boolean,
     includeContents: boolean,
     replaceContentOnlyForMatchedFiles: boolean,
+    doNotRenameFilesOrFolders: boolean,
     contextLinesDepth: number,
     showLineNumbers: boolean,
     deleteIfResultingNameIsBlank: boolean,

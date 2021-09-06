@@ -24,6 +24,7 @@ export const defaultRenameFilesAndFoldersState: RenameFilesAndFoldersState = {
         caseInsensitive: false,
         includeContents: false,
         replaceContentOnlyForMatchedFiles: true,
+        doNotRenameFilesOrFolders: false,
         contextLinesDepth: 0,
         showLineNumbers: true,
         deleteIfResultingNameIsBlank: false,

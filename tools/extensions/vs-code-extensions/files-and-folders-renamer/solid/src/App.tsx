@@ -201,9 +201,17 @@ const App: Component = () => {
             />
 
             <Checkbox label={'Replace contents only for matched files'}
-              checked={state.options.showLineNumbers}
+              checked={state.options.replaceContentOnlyForMatchedFiles}
               onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.replaceContentOnlyForMatchedFiles = e.target.checked))}
             />
+            <Show
+              when={!state.options.replaceContentOnlyForMatchedFiles}
+            >
+              <Checkbox label={'Do not rename files or folders.'}
+                checked={state.options.doNotRenameFilesOrFolders}
+                onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.doNotRenameFilesOrFolders = e.target.checked))}
+              />
+            </Show>
           </>
         </Show>
         <Switch fallback={<>Loading...</>}>

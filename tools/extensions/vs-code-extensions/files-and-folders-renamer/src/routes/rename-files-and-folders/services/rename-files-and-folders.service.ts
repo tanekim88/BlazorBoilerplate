@@ -120,21 +120,22 @@ class RenameFilesAndFoldersService {
         }
 
         if (
-
           !options.skipIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
           options.removeBlankPrefixIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
           !options.deleteIfResultingNameIsBlank && !hasBlankName ||
           options.deleteIfResultingNameIsBlank
         ) {
-          toPushForPreview = {
-            pathFrom: fromForFinalItem,
-            pathFromForPreview: srcPath,
-            pathTo: to,
-            isForPreview: true,
-            hasBlankName,
-            hasBlankPrefixName,
-            isDirectory
-          };
+          if (!(options.includeContents && !options.replaceContentOnlyForMatchedFiles && options.doNotRenameFilesOrFolders)) {
+            toPushForPreview = {
+              pathFrom: fromForFinalItem,
+              pathFromForPreview: srcPath,
+              pathTo: to,
+              isForPreview: true,
+              hasBlankName,
+              hasBlankPrefixName,
+              isDirectory
+            };
+          }
         }
       }
     }
