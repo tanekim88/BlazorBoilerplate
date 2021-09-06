@@ -11,6 +11,7 @@ class RenameFilesAndFoldersEvents {
                     if (!data.value) {
                         return;
                     }
+                    
                     const previews = await renameFilesAndFoldersService.getPreviews(data.value);
 
                     await webviewService.postMessage(webview, 'preview-received', previews);
@@ -25,10 +26,6 @@ class RenameFilesAndFoldersEvents {
 
                     await webviewService.postMessage(webview, 'commit-done', previews);
                     vscode.window.showInformationMessage("Commit successful!");
-                    break;
-                }
-                case 'get-state': {
-                    await webviewService.postMessage(webview, 'state-received', state);
                     break;
                 }
             }

@@ -5,7 +5,7 @@ import { RenameFilesAndFoldersState } from "../models/rename-files-and-folders-s
 
 import { RenameFilesAndFoldersPreviewItem } from "../models/rename-files-and-folders-preview-item";
 import { RenameFilesAndFoldersOptions } from "../models/rename-files-and-folders-options";
-import diff from "fast-diff";
+import diff from "./diff";
 import { RenameFilesAndFoldersContentDiffsByLineNumber } from "../models/rename-files-and-folders-content-diffs-by-line-number";
 
 class RenameFilesAndFoldersService {
@@ -22,7 +22,7 @@ class RenameFilesAndFoldersService {
   }
 
   processStateArgs(arg: RenameFilesAndFoldersState) {
-    let { fromInput: from, options } = arg;
+    let { fromInput, options } = arg;
 
     let regexOptions = '';
 
@@ -35,9 +35,9 @@ class RenameFilesAndFoldersService {
     }
 
     if (!options.isRegex) {
-      from = from?.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      fromInput = fromInput?.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
-    let fromRegexInput = new RegExp(from!, regexOptions);
+    let fromRegexInput = new RegExp(fromInput!, regexOptions);
 
     arg.fromRegexInput = fromRegexInput;
   }
@@ -79,7 +79,7 @@ class RenameFilesAndFoldersService {
       }
     });
 
-    return previewItems;
+    return undefined;
   }
 
   private getAllFilesAndFolderspreviewItems(

@@ -17,9 +17,6 @@
 		"onView:sidebar"
 	],
 	"main": "./out/src/extension.js",
-	"files": [
-		"out"
-	],
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
