@@ -2,7 +2,7 @@ import { Webview } from "vscode";
 import { webviewService } from "../../../services/webview-service";
 import { RenameFilesAndFoldersState } from "../models/rename-files-and-folders-state";
 import { renameFilesAndFoldersService } from "../services/rename-files-and-folders.service";
-
+import vscode from 'vscode';
 class RenameFilesAndFoldersEvents {
     listen(webview: Webview, state?: RenameFilesAndFoldersState) {
         webview.onDidReceiveMessage(async (data) => {
@@ -24,6 +24,7 @@ class RenameFilesAndFoldersEvents {
                     const previews = await renameFilesAndFoldersService.commit(data.value);
 
                     await webviewService.postMessage(webview, 'commit-done', previews);
+                    vscode.window.showInformationMessage("Commit successful!");
                     break;
                 }
                 case 'get-state': {

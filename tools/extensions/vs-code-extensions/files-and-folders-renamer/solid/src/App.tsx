@@ -200,6 +200,10 @@ const App: Component = () => {
               onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.showLineNumbers = e.target.checked))}
             />
 
+            <Checkbox label={'Replace contents only for matched files'}
+              checked={state.options.showLineNumbers}
+              onChange={(e) => setState(produce<RenameFilesAndFoldersState>(state => state.options.replaceContentOnlyForMatchedFiles = e.target.checked))}
+            />
           </>
         </Show>
         <Switch fallback={<>Loading...</>}>
@@ -211,48 +215,50 @@ const App: Component = () => {
             <div>
               <h3>Preview</h3>
               <For each={state.previewItems.filter(previewItem => previewItem.isForPreview)}>{(previewItem) =>
-                <>
+                <div style="margin-bottom:1rem;">
                   <div>
                     {previewItem.pathFromForPreview}
                   </div>
                   <div>
-                    <For each={previewItem.pathDiffs || []}>{(diff) =>
-                      <Switch fallback={() => <span>{diff[1]}</span>}>
-                        <Match when={diff[0] === -1}>
-                          <del style="background-color: red; color:white">{diff[1]}</del>
-                        </Match>
-                        <Match when={diff[0] === 1}>
-                          <ins style="background-color: green; color:white">{diff[1]}</ins>
-                        </Match>
-                      </Switch>
-                    }</For>
+                    <Show when={previewItem.pathFromForPreview !== previewItem.pathTo}>
+                      <For each={previewItem.pathDiffs || []}>{(diff) =>
+                        <Switch fallback={() => <span>{diff[1]}</span>}>
+                          <Match when={diff[0] === -1}>
+                            <del style="background-color: red; color:white">{diff[1]}</del>
+                          </Match>
+                          <Match when={diff[0] === 1}>
+                            <ins style="background-color: green; color:white">{diff[1]}</ins>
+                          </Match>
+                        </Switch>
+                      }</For>
+                    </Show>
                   </div>
                   <div>
                     <For each={previewItem?.lineNumbersWithChange || []}>{(lineNumberWithChange) => {
                       const lineNumbers = Array.from(new Array(state.options.contextLinesDepth * 2 + 1), (x, i) => lineNumberWithChange - state.options.contextLinesDepth + i);
                       return <For each={lineNumbers}>{(lineNumber) =>
                         <Show when={previewItem.contentDiffsLookup[lineNumber]}>
-                          <Show when={state.options.showLineNumbers}>
-                            <span>{lineNumber}:&nbsp;</span>
-                          </Show>
-                          <For each={previewItem.contentDiffsLookup[lineNumber]?.diffs || []}>{(diff) =>
-                            <Switch fallback={() => <span>{diff[1]}</span>}>
-                              <Match when={diff[0] === - 1}>
-                                <del style="background-color: red; color:white">{diff[1]}</del>
+                          <div>
+                            <Show when={state.options.showLineNumbers}>
+                              <span>{lineNumber}:&nbsp;</span>
+                            </Show>
+                            <For each={previewItem.contentDiffsLookup[lineNumber]?.diffs || []}>{(diff) =>
+                              <Switch fallback={() => <span>{diff[1]}</span>}>
+                                <Match when={diff[0] === - 1}>
+                                  <del style="background-color: red; color:white">{diff[1]}</del>
 
-                              </Match>
-                              <Match when={diff[0] === 1}>
-                                <ins style="background-color: green; color:white">{diff[1]}</ins>
-
-                              </Match>
-                            </Switch>
-                          }</For>
-
+                                </Match>
+                                <Match when={diff[0] === 1}>
+                                  <ins style="background-color: green; color:white">{diff[1]}</ins>
+                                </Match>
+                              </Switch>
+                            }</For>
+                          </div>
                         </Show>}
                       </For>
                     }}</For>
                   </div>
-                </>
+                </div>
               }
               </For>
             </div>

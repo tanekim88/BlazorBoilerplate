@@ -5,6 +5,7 @@ export interface RenameFilesAndFoldersOptions {
     isRegex: boolean,
     caseInsensitive: boolean,
     includeContents: boolean,
+    replaceContentOnlyForMatchedFiles: boolean,
     contextLinesDepth: number,
     showLineNumbers: boolean,
     deleteIfResultingNameIsBlank: boolean,

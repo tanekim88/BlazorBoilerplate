@@ -119,8 +119,8 @@ class RenameFilesAndFoldersService {
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
-
         if (
+
           !options.skipIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
           options.removeBlankPrefixIfResultingNameHasBlankPrefix && hasBlankPrefixName ||
           !options.deleteIfResultingNameIsBlank && !hasBlankName ||
@@ -146,74 +146,91 @@ class RenameFilesAndFoldersService {
         const content = fs.readFileSync(srcPath, { encoding: 'utf8' });
         let lineNumber = 1;
 
-        const modified = content.replace(fromInput, toInput);
-        const result = diff(content, modified);
-        const lineNumberToDataCache: {
-          [name: number]: RenameFilesAndFoldersContentDiffsByLineNumber
-        } = {} as any;
-        result.forEach(d => {
-          const text = d[1];
-          const editState = d[0];
+        if (fromInput.test(content) &&
+          (
+            options.replaceContentOnlyForMatchedFiles && toPushForPreview ||
+            !options.replaceContentOnlyForMatchedFiles
+          )) {
+          if (!toPushForPreview) {
+            toPushForPreview = {
+              pathFrom: srcPath,
+              pathFromForPreview: srcPath,
+              pathTo: srcPath,
+              isForPreview: true,
+              hasBlankName,
+              hasBlankPrefixName,
+              isDirectory
+            };
+          }
 
-          const reg = /(?<partTextSegment>[^\r\n]*)(?<newLine>\r?\n)?/g;
+          const modified = content.replace(fromInput, toInput);
+          const result = diff(content, modified);
+          const lineNumberToDataCache: {
+            [name: number]: RenameFilesAndFoldersContentDiffsByLineNumber
+          } = {} as any;
+          result.forEach(d => {
+            const text = d[1];
+            const editState = d[0];
 
-          let r = reg.exec(text);
-          while (r && r[0]?.length) {
-            if (!lineNumberToDataCache[lineNumber]) {
-              lineNumberToDataCache[lineNumber] = { diffs: [], fromContext: '', containsDiff: false, lineNumber };
-            }
-            const partText = r[0];
-            if (partText) {
-              switch (editState) {
-                case 0:
-                  lineNumberToDataCache[lineNumber].fromContext += partText;
+            const reg = /(?<partTextSegment>[^\r\n]*)(?<newLine>\r?\n)?/g;
 
-                  lineNumberToDataCache[lineNumber].diffs.push([0, partText]);
-                  break;
-                case -1:
-                  lineNumberToDataCache[lineNumber].fromContext += partText;
-                  lineNumberToDataCache[lineNumber].diffs.push([-1, partText]);
-                  lineNumberToDataCache[lineNumber].containsDiff = true;
-                  break;
-                case 1:
-                  lineNumberToDataCache[lineNumber].diffs.push([1, partText]);
-                  lineNumberToDataCache[lineNumber].containsDiff = true;
-                  break;
+            let r = reg.exec(text);
+            while (r && r[0]?.length) {
+              if (!lineNumberToDataCache[lineNumber]) {
+                lineNumberToDataCache[lineNumber] = { diffs: [], fromContext: '', containsDiff: false, lineNumber };
+              }
+              const partText = r[0];
+              if (partText) {
+                switch (editState) {
+                  case 0:
+                    lineNumberToDataCache[lineNumber].fromContext += partText;
+
+                    lineNumberToDataCache[lineNumber].diffs.push([0, partText]);
+                    break;
+                  case -1:
+                    lineNumberToDataCache[lineNumber].fromContext += partText;
+                    lineNumberToDataCache[lineNumber].diffs.push([-1, partText]);
+                    lineNumberToDataCache[lineNumber].containsDiff = true;
+                    break;
+                  case 1:
+                    lineNumberToDataCache[lineNumber].diffs.push([1, partText]);
+                    lineNumberToDataCache[lineNumber].containsDiff = true;
+                    break;
+                }
+
+                {
+                  // let content: RenameFilesAndFoldersContent = {
+
+                  // };
+                }
+              }
+              const newLine = r.groups?.newLine;
+              if (newLine) {
+                lineNumber += 1;
               }
 
-              {
-                // let content: RenameFilesAndFoldersContent = {
+              r = reg.exec(text);
+            };
+          });
 
-                // };
+          const lineNumbersWithChange: number[] = [];
+          const contentDiffsLookup: { [lineNumber: number]: RenameFilesAndFoldersContentDiffsByLineNumber } = {};
+          const allLineNumbers = Object.keys(lineNumberToDataCache);
+          allLineNumbers.forEach(key => {
+            const lineNumber = Number(key);
+
+            if (lineNumberToDataCache[lineNumber].containsDiff) {
+              lineNumbersWithChange.push(lineNumber);
+              const minLineNumber = Math.max(1, lineNumber - options.contextLinesDepth);
+              const maxLineNumber = Math.min(Number(allLineNumbers[allLineNumbers.length - 1]), lineNumber + options.contextLinesDepth);
+              for (let tempLineNumber = minLineNumber; tempLineNumber <= maxLineNumber; tempLineNumber++) {
+                if (!contentDiffsLookup[tempLineNumber]) {
+                  contentDiffsLookup[tempLineNumber] = lineNumberToDataCache[tempLineNumber];
+                }
               }
-            }
-            const newLine = r.groups?.newLine;
-            if (newLine) {
-              lineNumber += 1;
-            }
+            };
+          });
 
-            r = reg.exec(text);
-          };
-        });
-
-        const lineNumbersWithChange: number[] = [];
-        const contentDiffsLookup: { [lineNumber: number]: RenameFilesAndFoldersContentDiffsByLineNumber } = {};
-        const allLineNumbers = Object.keys(lineNumberToDataCache);
-        allLineNumbers.forEach(key => {
-          const lineNumber = Number(key);
-
-          if (lineNumberToDataCache[lineNumber].containsDiff) {
-            lineNumbersWithChange.push(lineNumber);
-            const minLineNumber = Math.max(1, lineNumber - options.contextLinesDepth);
-            const maxLineNumber = Math.min(Number(allLineNumbers[allLineNumbers.length - 1]), lineNumber + options.contextLinesDepth);
-            for (let tempLineNumber = minLineNumber; tempLineNumber <= maxLineNumber; tempLineNumber++) {
-              if (!contentDiffsLookup[tempLineNumber]) {
-                contentDiffsLookup[tempLineNumber] = lineNumberToDataCache[tempLineNumber];
-              }
-            }
-          };
-        });
-        if (toPushForPreview) {
           toPushForPreview.lineNumbersWithChange = lineNumbersWithChange;
           toPushForPreview.contentDiffsLookup = contentDiffsLookup;
         }
