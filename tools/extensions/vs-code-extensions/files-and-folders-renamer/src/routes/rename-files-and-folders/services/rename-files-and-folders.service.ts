@@ -137,7 +137,7 @@ class RenameFilesAndFoldersService {
             isForPreview: true,
             hasBlankName,
             hasBlankPrefixName,
-            isDirectory: isDirectory
+            isDirectory
           };
         }
       }
