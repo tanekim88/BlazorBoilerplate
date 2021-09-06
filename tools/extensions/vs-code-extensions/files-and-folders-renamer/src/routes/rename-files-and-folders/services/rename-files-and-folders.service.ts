@@ -87,7 +87,9 @@ class RenameFilesAndFoldersService {
             }
 
             changeTracker[previewItem.pathFrom] = finalTo;
-          } catch (e) { }
+          } catch (e) {
+            console.error(e);
+           }
         }
 
         previewItem = {
