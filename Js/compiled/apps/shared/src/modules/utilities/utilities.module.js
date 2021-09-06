@@ -5,8 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '../../functions/process-providers';
-import { MergeModule } from './merge/merge.module';
-import { RegexModule } from './regex/regex.module';
+import { MergeModule } from './modules/merge/merge.module';
+import { RegexModule } from './modules/regex/regex.module';
 let UtilitiesModule = class UtilitiesModule {
 };
 UtilitiesModule = __decorate([

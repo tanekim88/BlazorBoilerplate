@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
-import { MergeService } from '../../../modules/utilities/merge/merge/merge.service';
+import { MergeService } from '../../../modules/utilities/modules/merge/merge/merge.service';
 let VitePluginBaseService = class VitePluginBaseService {
     mergeService;
     environmentService;

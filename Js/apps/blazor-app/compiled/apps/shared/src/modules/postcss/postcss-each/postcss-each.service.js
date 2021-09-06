@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import PostcssEach from 'postcss-each';
-import { PostcssBaseService } from '../postcss-base/postcss-base.service';
+import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 let PostcssEachService = class PostcssEachService extends PostcssBaseService {
     constructor() {

@@ -1,7 +1,6 @@
 import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { VitePluginGlobInputService } from '#shared/src/vite/vite-plugins/vite-plugin-glob-input/vite-plugin-glob-input.service';
-import { VitePluginHtmlService } from '#shared/src/vite/vite-plugins/vite-plugin-html/vite-plugin-html.service';
+
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()

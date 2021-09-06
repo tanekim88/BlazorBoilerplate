@@ -8,19 +8,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
-import { CssnanoService } from '../cssnano/cssnano.service';
-import { PostcssFontMagicianService } from '../postcss-font-magician/postcss-font-magician.service';
-import { PostcssFunctionsService } from '../postcss-functions/postcss-functions.service';
-import { PostcssPresetEnvService } from '../postcss-preset-env/postcss-preset-env.service';
-import { PostcssReporterService } from '../postcss-reporter/postcss-reporter.service';
-import { PostcssRfsAutopilotService } from '../postcss-rfs-autopilot/postcss-rfs-autopilot.service';
-import { RfsService } from '../rfs/rfs.service';
-import { TailwindcssService } from '../tailwindcss/tailwindcss.service';
+import { CssnanoService } from '../services/cssnano/cssnano.service';
+import { PostcssFontMagicianService } from '../services/postcss-font-magician/postcss-font-magician.service';
+import { PostcssFunctionsService } from '../services/postcss-functions/postcss-functions.service';
+import { PostcssPresetEnvService } from '../services/postcss-preset-env/postcss-preset-env.service';
+import { PostcssReporterService } from '../services/postcss-reporter/postcss-reporter.service';
+import { PostcssRfsAutopilotService } from '../services/postcss-rfs-autopilot/postcss-rfs-autopilot.service';
+import { RfsService } from '../services/rfs/rfs.service';
+import { TailwindcssService } from '../services/tailwindcss/tailwindcss.service';
 // Sealed class.
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { CustomInject } from '#shared/src/functions/process-providers';
-import { PostcssPurgecssService } from '../postcss-purgecss/postcss-purgecss.service';
-import { PostcssCombineDuplicatedSelectorsService } from '../postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service';
+import { PostcssPurgecssService } from '../services/postcss-purgecss/postcss-purgecss.service';
+import { PostcssCombineDuplicatedSelectorsService } from '../services/postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service';
 let PostcssService = class PostcssService {
     CssNanoService;
     PostcssReporterService;

@@ -1,7 +1,7 @@
 import { OnModuleInit } from '@nestjs/common';
 import path from 'path';
 import { LOCAL_CONFIG } from '../../../../configs';
-import { MergeService } from '../../utilities/merge/merge/merge.service';
+import { MergeService } from '../../utilities/modules/merge/merge/merge.service';
 
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { ConfigBase } from '../../../../configs.base';

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { PostcssBaseService } from '../postcss-base/postcss-base.service';
+import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import CssNano from 'cssnano';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 let CssnanoService = class CssnanoService extends PostcssBaseService {

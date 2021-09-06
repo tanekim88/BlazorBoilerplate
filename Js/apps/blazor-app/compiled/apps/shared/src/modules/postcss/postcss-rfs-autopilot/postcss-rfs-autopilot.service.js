@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import PostcssRfsAutopilot from './postcss-rfs-autopilot';
-import { PostcssBaseService } from '../postcss-base/postcss-base.service';
+import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 const numbers = [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64];
 let PostcssRfsAutopilotService = class PostcssRfsAutopilotService extends PostcssBaseService {

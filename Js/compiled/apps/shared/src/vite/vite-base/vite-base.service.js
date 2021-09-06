@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import vite from 'vite';
 import { EnvironmentService } from '../../modules/environment/environment/environment.service';
-import { MergeService } from '../../modules/utilities/merge/merge/merge.service';
+import { MergeService } from '../../modules/utilities/modules/merge/merge/merge.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { CustomInject } from '#shared/src/functions/process-providers';
 import { VitePluginsService } from '../vite-plugins/vite-plugins/vite-plugins.service';

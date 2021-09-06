@@ -1,4 +1,4 @@
-import { MergeService } from '#shared/src/modules/utilities/merge/merge/merge.service';
+import { MergeService } from '#shared/src/modules/utilities/modules/merge/merge/merge.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
