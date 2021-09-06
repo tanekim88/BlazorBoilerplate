@@ -5,7 +5,7 @@ const path = require("path");
 const postcss = require("postcss");
 // placeholder tooling
 let sugarss;
-module.exports = function processContent(result, content, filename, options) {
+export default function processContent(result, content, filename, options) {
     const plugins = options.plugins;
     const ext = path.extname(filename);
     const parserList = [];
@@ -32,7 +32,7 @@ module.exports = function processContent(result, content, filename, options) {
     // Try the default as a last resort:
     parserList.push(null);
     return runPostcss(content, filename, plugins, parserList);
-};
+}
 function runPostcss(content, filename, plugins, parsers, index) {
     if (!index)
         index = 0;

@@ -1,5 +1,5 @@
 "use strict";
-module.exports = function (parentMedia, childMedia) {
+export default function (parentMedia, childMedia) {
     if (!parentMedia.length && childMedia.length)
         return childMedia;
     if (parentMedia.length && !childMedia.length)
@@ -14,5 +14,5 @@ module.exports = function (parentMedia, childMedia) {
         });
     });
     return media;
-};
+}
 //# sourceMappingURL=join-media.js.map

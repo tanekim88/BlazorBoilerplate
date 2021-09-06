@@ -31,7 +31,7 @@ export const commonConfig = defineConfig(async ({command, mode})=>{
     resolve:{
       // alias:[{
       //   find:'#shared',
-      //   replacement:'./blazorApp'
+      //   replacement:'./BlazorApp'
       // }]
     }
   }

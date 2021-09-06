@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 
 
-namespace BlazorApp.Client.Components.ActionButtonGroupComponents
+namespace SolidApp.Client.Components.ActionButtonGroupComponents
 {
     public partial class ChatFloatingActionButton
     {

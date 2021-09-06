@@ -38,7 +38,7 @@ namespace Auth.Server.Localizations.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BlazorApp.Shared.Localizations.Resources.RespectfulResource", typeof(RespectfulResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SolidApp.Shared.Localizations.Resources.RespectfulResource", typeof(RespectfulResource).Assembly);
                     resourceMan = temp;
                 }
 

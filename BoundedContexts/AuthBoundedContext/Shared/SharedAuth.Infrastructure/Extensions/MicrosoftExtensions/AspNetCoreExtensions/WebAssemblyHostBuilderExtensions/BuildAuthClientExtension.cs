@@ -19,7 +19,7 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             {
 
                 builder.Configuration.Bind("Oidc", options.ProviderOptions);
-                // Note: response_mode=fragment is the best option for a SPA. Unfortunately, the Blazor WASM
+                // Note: response_mode=fragment is the best option for a SPA. Unfortunately, the Solid WASM
                 // authentication stack is impacted by a bug that prevents it from correctly extracting
                 // authorization error responses (e.g error=access_denied responses) from the URL fragment.
                 // For more information about this bug, visit https://github.com/dotnet/aspnetcore/issues/28344.

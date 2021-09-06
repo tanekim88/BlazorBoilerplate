@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.blazorAppConfig = exports.BlazorAppConfig = void 0;
+exports.blazorAppConfig = exports.SolidAppConfig = void 0;
 const configs_base_1 = require("#shared/configs.base");
 const paths_1 = require("./paths");
-class BlazorAppConfig extends configs_base_1.ConfigBase {
+class SolidAppConfig extends configs_base_1.ConfigBase {
     constructor() {
         super(...arguments);
         this.rootDir = paths_1.blazorAppPaths.toAbsolutePath();
-        this.RootDir = paths_1.BlazorAppPaths.toAbsolutePath();
+        this.RootDir = paths_1.SolidAppPaths.toAbsolutePath();
         this.projectName = 'blazorApp';
         this.title = 'App title';
         this.name = 'App name';
@@ -17,6 +17,6 @@ class BlazorAppConfig extends configs_base_1.ConfigBase {
         this.description = 'app desc';
     }
 }
-exports.BlazorAppConfig = BlazorAppConfig;
-exports.blazorAppConfig = new BlazorAppConfig();
+exports.SolidAppConfig = SolidAppConfig;
+exports.blazorAppConfig = new SolidAppConfig();
 //# sourceMappingURL=configs.js.map

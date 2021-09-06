@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BlazorApp.ArchTests
+namespace SolidApp.ArchTests
 {
     [TestClass]
     public class UnitTest1

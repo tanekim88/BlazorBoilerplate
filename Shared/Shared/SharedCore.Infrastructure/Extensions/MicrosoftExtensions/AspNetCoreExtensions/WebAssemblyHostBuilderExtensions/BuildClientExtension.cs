@@ -2,7 +2,7 @@
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using GrpcService1;
-using Material.Blazor;
+using Material.Solid;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -58,12 +58,12 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
 
             Assembly[] allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             //services.AddCustomServices();
-            services.AddHttpClient("BlazorApp.ServerAPI", client => client.BaseAddress =
+            services.AddHttpClient("SolidApp.ServerAPI", client => client.BaseAddress =
                  new Uri(builder.HostEnvironment.BaseAddress)).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
             // Supply HttpClient instances that include access tokens when making requests to the server project
             services.AddScoped(sp =>
-                 sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
+                 sp.GetRequiredService<IHttpClientFactory>().CreateClient("SolidApp.ServerAPI"));
 
             //builder.services.AddHttpClient<IIdentityServerService, IdentityServerService>(client =>
             //{

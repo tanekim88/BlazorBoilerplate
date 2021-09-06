@@ -15,7 +15,7 @@
   \********************************************************************************/
 /***/ (() => {
 
-eval("// import './_index.scss';\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/progress-indicator/index.ts?");
+eval("// import './_index.scss';\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/progress-indicator/index.ts?");
 
 /***/ })
 

@@ -1,10 +1,10 @@
 import { ConfigBase } from '#shared/configs.base';
-import { BlazorAppPaths, blazorAppPaths } from './paths';
+import { blazorAppPaths, BlazorAppPaths } from './paths';
 
 export class BlazorAppConfig extends ConfigBase {
     rootDir = blazorAppPaths.toAbsolutePath();
     RootDir = BlazorAppPaths.toAbsolutePath();
-    projectName = 'blazorApp';
+    projectName = 'BlazorApp';
     title = 'App title';
     name = 'App name';
     shortName = 'App short name';

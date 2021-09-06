@@ -1,4 +1,4 @@
-﻿namespace BlazorApp.Client.Pages.HomePages
+﻿namespace SolidApp.Client.Pages.HomePages
 {
     public class HomePageBase
     {

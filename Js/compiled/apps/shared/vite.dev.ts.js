@@ -32,7 +32,7 @@ var ConfigBase = class {
 };
 // configs.ts
 import { rootConfig } from "#root/configs";
-import { blazorAppConfig } from "#blazor-app/configs";
+import { blazorAppConfig } from "#solid-app/configs";
 import { authConfig } from "#auth/configs";
 import path from "path";
 // paths.ts

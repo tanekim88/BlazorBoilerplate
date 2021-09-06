@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace BlazorApp.Server
+namespace SolidApp.Server
 {
     public class Startup
     {

@@ -9,7 +9,7 @@ const postcss = require("postcss")
 // placeholder tooling
 let sugarss
 
-module.exports = function processContent(result, content, filename, options) {
+export default function processContent(result, content, filename, options) {
   const plugins = options.plugins
   const ext = path.extname(filename)
 

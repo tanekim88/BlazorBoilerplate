@@ -15268,667 +15268,667 @@ exports.RootPaths = createProxy({
                 }
             }
         },
-        "BlazorApp": {
-            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp",
-            toRelativePath: () => "Apps\\BlazorApp",
+        "SolidApp": {
+            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp",
+            toRelativePath: () => "Apps\\SolidApp",
             "Client": {
-                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client",
-                toRelativePath: () => "Apps\\BlazorApp\\Client",
+                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client",
+                toRelativePath: () => "Apps\\SolidApp\\Client",
                 "App.razor": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\App.razor",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\App.razor"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\App.razor",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\App.razor"
                 },
                 "bin": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\bin",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\bin"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\bin",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\bin"
                 },
-                "BlazorApp.Client.csproj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\BlazorApp.Client.csproj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\BlazorApp.Client.csproj"
+                "SolidApp.Client.csproj": {
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\SolidApp.Client.csproj",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\SolidApp.Client.csproj"
                 },
                 "Components": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Components",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\Components",
                     "ActionButtonGroupComponents": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents",
                         "ChatFloatingActionButton.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor"
                         },
                         "ChatFloatingActionButton.razor.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs"
                         },
                         "ChatFloatingActionButton.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css"
                         },
                         "ChatFloatingActionButton.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss"
                         }
                     },
                     "ChatGroupComponents": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ChatGroupComponents",
                         "ChatRoom.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor"
                         },
                         "ChatRoom.razor.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs"
                         },
                         "ChatRoom.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css"
                         },
                         "ChatRoom.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss"
                         }
                     },
                     "ValidationComponents": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ValidationComponents",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ValidationComponents",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ValidationComponents",
                         "CustomValidator.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor"
                         },
                         "CustomValidator.Razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss"
                         },
                         "CustomValidatorBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs"
                         }
                     }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\obj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\obj"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\obj",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\obj"
                 },
                 "Pages": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages",
                     "AccountPages": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages",
                         "EmailConfirmedPage.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor"
                         },
                         "EmailConfirmedPage.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css"
                         },
                         "EmailConfirmedPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss"
                         },
                         "EmailConfirmedPageBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs"
                         },
                         "LoginPage.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor"
                         },
                         "LoginPage.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css"
                         },
                         "LoginPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss"
                         },
                         "LoginPageBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs"
                         },
                         "RegisterConfirmationPage.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor"
                         },
                         "RegisterConfirmationPage.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css"
                         },
                         "RegisterConfirmationPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss"
                         },
                         "RegisterConfirmationPageBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs"
                         },
                         "RegisterPage.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor"
                         },
                         "RegisterPage.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css"
                         },
                         "RegisterPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss"
                         },
                         "RegisterPageBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs"
                         }
                     },
                     "Authentication.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\Authentication.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\Authentication.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\Authentication.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\Authentication.razor"
                     },
                     "Counter.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\Counter.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\Counter.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\Counter.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\Counter.razor"
                     },
                     "CustomInputText.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\CustomInputText.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\CustomInputText.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\CustomInputText.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\CustomInputText.razor"
                     },
                     "EntityPages": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages",
                         "__Entities_BoundedContext_Name__Pages": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
                             "__Entities_Groups_00_Name__Pages": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
                                 "__Entities_Name__CreatePageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs"
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor"
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css"
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss"
                                 },
                                 "__Entities_Name__ListPageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs"
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor"
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css"
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss"
                                 },
                                 "__Entities_Name__PageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs"
                                 },
                                 "__Entities_Name__Page_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor"
                                 },
                                 "__Entities_Name__Page_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css"
                                 },
                                 "__Entities_Name__Page_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss"
                                 },
                                 "__Entities_Name__UpdatePageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs"
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor"
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css"
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss"
                                 }
                             }
                         }
                     },
                     "FetchData.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\FetchData.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\FetchData.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\FetchData.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\FetchData.razor"
                     },
                     "HomePages": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\HomePages",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\HomePages",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\HomePages",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\HomePages",
                         "HomePage.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor"
                         },
                         "HomePage.razor.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.css"
                         },
                         "HomePage.razor.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.scss",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.scss",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.scss"
                         },
                         "HomePageBase.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePageBase.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePageBase.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePageBase.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePageBase.cs"
                         }
                     },
                     "Index.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\Index.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\Index.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\Index.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\Index.razor"
                     },
                     "TestForm.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Pages\\TestForm.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Pages\\TestForm.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Pages\\TestForm.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Pages\\TestForm.razor"
                     }
                 },
                 "Program.cs": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Program.cs",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Program.cs"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Program.cs",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\Program.cs"
                 },
                 "Properties": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Properties",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Properties",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Properties",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\Properties",
                     "launchSettings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Properties\\launchSettings.json",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Properties\\launchSettings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Properties\\launchSettings.json",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Properties\\launchSettings.json"
                     }
                 },
                 "Shared": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\Shared",
                     "CascadingStates": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\CascadingStates",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\CascadingStates",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\CascadingStates",
                         "CascadingThemeState.razor": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor"
                         }
                     },
                     "Layouts": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts",
                         "MainLayout": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout",
                             "MainLayout.razor": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor"
                             },
                             "MainLayout.razor.css": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css"
                             },
                             "MainLayout.razor.matblazor.txt": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt"
                             },
                             "MainLayout.razor.scss": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss"
                             },
                             "MainLayoutBase.cs": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs"
                             },
                             "MainLayoutBase.cs.matblazor.txt": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt"
                             }
                         }
                     },
                     "LoginDisplay.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\LoginDisplay.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\LoginDisplay.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\LoginDisplay.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\LoginDisplay.razor"
                     },
                     "NavMenu.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\NavMenu.razor"
                     },
                     "NavMenu.razor.css": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor.css",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor.css"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor.css",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\NavMenu.razor.css"
                     },
                     "RedirectToLogin.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\RedirectToLogin.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\RedirectToLogin.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\RedirectToLogin.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\RedirectToLogin.razor"
                     },
                     "SurveyPrompt.razor": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\Shared\\SurveyPrompt.razor",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\Shared\\SurveyPrompt.razor"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\Shared\\SurveyPrompt.razor",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\Shared\\SurveyPrompt.razor"
                     }
                 },
                 "wwwroot": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot",
                     "css": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css",
                         "app.css": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\app.css",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\app.css"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\app.css",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\app.css"
                         },
                         "bootstrap": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\bootstrap",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\bootstrap",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\bootstrap",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\bootstrap",
                             "bootstrap.min.css": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css"
                             }
                         },
                         "open-iconic": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic",
-                            toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic",
+                            toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic",
                             "font": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font",
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font",
                                 "css": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\css",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\css",
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\css",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\css",
                                     "open-iconic-bootstrap.min.css": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
                                     }
                                 },
                                 "fonts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
+                                    toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
                                     "open-iconic.eot": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
                                     },
                                     "open-iconic.otf": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
                                     },
                                     "open-iconic.svg": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
                                     },
                                     "open-iconic.ttf": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
                                     },
                                     "open-iconic.woff": {
-                                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
-                                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+                                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+                                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
                                     }
                                 }
                             },
                             "FONT-LICENSE": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE"
                             },
                             "ICON-LICENSE": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE"
                             },
                             "README.md": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\README.md",
-                                toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\css\\open-iconic\\README.md"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\README.md",
+                                toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\css\\open-iconic\\README.md"
                             }
                         }
                     },
                     "favicon.ico": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\favicon.ico",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\favicon.ico"
                     },
                     "icon-512.png": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\icon-512.png",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\icon-512.png"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\icon-512.png",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\icon-512.png"
                     },
                     "index.html": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\index.html",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\index.html"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\index.html",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\index.html"
                     },
                     "manifest.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\manifest.json",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\manifest.json"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\manifest.json",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\manifest.json"
                     },
                     "service-worker.js": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\service-worker.js",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\service-worker.js"
                     },
                     "service-worker.published.js": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.published.js",
-                        toRelativePath: () => "Apps\\BlazorApp\\Client\\wwwroot\\service-worker.published.js"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\wwwroot\\service-worker.published.js",
+                        toRelativePath: () => "Apps\\SolidApp\\Client\\wwwroot\\service-worker.published.js"
                     }
                 },
                 "_Imports.razor": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Client\\_Imports.razor",
-                    toRelativePath: () => "Apps\\BlazorApp\\Client\\_Imports.razor"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Client\\_Imports.razor",
+                    toRelativePath: () => "Apps\\SolidApp\\Client\\_Imports.razor"
                 }
             },
             "Server": {
-                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server",
-                toRelativePath: () => "Apps\\BlazorApp\\Server",
+                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server",
+                toRelativePath: () => "Apps\\SolidApp\\Server",
                 "appsettings.Development.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\appsettings.Development.json",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\appsettings.Development.json"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\appsettings.Development.json",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\appsettings.Development.json"
                 },
                 "appsettings.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\appsettings.json",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\appsettings.json"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\appsettings.json",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\appsettings.json"
                 },
                 "Areas": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Areas",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Areas",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Areas",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Areas",
                     "Identity": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Areas\\Identity",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Areas\\Identity",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Areas\\Identity",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Areas\\Identity",
                         "Pages": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages",
-                            toRelativePath: () => "Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages",
+                            toRelativePath: () => "Apps\\SolidApp\\Server\\Areas\\Identity\\Pages",
                             "Shared": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared",
-                                toRelativePath: () => "Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared",
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared",
+                                toRelativePath: () => "Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared",
                                 "_LoginPartial.cshtml": {
-                                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml",
-                                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml"
+                                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml",
+                                    toRelativePath: () => "Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml"
                                 }
                             }
                         }
                     }
                 },
                 "bin": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\bin",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\bin"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\bin",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\bin"
                 },
-                "BlazorApp.Server.csproj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj"
+                "SolidApp.Server.csproj": {
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\SolidApp.Server.csproj"
                 },
                 "Controllers": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Controllers",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Controllers",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Controllers",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Controllers",
                     "OidcConfigurationController.cs": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Controllers\\OidcConfigurationController.cs",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Controllers\\OidcConfigurationController.cs"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Controllers\\OidcConfigurationController.cs",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Controllers\\OidcConfigurationController.cs"
                     },
                     "WeatherForecastController.cs": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Controllers\\WeatherForecastController.cs",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Controllers\\WeatherForecastController.cs"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Controllers\\WeatherForecastController.cs",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Controllers\\WeatherForecastController.cs"
                     }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\obj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\obj"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\obj",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\obj"
                 },
                 "Pages": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Pages",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Pages",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Pages",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Pages",
                     "Error.cshtml": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Pages\\Error.cshtml"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Pages\\Error.cshtml"
                     },
                     "Error.cshtml.cs": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml.cs",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Pages\\Error.cshtml.cs"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml.cs",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Pages\\Error.cshtml.cs"
                     }
                 },
                 "Program.cs": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Program.cs",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Program.cs"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Program.cs",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Program.cs"
                 },
                 "Properties": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Properties",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Properties",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Properties",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Properties",
                     "launchSettings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Properties\\launchSettings.json",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Properties\\launchSettings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Properties\\launchSettings.json",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Properties\\launchSettings.json"
                     },
                     "serviceDependencies.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.json",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.json"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.json",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Properties\\serviceDependencies.json"
                     },
                     "serviceDependencies.local.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json"
                     },
                     "serviceDependencies.local.json.user": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user",
-                        toRelativePath: () => "Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user"
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json.user",
+                        toRelativePath: () => "Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json.user"
                     }
                 },
                 "Startup.cs": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Server\\Startup.cs",
-                    toRelativePath: () => "Apps\\BlazorApp\\Server\\Startup.cs"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Server\\Startup.cs",
+                    toRelativePath: () => "Apps\\SolidApp\\Server\\Startup.cs"
                 }
             },
             "Shared": {
-                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared",
-                toRelativePath: () => "Apps\\BlazorApp\\Shared",
+                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared",
+                toRelativePath: () => "Apps\\SolidApp\\Shared",
                 "bin": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\bin",
-                    toRelativePath: () => "Apps\\BlazorApp\\Shared\\bin"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\bin",
+                    toRelativePath: () => "Apps\\SolidApp\\Shared\\bin"
                 },
-                "BlazorApp.Shared.csproj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\BlazorApp.Shared.csproj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Shared\\BlazorApp.Shared.csproj"
+                "SolidApp.Shared.csproj": {
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\SolidApp.Shared.csproj",
+                    toRelativePath: () => "Apps\\SolidApp\\Shared\\SolidApp.Shared.csproj"
                 },
                 "Localizations": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations",
-                    toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations",
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations",
+                    toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations",
                     "Customs": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Customs",
-                        toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Customs",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Customs",
+                        toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Customs",
                         "Pos": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos",
                             "ko.po": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos\\ko.po",
-                                toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos\\ko.po"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos\\ko.po",
+                                toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos\\ko.po"
                             }
                         },
                         "Resources": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources",
                             "Resource.ko.resx": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx",
-                                toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx",
+                                toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx"
                             }
                         }
                     },
                     "Pos": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Pos",
-                        toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Pos",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Pos",
+                        toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Pos",
                         "__Localizations_languageCode__.po": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po"
                         }
                     },
                     "Resources": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources",
-                        toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources",
+                        toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources",
                         "Resource.Designer.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs"
                         },
                         "Resource.en.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.en.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.en.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.en.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.en.resx"
                         },
                         "Resource.es.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.es.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.es.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.es.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.es.resx"
                         },
                         "Resource.ko.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.ko.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.ko.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.ko.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.ko.resx"
                         },
                         "Resource.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.resx"
                         },
                         "Resource__Context_project_postfix__.koResource.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx"
                         },
                         "Resource__Context_project_postfix__Resource.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx"
                         },
                         "RespectfulResource.Designer.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs"
                         },
                         "RespectfulResource.ko.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx"
                         },
                         "RespectfulResource__Context_project_postfix__.koResource.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx"
                         },
                         "__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs"
                         },
                         "__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx"
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx"
                         }
                     },
                     "Templates": {
-                        toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Templates",
-                        toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Templates",
+                        toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Templates",
+                        toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Templates",
                         "Pots": {
-                            toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots",
-                            toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots",
+                            toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots",
+                            toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots",
                             "SharedLibrary.pot": {
-                                toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot",
-                                toRelativePath: () => "Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot"
+                                toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot",
+                                toRelativePath: () => "Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot"
                             }
                         }
                     }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\obj",
-                    toRelativePath: () => "Apps\\BlazorApp\\Shared\\obj"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\obj",
+                    toRelativePath: () => "Apps\\SolidApp\\Shared\\obj"
                 },
                 "WeatherForecast.cs": {
-                    toAbsolutePath: () => "C:\\Projects\\Apps\\BlazorApp\\Shared\\WeatherForecast.cs",
-                    toRelativePath: () => "Apps\\BlazorApp\\Shared\\WeatherForecast.cs"
+                    toAbsolutePath: () => "C:\\Projects\\Apps\\SolidApp\\Shared\\WeatherForecast.cs",
+                    toRelativePath: () => "Apps\\SolidApp\\Shared\\WeatherForecast.cs"
                 }
             }
         },
@@ -20699,572 +20699,572 @@ exports.RootPaths = createProxy({
                     toRelativePath: () => "Js\\apps\\auth\\webpack.prod.ts"
                 }
             },
-            "blazor-app": {
-                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app",
-                toRelativePath: () => "Js\\apps\\blazor-app",
+            "solid-app": {
+                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app",
+                toRelativePath: () => "Js\\apps\\solid-app",
                 ".eslintrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.eslintrc.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.eslintrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.eslintrc.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.eslintrc.json"
                 },
                 ".eslintrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.eslintrc.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.eslintrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.eslintrc.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.eslintrc.ts"
                 },
                 ".prettierrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.prettierrc.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.prettierrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.prettierrc.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.prettierrc.json"
                 },
                 ".prettierrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.prettierrc.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.prettierrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.prettierrc.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.prettierrc.ts"
                 },
                 ".stylelintrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.stylelintrc.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.stylelintrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.stylelintrc.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.stylelintrc.json"
                 },
                 ".stylelintrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.stylelintrc.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.stylelintrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.stylelintrc.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.stylelintrc.ts"
                 },
                 ".vscode": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.vscode",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\.vscode",
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode",
+                    toRelativePath: () => "Js\\apps\\solid-app\\.vscode",
                     "launch.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.vscode\\launch.json",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\.vscode\\launch.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\launch.json",
+                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\launch.json"
                     },
                     "settings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.vscode\\settings.json",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\.vscode\\settings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\settings.json",
+                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\settings.json"
                     },
                     "tasks.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\.vscode\\tasks.json",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\.vscode\\tasks.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\tasks.json",
+                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\tasks.json"
                     }
                 },
                 "berry.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\berry.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\berry.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\berry.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\berry.json"
                 },
                 "codegen-config.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\codegen-config.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\codegen-config.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\codegen-config.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\codegen-config.json"
                 },
                 "configs.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\configs.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\configs.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\configs.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\configs.ts"
                 },
                 "Graphql.graphql": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\Graphql.graphql",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\Graphql.graphql"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\Graphql.graphql",
+                    toRelativePath: () => "Js\\apps\\solid-app\\Graphql.graphql"
                 },
                 "Monikers.imagemanifest": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\Monikers.imagemanifest",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\Monikers.imagemanifest"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\Monikers.imagemanifest",
+                    toRelativePath: () => "Js\\apps\\solid-app\\Monikers.imagemanifest"
                 },
                 "node_modules": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\node_modules",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\node_modules"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\node_modules",
+                    toRelativePath: () => "Js\\apps\\solid-app\\node_modules"
                 },
                 "package-lock.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\package-lock.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\package-lock.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\package-lock.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\package-lock.json"
                 },
                 "package.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\package.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\package.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\package.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\package.json"
                 },
                 "paths.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\paths.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\paths.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\paths.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\paths.ts"
                 },
                 "src": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\src",
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src",
+                    toRelativePath: () => "Js\\apps\\solid-app\\src",
                     "app.controller.spec.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\app.controller.spec.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\app.controller.spec.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.controller.spec.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.controller.spec.ts"
                     },
                     "app.controller.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\app.controller.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\app.controller.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.controller.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.controller.ts"
                     },
                     "app.module.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\app.module.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\app.module.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.module.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.module.ts"
                     },
                     "app.service.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\app.service.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\app.service.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.service.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.service.ts"
                     },
                     "appsettings.Development.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\appsettings.Development.json",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\appsettings.Development.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\appsettings.Development.json",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\appsettings.Development.json"
                     },
                     "appsettings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\appsettings.json",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\appsettings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\appsettings.json",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\appsettings.json"
                     },
                     "index.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\index.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\index.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\index.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\index.ts"
                     },
                     "logo": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\logo",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\logo",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\logo",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\logo",
                         "icon-512.png": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\logo\\icon-512.png"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\logo\\icon-512.png",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\logo\\icon-512.png"
                         }
                     },
                     "main.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\main.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\main.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\main.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\main.ts"
                     },
                     "modules": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\modules",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\modules"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\modules",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\modules"
                     },
                     "server.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\server.ts",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\server.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\server.ts",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\server.ts"
                     },
                     "service-worker": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\service-worker",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\service-worker",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\service-worker",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\service-worker",
                         "index.ts": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\service-worker\\index.ts",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\service-worker\\index.ts"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\service-worker\\index.ts",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\service-worker\\index.ts"
                         }
                     },
                     "templates": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\templates",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\templates",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\templates",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\templates",
                         "index.html": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\templates\\index.html",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\templates\\index.html"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\templates\\index.html",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\templates\\index.html"
                         }
                     },
                     "web": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\web",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\web",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\web",
                         "index.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\web\\index.scss",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\web\\index.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\index.scss",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\index.scss"
                         },
                         "libraries": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\web\\libraries",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\web\\libraries",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\libraries",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\libraries",
                             "index.scss": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\web\\libraries\\index.scss",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\web\\libraries\\index.scss"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\libraries\\index.scss",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\libraries\\index.scss"
                             }
                         }
                     },
                     "webpack": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack",
-                        toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack",
+                        toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack",
                         "loaders": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders",
                             "webpack-custom-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js"
                             },
                             "webpack-post-postcss-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js"
                             },
                             "webpack-post-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js"
                             },
                             "webpack-pre-postcss-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js"
                             },
                             "webpack-pre-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js"
                             }
                         },
                         "plugins": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins",
                             "webpack-clean-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
                                 "webpack-clean-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-clean-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-copy-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
                                 "webpack-copy-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-copy-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-extract-svg-sprite-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
                                 "webpack-extract-svg-sprite-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-extract-svg-sprite-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-favicons-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
                                 "webpack-favicons-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-favicons-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-html-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
                                 "webpack-html-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-html-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-mini-css-extract-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
                                 "webpack-mini-css-extract-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts"
                                 },
                                 "webpack-mini-css-extract-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts"
                                 }
                             },
                             "webpack-plugins": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins",
                                 "webpack-plugins.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts"
                                 },
                                 "webpack-plugins.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts"
                                 }
                             },
                             "webpack-plugins.module.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins.module.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-plugins.module.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins.module.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins.module.ts"
                             },
                             "webpack-remove-files-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
                                 "webpack-remove-files-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-remove-files-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-svg-sprite-loader-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
                                 "webpack-svg-sprite-loader-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts"
                                 },
                                 "webpack-svg-sprite-loader-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts"
                                 }
                             },
                             "webpack-tsconfig-paths-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
                                 "webpack-tsconfig-paths-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-tsconfig-paths-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-watch-entries-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
                                 "webpack-watch-entries-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts"
                                 },
                                 "webpack-watch-entries-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts"
                                 }
                             },
                             "webpack-webpack-chokidar-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
                                 "webpack-webpack-chokidar-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts"
                                 },
                                 "webpack-webpack-chokidar-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts"
                                 }
                             },
                             "webpack-webpack-fix-style-only-entries": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
                                 "webpack-webpack-fix-style-only-entries.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts"
                                 },
                                 "webpack-webpack-fix-style-only-entries.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts"
                                 }
                             },
                             "webpack-workbox-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
                                 "webpack-workbox-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-workbox-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts"
                                 }
                             }
                         },
                         "rules": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules",
                             "webpack-csv-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules",
                                 "webpack-csv-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts"
                                 },
                                 "webpack-csv-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts"
                                 }
                             },
                             "webpack-font-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules",
                                 "webpack-font-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts"
                                 },
                                 "webpack-font-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts"
                                 }
                             },
                             "webpack-image-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules",
                                 "webpack-image-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts"
                                 },
                                 "webpack-image-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts"
                                 }
                             },
                             "webpack-json-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules",
                                 "webpack-json-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts"
                                 },
                                 "webpack-json-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts"
                                 }
                             },
                             "webpack-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules",
                                 "webpack-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts"
                                 },
                                 "webpack-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts"
                                 }
                             },
                             "webpack-rules.module.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules.module.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-rules.module.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules.module.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules.module.ts"
                             },
                             "webpack-style-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules",
                                 "webpack-style-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts"
                                 },
                                 "webpack-style-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts"
                                 }
                             },
                             "webpack-svg-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules",
                                 "webpack-svg-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts"
                                 },
                                 "webpack-svg-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts"
                                 }
                             },
                             "webpack-ts-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules",
                                 "webpack-ts-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts"
                                 },
                                 "webpack-ts-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts"
                                 }
                             },
                             "webpack-xml-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules",
                                 "webpack-xml-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts"
                                 },
                                 "webpack-xml-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts"
                                 }
                             }
                         },
                         "webpack-dev": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-dev",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-dev",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev",
                             "webpack-dev.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts"
                             },
                             "webpack-dev.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts"
                             }
                         },
                         "webpack-prod": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-prod",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-prod",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod",
                             "webpack-prod.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts"
                             },
                             "webpack-prod.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts"
                             }
                         },
                         "webpack-shared": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared",
                             "webpack-shared.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts"
                             },
                             "webpack-shared.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts"
                             }
                         },
                         "webpack-shared-config": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config",
                             "webpack-shared-config.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts"
                             },
                             "webpack-shared-config.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts",
-                                toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts",
+                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts"
                             }
                         },
                         "webpack.module.ts": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\src\\webpack\\webpack.module.ts",
-                            toRelativePath: () => "Js\\apps\\blazor-app\\src\\webpack\\webpack.module.ts"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack.module.ts",
+                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack.module.ts"
                         }
                     }
                 },
                 "tailwind.config.js": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tailwind.config.js",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tailwind.config.js"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.js",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.js"
                 },
                 "tailwind.config.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tailwind.config.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tailwind.config.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.json"
                 },
                 "tailwind.config.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tailwind.config.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tailwind.config.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.ts"
                 },
                 "tsconfig.backup.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tsconfig.backup.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tsconfig.backup.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.backup.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.backup.json"
                 },
                 "tsconfig.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tsconfig.json",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tsconfig.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.json",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.json"
                 },
                 "tsconfig.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\tsconfig.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\tsconfig.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.ts"
                 },
                 "webpack.dev.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\webpack.dev.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\webpack.dev.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\webpack.dev.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\webpack.dev.ts"
                 },
                 "webpack.prod.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\blazor-app\\webpack.prod.ts",
-                    toRelativePath: () => "Js\\apps\\blazor-app\\webpack.prod.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\webpack.prod.ts",
+                    toRelativePath: () => "Js\\apps\\solid-app\\webpack.prod.ts"
                 }
             },
             "shared": {
@@ -21515,9 +21515,9 @@ exports.RootPaths = createProxy({
                                 toAbsolutePath: () => "C:\\Projects\\Js\\apps\\shared\\src\\web\\defaults\\index.ts",
                                 toRelativePath: () => "Js\\apps\\shared\\src\\web\\defaults\\index.ts"
                             },
-                            "_blazor-default.scss": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\shared\\src\\web\\defaults\\_blazor-default.scss",
-                                toRelativePath: () => "Js\\apps\\shared\\src\\web\\defaults\\_blazor-default.scss"
+                            "_solid-default.scss": {
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\shared\\src\\web\\defaults\\_solid-default.scss",
+                                toRelativePath: () => "Js\\apps\\shared\\src\\web\\defaults\\_solid-default.scss"
                             },
                             "_colors.scss": {
                                 toAbsolutePath: () => "C:\\Projects\\Js\\apps\\shared\\src\\web\\defaults\\_colors.scss",
@@ -23872,9 +23872,9 @@ exports.RootPaths = createProxy({
             toAbsolutePath: () => "C:\\Projects\\Js\\auth.code-workspace",
             toRelativePath: () => "Js\\auth.code-workspace"
         },
-        "blazor-app.code-workspace": {
-            toAbsolutePath: () => "C:\\Projects\\Js\\blazor-app.code-workspace",
-            toRelativePath: () => "Js\\blazor-app.code-workspace"
+        "solid-app.code-workspace": {
+            toAbsolutePath: () => "C:\\Projects\\Js\\solid-app.code-workspace",
+            toRelativePath: () => "Js\\solid-app.code-workspace"
         },
         "compiled": {
             toAbsolutePath: () => "C:\\Projects\\Js\\compiled",
@@ -24007,9 +24007,9 @@ exports.RootPaths = createProxy({
                 toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\auth.code-workspace",
                 toRelativePath: () => "Js\\workspaces\\auth.code-workspace"
             },
-            "blazor-app.code-workspace": {
-                toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\blazor-app.code-workspace",
-                toRelativePath: () => "Js\\workspaces\\blazor-app.code-workspace"
+            "solid-app.code-workspace": {
+                toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\solid-app.code-workspace",
+                toRelativePath: () => "Js\\workspaces\\solid-app.code-workspace"
             },
             "shared.code-workspace": {
                 toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\shared.code-workspace",

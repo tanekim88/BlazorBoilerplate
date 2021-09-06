@@ -33,7 +33,7 @@ namespace Auth.Server
             //    {
             //        ClientId = "code",
             //        ConsentType = ConsentTypes.Explicit,
-            //        DisplayName = "Blazor client application",
+            //        DisplayName = "Solid client application",
             //        Type = ClientTypes.Public,
             //        PostLogoutRedirectUris =
             //        {

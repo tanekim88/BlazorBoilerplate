@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Apps/BlazorApp/Server/BlazorApp.Server.csproj", "Apps/BlazorApp/Server/"]
-COPY ["Apps/BlazorApp/Shared/BlazorApp.Shared.csproj", "Apps/BlazorApp/Shared/"]
+COPY ["Apps/SolidApp/Server/SolidApp.Server.csproj", "Apps/SolidApp/Server/"]
+COPY ["Apps/SolidApp/Shared/SolidApp.Shared.csproj", "Apps/SolidApp/Shared/"]
 COPY ["BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Application/SharedAuth.Application.csproj", "BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Application/"]
 COPY ["Shared/Core.Infrastructure/Core.Infrastructure.csproj", "Shared/Core.Infrastructure/"]
 COPY ["Shared/Library/Shared/SharedLibrary.Infrastructure/SharedLibrary.Infrastructure.csproj", "Shared/Library/Shared/SharedLibrary.Infrastructure/"]
@@ -22,18 +22,18 @@ COPY ["BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Auth.Infrastructur
 COPY ["BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Infrastructure/SharedAuth.Infrastructure.csproj", "BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Infrastructure/"]
 COPY ["BoundedContexts/AuthBoundedContext/Auth.Domain/Auth.Domain.csproj", "BoundedContexts/AuthBoundedContext/Auth.Domain/"]
 COPY ["BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Domain/SharedAuth.Domain.csproj", "BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Domain/"]
-COPY ["Apps/BlazorApp/Client/BlazorApp.Client.csproj", "Apps/BlazorApp/Client/"]
+COPY ["Apps/SolidApp/Client/SolidApp.Client.csproj", "Apps/SolidApp/Client/"]
 COPY ["Shared/Presentation/Shared/SharedPresentation.Application/SharedPresentation.Application.csproj", "Shared/Presentation/Shared/SharedPresentation.Application/"]
 COPY ["Shared/Presentation/Shared/SharedPresentation.Domain/SharedPresentation.Domain.csproj", "Shared/Presentation/Shared/SharedPresentation.Domain/"]
-RUN dotnet restore "Apps/BlazorApp/Server/BlazorApp.Server.csproj"
+RUN dotnet restore "Apps/SolidApp/Server/SolidApp.Server.csproj"
 COPY . .
-WORKDIR "/src/Apps/BlazorApp/Server"
-RUN dotnet build "BlazorApp.Server.csproj" -c Release -o /app/build
+WORKDIR "/src/Apps/SolidApp/Server"
+RUN dotnet build "SolidApp.Server.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "BlazorApp.Server.csproj" -c Release -o /app/publish
+RUN dotnet publish "SolidApp.Server.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "BlazorApp.Server.dll"]
+ENTRYPOINT ["dotnet", "SolidApp.Server.dll"]

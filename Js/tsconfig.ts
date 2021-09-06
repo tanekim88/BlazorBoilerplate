@@ -33,9 +33,9 @@
         "./apps/auth/.eslintrc.ts",
         "./apps/auth/.prettierrc.ts",
         "./apps/auth/.stylelintrc.ts",
-        "./apps/blazor-app/.eslintrc.ts",
-        "./apps/blazor-app/.prettierrc.ts",
-        "./apps/blazor-app/.stylelintrc.ts",
+        "./apps/solid-app/.eslintrc.ts",
+        "./apps/solid-app/.prettierrc.ts",
+        "./apps/solid-app/.stylelintrc.ts",
     ],
     exclude: ['**/node_modules/*', 'node_modules/*', '**/compiled/*', '**/styles/*','**/absolute-root/*'],
 };

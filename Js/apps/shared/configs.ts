@@ -3,7 +3,7 @@ export const LOCAL_CONFIG = Symbol('LOCAL_CONFIG');
 import { ConfigBase } from './configs.base';
 
 import { rootConfig } from '#root/configs';
-import { blazorAppConfig } from '#blazor-app/configs';
+import { blazorAppConfig } from '#solid-app/configs';
 import { authConfig } from '#auth/configs';
 
 // import { identityServerConfig } from '@IdentityServer/configs';

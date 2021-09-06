@@ -17,7 +17,7 @@ function split(params, start) {
     list.push(last);
     return list;
 }
-module.exports = function (result, styles) {
+export default function (result, styles) {
     const statements = [];
     let nodes = [];
     styles.each(node => {
@@ -50,7 +50,7 @@ module.exports = function (result, styles) {
         });
     }
     return statements;
-};
+}
 function parseMedia(result, atRule) {
     const params = valueParser(atRule.params).nodes;
     return {

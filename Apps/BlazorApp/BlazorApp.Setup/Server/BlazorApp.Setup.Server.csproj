@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\BlazorApp.Setup.Client.csproj" />
-    <ProjectReference Include="..\Shared\BlazorApp.Setup.Shared.csproj" />
+    <ProjectReference Include="..\Client\SolidApp.Setup.Client.csproj" />
+    <ProjectReference Include="..\Shared\SolidApp.Setup.Shared.csproj" />
   </ItemGroup>
 
 

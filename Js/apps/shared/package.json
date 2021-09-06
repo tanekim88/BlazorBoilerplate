@@ -10,6 +10,7 @@
         "#auth/*": "./absolute-root/Js/apps/auth/*",
         "#blazor-app/*": "./absolute-root/Js/apps/blazor-app/*",
         "#shared/*": "./*",
+        "#solid-app/*": "./absolute-root/Js/apps/solid-app/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
@@ -158,6 +159,8 @@
         "@typescript-eslint/eslint-plugin-tslint": "^4.30.0",
         "@typescript-eslint/parser": "^4.30.0",
         "@typescript-eslint/typescript-estree": "^4.30.0",
+        "@vanilla-extract/css": "^1.4.0",
+        "@vanilla-extract/vite-plugin": "^2.0.1",
         "@zerollup/ts-transform-paths": "^1.7.18",
         "astroturf": "^0.10.5",
         "autoprefixer": "^10.3.3",

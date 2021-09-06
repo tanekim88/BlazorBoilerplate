@@ -1,4 +1,4 @@
-﻿using BlazorApp.Setup.Shared;
+﻿using SolidApp.Setup.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorApp.Setup.Server.Controllers
+namespace SolidApp.Setup.Server.Controllers
 {
     [ApiController]
     [Route("[controller]")]

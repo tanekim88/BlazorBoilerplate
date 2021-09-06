@@ -16,7 +16,7 @@
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/textfield/_index.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/textfield/_index.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \***********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/textfield/_index.scss\");\r\nconst textfield_1 = __webpack_require__(/*! @material/textfield */ \"../../node_modules/@material/textfield/index.js\");\r\n// const textField = new MDCTextField(document.querySelector('.mdc-text-field'));\r\nconst textFields = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {\r\n    return new textfield_1.MDCTextField(el);\r\n});\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/textfield/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/textfield/_index.scss\");\r\nconst textfield_1 = __webpack_require__(/*! @material/textfield */ \"../../node_modules/@material/textfield/index.js\");\r\n// const textField = new MDCTextField(document.querySelector('.mdc-text-field'));\r\nconst textFields = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {\r\n    return new textfield_1.MDCTextField(el);\r\n});\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/textfield/index.ts?");
 
 /***/ })
 

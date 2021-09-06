@@ -36,7 +36,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             }
 
             //app.UseHttpsRedirection();
-            app.UseBlazorFrameworkFiles();
+            app.UseSolidFrameworkFiles();
             app.UseStaticFiles();
 
             app.UseSerilogRequestLogging();

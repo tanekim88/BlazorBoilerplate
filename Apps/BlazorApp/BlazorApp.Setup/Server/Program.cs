@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlazorApp.Setup.Server
+namespace SolidApp.Setup.Server
 {
     public class Program
     {

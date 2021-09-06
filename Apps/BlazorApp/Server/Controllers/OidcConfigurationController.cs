@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 
 
-namespace BlazorApp.Server.Controllers
+namespace SolidApp.Server.Controllers
 {
     public class OidcConfigurationController : Controller
     {

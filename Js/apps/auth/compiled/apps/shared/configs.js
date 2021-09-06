@@ -7,7 +7,7 @@ exports.configs = exports.sharedConfig = exports.LOCAL_CONFIG = void 0;
 exports.LOCAL_CONFIG = Symbol('LOCAL_CONFIG');
 const configs_base_1 = require("./configs.base");
 const configs_1 = require("#root/configs");
-const configs_2 = require("#blazor-app/configs");
+const configs_2 = require("#solid-app/configs");
 const configs_3 = require("#auth/configs");
 // import { identityServerConfig } from '@IdentityServer/configs';
 const path_1 = __importDefault(require("path"));

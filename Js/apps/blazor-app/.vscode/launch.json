@@ -74,7 +74,7 @@
             }
         },
         {
-            "name": "Launch and Debug Hosted Blazor WebAssembly App",
+            "name": "Launch and Debug Hosted blazor WebAssembly App",
             "type": "blazorwasm",
             "request": "launch",
             "hosted": true,

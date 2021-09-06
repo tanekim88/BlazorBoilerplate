@@ -20,7 +20,7 @@ function split(params, start) {
   return list
 }
 
-module.exports = function(result, styles) {
+export default  function(result, styles) {
   const statements = []
   let nodes = []
 

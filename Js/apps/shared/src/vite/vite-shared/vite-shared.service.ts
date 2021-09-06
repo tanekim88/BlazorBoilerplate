@@ -4,7 +4,7 @@ import { ViteBaseService } from '../vite-base/vite-base.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
 import { RootPaths } from '#root/paths';
-
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 @CustomInjectable()
 export class ViteSharedService extends ViteBaseService {
 
@@ -14,7 +14,7 @@ export class ViteSharedService extends ViteBaseService {
             super.createConfiguration(), {
                 root: RootPaths.toAbsolutePath(),
                 plugins: [
-
+                    vanillaExtractPlugin()
                 ],
                 resolve: {
 

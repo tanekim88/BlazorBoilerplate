@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<UserSecretsId>BlazorApp.Server-CD6B6DE7-AB85-40F7-AE1B-9A06CF261863</UserSecretsId>
+		<UserSecretsId>SolidApp.Server-CD6B6DE7-AB85-40F7-AE1B-9A06CF261863</UserSecretsId>
 		<LangVersion>preview</LangVersion>
 		<nullable>enable</nullable>
 		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
@@ -20,8 +20,8 @@
 		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Core.Infrastructure\Core.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
-		<ProjectReference Include="..\Client\BlazorApp.Client.csproj" />
-		<ProjectReference Include="..\Shared\BlazorApp.Shared.csproj" />
+		<ProjectReference Include="..\Client\SolidApp.Client.csproj" />
+		<ProjectReference Include="..\Shared\SolidApp.Shared.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

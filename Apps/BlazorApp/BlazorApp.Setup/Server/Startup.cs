@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 
-namespace BlazorApp.Setup.Server
+namespace SolidApp.Setup.Server
 {
     public class Startup
     {
@@ -43,7 +43,7 @@ namespace BlazorApp.Setup.Server
             }
 
             app.UseHttpsRedirection();
-            app.UseBlazorFrameworkFiles();
+            app.UseSolidFrameworkFiles();
             app.UseStaticFiles();
 
             app.UseRouting();

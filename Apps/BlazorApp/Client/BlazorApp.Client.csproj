@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.SolidWebAssembly">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -42,7 +42,7 @@
 
 		<PackageReference Include="Humanizer" Version="2.11.10" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
-		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.7" />
+		<PackageReference Include="Material.Solid" Version="2.0.0-preview.7" />
 
 		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.0-preview.7.21378.6" />
 
@@ -69,7 +69,7 @@
 
 		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Infrastructure\SharedCore.Infrastructure.csproj" />
 
-		<ProjectReference Include="..\Shared\BlazorApp.Shared.csproj" />
+		<ProjectReference Include="..\Shared\SolidApp.Shared.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

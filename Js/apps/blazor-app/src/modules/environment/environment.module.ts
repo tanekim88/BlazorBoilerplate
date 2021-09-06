@@ -1,4 +1,4 @@
-import { blazorAppConfig } from '#blazor-app/configs';
+import { BlazorAppConfig } from '#blazor-app/configs';
 import { LOCAL_CONFIG } from '#shared/configs';
 import { CustomModule } from '#shared/src/functions/process-providers';
 
@@ -8,7 +8,7 @@ import { BlazorAppEnvironmentService } from './environment/environment.service';
     providers: [
         {
             provide: LOCAL_CONFIG,
-            useValue: blazorAppConfig,
+            useValue: BlazorAppConfig,
         },
         BlazorAppEnvironmentService,
     ],

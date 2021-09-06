@@ -1,6 +1,6 @@
 {
   "packages": [
-    "BlazorApp",
+    "SolidApp",
     "Auth",
     "Shared"
   ],

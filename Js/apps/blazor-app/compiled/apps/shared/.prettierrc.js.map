@@ -1,0 +1,1 @@
+{"version":3,"file":".prettierrc.js","sourceRoot":"","sources":["../../../../shared/.prettierrc.ts"],"names":[],"mappings":"AAEA,MAAM,QAAQ,GAAG;IACb,IAAI,EAAE,IAAI;IACV,aAAa,EAAE,KAAK;IACpB,WAAW,EAAE,IAAI;IACjB,UAAU,EAAE,GAAG;IACf,QAAQ,EAAE,CAAC;IACX,SAAS,EAAE,MAAM;CACT,CAAC;AAEb,eAAe,QAAQ,CAAC"}

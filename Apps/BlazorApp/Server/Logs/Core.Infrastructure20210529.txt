@@ -4,19 +4,19 @@
 
 {"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:43.887 -04:00 [INF] HTTP GET / responded 200 in 366.4881 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000001","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:45.005 -04:00 [INF] HTTP GET /_content/Material.Blazor/bundled.min.js responded 404 in 329.3867 ms
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000001","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:45.005 -04:00 [INF] HTTP GET /_content/Material.Solid/bundled.min.js responded 404 in 329.3867 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000021","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:45.005 -04:00 [INF] HTTP GET /_content/Material.Blazor/bundled.min.css responded 404 in 933.1958 ms
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000021","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:45.005 -04:00 [INF] HTTP GET /_content/Material.Solid/bundled.min.css responded 404 in 933.1958 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000003","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:55.205 -04:00 [INF] HTTP GET /_content/Material.Blazor/bundled.min.css responded 404 in 28.1656 ms
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:00000003","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:42:55.205 -04:00 [INF] HTTP GET /_content/Material.Solid/bundled.min.css responded 404 in 28.1656 ms
 
 {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":10,"ThreadId":10,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931GRT63PH:0000030B","ConnectionId":"0HM931GRT63PH","ProcessId":46696,"Version":"1.0.0"}2021-05-29 21:45:06.459 -04:00 [INF] Starting web host
 
 {"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:45:47.586 -04:00 [INF] HTTP GET / responded 304 in 222.1657 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931IIND1TC:00000001","ConnectionId":"0HM931IIND1TC","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:45:48.056 -04:00 [INF] HTTP GET /_content/Material.Blazor/bundled.min.js responded 404 in 43.6758 ms
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":6,"ThreadId":6,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931IIND1TC:00000001","ConnectionId":"0HM931IIND1TC","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:45:48.056 -04:00 [INF] HTTP GET /_content/Material.Solid/bundled.min.js responded 404 in 43.6758 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931IIND1TC:0000001F","ConnectionId":"0HM931IIND1TC","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:45:48.056 -04:00 [INF] HTTP GET /_content/Material.Blazor/bundled.min.css responded 404 in 291.1518 ms
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931IIND1TC:0000001F","ConnectionId":"0HM931IIND1TC","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:45:48.056 -04:00 [INF] HTTP GET /_content/Material.Solid/bundled.min.css responded 404 in 291.1518 ms
 
 {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM931IIND1TC:00000003","ConnectionId":"0HM931IIND1TC","ProcessId":47744,"Version":"1.0.0"}2021-05-29 21:50:11.295 -04:00 [INF] Starting web host
 

@@ -252,7 +252,7 @@ function cleanEmptyFoldersRecursively(folder) {
 // experimentalCacheExpiry:undefined
 // external:(0) []
 // inlineDynamicImports:undefined
-// input:(1) ['C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html']
+// input:(1) ['C:\\App\\Js\\apps\\solid-app\\src\\templates\\index.html']
 // makeAbsoluteExternalsRelative:undefined
 // manualChunks:undefined
 // maxParallelFileReads:undefined

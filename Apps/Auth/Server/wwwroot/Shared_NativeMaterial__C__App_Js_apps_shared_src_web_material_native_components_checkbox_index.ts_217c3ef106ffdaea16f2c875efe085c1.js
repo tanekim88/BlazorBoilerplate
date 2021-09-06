@@ -16,7 +16,7 @@
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/checkbox/_index.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/checkbox/_index.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/checkbox/_index.scss\");\r\nconst form_field_1 = __webpack_require__(/*! @material/form-field */ \"../../node_modules/@material/form-field/index.js\");\r\nconst checkbox_1 = __webpack_require__(/*! @material/checkbox */ \"../../node_modules/@material/checkbox/index.js\");\r\nconst checkboxes = document.querySelectorAll('.mdc-checkbox');\r\n[].forEach.call(checkboxes, function (checkbox) {\r\n    const cbInstance = checkbox_1.MDCCheckbox.attachTo(checkbox);\r\n    if (checkbox.parentElement.classList.contains('mdc-form-field')) {\r\n        const ffInstance = form_field_1.MDCFormField.attachTo(checkbox.parentElement);\r\n        ffInstance.input = cbInstance;\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/checkbox/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/checkbox/_index.scss\");\r\nconst form_field_1 = __webpack_require__(/*! @material/form-field */ \"../../node_modules/@material/form-field/index.js\");\r\nconst checkbox_1 = __webpack_require__(/*! @material/checkbox */ \"../../node_modules/@material/checkbox/index.js\");\r\nconst checkboxes = document.querySelectorAll('.mdc-checkbox');\r\n[].forEach.call(checkboxes, function (checkbox) {\r\n    const cbInstance = checkbox_1.MDCCheckbox.attachTo(checkbox);\r\n    if (checkbox.parentElement.classList.contains('mdc-form-field')) {\r\n        const ffInstance = form_field_1.MDCFormField.attachTo(checkbox.parentElement);\r\n        ffInstance.input = cbInstance;\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/checkbox/index.ts?");
 
 /***/ })
 

@@ -7,7 +7,7 @@ function resolveModule(id, opts) {
         resolve(id, opts, (err, path) => (err ? rej(err) : res(path)));
     });
 }
-module.exports = function (id, base, options) {
+export default function (id, base, options) {
     const paths = options.path;
     const resolveOpts = {
         basedir: base,
@@ -51,5 +51,6 @@ module.exports = function (id, base, options) {
     ${paths.join(',\n        ')}
   ]`);
     }));
-};
+}
+;
 //# sourceMappingURL=resolve-id.js.map

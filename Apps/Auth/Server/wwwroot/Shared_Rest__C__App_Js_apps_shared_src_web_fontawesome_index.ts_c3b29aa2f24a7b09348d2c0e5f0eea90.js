@@ -16,7 +16,7 @@
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/fontawesome/_index.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/fontawesome/_index.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/fontawesome/_index.scss\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ \"../../node_modules/@fortawesome/fontawesome-free/js/brands.js\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ \"../../node_modules/@fortawesome/fontawesome-free/js/solid.js\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ \"../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js\");\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/fontawesome/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/fontawesome/_index.scss\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ \"../../node_modules/@fortawesome/fontawesome-free/js/brands.js\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ \"../../node_modules/@fortawesome/fontawesome-free/js/solid.js\");\r\n__webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ \"../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js\");\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/fontawesome/index.ts?");
 
 /***/ })
 

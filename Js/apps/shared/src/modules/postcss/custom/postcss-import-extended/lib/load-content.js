@@ -2,4 +2,4 @@
 
 const readCache = require("read-cache")
 
-module.exports = filename => readCache(filename, "utf-8")
+export default  filename => readCache(filename, "utf-8")

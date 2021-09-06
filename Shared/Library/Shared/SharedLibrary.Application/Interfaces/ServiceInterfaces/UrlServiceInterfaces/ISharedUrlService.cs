@@ -10,7 +10,7 @@ namespace SharedLibrary.Application.Interfaces.ServiceInterfaces.UrlServiceInter
     {
         IConfigurationRoot Configuration { get; }
 
-        string GetUrlForBlazorApp();
+        string GetUrlForSolidApp();
         string GetUrlForIdentityServer();
         string GetUrlFromProjectName(string projectName);
     }

@@ -18,5 +18,5 @@ spec:
   - name: failover
     value: "true"
   scopes:
-  - BlazorApp.Server
+  - SolidApp.Server
   - Auth.Server

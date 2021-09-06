@@ -15,7 +15,7 @@ namespace SharedCore.Application.Dtos.SettingsDtos
             {
                 Url = "https://localhost:5001"
             },
-            [key: "BlazorApp"] = new()
+            [key: "SolidApp"] = new()
             {
                 Url = "https://localhost:4001"
             }

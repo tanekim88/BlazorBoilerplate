@@ -8,10 +8,10 @@
     "imports": {
         "#root/*": "./absolute-root/Js/*",
         "#shared/*": "./absolute-root/Js/shared/*",
-        "#blazor-app/*": "./absolute-root/Js/blazor-app/*",
+        "#solid-app/*": "./absolute-root/Js/solid-app/*",
         "#auth/*": "./absolute-root/Js/auth/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
-        "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
+        "#SolidApp/*": "./absolute-root/Apps/SolidApp/*"
     },
     "scripts": {
         "setup": "node  --loader ts-node/esm ./scripts/generate-scripts.ts",

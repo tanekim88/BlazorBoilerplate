@@ -1,4 +1,4 @@
-import { BlazorAppPaths } from '#blazor-app/paths';
+import { blazorAppPaths } from '#blazor-app/paths';
 import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { VitePluginGlobInputService } from '#shared/src/vite/vite-plugins/vite-plugin-glob-input/vite-plugin-glob-input.service';
@@ -20,14 +20,14 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
         return [
             this.vitePluginHtmlService.createPlugin({
                 externals: [
-                    { html: '<link href="_content/Material.Blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="_content/Material.Blazor/MaterialBlazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.blazor/Materialblazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
                     { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
-                    { html: '<script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>', insertAt: '</body>' },
+                    { html: '<script src="_content/Material.blazor/Materialblazor.min.js"></script>', insertAt: '</body>' },
                     {
                         html: `
                         <script>
-                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            Materialblazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
                         </script>
                         `, insertAt: '</body>'
                     },

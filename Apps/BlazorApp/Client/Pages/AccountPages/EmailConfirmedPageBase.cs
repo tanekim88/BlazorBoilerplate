@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 
 
 
-namespace BlazorApp.Client.Pages.AccountPages
+namespace SolidApp.Client.Pages.AccountPages
 {
     public class EmailConfirmedPageBase : ComponentBase
     {

@@ -56,9 +56,9 @@ namespace SharedLibrary.Infrastructure.Services.UrlSharedServices
             return GetUrlFromProjectName(projectName: "IdentityServer");
         }
 
-        public string GetUrlForBlazorApp()
+        public string GetUrlForSolidApp()
         {
-            return GetUrlFromProjectName(projectName: "BlazorApp");
+            return GetUrlFromProjectName(projectName: "SolidApp");
         }
 
         //%s:end Body
