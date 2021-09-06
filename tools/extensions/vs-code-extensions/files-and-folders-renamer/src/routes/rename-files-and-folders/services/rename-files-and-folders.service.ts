@@ -60,20 +60,16 @@ class RenameFilesAndFoldersService {
 
       if (options.includeFiles && !previewItem.isDirectory || options.includeFolders && previewItem.isDirectory) {
         try {
-          let deleted = false;
-          if (previewItem.hasBlankName && options.deleteIfResultingNameIsBlank) {
-            fs.unlinkSync(previewItem.pathFrom);
-            deleted = true;
-          }
 
-          if (previewItem.hasBlankPrefixName) {
-            if (options.deleteIfResultingNameHasBlankPrefix) {
+          if (
+            previewItem.hasBlankName && options.deleteIfResultingNameIsBlank ||
+            previewItem.hasBlankPrefixName && options.deleteIfResultingNameHasBlankPrefix) {
+            if (previewItem.isDirectory) {
+              fs.rmdirSync(previewItem.pathFrom, { recursive: true });
+            } else {
               fs.unlinkSync(previewItem.pathFrom);
-              deleted = true;
             }
-          }
-
-          if (!deleted) {
+          } else {
             fs.renameSync(previewItem.pathFrom, previewItem.pathTo!);
           }
 
