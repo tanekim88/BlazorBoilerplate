@@ -101,14 +101,18 @@ class RenameFilesAndFoldersService {
           to = path.join(parentDirname!, path.sep, toBasename);
         }
 
-        toPushForPreview = {
-          pathFrom: fromForFinalItem,
-          pathFromForPreview: srcPath,
-          pathTo: to,
-          isForPreview: true,
-          hasBlankName: toBasename === '',
-          isDirectory: isDirectory
-        };
+        const hasBlankName = /^\s*/.test(toBasename);
+
+        if (!(options.deleteIfResultingNameIsBlank && hasBlankName)) {
+          toPushForPreview = {
+            pathFrom: fromForFinalItem,
+            pathFromForPreview: srcPath,
+            pathTo: to,
+            isForPreview: true,
+            hasBlankName,
+            isDirectory: isDirectory
+          };
+        }
       }
     }
 
@@ -200,15 +204,11 @@ class RenameFilesAndFoldersService {
       previewItems.push(toPushForPreview);
     }
 
-    if (isDirectory) {
-      if (!toPushForPreview?.hasBlankName) {
-        const filesOrDirNames = fs.readdirSync(srcPath);
-
-        filesOrDirNames.forEach((fileOrDirName) => {
+    if (isDirectory && !toPushForPreview?.hasBlankName) {
+        fs.readdirSync(srcPath).forEach((fileOrDirName) => {
           const fullPath = path.join(srcPath, fileOrDirName);
           this.getAllFilesAndFolderspreviewItems(fullPath, fromInput, toInput, options, previewItems, toPushForPreview);
         });
-      }
     }
 
     return previewItems;
