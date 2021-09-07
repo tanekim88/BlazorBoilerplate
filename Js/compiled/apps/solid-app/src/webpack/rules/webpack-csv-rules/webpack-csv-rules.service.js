@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackCsvRulesService } from '#shared/src/webpack/rules/webpack-csv-rules/webpack-csv-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackCsvRulesService = class SolidAppWebpackCsvRulesService extends WebpackCsvRulesService {
+let BlazorAppWebpackCsvRulesService = class BlazorAppWebpackCsvRulesService extends WebpackCsvRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackCsvRulesService = __decorate([
+BlazorAppWebpackCsvRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackCsvRulesService);
-export { SolidAppWebpackCsvRulesService };
+], BlazorAppWebpackCsvRulesService);
+export { BlazorAppWebpackCsvRulesService };
 //# sourceMappingURL=webpack-csv-rules.service.js.map

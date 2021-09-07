@@ -1,5 +1,5 @@
-export const materialColorsNested =  {
-    "transparent":"transparent",
+export const materialColorsNested = {
+    "transparent": "transparent",
     "black": "#000000",
     "white": "#ffffff",
     "red": {
@@ -18,7 +18,7 @@ export const materialColorsNested =  {
         "a200": "#ff5252",
         "a400": "#ff1744",
         "a700": "#d50000",
-   },
+    },
     "pink": {
         "default": "#e91e63",
         "50": "#fce4ec",
@@ -35,7 +35,7 @@ export const materialColorsNested =  {
         "a200": "#ff4081",
         "a400": "#f50057",
         "a700": "#c51162",
-   },
+    },
     "purple": {
         "default": "#9c27b0",
         "50": "#f3e5f5",
@@ -52,7 +52,7 @@ export const materialColorsNested =  {
         "a200": "#e040fb",
         "a400": "#d500f9",
         "a700": "#aa00ff",
-   },
+    },
     "deep-purple": {
         "default": "#673ab7",
         "50": "#ede7f6",
@@ -69,7 +69,7 @@ export const materialColorsNested =  {
         "a200": "#7c4dff",
         "a400": "#651fff",
         "a700": "#6200ea",
-   },
+    },
     "indigo": {
         "default": "#3f51b5",
         "50": "#e8eaf6",
@@ -86,7 +86,7 @@ export const materialColorsNested =  {
         "a200": "#536dfe",
         "a400": "#3d5afe",
         "a700": "#304ffe",
-   },
+    },
     "blue": {
         "default": "#2196f3",
         "50": "#e3f2fd",
@@ -103,7 +103,7 @@ export const materialColorsNested =  {
         "a200": "#448aff",
         "a400": "#2979ff",
         "a700": "#2962ff",
-   },
+    },
     "light-blue": {
         "default": "#03a9f4",
         "50": "#e1f5fe",
@@ -120,7 +120,7 @@ export const materialColorsNested =  {
         "a200": "#40c4ff",
         "a400": "#00b0ff",
         "a700": "#0091ea",
-   },
+    },
     "cyan": {
         "default": "#00bcd4",
         "50": "#e0f7fa",
@@ -137,7 +137,7 @@ export const materialColorsNested =  {
         "a200": "#18ffff",
         "a400": "#00e5ff",
         "a700": "#00b8d4",
-   },
+    },
     "teal": {
         "default": "#009688",
         "50": "#e0f2f1",
@@ -154,7 +154,7 @@ export const materialColorsNested =  {
         "a200": "#64ffda",
         "a400": "#1de9b6",
         "a700": "#00bfa5",
-   },
+    },
     "green": {
         "default": "#4caf50",
         "50": "#e8f5e9",
@@ -171,7 +171,7 @@ export const materialColorsNested =  {
         "a200": "#69f0ae",
         "a400": "#00e676",
         "a700": "#00c853",
-   },
+    },
     "light-green": {
         "default": "#8bc34a",
         "50": "#f1f8e9",
@@ -188,7 +188,7 @@ export const materialColorsNested =  {
         "a200": "#b2ff59",
         "a400": "#76ff03",
         "a700": "#64dd17",
-   },
+    },
     "lime": {
         "default": "#cddc39",
         "50": "#f9fbe7",
@@ -205,7 +205,7 @@ export const materialColorsNested =  {
         "a200": "#eeff41",
         "a400": "#c6ff00",
         "a700": "#aeea00",
-   },
+    },
     "yellow": {
         "default": "#ffeb3b",
         "50": "#fffde7",
@@ -222,7 +222,7 @@ export const materialColorsNested =  {
         "a200": "#ffff00",
         "a400": "#ffea00",
         "a700": "#ffd600",
-   },
+    },
     "amber": {
         "default": "#ffc107",
         "50": "#fff8e1",
@@ -239,7 +239,7 @@ export const materialColorsNested =  {
         "a200": "#ffd740",
         "a400": "#ffc400",
         "a700": "#ffab00",
-   },
+    },
     "orange": {
         "default": "#ff9800",
         "50": "#fff3e0",
@@ -256,7 +256,7 @@ export const materialColorsNested =  {
         "a200": "#ffab40",
         "a400": "#ff9100",
         "a700": "#ff6d00",
-   },
+    },
     "deep-orange": {
         "default": "#ff5722",
         "50": "#fbe9e7",
@@ -273,7 +273,7 @@ export const materialColorsNested =  {
         "a200": "#ff6e40",
         "a400": "#ff3d00",
         "a700": "#dd2c00",
-   },
+    },
     "brown": {
         "default": "#795548",
         "50": "#efebe9",
@@ -286,7 +286,7 @@ export const materialColorsNested =  {
         "700": "#5d4037",
         "800": "#4e342e",
         "900": "#3e2723",
-   },
+    },
     "grey": {
         "default": "#9e9e9e",
         "50": "#fafafa",
@@ -299,7 +299,7 @@ export const materialColorsNested =  {
         "700": "#616161",
         "800": "#424242",
         "900": "#212121",
-   },
+    },
     "blue-grey": {
         "default": "#607d8b",
         "50": "#eceff1",
@@ -312,5 +312,5 @@ export const materialColorsNested =  {
         "700": "#455a64",
         "800": "#37474f",
         "900": "#263238",
-   },
+    },
 };

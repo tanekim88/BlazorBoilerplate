@@ -6,7 +6,7 @@ using Serilog;
 using System;
 using System.Threading.Tasks;
 
-namespace SolidApp.Server
+namespace BlazorApp.Server
 {
     public class Program
     {

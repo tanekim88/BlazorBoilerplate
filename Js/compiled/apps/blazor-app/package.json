@@ -1,7 +1,7 @@
 {
     "name": "solid-app",
     "version": "1.0.0",
-    "description": "Solid app description",
+    "description": "BlazorWeb app description",
     "main": "index.js",
     "private": true,
     "type": "module",
@@ -11,7 +11,7 @@
         "#solid-app/*": "./absolute-root/Js/solid-app/*",
         "#auth/*": "./absolute-root/Js/auth/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
-        "#SolidApp/*": "./absolute-root/Apps/SolidApp/*"
+        "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
     "scripts": {
         "setup": "node  --loader ts-node/esm ./scripts/generate-scripts.ts",

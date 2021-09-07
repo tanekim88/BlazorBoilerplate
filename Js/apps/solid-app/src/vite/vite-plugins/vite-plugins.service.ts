@@ -1,12 +1,12 @@
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()
-export class SolidAppVitePluginsService extends VitePluginsService {
-    @CustomInject(SolidAppEnvironmentService)
-    blazorAppEnvironmentService: SolidAppEnvironmentService
+export class BlazorAppVitePluginsService extends VitePluginsService {
+    @CustomInject(BlazorAppEnvironmentService)
+    blazorAppEnvironmentService: BlazorAppEnvironmentService
 
     // @CustomInject(VitePluginGlobInputService)
     // protected vitePluginGlobInputService: VitePluginGlobInputService;
@@ -18,14 +18,14 @@ export class SolidAppVitePluginsService extends VitePluginsService {
         return [
             this.vitePluginHtmlService.createPlugin({
                 externals: [
-                    { html: '<link href="_content/Material.Solid/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="_content/Material.Solid/MaterialSolid.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="SolidApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
-                    { html: '<script src="_content/Material.Solid/MaterialSolid.min.js"></script>', insertAt: '</body>' },
+                    { html: '<link href="_content/Material.Blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.Blazor/MaterialBlazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
+                    { html: '<script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>', insertAt: '</body>' },
                     {
                         html: `
                         <script>
-                            MaterialSolid.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
                         </script>
                         `, insertAt: '</body>'
                     },

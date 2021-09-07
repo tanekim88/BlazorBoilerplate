@@ -10,34 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { WebpackProdService } from '#shared/src/webpack/webpack-prod/webpack-prod.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { CustomInject } from '#shared/src/functions/process-providers';
-import { SolidAppWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
-import { SolidAppWebpackSharedService } from '../webpack-shared/webpack-shared.service';
-let SolidAppWebpackProdBaseService = class SolidAppWebpackProdBaseService extends WebpackProdService {
+import { BlazorAppWebpackSharedConfigService } from '../webpack-shared-config/webpack-shared-config.service';
+import { BlazorAppWebpackSharedService } from '../webpack-shared/webpack-shared.service';
+let BlazorAppWebpackProdBaseService = class BlazorAppWebpackProdBaseService extends WebpackProdService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {}, options);
     }
 };
-SolidAppWebpackProdBaseService = __decorate([
+BlazorAppWebpackProdBaseService = __decorate([
     CustomInjectable()
-], SolidAppWebpackProdBaseService);
-export class SolidAppWebpackProdConfigService extends SolidAppWebpackProdBaseService {
+], BlazorAppWebpackProdBaseService);
+export class BlazorAppWebpackProdConfigService extends BlazorAppWebpackProdBaseService {
     blazorAppClientWebpackSharedConfigService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedConfigService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    CustomInject(SolidAppWebpackSharedConfigService),
-    __metadata("design:type", SolidAppWebpackSharedConfigService)
-], SolidAppWebpackProdConfigService.prototype, "blazorAppClientWebpackSharedConfigService", void 0);
-export class SolidAppWebpackProdService extends SolidAppWebpackProdBaseService {
+    CustomInject(BlazorAppWebpackSharedConfigService),
+    __metadata("design:type", BlazorAppWebpackSharedConfigService)
+], BlazorAppWebpackProdConfigService.prototype, "blazorAppClientWebpackSharedConfigService", void 0);
+export class BlazorAppWebpackProdService extends BlazorAppWebpackProdBaseService {
     blazorAppClientWebpackSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(this.blazorAppClientWebpackSharedService.createConfiguration(), super.createConfiguration(), {}, options);
     }
 }
 __decorate([
-    CustomInject(SolidAppWebpackSharedService),
-    __metadata("design:type", SolidAppWebpackSharedService)
-], SolidAppWebpackProdService.prototype, "blazorAppClientWebpackSharedService", void 0);
+    CustomInject(BlazorAppWebpackSharedService),
+    __metadata("design:type", BlazorAppWebpackSharedService)
+], BlazorAppWebpackProdService.prototype, "blazorAppClientWebpackSharedService", void 0);
 //# sourceMappingURL=webpack-prod.service.js.map

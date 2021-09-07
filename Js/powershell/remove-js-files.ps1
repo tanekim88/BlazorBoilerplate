@@ -10,7 +10,7 @@
 # }
 
 
-$files = "../auth/*.js", "../SolidApp/Client/*.js" , "../*.js", "../Shared/*.js" 
+$files = "../auth/*.js", "../BlazorApp/Client/*.js" , "../*.js", "../Shared/*.js" 
 
 foreach ($file in $files) {
     Get-ChildItem  -Filter *.js -Include *.js -Exclude **/node_modules/**/* -File $file   | Foreach-Object {       

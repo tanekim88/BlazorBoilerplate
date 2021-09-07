@@ -43,8 +43,8 @@
             "#Auth/*": [
                 "../Apps/Auth/Server/*"
             ],
-            "#SolidApp/*": [
-                "../Apps/SolidApp/Client/*"
+            "#BlazorApp/*": [
+                "../Apps/BlazorApp/Client/*"
             ],
             "#root/*": [
                 "*"

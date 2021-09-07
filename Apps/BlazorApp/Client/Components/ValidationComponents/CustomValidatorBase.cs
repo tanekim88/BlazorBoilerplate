@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Components.Forms;
 
 
 
-namespace SolidApp.Client.Components.ValidationComponents
+namespace BlazorApp.Client.Components.ValidationComponents
 {
     public class CustomValidatorBase : ComponentBase
     {

@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackCopyWebpackPluginService } from './webpack-copy-webpack-plugin.service';
-describe('SolidAppWebpackCopyWebpackPluginService', () => {
+import { BlazorAppWebpackCopyWebpackPluginService } from './webpack-copy-webpack-plugin.service';
+describe('BlazorAppWebpackCopyWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackCopyWebpackPluginService],
+            providers: [BlazorAppWebpackCopyWebpackPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackCopyWebpackPluginService);
+        service = module.get(BlazorAppWebpackCopyWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackSvgRulesService } from './webpack-svg-rules.service';
-describe('SolidAppWebpackSvgRulesService', () => {
+import { BlazorAppWebpackSvgRulesService } from './webpack-svg-rules.service';
+describe('BlazorAppWebpackSvgRulesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackSvgRulesService],
+            providers: [BlazorAppWebpackSvgRulesService],
         }).compile();
-        service = module.get(SolidAppWebpackSvgRulesService);
+        service = module.get(BlazorAppWebpackSvgRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

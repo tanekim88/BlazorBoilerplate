@@ -5,16 +5,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from "#shared/src/functions/process-providers";
-import { SolidAppVitePluginsService } from "./vite-plugins.service";
-let SolidAppVitePluginsModule = class SolidAppVitePluginsModule {
+import { BlazorAppVitePluginsService } from "./vite-plugins.service";
+let BlazorAppVitePluginsModule = class BlazorAppVitePluginsModule {
 };
-SolidAppVitePluginsModule = __decorate([
+BlazorAppVitePluginsModule = __decorate([
     CustomModule({
         imports: [],
         providers: [
-            SolidAppVitePluginsService
+            BlazorAppVitePluginsService
         ],
     })
-], SolidAppVitePluginsModule);
-export { SolidAppVitePluginsModule };
+], BlazorAppVitePluginsModule);
+export { BlazorAppVitePluginsModule };
 //# sourceMappingURL=vite-plugins.module.js.map

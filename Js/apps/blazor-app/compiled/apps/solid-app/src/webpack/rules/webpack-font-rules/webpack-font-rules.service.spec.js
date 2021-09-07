@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackFontRulesService } from './webpack-font-rules.service';
-describe('SolidAppWebpackFontRulesService', () => {
+import { BlazorAppWebpackFontRulesService } from './webpack-font-rules.service';
+describe('BlazorAppWebpackFontRulesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackFontRulesService],
+            providers: [BlazorAppWebpackFontRulesService],
         }).compile();
-        service = module.get(SolidAppWebpackFontRulesService);
+        service = module.get(BlazorAppWebpackFontRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

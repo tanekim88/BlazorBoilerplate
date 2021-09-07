@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 
 
 
-namespace SolidApp.Client.Components.ChatGroupComponents
+namespace BlazorApp.Client.Components.ChatGroupComponents
 {
     public partial class ChatRoom
     {

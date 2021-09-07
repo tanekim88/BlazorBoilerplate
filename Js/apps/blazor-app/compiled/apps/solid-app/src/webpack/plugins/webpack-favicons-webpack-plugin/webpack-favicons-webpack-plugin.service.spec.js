@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackFaviconsWebpackPluginService } from './webpack-favicons-webpack-plugin.service';
-describe('SolidAppWebpackFaviconsWebpackPluginService', () => {
+import { BlazorAppWebpackFaviconsWebpackPluginService } from './webpack-favicons-webpack-plugin.service';
+describe('BlazorAppWebpackFaviconsWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackFaviconsWebpackPluginService],
+            providers: [BlazorAppWebpackFaviconsWebpackPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackFaviconsWebpackPluginService);
+        service = module.get(BlazorAppWebpackFaviconsWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

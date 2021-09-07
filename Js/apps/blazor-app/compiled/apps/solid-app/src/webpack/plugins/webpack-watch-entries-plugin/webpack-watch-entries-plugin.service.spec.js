@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackWatchEntriesPluginConfigService } from './webpack-watch-entries-plugin.service';
-describe('SolidAppWebpackWatchEntriesPluginConfigService', () => {
+import { BlazorAppWebpackWatchEntriesPluginConfigService } from './webpack-watch-entries-plugin.service';
+describe('BlazorAppWebpackWatchEntriesPluginConfigService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackWatchEntriesPluginConfigService],
+            providers: [BlazorAppWebpackWatchEntriesPluginConfigService],
         }).compile();
-        service = module.get(SolidAppWebpackWatchEntriesPluginConfigService);
+        service = module.get(BlazorAppWebpackWatchEntriesPluginConfigService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

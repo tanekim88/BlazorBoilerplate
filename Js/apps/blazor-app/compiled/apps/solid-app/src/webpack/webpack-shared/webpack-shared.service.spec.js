@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackSharedService } from './webpack-shared.service';
-describe('SolidAppWebpackSharedService', () => {
+import { BlazorAppWebpackSharedService } from './webpack-shared.service';
+describe('BlazorAppWebpackSharedService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackSharedService],
+            providers: [BlazorAppWebpackSharedService],
         }).compile();
-        service = module.get(SolidAppWebpackSharedService);
+        service = module.get(BlazorAppWebpackSharedService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

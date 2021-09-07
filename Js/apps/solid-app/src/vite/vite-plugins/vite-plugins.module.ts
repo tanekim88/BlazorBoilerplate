@@ -1,11 +1,11 @@
 import { CustomModule } from "#shared/src/functions/process-providers";
-import { SolidAppVitePluginsService } from "./vite-plugins.service";
+import { BlazorAppVitePluginsService } from "./vite-plugins.service";
 
 
 @CustomModule({
     imports: [],
     providers: [
-        SolidAppVitePluginsService
+        BlazorAppVitePluginsService
     ],
 })
-export class SolidAppVitePluginsModule {}
+export class BlazorAppVitePluginsModule {}

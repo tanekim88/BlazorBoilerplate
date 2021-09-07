@@ -8,7 +8,6 @@ using SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions;
 using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
 
 
-
 namespace SetupLibrary.Infrastructure
 {
     public class Startup
@@ -27,7 +26,6 @@ namespace SetupLibrary.Infrastructure
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCustomSetupServices(Configuration, Environment);
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

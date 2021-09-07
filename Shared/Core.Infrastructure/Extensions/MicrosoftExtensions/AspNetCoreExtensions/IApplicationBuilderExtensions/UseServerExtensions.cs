@@ -38,7 +38,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
 
             //app.UseHttpsRedirection();
 
-            app.UseSolidFrameworkFiles();
+            app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
 
             app.UseSerilogRequestLogging();

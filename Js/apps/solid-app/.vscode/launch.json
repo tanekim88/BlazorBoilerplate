@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "SolidApp: Run Webpack Dev",
+            "name": "BlazorApp: Run Webpack Dev",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "node",
@@ -27,7 +27,7 @@
             }
         },
         {
-            "name": "SolidApp: Run Webpack Prod",
+            "name": "BlazorApp: Run Webpack Prod",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "node",
@@ -49,14 +49,14 @@
             }
         },
         {
-            "name": ".NET Core Launch (SolidApp)",
+            "name": ".NET Core Launch (BlazorApp)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/../../../Apps/SolidApp/Server/bin/Debug/net6.0/SolidApp.Server.dll",
+            "program": "${workspaceFolder}/../../../Apps/BlazorApp/Server/bin/Debug/net6.0/BlazorApp.Server.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/../../../Apps/SolidApp/Server",
+            "cwd": "${workspaceFolder}/../../../Apps/BlazorApp/Server",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
@@ -74,12 +74,12 @@
             }
         },
         {
-            "name": "Launch and Debug Hosted Solid WebAssembly App",
+            "name": "Launch and Debug Hosted BlazorWeb WebAssembly App",
             "type": "blazorwasm",
             "request": "launch",
             "hosted": true,
-            "program": "${workspaceFolder}/../../../Apps/SolidApp/Server/bin/Debug/net6.0/SolidApp.Server.dll",
-            "cwd": "${workspaceFolder}/../../../Apps/SolidApp/Server",
+            "program": "${workspaceFolder}/../../../Apps/BlazorApp/Server/bin/Debug/net6.0/BlazorApp.Server.dll",
+            "cwd": "${workspaceFolder}/../../../Apps/BlazorApp/Server",
             "url": "https://localhost:4001",
             "browser": "chrome",
             "trace": true

@@ -5,12 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { SolidAppRegexService } from './regex/regex.service';
+import { BlazorAppRegexService } from './regex/regex.service';
 let RegexModule = class RegexModule {
 };
 RegexModule = __decorate([
     CustomModule({
-        providers: [SolidAppRegexService],
+        providers: [BlazorAppRegexService],
     })
 ], RegexModule);
 export { RegexModule };

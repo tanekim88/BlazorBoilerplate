@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppEnvironmentService } from './environment.service';
-describe('SolidAppEnvironmentService', () => {
+import { BlazorAppEnvironmentService } from './environment.service';
+describe('BlazorAppEnvironmentService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppEnvironmentService],
+            providers: [BlazorAppEnvironmentService],
         }).compile();
-        service = module.get(SolidAppEnvironmentService);
+        service = module.get(BlazorAppEnvironmentService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

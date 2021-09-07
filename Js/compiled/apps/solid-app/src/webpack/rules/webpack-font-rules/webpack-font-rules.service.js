@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackFontRulesService } from '#shared/src/webpack/rules/webpack-font-rules/webpack-font-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackFontRulesService = class SolidAppWebpackFontRulesService extends WebpackFontRulesService {
+let BlazorAppWebpackFontRulesService = class BlazorAppWebpackFontRulesService extends WebpackFontRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackFontRulesService = __decorate([
+BlazorAppWebpackFontRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackFontRulesService);
-export { SolidAppWebpackFontRulesService };
+], BlazorAppWebpackFontRulesService);
+export { BlazorAppWebpackFontRulesService };
 //# sourceMappingURL=webpack-font-rules.service.js.map

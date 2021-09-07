@@ -6,34 +6,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
 import { WebpackModule } from '#shared/src/webpack/webpack.module';
-import { SolidAppModulesModule } from '../modules/modules.module';
-import { SolidAppWebpackPluginsModule } from './plugins/webpack-plugins.module';
-import { SolidAppWebpackRulesModule } from './rules/webpack-rules.module';
-import { SolidAppWebpackDevConfigService, SolidAppWebpackDevService } from './webpack-dev/webpack-dev.service';
-import { SolidAppWebpackProdConfigService, SolidAppWebpackProdService } from './webpack-prod/webpack-prod.service';
-import { SolidAppWebpackSharedConfigService } from './webpack-shared-config/webpack-shared-config.service';
-import { SolidAppWebpackSharedService } from './webpack-shared/webpack-shared.service';
-let SolidAppWebpackModule = class SolidAppWebpackModule {
+import { BlazorAppModulesModule } from '../modules/modules.module';
+import { BlazorAppWebpackPluginsModule } from './plugins/webpack-plugins.module';
+import { BlazorAppWebpackRulesModule } from './rules/webpack-rules.module';
+import { BlazorAppWebpackDevConfigService, BlazorAppWebpackDevService } from './webpack-dev/webpack-dev.service';
+import { BlazorAppWebpackProdConfigService, BlazorAppWebpackProdService } from './webpack-prod/webpack-prod.service';
+import { BlazorAppWebpackSharedConfigService } from './webpack-shared-config/webpack-shared-config.service';
+import { BlazorAppWebpackSharedService } from './webpack-shared/webpack-shared.service';
+let BlazorAppWebpackModule = class BlazorAppWebpackModule {
 };
-SolidAppWebpackModule = __decorate([
+BlazorAppWebpackModule = __decorate([
     CustomModule({
         providers: [
-            SolidAppWebpackDevConfigService,
-            SolidAppWebpackProdConfigService,
-            SolidAppWebpackDevService,
-            SolidAppWebpackProdService,
-            SolidAppWebpackSharedConfigService,
-            SolidAppWebpackSharedService,
+            BlazorAppWebpackDevConfigService,
+            BlazorAppWebpackProdConfigService,
+            BlazorAppWebpackDevService,
+            BlazorAppWebpackProdService,
+            BlazorAppWebpackSharedConfigService,
+            BlazorAppWebpackSharedService,
         ],
         imports: [
-            SolidAppWebpackPluginsModule,
-            SolidAppWebpackRulesModule,
+            BlazorAppWebpackPluginsModule,
+            BlazorAppWebpackRulesModule,
             // blazorAppClientWebpackPostcssModule,
             // blazorAppClientWebpackMinimizersModule,
-            SolidAppModulesModule,
+            BlazorAppModulesModule,
             WebpackModule,
         ],
     })
-], SolidAppWebpackModule);
-export { SolidAppWebpackModule };
+], BlazorAppWebpackModule);
+export { BlazorAppWebpackModule };
 //# sourceMappingURL=webpack.module.js.map

@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SolidAppMergeService } from './merge.service';
+import { BlazorAppMergeService } from './merge.service';
 
-describe('SolidAppMergeService', () => {
-    let service: SolidAppMergeService;
+describe('BlazorAppMergeService', () => {
+    let service: BlazorAppMergeService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [SolidAppMergeService],
+            providers: [BlazorAppMergeService],
         }).compile();
 
-        service = module.get<SolidAppMergeService>(SolidAppMergeService);
+        service = module.get<BlazorAppMergeService>(BlazorAppMergeService);
     });
 
     it('should be defined', () => {

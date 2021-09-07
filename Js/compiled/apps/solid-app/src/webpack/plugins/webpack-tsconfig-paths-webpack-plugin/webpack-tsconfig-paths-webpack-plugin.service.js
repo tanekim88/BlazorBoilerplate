@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackTsconfigPathsWebpackPluginService } from '#shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service';
-let SolidAppWebpackTsconfigPathsWebpackPluginService = class SolidAppWebpackTsconfigPathsWebpackPluginService extends WebpackTsconfigPathsWebpackPluginService {
+let BlazorAppWebpackTsconfigPathsWebpackPluginService = class BlazorAppWebpackTsconfigPathsWebpackPluginService extends WebpackTsconfigPathsWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackTsconfigPathsWebpackPluginService = __decorate([
+BlazorAppWebpackTsconfigPathsWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackTsconfigPathsWebpackPluginService);
-export { SolidAppWebpackTsconfigPathsWebpackPluginService };
+], BlazorAppWebpackTsconfigPathsWebpackPluginService);
+export { BlazorAppWebpackTsconfigPathsWebpackPluginService };
 //# sourceMappingURL=webpack-tsconfig-paths-webpack-plugin.service.js.map

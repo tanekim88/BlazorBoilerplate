@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { ViteProdService } from '#shared/src/vite/vite-prod/vite-prod.service';
-import { SolidAppViteSharedService } from '../vite-shared/vite-shared.service';
-let SolidAppViteProdService = class SolidAppViteProdService extends ViteProdService {
+import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
+let BlazorAppViteProdService = class BlazorAppViteProdService extends ViteProdService {
     blazorAppClientViteSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), this.blazorAppClientViteSharedService.createConfiguration(), {}, options);
@@ -20,11 +20,11 @@ let SolidAppViteProdService = class SolidAppViteProdService extends ViteProdServ
     }
 };
 __decorate([
-    CustomInject(SolidAppViteSharedService),
-    __metadata("design:type", SolidAppViteSharedService)
-], SolidAppViteProdService.prototype, "blazorAppClientViteSharedService", void 0);
-SolidAppViteProdService = __decorate([
+    CustomInject(BlazorAppViteSharedService),
+    __metadata("design:type", BlazorAppViteSharedService)
+], BlazorAppViteProdService.prototype, "blazorAppClientViteSharedService", void 0);
+BlazorAppViteProdService = __decorate([
     CustomInjectable()
-], SolidAppViteProdService);
-export { SolidAppViteProdService };
+], BlazorAppViteProdService);
+export { BlazorAppViteProdService };
 //# sourceMappingURL=vite-prod.service.js.map

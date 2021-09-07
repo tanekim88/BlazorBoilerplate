@@ -1,8 +1,8 @@
 import { ConfigBase } from '#shared/configs.base';
-import { SolidAppPaths, blazorAppPaths } from './paths';
-export class SolidAppConfig extends ConfigBase {
+import { BlazorAppPaths, blazorAppPaths } from './paths';
+export class BlazorAppConfig extends ConfigBase {
     rootDir = blazorAppPaths.toAbsolutePath();
-    RootDir = SolidAppPaths.toAbsolutePath();
+    RootDir = BlazorAppPaths.toAbsolutePath();
     projectName = 'blazorApp';
     title = 'App title';
     name = 'App name';
@@ -11,5 +11,5 @@ export class SolidAppConfig extends ConfigBase {
     developerUrl = 'www.taneware.com';
     description = 'app desc';
 }
-export const blazorAppConfig = new SolidAppConfig();
+export const blazorAppConfig = new BlazorAppConfig();
 //# sourceMappingURL=configs.js.map

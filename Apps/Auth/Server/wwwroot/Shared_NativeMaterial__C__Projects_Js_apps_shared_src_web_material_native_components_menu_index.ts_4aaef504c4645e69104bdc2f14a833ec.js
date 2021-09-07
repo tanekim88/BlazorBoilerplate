@@ -16,7 +16,7 @@
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/menu/_index.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/menu/_index.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/menu/_index.scss\");\r\nconst menu_1 = __webpack_require__(/*! @material/menu */ \"../../node_modules/@material/menu/index.js\");\r\nconst selector = '.mdc-menu';\r\n[].map.call(document.querySelectorAll(selector), function (el) {\r\n    const menu = new menu_1.MDCMenu(el);\r\n    menu.open = true;\r\n});\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/menu/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/menu/_index.scss\");\r\nconst menu_1 = __webpack_require__(/*! @material/menu */ \"../../node_modules/@material/menu/index.js\");\r\nconst selector = '.mdc-menu';\r\n[].map.call(document.querySelectorAll(selector), function (el) {\r\n    const menu = new menu_1.MDCMenu(el);\r\n    menu.open = true;\r\n});\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/menu/index.ts?");
 
 /***/ })
 

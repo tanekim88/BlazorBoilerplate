@@ -5,8 +5,8 @@ import { fileURLToPath } from "url";
 import path, { dirname } from "path";
 
 const filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(filename);
-const outDir = path.join(__dirname, '..', 'wwwroot');
+const dirName = dirname(filename);
+const outDir = path.join(dirName, '..', 'wwwroot');
 
 export default defineConfig({
   plugins: [solidPlugin(), vanillaExtractPlugin()],

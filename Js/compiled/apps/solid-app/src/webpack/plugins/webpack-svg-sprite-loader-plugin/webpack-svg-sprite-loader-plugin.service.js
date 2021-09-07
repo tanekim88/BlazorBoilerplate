@@ -7,13 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { WebpackSvgSpriteLoaderPluginService } from '#shared/src/webpack/plugins/webpack-svg-sprite-loader-plugin/webpack-svg-sprite-loader-plugin.service';
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackSvgSpriteLoaderPluginService = class SolidAppWebpackSvgSpriteLoaderPluginService extends WebpackSvgSpriteLoaderPluginService {
+let BlazorAppWebpackSvgSpriteLoaderPluginService = class BlazorAppWebpackSvgSpriteLoaderPluginService extends WebpackSvgSpriteLoaderPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackSvgSpriteLoaderPluginService = __decorate([
+BlazorAppWebpackSvgSpriteLoaderPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackSvgSpriteLoaderPluginService);
-export { SolidAppWebpackSvgSpriteLoaderPluginService };
+], BlazorAppWebpackSvgSpriteLoaderPluginService);
+export { BlazorAppWebpackSvgSpriteLoaderPluginService };
 //# sourceMappingURL=webpack-svg-sprite-loader-plugin.service.js.map

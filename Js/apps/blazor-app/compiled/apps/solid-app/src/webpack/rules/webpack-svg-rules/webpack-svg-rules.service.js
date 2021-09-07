@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackSvgRulesService } from '#shared/src/webpack/rules/webpack-svg-rules/webpack-svg-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackSvgRulesService = class SolidAppWebpackSvgRulesService extends WebpackSvgRulesService {
+let BlazorAppWebpackSvgRulesService = class BlazorAppWebpackSvgRulesService extends WebpackSvgRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackSvgRulesService = __decorate([
+BlazorAppWebpackSvgRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackSvgRulesService);
-export { SolidAppWebpackSvgRulesService };
+], BlazorAppWebpackSvgRulesService);
+export { BlazorAppWebpackSvgRulesService };
 //# sourceMappingURL=webpack-svg-rules.service.js.map

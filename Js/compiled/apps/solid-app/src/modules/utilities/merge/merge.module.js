@@ -5,12 +5,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { SolidAppMergeService } from './merge/merge.service';
+import { BlazorAppMergeService } from './merge/merge.service';
 let MergeModule = class MergeModule {
 };
 MergeModule = __decorate([
     CustomModule({
-        providers: [SolidAppMergeService],
+        providers: [BlazorAppMergeService],
     })
 ], MergeModule);
 export { MergeModule };

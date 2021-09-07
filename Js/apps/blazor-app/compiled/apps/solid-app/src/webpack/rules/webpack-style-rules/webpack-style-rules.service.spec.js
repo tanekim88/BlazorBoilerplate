@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackStyleRulesService } from './webpack-style-rules.service';
-describe('SolidAppWebpackStyleRulesService', () => {
+import { BlazorAppWebpackStyleRulesService } from './webpack-style-rules.service';
+describe('BlazorAppWebpackStyleRulesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackStyleRulesService],
+            providers: [BlazorAppWebpackStyleRulesService],
         }).compile();
-        service = module.get(SolidAppWebpackStyleRulesService);
+        service = module.get(BlazorAppWebpackStyleRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

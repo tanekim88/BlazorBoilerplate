@@ -1,30 +1,28 @@
 // sprinkles.css.ts
 import { createAtomicStyles, createAtomsFn } from '@vanilla-extract/sprinkles';
-
-const space = {
-  'none': 0,
-  'small': '4px',
-  'medium': '8px',
-  'large': '16px',
-  // etc.
-};
+import { materialColors } from './material-colors';
+import { vars } from './vars.css';
 
 const responsiveStyles = createAtomicStyles({
   conditions: {
     mobile: {},
     tablet: { '@media': 'screen and (min-width: 768px)' },
-    desktop: { '@media': 'screen and (min-width: 1024px)' }
+    desktop: { '@media': 'screen and (min-width: 1024px)' },
+    hover: { selector: '&:hover' },
+    focus: { selector: '&:focus' }
   },
   defaultCondition: 'mobile',
+  responsiveArray: ['mobile', 'tablet', 'desktop'],
   properties: {
     display: ['none', 'flex', 'block', 'inline'],
     flexDirection: ['row', 'column'],
     justifyContent: ['stretch', 'flex-start', 'center', 'flex-end', 'space-around', 'space-between'],
     alignItems: ['stretch', 'flex-start', 'center', 'flex-end'],
-    paddingTop: space,
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
+    paddingTop: vars.space,
+    paddingBottom: vars.space,
+    paddingLeft: vars.space,
+    paddingRight: vars.space,
+    gap: vars.space,
     // etc.
   },
   shorthands: {
@@ -35,25 +33,20 @@ const responsiveStyles = createAtomicStyles({
   }
 });
 
-const colors = {
-  'blue-50': '#eff6ff',
-  'blue-100': '#dbeafe',
-  'blue-200': '#bfdbfe',
-  'gray-700': '#374151',
-  'gray-800': '#1f2937',
-  'gray-900': '#111827',
-  // etc.
-};
 
 const colorStyles = createAtomicStyles({
   conditions: {
-    lightMode: {},
-    darkMode: { '@media': '(prefers-color-scheme: dark)' }
+    lightMode: { '@media': '(prefers-color-scheme: light)' },
+    darkMode: { '@media': '(prefers-color-scheme: dark)' },
+
+    hover: { selector: '&:hover' },
+    focus: { selector: '&:focus' }
   },
   defaultCondition: 'lightMode',
   properties: {
-    color: colors,
-    background: colors,
+    color: vars.colors,
+    backgroundColor: vars.colors,
+    
     // etc.
   }
 });

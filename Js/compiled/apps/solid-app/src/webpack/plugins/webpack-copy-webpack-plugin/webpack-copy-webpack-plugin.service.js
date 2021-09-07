@@ -11,8 +11,8 @@ import path from 'path';
 import { WebpackCopyWebpackPluginService } from '#shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { blazorAppPaths } from '#solid-app/paths';
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
-let SolidAppWebpackCopyWebpackPluginService = class SolidAppWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
+import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+let BlazorAppWebpackCopyWebpackPluginService = class BlazorAppWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
     blazorAppClientEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -30,11 +30,11 @@ let SolidAppWebpackCopyWebpackPluginService = class SolidAppWebpackCopyWebpackPl
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService)
-], SolidAppWebpackCopyWebpackPluginService.prototype, "blazorAppClientEnvironmentService", void 0);
-SolidAppWebpackCopyWebpackPluginService = __decorate([
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService)
+], BlazorAppWebpackCopyWebpackPluginService.prototype, "blazorAppClientEnvironmentService", void 0);
+BlazorAppWebpackCopyWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackCopyWebpackPluginService);
-export { SolidAppWebpackCopyWebpackPluginService };
+], BlazorAppWebpackCopyWebpackPluginService);
+export { BlazorAppWebpackCopyWebpackPluginService };
 //# sourceMappingURL=webpack-copy-webpack-plugin.service.js.map

@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackJsonRulesService } from '#shared/src/webpack/rules/webpack-json-rules/webpack-json-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackJsonRulesService = class SolidAppWebpackJsonRulesService extends WebpackJsonRulesService {
+let BlazorAppWebpackJsonRulesService = class BlazorAppWebpackJsonRulesService extends WebpackJsonRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackJsonRulesService = __decorate([
+BlazorAppWebpackJsonRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackJsonRulesService);
-export { SolidAppWebpackJsonRulesService };
+], BlazorAppWebpackJsonRulesService);
+export { BlazorAppWebpackJsonRulesService };
 //# sourceMappingURL=webpack-json-rules.service.js.map

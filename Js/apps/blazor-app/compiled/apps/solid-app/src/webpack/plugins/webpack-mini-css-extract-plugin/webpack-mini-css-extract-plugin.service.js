@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { WebpackMiniCssExtractPluginService, WebpackMiniCssExtractPluginConfigService, } from '#shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
-let SolidAppWebpackMiniCssExtractPluginConfigService = class SolidAppWebpackMiniCssExtractPluginConfigService extends WebpackMiniCssExtractPluginConfigService {
+let BlazorAppWebpackMiniCssExtractPluginConfigService = class BlazorAppWebpackMiniCssExtractPluginConfigService extends WebpackMiniCssExtractPluginConfigService {
     /**
      *
      */
@@ -21,12 +21,12 @@ let SolidAppWebpackMiniCssExtractPluginConfigService = class SolidAppWebpackMini
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackMiniCssExtractPluginConfigService = __decorate([
+BlazorAppWebpackMiniCssExtractPluginConfigService = __decorate([
     CustomInjectable(),
     __metadata("design:paramtypes", [])
-], SolidAppWebpackMiniCssExtractPluginConfigService);
-export { SolidAppWebpackMiniCssExtractPluginConfigService };
-let SolidAppWebpackMiniCssExtractPluginService = class SolidAppWebpackMiniCssExtractPluginService extends WebpackMiniCssExtractPluginService {
+], BlazorAppWebpackMiniCssExtractPluginConfigService);
+export { BlazorAppWebpackMiniCssExtractPluginConfigService };
+let BlazorAppWebpackMiniCssExtractPluginService = class BlazorAppWebpackMiniCssExtractPluginService extends WebpackMiniCssExtractPluginService {
     /**
      *
      */
@@ -37,9 +37,9 @@ let SolidAppWebpackMiniCssExtractPluginService = class SolidAppWebpackMiniCssExt
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackMiniCssExtractPluginService = __decorate([
+BlazorAppWebpackMiniCssExtractPluginService = __decorate([
     CustomInjectable(),
     __metadata("design:paramtypes", [])
-], SolidAppWebpackMiniCssExtractPluginService);
-export { SolidAppWebpackMiniCssExtractPluginService };
+], BlazorAppWebpackMiniCssExtractPluginService);
+export { BlazorAppWebpackMiniCssExtractPluginService };
 //# sourceMappingURL=webpack-mini-css-extract-plugin.service.js.map

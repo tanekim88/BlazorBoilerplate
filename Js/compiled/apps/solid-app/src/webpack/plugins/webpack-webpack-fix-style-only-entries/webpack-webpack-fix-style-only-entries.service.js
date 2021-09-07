@@ -7,13 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackWebpackFixStyleOnlyEntriesService } from '#shared/src/webpack/plugins/webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service';
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
-let SolidAppWebpackWebpackFixStyleOnlyEntriesService = class SolidAppWebpackWebpackFixStyleOnlyEntriesService extends WebpackWebpackFixStyleOnlyEntriesService {
+let BlazorAppWebpackWebpackFixStyleOnlyEntriesService = class BlazorAppWebpackWebpackFixStyleOnlyEntriesService extends WebpackWebpackFixStyleOnlyEntriesService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackWebpackFixStyleOnlyEntriesService = __decorate([
+BlazorAppWebpackWebpackFixStyleOnlyEntriesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackWebpackFixStyleOnlyEntriesService);
-export { SolidAppWebpackWebpackFixStyleOnlyEntriesService };
+], BlazorAppWebpackWebpackFixStyleOnlyEntriesService);
+export { BlazorAppWebpackWebpackFixStyleOnlyEntriesService };
 //# sourceMappingURL=webpack-webpack-fix-style-only-entries.service.js.map

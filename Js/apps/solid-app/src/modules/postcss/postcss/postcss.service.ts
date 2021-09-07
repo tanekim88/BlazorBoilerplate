@@ -12,7 +12,7 @@ import { RfsService } from "#shared/src/modules/postcss/services/rfs/rfs.service
 import { TailwindcssService } from "#shared/src/modules/postcss/services/tailwindcss/tailwindcss.service";
 
 @CustomInjectable()
-export class SolidAppPostcssService {
+export class BlazorAppPostcssService {
     @CustomInject(CssnanoService)
     protected CssNanoService: CssnanoService;
     @CustomInject(PostcssReporterService)

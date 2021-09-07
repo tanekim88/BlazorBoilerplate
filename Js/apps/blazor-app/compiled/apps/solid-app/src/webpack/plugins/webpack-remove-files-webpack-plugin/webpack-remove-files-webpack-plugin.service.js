@@ -7,22 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackRemoveFilesWebpackPluginService, WebpackPreRemoveFilesWebpackPluginService, } from '#shared/src/webpack/plugins/webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service';
 const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
-let SolidAppWebpackPreRemoveFilesWebpackPluginService = class SolidAppWebpackPreRemoveFilesWebpackPluginService extends WebpackPreRemoveFilesWebpackPluginService {
+let BlazorAppWebpackPreRemoveFilesWebpackPluginService = class BlazorAppWebpackPreRemoveFilesWebpackPluginService extends WebpackPreRemoveFilesWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackPreRemoveFilesWebpackPluginService = __decorate([
+BlazorAppWebpackPreRemoveFilesWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackPreRemoveFilesWebpackPluginService);
-export { SolidAppWebpackPreRemoveFilesWebpackPluginService };
-let SolidAppWebpackRemoveFilesWebpackPluginService = class SolidAppWebpackRemoveFilesWebpackPluginService extends WebpackRemoveFilesWebpackPluginService {
+], BlazorAppWebpackPreRemoveFilesWebpackPluginService);
+export { BlazorAppWebpackPreRemoveFilesWebpackPluginService };
+let BlazorAppWebpackRemoveFilesWebpackPluginService = class BlazorAppWebpackRemoveFilesWebpackPluginService extends WebpackRemoveFilesWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackRemoveFilesWebpackPluginService = __decorate([
+BlazorAppWebpackRemoveFilesWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackRemoveFilesWebpackPluginService);
-export { SolidAppWebpackRemoveFilesWebpackPluginService };
+], BlazorAppWebpackRemoveFilesWebpackPluginService);
+export { BlazorAppWebpackRemoveFilesWebpackPluginService };
 //# sourceMappingURL=webpack-remove-files-webpack-plugin.service.js.map

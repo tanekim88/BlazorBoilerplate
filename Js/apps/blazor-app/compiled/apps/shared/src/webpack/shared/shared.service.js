@@ -14,7 +14,7 @@ import { rootConfig } from '#root/configs';
 import { WebpackSharedBaseService } from '../webpack-shared-base/webpack-shared-base.service';
 import { sharedPaths } from '#shared/paths';
 import path from 'path';
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 const rootDir = rootConfig.rootDir;
 let WebpackSharedService = class WebpackSharedService extends WebpackSharedBaseService {
     blazorAppEnvironmentService;
@@ -69,8 +69,8 @@ let WebpackSharedService = class WebpackSharedService extends WebpackSharedBaseS
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService)
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService)
 ], WebpackSharedService.prototype, "blazorAppEnvironmentService", void 0);
 WebpackSharedService = __decorate([
     CustomInjectable()

@@ -2866,943 +2866,943 @@ export const RootPaths = createProxy({
                 }
             }
         },
-        "SolidApp": {
-            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp",
-            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp"); },
-            "SolidApp.Setup": {
-                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup"); },
+        "BlazorApp": {
+            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp"); },
+            "BlazorApp.Setup": {
+                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup"); },
                 "Client": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client"); },
                     "App.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\App.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\App.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\App.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\App.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\App.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\App.razor"); }
                     },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\bin"); }
                     },
-                    "SolidApp.Setup.Client.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\SolidApp.Setup.Client.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\SolidApp.Setup.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\SolidApp.Setup.Client.csproj"); }
+                    "BlazorApp.Setup.Client.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\BlazorApp.Setup.Client.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\BlazorApp.Setup.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\BlazorApp.Setup.Client.csproj"); }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\obj"); }
                     },
                     "Pages": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages"); },
                         "Counter.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Counter.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Counter.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Counter.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Counter.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Counter.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Counter.razor"); }
                         },
                         "FetchData.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\FetchData.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\FetchData.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\FetchData.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\FetchData.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\FetchData.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\FetchData.razor"); }
                         },
                         "Index.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Index.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Index.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Pages\\Index.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Index.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Index.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Pages\\Index.razor"); }
                         }
                     },
                     "Program.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Program.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Program.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Program.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Program.cs"); }
                     },
                     "Properties": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties"); },
                         "launchSettings.json": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties\\launchSettings.json",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Properties\\launchSettings.json"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties\\launchSettings.json",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Properties\\launchSettings.json"); }
                         }
                     },
                     "Shared": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared"); },
                         "MainLayout.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor"); }
                         },
                         "MainLayout.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\MainLayout.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\MainLayout.razor.css"); }
                         },
                         "NavMenu.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor"); }
                         },
                         "NavMenu.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\NavMenu.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\NavMenu.razor.css"); }
                         },
                         "SurveyPrompt.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\SurveyPrompt.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\SurveyPrompt.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\Shared\\SurveyPrompt.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\SurveyPrompt.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\SurveyPrompt.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\Shared\\SurveyPrompt.razor"); }
                         }
                     },
                     "wwwroot": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot"); },
                         "css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css"); },
                             "app.css": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\app.css",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\app.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\app.css"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\app.css",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\app.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\app.css"); }
                             },
                             "bootstrap": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap"); },
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap"); },
                                 "bootstrap.min.css": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css"); }
                                 }
                             },
                             "open-iconic": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic"); },
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic"); },
                                 "font": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font"); },
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font"); },
                                     "css": {
-                                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css",
-                                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css"); },
+                                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css",
+                                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css"); },
                                         "open-iconic-bootstrap.min.css": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"); }
                                         }
                                     },
                                     "fonts": {
-                                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
-                                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts"); },
+                                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts",
+                                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts"); },
                                         "open-iconic.eot": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"); }
                                         },
                                         "open-iconic.otf": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"); }
                                         },
                                         "open-iconic.svg": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"); }
                                         },
                                         "open-iconic.ttf": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"); }
                                         },
                                         "open-iconic.woff": {
-                                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
-                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"); }
+                                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+                                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"); }
                                         }
                                     }
                                 },
                                 "FONT-LICENSE": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE"); }
                                 },
                                 "ICON-LICENSE": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE"); }
                                 },
                                 "README.md": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\css\\open-iconic\\README.md"); }
                                 }
                             }
                         },
                         "favicon.ico": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\favicon.ico",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\favicon.ico") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\favicon.ico"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\favicon.ico",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\favicon.ico") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\favicon.ico"); }
                         },
                         "index.html": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\index.html",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\index.html") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\wwwroot\\index.html"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\index.html",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\index.html") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\wwwroot\\index.html"); }
                         }
                     },
                     "_Imports.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\_Imports.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\_Imports.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Client\\_Imports.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\_Imports.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\_Imports.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Client\\_Imports.razor"); }
                     }
                 },
                 "Server": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server"); },
                     "appsettings.Development.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.Development.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.Development.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.Development.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.Development.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.Development.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.Development.json"); }
                     },
                     "appsettings.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\appsettings.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\appsettings.json"); }
                     },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\bin"); }
                     },
-                    "SolidApp.Setup.Server.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\SolidApp.Setup.Server.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\SolidApp.Setup.Server.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\SolidApp.Setup.Server.csproj"); }
+                    "BlazorApp.Setup.Server.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\BlazorApp.Setup.Server.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\BlazorApp.Setup.Server.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\BlazorApp.Setup.Server.csproj"); }
                     },
                     "Controllers": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers"); },
                         "WeatherForecastController.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers\\WeatherForecastController.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers\\WeatherForecastController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Controllers\\WeatherForecastController.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers\\WeatherForecastController.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers\\WeatherForecastController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Controllers\\WeatherForecastController.cs"); }
                         }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\obj"); }
                     },
                     "Pages": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages"); },
                         "Error.cshtml": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml"); }
                         },
                         "Error.cshtml.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Pages\\Error.cshtml.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Pages\\Error.cshtml.cs"); }
                         }
                     },
                     "Program.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Program.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Program.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Program.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Program.cs"); }
                     },
                     "Properties": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties"); },
                         "launchSettings.json": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties\\launchSettings.json",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Properties\\launchSettings.json"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties\\launchSettings.json",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Properties\\launchSettings.json"); }
                         }
                     },
                     "Startup.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Startup.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Startup.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Server\\Startup.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Startup.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Startup.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Server\\Startup.cs"); }
                     }
                 },
                 "Shared": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared"); },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\bin"); }
                     },
-                    "SolidApp.Setup.Shared.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\SolidApp.Setup.Shared.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\SolidApp.Setup.Shared.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\SolidApp.Setup.Shared.csproj"); }
+                    "BlazorApp.Setup.Shared.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\BlazorApp.Setup.Shared.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\BlazorApp.Setup.Shared.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\BlazorApp.Setup.Shared.csproj"); }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\obj"); }
                     },
                     "WeatherForecast.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\WeatherForecast.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\WeatherForecast.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Setup\\Shared\\WeatherForecast.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\WeatherForecast.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\WeatherForecast.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Setup\\Shared\\WeatherForecast.cs"); }
                     }
                 }
             },
-            "SolidApp.Tests": {
-                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests"); },
-                "SolidApp.ArchTests": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests"); },
+            "BlazorApp.Tests": {
+                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests"); },
+                "BlazorApp.ArchTests": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests"); },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\bin"); }
                     },
-                    "SolidApp.ArchTests.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\SolidApp.ArchTests.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\SolidApp.ArchTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\SolidApp.ArchTests.csproj"); }
+                    "BlazorApp.ArchTests.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\BlazorApp.ArchTests.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\BlazorApp.ArchTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\BlazorApp.ArchTests.csproj"); }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\obj"); }
                     },
                     "UnitTest1.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\UnitTest1.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.ArchTests\\UnitTest1.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\UnitTest1.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.ArchTests\\UnitTest1.cs"); }
                     }
                 },
-                "SolidApp.IntegrationTests": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests"); },
+                "BlazorApp.IntegrationTests": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests"); },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\bin"); }
                     },
-                    "SolidApp.IntegrationTests.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\SolidApp.IntegrationTests.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\SolidApp.IntegrationTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\SolidApp.IntegrationTests.csproj"); }
+                    "BlazorApp.IntegrationTests.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\BlazorApp.IntegrationTests.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\BlazorApp.IntegrationTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\BlazorApp.IntegrationTests.csproj"); }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\obj"); }
                     },
                     "UnitTest1.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\UnitTest1.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.IntegrationTests\\UnitTest1.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\UnitTest1.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.IntegrationTests\\UnitTest1.cs"); }
                     }
                 },
-                "SolidApp.UnitTests": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests"); },
+                "BlazorApp.UnitTests": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests"); },
                     "bin": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\bin",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\bin"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\bin",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\bin"); }
                     },
-                    "SolidApp.UnitTests.csproj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\SolidApp.UnitTests.csproj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\SolidApp.UnitTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\SolidApp.UnitTests.csproj"); }
+                    "BlazorApp.UnitTests.csproj": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\BlazorApp.UnitTests.csproj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\BlazorApp.UnitTests.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\BlazorApp.UnitTests.csproj"); }
                     },
                     "obj": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\obj",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\obj"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\obj",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\obj"); }
                     },
                     "UnitTest1.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\UnitTest1.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\SolidApp.Tests\\SolidApp.UnitTests\\UnitTest1.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\UnitTest1.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\UnitTest1.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\BlazorApp.Tests\\BlazorApp.UnitTests\\UnitTest1.cs"); }
                     }
                 }
             },
             "Client": {
-                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client"); },
+                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client"); },
                 "App.razor": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\App.razor",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\App.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\App.razor"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\App.razor",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\App.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\App.razor"); }
                 },
                 "bin": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\bin",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\bin"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\bin",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\bin"); }
                 },
-                "SolidApp - Backup.Client.csproj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\SolidApp - Backup.Client.csproj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\SolidApp - Backup.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\SolidApp - Backup.Client.csproj"); }
+                "BlazorApp - Backup.Client.csproj": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp - Backup.Client.csproj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp - Backup.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp - Backup.Client.csproj"); }
                 },
-                "SolidApp.Client.csproj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\SolidApp.Client.csproj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\SolidApp.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\SolidApp.Client.csproj"); }
+                "BlazorApp.Client.csproj": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp.Client.csproj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp.Client.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\BlazorApp.Client.csproj"); }
                 },
                 "Components": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components"); },
                     "ActionButtonGroupComponents": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents"); },
                         "ChatFloatingActionButton.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor"); }
                         },
                         "ChatFloatingActionButton.razor.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.cs"); }
                         },
                         "ChatFloatingActionButton.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.css"); }
                         },
                         "ChatFloatingActionButton.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ActionButtonGroupComponents\\ChatFloatingActionButton.razor.scss"); }
                         }
                     },
                     "ChatGroupComponents": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents"); },
                         "ChatRoom.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor"); }
                         },
                         "ChatRoom.razor.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.cs"); }
                         },
                         "ChatRoom.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.css"); }
                         },
                         "ChatRoom.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ChatGroupComponents\\ChatRoom.razor.scss"); }
                         }
                     },
                     "ValidationComponents": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents"); },
                         "CustomValidator.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.razor"); }
                         },
                         "CustomValidator.Razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidator.Razor.scss"); }
                         },
                         "CustomValidatorBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Components\\ValidationComponents\\CustomValidatorBase.cs"); }
                         }
                     }
                 },
                 "Dockerfile": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Dockerfile",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Dockerfile") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Dockerfile"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Dockerfile",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Dockerfile") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Dockerfile"); }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\obj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\obj"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\obj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\obj"); }
                 },
                 "Pages": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages"); },
                     "AccountPages": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages"); },
                         "EmailConfirmedPage.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor"); }
                         },
                         "EmailConfirmedPage.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.css"); }
                         },
                         "EmailConfirmedPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPage.razor.scss"); }
                         },
                         "EmailConfirmedPageBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\EmailConfirmedPageBase.cs"); }
                         },
                         "LoginPage.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor"); }
                         },
                         "LoginPage.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.css"); }
                         },
                         "LoginPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPage.razor.scss"); }
                         },
                         "LoginPageBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\LoginPageBase.cs"); }
                         },
                         "RegisterConfirmationPage.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor"); }
                         },
                         "RegisterConfirmationPage.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.css"); }
                         },
                         "RegisterConfirmationPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPage.razor.scss"); }
                         },
                         "RegisterConfirmationPageBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterConfirmationPageBase.cs"); }
                         },
                         "RegisterPage.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor"); }
                         },
                         "RegisterPage.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.css"); }
                         },
                         "RegisterPage.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPage.razor.scss"); }
                         },
                         "RegisterPageBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\AccountPages\\RegisterPageBase.cs"); }
                         }
                     },
                     "Authentication.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Authentication.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Authentication.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Authentication.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Authentication.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Authentication.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Authentication.razor"); }
                     },
                     "Counter.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Counter.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Counter.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\Counter.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Counter.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Counter.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\Counter.razor"); }
                     },
                     "CustomInputText.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\CustomInputText.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\CustomInputText.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\CustomInputText.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\CustomInputText.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\CustomInputText.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\CustomInputText.razor"); }
                     },
                     "EntityPages": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages"); },
                         "__Entities_BoundedContext_Name__Pages": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages"); },
                             "__Entities_Groups_00_Name__Pages": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages"); },
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages"); },
                                 "__Entities_Name__CreatePageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePageBase_Gen_.cs"); }
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor"); }
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.css"); }
                                 },
                                 "__Entities_Name__CreatePage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__CreatePage_Gen_.razor.scss"); }
                                 },
                                 "__Entities_Name__ListPageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPageBase_Gen_.cs"); }
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor"); }
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.css"); }
                                 },
                                 "__Entities_Name__ListPage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__ListPage_Gen_.razor.scss"); }
                                 },
                                 "__Entities_Name__PageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__PageBase_Gen_.cs"); }
                                 },
                                 "__Entities_Name__Page_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor"); }
                                 },
                                 "__Entities_Name__Page_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.css"); }
                                 },
                                 "__Entities_Name__Page_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__Page_Gen_.razor.scss"); }
                                 },
                                 "__Entities_Name__UpdatePageBase_Gen_.cs": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePageBase_Gen_.cs"); }
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor"); }
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor.css": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.css"); }
                                 },
                                 "__Entities_Name__UpdatePage_Gen_.razor.scss": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\EntityPages\\__Entities_BoundedContext_Name__Pages\\__Entities_Groups_00_Name__Pages\\__Entities_Name__UpdatePage_Gen_.razor.scss"); }
                                 }
                             }
                         }
                     },
                     "FetchData.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\FetchData.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\FetchData.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\FetchData.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\FetchData.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\FetchData.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\FetchData.razor"); }
                     },
                     "HomePages": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages"); },
                         "HomePage.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor"); }
                         },
                         "HomePage.razor.css": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.css",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.css"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.css"); }
                         },
                         "HomePage.razor.scss": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.scss",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePage.razor.scss"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.scss",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePage.razor.scss"); }
                         },
                         "HomePageBase.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePageBase.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\HomePages\\HomePageBase.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePageBase.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePageBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\HomePages\\HomePageBase.cs"); }
                         }
                     },
                     "TestForm.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Pages\\TestForm.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Pages\\TestForm.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Pages\\TestForm.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\TestForm.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\TestForm.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Pages\\TestForm.razor"); }
                     }
                 },
                 "Program.cs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Program.cs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Program.cs"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Program.cs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Program.cs"); }
                 },
                 "Properties": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Properties",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Properties"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Properties",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Properties"); },
                     "launchSettings.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Properties\\launchSettings.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Properties\\launchSettings.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Properties\\launchSettings.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Properties\\launchSettings.json"); }
                     }
                 },
                 "Shared": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared"); },
                     "CascadingStates": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates"); },
                         "CascadingThemeState.razor": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\CascadingStates\\CascadingThemeState.razor"); }
                         }
                     },
                     "Layouts": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts"); },
                         "MainLayout": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout"); },
                             "MainLayout.razor": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor"); }
                             },
                             "MainLayout.razor.css": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.css"); }
                             },
                             "MainLayout.razor.matblazor.txt": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.matblazor.txt"); }
                             },
                             "MainLayout.razor.scss": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayout.razor.scss"); }
                             },
                             "MainLayoutBase.cs": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs"); }
                             },
                             "MainLayoutBase.cs.matblazor.txt": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\Layouts\\MainLayout\\MainLayoutBase.cs.matblazor.txt"); }
                             }
                         }
                     },
                     "LoginDisplay.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\LoginDisplay.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\LoginDisplay.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\LoginDisplay.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\LoginDisplay.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\LoginDisplay.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\LoginDisplay.razor"); }
                     },
                     "NavMenu.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor"); }
                     },
                     "NavMenu.razor.css": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor.css",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\NavMenu.razor.css"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor.css",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor.css") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\NavMenu.razor.css"); }
                     },
                     "RedirectToLogin.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\RedirectToLogin.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\RedirectToLogin.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\RedirectToLogin.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\RedirectToLogin.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\RedirectToLogin.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\RedirectToLogin.razor"); }
                     },
                     "SurveyPrompt.razor": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\Shared\\SurveyPrompt.razor",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\Shared\\SurveyPrompt.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\Shared\\SurveyPrompt.razor"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\SurveyPrompt.razor",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\SurveyPrompt.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\Shared\\SurveyPrompt.razor"); }
                     }
                 },
                 "wwwroot": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\wwwroot",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\wwwroot") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\wwwroot"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot"); }
                 },
                 "_Imports.razor": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Client\\_Imports.razor",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Client\\_Imports.razor") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Client\\_Imports.razor"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\_Imports.razor",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\_Imports.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\_Imports.razor"); }
                 }
             },
             "Server": {
-                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server"); },
+                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server"); },
                 ".vs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\.vs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\.vs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\.vs"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\.vs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\.vs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\.vs"); }
                 },
                 "appsettings.Development.json": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\appsettings.Development.json",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\appsettings.Development.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\appsettings.Development.json"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.Development.json",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.Development.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.Development.json"); }
                 },
                 "appsettings.json": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\appsettings.json",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\appsettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\appsettings.json"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.json",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\appsettings.json"); }
                 },
                 "Areas": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Areas",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Areas") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Areas"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Areas",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Areas") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Areas"); },
                     "Identity": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity"); },
                         "Pages": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages"); },
                             "Shared": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared"); },
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared"); },
                                 "_LoginPartial.cshtml": {
-                                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml",
-                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml"); }
+                                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Areas\\Identity\\Pages\\Shared\\_LoginPartial.cshtml"); }
                                 }
                             }
                         }
                     }
                 },
                 "bin": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\bin",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\bin"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\bin",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\bin"); }
                 },
-                "SolidApp.Server.csproj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj"); }
+                "BlazorApp.Server.csproj": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj"); }
                 },
-                "SolidApp.Server.csproj.user": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj.user",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj.user") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\SolidApp.Server.csproj.user"); }
+                "BlazorApp.Server.csproj.user": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj.user",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj.user") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\BlazorApp.Server.csproj.user"); }
                 },
                 "Controllers": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Controllers",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Controllers") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Controllers"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Controllers",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Controllers") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Controllers"); },
                     "OidcConfigurationController.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\OidcConfigurationController.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\OidcConfigurationController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\OidcConfigurationController.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\OidcConfigurationController.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\OidcConfigurationController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\OidcConfigurationController.cs"); }
                     },
                     "WeatherForecastController.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\WeatherForecastController.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\WeatherForecastController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Controllers\\WeatherForecastController.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\WeatherForecastController.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\WeatherForecastController.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Controllers\\WeatherForecastController.cs"); }
                     }
                 },
                 "Dockerfile": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Dockerfile",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Dockerfile") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Dockerfile"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Dockerfile",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Dockerfile") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Dockerfile"); }
                 },
                 "Logs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs"); },
                     "Core.Infrastructure20210407.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210407.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210407.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210407.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210407.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210407.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210407.txt"); }
                     },
                     "Core.Infrastructure20210528.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210528.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210528.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210528.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210528.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210528.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210528.txt"); }
                     },
                     "Core.Infrastructure20210529.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210529.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210529.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210529.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210529.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210529.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210529.txt"); }
                     },
                     "Core.Infrastructure20210530.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210530.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210530.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210530.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210530.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210530.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210530.txt"); }
                     },
                     "Core.Infrastructure20210531.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210531.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210531.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210531.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210531.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210531.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210531.txt"); }
                     },
                     "Core.Infrastructure20210601.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210601.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210601.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210601.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210601.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210601.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210601.txt"); }
                     },
                     "Core.Infrastructure20210604.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210604.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210604.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210604.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210604.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210604.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210604.txt"); }
                     },
                     "Core.Infrastructure20210701.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210701.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210701.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210701.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210701.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210701.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210701.txt"); }
                     },
                     "Core.Infrastructure20210703.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210703.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210703.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210703.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210703.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210703.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210703.txt"); }
                     },
                     "Core.Infrastructure20210704.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704.txt"); }
                     },
                     "Core.Infrastructure20210704_001.txt": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt"); }
                     }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\obj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\obj"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\obj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\obj"); }
                 },
                 "Pages": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Pages",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Pages"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Pages",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Pages") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Pages"); },
                     "Error.cshtml": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml"); }
                     },
                     "Error.cshtml.cs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml.cs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Pages\\Error.cshtml.cs"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml.cs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Pages\\Error.cshtml.cs"); }
                     }
                 },
                 "Program.cs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Program.cs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Program.cs"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Program.cs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Program.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Program.cs"); }
                 },
                 "Properties": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Properties",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Properties"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Properties",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Properties") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Properties"); },
                     "launchSettings.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Properties\\launchSettings.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Properties\\launchSettings.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\launchSettings.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\launchSettings.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\launchSettings.json"); }
                     },
                     "serviceDependencies.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.json"); }
                     },
                     "serviceDependencies.local.json": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json"); }
                     },
                     "serviceDependencies.local.json.user": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json.user",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json.user") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Properties\\serviceDependencies.local.json.user"); }
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user"); }
                     }
                 },
                 "Startup.cs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Server\\Startup.cs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Server\\Startup.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Server\\Startup.cs"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Startup.cs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Startup.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Startup.cs"); }
                 }
             },
             "Shared": {
-                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared"); },
+                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared"); },
                 "bin": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\bin",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\bin"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\bin",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\bin") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\bin"); }
                 },
-                "SolidApp.Shared.csproj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\SolidApp.Shared.csproj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\SolidApp.Shared.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\SolidApp.Shared.csproj"); }
+                "BlazorApp.Shared.csproj": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\BlazorApp.Shared.csproj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\BlazorApp.Shared.csproj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\BlazorApp.Shared.csproj"); }
                 },
                 "Localizations": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations"); },
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations"); },
                     "Customs": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs"); },
                         "Pos": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos"); },
                             "ko.po": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos\\ko.po",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos\\ko.po") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Pos\\ko.po"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos\\ko.po",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos\\ko.po") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Pos\\ko.po"); }
                             }
                         },
                         "Resources": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources"); },
                             "Resource.ko.resx": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Customs\\Resources\\Resource.ko.resx"); }
                             }
                         }
                     },
                     "Pos": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos"); },
                         "__Localizations_languageCode__.po": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Pos\\__Localizations_languageCode__.po"); }
                         }
                     },
                     "Resources": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources"); },
                         "Resource.Designer.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.Designer.cs"); }
                         },
                         "Resource.en.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.en.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.en.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.en.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.en.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.en.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.en.resx"); }
                         },
                         "Resource.es.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.es.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.es.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.es.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.es.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.es.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.es.resx"); }
                         },
                         "Resource.ko.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.ko.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.ko.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.ko.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.ko.resx"); }
                         },
                         "Resource.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource.resx"); }
                         },
                         "Resource__Context_project_postfix__.koResource.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__.koResource.resx"); }
                         },
                         "Resource__Context_project_postfix__Resource.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\Resource__Context_project_postfix__Resource.resx"); }
                         },
                         "RespectfulResource.Designer.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.Designer.cs"); }
                         },
                         "RespectfulResource.ko.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource.ko.resx"); }
                         },
                         "RespectfulResource__Context_project_postfix__.koResource.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\RespectfulResource__Context_project_postfix__.koResource.resx"); }
                         },
                         "__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Alias_Postfix__.Designer_Gen_.cs"); }
                         },
                         "__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx"); }
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Resources\\__Localizations_ContextCodeName__Resource__Context_project_postfix____Localizations_dotLanguageCode__Resource_Gen_.resx"); }
                         }
                     },
                     "Templates": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates"); },
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates"); },
                         "Pots": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots"); },
+                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots"); },
                             "SharedLibrary.pot": {
-                                toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot",
-                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot"); }
+                                toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\Localizations\\Templates\\Pots\\SharedLibrary.pot"); }
                             }
                         }
                     }
                 },
                 "obj": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\obj",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\obj"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\obj",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\obj") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\obj"); }
                 },
                 "WeatherForecast.cs": {
-                    toAbsolutePath: () => "C:\\App\\Apps\\SolidApp\\Shared\\WeatherForecast.cs",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\SolidApp\\Shared\\WeatherForecast.cs") : path.relative("C:\\App", "C:\\App\\Apps\\SolidApp\\Shared\\WeatherForecast.cs"); }
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Shared\\WeatherForecast.cs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Shared\\WeatherForecast.cs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Shared\\WeatherForecast.cs"); }
                 }
             }
         }

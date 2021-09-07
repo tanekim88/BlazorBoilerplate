@@ -1,11 +1,11 @@
-﻿using MatSolid;
+﻿using MatBlazorWeb;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using System;
 using System.Threading.Tasks;
 
-using SolidApp.Client.Shared.Layouts
+using BlazorApp.Client.Shared.Layouts
 {
     public class MainLayoutBase : LayoutComponentBase
     {

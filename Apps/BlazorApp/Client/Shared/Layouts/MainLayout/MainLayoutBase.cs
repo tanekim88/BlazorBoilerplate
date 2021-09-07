@@ -2,7 +2,7 @@
 
 using System;
 using System.Threading.Tasks;
-using Material.Solid;
+using Material.Blazor;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components.Web;
@@ -12,7 +12,7 @@ using SharedPresentation.Application.Interfaces.MatherialThemeServiceInterfaces;
 
 
 
-namespace SolidApp.Client.Shared.Layouts
+namespace BlazorApp.Client.Shared.Layouts
 {
     public class MainLayoutBase : LayoutComponentBase, IDisposable
     {

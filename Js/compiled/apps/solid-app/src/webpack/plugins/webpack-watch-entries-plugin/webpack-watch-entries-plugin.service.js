@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackWatchEntriesPluginConfigService, WebpackWatchEntriesPluginService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-let SolidAppWebpackWatchEntriesPluginConfigService = class SolidAppWebpackWatchEntriesPluginConfigService extends WebpackWatchEntriesPluginConfigService {
+let BlazorAppWebpackWatchEntriesPluginConfigService = class BlazorAppWebpackWatchEntriesPluginConfigService extends WebpackWatchEntriesPluginConfigService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             id: WebpackWatchEntriesPluginConfigService.name,
@@ -14,11 +14,11 @@ let SolidAppWebpackWatchEntriesPluginConfigService = class SolidAppWebpackWatchE
         }, options);
     }
 };
-SolidAppWebpackWatchEntriesPluginConfigService = __decorate([
+BlazorAppWebpackWatchEntriesPluginConfigService = __decorate([
     CustomInjectable()
-], SolidAppWebpackWatchEntriesPluginConfigService);
-export { SolidAppWebpackWatchEntriesPluginConfigService };
-let SolidAppWebpackWatchEntriesPluginService = class SolidAppWebpackWatchEntriesPluginService extends WebpackWatchEntriesPluginService {
+], BlazorAppWebpackWatchEntriesPluginConfigService);
+export { BlazorAppWebpackWatchEntriesPluginConfigService };
+let BlazorAppWebpackWatchEntriesPluginService = class BlazorAppWebpackWatchEntriesPluginService extends WebpackWatchEntriesPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             id: WebpackWatchEntriesPluginService.name,
@@ -26,8 +26,8 @@ let SolidAppWebpackWatchEntriesPluginService = class SolidAppWebpackWatchEntries
         }, options);
     }
 };
-SolidAppWebpackWatchEntriesPluginService = __decorate([
+BlazorAppWebpackWatchEntriesPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackWatchEntriesPluginService);
-export { SolidAppWebpackWatchEntriesPluginService };
+], BlazorAppWebpackWatchEntriesPluginService);
+export { BlazorAppWebpackWatchEntriesPluginService };
 //# sourceMappingURL=webpack-watch-entries-plugin.service.js.map

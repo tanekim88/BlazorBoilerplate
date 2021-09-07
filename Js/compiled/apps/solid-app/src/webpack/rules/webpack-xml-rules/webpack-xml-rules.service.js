@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackXmlRulesService } from '#shared/src/webpack/rules/webpack-xml-rules/webpack-xml-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackXmlRulesService = class SolidAppWebpackXmlRulesService extends WebpackXmlRulesService {
+let BlazorAppWebpackXmlRulesService = class BlazorAppWebpackXmlRulesService extends WebpackXmlRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackXmlRulesService = __decorate([
+BlazorAppWebpackXmlRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackXmlRulesService);
-export { SolidAppWebpackXmlRulesService };
+], BlazorAppWebpackXmlRulesService);
+export { BlazorAppWebpackXmlRulesService };
 //# sourceMappingURL=webpack-xml-rules.service.js.map

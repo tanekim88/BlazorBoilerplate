@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackProdService } from './webpack-prod.service';
-describe('SolidAppWebpackProdService', () => {
+import { BlazorAppWebpackProdService } from './webpack-prod.service';
+describe('BlazorAppWebpackProdService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackProdService],
+            providers: [BlazorAppWebpackProdService],
         }).compile();
-        service = module.get(SolidAppWebpackProdService);
+        service = module.get(BlazorAppWebpackProdService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

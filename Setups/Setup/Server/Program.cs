@@ -79,7 +79,7 @@ namespace Setup.Server
 
 
             await CodeGeneratorService.ProcessArgs(
-                args: new[] { "-g", "-f", @"C:\Apps\Packages\SolidApp.Package\Server" },
+                args: new[] { "-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Server" },
                 dependentProjects: new List<TemplateProject>
                 {
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Library)],
@@ -87,28 +87,28 @@ namespace Setup.Server
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Core)],
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(SharedCore)],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Shared)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}"],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Client)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}"],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Server)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}"],
                 });
             //throw new Exception();
 
             await CodeGeneratorService.ProcessArgs(
-                args: new[] { "-g", "-f", @"C:\Apps\Packages\SolidApp.Package\Client" },
+                args: new[] { "-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Client" },
             dependentProjects: new List<TemplateProject>
             {
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(SharedCore)],
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(SharedLibrary)],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Shared)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}"],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Client)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}"],
             });
             //throw new Exception();
             await CodeGeneratorService.ProcessArgs(
-                args: new[] { "-g", "-f", @"C:\Apps\Packages\SolidApp.Package\Shared\Localizations" },
+                args: new[] { "-g", "-f", @"C:\Apps\Packages\BlazorApp.Package\Shared\Localizations" },
                 dependentProjects: new List<TemplateProject>
                 {
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(Library)],
@@ -116,11 +116,11 @@ namespace Setup.Server
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(SharedCore)],
                     CodeGeneratorService.ProjectNameToProjectDic[key: nameof(SharedLibrary)],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Shared)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}"],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Server)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}"],
                     CodeGeneratorService.ProjectNameToProjectDic
-                        [key: $"{nameof(SolidApp)}.{nameof(SolidApp.Client)}"],
+                        [key: $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}"],
                 });
             throw new Exception();
         }

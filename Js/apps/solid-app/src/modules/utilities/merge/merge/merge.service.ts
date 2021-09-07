@@ -2,4 +2,4 @@ import { MergeService } from '#shared/src/modules/utilities/modules/merge/merge/
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
-export class SolidAppMergeService extends MergeService {}
+export class BlazorAppMergeService extends MergeService {}

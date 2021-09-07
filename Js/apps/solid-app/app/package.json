@@ -20,6 +20,8 @@
     "vite-plugin-solid": "^2.0.3"
   },
   "dependencies": {
+    "@vanilla-extract/css-utils": "^0.1.1",
+    "@vanilla-extract/dynamic": "^2.0.0",
     "babel-preset-solid": "^1.1.2",
     "solid-element": "^1.1.2",
     "solid-js": "^1.1.2"

@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackFaviconsWebpackPluginService } from '#shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
-import { SolidAppEnvironmentService } from '../../../modules/environment/environment/environment.service';
-let SolidAppWebpackFaviconsWebpackPluginService = class SolidAppWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
+import { BlazorAppEnvironmentService } from '../../../modules/environment/environment/environment.service';
+let BlazorAppWebpackFaviconsWebpackPluginService = class BlazorAppWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
     blazorAppEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
@@ -19,11 +19,11 @@ let SolidAppWebpackFaviconsWebpackPluginService = class SolidAppWebpackFaviconsW
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService)
-], SolidAppWebpackFaviconsWebpackPluginService.prototype, "blazorAppEnvironmentService", void 0);
-SolidAppWebpackFaviconsWebpackPluginService = __decorate([
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService)
+], BlazorAppWebpackFaviconsWebpackPluginService.prototype, "blazorAppEnvironmentService", void 0);
+BlazorAppWebpackFaviconsWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackFaviconsWebpackPluginService);
-export { SolidAppWebpackFaviconsWebpackPluginService };
+], BlazorAppWebpackFaviconsWebpackPluginService);
+export { BlazorAppWebpackFaviconsWebpackPluginService };
 //# sourceMappingURL=webpack-favicons-webpack-plugin.service.js.map

@@ -32,14 +32,14 @@ if (mainContentEl && appBarEl) {
 }
 
 // function init(ref, component) {
-//     ref.matSolidRef = new MDCDrawer(ref);
+//     ref.matBlazorWebRef = new MDCDrawer(ref);
 //     ref.addEventListener('MDCDrawer:closed', () => {
 //         component.invokeMethodAsync('ClosedHandler');
 //     });
 // }
 
 // function setOpened(ref, opened) {
-//     ref.matSolidRef.open = opened;
+//     ref.matBlazorWebRef.open = opened;
 // }
 
 // export const drawer = {

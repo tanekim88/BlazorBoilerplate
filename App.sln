@@ -8,13 +8,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{28BD45
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9768BB6A-F0A5-44B8-A69D-2D29E2FD29B1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidApp", "SolidApp", "{655AFE8B-5F63-4BA0-B40D-B6529FA2D20C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp", "BlazorApp", "{655AFE8B-5F63-4BA0-B40D-B6529FA2D20C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Server", "Apps\SolidApp\Server\SolidApp.Server.csproj", "{FAEB318B-4B7A-4211-AB22-392E70254D58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Server", "Apps\BlazorApp\Server\BlazorApp.Server.csproj", "{FAEB318B-4B7A-4211-AB22-392E70254D58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Client", "Apps\SolidApp\Client\SolidApp.Client.csproj", "{712F6C4D-80F0-4A2E-A980-EA4402527F93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Client", "Apps\BlazorApp\Client\BlazorApp.Client.csproj", "{712F6C4D-80F0-4A2E-A980-EA4402527F93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Shared", "Apps\SolidApp\Shared\SolidApp.Shared.csproj", "{04F6EF34-FAFE-4B88-A2F0-D83BA524C139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Shared", "Apps\BlazorApp\Shared\BlazorApp.Shared.csproj", "{04F6EF34-FAFE-4B88-A2F0-D83BA524C139}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Server", "Apps\Auth\Server\Auth.Server.csproj", "{70DC779A-74AD-4F81-ABCB-039D72E6C134}"
 EndProject
@@ -279,7 +279,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configurations", "configura
 		dapr\configurations\pipeline.yaml = dapr\configurations\pipeline.yaml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidApp.Setup", "SolidApp.Setup", "{D32CB660-A83D-4CFE-92C8-782DE8A0E0B4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp.Setup", "BlazorApp.Setup", "{D32CB660-A83D-4CFE-92C8-782DE8A0E0B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopBoundedContext", "ShopBoundedContext", "{99AFFF50-6DBA-4719-95E3-77C6A11C67C1}"
 EndProject
@@ -307,21 +307,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.IntegrationTests", "Bo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.ArchTests", "BoundedContexts\ShopBoundedContext\Tests\Shop.ArchTests\Shop.ArchTests.csproj", "{4EB678EC-2354-4904-825B-03E289189F74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Setup.Server", "Apps\SolidApp\SolidApp.Setup\Server\SolidApp.Setup.Server.csproj", "{2F8735BC-8019-4D03-A462-6D9106F8F43B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Setup.Server", "Apps\BlazorApp\BlazorApp.Setup\Server\BlazorApp.Setup.Server.csproj", "{2F8735BC-8019-4D03-A462-6D9106F8F43B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Setup.Client", "Apps\SolidApp\SolidApp.Setup\Client\SolidApp.Setup.Client.csproj", "{A425709D-91AA-4882-AD8B-6A97325D655D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Setup.Client", "Apps\BlazorApp\BlazorApp.Setup\Client\BlazorApp.Setup.Client.csproj", "{A425709D-91AA-4882-AD8B-6A97325D655D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.Setup.Shared", "Apps\SolidApp\SolidApp.Setup\Shared\SolidApp.Setup.Shared.csproj", "{0D1567C5-A81D-4960-861E-434C6C0BA448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Setup.Shared", "Apps\BlazorApp\BlazorApp.Setup\Shared\BlazorApp.Setup.Shared.csproj", "{0D1567C5-A81D-4960-861E-434C6C0BA448}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidApp.Tests", "SolidApp.Tests", "{1ADCA352-71A1-4E51-BF4F-01C2A7D9CDD5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp.Tests", "BlazorApp.Tests", "{1ADCA352-71A1-4E51-BF4F-01C2A7D9CDD5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth.Tests", "Auth.Tests", "{B67D2086-72EA-4772-B2CD-B10671776C2D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.UnitTests", "Apps\SolidApp\SolidApp.Tests\SolidApp.UnitTests\SolidApp.UnitTests.csproj", "{3E49A944-B005-4011-B700-E1CD8D5F0DD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.UnitTests", "Apps\BlazorApp\BlazorApp.Tests\BlazorApp.UnitTests\BlazorApp.UnitTests.csproj", "{3E49A944-B005-4011-B700-E1CD8D5F0DD0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.IntegrationTests", "Apps\SolidApp\SolidApp.Tests\SolidApp.IntegrationTests\SolidApp.IntegrationTests.csproj", "{AEF02B63-61AF-47C2-B99D-4DA402E47823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.IntegrationTests", "Apps\BlazorApp\BlazorApp.Tests\BlazorApp.IntegrationTests\BlazorApp.IntegrationTests.csproj", "{AEF02B63-61AF-47C2-B99D-4DA402E47823}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidApp.ArchTests", "Apps\SolidApp\SolidApp.Tests\SolidApp.ArchTests\SolidApp.ArchTests.csproj", "{340FE87B-160F-4BC0-B63C-EF28A7AFA52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.ArchTests", "Apps\BlazorApp\BlazorApp.Tests\BlazorApp.ArchTests\BlazorApp.ArchTests.csproj", "{340FE87B-160F-4BC0-B63C-EF28A7AFA52F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

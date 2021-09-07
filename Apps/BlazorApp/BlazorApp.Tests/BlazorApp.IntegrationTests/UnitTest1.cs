@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SolidApp.IntegrationTests
+namespace BlazorApp.IntegrationTests
 {
     [TestClass]
     public class UnitTest1

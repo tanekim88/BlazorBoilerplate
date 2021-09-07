@@ -6,33 +6,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackRulesModule } from '#shared/src/webpack/rules/webpack-rules.module';
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { SolidAppWebpackRulesConfigService, SolidAppWebpackRulesService } from './webpack-rules/webpack-rules.service';
-import { SolidAppWebpackCsvRulesService } from './webpack-csv-rules/webpack-csv-rules.service';
-import { SolidAppWebpackFontRulesService } from './webpack-font-rules/webpack-font-rules.service';
-import { SolidAppWebpackImageRulesService } from './webpack-image-rules/webpack-image-rules.service';
-import { SolidAppWebpackJsonRulesService } from './webpack-json-rules/webpack-json-rules.service';
-import { SolidAppWebpackStyleRulesService } from './webpack-style-rules/webpack-style-rules.service';
-import { SolidAppWebpackSvgRulesService } from './webpack-svg-rules/webpack-svg-rules.service';
-import { SolidAppWebpackTsRulesService } from './webpack-ts-rules/webpack-ts-rules.service';
-import { SolidAppWebpackXmlRulesService } from './webpack-xml-rules/webpack-xml-rules.service';
-let SolidAppWebpackRulesModule = class SolidAppWebpackRulesModule {
+import { BlazorAppWebpackRulesConfigService, BlazorAppWebpackRulesService } from './webpack-rules/webpack-rules.service';
+import { BlazorAppWebpackCsvRulesService } from './webpack-csv-rules/webpack-csv-rules.service';
+import { BlazorAppWebpackFontRulesService } from './webpack-font-rules/webpack-font-rules.service';
+import { BlazorAppWebpackImageRulesService } from './webpack-image-rules/webpack-image-rules.service';
+import { BlazorAppWebpackJsonRulesService } from './webpack-json-rules/webpack-json-rules.service';
+import { BlazorAppWebpackStyleRulesService } from './webpack-style-rules/webpack-style-rules.service';
+import { BlazorAppWebpackSvgRulesService } from './webpack-svg-rules/webpack-svg-rules.service';
+import { BlazorAppWebpackTsRulesService } from './webpack-ts-rules/webpack-ts-rules.service';
+import { BlazorAppWebpackXmlRulesService } from './webpack-xml-rules/webpack-xml-rules.service';
+let BlazorAppWebpackRulesModule = class BlazorAppWebpackRulesModule {
 };
-SolidAppWebpackRulesModule = __decorate([
+BlazorAppWebpackRulesModule = __decorate([
     CustomModule({
         providers: [
-            SolidAppWebpackRulesService,
-            SolidAppWebpackRulesConfigService,
-            SolidAppWebpackCsvRulesService,
-            SolidAppWebpackFontRulesService,
-            SolidAppWebpackImageRulesService,
-            SolidAppWebpackJsonRulesService,
-            SolidAppWebpackStyleRulesService,
-            SolidAppWebpackSvgRulesService,
-            SolidAppWebpackTsRulesService,
-            SolidAppWebpackXmlRulesService,
+            BlazorAppWebpackRulesService,
+            BlazorAppWebpackRulesConfigService,
+            BlazorAppWebpackCsvRulesService,
+            BlazorAppWebpackFontRulesService,
+            BlazorAppWebpackImageRulesService,
+            BlazorAppWebpackJsonRulesService,
+            BlazorAppWebpackStyleRulesService,
+            BlazorAppWebpackSvgRulesService,
+            BlazorAppWebpackTsRulesService,
+            BlazorAppWebpackXmlRulesService,
         ],
         imports: [WebpackRulesModule],
     })
-], SolidAppWebpackRulesModule);
-export { SolidAppWebpackRulesModule };
+], BlazorAppWebpackRulesModule);
+export { BlazorAppWebpackRulesModule };
 //# sourceMappingURL=webpack-rules.module.js.map

@@ -3,14 +3,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SolidApp.Shared;
+using BlazorApp.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 
 
-namespace SolidApp.Server.Controllers
+namespace BlazorApp.Server.Controllers
 {
     [Authorize]
     [ApiController]

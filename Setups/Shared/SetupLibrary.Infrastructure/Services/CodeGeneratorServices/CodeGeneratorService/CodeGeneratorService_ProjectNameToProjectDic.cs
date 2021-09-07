@@ -346,57 +346,57 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
                 new()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.Server)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}",
                     Prefix = "",
                     Postfix = "",
-                    Assembly = typeof(SolidApp.Server.Program).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.Server)}",
+                    Assembly = typeof(BlazorApp.Server.Program).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Server)}",
                     GeneratorSymbol = ""
                 },
                 new()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.Shared)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Shared)}",
                     Prefix = "",
                     Postfix = "",
-                    Assembly = typeof(SolidApp.Shared.Localizations.Resources.Resource).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.Shared)}",
+                    Assembly = typeof(BlazorApp.Shared.Localizations.Resources.Resource).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Shared)}",
                     GeneratorSymbol = "",
                     IsShared = true
                 },
                 new()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.Client)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}",
                     Prefix = "",
                     Postfix = "",
-                    Assembly = typeof(SolidApp.Client.Program).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.Client)}",
+                    Assembly = typeof(BlazorApp.Client.Program).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Client)}",
                     GeneratorSymbol = ""
                 },
                 new ()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.IntegrationTests)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.IntegrationTests)}",
                     Prefix = "",
                     Postfix = $"",
-                    Assembly = typeof(SolidApp.IntegrationTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.IntegrationTests)}",
+                    Assembly = typeof(BlazorApp.IntegrationTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.IntegrationTests)}",
                     GeneratorSymbol = ""
                 },
                 new ()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.ArchTests)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.ArchTests)}",
                     Prefix = "",
                     Postfix = $"",
-                    Assembly = typeof(SolidApp.ArchTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.ArchTests)}",
+                    Assembly = typeof(BlazorApp.ArchTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.ArchTests)}",
                     GeneratorSymbol = ""
                 },
                 new ()
                 {
-                    Name = $"{nameof(SolidApp)}.{nameof(SolidApp.UnitTests)}",
+                    Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.UnitTests)}",
                     Prefix = "",
                     Postfix = $"",
-                    Assembly = typeof(SolidApp.UnitTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(SolidApp)}_{nameof(SolidApp.UnitTests)}",
+                    Assembly = typeof(BlazorApp.UnitTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.UnitTests)}",
                     GeneratorSymbol = ""
                 }
 

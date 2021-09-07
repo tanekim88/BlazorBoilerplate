@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackPluginsService, WebpackPluginsConfigService, } from '#shared/src/webpack/plugins/webpack-plugins/webpack-plugins.service';
-let SolidAppWebpackPluginsConfigService = class SolidAppWebpackPluginsConfigService extends WebpackPluginsConfigService {
+let BlazorAppWebpackPluginsConfigService = class BlazorAppWebpackPluginsConfigService extends WebpackPluginsConfigService {
 };
-SolidAppWebpackPluginsConfigService = __decorate([
+BlazorAppWebpackPluginsConfigService = __decorate([
     CustomInjectable()
-], SolidAppWebpackPluginsConfigService);
-export { SolidAppWebpackPluginsConfigService };
-let SolidAppWebpackPluginsService = class SolidAppWebpackPluginsService extends WebpackPluginsService {
+], BlazorAppWebpackPluginsConfigService);
+export { BlazorAppWebpackPluginsConfigService };
+let BlazorAppWebpackPluginsService = class BlazorAppWebpackPluginsService extends WebpackPluginsService {
 };
-SolidAppWebpackPluginsService = __decorate([
+BlazorAppWebpackPluginsService = __decorate([
     CustomInjectable()
-], SolidAppWebpackPluginsService);
-export { SolidAppWebpackPluginsService };
+], BlazorAppWebpackPluginsService);
+export { BlazorAppWebpackPluginsService };
 //# sourceMappingURL=webpack-plugins.service.js.map

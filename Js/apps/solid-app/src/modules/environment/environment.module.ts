@@ -2,7 +2,7 @@ import { blazorAppConfig } from '#solid-app/configs';
 import { LOCAL_CONFIG } from '#shared/configs';
 import { CustomModule } from '#shared/src/functions/process-providers';
 
-import { SolidAppEnvironmentService } from './environment/environment.service';
+import { BlazorAppEnvironmentService } from './environment/environment.service';
 
 @CustomModule({
     providers: [
@@ -10,7 +10,7 @@ import { SolidAppEnvironmentService } from './environment/environment.service';
             provide: LOCAL_CONFIG,
             useValue: blazorAppConfig,
         },
-        SolidAppEnvironmentService,
+        BlazorAppEnvironmentService,
     ],
 })
-export class SolidAppEnvironmentModule {}
+export class BlazorAppEnvironmentModule {}

@@ -7,13 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { WebpackExtractSvgSpriteWebpackPluginService } from '#shared/src/webpack/plugins/webpack-extract-svg-sprite-webpack-plugin/webpack-extract-svg-sprite-webpack-plugin.service';
 const ExtractSvgSpriteWebpackPlugin = require('extract-svg-sprite-webpack-plugin');
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackExtractSvgSpriteWebpackPluginService = class SolidAppWebpackExtractSvgSpriteWebpackPluginService extends WebpackExtractSvgSpriteWebpackPluginService {
+let BlazorAppWebpackExtractSvgSpriteWebpackPluginService = class BlazorAppWebpackExtractSvgSpriteWebpackPluginService extends WebpackExtractSvgSpriteWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackExtractSvgSpriteWebpackPluginService = __decorate([
+BlazorAppWebpackExtractSvgSpriteWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackExtractSvgSpriteWebpackPluginService);
-export { SolidAppWebpackExtractSvgSpriteWebpackPluginService };
+], BlazorAppWebpackExtractSvgSpriteWebpackPluginService);
+export { BlazorAppWebpackExtractSvgSpriteWebpackPluginService };
 //# sourceMappingURL=webpack-extract-svg-sprite-webpack-plugin.service.js.map

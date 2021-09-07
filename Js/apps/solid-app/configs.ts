@@ -1,7 +1,7 @@
 import { ConfigBase } from '#shared/configs.base';
 import { solidAppPaths } from './paths';
 
-export class SolidAppConfig extends ConfigBase {
+export class BlazorAppConfig extends ConfigBase {
     rootDir = solidAppPaths.toAbsolutePath();
     RootDir = solidAppPaths.toAbsolutePath();
     projectName = 'blazorApp';
@@ -13,4 +13,4 @@ export class SolidAppConfig extends ConfigBase {
     description = 'app desc';
 }
 
-export const blazorAppConfig = new SolidAppConfig();
+export const blazorAppConfig = new BlazorAppConfig();

@@ -16,7 +16,7 @@
   \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/top-app-bar/_index.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/top-app-bar/_index.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*************************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/top-app-bar/_index.scss\");\r\nconst top_app_bar_1 = __webpack_require__(/*! @material/top-app-bar */ \"../../node_modules/@material/top-app-bar/index.js\");\r\nconst selector = '.mdc-top-app-bar';\r\n[].map.call(document.querySelectorAll(selector), function (el) {\r\n    const topAppBar = new top_app_bar_1.MDCTopAppBar(el);\r\n});\r\n\n\n//# sourceURL=webpack://solid-app/../shared/src/web/material/native/components/top-app-bar/index.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./_index.scss */ \"../shared/src/web/material/native/components/top-app-bar/_index.scss\");\r\nconst top_app_bar_1 = __webpack_require__(/*! @material/top-app-bar */ \"../../node_modules/@material/top-app-bar/index.js\");\r\nconst selector = '.mdc-top-app-bar';\r\n[].map.call(document.querySelectorAll(selector), function (el) {\r\n    const topAppBar = new top_app_bar_1.MDCTopAppBar(el);\r\n});\r\n\n\n//# sourceURL=webpack://blazor-app/../shared/src/web/material/native/components/top-app-bar/index.ts?");
 
 /***/ })
 

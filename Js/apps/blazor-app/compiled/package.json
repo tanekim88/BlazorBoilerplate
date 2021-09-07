@@ -14,7 +14,7 @@
         "#solid-app/*": "./apps/solid-app/*",
         "#shared/*": "./apps/shared/*",
         "#Auth/*": "./absolute-root/Apps/Auth/*",
-        "#SolidApp/*": "./absolute-root/Apps/SolidApp/*"
+        "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
     "scripts": {
         "lint": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint **/*.ts --fix --no-eslintrc -c .eslintrc.json",

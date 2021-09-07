@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "SolidApp.Setup": {
+    "BlazorApp.Setup": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

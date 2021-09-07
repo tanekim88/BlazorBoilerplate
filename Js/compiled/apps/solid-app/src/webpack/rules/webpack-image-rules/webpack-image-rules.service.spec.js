@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackImageRulesService } from './webpack-image-rules.service';
-describe('SolidAppWebpackImageRulesService', () => {
+import { BlazorAppWebpackImageRulesService } from './webpack-image-rules.service';
+describe('BlazorAppWebpackImageRulesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackImageRulesService],
+            providers: [BlazorAppWebpackImageRulesService],
         }).compile();
-        service = module.get(SolidAppWebpackImageRulesService);
+        service = module.get(BlazorAppWebpackImageRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

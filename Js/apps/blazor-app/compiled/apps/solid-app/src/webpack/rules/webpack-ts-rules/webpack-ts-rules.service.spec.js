@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackTsRulesService } from './webpack-ts-rules.service';
-describe('SolidAppWebpackTsRulesService', () => {
+import { BlazorAppWebpackTsRulesService } from './webpack-ts-rules.service';
+describe('BlazorAppWebpackTsRulesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackTsRulesService],
+            providers: [BlazorAppWebpackTsRulesService],
         }).compile();
-        service = module.get(SolidAppWebpackTsRulesService);
+        service = module.get(BlazorAppWebpackTsRulesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

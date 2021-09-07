@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 
 
-namespace SolidApp.Server.Pages
+namespace BlazorApp.Server.Pages
 {
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     [IgnoreAntiforgeryToken]

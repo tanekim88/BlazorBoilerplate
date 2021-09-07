@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.SolidWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\SolidApp.Setup.Shared.csproj" />
+    <ProjectReference Include="..\Shared\BlazorApp.Setup.Shared.csproj" />
   </ItemGroup>
 
 </Project>

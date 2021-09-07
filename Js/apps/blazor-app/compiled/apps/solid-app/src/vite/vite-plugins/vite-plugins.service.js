@@ -7,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
-let SolidAppVitePluginsService = class SolidAppVitePluginsService extends VitePluginsService {
+let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends VitePluginsService {
     blazorAppEnvironmentService;
     // @CustomInject(VitePluginGlobInputService)
     // protected vitePluginGlobInputService: VitePluginGlobInputService;
@@ -20,14 +20,14 @@ let SolidAppVitePluginsService = class SolidAppVitePluginsService extends VitePl
         return [
             this.vitePluginHtmlService.createPlugin({
                 externals: [
-                    { html: '<link href="_content/Material.Solid/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="_content/Material.Solid/MaterialSolid.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="SolidApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
-                    { html: '<script src="_content/Material.Solid/MaterialSolid.min.js"></script>', insertAt: '</body>' },
+                    { html: '<link href="_content/Material.Blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.Blazor/MaterialBlazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
+                    { html: '<script src="_content/Material.Blazor/MaterialBlazor.min.js"></script>', insertAt: '</body>' },
                     {
                         html: `
                         <script>
-                            MaterialSolid.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
                         </script>
                         `, insertAt: '</body>'
                     },
@@ -48,16 +48,16 @@ let SolidAppVitePluginsService = class SolidAppVitePluginsService extends VitePl
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService
     // @CustomInject(VitePluginGlobInputService)
     // protected vitePluginGlobInputService: VitePluginGlobInputService;
     // @CustomInject(VitePluginHtmlService)
     // protected vitePluginHtmlService: VitePluginHtmlService;
     )
-], SolidAppVitePluginsService.prototype, "blazorAppEnvironmentService", void 0);
-SolidAppVitePluginsService = __decorate([
+], BlazorAppVitePluginsService.prototype, "blazorAppEnvironmentService", void 0);
+BlazorAppVitePluginsService = __decorate([
     CustomInjectable()
-], SolidAppVitePluginsService);
-export { SolidAppVitePluginsService };
+], BlazorAppVitePluginsService);
+export { BlazorAppVitePluginsService };
 //# sourceMappingURL=vite-plugins.service.js.map

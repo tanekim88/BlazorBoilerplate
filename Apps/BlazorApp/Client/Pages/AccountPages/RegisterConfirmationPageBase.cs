@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 
 
 
-namespace SolidApp.Client.Pages.AccountPages
+namespace BlazorApp.Client.Pages.AccountPages
 {
     public class RegisterConfirmationPageBase : ComponentBase
     {

@@ -4,7 +4,7 @@ using System;
 
 
 
-namespace SolidApp.Shared
+namespace BlazorApp.Shared
 {
     public class WeatherForecast
     {

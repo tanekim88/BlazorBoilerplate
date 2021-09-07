@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using SharedAuth.Application.Dtos.AuthDtos;
-using SolidApp.Client.Components.ValidationComponents;
+using BlazorApp.Client.Components.ValidationComponents;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 
 
-namespace SolidApp.Client.Pages.AccountPages
+namespace BlazorApp.Client.Pages.AccountPages
 {
     public class RegisterPageBase : ComponentBase
     {

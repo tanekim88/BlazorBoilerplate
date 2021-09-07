@@ -8,9 +8,9 @@ import { WebpackStyleRulesService } from '#shared/src/webpack/rules/webpack-styl
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { MergeCommand } from '#shared/src/modules/utilities/merge/merge/merge-command';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { SolidAppPaths, blazorAppPaths } from '#solid-app/paths';
+import { BlazorAppPaths, blazorAppPaths } from '#solid-app/paths';
 import path from 'path';
-let SolidAppWebpackStyleRulesService = class SolidAppWebpackStyleRulesService extends WebpackStyleRulesService {
+let BlazorAppWebpackStyleRulesService = class BlazorAppWebpackStyleRulesService extends WebpackStyleRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
@@ -20,8 +20,8 @@ let SolidAppWebpackStyleRulesService = class SolidAppWebpackStyleRulesService ex
             this.createRule({
                 test: this.regexService.generateRegex({
                     startsWithTheseWords: [
-                        SolidAppPaths.Pages.toAbsolutePath(),
-                        SolidAppPaths.Shared.toAbsolutePath(),
+                        BlazorAppPaths.Pages.toAbsolutePath(),
+                        BlazorAppPaths.Shared.toAbsolutePath(),
                     ],
                     endsWithTheseWords: ['scss', 'css'],
                 }),
@@ -34,7 +34,7 @@ let SolidAppWebpackStyleRulesService = class SolidAppWebpackStyleRulesService ex
                                 const rel = path
                                     .relative(blazorAppPaths.toAbsolutePath(), resourcePath)
                                     .replace(/\.scss$/, '.css');
-                                const relDir = path.relative(SolidAppPaths.wwwroot.toAbsolutePath(), SolidAppPaths.toAbsolutePath());
+                                const relDir = path.relative(BlazorAppPaths.wwwroot.toAbsolutePath(), BlazorAppPaths.toAbsolutePath());
                                 return path.join(relDir, rel);
                             },
                         },
@@ -44,8 +44,8 @@ let SolidAppWebpackStyleRulesService = class SolidAppWebpackStyleRulesService ex
             this.createRule(this.mergeService.mergeOptions({
                 test: this.regexService.generateRegex({
                     doesNotStartWithTheseWords: [
-                        SolidAppPaths.Pages.toAbsolutePath(),
-                        SolidAppPaths.Shared.toAbsolutePath(),
+                        BlazorAppPaths.Pages.toAbsolutePath(),
+                        BlazorAppPaths.Shared.toAbsolutePath(),
                     ],
                     endsWithTheseWords: ['.scss', '.css'],
                     doesNotEndsWithTheseWords: ['_export.scss'],
@@ -73,8 +73,8 @@ let SolidAppWebpackStyleRulesService = class SolidAppWebpackStyleRulesService ex
         ];
     }
 };
-SolidAppWebpackStyleRulesService = __decorate([
+BlazorAppWebpackStyleRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackStyleRulesService);
-export { SolidAppWebpackStyleRulesService };
+], BlazorAppWebpackStyleRulesService);
+export { BlazorAppWebpackStyleRulesService };
 //# sourceMappingURL=webpack-style-rules.service.js.map

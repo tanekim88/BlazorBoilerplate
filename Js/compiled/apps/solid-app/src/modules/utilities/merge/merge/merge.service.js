@@ -6,10 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { MergeService } from '#shared/src/modules/utilities/modules/merge/merge/merge.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppMergeService = class SolidAppMergeService extends MergeService {
+let BlazorAppMergeService = class BlazorAppMergeService extends MergeService {
 };
-SolidAppMergeService = __decorate([
+BlazorAppMergeService = __decorate([
     CustomInjectable()
-], SolidAppMergeService);
-export { SolidAppMergeService };
+], BlazorAppMergeService);
+export { BlazorAppMergeService };
 //# sourceMappingURL=merge.service.js.map

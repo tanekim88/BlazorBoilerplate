@@ -7,19 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { blazorAppConfig } from '#solid-app/configs';
 import { LOCAL_CONFIG } from '#shared/configs';
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { SolidAppEnvironmentService } from './environment/environment.service';
-let SolidAppEnvironmentModule = class SolidAppEnvironmentModule {
+import { BlazorAppEnvironmentService } from './environment/environment.service';
+let BlazorAppEnvironmentModule = class BlazorAppEnvironmentModule {
 };
-SolidAppEnvironmentModule = __decorate([
+BlazorAppEnvironmentModule = __decorate([
     CustomModule({
         providers: [
             {
                 provide: LOCAL_CONFIG,
                 useValue: blazorAppConfig,
             },
-            SolidAppEnvironmentService,
+            BlazorAppEnvironmentService,
         ],
     })
-], SolidAppEnvironmentModule);
-export { SolidAppEnvironmentModule };
+], BlazorAppEnvironmentModule);
+export { BlazorAppEnvironmentModule };
 //# sourceMappingURL=environment.module.js.map

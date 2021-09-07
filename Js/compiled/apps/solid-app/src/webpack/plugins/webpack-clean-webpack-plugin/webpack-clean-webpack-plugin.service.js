@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackCleanWebpackPluginService } from '#shared/src/webpack/plugins/webpack-clean-webpack-plugin/webpack-clean-webpack-plugin.service';
-let SolidAppWebpackCleanWebpackPluginService = class SolidAppWebpackCleanWebpackPluginService extends WebpackCleanWebpackPluginService {
+let BlazorAppWebpackCleanWebpackPluginService = class BlazorAppWebpackCleanWebpackPluginService extends WebpackCleanWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackCleanWebpackPluginService = __decorate([
+BlazorAppWebpackCleanWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackCleanWebpackPluginService);
-export { SolidAppWebpackCleanWebpackPluginService };
+], BlazorAppWebpackCleanWebpackPluginService);
+export { BlazorAppWebpackCleanWebpackPluginService };
 //# sourceMappingURL=webpack-clean-webpack-plugin.service.js.map

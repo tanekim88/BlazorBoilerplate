@@ -62,7 +62,7 @@
   },
   "IdentityServer": {
     "Clients": {
-      "SolidApp.Client": {
+      "BlazorApp.Client": {
         "Profile": "IdentityServerSPA"
       }
     }

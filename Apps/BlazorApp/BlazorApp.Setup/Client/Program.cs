@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidApp.Setup.Client
+namespace BlazorApp.Setup.Client
 {
     public class Program
     {

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { blazorAppPaths } from '#solid-app/paths';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackWorkboxWebpackPluginService } from '#shared/src/webpack/plugins/webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service';
-let SolidAppWebpackWorkboxWebpackPluginService = class SolidAppWebpackWorkboxWebpackPluginService extends WebpackWorkboxWebpackPluginService {
+let BlazorAppWebpackWorkboxWebpackPluginService = class BlazorAppWebpackWorkboxWebpackPluginService extends WebpackWorkboxWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {
             swSrc: blazorAppPaths.src['service-worker']['index.ts'].toAbsolutePath(),
@@ -16,8 +16,8 @@ let SolidAppWebpackWorkboxWebpackPluginService = class SolidAppWebpackWorkboxWeb
         }, options);
     }
 };
-SolidAppWebpackWorkboxWebpackPluginService = __decorate([
+BlazorAppWebpackWorkboxWebpackPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackWorkboxWebpackPluginService);
-export { SolidAppWebpackWorkboxWebpackPluginService };
+], BlazorAppWebpackWorkboxWebpackPluginService);
+export { BlazorAppWebpackWorkboxWebpackPluginService };
 //# sourceMappingURL=webpack-workbox-webpack-plugin.service.js.map

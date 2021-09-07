@@ -9,12 +9,12 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
     {
         public static IMvcBuilder UseCustomOData(this IMvcBuilder mvcBuilder)
         {
-            mvcBuilder.AddOData(setupAction: opt =>
-                opt
-                    .AddModel(prefix: "odata", model: GetEdmModel(), configureAction: builder => { })
-                    .AddModel(prefix: "v{version}", model: GetEdmModel())
-                    .Filter().Select().Expand().OrderBy().Count()
-            );
+            //mvcBuilder.AddOData(setupAction: opt =>
+            //    opt
+            //        .AddModel(prefix: "odata", model: GetEdmModel(), configureAction: builder => { })
+            //        .AddModel(prefix: "v{version}", model: GetEdmModel())
+            //        .Filter().Select().Expand().OrderBy().Count()
+            //);
             return mvcBuilder;
         }
 

@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { ViteDevService } from '#shared/src/vite/vite-dev/vite-dev.service';
-import { SolidAppViteSharedService } from '../vite-shared/vite-shared.service';
-let SolidAppViteDevService = class SolidAppViteDevService extends ViteDevService {
+import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
+let BlazorAppViteDevService = class BlazorAppViteDevService extends ViteDevService {
     blazorAppViteSharedService;
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), this.blazorAppViteSharedService.createConfiguration(), {
@@ -21,11 +21,11 @@ let SolidAppViteDevService = class SolidAppViteDevService extends ViteDevService
     }
 };
 __decorate([
-    CustomInject(SolidAppViteSharedService),
-    __metadata("design:type", SolidAppViteSharedService)
-], SolidAppViteDevService.prototype, "blazorAppViteSharedService", void 0);
-SolidAppViteDevService = __decorate([
+    CustomInject(BlazorAppViteSharedService),
+    __metadata("design:type", BlazorAppViteSharedService)
+], BlazorAppViteDevService.prototype, "blazorAppViteSharedService", void 0);
+BlazorAppViteDevService = __decorate([
     CustomInjectable()
-], SolidAppViteDevService);
-export { SolidAppViteDevService };
+], BlazorAppViteDevService);
+export { BlazorAppViteDevService };
 //# sourceMappingURL=vite-dev.service.js.map

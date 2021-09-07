@@ -11,8 +11,8 @@ import { WebpackHtmlWebpackPluginService } from '#shared/src/webpack/plugins/web
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { blazorAppPaths } from '#solid-app/paths';
 import { blazorAppConfig } from '#solid-app/configs';
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
-let SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
+import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+let BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
     blazorAppClientEnvironmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
@@ -59,11 +59,11 @@ let SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class 
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService)
-], SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath.prototype, "blazorAppClientEnvironmentService", void 0);
-SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = __decorate([
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService)
+], BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath.prototype, "blazorAppClientEnvironmentService", void 0);
+BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = __decorate([
     CustomInjectable()
-], SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath);
-export { SolidAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath };
+], BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath);
+export { BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath };
 //# sourceMappingURL=webpack-html-webpack-plugin.service.js.map

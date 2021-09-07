@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackPreRemoveFilesWebpackPluginService } from './webpack-remove-files-webpack-plugin.service';
-describe('SolidAppWebpackPreRemoveFilesWebpackPluginService', () => {
+import { BlazorAppWebpackPreRemoveFilesWebpackPluginService } from './webpack-remove-files-webpack-plugin.service';
+describe('BlazorAppWebpackPreRemoveFilesWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackPreRemoveFilesWebpackPluginService],
+            providers: [BlazorAppWebpackPreRemoveFilesWebpackPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackPreRemoveFilesWebpackPluginService);
+        service = module.get(BlazorAppWebpackPreRemoveFilesWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

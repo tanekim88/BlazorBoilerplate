@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackRulesConfigService, WebpackRulesService, } from '#shared/src/webpack/rules/webpack-rules/webpack-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackRulesConfigService = class SolidAppWebpackRulesConfigService extends WebpackRulesConfigService {
+let BlazorAppWebpackRulesConfigService = class BlazorAppWebpackRulesConfigService extends WebpackRulesConfigService {
 };
-SolidAppWebpackRulesConfigService = __decorate([
+BlazorAppWebpackRulesConfigService = __decorate([
     CustomInjectable()
-], SolidAppWebpackRulesConfigService);
-export { SolidAppWebpackRulesConfigService };
-let SolidAppWebpackRulesService = class SolidAppWebpackRulesService extends WebpackRulesService {
+], BlazorAppWebpackRulesConfigService);
+export { BlazorAppWebpackRulesConfigService };
+let BlazorAppWebpackRulesService = class BlazorAppWebpackRulesService extends WebpackRulesService {
 };
-SolidAppWebpackRulesService = __decorate([
+BlazorAppWebpackRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackRulesService);
-export { SolidAppWebpackRulesService };
+], BlazorAppWebpackRulesService);
+export { BlazorAppWebpackRulesService };
 //# sourceMappingURL=webpack-rules.service.js.map

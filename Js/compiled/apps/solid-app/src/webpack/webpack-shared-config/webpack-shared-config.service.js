@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { blazorAppPaths } from '#solid-app/paths';
 import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginConfigService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 import { WebpackSharedConfigService } from '#shared/src/webpack/webpack-shared-config/webpack-shared-config.service';
-import { SolidAppEnvironmentService } from '../../modules/environment/environment/environment.service';
-import { SolidAppWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
-import { SolidAppWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';
+import { BlazorAppEnvironmentService } from '../../modules/environment/environment/environment.service';
+import { BlazorAppWebpackRulesConfigService } from '../rules/webpack-rules/webpack-rules.service';
+import { BlazorAppWebpackPluginsConfigService } from '../plugins/webpack-plugins/webpack-plugins.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackSharedConfigService = class SolidAppWebpackSharedConfigService extends WebpackSharedConfigService {
+let BlazorAppWebpackSharedConfigService = class BlazorAppWebpackSharedConfigService extends WebpackSharedConfigService {
     blazorAppEnvironmentService;
     blazorAppClientWebpackRulesConfigService;
     blazorAppClientWebpackPluginsConfigService;
@@ -33,19 +33,19 @@ let SolidAppWebpackSharedConfigService = class SolidAppWebpackSharedConfigServic
     }
 };
 __decorate([
-    CustomInject(SolidAppEnvironmentService),
-    __metadata("design:type", SolidAppEnvironmentService)
-], SolidAppWebpackSharedConfigService.prototype, "blazorAppEnvironmentService", void 0);
+    CustomInject(BlazorAppEnvironmentService),
+    __metadata("design:type", BlazorAppEnvironmentService)
+], BlazorAppWebpackSharedConfigService.prototype, "blazorAppEnvironmentService", void 0);
 __decorate([
-    CustomInject(SolidAppWebpackRulesConfigService),
-    __metadata("design:type", SolidAppWebpackRulesConfigService)
-], SolidAppWebpackSharedConfigService.prototype, "blazorAppClientWebpackRulesConfigService", void 0);
+    CustomInject(BlazorAppWebpackRulesConfigService),
+    __metadata("design:type", BlazorAppWebpackRulesConfigService)
+], BlazorAppWebpackSharedConfigService.prototype, "blazorAppClientWebpackRulesConfigService", void 0);
 __decorate([
-    CustomInject(SolidAppWebpackPluginsConfigService),
-    __metadata("design:type", SolidAppWebpackPluginsConfigService)
-], SolidAppWebpackSharedConfigService.prototype, "blazorAppClientWebpackPluginsConfigService", void 0);
-SolidAppWebpackSharedConfigService = __decorate([
+    CustomInject(BlazorAppWebpackPluginsConfigService),
+    __metadata("design:type", BlazorAppWebpackPluginsConfigService)
+], BlazorAppWebpackSharedConfigService.prototype, "blazorAppClientWebpackPluginsConfigService", void 0);
+BlazorAppWebpackSharedConfigService = __decorate([
     CustomInjectable()
-], SolidAppWebpackSharedConfigService);
-export { SolidAppWebpackSharedConfigService };
+], BlazorAppWebpackSharedConfigService);
+export { BlazorAppWebpackSharedConfigService };
 //# sourceMappingURL=webpack-shared-config.service.js.map

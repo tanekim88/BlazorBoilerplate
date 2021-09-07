@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin.service';
-describe('SolidAppWebpackWebpackChokidarPluginService', () => {
+import { BlazorAppWebpackWebpackChokidarPluginService } from './webpack-webpack-chokidar-plugin.service';
+describe('BlazorAppWebpackWebpackChokidarPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackWebpackChokidarPluginService],
+            providers: [BlazorAppWebpackWebpackChokidarPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackWebpackChokidarPluginService);
+        service = module.get(BlazorAppWebpackWebpackChokidarPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

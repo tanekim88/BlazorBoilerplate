@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackTsconfigPathsWebpackPluginService } from './webpack-tsconfig-paths-webpack-plugin.service';
+import { BlazorAppWebpackTsconfigPathsWebpackPluginService } from './webpack-tsconfig-paths-webpack-plugin.service';
 describe('WebpackTsconfigPathsWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackTsconfigPathsWebpackPluginService],
+            providers: [BlazorAppWebpackTsconfigPathsWebpackPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackTsconfigPathsWebpackPluginService);
+        service = module.get(BlazorAppWebpackTsconfigPathsWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

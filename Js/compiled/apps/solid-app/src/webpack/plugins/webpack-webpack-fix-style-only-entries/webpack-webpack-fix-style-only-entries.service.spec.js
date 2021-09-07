@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries.service';
-describe('SolidAppWebpackWebpackFixStyleOnlyEntriesService', () => {
+import { BlazorAppWebpackWebpackFixStyleOnlyEntriesService } from './webpack-webpack-fix-style-only-entries.service';
+describe('BlazorAppWebpackWebpackFixStyleOnlyEntriesService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackWebpackFixStyleOnlyEntriesService],
+            providers: [BlazorAppWebpackWebpackFixStyleOnlyEntriesService],
         }).compile();
-        service = module.get(SolidAppWebpackWebpackFixStyleOnlyEntriesService);
+        service = module.get(BlazorAppWebpackWebpackFixStyleOnlyEntriesService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

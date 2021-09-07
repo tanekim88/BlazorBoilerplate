@@ -6,10 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { RegexService } from '#shared/src/modules/utilities/regex/regex/regex.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppRegexService = class SolidAppRegexService extends RegexService {
+let BlazorAppRegexService = class BlazorAppRegexService extends RegexService {
 };
-SolidAppRegexService = __decorate([
+BlazorAppRegexService = __decorate([
     CustomInjectable()
-], SolidAppRegexService);
-export { SolidAppRegexService };
+], BlazorAppRegexService);
+export { BlazorAppRegexService };
 //# sourceMappingURL=regex.service.js.map

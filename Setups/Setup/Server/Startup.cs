@@ -1,14 +1,12 @@
 
 
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions;
-
-
 
 namespace Setup.Server
 {
@@ -48,7 +46,7 @@ namespace Setup.Server
 
             //app.UseHttpsRedirection();
 
-            app.UseSolidFrameworkFiles();
+            app.UseBlazorFrameworkFiles();
 
             app.UseStaticFiles();
 
@@ -59,7 +57,7 @@ namespace Setup.Server
                 ctx.Request.Path = "/Setup" + ctx.Request.Path;
                 return nxt();
             });
-            app.UseSolidFrameworkFiles(pathPrefix: "/Setup");
+            app.UseBlazorFrameworkFiles(pathPrefix: "/Setup");
 
             app.UseEndpoints(configure: endpoints =>
             {

@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { WebpackImageRulesService } from '#shared/src/webpack/rules/webpack-image-rules/webpack-image-rules.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-let SolidAppWebpackImageRulesService = class SolidAppWebpackImageRulesService extends WebpackImageRulesService {
+let BlazorAppWebpackImageRulesService = class BlazorAppWebpackImageRulesService extends WebpackImageRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);
     }
 };
-SolidAppWebpackImageRulesService = __decorate([
+BlazorAppWebpackImageRulesService = __decorate([
     CustomInjectable()
-], SolidAppWebpackImageRulesService);
-export { SolidAppWebpackImageRulesService };
+], BlazorAppWebpackImageRulesService);
+export { BlazorAppWebpackImageRulesService };
 //# sourceMappingURL=webpack-image-rules.service.js.map

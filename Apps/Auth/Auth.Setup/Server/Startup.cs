@@ -43,7 +43,7 @@ namespace Auth.Setup.Server
 
             //app.UseHttpsRedirection();
 
-            app.UseSolidFrameworkFiles();
+            app.UseBlazorFrameworkFiles();
 
             app.UseStaticFiles();
 
@@ -54,7 +54,7 @@ namespace Auth.Setup.Server
                 ctx.Request.Path = "/Setup" + ctx.Request.Path;
                 return nxt();
             });
-            app.UseSolidFrameworkFiles(pathPrefix: "/Setup");
+            app.UseBlazorFrameworkFiles(pathPrefix: "/Setup");
 
             app.UseEndpoints(configure: endpoints =>
             {

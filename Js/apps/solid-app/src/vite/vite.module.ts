@@ -1,18 +1,18 @@
 
 import { CustomModule } from "#shared/src/functions/process-providers";
 import { ViteModule } from "#shared/src/vite/vite.module";
-import { SolidAppModulesModule } from "../modules/modules.module";
-import { SolidAppViteDevService } from "./vite-dev/vite-dev.service";
-import { SolidAppVitePluginsModule } from "./vite-plugins/vite-plugins.module";
-import { SolidAppViteProdService } from "./vite-prod/vite-prod.service";
-import { SolidAppViteSharedService } from "./vite-shared/vite-shared.service";
+import { BlazorAppModulesModule } from "../modules/modules.module";
+import { BlazorAppViteDevService } from "./vite-dev/vite-dev.service";
+import { BlazorAppVitePluginsModule } from "./vite-plugins/vite-plugins.module";
+import { BlazorAppViteProdService } from "./vite-prod/vite-prod.service";
+import { BlazorAppViteSharedService } from "./vite-shared/vite-shared.service";
 
 @CustomModule({
-    imports: [ViteModule, SolidAppModulesModule, SolidAppVitePluginsModule],
+    imports: [ViteModule, BlazorAppModulesModule, BlazorAppVitePluginsModule],
     providers: [
-        SolidAppViteSharedService,
-        SolidAppViteProdService,
-        SolidAppViteDevService,
+        BlazorAppViteSharedService,
+        BlazorAppViteProdService,
+        BlazorAppViteDevService,
     ],
 })
-export class SolidAppViteModule { }
+export class BlazorAppViteModule { }

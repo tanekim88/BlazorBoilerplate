@@ -11,24 +11,24 @@ import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { CustomInject } from '#shared/src/functions/process-providers';
 import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
 import { WebpackSharedService } from '#shared/src/webpack/webpack-shared/webpack-shared.service';
-import { SolidAppPaths, blazorAppPaths } from '#solid-app/paths';
+import { BlazorAppPaths, blazorAppPaths } from '#solid-app/paths';
 import path from 'path';
-import { SolidAppWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
-import { SolidAppWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
-let SolidAppWebpackSharedService = class SolidAppWebpackSharedService extends WebpackSharedService {
+import { BlazorAppWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
+import { BlazorAppWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
+let BlazorAppWebpackSharedService = class BlazorAppWebpackSharedService extends WebpackSharedService {
     blazorAppClientWebpackRulesService;
     blazorAppClientWebpackPluginsService;
     createConfiguration(options) {
         const entry = WebpackWatchEntriesPlugin.getEntries([
-            path.resolve(SolidAppPaths.Pages.toAbsolutePath(), '**/*.scss'),
-            path.resolve(SolidAppPaths.Shared.toAbsolutePath(), '**/*.scss'),
+            path.resolve(BlazorAppPaths.Pages.toAbsolutePath(), '**/*.scss'),
+            path.resolve(BlazorAppPaths.Shared.toAbsolutePath(), '**/*.scss'),
         ], WebpackWatchEntriesPluginService.name);
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             entry,
             context: blazorAppPaths.toAbsolutePath(),
             output: {
                 filename: '[name].js',
-                path: SolidAppPaths.wwwroot.toAbsolutePath(),
+                path: BlazorAppPaths.wwwroot.toAbsolutePath(),
                 publicPath: '/',
             },
             module: {
@@ -42,15 +42,15 @@ let SolidAppWebpackSharedService = class SolidAppWebpackSharedService extends We
     }
 };
 __decorate([
-    CustomInject(SolidAppWebpackRulesService),
-    __metadata("design:type", SolidAppWebpackRulesService)
-], SolidAppWebpackSharedService.prototype, "blazorAppClientWebpackRulesService", void 0);
+    CustomInject(BlazorAppWebpackRulesService),
+    __metadata("design:type", BlazorAppWebpackRulesService)
+], BlazorAppWebpackSharedService.prototype, "blazorAppClientWebpackRulesService", void 0);
 __decorate([
-    CustomInject(SolidAppWebpackPluginsService),
-    __metadata("design:type", SolidAppWebpackPluginsService)
-], SolidAppWebpackSharedService.prototype, "blazorAppClientWebpackPluginsService", void 0);
-SolidAppWebpackSharedService = __decorate([
+    CustomInject(BlazorAppWebpackPluginsService),
+    __metadata("design:type", BlazorAppWebpackPluginsService)
+], BlazorAppWebpackSharedService.prototype, "blazorAppClientWebpackPluginsService", void 0);
+BlazorAppWebpackSharedService = __decorate([
     CustomInjectable()
-], SolidAppWebpackSharedService);
-export { SolidAppWebpackSharedService };
+], BlazorAppWebpackSharedService);
+export { BlazorAppWebpackSharedService };
 //# sourceMappingURL=webpack-shared.service.js.map

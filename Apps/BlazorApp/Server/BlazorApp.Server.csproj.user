@@ -4,6 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>SolidApp.Server</ActiveDebugProfile>
+    <ActiveDebugProfile>BlazorApp.Server</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

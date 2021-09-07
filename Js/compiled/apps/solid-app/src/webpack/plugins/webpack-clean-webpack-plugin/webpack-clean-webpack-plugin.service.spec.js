@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppWebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin.service';
-describe('SolidAppWebpackCleanWebpackPluginService', () => {
+import { BlazorAppWebpackCleanWebpackPluginService } from './webpack-clean-webpack-plugin.service';
+describe('BlazorAppWebpackCleanWebpackPluginService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppWebpackCleanWebpackPluginService],
+            providers: [BlazorAppWebpackCleanWebpackPluginService],
         }).compile();
-        service = module.get(SolidAppWebpackCleanWebpackPluginService);
+        service = module.get(BlazorAppWebpackCleanWebpackPluginService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

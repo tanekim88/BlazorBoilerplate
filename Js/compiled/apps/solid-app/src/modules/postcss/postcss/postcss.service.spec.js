@@ -1,12 +1,12 @@
 import { Test } from '@nestjs/testing';
-import { SolidAppPostcssService } from './postcss.service';
-describe('SolidAppPostcssService', () => {
+import { BlazorAppPostcssService } from './postcss.service';
+describe('BlazorAppPostcssService', () => {
     let service;
     beforeEach(async () => {
         const module = await Test.createTestingModule({
-            providers: [SolidAppPostcssService],
+            providers: [BlazorAppPostcssService],
         }).compile();
-        service = module.get(SolidAppPostcssService);
+        service = module.get(BlazorAppPostcssService);
     });
     it('should be defined', () => {
         expect(service).toBeDefined();

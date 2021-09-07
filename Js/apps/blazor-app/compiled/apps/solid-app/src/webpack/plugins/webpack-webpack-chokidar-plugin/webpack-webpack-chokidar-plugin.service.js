@@ -7,13 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { WebpackWebpackChokidarPluginService } from '#shared/src/webpack/plugins/webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
-let SolidAppWebpackWebpackChokidarPluginService = class SolidAppWebpackWebpackChokidarPluginService extends WebpackWebpackChokidarPluginService {
+let BlazorAppWebpackWebpackChokidarPluginService = class BlazorAppWebpackWebpackChokidarPluginService extends WebpackWebpackChokidarPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);
     }
 };
-SolidAppWebpackWebpackChokidarPluginService = __decorate([
+BlazorAppWebpackWebpackChokidarPluginService = __decorate([
     CustomInjectable()
-], SolidAppWebpackWebpackChokidarPluginService);
-export { SolidAppWebpackWebpackChokidarPluginService };
+], BlazorAppWebpackWebpackChokidarPluginService);
+export { BlazorAppWebpackWebpackChokidarPluginService };
 //# sourceMappingURL=webpack-webpack-chokidar-plugin.service.js.map

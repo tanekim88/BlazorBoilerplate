@@ -37,9 +37,9 @@
     <ItemGroup>
         <ProjectReference Include="..\..\..\Apps\Auth\Client\Auth.Client.csproj" />
         <ProjectReference Include="..\..\..\Apps\Auth\Server\Auth.Server.csproj" />
-        <ProjectReference Include="..\..\..\Apps\SolidApp\Client\SolidApp.Client.csproj" />
-        <ProjectReference Include="..\..\..\Apps\SolidApp\Server\SolidApp.Server.csproj" />
-        <ProjectReference Include="..\..\..\Apps\SolidApp\Shared\SolidApp.Shared.csproj" />
+        <ProjectReference Include="..\..\..\Apps\BlazorApp\Client\BlazorApp.Client.csproj" />
+        <ProjectReference Include="..\..\..\Apps\BlazorApp\Server\BlazorApp.Server.csproj" />
+        <ProjectReference Include="..\..\..\Apps\BlazorApp\Shared\BlazorApp.Shared.csproj" />
         <ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj" />
         <ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj" />
         <ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
