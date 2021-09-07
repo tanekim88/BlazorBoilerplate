@@ -1,23 +1,28 @@
-name: dapr
-extensions:
-
-  # Configuration for dapr goes here.
-- name: dapr
-  log-level: debug
-  components-path: "./dapr/components/"
-
-# Services to run go here.
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: app
 services:
-  
-  # The name will be used as the app-id. For a .NET project, Tye only needs the path to the project file.
-- name: BlazorApp
+- name: blazorapp-server
   project: Apps/BlazorApp/Server/BlazorApp.Server.csproj
-- name: Auth
+- name: blazorapp-client
+  project: Apps/BlazorApp/Client/BlazorApp.Client.csproj
+- name: auth-server
   project: Apps/Auth/Server/Auth.Server.csproj
-  bindings:
-    - port: 5000
-# Containers you want to run need an image name and set of ports to expose.
-#- name: redis
-#  image: redis
-#  bindings:
-#    - port: 6973
+- name: auth-client
+  project: Apps/Auth/Client/Auth.Client.csproj
+- name: setup-client
+  project: Setups/Setup/Client/Setup.Client.csproj
+- name: setup-server
+  project: Setups/Setup/Server/Setup.Server.csproj
+- name: auth-setup-client
+  project: Apps/Auth/Auth.Setup/Client/Auth.Setup.Client.csproj
+- name: auth-setup-server
+  project: Apps/Auth/Auth.Setup/Server/Auth.Setup.Server.csproj
+- name: blazorapp-setup-server
+  project: Apps/BlazorApp/BlazorApp.Setup/Server/BlazorApp.Setup.Server.csproj
+- name: blazorapp-setup-client
+  project: Apps/BlazorApp/BlazorApp.Setup/Client/BlazorApp.Setup.Client.csproj
