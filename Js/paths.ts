@@ -10960,11 +10960,6 @@
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
-                    readonly "index.ts": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
                     readonly "logo": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string,
@@ -10981,11 +10976,6 @@
                     }
 ,
                     readonly "modules": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
-                    readonly "server.ts": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -11200,11 +11190,6 @@
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
-                    readonly "index.ts": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
                     readonly "logo": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string,
@@ -11221,11 +11206,6 @@
                     }
 ,
                     readonly "modules": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
-                    readonly "server.ts": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -11585,11 +11565,6 @@
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
-                    readonly "server.ts": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
                     readonly "service-worker": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string,
@@ -11656,6 +11631,41 @@
                         readonly "vite-plugins": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
+                            readonly "services": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string,
+                                readonly "vite-plugin-glob-input": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "vite-plugin-glob-input.service.spec.ts": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "vite-plugin-glob-input.service.ts": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+
+                                }
+,
+                                readonly "vite-plugin-html": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "vite-plugin-html.service.spec.ts": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "vite-plugin-html.service.ts": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+
+                                }
+
+                            }
+,
                             readonly "vite-plugin-base": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string,
@@ -11665,36 +11675,6 @@
                                 }
 ,
                                 readonly "vite-plugin-base.service.ts": {
-                                    toAbsolutePath:()=> string,
-                                    toRelativePath:(relativeTo?:string)=> string
-                                }
-
-                            }
-,
-                            readonly "vite-plugin-glob-input": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string,
-                                readonly "vite-plugin-glob-input.service.spec.ts": {
-                                    toAbsolutePath:()=> string,
-                                    toRelativePath:(relativeTo?:string)=> string
-                                }
-,
-                                readonly "vite-plugin-glob-input.service.ts": {
-                                    toAbsolutePath:()=> string,
-                                    toRelativePath:(relativeTo?:string)=> string
-                                }
-
-                            }
-,
-                            readonly "vite-plugin-html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string,
-                                readonly "vite-plugin-html.service.spec.ts": {
-                                    toAbsolutePath:()=> string,
-                                    toRelativePath:(relativeTo?:string)=> string
-                                }
-,
-                                readonly "vite-plugin-html.service.ts": {
                                     toAbsolutePath:()=> string,
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
@@ -13597,21 +13577,6 @@
                     toRelativePath:(relativeTo?:string)=> string
                 }
 ,
-                readonly "test.ts": {
-                    toAbsolutePath:()=> string,
-                    toRelativePath:(relativeTo?:string)=> string
-                }
-,
-                readonly "test2.ts": {
-                    toAbsolutePath:()=> string,
-                    toRelativePath:(relativeTo?:string)=> string
-                }
-,
-                readonly "tsconfig copy.ts": {
-                    toAbsolutePath:()=> string,
-                    toRelativePath:(relativeTo?:string)=> string
-                }
-,
                 readonly "tsconfig.backup.json": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
@@ -13701,6 +13666,91 @@
                     }
 ,
                     readonly "tasks.json": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+
+                }
+,
+                readonly "app": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string,
+                    readonly ".gitignore": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "index.html": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "node_modules": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "package-lock.json": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "package.json": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "pnpm-lock.yaml": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "README.md": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "src": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string,
+                        readonly "App.tsx": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "assets": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string,
+                            readonly "favicon.ico": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+
+                        }
+,
+                        readonly "index.scss": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "index.tsx": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "logo.svg": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+
+                    }
+,
+                    readonly "tsconfig.json": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "vite.config.ts": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -13801,11 +13851,6 @@
                     }
 ,
                     readonly "modules": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
-                    readonly "server.ts": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -14117,21 +14162,6 @@
         }
 ,
         readonly "tailwind.config.ts": {
-            toAbsolutePath:()=> string,
-            toRelativePath:(relativeTo?:string)=> string
-        }
-,
-        readonly "test.ts": {
-            toAbsolutePath:()=> string,
-            toRelativePath:(relativeTo?:string)=> string
-        }
-,
-        readonly "test2.js": {
-            toAbsolutePath:()=> string,
-            toRelativePath:(relativeTo?:string)=> string
-        }
-,
-        readonly "test2.ts": {
             toAbsolutePath:()=> string,
             toRelativePath:(relativeTo?:string)=> string
         }
@@ -33919,10 +33949,6 @@ export const RootPaths:RootPathsType = createProxy( {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\appsettings.json",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\auth\\src\\appsettings.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\auth\\src\\appsettings.json") }
                     },
-                    "index.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\index.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\auth\\src\\index.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\auth\\src\\index.ts") }
-                    },
                     "logo": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\logo",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\auth\\src\\logo") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\auth\\src\\logo") },
@@ -33938,10 +33964,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     "modules": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\modules",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\auth\\src\\modules") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\auth\\src\\modules") }
-                    },
-                    "server.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\server.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\auth\\src\\server.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\auth\\src\\server.ts") }
                     },
                     "service-worker": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\auth\\src\\service-worker",
@@ -34111,10 +34133,6 @@ export const RootPaths:RootPathsType = createProxy( {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\appsettings.json",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\appsettings.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\appsettings.json") }
                     },
-                    "index.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\index.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\index.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\index.ts") }
-                    },
                     "logo": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\logo",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\logo") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\logo") },
@@ -34130,10 +34148,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     "modules": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\modules",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\modules") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\modules") }
-                    },
-                    "server.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\server.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\server.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\server.ts") }
                     },
                     "service-worker": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\service-worker",
@@ -34419,10 +34433,6 @@ export const RootPaths:RootPathsType = createProxy( {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\modules",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\modules") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\modules") }
                     },
-                    "server.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\server.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\server.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\server.ts") }
-                    },
                     "service-worker": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\service-worker",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\service-worker") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\service-worker") },
@@ -34477,6 +34487,34 @@ export const RootPaths:RootPathsType = createProxy( {
                         "vite-plugins": {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins") },
+                            "services": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services") },
+                                "vite-plugin-glob-input": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input") },
+                                    "vite-plugin-glob-input.service.spec.ts": {
+                                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") }
+                                    },
+                                    "vite-plugin-glob-input.service.ts": {
+                                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") }
+                                    }
+                                },
+                                "vite-plugin-html": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html") },
+                                    "vite-plugin-html.service.spec.ts": {
+                                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts") }
+                                    },
+                                    "vite-plugin-html.service.ts": {
+                                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts") }
+                                    }
+                                }
+                            },
                             "vite-plugin-base": {
                                 toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base") },
@@ -34487,30 +34525,6 @@ export const RootPaths:RootPathsType = createProxy( {
                                 "vite-plugin-base.service.ts": {
                                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base\\vite-plugin-base.service.ts",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base\\vite-plugin-base.service.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-base\\vite-plugin-base.service.ts") }
-                                }
-                            },
-                            "vite-plugin-glob-input": {
-                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input") },
-                                "vite-plugin-glob-input.service.spec.ts": {
-                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") }
-                                },
-                                "vite-plugin-glob-input.service.ts": {
-                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") }
-                                }
-                            },
-                            "vite-plugin-html": {
-                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html") },
-                                "vite-plugin-html.service.spec.ts": {
-                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.spec.ts",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.spec.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.spec.ts") }
-                                },
-                                "vite-plugin-html.service.ts": {
-                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.ts",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\vite-plugin-html\\vite-plugin-html.service.ts") }
                                 }
                             },
                             "vite-plugins": {
@@ -36028,18 +36042,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\tailwind.config.ts",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\tailwind.config.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\tailwind.config.ts") }
                 },
-                "test.ts": {
-                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\test.ts",
-                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\test.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\test.ts") }
-                },
-                "test2.ts": {
-                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\test2.ts",
-                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\test2.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\test2.ts") }
-                },
-                "tsconfig copy.ts": {
-                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\tsconfig copy.ts",
-                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\tsconfig copy.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\tsconfig copy.ts") }
-                },
                 "tsconfig.backup.json": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\tsconfig.backup.json",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\tsconfig.backup.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\tsconfig.backup.json") }
@@ -36114,6 +36116,74 @@ export const RootPaths:RootPathsType = createProxy( {
                     "tasks.json": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\.vscode\\tasks.json",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\.vscode\\tasks.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\.vscode\\tasks.json") }
+                    }
+                },
+                "app": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app") },
+                    ".gitignore": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\.gitignore",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\.gitignore") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\.gitignore") }
+                    },
+                    "index.html": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\index.html",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\index.html") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\index.html") }
+                    },
+                    "node_modules": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\node_modules",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\node_modules") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\node_modules") }
+                    },
+                    "package-lock.json": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\package-lock.json",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\package-lock.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\package-lock.json") }
+                    },
+                    "package.json": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\package.json",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\package.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\package.json") }
+                    },
+                    "pnpm-lock.yaml": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\pnpm-lock.yaml",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\pnpm-lock.yaml") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\pnpm-lock.yaml") }
+                    },
+                    "README.md": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\README.md",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\README.md") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\README.md") }
+                    },
+                    "src": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src") },
+                        "App.tsx": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx") }
+                        },
+                        "assets": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets") },
+                            "favicon.ico": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets\\favicon.ico",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets\\favicon.ico") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\assets\\favicon.ico") }
+                            }
+                        },
+                        "index.scss": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.scss",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.scss") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.scss") }
+                        },
+                        "index.tsx": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.tsx",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.tsx") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\index.tsx") }
+                        },
+                        "logo.svg": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg") }
+                        }
+                    },
+                    "tsconfig.json": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\tsconfig.json",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\tsconfig.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\tsconfig.json") }
+                    },
+                    "vite.config.ts": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\app\\vite.config.ts",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\app\\vite.config.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\app\\vite.config.ts") }
                     }
                 },
                 "berry.json": {
@@ -36194,10 +36264,6 @@ export const RootPaths:RootPathsType = createProxy( {
                     "modules": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\src\\modules",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\src\\modules") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\src\\modules") }
-                    },
-                    "server.ts": {
-                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\src\\server.ts",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\solid-app\\src\\server.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\solid-app\\src\\server.ts") }
                     },
                     "service-worker": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\solid-app\\src\\service-worker",
@@ -36445,18 +36511,6 @@ export const RootPaths:RootPathsType = createProxy( {
         "tailwind.config.ts": {
             toAbsolutePath:()=> "C:\\App\\Js\\tailwind.config.ts",
             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\tailwind.config.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\tailwind.config.ts") }
-        },
-        "test.ts": {
-            toAbsolutePath:()=> "C:\\App\\Js\\test.ts",
-            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\test.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\test.ts") }
-        },
-        "test2.js": {
-            toAbsolutePath:()=> "C:\\App\\Js\\test2.js",
-            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\test2.js") :  path.relative("C:\\App",  "C:\\App\\Js\\test2.js") }
-        },
-        "test2.ts": {
-            toAbsolutePath:()=> "C:\\App\\Js\\test2.ts",
-            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\test2.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\test2.ts") }
         },
         "tsconfig.json": {
             toAbsolutePath:()=> "C:\\App\\Js\\tsconfig.json",
