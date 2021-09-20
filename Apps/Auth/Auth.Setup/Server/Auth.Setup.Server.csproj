@@ -43,7 +43,7 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0-preview.7.21378.6" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0-rc.1.21452.15" />
 		<PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.2.0" />
 		<PackageReference Include="Jint" Version="3.0.0-beta-2034" />
