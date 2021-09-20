@@ -6,23 +6,9 @@
 #
 name: app
 services:
-- name: blazorapp-server
+- name: BlazorApp
   project: Apps/BlazorApp/Server/BlazorApp.Server.csproj
-- name: blazorapp-client
-  project: Apps/BlazorApp/Client/BlazorApp.Client.csproj
-- name: auth-server
+- name: Auth
   project: Apps/Auth/Server/Auth.Server.csproj
-- name: auth-client
-  project: Apps/Auth/Client/Auth.Client.csproj
-- name: setup-client
-  project: Setups/Setup/Client/Setup.Client.csproj
-- name: setup-server
-  project: Setups/Setup/Server/Setup.Server.csproj
-- name: auth-setup-client
-  project: Apps/Auth/Auth.Setup/Client/Auth.Setup.Client.csproj
-- name: auth-setup-server
-  project: Apps/Auth/Auth.Setup/Server/Auth.Setup.Server.csproj
-- name: blazorapp-setup-server
-  project: Apps/BlazorApp/BlazorApp.Setup/Server/BlazorApp.Setup.Server.csproj
-- name: blazorapp-setup-client
-  project: Apps/BlazorApp/BlazorApp.Setup/Client/BlazorApp.Setup.Client.csproj
+  bindings:
+    - port: 5000
