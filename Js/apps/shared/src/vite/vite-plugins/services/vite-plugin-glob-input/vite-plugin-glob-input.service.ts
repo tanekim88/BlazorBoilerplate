@@ -15,10 +15,11 @@ import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
 import fs from 'fs'
-import { RootPaths } from '#root/paths';
+import { rootPaths, RootPaths } from '#root/paths';
+import { dirname } from 'path/posix';
 export interface VitePluginGlobInputOptions {
   inputs: {
-    include: string[] | { path: string, name: string }[],
+    include: string[] | { fromPath: string, newFileName: string }[],
     sourceMap?: boolean,
     relativeTo?: string,
     root?: string,
@@ -79,21 +80,27 @@ export function getExportSource(node: any): Node | false {
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
   createPlugin(options: VitePluginGlobInputOptions) {
-
+    const pathToFilenameDic = {} as any;
 
     return ({
       name: 'vite-plugin-glob-input',
       options(conf) {
+        const root = normalizePath(RootPaths.toAbsolutePath());
         let input = options.inputs.flatMap(input => {
           input.include = input.include.map(p => {
-            let path = p.path ?? p;
+            let fromPath = p.fromPath ?? p;
+            const normalizedPath = normalizePath(fromPath);
+            const relPath = relative(root, normalizedPath);
+            if (p.newFileName) {
+              pathToFilenameDic[relPath] = p.newFileName
+            }
 
-            return normalizePath(p);
+            return normalizedPath;
           });
-          
+
           input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
 
-          input.root = input.root ? normalizePath(input.root) : normalizePath(RootPaths.toAbsolutePath());
+          input.root = input.root ? normalizePath(input.root) : root;
 
           const toReturn = fastGlob
             .sync(input.include, Object.assign({}, input.globOptions, {
@@ -107,7 +114,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         })
 
         conf.input = input;
-        options['cache'] = input;
         return conf;
       },
 
@@ -212,8 +218,21 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             if (key !== newKey) {
               delete bundle[key];
               bundle[newKey] = file;
-              fs.unlinkSync(resolve(option.dir, key));
-              fs.writeFileSync(resolve(option.dir, newKey), file.source);
+              const fileToDelete = resolve(option.dir, key);
+
+              if (fs.existsSync(fileToDelete)) {
+                fs.unlinkSync(resolve(option.dir, key));
+              }
+
+              let fileToCreate = resolve(option.dir, newKey);
+
+              if (pathToFilenameDic[key]) {
+                const newName = pathToFilenameDic[key];
+                fileToCreate = resolve(dirname(fileToCreate), newName);
+              }
+
+              fs.writeFileSync(fileToCreate, file.source);
+              break;
             }
           }
         }

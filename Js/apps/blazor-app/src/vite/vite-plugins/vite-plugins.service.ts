@@ -46,10 +46,9 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                     {
                         include: [
                             {
-                                path: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
-                                name: 'service-worker.js'
+                                fromPath: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
+                                toPath: 'service-worker.js'
                             }
-                           
                         ],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src['service-worker'].toAbsolutePath(),
                     }
