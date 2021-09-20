@@ -20,10 +20,10 @@ let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends Vite
         return [
             this.vitePluginHtmlService.createPlugin({
                 externals: [
-                    { html: '<link href="_content/Material.blazor/Material.min.css" rel="stylesheet" />', insertAt: '<head>' },
-                    { html: '<link href="_content/Material.blazor/Materialblazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />', insertAt: '<head>' },
+                    { html: '<link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />', insertAt: '<head>' },
                     { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
-                    { html: '<script src="_content/Material.blazor/Materialblazor.min.js"></script>', insertAt: '</body>' },
+                    { html: '<script src="_content/Material.Blazor/material.blazor.min.js"></script>', insertAt: '</body>' },
                     {
                         html: `
                         <script>
@@ -39,9 +39,20 @@ let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends Vite
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {
-                        include: [this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
+                        include: [
+                            this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()
+                        ],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
-                    }
+                    },
+                    // {
+                    //     include: [
+                    //         {
+                    //             path: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
+                    //             name: 'service-worker.js'
+                    //         }
+                    //     ],
+                    //     relativeTo: this.blazorAppEnvironmentService.localPaths.src['service-worker'].toAbsolutePath(),
+                    // }
                 ]
             })
         ];

@@ -10,7 +10,7 @@ import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment
 import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { BlazorAppVitePluginsService } from '../vite-plugins/vite-plugins.service';
 import { RootPaths, rootPaths } from '#root/paths';
-import { PostcssService } from '#shared/src/modules/postcss/postcss/postcss.service';
+import { PostcssService } from '#shared/src/modules/postcss/postcss.service';
 import { BlazorAppPostcssService } from '#blazor-app/src/modules/postcss/postcss/postcss.service';
 @CustomInjectable()
 export class BlazorAppViteSharedService extends ViteSharedService {

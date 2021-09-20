@@ -8,4 +8,4 @@ import { BlazorAppPostcssService } from './postcss/postcss.service';
     imports: [PostcssModule],
     providers: [BlazorAppPostcssService],
 })
-export class blazorPostcssModule {}
+export class BlazorPostcssModule {}

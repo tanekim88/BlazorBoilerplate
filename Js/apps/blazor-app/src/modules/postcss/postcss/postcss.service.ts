@@ -29,8 +29,8 @@ export class BlazorAppPostcssService {
     protected PostcssFunctionsService: PostcssFunctionsService;
     @CustomInject(PostcssFontMagicianService)
     protected PostcssFontMagicianService: PostcssFontMagicianService;
-    @CustomInject(TailwindcssService)
-    protected TailwindcssService: TailwindcssService;
+    // @CustomInject(TailwindcssService)
+    // protected TailwindcssService: TailwindcssService;
     @CustomInject(PostcssRfsAutopilotService)
     protected PostcssRfsAutopilotService: PostcssRfsAutopilotService;
     @CustomInject(RfsService)

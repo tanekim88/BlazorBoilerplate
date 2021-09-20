@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "BlazorApp: Run Webpack Dev",
+            "name": "SolidApp: Run Webpack Dev",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "node",
@@ -27,7 +27,7 @@
             }
         },
         {
-            "name": "BlazorApp: Run Webpack Prod",
+            "name": "SolidApp: Run Webpack Prod",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "node",
@@ -49,14 +49,14 @@
             }
         },
         {
-            "name": ".NET Core Launch (BlazorApp)",
+            "name": ".NET Core Launch (SolidApp)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/../../../Apps/BlazorApp/Server/bin/Debug/net6.0/BlazorApp.Server.dll",
+            "program": "${workspaceFolder}/../../../Apps/SolidApp/Server/bin/Debug/net6.0/SolidApp.Server.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/../../../Apps/BlazorApp/Server",
+            "cwd": "${workspaceFolder}/../../../Apps/SolidApp/Server",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
@@ -78,8 +78,8 @@
             "type": "blazorwasm",
             "request": "launch",
             "hosted": true,
-            "program": "${workspaceFolder}/../../../Apps/BlazorApp/Server/bin/Debug/net6.0/BlazorApp.Server.dll",
-            "cwd": "${workspaceFolder}/../../../Apps/BlazorApp/Server",
+            "program": "${workspaceFolder}/../../../Apps/SolidApp/Server/bin/Debug/net6.0/SolidApp.Server.dll",
+            "cwd": "${workspaceFolder}/../../../Apps/SolidApp/Server",
             "url": "https://localhost:4001",
             "browser": "chrome",
             "trace": true

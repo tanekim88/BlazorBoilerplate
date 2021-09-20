@@ -57,7 +57,10 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
             name: 'vite-plugin-glob-input',
             options(conf) {
                 let input = options.inputs.flatMap(input => {
-                    input.include = input.include.map(p => normalizePath(p));
+                    input.include = input.include.map(p => {
+                        let path = p.path ?? p;
+                        return normalizePath(p);
+                    });
                     input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
                     input.root = input.root ? normalizePath(input.root) : normalizePath(RootPaths.toAbsolutePath());
                     const toReturn = fastGlob

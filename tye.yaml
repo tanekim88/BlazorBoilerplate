@@ -5,10 +5,27 @@
 #    https://aka.ms/AA7q20u
 #
 name: app
+extensions:
+- name: dapr
+  components-path: tye/dapr/components    
+
 services:
 - name: BlazorApp
   project: Apps/BlazorApp/Server/BlazorApp.Server.csproj
-- name: Auth
-  project: Apps/Auth/Server/Auth.Server.csproj
   bindings:
-    - port: 5000
+    - port: 4001
+      protocol: https
+- name: BlazorAppClient
+  project: Apps/BlazorApp/Client/BlazorApp.Client.csproj
+  bindings:
+    - port: 3001
+      protocol: https
+# - name: Auth
+#   project: Apps/Auth/Server/Auth.Server.csproj
+#   bindings:
+#     - port: 5000
+
+# - name: redis
+#   image: redis
+#   bindings:
+#     - port: 6973

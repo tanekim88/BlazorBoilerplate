@@ -1,11 +1,11 @@
 import { CustomModule } from '#shared/src/functions/process-providers';
 import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
-import { BlazorAppEnvironmentModule } from './environment/environment.module';
+import { SolidAppEnvironmentModule } from './environment/environment.module';
 
-import { BlazorAppUtilitiesModule } from './utilities/utilities.module';
+import { SolidAppUtilitiesModule } from './utilities/utilities.module';
 
 @CustomModule({
     providers: [],
-    imports: [BlazorAppUtilitiesModule, BlazorAppEnvironmentModule, PostcssModule],
+    imports: [SolidAppUtilitiesModule, SolidAppEnvironmentModule, PostcssModule],
 })
-export class BlazorAppModulesModule {}
+export class SolidAppModulesModule {}

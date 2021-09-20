@@ -21,7 +21,7 @@ services:
     image: ${DOCKER_REGISTRY-}authserver
     build:
       context: .
-      dockerfile: Apps/Auth/Server/Dockerfile
+      dockerfile: ../Apps/Auth/Server/Dockerfile
     ports:
       - "51000:50001"
 
@@ -36,7 +36,7 @@ services:
     image: ${DOCKER_REGISTRY-}blazorappserver
     build:
       context: .
-      dockerfile: Apps/BlazorApp/Server/Dockerfile
+      dockerfile: ../Apps/BlazorApp/Server/Dockerfile
     ports:
       - "41000:40001"
 

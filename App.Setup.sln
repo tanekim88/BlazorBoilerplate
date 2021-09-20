@@ -256,11 +256,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.ArchTests", "BoundedC
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{7152E5A0-263C-4F67-8F33-8427E14EBD08}"
-	ProjectSection(SolutionItems) = preProject
-		tye.yaml = tye.yaml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp.Setup", "BlazorApp.Setup", "{D32CB660-A83D-4CFE-92C8-782DE8A0E0B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopBoundedContext", "ShopBoundedContext", "{99AFFF50-6DBA-4719-95E3-77C6A11C67C1}"
@@ -305,7 +300,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.IntegrationTests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.ArchTests", "Apps\BlazorApp\BlazorApp.Tests\BlazorApp.ArchTests\BlazorApp.ArchTests.csproj", "{340FE87B-160F-4BC0-B63C-EF28A7AFA52F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tye", "Tye\Tye.csproj", "{D26C22EA-D2B3-4384-B23B-6B48A4F018EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tye", "Tye\Tye.csproj", "{D26C22EA-D2B3-4384-B23B-6B48A4F018EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -18,7 +18,7 @@ import fs from 'fs'
 import { RootPaths } from '#root/paths';
 export interface VitePluginGlobInputOptions {
   inputs: {
-    include: string[] | { path:string, name:string}[],
+    include: string[] | { path: string, name: string }[],
     sourceMap?: boolean,
     relativeTo?: string,
     root?: string,
@@ -86,13 +86,11 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       options(conf) {
         let input = options.inputs.flatMap(input => {
           input.include = input.include.map(p => {
-            if(p.path){
-              
-            }
-            
-            normalizePath(p);
-          
+            let path = p.path ?? p;
+
+            return normalizePath(p);
           });
+          
           input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
 
           input.root = input.root ? normalizePath(input.root) : normalizePath(RootPaths.toAbsolutePath());

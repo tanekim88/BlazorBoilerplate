@@ -43,7 +43,7 @@ namespace BlazorApp.Server
                   {
                       webBuilder
                           .UseStartup<Startup>()
-                          .UseUrls("https://localhost:4001", "http://localhost:4000")
+                        //   .UseUrls("https://localhost:4001", "http://localhost:4000")
                           .UseSerilog();
                   });
     }

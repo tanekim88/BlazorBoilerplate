@@ -49,7 +49,7 @@ namespace Auth.Server
                 {
                     webBuilder
                         .UseStartup<Startup>()
-                        .UseUrls("https://localhost:5001", "http://localhost:5000")
+                        // .UseUrls("https://localhost:5001", "http://localhost:5000")
                         .UseSerilog();
                 });
         }

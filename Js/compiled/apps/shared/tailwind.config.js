@@ -1,7 +1,7 @@
 import deepmerge from 'deepmerge';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 // const plugin = require('tailwindcss/plugin');
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 import { materialVariables } from './src/web/material/variables/export';
 import { tailwindColors } from './src/web/tailwind/tailwind.colors';
 const colorsInput = materialVariables['$colors-input'];

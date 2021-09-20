@@ -15,7 +15,7 @@ import { PostcssPresetEnvService } from '../services/postcss-preset-env/postcss-
 import { PostcssReporterService } from '../services/postcss-reporter/postcss-reporter.service';
 import { PostcssRfsAutopilotService } from '../services/postcss-rfs-autopilot/postcss-rfs-autopilot.service';
 import { RfsService } from '../services/rfs/rfs.service';
-import { TailwindcssService } from '../services/tailwindcss/tailwindcss.service';
+// import { TailwindcssService } from '../services/tailwindcss/tailwindcss.service';
 // Sealed class.
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { CustomInject } from '#shared/src/functions/process-providers';
@@ -30,14 +30,15 @@ let PostcssService = class PostcssService {
     PostcssCombineDuplicatedSelectorsService;
     PostcssFunctionsService;
     PostcssFontMagicianService;
-    TailwindcssService;
+    // @CustomInject(TailwindcssService)
+    // protected TailwindcssService: TailwindcssService;
     PostcssRfsAutopilotService;
     RfsService;
     createPostcssPlugins() {
         const plugins = [];
         plugins.push(this.PostcssRfsAutopilotService.createPlugin());
         plugins.push(this.RfsService.createPlugin());
-        plugins.push(this.TailwindcssService.createPlugin());
+        // plugins.push(this.TailwindcssService.createPlugin());
         // plugins.push(this.PostcssFunctionsService.createPlugin());
         // plugins.push(this.PostcssFontMagicianService.createPlugin());
         // plugins.push(this.PostcssPresetEnvService.createPlugin());
@@ -84,10 +85,6 @@ __decorate([
     CustomInject(PostcssFontMagicianService),
     __metadata("design:type", PostcssFontMagicianService)
 ], PostcssService.prototype, "PostcssFontMagicianService", void 0);
-__decorate([
-    CustomInject(TailwindcssService),
-    __metadata("design:type", TailwindcssService)
-], PostcssService.prototype, "TailwindcssService", void 0);
 __decorate([
     CustomInject(PostcssRfsAutopilotService),
     __metadata("design:type", PostcssRfsAutopilotService)

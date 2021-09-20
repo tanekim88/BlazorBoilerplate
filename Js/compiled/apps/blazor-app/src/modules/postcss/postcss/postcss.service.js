@@ -18,7 +18,6 @@ import { PostcssPurgecssService } from "#shared/src/modules/postcss/services/pos
 import { PostcssReporterService } from "#shared/src/modules/postcss/services/postcss-reporter/postcss-reporter.service";
 import { PostcssRfsAutopilotService } from "#shared/src/modules/postcss/services/postcss-rfs-autopilot/postcss-rfs-autopilot.service";
 import { RfsService } from "#shared/src/modules/postcss/services/rfs/rfs.service";
-import { TailwindcssService } from "#shared/src/modules/postcss/services/tailwindcss/tailwindcss.service";
 let BlazorAppPostcssService = class BlazorAppPostcssService {
     CssNanoService;
     PostcssReporterService;
@@ -28,7 +27,8 @@ let BlazorAppPostcssService = class BlazorAppPostcssService {
     PostcssCombineDuplicatedSelectorsService;
     PostcssFunctionsService;
     PostcssFontMagicianService;
-    TailwindcssService;
+    // @CustomInject(TailwindcssService)
+    // protected TailwindcssService: TailwindcssService;
     PostcssRfsAutopilotService;
     RfsService;
     createPostcssPlugins() {
@@ -82,10 +82,6 @@ __decorate([
     CustomInject(PostcssFontMagicianService),
     __metadata("design:type", PostcssFontMagicianService)
 ], BlazorAppPostcssService.prototype, "PostcssFontMagicianService", void 0);
-__decorate([
-    CustomInject(TailwindcssService),
-    __metadata("design:type", TailwindcssService)
-], BlazorAppPostcssService.prototype, "TailwindcssService", void 0);
 __decorate([
     CustomInject(PostcssRfsAutopilotService),
     __metadata("design:type", PostcssRfsAutopilotService)

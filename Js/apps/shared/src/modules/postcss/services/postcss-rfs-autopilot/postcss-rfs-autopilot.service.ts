@@ -1,4 +1,4 @@
-import PostcssRfsAutopilot from 'postcss-rfs-autopilot';
+import PostcssRfsAutopilot from './index';
 
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import { CustomInjectable } from '#shared/src/functions/process-providers';

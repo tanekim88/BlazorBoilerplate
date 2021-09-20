@@ -3,7 +3,7 @@ import { solidAppPaths } from './paths';
 export class BlazorAppConfig extends ConfigBase {
     rootDir = solidAppPaths.toAbsolutePath();
     RootDir = solidAppPaths.toAbsolutePath();
-    projectName = 'blazorApp';
+    projectName = 'solidrApp';
     title = 'App title';
     name = 'App name';
     shortName = 'App short name';

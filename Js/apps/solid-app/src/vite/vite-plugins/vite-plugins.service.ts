@@ -1,12 +1,12 @@
-import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()
-export class BlazorAppVitePluginsService extends VitePluginsService {
-    @CustomInject(BlazorAppEnvironmentService)
-    blazorAppEnvironmentService: BlazorAppEnvironmentService
+export class SolidAppVitePluginsService extends VitePluginsService {
+    @CustomInject(SolidAppEnvironmentService)
+    solidAppEnvironmentService: SolidAppEnvironmentService
 
     // @CustomInject(VitePluginGlobInputService)
     // protected vitePluginGlobInputService: VitePluginGlobInputService;
@@ -24,8 +24,8 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {
-                        include: [this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
-                        relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
+                        include: [this.solidAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
+                        relativeTo: this.solidAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
                     }
                 ]
             })

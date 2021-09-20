@@ -1,8 +1,8 @@
 import { CustomModule } from '#shared/src/functions/process-providers';
 
-import { BlazorAppMergeService } from './merge/merge.service';
+import { SolidAppMergeService } from './merge/merge.service';
 
 @CustomModule({
-    providers: [BlazorAppMergeService],
+    providers: [SolidAppMergeService],
 })
 export class MergeModule {}

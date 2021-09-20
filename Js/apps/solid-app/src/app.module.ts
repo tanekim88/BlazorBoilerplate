@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { BlazorAppModulesModule } from './modules/modules.module';
+import { SolidAppModulesModule } from './modules/modules.module';
 @Module({
-    imports: [BlazorAppModulesModule],
+    imports: [SolidAppModulesModule],
     controllers: [AppController],
     providers: [AppService],
 })

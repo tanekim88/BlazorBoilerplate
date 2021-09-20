@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 const hasWrappedInRFS = (decl) => /^rfs/g.test(decl.value);
 const isIncluded = (decl, inclusionRules) => {
     if (inclusionRules.includes('*')) {

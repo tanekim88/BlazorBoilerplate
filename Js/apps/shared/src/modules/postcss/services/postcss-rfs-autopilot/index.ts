@@ -1,11 +1,11 @@
-const postcss = require('postcss');
+import postcss from 'postcss';
 
 import {
   shouldBeTransformed
 } from './utilities/helper';
 
 
-export default postcss.plugin('postcss-rfs-autopilot', ({
+const plugin = (({
   includedRules,
   excludedRules,
   includedSelectors,
@@ -32,11 +32,18 @@ export default postcss.plugin('postcss-rfs-autopilot', ({
   // options.includedSelectors = filterIdenticalValues(options.includedSelectors, options.excludedSelectors)
   // options.includedUnits = filterIdenticalValues(options.includedUnits, options.excludedUnits)
 
-  return (root, result) => {
-    root.walkDecls((decl) => {
-      if (shouldBeTransformed(decl, options)) {
-        decl.value = `rfs(${decl.value})`
-      }
-    })
+  return {
+    postcssPlugin: 'postcss-rfs-autopilot',
+    Once(root, { result }) {
+      root.walkDecls((decl) => {
+        if (shouldBeTransformed(decl, options)) {
+          decl.value = `rfs(${decl.value})`
+        }
+      })
+    }
   }
 })
+
+plugin['postcss'] = true;
+
+export default plugin;

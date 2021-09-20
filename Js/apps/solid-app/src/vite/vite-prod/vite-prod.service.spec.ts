@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BlazorAppViteProdService } from './vite-prod.service';
+import { SolidAppViteProdService } from './vite-prod.service';
 
-describe('BlazorAppViteProdService', () => {
-    let service: BlazorAppViteProdService;
+describe('SolidAppViteProdService', () => {
+    let service: SolidAppViteProdService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [BlazorAppViteProdService],
+            providers: [SolidAppViteProdService],
         }).compile();
 
-        service = module.get<BlazorAppViteProdService>(BlazorAppViteProdService);
+        service = module.get<SolidAppViteProdService>(SolidAppViteProdService);
     });
 
     it('should be defined', () => {

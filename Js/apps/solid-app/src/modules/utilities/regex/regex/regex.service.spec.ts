@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BlazorAppRegexService } from './regex.service';
+import { SolidAppRegexService } from './regex.service';
 
-describe('BlazorAppRegexService', () => {
-    let service: BlazorAppRegexService;
+describe('SolidAppRegexService', () => {
+    let service: SolidAppRegexService;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [BlazorAppRegexService],
+            providers: [SolidAppRegexService],
         }).compile();
 
-        service = module.get<BlazorAppRegexService>(BlazorAppRegexService);
+        service = module.get<SolidAppRegexService>(SolidAppRegexService);
     });
 
     it('should be defined', () => {

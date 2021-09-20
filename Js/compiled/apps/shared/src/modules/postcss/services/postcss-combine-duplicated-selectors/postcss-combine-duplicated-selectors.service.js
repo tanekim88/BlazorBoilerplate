@@ -8,9 +8,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
-// import PostcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
+import PostcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
 import { CustomInjectable } from '#shared/src/functions/process-providers';
-const PostcssCombineDuplicatedSelectors = require('postcss-combine-duplicated-selectors');
+// const PostcssCombineDuplicatedSelectors = require('postcss-combine-duplicated-selectors');
 let PostcssCombineDuplicatedSelectorsService = class PostcssCombineDuplicatedSelectorsService extends PostcssBaseService {
     /**
      *

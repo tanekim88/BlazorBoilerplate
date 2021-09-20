@@ -1,7 +1,7 @@
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { BlazorAppRegexService } from './regex/regex.service';
+import { SolidAppRegexService } from './regex/regex.service';
 
 @CustomModule({
-    providers: [BlazorAppRegexService],
+    providers: [SolidAppRegexService],
 })
 export class RegexModule {}

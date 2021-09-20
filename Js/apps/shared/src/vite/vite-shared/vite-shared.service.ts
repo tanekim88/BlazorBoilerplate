@@ -14,7 +14,7 @@ export class ViteSharedService extends ViteBaseService {
             super.createConfiguration(), {
                 root: RootPaths.toAbsolutePath(),
                 plugins: [
-                    vanillaExtractPlugin()
+                    vanillaExtractPlugin({})
                 ],
                 resolve: {
 

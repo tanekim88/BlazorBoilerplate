@@ -3,7 +3,7 @@ export const LOCAL_CONFIG = Symbol('LOCAL_CONFIG');
 import { ConfigBase } from './configs.base';
 
 import { rootConfig } from '#root/configs';
-import { blazorAppConfig } from '#solid-app/configs';
+import { blazorAppConfig } from '#blazor-app/configs';
 import { authConfig } from '#auth/configs';
 
 // import { identityServerConfig } from '@IdentityServer/configs';
@@ -11,6 +11,7 @@ import path from 'path';
 import { sharedPaths } from './paths';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { solidAppConfig } from '#solid-app/configs';
 const filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(filename);
 
@@ -30,7 +31,7 @@ class SharedConfig extends ConfigBase {
 export const sharedConfig = new SharedConfig();
 
 class Configs {
-    allConfigs: ConfigBase[] = [rootConfig, sharedConfig, blazorAppConfig, authConfig];
+    allConfigs: ConfigBase[] = [rootConfig, sharedConfig, blazorAppConfig, authConfig, solidAppConfig];
 
     get allRootDirs() {
         return this.allConfigs.map((config) => config.rootDir);
