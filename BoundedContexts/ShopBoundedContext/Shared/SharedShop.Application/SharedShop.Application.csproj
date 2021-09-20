@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<nullable>enable</nullable>
@@ -10,7 +10,7 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="HotChocolate.Types" Version="12.0.0-rc.4" />
+		<PackageReference Include="HotChocolate.Types" Version="12.0.0-rc.9" />
 		<PackageReference Include="Humanizer" Version="2.11.10" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
 		<PackageReference Include="Material.Blazor" Version="2.0.0-preview.7" />
