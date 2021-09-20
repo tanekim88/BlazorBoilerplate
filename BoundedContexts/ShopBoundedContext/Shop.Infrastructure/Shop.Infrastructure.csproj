@@ -39,8 +39,4 @@
 	  <ProjectReference Include="..\Shop.Application\Shop.Application.csproj" />
 	  <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Extensions\MicrosoftExtensions\AspNetCoreExtensions\IApplicationBuilderExtensions\" />
-	</ItemGroup>
-
 </Project>
