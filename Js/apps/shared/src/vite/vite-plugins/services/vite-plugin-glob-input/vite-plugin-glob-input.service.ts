@@ -83,7 +83,8 @@ export function getExportSource(node: any): Node | false {
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
   createPlugin(options: VitePluginGlobInputOptions) {
-    const pathToRelativePathDic = {} as any;
+    const absInputPathToRelOutputPathDic = {} as any;
+    const relInputPathToRelOutputPathDic = {} as any;
     let root = normalizePath(RootPaths.toAbsolutePath());
     return ({
       name: 'vite-plugin-glob-input',
@@ -95,31 +96,24 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             input.include = input.include.map(p => normalizePath(p));
 
             input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
-            if (input.copyOnly) {
-              for (let inc of input.include) {
-                for (let output of conf.output) {
-                  const relativePath = relative(input.relativeTo, inc);
-                  const finalPath = join(output.dir, relativePath);
-                  fs.copyFileSync(inc, finalPath);
-                }
-              }
-            }
+
           }
 
           if (input.fromPath) {
             const fromPath = normalizePath(input.fromPath);
             input.include = [fromPath];
             const toRelativePath = normalizePath(input.toRelativePath);
-            pathToRelativePathDic[fromPath] = toRelativePath;
+            absInputPathToRelOutputPathDic[fromPath] = toRelativePath;
 
-            if (input.copyOnly) {
-              for (let inc of input.include) {
-                for (let output of conf.output) {
-                  const finalPath = join(output.dir, toRelativePath);
-                  fs.copyFileSync(inc, finalPath);
-                }
+
+            for (let output of conf.output) {
+
+              if (input.copyOnly) {
+                const finalPath = join(output.dir, toRelativePath);
+                fs.copyFileSync(input.fromPath, finalPath);
               }
             }
+
           }
 
           const toReturn = fastGlob
@@ -127,6 +121,30 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               stats: false,
 
             })).map(entry => {
+
+              if (input.copyOnly) {
+
+
+                if (input.relativeTo) {
+                  const relativePath = relative(input.relativeTo, entry);
+                  absInputPathToRelOutputPathDic[entry] = relativePath;
+
+                  for (let output of conf.output) {
+                    const finalPath = join(output.dir, relativePath);
+                    fs.copyFileSync(entry, finalPath);
+                  }
+                }
+
+                if (input.toRelativePath) {
+                  absInputPathToRelOutputPathDic[entry] = input.toRelativePath;
+
+                  for (let output of conf.output) {
+                    const finalPath = join(output.dir, input.toRelativePath);
+                    fs.copyFileSync(entry, finalPath);
+                  }
+                }
+              }
+
               return (entry);
             })
 
@@ -145,9 +163,172 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       // buildStart() {
 
       // },
-      // generateBundle(option, bundle, isWrite: boolean) {
-      //   console.dir(bundle);
-      // },
+      generateBundle(option, bundle, isWrite: boolean) {
+
+        const files = Object.entries<any>(bundle);
+        for (const [key, file] of files) {
+          for (const input of options.inputs) {
+
+            const sourceMaps = input.sourceMap !== false;
+
+            // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
+
+            // file.imports.map((imported: string) => {
+            //   if (!filter(imported)) {
+            //     return imported;
+            //   }
+
+            //   return relative(options.relativeTo , imported) || imported;
+            // });
+
+            // if (file.code) {
+            //   const magicString = new MagicString(file.code);
+            //   const ast = this.parse(file.code, {
+            //     ecmaVersion: 12,
+            //     sourceType: 'module',
+            //   });
+
+            //   walk(ast, {
+            //     enter(node) {
+            //       if (
+            //         [
+            //           NodeType.ImportDeclaration,
+            //           NodeType.CallExpression,
+            //           NodeType.ExportAllDeclaration,
+            //           NodeType.ExportNamedDeclaration,
+            //         ].includes(node.type as NodeType)
+            //       ) {
+            //         const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
+
+            //         if (req) {
+            //           const { start, end } = req;
+            //           const newPath = req.value;
+            //           magicString.overwrite(start, end, `'${newPath}'`);
+            //         }
+            //       }
+            //     },
+            //   });
+
+            //   if (sourceMaps) {
+            //     file.map = magicString.generateMap();
+            //   }
+
+            //   file.code = magicString.toString();
+            // }
+
+
+
+
+
+
+
+            // if (!file.facadeModuleId?.endsWith('.ts')) {
+            //   continue;
+            // } else {
+            //   if (!input.include.includes(file.facadeModuleId)) {
+            //     continue
+            //   }
+            // }
+
+
+
+
+
+
+            const relPath = absInputPathToRelOutputPathDic[file.facadeModuleId]
+
+            if (relPath) {
+              file.facadeModuleId = resolve(root, relPath);
+
+              if (file.type !== 'chunk' || file.facadeModuleId.endsWith('.ts')) {
+
+
+                file.imports.map((imported: string) => {
+                  return imported.replace(file.fileName, relPath) || imported;
+                });
+
+
+
+
+
+
+
+                if (file.code) {
+                  const magicString = new MagicString(file.code);
+                  const ast = this.parse(file.code, {
+                    ecmaVersion: 6,
+                    sourceType: 'module',
+                  });
+
+                  walk(ast, {
+                    enter(node) {
+                      if (
+                        [
+                          NodeType.ImportDeclaration,
+                          NodeType.CallExpression,
+                          NodeType.ExportAllDeclaration,
+                          NodeType.ExportNamedDeclaration,
+                        ].includes(node.type as NodeType)
+                      ) {
+                        const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
+
+                        if (req) {
+                          const { start, end } = req;
+                          const newPath = req.value.replace(file.fileName, relPath);
+                          magicString.overwrite(start, end, `'${newPath}'`);
+                        }
+                      }
+                    },
+                  });
+
+                  if (sourceMaps) {
+                    file.map = magicString.generateMap();
+                  }
+
+                  file.code = magicString.toString();
+                }
+
+
+
+                file.fileName = relPath || file.fileName;
+
+              }
+            }
+
+
+
+            // let newKey = key;
+            // if (input.relativeTo) {
+            //   const rel = relative(root, input.relativeTo);
+            //   file.fileName = relative(rel, file.fileName);
+            //   newKey = relative(rel, key);
+            // }
+
+            // if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
+            //   newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
+            // }
+
+            // if (key !== newKey) {
+            //   delete bundle[key];
+            //   bundle[newKey] = file;
+            //   const fileToDelete = resolve(option.dir, key);
+
+            //   let fileToCreate = resolve(option.dir, newKey);
+
+            //   fs.renameSync(fileToDelete, fileToCreate);
+            //   break;
+            // }
+
+
+
+
+
+          }
+        }
+
+
+        // cleanEmptyFoldersRecursively(option.dir);
+      },
       // resolveImportMeta(property, { moduleId }) {
       //   if (property === 'url') {
       //     return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
@@ -247,7 +428,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
 
             if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
-              newKey = pathToRelativePathDic[file.facadeModuleId]
+              newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
             }
 
             if (key !== newKey) {

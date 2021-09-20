@@ -51,6 +51,11 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         copyOnly: true,
                         fromPath: path.join(this.blazorAppEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
                         toRelativePath: 'bootstrap-icons.svg'
+                    },
+                    {
+                        copyOnly: true,
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
+                        toRelativePath: 'favicon.ico'
                     }
                 ]
             })

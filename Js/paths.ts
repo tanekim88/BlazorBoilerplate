@@ -103,6 +103,21 @@
 
     }
 ,
+    readonly ".tye": {
+        toAbsolutePath:()=> string,
+        toRelativePath:(relativeTo?:string)=> string,
+        readonly "docker_store": {
+            toAbsolutePath:()=> string,
+            toRelativePath:(relativeTo?:string)=> string
+        }
+,
+        readonly "process_store": {
+            toAbsolutePath:()=> string,
+            toRelativePath:(relativeTo?:string)=> string
+        }
+
+    }
+,
     readonly ".vs": {
         toAbsolutePath:()=> string,
         toRelativePath:(relativeTo?:string)=> string
@@ -4417,7 +4432,17 @@
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string
                         }
+,
+                        readonly "vendor.c6976955.js": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
 
+                    }
+,
+                    readonly "bootstrap-icons.svg": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
                     }
 ,
                     readonly "index.html": {
@@ -11173,6 +11198,11 @@
                     readonly "logo": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string,
+                        readonly "favicon.ico": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
                         readonly "icon-512.png": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string
@@ -11440,6 +11470,41 @@
                 readonly "Monikers.imagemanifest": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
+                }
+,
+                readonly "node": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string,
+                    readonly "__tests__": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string,
+                        readonly "packages": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string,
+                            readonly "name": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string,
+                                readonly "package.json": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string
+                                }
+
+                            }
+,
+                            readonly "noname": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string,
+                                readonly "package.json": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string
+                                }
+
+                            }
+
+                        }
+
+                    }
+
                 }
 ,
                 readonly "node_modules": {
@@ -14254,6 +14319,16 @@
     }
 ,
     readonly "openIdDict_dev_sqlServer.bat": {
+        toAbsolutePath:()=> string,
+        toRelativePath:(relativeTo?:string)=> string
+    }
+,
+    readonly "package-lock.json": {
+        toAbsolutePath:()=> string,
+        toRelativePath:(relativeTo?:string)=> string
+    }
+,
+    readonly "package.json": {
         toAbsolutePath:()=> string,
         toRelativePath:(relativeTo?:string)=> string
     }
@@ -25396,6 +25471,18 @@ export const RootPaths:RootPathsType = createProxy( {
             }
         }
     },
+    ".tye": {
+        toAbsolutePath:()=> "C:\\App\\.tye",
+        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\.tye") :  path.relative("C:\\App",  "C:\\App\\.tye") },
+        "docker_store": {
+            toAbsolutePath:()=> "C:\\App\\.tye\\docker_store",
+            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\.tye\\docker_store") :  path.relative("C:\\App",  "C:\\App\\.tye\\docker_store") }
+        },
+        "process_store": {
+            toAbsolutePath:()=> "C:\\App\\.tye\\process_store",
+            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\.tye\\process_store") :  path.relative("C:\\App",  "C:\\App\\.tye\\process_store") }
+        }
+    },
     ".vs": {
         toAbsolutePath:()=> "C:\\App\\.vs",
         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\.vs") :  path.relative("C:\\App",  "C:\\App\\.vs") }
@@ -28850,7 +28937,15 @@ export const RootPaths:RootPathsType = createProxy( {
                         "index.1b54bc75.js": {
                             toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js") }
+                        },
+                        "vendor.c6976955.js": {
+                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js") }
                         }
+                    },
+                    "bootstrap-icons.svg": {
+                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg") }
                     },
                     "index.html": {
                         toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html",
@@ -34255,6 +34350,10 @@ export const RootPaths:RootPathsType = createProxy( {
                     "logo": {
                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\logo",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\logo") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\logo") },
+                        "favicon.ico": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico") }
+                        },
                         "icon-512.png": {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png") }
@@ -34468,6 +34567,34 @@ export const RootPaths:RootPathsType = createProxy( {
                 "Monikers.imagemanifest": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest") }
+                },
+                "node": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node") },
+                    "__tests__": {
+                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__") },
+                        "packages": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages") },
+                            "name": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name") },
+                                "package.json": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json") }
+                                }
+                            },
+                            "noname": {
+                                toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname") },
+                                "package.json": {
+                                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json") }
+                                }
+                            }
+                        }
+                    }
                 },
                 "node_modules": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\node_modules",
@@ -36719,6 +36846,14 @@ export const RootPaths:RootPathsType = createProxy( {
     "openIdDict_dev_sqlServer.bat": {
         toAbsolutePath:()=> "C:\\App\\openIdDict_dev_sqlServer.bat",
         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\openIdDict_dev_sqlServer.bat") :  path.relative("C:\\App",  "C:\\App\\openIdDict_dev_sqlServer.bat") }
+    },
+    "package-lock.json": {
+        toAbsolutePath:()=> "C:\\App\\package-lock.json",
+        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\package-lock.json") :  path.relative("C:\\App",  "C:\\App\\package-lock.json") }
+    },
+    "package.json": {
+        toAbsolutePath:()=> "C:\\App\\package.json",
+        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\package.json") :  path.relative("C:\\App",  "C:\\App\\package.json") }
     },
     "secrets": {
         toAbsolutePath:()=> "C:\\App\\secrets",
