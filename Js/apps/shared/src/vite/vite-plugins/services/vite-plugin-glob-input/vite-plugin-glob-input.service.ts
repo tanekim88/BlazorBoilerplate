@@ -19,7 +19,10 @@ import { rootPaths, RootPaths } from '#root/paths';
 import { dirname } from 'path/posix';
 export interface VitePluginGlobInputOptions {
   inputs: {
-    include: string[] | { fromPath: string, newFileName: string }[],
+    copyOnly?: boolean,
+    fromPath?: string,
+    toRelativePath?: string,
+    include?: string[],
     sourceMap?: boolean,
     relativeTo?: string,
     root?: string,
@@ -80,27 +83,44 @@ export function getExportSource(node: any): Node | false {
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
   createPlugin(options: VitePluginGlobInputOptions) {
-    const pathToFilenameDic = {} as any;
-
+    const pathToRelativePathDic = {} as any;
+    let root = normalizePath(RootPaths.toAbsolutePath());
     return ({
       name: 'vite-plugin-glob-input',
       options(conf) {
-        const root = normalizePath(RootPaths.toAbsolutePath());
+
         let input = options.inputs.flatMap(input => {
-          input.include = input.include.map(p => {
-            let fromPath = p.fromPath ?? p;
-            const normalizedPath = normalizePath(fromPath);
-            const relPath = relative(root, normalizedPath);
-            if (p.newFileName) {
-              pathToFilenameDic[relPath] = p.newFileName
+          if (input.include) {
+
+            input.include = input.include.map(p => normalizePath(p));
+
+            input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
+            if (input.copyOnly) {
+              for (let inc of input.include) {
+                for (let output of conf.output) {
+                  const relativePath = relative(input.relativeTo, inc);
+                  const finalPath = join(output.dir, relativePath);
+                  fs.copyFileSync(inc, finalPath);
+                }
+              }
             }
+          }
 
-            return normalizedPath;
-          });
+          if (input.fromPath) {
+            const fromPath = normalizePath(input.fromPath);
+            input.include = [fromPath];
+            const toRelativePath = normalizePath(input.toRelativePath);
+            pathToRelativePathDic[fromPath] = toRelativePath;
 
-          input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
-
-          input.root = input.root ? normalizePath(input.root) : root;
+            if (input.copyOnly) {
+              for (let inc of input.include) {
+                for (let output of conf.output) {
+                  const finalPath = join(output.dir, toRelativePath);
+                  fs.copyFileSync(inc, finalPath);
+                }
+              }
+            }
+          }
 
           const toReturn = fastGlob
             .sync(input.include, Object.assign({}, input.globOptions, {
@@ -110,10 +130,15 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               return (entry);
             })
 
+          if (input.copyOnly) {
+            return null;
+          }
+
           return toReturn;
-        })
+        }).filter(x => x);
 
         conf.input = input;
+
         return conf;
       },
 
@@ -159,10 +184,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             const sourceMaps = input.sourceMap !== false;
 
-            if (file.type === 'chunk') {
-              continue;
-            }
-
             // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
 
             // file.imports.map((imported: string) => {
@@ -207,12 +228,26 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             //   file.code = magicString.toString();
             // }
+            if (file.type === 'chunk') {
+              if (!file.facadeModuleId?.endsWith('.ts')) {
+                continue;
+              } else {
+                if (!input.include.includes(file.facadeModuleId)) {
+                  continue
+                }
+              }
+            }
 
             let newKey = key;
             if (input.relativeTo) {
-              const rel = relative(input.root, input.relativeTo);
+              const rel = relative(root, input.relativeTo);
+              const fileName = file.fileName;
               file.fileName = relative(rel, file.fileName);
               newKey = relative(rel, key);
+            }
+
+            if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
+              newKey = pathToRelativePathDic[file.facadeModuleId]
             }
 
             if (key !== newKey) {
@@ -220,18 +255,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               bundle[newKey] = file;
               const fileToDelete = resolve(option.dir, key);
 
-              if (fs.existsSync(fileToDelete)) {
-                fs.unlinkSync(resolve(option.dir, key));
-              }
-
               let fileToCreate = resolve(option.dir, newKey);
 
-              if (pathToFilenameDic[key]) {
-                const newName = pathToFilenameDic[key];
-                fileToCreate = resolve(dirname(fileToCreate), newName);
-              }
-
-              fs.writeFileSync(fileToCreate, file.source);
+              fs.renameSync(fileToDelete, fileToCreate);
               break;
             }
           }

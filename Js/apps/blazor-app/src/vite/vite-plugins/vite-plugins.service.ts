@@ -3,7 +3,7 @@ import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
-
+import path from 'path';
 @CustomInjectable()
 export class BlazorAppVitePluginsService extends VitePluginsService {
     @CustomInject(BlazorAppEnvironmentService)
@@ -26,7 +26,7 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                     {
                         html: `
                         <script>
-                            Materialblazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
                         </script>
                         `, insertAt: '</body>'
                     },
@@ -44,13 +44,13 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
                     },
                     {
-                        include: [
-                            {
-                                fromPath: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
-                                toPath: 'service-worker.js'
-                            }
-                        ],
-                        relativeTo: this.blazorAppEnvironmentService.localPaths.src['service-worker'].toAbsolutePath(),
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
+                        toRelativePath: 'service-worker.js'
+                    },
+                    {
+                        copyOnly: true,
+                        fromPath: path.join(this.blazorAppEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
+                        toRelativePath: 'bootstrap-icons.svg'
                     }
                 ]
             })
