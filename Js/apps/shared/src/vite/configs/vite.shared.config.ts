@@ -1,38 +1,40 @@
 import { defineConfig } from "vite";
 
 
-export const commonConfig = defineConfig(async ({command, mode})=>{
+export const commonConfig = defineConfig(async ({ command, mode }) => {
   return {
     build: {
-      assetsInlineLimit:4096,
-      cssCodeSplit:true,
-      sourcemap:false
+      assetsInlineLimit: 4096,
+      cssCodeSplit: true,
+      sourcemap: false
     },
-    css:{
-      preprocessorOptions:{
-        scss:{
-          additionalData:`$injectedColor: orange;`
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `$injectedColor: orange;`
         }
       },
-      postcss:{
+      postcss: {
 
       }
     },
-    optimizeDeps:{
-      include:[],
-      exclude:[],
-      keepNames:false
+    optimizeDeps: {
+      include: [],
+      exclude: [],
+      esbuildOptions: {
+        keepNames: false,
+      }
     },
-    plugins:[
+    plugins: [
       // VitePluginGlobInput({
-        
+
       // })
     ],
-    resolve:{
+    resolve: {
       // alias:[{
       //   find:'#shared',
       //   replacement:'./blazorApp'
       // }]
     }
   }
-});      
+});

@@ -39,9 +39,6 @@ export class SolidAppViteSharedService extends ViteSharedService {
                     cssCodeSplit: true,
                     sourcemap: true,
                     minify: false,
-                    cleanCssOptions: {
-                        format: 'beautify'
-                    },
                     emptyOutDir: true,
 
                 },
@@ -49,7 +46,9 @@ export class SolidAppViteSharedService extends ViteSharedService {
                     port: 4010
                 },
                 optimizeDeps: {
-                    keepNames: true,
+                    esbuildOptions: {
+                        keepNames: true,
+                    }
                 },
                 plugins,
                 css: {

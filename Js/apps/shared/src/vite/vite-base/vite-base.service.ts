@@ -44,7 +44,9 @@ export class ViteBaseService {
       optimizeDeps: {
         include: [],
         exclude: [],
-        keepNames: false
+        esbuildOptions: {
+          keepNames: false,
+        }
       },
       plugins,
       resolve: {
@@ -52,7 +54,7 @@ export class ViteBaseService {
         //   find:'@blazorApp',
         //   replacement:'./blazorApp'
         // }]
-        extensions:['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
       }
     } as UserConfig, options);
   }

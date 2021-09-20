@@ -25,7 +25,7 @@ export class BlazorAppViteSharedService extends ViteSharedService {
         const plugins = this.blazorAppVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
-
+                logLevel:'error',
                 build: {
                     outDir: BlazorAppPaths.wwwroot.toAbsolutePath(),
                     rollupOptions: {
@@ -39,9 +39,6 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                     cssCodeSplit: true,
                     sourcemap: true,
                     minify: false,
-                    cleanCssOptions: {
-                        format: 'beautify'
-                    },
                     emptyOutDir: true,
 
                 },
@@ -49,7 +46,9 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                     port: 4010
                 },
                 optimizeDeps: {
-                    keepNames: true,
+                    esbuildOptions: {
+                        keepNames: true,
+                    }
                 },
                 plugins,
                 css: {
