@@ -16,7 +16,7 @@ import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
 import fs from 'fs'
 import { rootPaths, RootPaths } from '#root/paths';
-import { dirname } from 'path/posix';
+import { basename, dirname } from 'path/posix';
 export interface VitePluginGlobInputOptions {
   inputs: {
     copyOnly?: boolean,
@@ -82,9 +82,17 @@ export function getExportSource(node: any): Node | false {
 
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
-  createPlugin(options: VitePluginGlobInputOptions) {
-    const absInputPathToRelOutputPathDic = {} as any;
-    const relInputPathToRelOutputPathDic = {} as any;
+  createPlugin(options: VitePluginGlobInputOptions): any {
+
+
+    const absInputPathToRelOutputPathDic = {} as {
+      [key: string]: {
+        originalFrom?: string,
+        from?: string,
+        to?: string
+      }
+    };
+
     let root = normalizePath(RootPaths.toAbsolutePath());
     return ({
       name: 'vite-plugin-glob-input',
@@ -103,8 +111,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const fromPath = normalizePath(input.fromPath);
             input.include = [fromPath];
             const toRelativePath = normalizePath(input.toRelativePath);
-            absInputPathToRelOutputPathDic[fromPath] = toRelativePath;
-
 
             for (let output of conf.output) {
 
@@ -122,28 +128,29 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             })).map(entry => {
 
-              if (input.copyOnly) {
+              if (input.relativeTo) {
+                const relativePath = normalizePath(relative(input.relativeTo, entry));
+                absInputPathToRelOutputPathDic[entry] = { to: relativePath };
 
-
-                if (input.relativeTo) {
-                  const relativePath = relative(input.relativeTo, entry);
-                  absInputPathToRelOutputPathDic[entry] = relativePath;
-
+                if (input.copyOnly) {
                   for (let output of conf.output) {
                     const finalPath = join(output.dir, relativePath);
                     fs.copyFileSync(entry, finalPath);
                   }
                 }
+              }
 
-                if (input.toRelativePath) {
-                  absInputPathToRelOutputPathDic[entry] = input.toRelativePath;
-
+              if (input.toRelativePath) {
+                const nomralizedToRelativePath = normalizePath(input.toRelativePath);
+                absInputPathToRelOutputPathDic[entry] = { to: nomralizedToRelativePath };
+                if (input.copyOnly) {
                   for (let output of conf.output) {
                     const finalPath = join(output.dir, input.toRelativePath);
                     fs.copyFileSync(entry, finalPath);
                   }
                 }
               }
+
 
               return (entry);
             })
@@ -235,16 +242,30 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
 
 
-            const relPath = absInputPathToRelOutputPathDic[file.facadeModuleId]
+            const relPathObj = file.facadeModuleId && absInputPathToRelOutputPathDic[file.facadeModuleId];
 
-            if (relPath) {
-              file.facadeModuleId = resolve(root, relPath);
+            if (relPathObj) {
+              let newFacadeModuleId = resolve(root, relPathObj.from);
+              newFacadeModuleId = join(dirname(newFacadeModuleId), basename(file.facadeModuleId))
+              newFacadeModuleId = normalizePath(newFacadeModuleId);
+              relPathObj.originalFrom = newFacadeModuleId;
+              if (newFacadeModuleId !== file.facadeModuleId) {
+                absInputPathToRelOutputPathDic[newFacadeModuleId] = relPathObj;
+                delete absInputPathToRelOutputPathDic[file.facadeModuleId]
+                file.facadeModuleId = newFacadeModuleId;
+              }
+
 
               if (file.type !== 'chunk' || file.facadeModuleId.endsWith('.ts')) {
+                const values = Object.values(absInputPathToRelOutputPathDic);
 
+                file.imports = file.imports.map((imported: string) => {
+                  let temp = imported;
+                  values.forEach(value => {
+                    temp = temp.replace(value.from, value.to);
+                  });
 
-                file.imports.map((imported: string) => {
-                  return imported.replace(file.fileName, relPath) || imported;
+                  return temp || imported;
                 });
 
 
@@ -274,7 +295,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
                         if (req) {
                           const { start, end } = req;
-                          const newPath = req.value.replace(file.fileName, relPath);
+                          let temp =  req.value;
+                          values.forEach(value => {
+                            temp = temp.replace(value.from, value.to);
+                          });
+                          
+                          const newPath = temp ||  req.value;
+
                           magicString.overwrite(start, end, `'${newPath}'`);
                         }
                       }
@@ -288,9 +315,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                   file.code = magicString.toString();
                 }
 
-
-
-                file.fileName = relPath || file.fileName;
+                file.fileName = relPathObj || file.fileName;
 
               }
             }
@@ -344,6 +369,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       //     return Date.now().toString();
       //   }
       // },
+      resolveAssetUrl(arg) {
+        console.dir(arg);
+      },
       resolveFileUrl(arg: { chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string }) {
         console.dir(arg);
         for (const input of options.inputs) {
@@ -355,98 +383,106 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         }
         return null;
       },
-      writeBundle(option, bundle): void {
-        console.dir(options);
-        console.dir(bundle);
-
-        const files = Object.entries<any>(bundle);
-        for (const [key, file] of files) {
-          for (const input of options.inputs) {
-
-            const sourceMaps = input.sourceMap !== false;
-
-            // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
-
-            // file.imports.map((imported: string) => {
-            //   if (!filter(imported)) {
-            //     return imported;
-            //   }
-
-            //   return relative(options.relativeTo , imported) || imported;
-            // });
-
-            // if (file.code) {
-            //   const magicString = new MagicString(file.code);
-            //   const ast = this.parse(file.code, {
-            //     ecmaVersion: 12,
-            //     sourceType: 'module',
-            //   });
-
-            //   walk(ast, {
-            //     enter(node) {
-            //       if (
-            //         [
-            //           NodeType.ImportDeclaration,
-            //           NodeType.CallExpression,
-            //           NodeType.ExportAllDeclaration,
-            //           NodeType.ExportNamedDeclaration,
-            //         ].includes(node.type as NodeType)
-            //       ) {
-            //         const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
-
-            //         if (req) {
-            //           const { start, end } = req;
-            //           const newPath = req.value;
-            //           magicString.overwrite(start, end, `'${newPath}'`);
-            //         }
-            //       }
-            //     },
-            //   });
-
-            //   if (sourceMaps) {
-            //     file.map = magicString.generateMap();
-            //   }
-
-            //   file.code = magicString.toString();
-            // }
-            if (file.type === 'chunk') {
-              if (!file.facadeModuleId?.endsWith('.ts')) {
-                continue;
-              } else {
-                if (!input.include.includes(file.facadeModuleId)) {
-                  continue
-                }
-              }
-            }
-
-            let newKey = key;
-            if (input.relativeTo) {
-              const rel = relative(root, input.relativeTo);
-              const fileName = file.fileName;
-              file.fileName = relative(rel, file.fileName);
-              newKey = relative(rel, key);
-            }
-
-            if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
-              newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
-            }
-
-            if (key !== newKey) {
-              delete bundle[key];
-              bundle[newKey] = file;
-              const fileToDelete = resolve(option.dir, key);
-
-              let fileToCreate = resolve(option.dir, newKey);
-
-              fs.renameSync(fileToDelete, fileToCreate);
-              break;
-            }
-          }
+      renderChunk(code: string, chunk, options) {
+        console.dir(chunk);
+        if (chunk.facadeModuleId && absInputPathToRelOutputPathDic[chunk.facadeModuleId] && chunk.isEntry) {
+          absInputPathToRelOutputPathDic[chunk.facadeModuleId].from = chunk.fileName;
         }
+        console.dir(options);
 
-
-        cleanEmptyFoldersRecursively(option.dir);
       }
+      // writeBundle(option, bundle): void {
+      //   console.dir(options);
+      //   console.dir(bundle);
+
+      //   const files = Object.entries<any>(bundle);
+      //   for (const [key, file] of files) {
+      //     for (const input of options.inputs) {
+
+      //       const sourceMaps = input.sourceMap !== false;
+
+      //       // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
+
+      //       // file.imports.map((imported: string) => {
+      //       //   if (!filter(imported)) {
+      //       //     return imported;
+      //       //   }
+
+      //       //   return relative(options.relativeTo , imported) || imported;
+      //       // });
+
+      //       // if (file.code) {
+      //       //   const magicString = new MagicString(file.code);
+      //       //   const ast = this.parse(file.code, {
+      //       //     ecmaVersion: 12,
+      //       //     sourceType: 'module',
+      //       //   });
+
+      //       //   walk(ast, {
+      //       //     enter(node) {
+      //       //       if (
+      //       //         [
+      //       //           NodeType.ImportDeclaration,
+      //       //           NodeType.CallExpression,
+      //       //           NodeType.ExportAllDeclaration,
+      //       //           NodeType.ExportNamedDeclaration,
+      //       //         ].includes(node.type as NodeType)
+      //       //       ) {
+      //       //         const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
+
+      //       //         if (req) {
+      //       //           const { start, end } = req;
+      //       //           const newPath = req.value;
+      //       //           magicString.overwrite(start, end, `'${newPath}'`);
+      //       //         }
+      //       //       }
+      //       //     },
+      //       //   });
+
+      //       //   if (sourceMaps) {
+      //       //     file.map = magicString.generateMap();
+      //       //   }
+
+      //       //   file.code = magicString.toString();
+      //       // }
+      //       if (file.type === 'chunk') {
+      //         if (!file.facadeModuleId?.endsWith('.ts')) {
+      //           continue;
+      //         } else {
+      //           if (!input.include.includes(file.facadeModuleId)) {
+      //             continue
+      //           }
+      //         }
+      //       }
+
+      //       let newKey = key;
+      //       if (input.relativeTo) {
+      //         const rel = relative(root, input.relativeTo);
+      //         const fileName = file.fileName;
+      //         file.fileName = relative(rel, file.fileName);
+      //         newKey = relative(rel, key);
+      //       }
+
+      //       if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
+      //         newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
+      //       }
+
+      //       if (key !== newKey) {
+      //         delete bundle[key];
+      //         bundle[newKey] = file;
+      //         const fileToDelete = resolve(option.dir, key);
+
+      //         let fileToCreate = resolve(option.dir, newKey);
+
+      //         fs.renameSync(fileToDelete, fileToCreate);
+      //         break;
+      //       }
+      //     }
+      //   }
+
+
+      //   cleanEmptyFoldersRecursively(option.dir);
+      // }
     });
   }
 }
