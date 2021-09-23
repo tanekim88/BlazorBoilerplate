@@ -13,7 +13,7 @@ let ViteSharedService = class ViteSharedService extends ViteBaseService {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
             root: RootPaths.toAbsolutePath(),
             plugins: [
-                vanillaExtractPlugin()
+                vanillaExtractPlugin({})
             ],
             resolve: {},
             css: {

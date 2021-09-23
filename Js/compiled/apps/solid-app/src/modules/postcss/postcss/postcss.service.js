@@ -18,7 +18,7 @@ import { PostcssPurgecssService } from "#shared/src/modules/postcss/services/pos
 import { PostcssReporterService } from "#shared/src/modules/postcss/services/postcss-reporter/postcss-reporter.service";
 import { PostcssRfsAutopilotService } from "#shared/src/modules/postcss/services/postcss-rfs-autopilot/postcss-rfs-autopilot.service";
 import { RfsService } from "#shared/src/modules/postcss/services/rfs/rfs.service";
-let BlazorAppPostcssService = class BlazorAppPostcssService {
+let SolidAppPostcssService = class SolidAppPostcssService {
     CssNanoService;
     PostcssReporterService;
     environmentService;
@@ -53,45 +53,45 @@ let BlazorAppPostcssService = class BlazorAppPostcssService {
 __decorate([
     CustomInject(CssnanoService),
     __metadata("design:type", CssnanoService)
-], BlazorAppPostcssService.prototype, "CssNanoService", void 0);
+], SolidAppPostcssService.prototype, "CssNanoService", void 0);
 __decorate([
     CustomInject(PostcssReporterService),
     __metadata("design:type", PostcssReporterService)
-], BlazorAppPostcssService.prototype, "PostcssReporterService", void 0);
+], SolidAppPostcssService.prototype, "PostcssReporterService", void 0);
 __decorate([
     CustomInject(EnvironmentService),
     __metadata("design:type", EnvironmentService)
-], BlazorAppPostcssService.prototype, "environmentService", void 0);
+], SolidAppPostcssService.prototype, "environmentService", void 0);
 __decorate([
     CustomInject(PostcssPurgecssService),
     __metadata("design:type", PostcssPurgecssService)
-], BlazorAppPostcssService.prototype, "PostcssPurgecssService", void 0);
+], SolidAppPostcssService.prototype, "PostcssPurgecssService", void 0);
 __decorate([
     CustomInject(PostcssPresetEnvService),
     __metadata("design:type", PostcssPresetEnvService)
-], BlazorAppPostcssService.prototype, "PostcssPresetEnvService", void 0);
+], SolidAppPostcssService.prototype, "PostcssPresetEnvService", void 0);
 __decorate([
     CustomInject(PostcssCombineDuplicatedSelectorsService),
     __metadata("design:type", PostcssCombineDuplicatedSelectorsService)
-], BlazorAppPostcssService.prototype, "PostcssCombineDuplicatedSelectorsService", void 0);
+], SolidAppPostcssService.prototype, "PostcssCombineDuplicatedSelectorsService", void 0);
 __decorate([
     CustomInject(PostcssFunctionsService),
     __metadata("design:type", PostcssFunctionsService)
-], BlazorAppPostcssService.prototype, "PostcssFunctionsService", void 0);
+], SolidAppPostcssService.prototype, "PostcssFunctionsService", void 0);
 __decorate([
     CustomInject(PostcssFontMagicianService),
     __metadata("design:type", PostcssFontMagicianService)
-], BlazorAppPostcssService.prototype, "PostcssFontMagicianService", void 0);
+], SolidAppPostcssService.prototype, "PostcssFontMagicianService", void 0);
 __decorate([
     CustomInject(PostcssRfsAutopilotService),
     __metadata("design:type", PostcssRfsAutopilotService)
-], BlazorAppPostcssService.prototype, "PostcssRfsAutopilotService", void 0);
+], SolidAppPostcssService.prototype, "PostcssRfsAutopilotService", void 0);
 __decorate([
     CustomInject(RfsService),
     __metadata("design:type", RfsService)
-], BlazorAppPostcssService.prototype, "RfsService", void 0);
-BlazorAppPostcssService = __decorate([
+], SolidAppPostcssService.prototype, "RfsService", void 0);
+SolidAppPostcssService = __decorate([
     CustomInjectable()
-], BlazorAppPostcssService);
-export { BlazorAppPostcssService };
+], SolidAppPostcssService);
+export { SolidAppPostcssService };
 //# sourceMappingURL=postcss.service.js.map

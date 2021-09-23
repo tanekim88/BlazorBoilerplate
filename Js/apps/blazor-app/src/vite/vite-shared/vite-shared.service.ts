@@ -12,6 +12,7 @@ import { BlazorAppVitePluginsService } from '../vite-plugins/vite-plugins.servic
 import { RootPaths, rootPaths } from '#root/paths';
 import { PostcssService } from '#shared/src/modules/postcss/postcss.service';
 import { BlazorAppPostcssService } from '#blazor-app/src/modules/postcss/postcss/postcss.service';
+import { MergeCommand } from '#shared/src/modules/utilities/modules/merge/merge/merge-command';
 @CustomInjectable()
 export class BlazorAppViteSharedService extends ViteSharedService {
     @CustomInject(BlazorAppEnvironmentService)
@@ -25,9 +26,9 @@ export class BlazorAppViteSharedService extends ViteSharedService {
         const plugins = this.blazorAppVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
-                logLevel:'error',
+                logLevel: 'error',
                 build: {
-                    outDir: BlazorAppPaths.wwwroot.toAbsolutePath(),
+                    outDir: BlazorAppPaths.Client.wwwroot.toAbsolutePath(),
                     rollupOptions: {
                         input: [],
                         external: []
@@ -56,6 +57,35 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                         plugins: postcssPlugins
                     }
                 }
+            } as UserConfig,
+            options,
+        );
+    }
+
+    createConfigurationForScss(options?: UserConfig) {
+        const plugins = this.blazorAppVitePluginsService.createManyPluginsForSass();
+        return this.mergeService.mergeOptions(
+            this.createConfiguration(),
+            {
+                build: {
+                    outDir: BlazorAppPaths.Client.toAbsolutePath(),
+                    // rollupOptions: {
+                    //     output:{
+                    //         entryFileNames: '[name].js',
+                    //         assetFileNames: '[name].[ext]',
+                    //         chunkFileNames: '[name].js'
+                    //     }
+                    // },
+                    // watch: {
+
+                    // },
+                    // cssCodeSplit: false,
+                },
+                plugins: [
+                    MergeCommand.overwrite(
+                        plugins
+                    ),
+                ]
             } as UserConfig,
             options,
         );

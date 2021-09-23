@@ -38,7 +38,9 @@ let ViteBaseService = class ViteBaseService {
             optimizeDeps: {
                 include: [],
                 exclude: [],
-                keepNames: false
+                esbuildOptions: {
+                    keepNames: false,
+                }
             },
             plugins,
             resolve: {

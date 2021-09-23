@@ -24,7 +24,7 @@ export class EnvironmentService implements OnModuleInit {
     public isDevelopment: boolean;
 
     localPaths: LocalPathsType;
-    
+
     LocalPaths: LocalPathsType;
 
     outputDir: string;
@@ -53,10 +53,14 @@ export class EnvironmentService implements OnModuleInit {
     protected createEnvironments() {
         this.isProduction = process.env.NODE_ENV === 'production';
         this.isDevelopment = process.env.NODE_ENV === 'development';
-
-        if(this.LocalPaths['wwwroot']){
-            this.outputDir = this.LocalPaths['wwwroot'].toAbsolutePath();
+        
+        try {
+            if (this.LocalPaths['wwwroot']) {
+                this.outputDir = this.LocalPaths['wwwroot'].toAbsolutePath();
+            }
+        }catch(e){
         }
+
         this.logoPath = this.localPaths.src.logo['icon-512.png'].toAbsolutePath();
     }
 }

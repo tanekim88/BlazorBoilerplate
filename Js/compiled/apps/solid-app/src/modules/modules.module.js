@@ -6,15 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
 import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
-import { BlazorAppEnvironmentModule } from './environment/environment.module';
-import { BlazorAppUtilitiesModule } from './utilities/utilities.module';
-let BlazorAppModulesModule = class BlazorAppModulesModule {
+import { SolidAppEnvironmentModule } from './environment/environment.module';
+import { SolidAppUtilitiesModule } from './utilities/utilities.module';
+let SolidAppModulesModule = class SolidAppModulesModule {
 };
-BlazorAppModulesModule = __decorate([
+SolidAppModulesModule = __decorate([
     CustomModule({
         providers: [],
-        imports: [BlazorAppUtilitiesModule, BlazorAppEnvironmentModule, PostcssModule],
+        imports: [SolidAppUtilitiesModule, SolidAppEnvironmentModule, PostcssModule],
     })
-], BlazorAppModulesModule);
-export { BlazorAppModulesModule };
+], SolidAppModulesModule);
+export { SolidAppModulesModule };
 //# sourceMappingURL=modules.module.js.map

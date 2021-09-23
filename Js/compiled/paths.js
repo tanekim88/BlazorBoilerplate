@@ -83,13 +83,33 @@ export const RootPaths = createProxy({
             }
         }
     },
+    ".tye": {
+        toAbsolutePath: () => "C:\\App\\.tye",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\.tye") : path.relative("C:\\App", "C:\\App\\.tye"); },
+        "docker_store": {
+            toAbsolutePath: () => "C:\\App\\.tye\\docker_store",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\.tye\\docker_store") : path.relative("C:\\App", "C:\\App\\.tye\\docker_store"); }
+        },
+        "process_store": {
+            toAbsolutePath: () => "C:\\App\\.tye\\process_store",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\.tye\\process_store") : path.relative("C:\\App", "C:\\App\\.tye\\process_store"); }
+        }
+    },
     ".vs": {
         toAbsolutePath: () => "C:\\App\\.vs",
         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\.vs") : path.relative("C:\\App", "C:\\App\\.vs"); }
     },
+    "App.Setup.sln": {
+        toAbsolutePath: () => "C:\\App\\App.Setup.sln",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\App.Setup.sln") : path.relative("C:\\App", "C:\\App\\App.Setup.sln"); }
+    },
     "App.sln": {
         toAbsolutePath: () => "C:\\App\\App.sln",
         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\App.sln") : path.relative("C:\\App", "C:\\App\\App.sln"); }
+    },
+    "App.Test.sln": {
+        toAbsolutePath: () => "C:\\App\\App.Test.sln",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\App.Test.sln") : path.relative("C:\\App", "C:\\App\\App.Test.sln"); }
     },
     "Apps": {
         toAbsolutePath: () => "C:\\App\\Apps",
@@ -1054,6 +1074,10 @@ export const RootPaths = createProxy({
                     "Auth.Infrastructure20210703.txt": {
                         toAbsolutePath: () => "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt") : path.relative("C:\\App", "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt"); }
+                    },
+                    "Auth.Infrastructure20210920.txt": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt") : path.relative("C:\\App", "C:\\App\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt"); }
                     }
                 },
                 "obj": {
@@ -3148,6 +3172,10 @@ export const RootPaths = createProxy({
             "Client": {
                 toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client",
                 toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client"); },
+                ".vs": {
+                    toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\.vs",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\.vs") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\.vs"); }
+                },
                 "App.razor": {
                     toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\App.razor",
                     toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\App.razor") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\App.razor"); }
@@ -3515,17 +3543,13 @@ export const RootPaths = createProxy({
                 "wwwroot": {
                     toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot",
                     toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot"); },
-                    "assets": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets"); },
-                        "index.1b54bc75.js": {
-                            toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js",
-                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js"); }
-                        }
+                    "bootstrap-icons.svg": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg"); }
                     },
-                    "index.html": {
-                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html",
-                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html"); }
+                    "favicon.ico": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico"); }
                     }
                 },
                 "_Imports.razor": {
@@ -3642,6 +3666,10 @@ export const RootPaths = createProxy({
                     "Core.Infrastructure20210704_001.txt": {
                         toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210704_001.txt"); }
+                    },
+                    "Core.Infrastructure20210920.txt": {
+                        toAbsolutePath: () => "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt") : path.relative("C:\\App", "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt"); }
                     }
                 },
                 "obj": {
@@ -6659,50 +6687,6 @@ export const RootPaths = createProxy({
             }
         }
     },
-    "dapr": {
-        toAbsolutePath: () => "C:\\App\\dapr",
-        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr") : path.relative("C:\\App", "C:\\App\\dapr"); },
-        "components": {
-            toAbsolutePath: () => "C:\\App\\dapr\\components",
-            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components") : path.relative("C:\\App", "C:\\App\\dapr\\components"); },
-            "email.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\email.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\email.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\email.yaml"); }
-            },
-            "oauth2-client-credential.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\oauth2-client-credential.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\oauth2-client-credential.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\oauth2-client-credential.yaml"); }
-            },
-            "oauth2.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\oauth2.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\oauth2.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\oauth2.yaml"); }
-            },
-            "pubsub.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\pubsub.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\pubsub.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\pubsub.yaml"); }
-            },
-            "secretstore.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\secretstore.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\secretstore.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\secretstore.yaml"); }
-            },
-            "statestore.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\components\\statestore.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\components\\statestore.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\components\\statestore.yaml"); }
-            }
-        },
-        "configurations": {
-            toAbsolutePath: () => "C:\\App\\dapr\\configurations",
-            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\configurations") : path.relative("C:\\App", "C:\\App\\dapr\\configurations"); },
-            "config.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\configurations\\config.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\configurations\\config.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\configurations\\config.yaml"); }
-            },
-            "pipeline.yaml": {
-                toAbsolutePath: () => "C:\\App\\dapr\\configurations\\pipeline.yaml",
-                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\dapr\\configurations\\pipeline.yaml") : path.relative("C:\\App", "C:\\App\\dapr\\configurations\\pipeline.yaml"); }
-            }
-        }
-    },
     "deploy": {
         toAbsolutePath: () => "C:\\App\\deploy",
         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\deploy") : path.relative("C:\\App", "C:\\App\\deploy"); },
@@ -8578,6 +8562,10 @@ export const RootPaths = createProxy({
             toAbsolutePath: () => "C:\\App\\Docker\\.dockerignore",
             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Docker\\.dockerignore") : path.relative("C:\\App", "C:\\App\\Docker\\.dockerignore"); }
         },
+        "bin": {
+            toAbsolutePath: () => "C:\\App\\Docker\\bin",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Docker\\bin") : path.relative("C:\\App", "C:\\App\\Docker\\bin"); }
+        },
         "Create-DockerfileSolutionRestore.ps1": {
             toAbsolutePath: () => "C:\\App\\Docker\\Create-DockerfileSolutionRestore.ps1",
             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Docker\\Create-DockerfileSolutionRestore.ps1") : path.relative("C:\\App", "C:\\App\\Docker\\Create-DockerfileSolutionRestore.ps1"); }
@@ -8958,6 +8946,10 @@ export const RootPaths = createProxy({
                     "logo": {
                         toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\logo",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\logo") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\logo"); },
+                        "favicon.ico": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\favicon.ico"); }
+                        },
                         "icon-512.png": {
                             toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png",
                             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\logo\\icon-512.png"); }
@@ -8986,9 +8978,17 @@ export const RootPaths = createProxy({
                             toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html",
                             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html"); }
                         },
+                        "index.js": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js"); }
+                        },
                         "index.webpack.html": {
                             toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html",
                             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html"); }
+                        },
+                        "third.js": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js") : path.relative("C:\\App", "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js"); }
                         }
                     },
                     "vite": {
@@ -9171,6 +9171,34 @@ export const RootPaths = createProxy({
                 "Monikers.imagemanifest": {
                     toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest",
                     toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\Monikers.imagemanifest"); }
+                },
+                "node": {
+                    toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node"); },
+                    "__tests__": {
+                        toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__"); },
+                        "packages": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages"); },
+                            "name": {
+                                toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name"); },
+                                "package.json": {
+                                    toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\name\\package.json"); }
+                                }
+                            },
+                            "noname": {
+                                toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname"); },
+                                "package.json": {
+                                    toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json",
+                                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\node\\__tests__\\packages\\noname\\package.json"); }
+                                }
+                            }
+                        }
+                    }
                 },
                 "node_modules": {
                     toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\node_modules",
@@ -10856,10 +10884,6 @@ export const RootPaths = createProxy({
                         }
                     }
                 },
-                "tailwind.config.json": {
-                    toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\tailwind.config.json",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\tailwind.config.json") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\tailwind.config.json"); }
-                },
                 "tailwind.config.ts": {
                     toAbsolutePath: () => "C:\\App\\Js\\apps\\shared\\tailwind.config.ts",
                     toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\shared\\tailwind.config.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\shared\\tailwind.config.ts"); }
@@ -10951,6 +10975,22 @@ export const RootPaths = createProxy({
                         toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\index.html",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\index.html") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\index.html"); }
                     },
+                    "libs": {
+                        toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\libs",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\libs") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\libs"); },
+                        "dessert-box": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box"); },
+                            "index.tsx": {
+                                toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\index.tsx",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\index.tsx") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\index.tsx"); }
+                            },
+                            "types.ts": {
+                                toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\types.ts",
+                                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\types.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\libs\\dessert-box\\types.ts"); }
+                            }
+                        }
+                    },
                     "node_modules": {
                         toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\node_modules",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\node_modules") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\node_modules"); }
@@ -10974,6 +11014,10 @@ export const RootPaths = createProxy({
                     "src": {
                         toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src",
                         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src"); },
+                        "App.css.ts": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.css.ts",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.css.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.css.ts"); }
+                        },
                         "App.tsx": {
                             toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx",
                             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\App.tsx"); }
@@ -10997,6 +11041,18 @@ export const RootPaths = createProxy({
                         "logo.svg": {
                             toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg",
                             toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\logo.svg"); }
+                        },
+                        "material-colors.ts": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\material-colors.ts",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\material-colors.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\material-colors.ts"); }
+                        },
+                        "sprinkles.css.ts": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\sprinkles.css.ts",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\sprinkles.css.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\sprinkles.css.ts"); }
+                        },
+                        "vars.css.ts": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\app\\src\\vars.css.ts",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\app\\src\\vars.css.ts") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\app\\src\\vars.css.ts"); }
                         }
                     },
                     "tsconfig.json": {
@@ -11226,7 +11282,31 @@ export const RootPaths = createProxy({
                 },
                 "wwwroot": {
                     toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot",
-                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot"); }
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot"); },
+                    "assets": {
+                        toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets"); },
+                        "favicon.0e726a38.ico": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\favicon.0e726a38.ico",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\favicon.0e726a38.ico") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\favicon.0e726a38.ico"); }
+                        },
+                        "index.2879edad.js": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.2879edad.js",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.2879edad.js") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.2879edad.js"); }
+                        },
+                        "index.8b3702fd.css": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.8b3702fd.css",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.8b3702fd.css") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\index.8b3702fd.css"); }
+                        },
+                        "vendor.2bf70d6a.js": {
+                            toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\vendor.2bf70d6a.js",
+                            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\vendor.2bf70d6a.js") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\assets\\vendor.2bf70d6a.js"); }
+                        }
+                    },
+                    "index.html": {
+                        toAbsolutePath: () => "C:\\App\\Js\\apps\\solid-app\\wwwroot\\index.html",
+                        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Js\\apps\\solid-app\\wwwroot\\index.html") : path.relative("C:\\App", "C:\\App\\Js\\apps\\solid-app\\wwwroot\\index.html"); }
+                    }
                 }
             }
         },
@@ -11370,6 +11450,18 @@ export const RootPaths = createProxy({
     "openIdDict_dev_sqlServer.bat": {
         toAbsolutePath: () => "C:\\App\\openIdDict_dev_sqlServer.bat",
         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\openIdDict_dev_sqlServer.bat") : path.relative("C:\\App", "C:\\App\\openIdDict_dev_sqlServer.bat"); }
+    },
+    "package-lock.json": {
+        toAbsolutePath: () => "C:\\App\\package-lock.json",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\package-lock.json") : path.relative("C:\\App", "C:\\App\\package-lock.json"); }
+    },
+    "package.json": {
+        toAbsolutePath: () => "C:\\App\\package.json",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\package.json") : path.relative("C:\\App", "C:\\App\\package.json"); }
+    },
+    "secrets": {
+        toAbsolutePath: () => "C:\\App\\secrets",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\secrets") : path.relative("C:\\App", "C:\\App\\secrets"); }
     },
     "Setups": {
         toAbsolutePath: () => "C:\\App\\Setups",
@@ -20147,9 +20239,77 @@ export const RootPaths = createProxy({
             }
         }
     },
+    "Tye": {
+        toAbsolutePath: () => "C:\\App\\Tye",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye") : path.relative("C:\\App", "C:\\App\\Tye"); },
+        "bin": {
+            toAbsolutePath: () => "C:\\App\\Tye\\bin",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\bin") : path.relative("C:\\App", "C:\\App\\Tye\\bin"); }
+        },
+        "dapr": {
+            toAbsolutePath: () => "C:\\App\\Tye\\dapr",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr") : path.relative("C:\\App", "C:\\App\\Tye\\dapr"); },
+            "components": {
+                toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components"); },
+                "email.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\email.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\email.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\email.yaml"); }
+                },
+                "oauth2-client-credential.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\oauth2-client-credential.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\oauth2-client-credential.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\oauth2-client-credential.yaml"); }
+                },
+                "oauth2.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\oauth2.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\oauth2.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\oauth2.yaml"); }
+                },
+                "pubsub.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\pubsub.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\pubsub.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\pubsub.yaml"); }
+                },
+                "secretstore.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\secretstore.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\secretstore.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\secretstore.yaml"); }
+                },
+                "statestore.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\components\\statestore.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\components\\statestore.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\components\\statestore.yaml"); }
+                }
+            },
+            "configurations": {
+                toAbsolutePath: () => "C:\\App\\Tye\\dapr\\configurations",
+                toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\configurations") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\configurations"); },
+                "config.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\configurations\\config.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\configurations\\config.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\configurations\\config.yaml"); }
+                },
+                "pipeline.yaml": {
+                    toAbsolutePath: () => "C:\\App\\Tye\\dapr\\configurations\\pipeline.yaml",
+                    toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\dapr\\configurations\\pipeline.yaml") : path.relative("C:\\App", "C:\\App\\Tye\\dapr\\configurations\\pipeline.yaml"); }
+                }
+            }
+        },
+        "obj": {
+            toAbsolutePath: () => "C:\\App\\Tye\\obj",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\obj") : path.relative("C:\\App", "C:\\App\\Tye\\obj"); }
+        },
+        "Program.cs": {
+            toAbsolutePath: () => "C:\\App\\Tye\\Program.cs",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\Program.cs") : path.relative("C:\\App", "C:\\App\\Tye\\Program.cs"); }
+        },
+        "Tye.csproj": {
+            toAbsolutePath: () => "C:\\App\\Tye\\Tye.csproj",
+            toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\Tye\\Tye.csproj") : path.relative("C:\\App", "C:\\App\\Tye\\Tye.csproj"); }
+        }
+    },
     "tye.yaml": {
         toAbsolutePath: () => "C:\\App\\tye.yaml",
         toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\tye.yaml") : path.relative("C:\\App", "C:\\App\\tye.yaml"); }
+    },
+    "tye.yaml2": {
+        toAbsolutePath: () => "C:\\App\\tye.yaml2",
+        toRelativePath: (relativeTo) => { return relativeTo ? path.relative(relativeTo, "C:\\App\\tye.yaml2") : path.relative("C:\\App", "C:\\App\\tye.yaml2"); }
     }
 });
 export const rootPaths = RootPaths.Js;

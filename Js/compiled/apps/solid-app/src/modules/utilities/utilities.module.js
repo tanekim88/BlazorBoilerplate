@@ -5,15 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { MergeModule as BlazorAppMergeModule } from './merge/merge.module';
-import { RegexModule as BlazorAppRegexModule } from './regex/regex.module';
-let BlazorAppUtilitiesModule = class BlazorAppUtilitiesModule {
+import { MergeModule as SolidAppMergeModule } from './merge/merge.module';
+import { RegexModule as SolidAppRegexModule } from './regex/regex.module';
+let SolidAppUtilitiesModule = class SolidAppUtilitiesModule {
 };
-BlazorAppUtilitiesModule = __decorate([
+SolidAppUtilitiesModule = __decorate([
     CustomModule({
-        imports: [BlazorAppMergeModule, BlazorAppRegexModule],
+        imports: [SolidAppMergeModule, SolidAppRegexModule],
         providers: [],
     })
-], BlazorAppUtilitiesModule);
-export { BlazorAppUtilitiesModule };
+], SolidAppUtilitiesModule);
+export { SolidAppUtilitiesModule };
 //# sourceMappingURL=utilities.module.js.map

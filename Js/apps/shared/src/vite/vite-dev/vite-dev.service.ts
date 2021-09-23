@@ -8,15 +8,15 @@ import { ViteSharedService } from '../vite-shared/vite-shared.service';
 export class ViteDevService extends ViteBaseService {
     @CustomInject(ViteSharedService)
     protected viteSharedService: ViteSharedService;
-    
-    createConfiguration(options?:UserConfig) {
+
+    createConfiguration(options?: UserConfig) {
         return this.mergeService.mergeOptions(
             super.createConfiguration(),
             {
-                mode:'development',
-                build:{
-                    minify:false,
-                    
+                mode: 'development',
+                build: {
+                    minify: false,
+
                 }
             } as UserConfig,
             options,

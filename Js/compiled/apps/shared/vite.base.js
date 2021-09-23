@@ -14,11 +14,17 @@ export class ViteBase {
         if (options?.mode) {
             process.env.NODE_ENV = options?.mode;
         }
-        const app = await NestFactory.create(this.viteModule);
-        await app.init();
-        const svc = app.get(this.service);
-        const config = svc.createConfiguration();
-        return config;
+        try {
+            const app = await NestFactory.create(this.viteModule, { abortOnError: false });
+            await app.init();
+            const svc = app.get(this.service);
+            const config = svc.createConfiguration();
+            return config;
+        }
+        catch (e) {
+            console.error(e);
+        }
+        return null;
     }
     async build() {
         if (process.env.NODE_ENV) {

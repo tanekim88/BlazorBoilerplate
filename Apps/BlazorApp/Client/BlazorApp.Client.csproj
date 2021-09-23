@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<nullable>enable</nullable>
-		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+		<!--<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>-->
 		<DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
 		<UserSecretsId>d34e72da-6a67-425f-9e2b-d4018042ab09</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -63,8 +63,8 @@
 		<ProjectReference Include="..\Shared\BlazorApp.Shared.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 </Project>

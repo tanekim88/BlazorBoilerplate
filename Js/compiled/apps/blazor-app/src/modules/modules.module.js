@@ -5,15 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
 import { BlazorAppEnvironmentModule } from './environment/environment.module';
+import { BlazorPostcssModule } from './postcss/postcss.module';
 import { BlazorAppUtilitiesModule } from './utilities/utilities.module';
 let BlazorAppModulesModule = class BlazorAppModulesModule {
 };
 BlazorAppModulesModule = __decorate([
     CustomModule({
         providers: [],
-        imports: [BlazorAppUtilitiesModule, BlazorAppEnvironmentModule, PostcssModule],
+        imports: [BlazorAppUtilitiesModule, BlazorAppEnvironmentModule, BlazorPostcssModule],
     })
 ], BlazorAppModulesModule);
 export { BlazorAppModulesModule };

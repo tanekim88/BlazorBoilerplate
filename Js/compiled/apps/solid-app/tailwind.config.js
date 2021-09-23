@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(filename);
 const purgePath = path.resolve(__dirname, './src/**/*.{js,jsx,ts,tsx,vue,html}');
-const purgePath2 = path.resolve(__dirname, '../../../Apps/BlazorApp/Client/**/*.{razor}');
+const purgePath2 = path.resolve(__dirname, '../../../Apps/SolidApp/Client/**/*.{razor}');
 export default deepmerge(sharedConfig, {
 // future: {},
 // purge: [purgePath, purgePath2],

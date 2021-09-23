@@ -1,7 +1,7 @@
 
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
-import { relative, resolve, join } from 'path';
+import path from 'path';
 
 import { VitePluginBaseService } from '../../vite-plugin-base/vite-plugin-base.service';
 
@@ -18,11 +18,15 @@ import fs from 'fs'
 import { rootPaths } from '#root/paths';
 import { basename, dirname } from 'path/posix';
 
-type Action = 'ts-to-js' | 'ts-to-json' | 'copy';
+import sass from 'sass';
+import fibers from 'fibers';
+
+type Action = 'to-json' | 'copy';
 export interface VitePluginGlobInputOptions {
   inputs: {
     fromPath?: string,
     toRelativePath?: string,
+    toName?: string,
     include?: string[],
     sourceMap?: boolean,
     relativeTo?: string,
@@ -31,8 +35,26 @@ export interface VitePluginGlobInputOptions {
     globOptions?: {
       ignore?: string[]
     },
-    action?: Action
-  }[]
+    action?: Action,
+    applyChunk?: boolean,
+    htmlToken?: string
+  }[],
+  externals?: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
+}
+interface Data {
+  absFrom?: string,
+  absFrom2?: string,
+  from2ToFrom?: string,
+  relTo?: string,
+  relTo2?: string,
+  relTo3?: string,
+  absTo?: string,
+  absTo2?: string,
+  imports?: string[],
+  facadeModuleId?: string,
+  action?: Action,
+  code?: string,
+  htmlToken?: string
 }
 enum NodeType {
   Literal = 'Literal',
@@ -81,40 +103,23 @@ export function getExportSource(node: any): Node | false {
 
   return node.source;
 }
-function processPath(values: Data[], text: string, relativeFromPath: string) {
-  let temp = text;
 
-  values.forEach(value => {
-    temp = temp.replace(value.absFrom, value.relTo);
-
-  });
-
-  return temp || text;
-}
 
 interface DataDic {
   [key: string]: Data
 }
 
-interface Data {
-  absFrom?: string,
-  absFrom2?: string,
-  relTo?: string,
-  absTo?: string,
-  imports?: string[],
-  facadeModuleId?: string,
-  action?: Action,
-  code?: string
-}
+
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
 
 
   createPlugin(options: VitePluginGlobInputOptions): any {
+    options.externals = options.externals ?? [];
 
     let config;
     let server;
-    const absFromToRelOutput = {} as {
+    const absFromToData = {} as {
       [key: string]: Data
     };
 
@@ -124,14 +129,18 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     const absToToData = {} as {
       [key: string]: Data
     };
+    const relTo3ToData = {} as {
+      [key: string]: Data
+    };
     return ({
       name: 'vite-plugin-glob-input',
       enforce: 'pre',
 
 
-      // buildStart() {
-
-      // },
+      buildStart(args) {
+        console.log('### args')
+        console.dir(args);
+      },
       config(config, args) {
         console.log('### config')
         console.dir(config);
@@ -151,8 +160,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         // store the resolved config
         config = resolvedConfig
       },
-      options(conf) {
-        console.log('options')
+      async options(conf) {
+        console.log('### options')
         console.dir(conf);
         const root = config.root;
         const outDir = config.build.outDir;
@@ -167,65 +176,96 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           if (input.fromPath) {
             const fromPath = normalizePath(input.fromPath);
             input.include = [fromPath];
-            const toRelativePath = normalizePath(input.toRelativePath);
-
-            for (let output of conf.output) {
-
-              if (input.action === 'copy') {
-                const finalPath = join(output.dir, toRelativePath);
-                fs.copyFileSync(input.fromPath, finalPath);
-              }
-            }
           }
-
 
           const entries = fastGlob
             .sync(input.include, Object.assign({}, input.globOptions, {
               stats: false,
             }));
 
-          entries.forEach(entry => {
-            let nomralizedToRelativePath;
+          const mapped = entries.map(absFrom => {
+            let relTo2;
+            let relTo;
 
             if (input.relativeTo) {
-              nomralizedToRelativePath = normalizePath(relative(input.relativeTo, entry));
+              relTo = normalizePath(path.relative(input.relativeTo, absFrom));
             }
 
             if (input.toRelativePath) {
-              nomralizedToRelativePath = normalizePath(input.toRelativePath);
+              relTo = normalizePath(input.toRelativePath);
             }
 
-            if (input.action === 'copy') {
+            if (input.toName) {
+              const dir = dirname(normalizePath(path.relative(root, absFrom)));
+              relTo = normalizePath(path.join(dir, input.toName));
+            }
+
+            relTo2 = relTo;
+
+            if (path.extname(absFrom) === '.ts' && path.extname(relTo) === '.js') {
+              relTo = relTo.replace(/\.js$/, '.ts');
+              relTo = relTo.replace(/\.?\[hash\]/g, '')
+            }
+
+            const absFrom2 = normalizePath(path.resolve(root, relTo));
+
+            const absTo = normalizePath(path.resolve(root, relTo));
+            const absTo2 = normalizePath(path.resolve(root, relTo2));
+            const from2ToFrom = path.relative(dirname(absFrom2), dirname(absFrom));
+
+            let code = fs.readFileSync(absFrom, { encoding: 'utf8' });
+            absFromToData[absFrom] = {
+              absFrom,
+              absFrom2,
+              relTo,
+              relTo2,
+              absTo,
+              absTo2,
+              code,
+              action: input.action,
+              from2ToFrom,
+              htmlToken: input.htmlToken
+            };
+            absFrom2ToData[absFrom2] = absFromToData[absFrom];
+            absToToData[absTo] = absFromToData[absFrom];
+
+
+
+            if (input.action === 'copy' || path.extname(absFrom) === '.scss') {
+              if (path.extname(absFrom) === '.scss') {
+                code = sass.renderSync({
+                  file: absFrom,
+                  importer: function (url, prev, done) {
+
+                  },
+                  fiber: fibers
+                });
+              }
+
+
               for (let output of conf.output) {
                 let finalPath;
-                if (input.relativeTo) {
-                  finalPath = join(output.dir, nomralizedToRelativePath);
+
+                if (input.relativeTo || input.toName) {
+                  finalPath = path.join(output.dir, relTo);
                 }
+
                 if (input.toRelativePath) {
-                  finalPath = join(output.dir, input.toRelativePath);
+                  finalPath = path.join(output.dir, input.toRelativePath);
                 }
-                fs.copyFileSync(entry, finalPath);
+
+                fs.writeFileSync(finalPath, code);
               }
-            } else {
-              const fromFileBaseName = basename(entry);
-              const relDirName = dirname(nomralizedToRelativePath);
-              const from2 = normalizePath(resolve(relDirName, fromFileBaseName));
-              const code = fs.readFileSync(entry, { encoding: 'utf8' });
-              const absTo = normalizePath(resolve(outDir, nomralizedToRelativePath));
-              absFromToRelOutput[entry] = {
-                absFrom: entry, absFrom2: from2,
-                relTo: nomralizedToRelativePath,
-                absTo,
-                action: input.action, code
-              };
-              absFrom2ToData[from2] = absFromToRelOutput[entry];
-              absToToData[nomralizedToRelativePath] = absFromToRelOutput[entry];
+
+              return null;
             }
+
+
+            return absFromToData[absFrom];
           });
 
-          if (input.action === 'copy') {
-            return null;
-          }
+
+
 
           return entries;
         }).filter(x => x);
@@ -234,21 +274,66 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
         return conf;
       },
-      resolveId(id) {
+      async resolveId(source: string, importer: string | undefined, options: { custom?: { [plugin: string]: any } }) {
         console.log('### resolveId')
-        console.dir(id);
-        const normalizedId = normalizePath(id);
-        const foundObj = absFromToRelOutput[normalizedId];
-        if (foundObj) {
+        console.dir(source);
+        console.dir(importer);
+        console.dir(options);
+        console.dir(absFromToData);
+
+        // if (importer) {
+        //   const foundObj = absFromToData[importer];
+        //   if (foundObj) {
+        //     if (!path.isAbsolute(source)) {
+        //       const importerDir = dirname(importer);
+
+        //       let relFrom = normalizePath(path.join(foundObj.from2ToFrom, source))
+
+        //       if (source.startsWith('./') && !relFrom.startsWith('.')) {
+        //         relFrom = './' + relFrom;
+        //       }
+        //       let absFrom = normalizePath(path.join(config.root, relFrom));
+
+        //       let exist = !!path.extname(absFrom) && fs.existsSync(absFrom);
+        //       if (!exist) {
+        //         for (let ext of config.resolve.extensions) {
+        //           if (fs.existsSync(absFrom + ext)) {
+        //             absFrom = absFrom + ext;
+        //             exist = true;
+        //             break;
+        //           }
+        //         }
+        //       }
+
+        //       if (exist) {
+        //         return absFrom;
+        //       }
+        //     }
+        //   }
+        // }
+
+        const foundObj = absFromToData[source];
+        if (foundObj?.absTo) {
           return foundObj.absTo;
+        }
+
+        let resolution = await this.resolve(source, importer, { skipSelf: true });
+
+        if (resolution) {
+          return resolution?.id;
+        }
+
+        let resolution2 = await this.resolve(source, absFrom2ToData[importer]?.absFrom, { skipSelf: true });
+
+        if (resolution2) {
+          return resolution2?.id;
         }
       },
       load(id) {
         console.log('### load')
         console.dir(id);
-        if (absToToData[id]) {
-          return absToToData[id].code;
-        }
+
+        return absToToData[id]?.code;
       },
       transform(src, id) {
         console.log('### transform')
@@ -261,7 +346,34 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         //   }
         // }
       },
+      outputOptions(outputOptions) {
+        console.log('### outputOptions')
+        console.dir(outputOptions);
+        return outputOptions;
+      },
+      augmentChunkHash(chunkInfo) {
+        console.log('### augmentChunkHash')
+        console.dir(chunkInfo);
+        // if (chunkInfo.name === 'foo') {
+        //   return Date.now().toString();
+        // }
+      },
+      renderChunk(code: string, chunk, options) {
+        console.log('### renderChunk')
+        // console.dir(code);
+        console.dir(chunk);
+        console.dir(options);
+        if (chunk.isEntry) {
 
+          if (chunk.facadeModuleId) {
+            if (chunk.facadeModuleId.endsWith('.ts') || chunk.facadeModuleId.endsWith('.js')) {
+              absFrom2ToData[chunk.facadeModuleId].relTo3 = chunk.fileName;
+            }
+
+            relTo3ToData[chunk.fileName] = absFrom2ToData[chunk.facadeModuleId];
+          }
+        }
+      },
       generateBundle(option, bundle, isWrite: boolean) {
         console.log('### generateBundle')
         console.dir(option);
@@ -269,264 +381,75 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(isWrite);
         const files = Object.entries<any>(bundle);
         for (const [key, file] of files) {
-          for (const input of options.inputs) {
+          if (file.fileName?.endsWith('.js')) {
+            if (file.facadeModuleId?.endsWith('.scss')) {
+              delete bundle[key]
+            }
+          }
+        }
+      },
 
-            const sourceMaps = input.sourceMap !== false;
+      transformIndexHtml(html) {
+        console.log('### transformIndexHtml')
+        // console.dir(html);
 
+        const externals = options.externals ?? [];
+        externals.forEach(external => {
+          let pos = external.pos;
+          if (!pos) {
+            pos = external.insertAt.includes('</') ? 'before' : 'after'
+          }
+          const replaceWith = pos == 'after' ? `$&\n${external.html}` : `${external.html}\n$&`
+          html = html.replace(
+            external.insertAt,
+            replaceWith
+          )
+        });
 
-
-            // if (!file.facadeModuleId?.endsWith('.ts')) {
-            //   continue;
-            // } else {
-            //   if (!input.include.includes(file.facadeModuleId)) {
-            //     continue
-            //   }
-            // }
-
-
-
-            // const relPathObj = file.facadeModuleId && absInputPathToRelOutputPathDic[file.facadeModuleId];
-
-            // if (relPathObj) {
-            //   let newFacadeModuleId = resolve(root, relPathObj.from);
-            //   newFacadeModuleId = join(dirname(newFacadeModuleId), basename(file.facadeModuleId))
-            //   newFacadeModuleId = normalizePath(newFacadeModuleId);
-            //   relPathObj.source = newFacadeModuleId;
-            //   if (newFacadeModuleId !== file.facadeModuleId) {
-            //     absInputPathToRelOutputPathDic[newFacadeModuleId] = relPathObj;
-            //     delete absInputPathToRelOutputPathDic[file.facadeModuleId]
-            //     file.facadeModuleId = newFacadeModuleId;
-            //   }
-
-
-            //   if (file.type !== 'chunk' || file.facadeModuleId.endsWith('.ts')) {
-            //     const values = Object.values(absInputPathToRelOutputPathDic);
-
-            //     file.imports = file.imports.map((imported: string) => {
-            //       const toReturn = processPath(values, imported, relative(root, file.facadeModuleId));
-            //       return toReturn;
-            //     });
-
-
-
-            //     if (file.code) {
-            //       const magicString = new MagicString(file.code);
-            //       const ast = this.parse(file.code, {
-            //         ecmaVersion: 6,
-            //         sourceType: 'module',
-            //       });
-
-            //       walk(ast, {
-            //         enter(node) {
-            //           if (
-            //             [
-            //               NodeType.ImportDeclaration,
-            //               NodeType.CallExpression,
-            //               NodeType.ExportAllDeclaration,
-            //               NodeType.ExportNamedDeclaration,
-            //             ].includes(node.type as NodeType)
-            //           ) {
-            //             const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
-
-            //             if (req) {
-            //               const { start, end } = req;
-            //               const newPath = processPath(values, req.value, relative(root, file.facadeModuleId));
-            //               magicString.overwrite(start, end, `'${newPath}'`);
-            //             }
-            //           }
-            //         },
-            //       });
-
-            //       if (sourceMaps) {
-            //         file.map = magicString.generateMap();
-            //       }
-
-            //       file.code = magicString.toString();
-            //     }
-
-            //     file.fileName = relPathObj.to || file.fileName;
-
-            //   }
-            // }
-
-
-
-            // let newKey = key;
-            // if (input.relativeTo) {
-            //   const rel = relative(root, input.relativeTo);
-            //   file.fileName = relative(rel, file.fileName);
-            //   newKey = relative(rel, key);
-            // }
-
-            // if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
-            //   newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
-            // }
-
-            // if (key !== newKey) {
-            //   delete bundle[key];
-            //   bundle[newKey] = file;
-            //   const fileToDelete = resolve(option.dir, key);
-
-            //   let fileToCreate = resolve(option.dir, newKey);
-
-            //   fs.renameSync(fileToDelete, fileToCreate);
-            //   break;
-            // }
-
-
-
-
-
+        const entries = Object.entries(absFrom2ToData);
+        for (const [key, data] of entries) {
+          if (data.htmlToken) {
+            html = html.replace(data.htmlToken, data.relTo3)
           }
         }
 
 
-        // cleanEmptyFoldersRecursively(option.dir);
+        return html;
       },
-      // resolveImportMeta(property, { moduleId }) {
-      //   if (property === 'url') {
-      //     return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
-      //   }
-      //   return null;
-      // },
-      // outputOptions(outputOptions) {
-      //   console.dir(outputOptions);
-      //   return outputOptions;
-      // },
-      // augmentChunkHash(chunkInfo) {
-      //   if (chunkInfo.name === 'foo') {
-      //     return Date.now().toString();
-      //   }
-      // },
-      // resolveAssetUrl(arg) {
-      //   console.dir(arg);
-      // },
-      // resolveFileUrl(arg: { chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string }) {
-      //   console.dir(arg);
-      //   for (const input of options.inputs) {
-      //     if (input.relativeTo) {
-      //       const rel = relative(input.root, input.relativeTo);
+      writeBundle(option, bundle): void {
+        console.log('### writeBundle')
+        console.dir(option);
+        console.dir(bundle);
+      }
+      ,
+      // // // // resolveImportMeta(property, args: { moduleId }) {
+      // // // //   console.log('### resolveImportMeta')
+      // // // //   console.dir(property);
+      // // // //   console.dir(args);
+      // // // //   // if (property === 'url') {
+      // // // //   //   return `new URL('${relative(process.cwd(), moduleId)}', document.baseURI).href`;
+      // // // //   // }
+      // // // //   return null;
+      // // // // },
 
-      //       // const ileName = relative(rel, fileName);
-      //       // newKey = relative(rel, key);
-      //     }
-      //   }
-      //   return null;
-      // },
-      // renderChunk(code: string, chunk, options) {
-      //   console.log('### renderChunk')
-      //   // console.dir(code);
-      //   console.dir(chunk);
-      //   console.dir(options);
-      //   if (!relOutputPathToRelOutputPathDic[chunk.fileName]) {
-      //     relOutputPathToRelOutputPathDic[chunk.fileName] = {}
-      //   }
+      // // // // resolveAssetUrl(arg) {
+      // // // //   console.log('### resolveAssetUrl')
+      // // // //   console.dir(arg);
+      // // // // },
+      // // // // resolveFileUrl(arg: { chunkId: string, fileName: string, format: string, moduleId: string, referenceId: string, relativePath: string }) {
+      // // // //   console.log('### resolveFileUrl')
+      // // // //   console.dir(arg);
+      // // // //   // for (const input of options.inputs) {
+      // // // //   //   if (input.relativeTo) {
+      // // // //   //     const rel = relative(input.root, input.relativeTo);
 
-      //   relOutputPathToRelOutputPathDic[chunk.fileName].from = chunk.fileName;
-      //   relOutputPathToRelOutputPathDic[chunk.fileName].imports = chunk.imports;
-      //   relOutputPathToRelOutputPathDic[chunk.fileName].facadeModuleId = chunk.facadeModuleId;
+      // // // //   //     // const ileName = relative(rel, fileName);
+      // // // //   //     // newKey = relative(rel, key);
+      // // // //   //   }
+      // // // //   // }
+      // // // //   // return null;
+      // // // // },
 
-      //   if (chunk.isEntry) {
-      //     if (chunk.facadeModuleId.endsWith('.ts')) {
-      //       if (absFromToRelOutput[chunk.facadeModuleId]) {
-
-      //       }
-      //     }
-      //   }
-      // }
-      // writeBundle(option, bundle): void {
-      //   console.dir(options);
-      //   console.dir(bundle);
-
-      //   const files = Object.entries<any>(bundle);
-      //   for (const [key, file] of files) {
-      //     for (const input of options.inputs) {
-
-      //       const sourceMaps = input.sourceMap !== false;
-
-      //       // file.facadeModuleId = relative(input.relativeTo, file.facadeModuleId);
-
-      //       // file.imports.map((imported: string) => {
-      //       //   if (!filter(imported)) {
-      //       //     return imported;
-      //       //   }
-
-      //       //   return relative(options.relativeTo , imported) || imported;
-      //       // });
-
-      //       // if (file.code) {
-      //       //   const magicString = new MagicString(file.code);
-      //       //   const ast = this.parse(file.code, {
-      //       //     ecmaVersion: 12,
-      //       //     sourceType: 'module',
-      //       //   });
-
-      //       //   walk(ast, {
-      //       //     enter(node) {
-      //       //       if (
-      //       //         [
-      //       //           NodeType.ImportDeclaration,
-      //       //           NodeType.CallExpression,
-      //       //           NodeType.ExportAllDeclaration,
-      //       //           NodeType.ExportNamedDeclaration,
-      //       //         ].includes(node.type as NodeType)
-      //       //       ) {
-      //       //         const req: any = getRequireSource(node) || getImportSource(node) || getExportSource(node);
-
-      //       //         if (req) {
-      //       //           const { start, end } = req;
-      //       //           const newPath = req.value;
-      //       //           magicString.overwrite(start, end, `'${newPath}'`);
-      //       //         }
-      //       //       }
-      //       //     },
-      //       //   });
-
-      //       //   if (sourceMaps) {
-      //       //     file.map = magicString.generateMap();
-      //       //   }
-
-      //       //   file.code = magicString.toString();
-      //       // }
-      //       if (file.type === 'chunk') {
-      //         if (!file.facadeModuleId?.endsWith('.ts')) {
-      //           continue;
-      //         } else {
-      //           if (!input.include.includes(file.facadeModuleId)) {
-      //             continue
-      //           }
-      //         }
-      //       }
-
-      //       let newKey = key;
-      //       if (input.relativeTo) {
-      //         const rel = relative(root, input.relativeTo);
-      //         const fileName = file.fileName;
-      //         file.fileName = relative(rel, file.fileName);
-      //         newKey = relative(rel, key);
-      //       }
-
-      //       if (input.toRelativePath && file.facadeModuleId.endsWith('.ts')) {
-      //         newKey = absInputPathToRelOutputPathDic[file.facadeModuleId]
-      //       }
-
-      //       if (key !== newKey) {
-      //         delete bundle[key];
-      //         bundle[newKey] = file;
-      //         const fileToDelete = resolve(option.dir, key);
-
-      //         let fileToCreate = resolve(option.dir, newKey);
-
-      //         fs.renameSync(fileToDelete, fileToCreate);
-      //         break;
-      //       }
-      //     }
-      //   }
-
-
-      //   cleanEmptyFoldersRecursively(option.dir);
-      // }
-      // ,
 
       configureServer(_server) {
         console.log('### configureServer')
@@ -542,44 +465,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           })
         }
       },
-      transformIndexHtml(html) {
-        console.log('### transformIndexHtml')
-        // console.dir(html);
-        return html;
-      }
+
     });
   }
 }
-function cleanEmptyFoldersRecursively(folder) {
 
-  var isDir = fs.statSync(folder).isDirectory();
-  if (!isDir) {
-    return;
-  }
-  var files = fs.readdirSync(folder);
-  if (files.length > 0) {
-    files.forEach(function (file) {
-      var fullPath = join(folder, file);
-      cleanEmptyFoldersRecursively(fullPath);
-    });
-
-    // re-evaluate files; after deleting subfolder
-    // we may have parent folder empty now
-    files = fs.readdirSync(folder);
-  }
-
-  if (files.length == 0) {
-    console.log("removing: ", folder);
-    fs.rmdirSync(folder);
-    return;
-  }
-}
-
-
-// Alias
-// User plugins with enforce: 'pre'
-// Vite core plugins
-// User plugins without enforce value
-// Vite build plugins
-// User plugins with enforce: 'post'
-// Vite post build plugins (minify, manifest, reporting)

@@ -7,13 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { CustomModule } from '#shared/src/functions/process-providers';
 import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
 import { BlazorAppPostcssService } from './postcss/postcss.service';
-let blazorPostcssModule = class blazorPostcssModule {
+let BlazorPostcssModule = class BlazorPostcssModule {
 };
-blazorPostcssModule = __decorate([
+BlazorPostcssModule = __decorate([
     CustomModule({
         imports: [PostcssModule],
         providers: [BlazorAppPostcssService],
     })
-], blazorPostcssModule);
-export { blazorPostcssModule };
+], BlazorPostcssModule);
+export { BlazorPostcssModule };
 //# sourceMappingURL=postcss.module.js.map

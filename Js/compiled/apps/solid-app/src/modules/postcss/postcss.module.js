@@ -6,13 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
 import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
-import { BlazorAppPostcssService } from './postcss/postcss.service';
+import { SolidAppPostcssService } from './postcss/postcss.service';
 let BlazorWebPostcssModule = class BlazorWebPostcssModule {
 };
 BlazorWebPostcssModule = __decorate([
     CustomModule({
         imports: [PostcssModule],
-        providers: [BlazorAppPostcssService],
+        providers: [SolidAppPostcssService],
     })
 ], BlazorWebPostcssModule);
 export { BlazorWebPostcssModule };

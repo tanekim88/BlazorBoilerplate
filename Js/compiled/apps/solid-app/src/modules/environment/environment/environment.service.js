@@ -6,10 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { EnvironmentService } from '#shared/src/modules/environment/environment/environment.service';
-let BlazorAppEnvironmentService = class BlazorAppEnvironmentService extends EnvironmentService {
+let SolidAppEnvironmentService = class SolidAppEnvironmentService extends EnvironmentService {
 };
-BlazorAppEnvironmentService = __decorate([
+SolidAppEnvironmentService = __decorate([
     CustomInjectable()
-], BlazorAppEnvironmentService);
-export { BlazorAppEnvironmentService };
+], SolidAppEnvironmentService);
+export { SolidAppEnvironmentService };
 //# sourceMappingURL=environment.service.js.map

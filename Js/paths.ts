@@ -4425,32 +4425,12 @@
                 readonly "wwwroot": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string,
-                    readonly "assets": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string,
-                        readonly "index.1b54bc75.js": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string
-                        }
-,
-                        readonly "vendor.c6976955.js": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string
-                        }
-
-                    }
-,
                     readonly "bootstrap-icons.svg": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
-                    readonly "index.html": {
-                        toAbsolutePath:()=> string,
-                        toRelativePath:(relativeTo?:string)=> string
-                    }
-,
-                    readonly "service-worker.js": {
+                    readonly "favicon.ico": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -4601,6 +4581,11 @@
                     }
 ,
                     readonly "Core.Infrastructure20210920.txt": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
+                    readonly "Core.Infrastructure20210922.txt": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
                     }
@@ -11238,7 +11223,17 @@
                             toRelativePath:(relativeTo?:string)=> string
                         }
 ,
+                        readonly "index.js": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
                         readonly "index.webpack.html": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "third.js": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string
                         }
@@ -11367,6 +11362,11 @@
                     toRelativePath:(relativeTo?:string)=> string
                 }
 ,
+                readonly "temp": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string
+                }
+,
                 readonly "tsconfig.backup.json": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
@@ -11378,6 +11378,11 @@
                 }
 ,
                 readonly "tsconfig.ts": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string
+                }
+,
+                readonly "vite.dev.sass.ts": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
                 }
@@ -11682,6 +11687,11 @@
                                 readonly "vite-plugin-glob-input": {
                                     toAbsolutePath:()=> string,
                                     toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "vite-plugin-glob-input.service copy.ts.txt": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
                                     readonly "vite-plugin-glob-input.service.spec.ts": {
                                         toAbsolutePath:()=> string,
                                         toRelativePath:(relativeTo?:string)=> string
@@ -13613,6 +13623,11 @@
                 }
 ,
                 readonly "tailwind.config.ts": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string
+                }
+,
+                readonly "temp": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
                 }
@@ -28931,29 +28946,13 @@ export const RootPaths:RootPathsType = createProxy( {
                 "wwwroot": {
                     toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot") },
-                    "assets": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets") },
-                        "index.1b54bc75.js": {
-                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\index.1b54bc75.js") }
-                        },
-                        "vendor.c6976955.js": {
-                            toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\assets\\vendor.c6976955.js") }
-                        }
-                    },
                     "bootstrap-icons.svg": {
                         toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\bootstrap-icons.svg") }
                     },
-                    "index.html": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\index.html") }
-                    },
-                    "service-worker.js": {
-                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js",
-                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\service-worker.js") }
+                    "favicon.ico": {
+                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Client\\wwwroot\\favicon.ico") }
                     }
                 },
                 "_Imports.razor": {
@@ -29074,6 +29073,10 @@ export const RootPaths:RootPathsType = createProxy( {
                     "Core.Infrastructure20210920.txt": {
                         toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210920.txt") }
+                    },
+                    "Core.Infrastructure20210922.txt": {
+                        toAbsolutePath:()=> "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt") :  path.relative("C:\\App",  "C:\\App\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt") }
                     }
                 },
                 "obj": {
@@ -34382,9 +34385,17 @@ export const RootPaths:RootPathsType = createProxy( {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.html") }
                         },
+                        "index.js": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.js") }
+                        },
                         "index.webpack.html": {
                             toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\index.webpack.html") }
+                        },
+                        "third.js": {
+                            toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\src\\templates\\third.js") }
                         }
                     },
                     "vite": {
@@ -34484,6 +34495,10 @@ export const RootPaths:RootPathsType = createProxy( {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\tailwind.config.ts",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\tailwind.config.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\tailwind.config.ts") }
                 },
+                "temp": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\temp",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\temp") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\temp") }
+                },
                 "tsconfig.backup.json": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\tsconfig.backup.json",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\tsconfig.backup.json") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\tsconfig.backup.json") }
@@ -34495,6 +34510,10 @@ export const RootPaths:RootPathsType = createProxy( {
                 "tsconfig.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\tsconfig.ts",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\tsconfig.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\tsconfig.ts") }
+                },
+                "vite.dev.sass.ts": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\vite.dev.sass.ts",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\blazor-app\\vite.dev.sass.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\blazor-app\\vite.dev.sass.ts") }
                 },
                 "vite.dev.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\blazor-app\\vite.dev.ts",
@@ -34739,6 +34758,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                 "vite-plugin-glob-input": {
                                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input") },
+                                    "vite-plugin-glob-input.service copy.ts.txt": {
+                                        toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service copy.ts.txt",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service copy.ts.txt") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service copy.ts.txt") }
+                                    },
                                     "vite-plugin-glob-input.service.spec.ts": {
                                         toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts",
                                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.spec.ts") }
@@ -36283,6 +36306,10 @@ export const RootPaths:RootPathsType = createProxy( {
                 "tailwind.config.ts": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\tailwind.config.ts",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\tailwind.config.ts") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\tailwind.config.ts") }
+                },
+                "temp": {
+                    toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\temp",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\App\\Js\\apps\\shared\\temp") :  path.relative("C:\\App",  "C:\\App\\Js\\apps\\shared\\temp") }
                 },
                 "tsconfig.backup.json": {
                     toAbsolutePath:()=> "C:\\App\\Js\\apps\\shared\\tsconfig.backup.json",

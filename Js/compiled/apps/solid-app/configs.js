@@ -1,6 +1,6 @@
 import { ConfigBase } from '#shared/configs.base';
 import { solidAppPaths } from './paths';
-export class BlazorAppConfig extends ConfigBase {
+export class SolidAppConfig extends ConfigBase {
     rootDir = solidAppPaths.toAbsolutePath();
     RootDir = solidAppPaths.toAbsolutePath();
     projectName = 'solidrApp';
@@ -11,5 +11,5 @@ export class BlazorAppConfig extends ConfigBase {
     developerUrl = 'www.taneware.com';
     description = 'app desc';
 }
-export const blazorAppConfig = new BlazorAppConfig();
+export const solidAppConfig = new SolidAppConfig();
 //# sourceMappingURL=configs.js.map

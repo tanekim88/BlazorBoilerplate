@@ -9,18 +9,25 @@ export class BlazorAppViteProdService extends ViteProdService {
     @CustomInject(BlazorAppViteSharedService)
     protected blazorAppClientViteSharedService: BlazorAppViteSharedService;
 
-    createConfiguration(options?:UserConfig) {
+    createConfiguration(options?: UserConfig) {
         return this.mergeService.mergeOptions(
             super.createConfiguration(),
             this.blazorAppClientViteSharedService.createConfiguration(),
             {
 
-            },
+            }as UserConfig,
             options,
         );
     }
 
-    createManyConfigurations(){
-        return [];
+    createConfigurationForSass(options?: UserConfig) {
+        return this.mergeService.mergeOptions(
+            this.createConfigurationForSass(),
+            {
+
+            } as UserConfig,
+            options,
+        );
     }
+
 }

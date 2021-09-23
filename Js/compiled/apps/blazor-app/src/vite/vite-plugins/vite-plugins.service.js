@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
+import path from 'path';
 let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends VitePluginsService {
     blazorAppEnvironmentService;
     // @CustomInject(VitePluginGlobInputService)
@@ -27,7 +28,7 @@ let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends Vite
                     {
                         html: `
                         <script>
-                            Materialblazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
                         </script>
                         `, insertAt: '</body>'
                     },
@@ -44,15 +45,21 @@ let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends Vite
                         ],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
                     },
-                    // {
-                    //     include: [
-                    //         {
-                    //             path: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
-                    //             name: 'service-worker.js'
-                    //         }
-                    //     ],
-                    //     relativeTo: this.blazorAppEnvironmentService.localPaths.src['service-worker'].toAbsolutePath(),
-                    // }
+                    {
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
+                        toName: 'service-worker.[chunk].js',
+                        htmlToken: '[SERVICEWORKER_PATH]'
+                    },
+                    {
+                        fromPath: path.join(this.blazorAppEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
+                        toRelativePath: 'bootstrap-icons.svg',
+                        action: 'copy',
+                    },
+                    {
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
+                        toRelativePath: 'favicon.ico',
+                        action: 'copy',
+                    }
                 ]
             })
         ];

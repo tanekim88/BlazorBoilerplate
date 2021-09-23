@@ -17,7 +17,9 @@ export const commonConfig = defineConfig(async ({ command, mode }) => {
         optimizeDeps: {
             include: [],
             exclude: [],
-            keepNames: false
+            esbuildOptions: {
+                keepNames: false,
+            }
         },
         plugins: [
         // VitePluginGlobInput({
@@ -26,7 +28,7 @@ export const commonConfig = defineConfig(async ({ command, mode }) => {
         resolve: {
         // alias:[{
         //   find:'#shared',
-        //   replacement:'./blazorApp'
+        //   replacement:'./solidApp'
         // }]
         }
     };

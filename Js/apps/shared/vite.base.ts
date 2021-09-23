@@ -12,7 +12,7 @@ export class ViteBase {
         this.watch = this.watch.bind(this);
     }
 
-    async createViteConfig(env?, options?) {
+    async createViteConfig(methodName = 'createConfiguration', env?, options?) {
         if (options?.mode) {
             process.env.NODE_ENV = options?.mode;
         }
@@ -26,7 +26,7 @@ export class ViteBase {
 
             const svc = app.get(this.service);
 
-            const config = svc.createConfiguration();
+            const config = svc[methodName]();
 
             return config;
         }
@@ -37,20 +37,20 @@ export class ViteBase {
         return null;
     }
 
-    async build() {
+    async build(method?) {
         if (process.env.NODE_ENV) {
-            const config = await this.createViteConfig();
+            const config = await this.createViteConfig(method);
             console.dir(config)
             await vite.build(config)
         }
     }
 
-    async watch() {
+    async watch(method?) {
         if (process.env.NODE_ENV) {
 
-            const config = await this.createViteConfig();
+            const config = await this.createViteConfig(method);
             const s = await vite.createServer(config)
-            await s.listen(5001);
+            await s.listen(5555);
         }
     }
 }

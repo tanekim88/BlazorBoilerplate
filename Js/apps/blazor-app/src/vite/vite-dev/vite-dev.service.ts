@@ -8,14 +8,26 @@ import path from 'path';
 export class BlazorAppViteDevService extends ViteDevService {
     @CustomInject(BlazorAppViteSharedService)
     protected blazorAppViteSharedService: BlazorAppViteSharedService;
-    
-    createConfiguration(options?:UserConfig) {
+
+    createConfiguration(options?: UserConfig) {
         return this.mergeService.mergeOptions(
             super.createConfiguration(),
             this.blazorAppViteSharedService.createConfiguration(),
             {
-                build:{
-                    minify:false
+                build: {
+                    minify: false
+                }
+            } as UserConfig,
+            options,
+        );
+    }
+
+    createConfigurationForSass(options?: UserConfig) {
+        return this.mergeService.mergeOptions(
+            this.blazorAppViteSharedService.createConfigurationForScss(),
+            {
+                build: {
+                    minify: false
                 }
             } as UserConfig,
             options,

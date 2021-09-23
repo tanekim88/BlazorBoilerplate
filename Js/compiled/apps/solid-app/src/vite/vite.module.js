@@ -6,22 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { CustomModule } from "#shared/src/functions/process-providers";
 import { ViteModule } from "#shared/src/vite/vite.module";
-import { BlazorAppModulesModule } from "../modules/modules.module";
-import { BlazorAppViteDevService } from "./vite-dev/vite-dev.service";
-import { BlazorAppVitePluginsModule } from "./vite-plugins/vite-plugins.module";
-import { BlazorAppViteProdService } from "./vite-prod/vite-prod.service";
-import { BlazorAppViteSharedService } from "./vite-shared/vite-shared.service";
-let BlazorAppViteModule = class BlazorAppViteModule {
+import { SolidAppModulesModule } from "../modules/modules.module";
+import { SolidAppViteDevService } from "./vite-dev/vite-dev.service";
+import { SolidAppVitePluginsModule } from "./vite-plugins/vite-plugins.module";
+import { SolidAppViteProdService } from "./vite-prod/vite-prod.service";
+import { SolidAppViteSharedService } from "./vite-shared/vite-shared.service";
+let SolidAppViteModule = class SolidAppViteModule {
 };
-BlazorAppViteModule = __decorate([
+SolidAppViteModule = __decorate([
     CustomModule({
-        imports: [ViteModule, BlazorAppModulesModule, BlazorAppVitePluginsModule],
+        imports: [ViteModule, SolidAppModulesModule, SolidAppVitePluginsModule],
         providers: [
-            BlazorAppViteSharedService,
-            BlazorAppViteProdService,
-            BlazorAppViteDevService,
+            SolidAppViteSharedService,
+            SolidAppViteProdService,
+            SolidAppViteDevService,
         ],
     })
-], BlazorAppViteModule);
-export { BlazorAppViteModule };
+], SolidAppViteModule);
+export { SolidAppViteModule };
 //# sourceMappingURL=vite.module.js.map

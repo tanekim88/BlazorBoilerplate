@@ -1,0 +1,5 @@
+2021-09-22 21:41:06.205 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":23912,"Version":"1.0.0"}2021-09-22 21:46:03.222 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":15032,"Version":"1.0.0"}

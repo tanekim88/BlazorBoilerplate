@@ -7,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BlazorAppModulesModule } from './modules/modules.module';
+import { SolidAppModulesModule } from './modules/modules.module';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     Module({
-        imports: [BlazorAppModulesModule],
+        imports: [SolidAppModulesModule],
         controllers: [AppController],
         providers: [AppService],
     })
