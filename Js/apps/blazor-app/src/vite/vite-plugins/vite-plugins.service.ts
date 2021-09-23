@@ -63,7 +63,8 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         include: [
                             path.join(BlazorAppPaths.Client.toAbsolutePath(), '**/*.scss')
                         ],
-                        relativeTo: BlazorAppPaths.Client.toAbsolutePath()
+                        relativeTo: BlazorAppPaths.Client.toAbsolutePath(),
+                        outDir: BlazorAppPaths.Client.toAbsolutePath()
                     }
                 ]
             })

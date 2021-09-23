@@ -19,9 +19,9 @@ import { rootPaths } from '#root/paths';
 import { basename, dirname } from 'path/posix';
 
 import sass from 'sass';
-import fibers from 'fibers';
+// import fibers from 'fibers';
 
-type Action = 'to-json' | 'copy';
+type Action = 'ts-to-json' | 'copy' | 'scss-to-css';
 export interface VitePluginGlobInputOptions {
   inputs: {
     fromPath?: string,
@@ -30,14 +30,14 @@ export interface VitePluginGlobInputOptions {
     include?: string[],
     sourceMap?: boolean,
     relativeTo?: string,
-    root?: string,
     inPlace?: boolean,
     globOptions?: {
       ignore?: string[]
     },
     action?: Action,
     applyChunk?: boolean,
-    htmlToken?: string
+    htmlToken?: string,
+    outDir?: string
   }[],
   externals?: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
 }
@@ -165,6 +165,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(conf);
         const root = config.root;
         const outDir = config.build.outDir;
+
         let input = options.inputs.flatMap(input => {
           if (input.include) {
 
@@ -238,12 +239,17 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                   importer: function (url, prev, done) {
 
                   },
-                  fiber: fibers
-                });
+                  // fiber: fibers
+                })?.css;
+                relTo = relTo.replace(/.scss$/, '.css')
+                relTo2 = relTo2.replace(/.scss$/, '.css')
+              }
+              let localOutput = conf.output;
+              if (input.outDir) {
+                localOutput = [{dir:input.outDir}];
               }
 
-
-              for (let output of conf.output) {
+              for (let output of localOutput) {
                 let finalPath;
 
                 if (input.relativeTo || input.toName) {
@@ -253,21 +259,26 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                 if (input.toRelativePath) {
                   finalPath = path.join(output.dir, input.toRelativePath);
                 }
-
-                fs.writeFileSync(finalPath, code);
+                const d = path.dirname(finalPath);
+                if (code) {
+                  if (!fs.existsSync(d)) {
+                    fs.mkdirSync(d, { recursive: true });
+                  }
+                  fs.writeFileSync(finalPath, code, 'utf-8');
+                }
               }
 
               return null;
             }
 
 
-            return absFromToData[absFrom];
+            return absFrom;
           });
 
 
 
 
-          return entries;
+          return mapped;
         }).filter(x => x);
 
         conf.input = input;
