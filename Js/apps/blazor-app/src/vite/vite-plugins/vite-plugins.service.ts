@@ -49,14 +49,6 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         toName: 'service-worker.[hash].js',
                         htmlToken: '[SERVICEWORKER_PATH]'
                     },
-
-                    {
-                        include: [
-                            path.join(BlazorAppPaths.Client.toAbsolutePath(), '**/*.scss')
-                        ],
-                        relativeTo: BlazorAppPaths.Client.toAbsolutePath(),
-                        outDir: BlazorAppPaths.Client.toAbsolutePath()
-                    }
                 ],
                 sass: [
                     {

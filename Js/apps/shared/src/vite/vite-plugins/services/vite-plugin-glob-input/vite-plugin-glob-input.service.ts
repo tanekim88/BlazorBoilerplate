@@ -76,9 +76,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
   createPlugin(options: VitePluginGlobInputOptions) {
     options.externalsForHtml = options.externalsForHtml ?? [];
-    options.copy.forEach(fileToCopy => {
 
-    });
     let config;
     let server;
     const absFromToData = {} as {
@@ -96,7 +94,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     };
 
     function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): string[] {
-      const toReturn = options.copy.flatMap(input => {
+      const toReturn = inputs.flatMap(input => {
         if (input.include) {
 
           input.include = input.include.map(p => normalizePath(p));
@@ -186,7 +184,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
           const fromToForCopy = {};
           const filesToCopy = processInputs(options.copy, root, (input, absFrom, relTo) => {
-            let localOutput = config.output;
+            let localOutput = conf.output;
             if (input.outDir) {
               localOutput = [{ dir: input.outDir }];
             }
@@ -224,7 +222,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           const filesToSass = processInputs(options.sass, root, (input, absFrom, relTo) => {
             const isDir = fs.lstatSync(absFrom).isDirectory();
 
-            let localOutput = config.output;
+            let localOutput = conf.output;
             if (input.outDir) {
               localOutput = [{ dir: input.outDir }];
             }
@@ -269,7 +267,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
 
         const input = processInputs(options.inputs, root, (input, absFrom, relTo) => {
-          let localOutput = config.output;
+          let localOutput = conf.output;
           if (input.outDir) {
             localOutput = [{ dir: input.outDir }];
           }
