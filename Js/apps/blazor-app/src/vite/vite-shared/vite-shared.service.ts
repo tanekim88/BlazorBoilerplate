@@ -61,33 +61,4 @@ export class BlazorAppViteSharedService extends ViteSharedService {
             options,
         );
     }
-
-    createConfigurationForScss(options?: UserConfig) {
-        const plugins = this.blazorAppVitePluginsService.createManyPluginsForSass();
-        return this.mergeService.mergeOptions(
-            this.createConfiguration(),
-            {
-                build: {
-                    outDir: BlazorAppPaths.Client.toAbsolutePath(),
-                    // rollupOptions: {
-                    //     output:{
-                    //         entryFileNames: '[name].js',
-                    //         assetFileNames: '[name].[ext]',
-                    //         chunkFileNames: '[name].js'
-                    //     }
-                    // },
-                    // watch: {
-
-                    // },
-                    // cssCodeSplit: false,
-                },
-                plugins: [
-                    MergeCommand.overwrite(
-                        plugins
-                    ),
-                ]
-            } as UserConfig,
-            options,
-        );
-    }
 }

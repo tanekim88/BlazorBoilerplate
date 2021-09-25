@@ -6,5 +6,7 @@ import { BlazorAppViteModule } from './src/vite/vite.module';
 
 const viteBase = new ViteBase(BlazorAppViteModule, BlazorAppViteDevService);
 
-await viteBase.build();
+const watcher = await viteBase.build();
 
+
+console.dir(watcher)

@@ -21,16 +21,4 @@ export class BlazorAppViteDevService extends ViteDevService {
             options,
         );
     }
-
-    createConfigurationForSass(options?: UserConfig) {
-        return this.mergeService.mergeOptions(
-            this.blazorAppViteSharedService.createConfigurationForScss(),
-            {
-                build: {
-                    minify: false
-                }
-            } as UserConfig,
-            options,
-        );
-    }
 }

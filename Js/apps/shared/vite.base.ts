@@ -41,8 +41,10 @@ export class ViteBase {
         if (process.env.NODE_ENV) {
             const config = await this.createViteConfig(method);
             console.dir(config)
-            await vite.build(config)
+            return await vite.build(config)
         }
+        
+        return null;
     }
 
     async watch(method?) {

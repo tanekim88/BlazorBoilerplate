@@ -17,7 +17,7 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
     createManyPlugins() {
         return [
             this.vitePluginGlobInputService.createPlugin({
-                externals: [
+                externalsForHtml: [
                     {
                         html: `
                         <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
@@ -49,16 +49,7 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         toName: 'service-worker.[hash].js',
                         htmlToken: '[SERVICEWORKER_PATH]'
                     },
-                    {
-                        fromPath: path.join(this.blazorAppEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
-                        toRelativePath: 'bootstrap-icons.svg',
-                        action: 'copy',
-                    },
-                    {
-                        fromPath: this.blazorAppEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
-                        toRelativePath: 'favicon.ico',
-                        action: 'copy',
-                    },
+
                     {
                         include: [
                             path.join(BlazorAppPaths.Client.toAbsolutePath(), '**/*.scss')
@@ -66,28 +57,27 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         relativeTo: BlazorAppPaths.Client.toAbsolutePath(),
                         outDir: BlazorAppPaths.Client.toAbsolutePath()
                     }
-                ]
-            })
-        ]
-    }
-
-
-
-
-    createManyPluginsForSass() {
-        return [
-            this.vitePluginGlobInputService.createPlugin({
-                inputs: [
+                ],
+                sass: [
                     {
-                        include: [
-                            path.join(BlazorAppPaths.Client.toAbsolutePath(), '**/*.scss')
-                        ],
-                        relativeTo: BlazorAppPaths.Client.toAbsolutePath(),
+                        fromPath: BlazorAppPaths.Client.Pages.toAbsolutePath()
+                    },
+                    {
+                        fromPath: BlazorAppPaths.Client.Shared.toAbsolutePath()
                     }
+                ],
+                copy: [
+                    {
+                        fromPath: path.join(this.blazorAppEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
+                        toRelativePath: 'bootstrap-icons.svg',
+                    },
+                    {
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
+                        toRelativePath: 'favicon.ico',
+                    },
                 ]
             })
         ]
     }
-
 }
 

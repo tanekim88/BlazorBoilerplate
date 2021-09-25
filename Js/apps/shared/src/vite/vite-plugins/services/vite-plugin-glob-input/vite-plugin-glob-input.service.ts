@@ -14,32 +14,39 @@ import { Node } from 'estree';
 import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
-import fs from 'fs'
+import fs, { copyFileSync } from 'fs'
 import { rootPaths } from '#root/paths';
 import { basename, dirname } from 'path/posix';
 
 import sass from 'sass';
+import chokidar from 'chokidar';
+let sassWatcher: chokidar.FSWatcher;
+let copyWatcher: chokidar.FSWatcher;
+
 // import fibers from 'fibers';
 
 type Action = 'ts-to-json' | 'copy' | 'scss-to-css';
+interface Input {
+  fromPath?: string,
+  toRelativePath?: string,
+  toName?: string,
+  include?: string[],
+  sourceMap?: boolean,
+  relativeTo?: string,
+  inPlace?: boolean,
+  globOptions?: {
+    ignore?: string[]
+  },
+  action?: Action,
+  applyChunk?: boolean,
+  htmlToken?: string,
+  outDir?: string,
+}
 export interface VitePluginGlobInputOptions {
-  inputs: {
-    fromPath?: string,
-    toRelativePath?: string,
-    toName?: string,
-    include?: string[],
-    sourceMap?: boolean,
-    relativeTo?: string,
-    inPlace?: boolean,
-    globOptions?: {
-      ignore?: string[]
-    },
-    action?: Action,
-    applyChunk?: boolean,
-    htmlToken?: string,
-    outDir?: string
-  }[],
-  externals?: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
+  inputs: Input[],
+  externalsForHtml?: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
+  sass?: Input[],
+  copy?: Input[]
 }
 interface Data {
   absFrom?: string,
@@ -64,59 +71,14 @@ enum NodeType {
   ExportNamedDeclaration = 'ExportNamedDeclaration',
   ExportAllDeclaration = 'ExportAllDeclaration',
 }
-
-export function isEmpty(array: any[] | undefined) {
-  return !array || array.length === 0;
-}
-export function getRequireSource(node: any): Node | false {
-  if (node.type !== NodeType.CallExpression) {
-    return false;
-  }
-
-  if (node.callee.type !== NodeType.Identifier || isEmpty(node.arguments)) {
-    return false;
-  }
-
-  const args = node.arguments;
-
-  if (node.callee.name !== 'require' || args[0].type !== NodeType.Literal) {
-    return false;
-  }
-
-  return args[0];
-}
-
-export function getImportSource(node: any): Node | false {
-  if (node.type !== NodeType.ImportDeclaration || node.source.type !== NodeType.Literal) {
-    return false;
-  }
-
-  return node.source;
-}
-
-export function getExportSource(node: any): Node | false {
-  const exportNodes = [NodeType.ExportAllDeclaration, NodeType.ExportNamedDeclaration];
-
-  if (!exportNodes.includes(node.type) || !node.source || node.source.type !== NodeType.Literal) {
-    return false;
-  }
-
-  return node.source;
-}
-
-
-interface DataDic {
-  [key: string]: Data
-}
-
-
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
 
+  createPlugin(options: VitePluginGlobInputOptions) {
+    options.externalsForHtml = options.externalsForHtml ?? [];
+    options.copy.forEach(fileToCopy => {
 
-  createPlugin(options: VitePluginGlobInputOptions): any {
-    options.externals = options.externals ?? [];
-
+    });
     let config;
     let server;
     const absFromToData = {} as {
@@ -134,17 +96,16 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     };
     return ({
       name: 'vite-plugin-glob-input',
-      enforce: 'pre',
+      enforce: 'pre' as 'pre' | 'post',
 
-
-      buildStart(args) {
-        console.log('### args')
-        console.dir(args);
-      },
       config(config, args) {
         console.log('### config')
         console.dir(config);
         console.dir(args);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
+
+        config.build.watch.ignored = ['**/node_modules/**', '**/.git/**']
         if (args.command === 'build') {
           // config.root = __dirname
         }
@@ -153,20 +114,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const outDir = config.build.outDir;
       },
 
-      configResolved(resolvedConfig) {
-        console.log('### configResolved')
-        console.dir(resolvedConfig);
-
-        // store the resolved config
-        config = resolvedConfig
-      },
-      async options(conf) {
-        console.log('### options')
-        console.dir(conf);
-        const root = config.root;
-        const outDir = config.build.outDir;
-
-        let input = options.inputs.flatMap(input => {
+      processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => {}): string[] {
+        const toReturn = options.copy.flatMap(input => {
           if (input.include) {
 
             input.include = input.include.map(p => normalizePath(p));
@@ -184,8 +133,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               stats: false,
             }));
 
-          const mapped = entries.map(absFrom => {
-            let relTo2;
+          entries.forEach(absFrom => {
             let relTo;
 
             if (input.relativeTo) {
@@ -201,7 +149,131 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               relTo = normalizePath(path.join(dir, input.toName));
             }
 
-            relTo2 = relTo;
+            actionsToTake(input, absFrom, relTo);
+          })
+
+          return entries;
+        });
+
+        return toReturn;
+      },
+
+      configResolved(resolvedConfig) {
+        console.log('### configResolved')
+        console.dir(resolvedConfig);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
+        // store the resolved config
+        config = resolvedConfig;
+
+        const root = config.root;
+        const outDir = config.build.outDir;
+
+        const fromToForCopy = {};
+        const filesToCopy = this.processInputs(options.copy, root, (input, absFrom, relTo) => {
+          let localOutput = config.output;
+          if (input.outDir) {
+            localOutput = [{ dir: input.outDir }];
+          }
+
+          for (let output of localOutput) {
+            let finalPath;
+
+            if (input.relativeTo || input.toName) {
+              finalPath = path.join(output.dir, relTo);
+            }
+
+            if (input.toRelativePath) {
+              finalPath = path.join(output.dir, input.toRelativePath);
+            }
+            fromToForCopy[absFrom] = finalPath;
+          }
+        });
+
+        copyWatcher = chokidar.watch(filesToCopy, {});
+        copyWatcher
+          .on('change', fromPath => {
+            const toPath = fromToForCopy[fromPath];
+            if (toPath) {
+              fs.copyFileSync(fromPath, toPath)
+            }
+          })
+
+
+
+        const fromToForSass = {};
+        const dirsForSass = {};
+        const filesToSass = this.processInputs(options.sass, root, (input, absFrom, relTo) => {
+          const isDir = fs.lstatSync(absFrom).isDirectory();
+
+          let localOutput = config.output;
+          if (input.outDir) {
+            localOutput = [{ dir: input.outDir }];
+          }
+
+          for (let output of localOutput) {
+            let finalPath;
+
+            if (input.relativeTo || input.toName) {
+              finalPath = path.join(output.dir, relTo);
+            }
+
+            if (input.toRelativePath) {
+              finalPath = path.join(output.dir, input.toRelativePath);
+            }
+
+            if (isDir) {
+              dirsForSass[absFrom] = finalPath;
+            } else {
+              fromToForSass[absFrom] = finalPath;
+            }
+          }
+        });
+
+        sassWatcher = chokidar.watch(filesToSass, {});
+        sassWatcher
+          .on('change', fromPath => {
+            const extName = path.extname(fromPath);
+
+            if (extName === '.scss' || extName === '.sass') {
+              let toPath = fromToForSass[fromPath];
+              if (!toPath) {
+                toPath = replaceExt(toPath, '.css');
+              }
+              sass.renderSync({
+                file: fromPath,
+                sourceMap: true,
+                outFile: toPath
+              })
+            }
+          });
+      },
+      async options(conf) {
+        console.log('### options')
+        console.dir(conf);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
+
+        const root = config.root;
+        const outDir = config.build.outDir;
+
+        const input = this.processInputs(options.inputs, root, (input, absFrom, relTo) => {
+          let localOutput = config.output;
+          if (input.outDir) {
+            localOutput = [{ dir: input.outDir }];
+          }
+
+          for (let output of localOutput) {
+            let finalPath;
+
+            if (input.relativeTo || input.toName) {
+              finalPath = path.join(output.dir, relTo);
+            }
+
+            if (input.toRelativePath) {
+              finalPath = path.join(output.dir, input.toRelativePath);
+            }
+            const relTo2 = relTo;
 
             if (path.extname(absFrom) === '.ts' && path.extname(relTo) === '.js') {
               relTo = relTo.replace(/\.js$/, '.ts');
@@ -211,10 +283,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const absFrom2 = normalizePath(path.resolve(root, relTo));
 
             const absTo = normalizePath(path.resolve(root, relTo));
+
             const absTo2 = normalizePath(path.resolve(root, relTo2));
+
             const from2ToFrom = path.relative(dirname(absFrom2), dirname(absFrom));
 
             let code = fs.readFileSync(absFrom, { encoding: 'utf8' });
+
             absFromToData[absFrom] = {
               absFrom,
               absFrom2,
@@ -229,61 +304,29 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             };
             absFrom2ToData[absFrom2] = absFromToData[absFrom];
             absToToData[absTo] = absFromToData[absFrom];
+          }
+        });
 
-
-
-            if (input.action === 'copy' || path.extname(absFrom) === '.scss') {
-              if (path.extname(absFrom) === '.scss') {
-                code = sass.renderSync({
-                  file: absFrom,
-                  importer: function (url, prev, done) {
-
-                  },
-                  // fiber: fibers
-                })?.css;
-                relTo = relTo.replace(/.scss$/, '.css')
-                relTo2 = relTo2.replace(/.scss$/, '.css')
-              }
-              let localOutput = conf.output;
-              if (input.outDir) {
-                localOutput = [{dir:input.outDir}];
-              }
-
-              for (let output of localOutput) {
-                let finalPath;
-
-                if (input.relativeTo || input.toName) {
-                  finalPath = path.join(output.dir, relTo);
-                }
-
-                if (input.toRelativePath) {
-                  finalPath = path.join(output.dir, input.toRelativePath);
-                }
-                const d = path.dirname(finalPath);
-                if (code) {
-                  if (!fs.existsSync(d)) {
-                    fs.mkdirSync(d, { recursive: true });
-                  }
-                  fs.writeFileSync(finalPath, code, 'utf-8');
-                }
-              }
-
-              return null;
-            }
-
-
-            return absFrom;
-          });
-
-
-
-
-          return mapped;
-        }).filter(x => x);
 
         conf.input = input;
 
         return conf;
+      },
+      buildStart(args) {
+        console.log('### buildStart')
+        console.dir(args);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
+        // options.filesToWatch.forEach(filePath => {
+        //   this.addWatchFile(filePath);
+        // });
+
+        // options.foldersToWatch.forEach(folderPath => {
+        //   this.addWatchFile(folderPath);
+        // })
+
+
+        console.dir(this.getWatchFiles())
       },
       async resolveId(source: string, importer: string | undefined, options: { custom?: { [plugin: string]: any } }) {
         console.log('### resolveId')
@@ -291,37 +334,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(importer);
         console.dir(options);
         console.dir(absFromToData);
-
-        // if (importer) {
-        //   const foundObj = absFromToData[importer];
-        //   if (foundObj) {
-        //     if (!path.isAbsolute(source)) {
-        //       const importerDir = dirname(importer);
-
-        //       let relFrom = normalizePath(path.join(foundObj.from2ToFrom, source))
-
-        //       if (source.startsWith('./') && !relFrom.startsWith('.')) {
-        //         relFrom = './' + relFrom;
-        //       }
-        //       let absFrom = normalizePath(path.join(config.root, relFrom));
-
-        //       let exist = !!path.extname(absFrom) && fs.existsSync(absFrom);
-        //       if (!exist) {
-        //         for (let ext of config.resolve.extensions) {
-        //           if (fs.existsSync(absFrom + ext)) {
-        //             absFrom = absFrom + ext;
-        //             exist = true;
-        //             break;
-        //           }
-        //         }
-        //       }
-
-        //       if (exist) {
-        //         return absFrom;
-        //       }
-        //     }
-        //   }
-        // }
+        console.dir(this.getWatchFiles())
+        console.dir(this);
 
         const foundObj = absFromToData[source];
         if (foundObj?.absTo) {
@@ -343,37 +357,47 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       load(id) {
         console.log('### load')
         console.dir(id);
-
+        console.dir(this.getWatchFiles())
+        console.dir(this);
         return absToToData[id]?.code;
       },
       transform(src, id) {
         console.log('### transform')
         // console.dir(src);
         console.dir(id);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
         // if (fileRegex.test(id)) {
         //   return {
         //     code: compileFileToJS(src),
         //     map: null // provide source map if available
         //   }
         // }
+        return src;
       },
       outputOptions(outputOptions) {
         console.log('### outputOptions')
         console.dir(outputOptions);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
         return outputOptions;
       },
       augmentChunkHash(chunkInfo) {
         console.log('### augmentChunkHash')
         console.dir(chunkInfo);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
         // if (chunkInfo.name === 'foo') {
         //   return Date.now().toString();
         // }
       },
-      renderChunk(code: string, chunk, options) {
+      renderChunk(code: string, chunk, options): any {
         console.log('### renderChunk')
         // console.dir(code);
         console.dir(chunk);
         console.dir(options);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
         if (chunk.isEntry) {
 
           if (chunk.facadeModuleId) {
@@ -384,12 +408,16 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             relTo3ToData[chunk.fileName] = absFrom2ToData[chunk.facadeModuleId];
           }
         }
+
+        // return undefined;
       },
       generateBundle(option, bundle, isWrite: boolean) {
         console.log('### generateBundle')
         console.dir(option);
         console.dir(bundle);
         console.dir(isWrite);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
         const files = Object.entries<any>(bundle);
         for (const [key, file] of files) {
           if (file.fileName?.endsWith('.js')) {
@@ -402,9 +430,11 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
       transformIndexHtml(html) {
         console.log('### transformIndexHtml')
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
         // console.dir(html);
 
-        const externals = options.externals ?? [];
+        const externals = options.externalsForHtml ?? [];
         externals.forEach(external => {
           let pos = external.pos;
           if (!pos) {
@@ -431,6 +461,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.log('### writeBundle')
         console.dir(option);
         console.dir(bundle);
+        console.dir(this.getWatchFiles())
+        console.dir(this);
       }
       ,
       // // // // resolveImportMeta(property, args: { moduleId }) {
@@ -465,6 +497,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       configureServer(_server) {
         console.log('### configureServer')
         console.dir(_server);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
         server = _server
         server.middlewares.use((req, res, next) => {
           // custom handle request...
@@ -481,3 +515,31 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
   }
 }
 
+
+
+function replaceExt(npath, ext) {
+  if (typeof npath !== 'string') {
+    return npath;
+  }
+
+  if (npath.length === 0) {
+    return npath;
+  }
+
+  var nFileName = path.basename(npath, path.extname(npath)) + ext;
+  var nFilepath = path.join(path.dirname(npath), nFileName);
+
+  // Because `path.join` removes the head './' from the given path.
+  // This removal can cause a problem when passing the result to `require` or
+  // `import`.
+  if (startsWithSingleDot(npath)) {
+    return '.' + path.sep + nFilepath;
+  }
+
+  return nFilepath;
+}
+
+function startsWithSingleDot(fpath) {
+  var first2chars = fpath.slice(0, 2);
+  return first2chars === '.' + path.sep || first2chars === './';
+}
