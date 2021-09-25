@@ -94,6 +94,51 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     const relTo3ToData = {} as {
       [key: string]: Data
     };
+
+    function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): string[] {
+      const toReturn = options.copy.flatMap(input => {
+        if (input.include) {
+
+          input.include = input.include.map(p => normalizePath(p));
+
+          input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
+        }
+
+        if (input.fromPath) {
+          const fromPath = normalizePath(input.fromPath);
+          input.include = [fromPath];
+        }
+
+        const entries = fastGlob
+          .sync(input.include, Object.assign({}, input.globOptions, {
+            stats: false,
+          }));
+
+        entries.forEach(absFrom => {
+          let relTo;
+
+          if (input.relativeTo) {
+            relTo = normalizePath(path.relative(input.relativeTo, absFrom));
+          }
+
+          if (input.toRelativePath) {
+            relTo = normalizePath(input.toRelativePath);
+          }
+
+          if (input.toName) {
+            const dir = dirname(normalizePath(path.relative(root, absFrom)));
+            relTo = normalizePath(path.join(dir, input.toName));
+          }
+
+          actionsToTake(input, absFrom, relTo);
+        })
+
+        return entries;
+      });
+
+      return toReturn;
+    };
+
     return ({
       name: 'vite-plugin-glob-input',
       enforce: 'pre' as 'pre' | 'post',
@@ -114,49 +159,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const outDir = config.build.outDir;
       },
 
-      processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => {}): string[] {
-        const toReturn = options.copy.flatMap(input => {
-          if (input.include) {
-
-            input.include = input.include.map(p => normalizePath(p));
-
-            input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
-          }
-
-          if (input.fromPath) {
-            const fromPath = normalizePath(input.fromPath);
-            input.include = [fromPath];
-          }
-
-          const entries = fastGlob
-            .sync(input.include, Object.assign({}, input.globOptions, {
-              stats: false,
-            }));
-
-          entries.forEach(absFrom => {
-            let relTo;
-
-            if (input.relativeTo) {
-              relTo = normalizePath(path.relative(input.relativeTo, absFrom));
-            }
-
-            if (input.toRelativePath) {
-              relTo = normalizePath(input.toRelativePath);
-            }
-
-            if (input.toName) {
-              const dir = dirname(normalizePath(path.relative(root, absFrom)));
-              relTo = normalizePath(path.join(dir, input.toName));
-            }
-
-            actionsToTake(input, absFrom, relTo);
-          })
-
-          return entries;
-        });
-
-        return toReturn;
-      },
 
       configResolved(resolvedConfig) {
         console.log('### configResolved')
@@ -169,84 +171,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const root = config.root;
         const outDir = config.build.outDir;
 
-        const fromToForCopy = {};
-        const filesToCopy = this.processInputs(options.copy, root, (input, absFrom, relTo) => {
-          let localOutput = config.output;
-          if (input.outDir) {
-            localOutput = [{ dir: input.outDir }];
-          }
 
-          for (let output of localOutput) {
-            let finalPath;
-
-            if (input.relativeTo || input.toName) {
-              finalPath = path.join(output.dir, relTo);
-            }
-
-            if (input.toRelativePath) {
-              finalPath = path.join(output.dir, input.toRelativePath);
-            }
-            fromToForCopy[absFrom] = finalPath;
-          }
-        });
-
-        copyWatcher = chokidar.watch(filesToCopy, {});
-        copyWatcher
-          .on('change', fromPath => {
-            const toPath = fromToForCopy[fromPath];
-            if (toPath) {
-              fs.copyFileSync(fromPath, toPath)
-            }
-          })
-
-
-
-        const fromToForSass = {};
-        const dirsForSass = {};
-        const filesToSass = this.processInputs(options.sass, root, (input, absFrom, relTo) => {
-          const isDir = fs.lstatSync(absFrom).isDirectory();
-
-          let localOutput = config.output;
-          if (input.outDir) {
-            localOutput = [{ dir: input.outDir }];
-          }
-
-          for (let output of localOutput) {
-            let finalPath;
-
-            if (input.relativeTo || input.toName) {
-              finalPath = path.join(output.dir, relTo);
-            }
-
-            if (input.toRelativePath) {
-              finalPath = path.join(output.dir, input.toRelativePath);
-            }
-
-            if (isDir) {
-              dirsForSass[absFrom] = finalPath;
-            } else {
-              fromToForSass[absFrom] = finalPath;
-            }
-          }
-        });
-
-        sassWatcher = chokidar.watch(filesToSass, {});
-        sassWatcher
-          .on('change', fromPath => {
-            const extName = path.extname(fromPath);
-
-            if (extName === '.scss' || extName === '.sass') {
-              let toPath = fromToForSass[fromPath];
-              if (!toPath) {
-                toPath = replaceExt(toPath, '.css');
-              }
-              sass.renderSync({
-                file: fromPath,
-                sourceMap: true,
-                outFile: toPath
-              })
-            }
-          });
       },
       async options(conf) {
         console.log('### options')
@@ -257,7 +182,93 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const root = config.root;
         const outDir = config.build.outDir;
 
-        const input = this.processInputs(options.inputs, root, (input, absFrom, relTo) => {
+        if (!copyWatcher) {
+
+          const fromToForCopy = {};
+          const filesToCopy = processInputs(options.copy, root, (input, absFrom, relTo) => {
+            let localOutput = config.output;
+            if (input.outDir) {
+              localOutput = [{ dir: input.outDir }];
+            }
+
+            for (let output of localOutput) {
+              let finalPath;
+
+              if (input.relativeTo || input.toName) {
+                finalPath = path.join(output.dir, relTo);
+              }
+
+              if (input.toRelativePath) {
+                finalPath = path.join(output.dir, input.toRelativePath);
+              }
+              fromToForCopy[absFrom] = finalPath;
+            }
+          });
+
+          copyWatcher = chokidar.watch(filesToCopy, {});
+          copyWatcher
+            .on('change', fromPath => {
+              const toPath = fromToForCopy[fromPath];
+              if (toPath) {
+                fs.copyFileSync(fromPath, toPath)
+              }
+            })
+
+        }
+
+        if (!sassWatcher) {
+
+
+          const fromToForSass = {};
+          const dirsForSass = {};
+          const filesToSass = processInputs(options.sass, root, (input, absFrom, relTo) => {
+            const isDir = fs.lstatSync(absFrom).isDirectory();
+
+            let localOutput = config.output;
+            if (input.outDir) {
+              localOutput = [{ dir: input.outDir }];
+            }
+
+            for (let output of localOutput) {
+              let finalPath;
+
+              if (input.relativeTo || input.toName) {
+                finalPath = path.join(output.dir, relTo);
+              }
+
+              if (input.toRelativePath) {
+                finalPath = path.join(output.dir, input.toRelativePath);
+              }
+
+              if (isDir) {
+                dirsForSass[absFrom] = finalPath;
+              } else {
+                fromToForSass[absFrom] = finalPath;
+              }
+            }
+          });
+
+          sassWatcher = chokidar.watch(filesToSass, {});
+          sassWatcher
+            .on('change', fromPath => {
+              const extName = path.extname(fromPath);
+
+              if (extName === '.scss' || extName === '.sass') {
+                let toPath = fromToForSass[fromPath];
+                if (!toPath) {
+                  toPath = replaceExt(toPath, '.css');
+                }
+                sass.renderSync({
+                  file: fromPath,
+                  sourceMap: true,
+                  outFile: toPath
+                })
+              }
+            });
+        }
+
+
+        const input = processInputs(options.inputs, root, (input, absFrom, relTo) => {
           let localOutput = config.output;
           if (input.outDir) {
             localOutput = [{ dir: input.outDir }];
