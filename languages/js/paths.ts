@@ -16245,6 +16245,11 @@
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
+                    readonly ".ignored_node_modules": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
                     readonly ".prettierrc.json": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
@@ -32596,6 +32601,10 @@ export const RootPaths:RootPathsType = createProxy( {
                     ".eslintrc.ts": {
                         toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\.eslintrc.ts",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\.eslintrc.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\.eslintrc.ts") }
+                    },
+                    ".ignored_node_modules": {
+                        toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\.ignored_node_modules",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\.ignored_node_modules") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\.ignored_node_modules") }
                     },
                     ".prettierrc.json": {
                         toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\.prettierrc.json",

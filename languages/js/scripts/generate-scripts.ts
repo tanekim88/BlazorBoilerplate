@@ -251,13 +251,32 @@ const filesToJson = ['tsconfig.ts', '.eslintrc.ts', '.prettierrc.ts', '.stylelin
 
 function processTsToJson(dir) {
     filesToJson.forEach(fileToJson => {
-        const rel = path.relative(scriptsDir, dir);
-        const relFrom = path.join(rel, fileToJson);
-        const relPathWithoutExtension = renameExtension(relFrom, '');
+        const relDirFromRoot = normalizePath(path.relative(rootDir, dir));
+        const relDirFromScript = path.relative(scriptsDir, dir);
+        const relFromScript = path.join(relDirFromScript, fileToJson);
+        const relFromScriptWithoutExt = renameExtension(relFromScript, '');
         const absDest = renameExtension(path.join(dir, fileToJson), '.json');
-        const from = normalizePath(relPathWithoutExtension);
+
+        const from = normalizePath(relFromScriptWithoutExt);
 
         import(`./${from}`).then(json => {
+            if (dir === rootDir && fileToJson === 'tsconfig.ts') {
+                const include = ['**/*'];
+                const paths = {};
+                paths['#root/*'] = ['*']
+                filesToJson.forEach(f => {
+                    include.push(`./${f}`);
+                });
+                childs.forEach(child => {
+                    filesToJson.forEach(f => {
+                        include.push(`./${child.relativeFolderPath}/${f}`);
+                    });
+                    paths[`#${child.folderName}/*`] = [`./${child.relativeFolderPath}/*`]
+
+                })
+                json.include = include;
+                json.compilerOptions.paths = paths;
+            }
             const content = JSON.stringify(json, null, 4);
             fs.writeFileSync(absDest, content, 'utf8');
         })
