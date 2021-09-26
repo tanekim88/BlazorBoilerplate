@@ -7,5 +7,4 @@ const viteBase = new ViteBase(BlazorAppViteModule, BlazorAppViteDevService);
 
 const watcher = await viteBase.build();
 
-
 console.dir(watcher)
