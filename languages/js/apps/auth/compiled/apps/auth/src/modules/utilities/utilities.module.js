@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthUtilitiesModule = void 0;
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const merge_module_1 = require("./merge/merge.module");
 const regex_module_1 = require("./regex/regex.module");
 let AuthUtilitiesModule = class AuthUtilitiesModule {

@@ -20,8 +20,8 @@ const webpack_postcss_rfs_autopilot_service_1 = require("../webpack-postcss-rfs-
 const webpack_rfs_service_1 = require("../webpack-rfs/webpack-rfs.service");
 const webpack_tailwindcss_service_1 = require("../webpack-tailwindcss/webpack-tailwindcss.service");
 // Sealed class.
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 const webpack_postcss_purgecss_service_1 = require("../webpack-postcss-purgecss/webpack-postcss-purgecss.service");
 const webpack_postcss_combine_duplicated_selectors_service_1 = require("../webpack-postcss-combine-duplicated-selectors/webpack-postcss-combine-duplicated-selectors.service");
 let WebpackPostcssService = class WebpackPostcssService {

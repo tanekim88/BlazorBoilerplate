@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackPostcssRfsAutopilotService = void 0;
 const postcss_rfs_autopilot_1 = __importDefault(require("./postcss-rfs-autopilot"));
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const numbers = [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64];
 let WebpackPostcssRfsAutopilotService = class WebpackPostcssRfsAutopilotService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {

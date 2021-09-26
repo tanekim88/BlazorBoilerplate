@@ -1,4 +1,4 @@
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import _ from 'lodash';
 import { mergeCustomizer } from './merge-with-customizer';
 

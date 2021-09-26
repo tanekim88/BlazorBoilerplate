@@ -8,12 +8,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var _a, _b;
-import { blazorAppPaths } from '@projects/blazor-app/paths';
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { BlazorAppEnvironmentService } from '@projects/blazor-app/src/modules/environment/environment/environment.service';
-import { ViteSharedService } from '@projects/shared/src/vite/vite-shared/vite-shared.service';
+import { blazorAppPaths } from '#blazor-app/paths';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
+import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { BlazorAppVitePluginsService } from '../vite-plugins/vite-plugins.service';
-import { BlazorAppPostcssService } from '@projects/blazor-app/src/modules/postcss/postcss/postcss.service';
+import { BlazorAppPostcssService } from '#blazor-app/src/modules/postcss/postcss/postcss.service';
 let BlazorAppViteSharedService = class BlazorAppViteSharedService extends ViteSharedService {
     blazorAppEnvironmentService;
     blazorAppVitePluginsService;

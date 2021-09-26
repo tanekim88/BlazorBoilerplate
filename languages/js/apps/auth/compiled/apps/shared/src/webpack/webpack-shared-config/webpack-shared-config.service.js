@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackSharedConfigService = void 0;
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const webpack_watch_entries_plugin_service_1 = require("../plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const configs_1 = require("@projects/root/configs");
-const paths_1 = require("@projects/shared/paths");
-const paths_2 = require("@projects/root/paths");
+const configs_1 = require("#root/configs");
+const paths_1 = require("#shared/paths");
+const paths_2 = require("#root/paths");
 const webpack_shared_base_service_1 = require("../webpack-shared-base/webpack-shared-base.service");
 const rootDir = configs_1.rootConfig.rootDir;
 let WebpackSharedConfigService = class WebpackSharedConfigService extends webpack_shared_base_service_1.WebpackSharedBaseService {

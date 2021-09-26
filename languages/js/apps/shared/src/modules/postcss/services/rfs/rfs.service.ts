@@ -1,6 +1,6 @@
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import Rfs from 'rfs';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class RfsService extends PostcssBaseService {

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackPluginBaseService = void 0;
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const environment_service_1 = require("../../../modules/environment/environment/environment.service");
 const merge_service_1 = require("../../../modules/utilities/merge/merge/merge.service");
 let WebpackPluginBaseService = class WebpackPluginBaseService {

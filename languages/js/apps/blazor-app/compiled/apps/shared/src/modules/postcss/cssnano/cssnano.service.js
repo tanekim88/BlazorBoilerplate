@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import CssNano from 'cssnano';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let CssnanoService = class CssnanoService extends PostcssBaseService {
     /**
      *

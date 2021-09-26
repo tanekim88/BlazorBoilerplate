@@ -1,6 +1,6 @@
 
 
-import { ViteBase } from '@projects/shared/vite.base';
+import { ViteBase } from '#shared/vite.base';
 import { SolidAppViteProdService } from './src/vite/vite-prod/vite-prod.service';
 import { SolidAppViteModule } from './src/vite/vite.module';
 

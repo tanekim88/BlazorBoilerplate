@@ -11,10 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackRulesBaseService = void 0;
 const merge_service_1 = require("../../../modules/utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
-const environment_service_1 = require("@projects/shared/src/modules/environment/environment/environment.service");
-const regex_service_1 = require("@projects/shared/src/modules/utilities/regex/regex/regex.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
+const environment_service_1 = require("#shared/src/modules/environment/environment/environment.service");
+const regex_service_1 = require("#shared/src/modules/utilities/regex/regex/regex.service");
 let WebpackRulesBaseService = class WebpackRulesBaseService {
     createRules(options) {
         const toReturn = options ?? [];

@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackProdService = void 0;
 const webpack_base_service_1 = require("../webpack-base/webpack-base.service");
 const webpack_minimizers_service_1 = require("../minimizers/webpack-minimizers/webpack-minimizers.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 let WebpackProdService = class WebpackProdService extends webpack_base_service_1.WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {

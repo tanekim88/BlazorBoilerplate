@@ -1,7 +1,7 @@
 import PostcssReporter from 'postcss-reporter';
 
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class PostcssReporterService extends PostcssBaseService {

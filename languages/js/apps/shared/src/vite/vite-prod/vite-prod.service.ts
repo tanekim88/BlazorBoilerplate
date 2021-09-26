@@ -1,7 +1,7 @@
 import { ViteBaseService } from '../vite-base/vite-base.service';
 
 
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
 import { ViteSharedService } from '../vite-shared/vite-shared.service';
 

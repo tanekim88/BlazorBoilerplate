@@ -1,8 +1,8 @@
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
-import { ViteDevService } from '@projects/shared/src/vite/vite-dev/vite-dev.service';
+import { ViteDevService } from '#shared/src/vite/vite-dev/vite-dev.service';
 import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
-import { BlazorAppPaths, blazorAppPaths } from '@projects/blazor-app/paths';
+import { BlazorAppPaths, blazorAppPaths } from '#blazor-app/paths';
 import path from 'path';
 @CustomInjectable()
 export class BlazorAppViteDevService extends ViteDevService {

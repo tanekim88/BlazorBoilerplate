@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackOptimizeCssAssetsPluginService = void 0;
 const optimize_css_assets_webpack_plugin_1 = __importDefault(require("optimize-css-assets-webpack-plugin"));
 const webpack_plugin_base_service_1 = require("../../plugins/webpack-plugin-base/webpack-plugin-base.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackOptimizeCssAssetsPluginService = class WebpackOptimizeCssAssetsPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(optimize_css_assets_webpack_plugin_1.default);

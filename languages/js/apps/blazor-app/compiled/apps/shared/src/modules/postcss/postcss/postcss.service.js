@@ -17,8 +17,8 @@ import { PostcssRfsAutopilotService } from '../postcss-rfs-autopilot/postcss-rfs
 import { RfsService } from '../rfs/rfs.service';
 import { TailwindcssService } from '../tailwindcss/tailwindcss.service';
 // Sealed class.
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { CustomInject } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { PostcssPurgecssService } from '../postcss-purgecss/postcss-purgecss.service';
 import { PostcssCombineDuplicatedSelectorsService } from '../postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service';
 let PostcssService = class PostcssService {

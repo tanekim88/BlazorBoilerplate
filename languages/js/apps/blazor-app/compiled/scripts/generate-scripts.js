@@ -5,7 +5,7 @@ import fs from 'fs';
 import packageJson from '../package.json';
 import path from 'path';
 import symlinkDir from 'symlink-dir';
-import { rootConfig } from '@projects/root/configs';
+import { rootConfig } from '#root/configs';
 const appsDir = path.resolve(rootConfig.rootDir, 'apps');
 const childs = fs.readdirSync(appsDir).map(appDir => {
     const absDir = path.resolve(appsDir, appDir);
@@ -191,8 +191,8 @@ const AppsDir = path.resolve(absRootDir, 'Apps');
 await symlinkDir(absRootDir, path.resolve(rootDir, 'absolute-root'));
 packageJson.imports = {};
 const childImports = {};
-packageJson.imports["@projects/root/*"] = "./*";
-childImports["@projects/root/*"] = "./absolute-root/Js/*";
+packageJson.imports["#root/*"] = "./*";
+childImports["#root/*"] = "./absolute-root/Js/*";
 childs.forEach(async (child) => {
     const folderName = child.folderName;
     packageJson.imports[`#${folderName}/*`] = `./apps/${folderName}/*`;

@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackWebpackChokidarPluginService = void 0;
 const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const webpack_webpack_chokidar_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_webpack_chokidar_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service");
 let AuthWebpackWebpackChokidarPluginService = class AuthWebpackWebpackChokidarPluginService extends webpack_webpack_chokidar_plugin_service_1.WebpackWebpackChokidarPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);

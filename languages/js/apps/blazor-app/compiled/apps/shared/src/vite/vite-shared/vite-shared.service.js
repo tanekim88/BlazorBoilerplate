@@ -5,8 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { ViteBaseService } from '../vite-base/vite-base.service';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { RootPaths } from '@projects/root/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { RootPaths } from '#root/paths';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 let ViteSharedService = class ViteSharedService extends ViteBaseService {
     createConfiguration(options) {

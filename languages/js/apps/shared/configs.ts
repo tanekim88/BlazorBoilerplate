@@ -2,16 +2,16 @@ export const LOCAL_CONFIG = Symbol('LOCAL_CONFIG');
 
 import { ConfigBase } from './configs.base';
 
-import { rootConfig } from '@projects/root/configs';
-import { blazorAppConfig } from '@projects/blazor-app/configs';
-import { authConfig } from '@projects/auth/configs';
+import { rootConfig } from '#root/configs';
+import { blazorAppConfig } from '#blazor-app/configs';
+import { authConfig } from '#auth/configs';
 
 // import { identityServerConfig } from '@IdentityServer/configs';
 import path from 'path';
 import { sharedPaths } from './paths';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { solidAppConfig } from '@projects/solid-app/configs';
+import { solidAppConfig } from '#solid-app/configs';
 const filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(filename);
 

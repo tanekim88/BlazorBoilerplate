@@ -15,8 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackSvgSpriteMapWebpackPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const svg_spritemap_webpack_plugin_1 = __importDefault(require("svg-spritemap-webpack-plugin"));
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const paths_1 = require("@projects/shared/paths");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const paths_1 = require("#shared/paths");
 const path_1 = __importDefault(require("path"));
 let WebpackSvgSpriteMapWebpackPluginService = class WebpackSvgSpriteMapWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {

@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackImageRulesService = void 0;
-const webpack_image_rules_service_1 = require("@projects/shared/src/webpack/rules/webpack-image-rules/webpack-image-rules.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const webpack_image_rules_service_1 = require("#shared/src/webpack/rules/webpack-image-rules/webpack-image-rules.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let AuthWebpackImageRulesService = class AuthWebpackImageRulesService extends webpack_image_rules_service_1.WebpackImageRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);

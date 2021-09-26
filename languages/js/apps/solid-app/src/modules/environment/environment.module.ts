@@ -1,6 +1,6 @@
-import { solidAppConfig } from '@projects/solid-app/configs';
-import { LOCAL_CONFIG } from '@projects/shared/configs';
-import { CustomModule } from '@projects/shared/src/functions/process-providers';
+import { solidAppConfig } from '#solid-app/configs';
+import { LOCAL_CONFIG } from '#shared/configs';
+import { CustomModule } from '#shared/src/functions/process-providers';
 
 import { SolidAppEnvironmentService } from './environment/environment.service';
 

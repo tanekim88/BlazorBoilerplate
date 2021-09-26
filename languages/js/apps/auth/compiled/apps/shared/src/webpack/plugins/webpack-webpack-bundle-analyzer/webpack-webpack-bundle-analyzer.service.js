@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackWebpackBundleAnalyzerService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const webpack_bundle_analyzer_1 = require("webpack-bundle-analyzer");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackWebpackBundleAnalyzerService = class WebpackWebpackBundleAnalyzerService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(webpack_bundle_analyzer_1.BundleAnalyzerPlugin);

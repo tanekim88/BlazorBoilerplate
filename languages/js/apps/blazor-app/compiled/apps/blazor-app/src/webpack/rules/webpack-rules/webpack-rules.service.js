@@ -4,8 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { WebpackRulesConfigService, WebpackRulesService, } from '@projects/shared/src/webpack/rules/webpack-rules/webpack-rules.service';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { WebpackRulesConfigService, WebpackRulesService, } from '#shared/src/webpack/rules/webpack-rules/webpack-rules.service';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let BlazorAppWebpackRulesConfigService = class BlazorAppWebpackRulesConfigService extends WebpackRulesConfigService {
 };
 BlazorAppWebpackRulesConfigService = __decorate([

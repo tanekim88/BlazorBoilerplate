@@ -1,7 +1,7 @@
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import PostcssConditionals from 'postcss-conditionals';
 
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 
 @CustomInjectable()
 export class PostcssConditionalsService extends PostcssBaseService {

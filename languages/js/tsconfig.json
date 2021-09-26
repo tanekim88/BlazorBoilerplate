@@ -28,25 +28,25 @@
         ],
         "baseUrl": "./",
         "paths": {
-            "@projects/shared/*": [
+            "#shared/*": [
                 "./apps/shared/*"
             ],
-            "@projects/auth/*": [
+            "#auth/*": [
                 "./apps/auth/*"
             ],
-            "@projects/solid-app/*": [
+            "#solid-app/*": [
                 "./apps/solid-app/*"
             ],
-            "@projects/blazor-app/*": [
+            "#blazor-app/*": [
                 "./apps/blazor-app/*"
             ],
-            "@projects/auth/*": [
+            "#Auth/*": [
                 "../Apps/Auth/Server/*"
             ],
             "#BlazorApp/*": [
                 "../Apps/BlazorApp/Client/*"
             ],
-            "@projects/root/*": [
+            "#root/*": [
                 "*"
             ]
         }

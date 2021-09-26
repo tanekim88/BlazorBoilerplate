@@ -1,4 +1,4 @@
-import { CustomModule } from "@projects/shared/src/functions/process-providers";
+import { CustomModule } from "#shared/src/functions/process-providers";
 import { EnvironmentService } from "../environment/environment/environment.service";
 import { CssnanoService } from "./services/cssnano/cssnano.service";
 import { PostcssCombineDuplicatedSelectorsService } from "./services/postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service";

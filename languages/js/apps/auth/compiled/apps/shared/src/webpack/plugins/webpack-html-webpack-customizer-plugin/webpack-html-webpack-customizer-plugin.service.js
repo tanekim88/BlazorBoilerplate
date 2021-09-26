@@ -20,7 +20,7 @@ const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-pl
 const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const common_1 = require("@nestjs/common");
 let WebpackHtmlWebpackCustomizerPluginService = class WebpackHtmlWebpackCustomizerPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor(options) {

@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { WebpackFaviconsWebpackPluginService } from '@projects/shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { WebpackFaviconsWebpackPluginService } from '#shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service';
 import { AuthEnvironmentService } from '../../../modules/environment/environment/environment.service';
 let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPluginService extends WebpackFaviconsWebpackPluginService {
     authEnvironmentService;

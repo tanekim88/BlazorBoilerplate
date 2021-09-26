@@ -4,15 +4,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 import { relative, resolve, join } from 'path';
 import { VitePluginBaseService } from '../vite-plugin-base/vite-plugin-base.service';
-// import { configsCollections } from '@projects/shared/configs-collection';
+// import { configsCollections } from '#shared/configs-collection';
 import { normalizePath } from 'vite';
 import fastGlob from 'fast-glob';
 import fs from 'fs';
-import { RootPaths } from '@projects/root/paths';
+import { RootPaths } from '#root/paths';
 var NodeType;
 (function (NodeType) {
     NodeType["Literal"] = "Literal";

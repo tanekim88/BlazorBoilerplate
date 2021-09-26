@@ -1,27 +1,29 @@
-const final = {
-    lint: 'eslint "*/**/*.{js,ts,tsx}" --quiet --fix',
-};
+
 import fs from 'fs';
 import packageJson from '../package.json';
 
 import path from 'path';
-import './generate-paths'; 
-import { normalizePath } from '@projects/shared/node_modules/vite/dist/node';
+import './generate-paths';
 import symlinkDir from 'symlink-dir';
 import { rootConfig } from '../configs';
-
+import normalizePath from 'normalize-path';
+const final = {
+    lint: 'eslint "*/**/*.{js,ts,tsx}" --quiet --fix',
+};
+const rootDir = rootConfig.rootDir;
 const rootProjName = 'root'
-const appsDir = path.resolve(rootConfig.rootDir, 'apps');
+const appsDir = path.resolve(rootDir, 'apps');
 const childs = fs.readdirSync(appsDir).map(appDir => {
     const absDir = path.resolve(appsDir, appDir);
     const packageJsonPath = path.resolve(absDir, 'package.json');
     const packageJsonStr = fs.readFileSync(packageJsonPath, 'utf-8');
     const packageJson = JSON.parse(packageJsonStr);
-    const rel = normalizePath(path.relative(rootDir, appsDir));
+    const absAppDir = path.join(appsDir, appDir)
+    const rel = normalizePath(path.relative(rootDir, absAppDir));
     return {
         folderName: appDir,
         packageJson: packageJson,
-        relativeFolderPath: `./${rel}/${appDir}`,
+        relativeFolderPath: rel,
         absoluteFolderPath: path.join(appsDir, appDir)
     }
 });
@@ -211,7 +213,6 @@ const childScript = commandObjs.reduce((acc, curr) => {
 }, {});
 
 packageJson.scripts = final as any;
-const rootDir = rootConfig.rootDir;
 const absRootDir = path.resolve(rootConfig.rootDir, '../..');
 const languagesDir = path.resolve(absRootDir, 'languages');
 const node_modules_ProjectsDir = path.join(rootDir, 'node_modules', '@projects');
@@ -221,20 +222,24 @@ fs.mkdirSync(node_modules_ProjectsDir, { recursive: true });
 
 await symlinkDir(rootDir, path.resolve(node_modules_ProjectsDir, rootProjName));
 
+
+
+packageJson.imports = {} as any;
+
+packageJson.imports["#root/*"] = "./*";
+
+childs.forEach(async (child) => {
+    const folderName = child.folderName;
+    packageJson.imports[`#${folderName}/*`] = `./${child.relativeFolderPath}/*`
+});
+
+
 Object.keys(packageJson.dependencies).forEach(key => {
     if (key.startsWith('@projects/')) {
         delete packageJson.dependencies[key];
     }
 });
 
-
-const rootPackageDependencies = Object.assign({}, packageJson.dependencies,
-    childs.reduce((acc, curr) => {
-        const rel = path.relative(rootDir, curr.absoluteFolderPath);
-        acc[`@projects/${curr.folderName}`] = (`./${normalizePath(rel)}`);
-        return acc;
-    }, {}));
-rootPackageDependencies[`@projects/${rootProjName}`] = '.';
 
 
 childs.forEach(async (child) => {
@@ -243,20 +248,25 @@ childs.forEach(async (child) => {
     const childPackageJson = child.packageJson;
     childPackageJson.name = folderName;
     childPackageJson.scripts = childScript as any;
-    childPackageJson.dependencies = packageJson.dependencies as any;
+    childPackageJson.dependencies = Object.assign({}, packageJson.dependencies);
     childPackageJson.devDependencies = packageJson.devDependencies as any;
-    const rel = path.relative(child.absoluteFolderPath, appsDir)
-    const deps = Object.assign({}, packageJson.dependencies,
-        childs.reduce((acc, curr) => {
-            acc[`@projects/${curr.folderName}`] = normalizePath(`${rel}/${curr.folderName}`);
-            return acc;
-        }, {}));
-    deps[`@projects/${rootProjName}`] = path.relative(child.absoluteFolderPath, rootDir);
-    childPackageJson.dependencies = deps;
+
+    childPackageJson.imports = { [`#${child.folderName}/*`]: "./*" };
+    childs.forEach(c => {
+        if (child !== c) {
+            childPackageJson.imports[`#${c.folderName}/*`] = `@projects/${rootProjName}/${c.relativeFolderPath}/*`;
+        }
+    })
+    childPackageJson.imports[`#${rootProjName}/*`] = `@projects/${rootProjName}/*`
+
+    const relToRoot = path.relative(child.absoluteFolderPath, rootDir)
+    childPackageJson.dependencies[`@projects/${rootProjName}`] = normalizePath(relToRoot);
+
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
     await symlinkDir(childFolderPath, path.resolve(node_modules_ProjectsDir, folderName));
     await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));
 });
+
 
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4), 'utf8');
 

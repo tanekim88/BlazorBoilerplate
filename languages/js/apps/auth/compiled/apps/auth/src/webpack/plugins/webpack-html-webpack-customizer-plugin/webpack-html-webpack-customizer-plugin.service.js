@@ -14,9 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackHtmlWebpackCustomizerPlugin = exports.AuthWebpackHtmlWebpackCustomizerPluginService = void 0;
 const html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const webpack_html_webpack_customizer_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service");
-const paths_1 = require("@projects/auth/paths");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_html_webpack_customizer_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service");
+const paths_1 = require("#auth/paths");
 let AuthWebpackHtmlWebpackCustomizerPluginService = class AuthWebpackHtmlWebpackCustomizerPluginService extends webpack_html_webpack_customizer_plugin_service_1.WebpackHtmlWebpackCustomizerPluginService {
     constructor() {
         super(AuthWebpackHtmlWebpackCustomizerPlugin);

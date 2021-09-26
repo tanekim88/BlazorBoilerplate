@@ -1,4 +1,4 @@
-import { CustomModule } from '@projects/shared/src/functions/process-providers';
+import { CustomModule } from '#shared/src/functions/process-providers';
 
 import { SolidAppMergeService } from './merge/merge.service';
 

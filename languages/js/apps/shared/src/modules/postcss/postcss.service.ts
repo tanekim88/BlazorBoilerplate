@@ -9,8 +9,8 @@ import { RfsService } from './services/rfs/rfs.service';
 // import { TailwindcssService } from '../services/tailwindcss/tailwindcss.service';
 
 // Sealed class.
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { CustomInject } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject } from '#shared/src/functions/process-providers';
 import { PostcssPurgecssService } from './services/postcss-purgecss/postcss-purgecss.service';
 import { PostcssCombineDuplicatedSelectorsService } from './services/postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service';
 

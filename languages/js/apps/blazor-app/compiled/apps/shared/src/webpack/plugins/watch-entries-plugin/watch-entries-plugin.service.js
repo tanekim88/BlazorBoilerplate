@@ -20,7 +20,7 @@ import deepMerge from 'deepmerge';
 const IGNORE_TIME_ENTRY = 'ignore';
 import sanitizeFilename from 'sanitize-filename';
 import Watchpack from 'watchpack';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import immutabilityHelper from 'immutability-helper';
 import { RawSource } from 'webpack-sources';
 import HtmlWebpackPlugin from 'html-webpack-plugin';

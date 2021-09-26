@@ -1,6 +1,6 @@
 
-import { CustomModule } from "@projects/shared/src/functions/process-providers";
-import { ViteModule } from "@projects/shared/src/vite/vite.module";
+import { CustomModule } from "#shared/src/functions/process-providers";
+import { ViteModule } from "#shared/src/vite/vite.module";
 import { BlazorAppModulesModule } from "../modules/modules.module";
 import { BlazorAppViteDevService } from "./vite-dev/vite-dev.service";
 import { BlazorAppVitePluginsModule } from "./vite-plugins/vite-plugins.module";

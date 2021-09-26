@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackProdService = exports.AuthWebpackProdConfigService = void 0;
-const webpack_prod_service_1 = require("@projects/shared/src/webpack/webpack-prod/webpack-prod.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
+const webpack_prod_service_1 = require("#shared/src/webpack/webpack-prod/webpack-prod.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
 const webpack_shared_config_service_1 = require("../webpack-shared-config/webpack-shared-config.service");
 const webpack_shared_service_1 = require("../webpack-shared/webpack-shared.service");
 let AuthWebpackProdBaseService = class AuthWebpackProdBaseService extends webpack_prod_service_1.WebpackProdService {

@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge';
-import sharedConfig from '@projects/shared/tailwind.config';
+import sharedConfig from '#shared/tailwind.config';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 // const elevation = tailwindcssElevation(['responsive']);

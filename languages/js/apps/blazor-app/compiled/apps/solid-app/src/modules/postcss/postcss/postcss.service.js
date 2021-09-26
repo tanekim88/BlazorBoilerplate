@@ -7,18 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInjectable, CustomInject } from "@projects/shared/src/functions/process-providers";
-import { EnvironmentService } from "@projects/shared/src/modules/environment/environment/environment.service";
-import { CssnanoService } from "@projects/shared/src/modules/postcss/cssnano/cssnano.service";
-import { PostcssCombineDuplicatedSelectorsService } from "@projects/shared/src/modules/postcss/postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service";
-import { PostcssFontMagicianService } from "@projects/shared/src/modules/postcss/postcss-font-magician/postcss-font-magician.service";
-import { PostcssFunctionsService } from "@projects/shared/src/modules/postcss/postcss-functions/postcss-functions.service";
-import { PostcssPresetEnvService } from "@projects/shared/src/modules/postcss/postcss-preset-env/postcss-preset-env.service";
-import { PostcssPurgecssService } from "@projects/shared/src/modules/postcss/postcss-purgecss/postcss-purgecss.service";
-import { PostcssReporterService } from "@projects/shared/src/modules/postcss/postcss-reporter/postcss-reporter.service";
-import { PostcssRfsAutopilotService } from "@projects/shared/src/modules/postcss/postcss-rfs-autopilot/postcss-rfs-autopilot.service";
-import { RfsService } from "@projects/shared/src/modules/postcss/rfs/rfs.service";
-import { TailwindcssService } from "@projects/shared/src/modules/postcss/tailwindcss/tailwindcss.service";
+import { CustomInjectable, CustomInject } from "#shared/src/functions/process-providers";
+import { EnvironmentService } from "#shared/src/modules/environment/environment/environment.service";
+import { CssnanoService } from "#shared/src/modules/postcss/cssnano/cssnano.service";
+import { PostcssCombineDuplicatedSelectorsService } from "#shared/src/modules/postcss/postcss-combine-duplicated-selectors/postcss-combine-duplicated-selectors.service";
+import { PostcssFontMagicianService } from "#shared/src/modules/postcss/postcss-font-magician/postcss-font-magician.service";
+import { PostcssFunctionsService } from "#shared/src/modules/postcss/postcss-functions/postcss-functions.service";
+import { PostcssPresetEnvService } from "#shared/src/modules/postcss/postcss-preset-env/postcss-preset-env.service";
+import { PostcssPurgecssService } from "#shared/src/modules/postcss/postcss-purgecss/postcss-purgecss.service";
+import { PostcssReporterService } from "#shared/src/modules/postcss/postcss-reporter/postcss-reporter.service";
+import { PostcssRfsAutopilotService } from "#shared/src/modules/postcss/postcss-rfs-autopilot/postcss-rfs-autopilot.service";
+import { RfsService } from "#shared/src/modules/postcss/rfs/rfs.service";
+import { TailwindcssService } from "#shared/src/modules/postcss/tailwindcss/tailwindcss.service";
 let BlazorAppPostcssService = class BlazorAppPostcssService {
     CssNanoService;
     PostcssReporterService;

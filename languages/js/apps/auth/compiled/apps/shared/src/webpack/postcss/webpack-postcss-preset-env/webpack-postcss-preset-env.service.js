@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackPostcssPresetEnvService = void 0;
 const postcss_preset_env_1 = __importDefault(require("postcss-preset-env"));
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackPostcssPresetEnvService = class WebpackPostcssPresetEnvService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(postcss_preset_env_1.default);

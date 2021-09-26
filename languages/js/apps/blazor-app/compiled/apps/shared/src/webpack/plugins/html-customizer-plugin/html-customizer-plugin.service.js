@@ -14,7 +14,7 @@ import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import fs from 'fs';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import { Optional } from '@nestjs/common';
 let WebpackHtmlWebpackCustomizerPluginService = class WebpackHtmlWebpackCustomizerPluginService extends WebpackPluginBaseService {
     constructor(options) {

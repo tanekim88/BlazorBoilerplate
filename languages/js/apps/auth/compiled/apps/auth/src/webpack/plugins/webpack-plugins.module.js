@@ -15,12 +15,12 @@ const webpack_mini_css_extract_plugin_service_1 = require("./webpack-mini-css-ex
 const webpack_plugins_service_1 = require("./webpack-plugins/webpack-plugins.service");
 const webpack_webpack_fix_style_only_entries_service_1 = require("./webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service");
 const webpack_workbox_webpack_plugin_service_1 = require("./webpack-workbox-webpack-plugin/webpack-workbox-webpack-plugin.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 const webpack_remove_files_webpack_plugin_service_1 = require("./webpack-remove-files-webpack-plugin/webpack-remove-files-webpack-plugin.service");
 const webpack_tsconfig_paths_webpack_plugin_service_1 = require("./webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
 const webpack_webpack_chokidar_plugin_service_1 = require("./webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service");
 const webpack_watch_entries_plugin_service_1 = require("./webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const webpack_plugins_module_1 = require("@projects/shared/src/webpack/plugins/webpack-plugins.module");
+const webpack_plugins_module_1 = require("#shared/src/webpack/plugins/webpack-plugins.module");
 const webpack_html_webpack_customizer_plugin_service_1 = require("./webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service");
 let AuthWebpackPluginsModule = class AuthWebpackPluginsModule {
 };

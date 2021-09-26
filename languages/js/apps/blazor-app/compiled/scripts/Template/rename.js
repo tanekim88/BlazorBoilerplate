@@ -1,4 +1,4 @@
-import { sharedPaths } from '@projects/shared/paths';
+import { sharedPaths } from '#shared/paths';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';

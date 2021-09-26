@@ -3,10 +3,10 @@ import path from 'path';
 import { LOCAL_CONFIG } from '../../../../configs';
 import { MergeService } from '../../utilities/modules/merge/merge/merge.service';
 
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { ConfigBase } from '../../../../configs.base';
-import { RootPaths, rootPaths } from '@projects/root/paths';
-import { sharedPaths } from '@projects/shared/paths';
+import { RootPaths, rootPaths } from '#root/paths';
+import { sharedPaths } from '#shared/paths';
 
 type LocalPathsType = typeof sharedPaths;
 

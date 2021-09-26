@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackStylelintService = void 0;
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const Stylelint = require('stylelint');
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackStylelintService = class WebpackStylelintService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(Stylelint);

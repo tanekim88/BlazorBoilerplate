@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 // import PostcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 const PostcssCombineDuplicatedSelectors = require('postcss-combine-duplicated-selectors');
 let WebpackPostcssCombineDuplicatedSelectorsService = class WebpackPostcssCombineDuplicatedSelectorsService extends WebpackPostcssBaseService {
     /**

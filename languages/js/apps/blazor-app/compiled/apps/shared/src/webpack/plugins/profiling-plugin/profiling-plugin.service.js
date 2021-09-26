@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import webpack from 'webpack';
 import path from 'path';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackProfilingPluginService = class WebpackProfilingPluginService extends WebpackPluginBaseService {
     constructor() {
         super(webpack.debug.ProfilingPlugin);

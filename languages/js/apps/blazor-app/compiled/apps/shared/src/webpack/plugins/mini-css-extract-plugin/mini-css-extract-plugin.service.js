@@ -11,7 +11,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 import { Optional } from '@nestjs/common';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 let WebpackMiniCssExtractPluginConfigService = class WebpackMiniCssExtractPluginConfigService extends WebpackPluginBaseService {

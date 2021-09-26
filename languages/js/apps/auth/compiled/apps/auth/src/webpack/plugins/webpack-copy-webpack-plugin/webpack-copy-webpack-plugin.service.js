@@ -14,10 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackCopyWebpackPluginService = void 0;
 const path_1 = __importDefault(require("path"));
-const webpack_copy_webpack_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const paths_1 = require("@projects/auth/paths");
-const environment_service_1 = require("@projects/auth/src/modules/environment/environment/environment.service");
+const webpack_copy_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const paths_1 = require("#auth/paths");
+const environment_service_1 = require("#auth/src/modules/environment/environment/environment.service");
 let AuthWebpackCopyWebpackPluginService = class AuthWebpackCopyWebpackPluginService extends webpack_copy_webpack_plugin_service_1.WebpackCopyWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {

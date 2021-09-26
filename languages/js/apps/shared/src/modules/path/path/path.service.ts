@@ -1,11 +1,11 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { LOCAL_CONFIG } from '@projects/shared/configs';
-import { ConfigBase } from '@projects/shared/configs.base';
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { LOCAL_CONFIG } from '#shared/configs';
+import { ConfigBase } from '#shared/configs.base';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { MergeService } from '../../utilities/modules/merge/merge/merge.service';
 import path from 'path';
-import { sharedPaths } from '@projects/shared/paths';
-import { rootPaths } from '@projects/root/paths';
+import { sharedPaths } from '#shared/paths';
+import { rootPaths } from '#root/paths';
 
 type LocalPathsType = typeof sharedPaths;
 

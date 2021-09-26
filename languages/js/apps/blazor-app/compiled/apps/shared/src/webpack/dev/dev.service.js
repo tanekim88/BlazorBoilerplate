@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { WebpackBaseService } from '../webpack-base/webpack-base.service';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackDevService = class WebpackDevService extends WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {

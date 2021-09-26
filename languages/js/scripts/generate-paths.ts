@@ -1,5 +1,6 @@
 import 'reflect-metadata';
-import { rootConfig } from '@projects/root/configs';
+
+import { rootConfig } from '#root/configs';
 import path from 'path';
 import fs from 'fs';
 

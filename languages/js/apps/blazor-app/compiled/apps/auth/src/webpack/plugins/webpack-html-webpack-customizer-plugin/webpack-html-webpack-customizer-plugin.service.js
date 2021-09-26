@@ -8,9 +8,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
-import { WebpackHtmlWebpackCustomizerPlugin, WebpackHtmlWebpackCustomizerPluginService, } from '@projects/shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
-import { authPaths } from '@projects/auth/paths';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { WebpackHtmlWebpackCustomizerPlugin, WebpackHtmlWebpackCustomizerPluginService, } from '#shared/src/webpack/plugins/webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
+import { authPaths } from '#auth/paths';
 let AuthWebpackHtmlWebpackCustomizerPluginService = class AuthWebpackHtmlWebpackCustomizerPluginService extends WebpackHtmlWebpackCustomizerPluginService {
     constructor() {
         super(AuthWebpackHtmlWebpackCustomizerPlugin);

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../../plugins/webpack-plugin-base/webpack-plugin-base.service';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let WebpackCssMinimizerPluginService = class WebpackCssMinimizerPluginService extends WebpackPluginBaseService {
     constructor() {
         super(CssMinimizerPlugin);

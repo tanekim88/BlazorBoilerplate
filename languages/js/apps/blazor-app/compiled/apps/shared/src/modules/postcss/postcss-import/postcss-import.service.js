@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 import PostcssImport from 'postcss-import';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 let PostcssImportService = class PostcssImportService extends PostcssBaseService {
     constructor() {
         super(PostcssImport);

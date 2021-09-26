@@ -5,7 +5,13 @@
     "main": "index.js",
     "private": true,
     "type": "module",
-    "imports": {},
+    "imports": {
+        "#blazor-app/*": "./*",
+        "#auth/*": "@projects/root/apps/auth/*",
+        "#shared/*": "@projects/root/apps/shared/*",
+        "#solid-app/*": "@projects/root/apps/solid-app/*",
+        "#root/*": "@projects/root/*"
+    },
     "scripts": {
         "setup": "node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts",
         "prebuild": "rimraf dist",
@@ -79,6 +85,7 @@
         "material-colors": "^1.2.6",
         "material-components-web": "^12.0.0",
         "material-design-icons": "^3.0.1",
+        "normalize-path": "^3.0.0",
         "path-browserify": "^1.0.1",
         "path-to-regexp": "^6.2.0",
         "react": "^17.0.2",
@@ -108,11 +115,7 @@
         "workbox-sw": "^6.3.0",
         "workbox-window": "^6.3.0",
         "zone.js": "~0.11.4",
-        "@projects/auth": "../auth",
-        "@projects/blazor-app": "../blazor-app",
-        "@projects/shared": "../shared",
-        "@projects/solid-app": "../solid-app",
-        "@projects/root": "..\\.."
+        "@projects/root": "../.."
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",

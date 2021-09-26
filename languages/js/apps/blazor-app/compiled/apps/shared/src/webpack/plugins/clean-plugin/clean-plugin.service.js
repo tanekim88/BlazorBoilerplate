@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 import path from 'path';
-import { configs } from '@projects/shared/configs';
-// import { configsCollections } from '@projects/shared/configs-collection';
+import { configs } from '#shared/configs';
+// import { configsCollections } from '#shared/configs-collection';
 let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService extends WebpackPluginBaseService {
     /**
      *

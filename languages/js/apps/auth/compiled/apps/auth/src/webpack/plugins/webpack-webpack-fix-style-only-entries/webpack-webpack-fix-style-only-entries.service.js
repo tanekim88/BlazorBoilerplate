@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackWebpackFixStyleOnlyEntriesService = void 0;
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const webpack_webpack_fix_style_only_entries_service_1 = require("@projects/shared/src/webpack/plugins/webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_webpack_fix_style_only_entries_service_1 = require("#shared/src/webpack/plugins/webpack-webpack-fix-style-only-entries/webpack-webpack-fix-style-only-entries.service");
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 let AuthWebpackWebpackFixStyleOnlyEntriesService = class AuthWebpackWebpackFixStyleOnlyEntriesService extends webpack_webpack_fix_style_only_entries_service_1.WebpackWebpackFixStyleOnlyEntriesService {
     createOptions(options) {

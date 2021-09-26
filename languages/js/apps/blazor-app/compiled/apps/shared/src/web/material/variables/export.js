@@ -1,5 +1,5 @@
 import { exporter } from 'sass-export';
-import { sharedPaths } from '@projects/shared/paths';
+import { sharedPaths } from '#shared/paths';
 import scssParser from 'scss-parser';
 import sass from 'node-sass';
 import tinycolor from 'tinycolor2';

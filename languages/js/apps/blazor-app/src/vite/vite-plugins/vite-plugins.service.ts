@@ -1,8 +1,8 @@
-import { BlazorAppPaths, blazorAppPaths } from '@projects/blazor-app/paths';
-import { BlazorAppEnvironmentService } from '@projects/blazor-app/src/modules/environment/environment/environment.service';
-import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { BlazorAppPaths, blazorAppPaths } from '#blazor-app/paths';
+import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 
-import { VitePluginsService } from '@projects/shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
+import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 import path from 'path';
 @CustomInjectable()
 export class BlazorAppVitePluginsService extends VitePluginsService {

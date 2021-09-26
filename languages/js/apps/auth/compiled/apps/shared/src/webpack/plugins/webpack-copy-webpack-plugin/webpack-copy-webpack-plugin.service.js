@@ -16,8 +16,8 @@ exports.WebpackCopyWebpackPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const copy_webpack_plugin_1 = __importDefault(require("copy-webpack-plugin"));
 const path_1 = __importDefault(require("path"));
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
-const paths_1 = require("@projects/shared/paths");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const paths_1 = require("#shared/paths");
 let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     constructor() {
         super(copy_webpack_plugin_1.default);

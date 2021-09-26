@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackDevService = void 0;
 const webpack_base_service_1 = require("../webpack-base/webpack-base.service");
-const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
 let WebpackDevService = class WebpackDevService extends webpack_base_service_1.WebpackBaseService {
     createConfiguration(options) {
         return this.mergeService.mergeOptions(super.createConfiguration(), {
