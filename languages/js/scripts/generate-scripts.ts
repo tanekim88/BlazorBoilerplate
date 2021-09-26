@@ -7,7 +7,7 @@ import packageJson from '../package.json';
 import path from 'path';
 
 import symlinkDir from 'symlink-dir';
-import { rootConfig } from '#root/configs';
+import { rootConfig } from '../configs';
 import changeCase from 'change-case';
 
 const appsDir = path.resolve(rootConfig.rootDir, 'apps');
@@ -214,7 +214,7 @@ const languagesDir = path.resolve(absRootDir, 'languages');
 const node_modules_ProjectsDir = path.join(rootDir, 'node_modules', '@projects');
 
 const languages = fs.readdirSync(languagesDir);
-fs.mkdirSync(node_modules_ProjectsDir);
+fs.mkdirSync(node_modules_ProjectsDir, { recursive: true });
 
 await symlinkDir(rootDir, path.resolve(node_modules_ProjectsDir, 'root'));
 
@@ -227,7 +227,7 @@ Object.keys(packageJson.dependencies).forEach(key => {
 
 const rootPackageDependencies = Object.assign({}, packageJson.dependencies,
     childs.reduce((acc, curr) => {
-        acc[`@projects/${curr.folderName}}`] = `./apps/${curr.folderName}`;
+        acc[`@projects/${curr.folderName}`] = `./apps/${curr.folderName}`;
         return acc;
     }, {}));
 
@@ -243,7 +243,7 @@ childs.forEach(async (child) => {
     const rel = relative(child.folderPath, appsDir)
     const deps = Object.assign({}, packageJson.dependencies,
         childs.reduce((acc, curr) => {
-            acc[`@projects/${curr.folderName}}`] = `${rel}/${curr.folderName}`;
+            acc[`@projects/${curr.folderName}`] = `${rel}/${curr.folderName}`;
             return acc;
         }, {}));
     deps['@projects/root'] = relative(child.folderPath, rootDir);

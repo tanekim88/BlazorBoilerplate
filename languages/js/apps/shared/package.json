@@ -1,5 +1,5 @@
 {
-    "name": "shared-library",
+    "name": "shared",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -255,7 +255,7 @@
         "responsive-loader": "^2.3.0",
         "rfs": "^9.0.6",
         "rimraf": "^3.0.2",
-        "sass": "^1.41.1",
+        "sass": "^1.42.1",
         "sass-export": "^2.1.0",
         "sass-loader": "^12.1.0",
         "sast": "^0.8.1",

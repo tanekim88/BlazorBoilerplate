@@ -9,13 +9,6 @@
     "main": "index.js",
     "type": "module",
     "imports": {
-        "#root/*": "./*",
-        "#auth/*": "./apps/auth/*",
-        "#blazor-app/*": "./apps/blazor-app/*",
-        "#shared/*": "./apps/shared/*",
-        "#solid-app/*": "./apps/solid-app/*",
-        "#Auth/*": "./absolute-root/Apps/Auth/*",
-        "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
     "scripts": {
         "lint": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint **/*.ts --fix --no-eslintrc -c .eslintrc.json",
@@ -255,7 +248,11 @@
         "workbox-strategies": "^6.3.0",
         "workbox-sw": "^6.3.0",
         "workbox-window": "^6.3.0",
-        "zone.js": "~0.11.4"
+        "zone.js": "~0.11.4",
+        "@projects/auth": "./apps/auth",
+        "@projects/blazor-app": "./apps/blazor-app",
+        "@projects/shared": "./apps/shared",
+        "@projects/solid-app": "./apps/solid-app"
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
