@@ -11,14 +11,19 @@ extensions:
 
 services:
 - name: BlazorApp
-  project: Apps/BlazorApp/Server/BlazorApp.Server.csproj
+  project: languages/csharp/Apps/BlazorApp/Server/BlazorApp.Server.csproj
   bindings:
     - port: 4001
       protocol: https
 - name: BlazorAppClient
-  project: Apps/BlazorApp/Client/BlazorApp.Client.csproj
+  project:  languages/csharp/Apps/BlazorApp/Client/BlazorApp.Client.csproj
   bindings:
     - port: 3001
+      protocol: https
+- name: solid-app
+  project:  languages/js/apps/solid-app/Dockerfile
+  bindings:
+    - port: 3002
       protocol: https
 # - name: Auth
 #   project: Apps/Auth/Server/Auth.Server.csproj
