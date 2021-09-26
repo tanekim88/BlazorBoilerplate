@@ -1,6 +1,6 @@
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { UserConfig } from 'vite';
-import { ViteDevService } from '#shared/src/vite/vite-dev/vite-dev.service';
+import { ViteDevService } from '@projects/shared/src/vite/vite-dev/vite-dev.service';
 import { SolidAppViteSharedService } from '../vite-shared/vite-shared.service';
 
 @CustomInjectable()

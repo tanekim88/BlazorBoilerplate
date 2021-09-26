@@ -5,8 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const WebpackChokidarPlugin = require('webpack-chokidar-plugin');
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { WebpackWebpackChokidarPluginService } from '#shared/src/webpack/plugins/webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { WebpackWebpackChokidarPluginService } from '@projects/shared/src/webpack/plugins/webpack-webpack-chokidar-plugin/webpack-webpack-chokidar-plugin.service';
 let AuthWebpackWebpackChokidarPluginService = class AuthWebpackWebpackChokidarPluginService extends WebpackWebpackChokidarPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);

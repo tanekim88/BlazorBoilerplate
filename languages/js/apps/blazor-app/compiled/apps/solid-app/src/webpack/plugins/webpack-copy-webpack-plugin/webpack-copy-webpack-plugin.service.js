@@ -8,10 +8,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import path from 'path';
-import { WebpackCopyWebpackPluginService } from '#shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { blazorAppPaths } from '#solid-app/paths';
-import { BlazorAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
+import { WebpackCopyWebpackPluginService } from '@projects/shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { blazorAppPaths } from '@projects/solid-app/paths';
+import { BlazorAppEnvironmentService } from '@projects/solid-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackCopyWebpackPluginService = class BlazorAppWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
     blazorAppClientEnvironmentService;
     createOptions(options) {

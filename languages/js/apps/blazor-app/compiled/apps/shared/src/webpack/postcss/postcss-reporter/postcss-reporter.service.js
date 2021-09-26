@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import PostcssReporter from 'postcss-reporter';
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackPostcssReporterService = class WebpackPostcssReporterService extends WebpackPostcssBaseService {
     constructor() {
         super(PostcssReporter);

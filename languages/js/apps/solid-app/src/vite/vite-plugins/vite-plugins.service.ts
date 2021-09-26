@@ -1,7 +1,7 @@
-import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { SolidAppEnvironmentService } from '@projects/solid-app/src/modules/environment/environment/environment.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 
-import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
+import { VitePluginsService } from '@projects/shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 
 @CustomInjectable()
 export class SolidAppVitePluginsService extends VitePluginsService {

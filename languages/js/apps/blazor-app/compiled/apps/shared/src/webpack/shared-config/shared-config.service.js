@@ -4,11 +4,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginConfigService, } from '../plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { rootConfig } from '#root/configs';
-import { sharedPaths } from '#shared/paths';
-import { rootPaths } from '#root/paths';
+import { rootConfig } from '@projects/root/configs';
+import { sharedPaths } from '@projects/shared/paths';
+import { rootPaths } from '@projects/root/paths';
 import { WebpackSharedBaseService } from '../webpack-shared-base/webpack-shared-base.service';
 const rootDir = rootConfig.rootDir;
 let WebpackSharedConfigService = class WebpackSharedConfigService extends WebpackSharedBaseService {

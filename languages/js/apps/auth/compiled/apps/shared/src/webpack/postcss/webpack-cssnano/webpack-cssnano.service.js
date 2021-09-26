@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackCssnanoService = void 0;
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const cssnano_1 = __importDefault(require("cssnano"));
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let WebpackCssnanoService = class WebpackCssnanoService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     /**
      *

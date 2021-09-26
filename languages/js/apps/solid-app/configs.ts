@@ -1,4 +1,4 @@
-import { ConfigBase } from '#shared/configs.base';
+import { ConfigBase } from '@projects/shared/configs.base';
 import { solidAppPaths } from './paths';
 
 export class SolidAppConfig extends ConfigBase {

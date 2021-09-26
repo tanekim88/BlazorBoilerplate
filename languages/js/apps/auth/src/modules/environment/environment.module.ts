@@ -1,5 +1,5 @@
-import { LOCAL_CONFIG } from '#shared/configs';
-import { CustomModule } from '#shared/src/functions/process-providers';
+import { LOCAL_CONFIG } from '@projects/shared/configs';
+import { CustomModule } from '@projects/shared/src/functions/process-providers';
 import { authConfig } from '../../../configs';
 import { AuthEnvironmentService } from './environment/environment.service';
 

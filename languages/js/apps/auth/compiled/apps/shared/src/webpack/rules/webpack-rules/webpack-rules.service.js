@@ -18,8 +18,8 @@ const webpack_style_rules_service_1 = require("../webpack-style-rules/webpack-st
 const webpack_svg_rules_service_1 = require("../webpack-svg-rules/webpack-svg-rules.service");
 const webpack_ts_rules_service_1 = require("../webpack-ts-rules/webpack-ts-rules.service");
 const webpack_xml_rules_service_1 = require("../webpack-xml-rules/webpack-xml-rules.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
 let WebpackRulesConfigService = class WebpackRulesConfigService {
     createRules() {
         const toReturn = [

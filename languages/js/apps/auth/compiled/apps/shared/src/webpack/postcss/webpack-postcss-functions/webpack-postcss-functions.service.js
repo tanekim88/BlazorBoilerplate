@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackPostcssFunctionsService = void 0;
 const postcss_functions_1 = __importDefault(require("postcss-functions"));
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let WebpackPostcssFunctionsService = class WebpackPostcssFunctionsService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(postcss_functions_1.default);

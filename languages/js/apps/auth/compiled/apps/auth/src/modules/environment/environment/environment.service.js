@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthEnvironmentService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const environment_service_1 = require("#shared/src/modules/environment/environment/environment.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const environment_service_1 = require("@projects/shared/src/modules/environment/environment/environment.service");
 let AuthEnvironmentService = class AuthEnvironmentService extends environment_service_1.EnvironmentService {
 };
 AuthEnvironmentService = __decorate([

@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { CustomInject } from '#shared/src/functions/process-providers';
-import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { WebpackSharedService } from '#shared/src/webpack/webpack-shared/webpack-shared.service';
-import { BlazorAppPaths, blazorAppPaths } from '#solid-app/paths';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject } from '@projects/shared/src/functions/process-providers';
+import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginService, } from '@projects/shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackSharedService } from '@projects/shared/src/webpack/webpack-shared/webpack-shared.service';
+import { BlazorAppPaths, blazorAppPaths } from '@projects/solid-app/paths';
 import path from 'path';
 import { BlazorAppWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 import { BlazorAppWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';

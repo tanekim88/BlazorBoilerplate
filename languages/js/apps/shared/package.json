@@ -5,15 +5,7 @@
     "main": "index.js",
     "private": true,
     "type": "module",
-    "imports": {
-        "#root/*": "./absolute-root/Js/*",
-        "#auth/*": "./absolute-root/Js/apps/auth/*",
-        "#blazor-app/*": "./absolute-root/Js/apps/blazor-app/*",
-        "#shared/*": "./*",
-        "#solid-app/*": "./absolute-root/Js/apps/solid-app/*",
-        "#Auth/*": "./absolute-root/Apps/Auth/*",
-        "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
-    },
+    "imports": {},
     "scripts": {
         "setup": "node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts",
         "prebuild": "rimraf dist",
@@ -115,7 +107,12 @@
         "workbox-strategies": "^6.3.0",
         "workbox-sw": "^6.3.0",
         "workbox-window": "^6.3.0",
-        "zone.js": "~0.11.4"
+        "zone.js": "~0.11.4",
+        "@projects/auth": "../auth",
+        "@projects/blazor-app": "../blazor-app",
+        "@projects/shared": "../shared",
+        "@projects/solid-app": "../solid-app",
+        "@projects/root": "..\\.."
     },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",

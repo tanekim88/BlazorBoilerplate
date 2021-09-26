@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.rootConfig = void 0;
-const configs_base_1 = require("#shared/configs.base");
+const configs_base_1 = require("@projects/shared/configs.base");
 const path_1 = __importDefault(require("path"));
 class RootConfig extends configs_base_1.ConfigBase {
     constructor() {

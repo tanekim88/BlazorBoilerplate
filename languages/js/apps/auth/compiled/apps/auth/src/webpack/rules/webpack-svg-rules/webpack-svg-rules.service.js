@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackSvgRulesService = void 0;
-const webpack_svg_rules_service_1 = require("#shared/src/webpack/rules/webpack-svg-rules/webpack-svg-rules.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_svg_rules_service_1 = require("@projects/shared/src/webpack/rules/webpack-svg-rules/webpack-svg-rules.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let AuthWebpackSvgRulesService = class AuthWebpackSvgRulesService extends webpack_svg_rules_service_1.WebpackSvgRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);

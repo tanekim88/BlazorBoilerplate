@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import webpack from 'webpack';
 import { EnvironmentService } from '../../modules/environment/environment/environment.service';
 import { MergeService } from '../../modules/utilities/merge/merge/merge.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { CustomInject } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject } from '@projects/shared/src/functions/process-providers';
 let WebpackBaseService = class WebpackBaseService {
     mergeService;
     environmentService;

@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import PurgeCss from '@fullhuman/postcss-purgecss';
 let PostcssPurgecssService = class PostcssPurgecssService extends PostcssBaseService {
     constructor() {

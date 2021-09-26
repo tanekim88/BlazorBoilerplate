@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackCsvRulesService = void 0;
-const webpack_csv_rules_service_1 = require("#shared/src/webpack/rules/webpack-csv-rules/webpack-csv-rules.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const webpack_csv_rules_service_1 = require("@projects/shared/src/webpack/rules/webpack-csv-rules/webpack-csv-rules.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let AuthWebpackCsvRulesService = class AuthWebpackCsvRulesService extends webpack_csv_rules_service_1.WebpackCsvRulesService {
     createRule(options) {
         return this.mergeService.mergeOptions(super.createRule(), {}, options);

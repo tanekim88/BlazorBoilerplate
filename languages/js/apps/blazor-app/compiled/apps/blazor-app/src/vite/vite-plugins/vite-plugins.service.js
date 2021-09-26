@@ -8,9 +8,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var _a;
-import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
+import { BlazorAppEnvironmentService } from '@projects/blazor-app/src/modules/environment/environment/environment.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { VitePluginsService } from '@projects/shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends VitePluginsService {
     blazorAppEnvironmentService;
     // @CustomInject(VitePluginGlobInputService)

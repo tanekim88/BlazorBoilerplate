@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackMiniCssExtractPluginService = exports.AuthWebpackMiniCssExtractPluginConfigService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 const mini_css_extract_plugin_1 = __importDefault(require("mini-css-extract-plugin"));
-const webpack_mini_css_extract_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service");
+const webpack_mini_css_extract_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service");
 let AuthWebpackMiniCssExtractPluginConfigService = class AuthWebpackMiniCssExtractPluginConfigService extends webpack_mini_css_extract_plugin_service_1.WebpackMiniCssExtractPluginConfigService {
     /**
      *

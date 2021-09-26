@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackFaviconsWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const webpack_favicons_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const webpack_favicons_webpack_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-favicons-webpack-plugin/webpack-favicons-webpack-plugin.service");
 const environment_service_1 = require("../../../modules/environment/environment/environment.service");
 let AuthWebpackFaviconsWebpackPluginService = class AuthWebpackFaviconsWebpackPluginService extends webpack_favicons_webpack_plugin_service_1.WebpackFaviconsWebpackPluginService {
     createOptions(options) {

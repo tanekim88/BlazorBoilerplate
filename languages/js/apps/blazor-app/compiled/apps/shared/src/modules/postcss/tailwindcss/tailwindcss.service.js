@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import Tailwindcss from 'tailwindcss';
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import fs from 'fs';
-import { sharedPaths } from '#shared/paths';
+import { sharedPaths } from '@projects/shared/paths';
 const fileToRemove = sharedPaths['tailwind.config.json'].toAbsolutePath();
 if (fs.existsSync(fileToRemove)) {
     fs.unlinkSync(fileToRemove);
 }
-import tailwindConfig from '#shared/tailwind.config';
+import tailwindConfig from '@projects/shared/tailwind.config';
 import resolveConfig from 'tailwindcss/resolveConfig';
 let TailwindcssService = class TailwindcssService extends PostcssBaseService {
     constructor() {

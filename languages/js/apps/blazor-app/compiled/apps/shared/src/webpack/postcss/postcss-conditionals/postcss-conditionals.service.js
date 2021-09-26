@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
 import PostcssConditionals from 'postcss-conditionals';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackPostcssConditionalsService = class WebpackPostcssConditionalsService extends WebpackPostcssBaseService {
     /**
      *

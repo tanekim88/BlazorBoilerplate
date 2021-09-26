@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthRegexService = void 0;
-const regex_service_1 = require("#shared/src/modules/utilities/regex/regex/regex.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const regex_service_1 = require("@projects/shared/src/modules/utilities/regex/regex/regex.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let AuthRegexService = class AuthRegexService extends regex_service_1.RegexService {
 };
 AuthRegexService = __decorate([

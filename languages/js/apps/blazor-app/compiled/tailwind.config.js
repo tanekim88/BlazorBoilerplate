@@ -1,4 +1,4 @@
-import sharedConfig from '#shared/tailwind.config';
+import sharedConfig from '@projects/shared/tailwind.config';
 import deepmerge from 'deepmerge';
 export default deepmerge(sharedConfig, {
     future: {},

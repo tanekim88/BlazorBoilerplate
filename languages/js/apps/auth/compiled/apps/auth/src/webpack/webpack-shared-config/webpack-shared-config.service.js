@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackSharedConfigService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
-const paths_1 = require("#auth/paths");
-const webpack_watch_entries_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
-const webpack_shared_config_service_1 = require("#shared/src/webpack/webpack-shared-config/webpack-shared-config.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
+const paths_1 = require("@projects/auth/paths");
+const webpack_watch_entries_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service");
+const webpack_shared_config_service_1 = require("@projects/shared/src/webpack/webpack-shared-config/webpack-shared-config.service");
 const environment_service_1 = require("../../modules/environment/environment/environment.service");
 const webpack_rules_service_1 = require("../rules/webpack-rules/webpack-rules.service");
 const webpack_plugins_service_1 = require("../plugins/webpack-plugins/webpack-plugins.service");

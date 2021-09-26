@@ -16,12 +16,12 @@ exports.WebpackStyleRulesService = void 0;
 const webpack_rules_base_service_1 = require("../webpack-rules-base/webpack-rules-base.service");
 const sass_1 = __importDefault(require("sass"));
 const webpack_postcss_service_1 = require("../../postcss/webpack-postcss/webpack-postcss.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
-const paths_1 = require("#shared/paths");
-const paths_2 = require("#root/paths");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
+const paths_1 = require("@projects/shared/paths");
+const paths_2 = require("@projects/root/paths");
 const node_sass_utils_1 = __importDefault(require("node-sass-utils"));
-const sass_variables_1 = require("#shared/src/web/material/variables/sass-variables");
+const sass_variables_1 = require("@projects/shared/src/web/material/variables/sass-variables");
 const sassUtils = node_sass_utils_1.default(sass_1.default);
 let WebpackStyleRulesService = class WebpackStyleRulesService extends webpack_rules_base_service_1.WebpackRulesBaseService {
     createRule(options) {

@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var _a;
 import { WebpackBaseService } from '../webpack-base/webpack-base.service';
 import { WebpackMinimizersService } from '../minimizers/webpack-minimizers/webpack-minimizers.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { CustomInject } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject } from '@projects/shared/src/functions/process-providers';
 let WebpackProdService = class WebpackProdService extends WebpackBaseService {
     webpackMinimizersService;
     createConfiguration(options) {

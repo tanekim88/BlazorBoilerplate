@@ -4,11 +4,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { WebpackStyleRulesService } from '#shared/src/webpack/rules/webpack-style-rules/webpack-style-rules.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { MergeCommand } from '#shared/src/modules/utilities/merge/merge/merge-command';
+import { WebpackStyleRulesService } from '@projects/shared/src/webpack/rules/webpack-style-rules/webpack-style-rules.service';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { MergeCommand } from '@projects/shared/src/modules/utilities/merge/merge/merge-command';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { blazorAppPaths } from '#blazor-app/paths';
+import { blazorAppPaths } from '@projects/blazor-app/paths';
 import path from 'path';
 let BlazorAppWebpackStyleRulesService = class BlazorAppWebpackStyleRulesService extends WebpackStyleRulesService {
     createRule(options) {

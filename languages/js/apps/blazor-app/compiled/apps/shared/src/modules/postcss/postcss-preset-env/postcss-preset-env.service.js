@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import PostcssPresetEnv from 'postcss-preset-env';
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let PostcssPresetEnvService = class PostcssPresetEnvService extends PostcssBaseService {
     constructor() {
         super(PostcssPresetEnv);

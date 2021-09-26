@@ -1,4 +1,4 @@
-import sharedConfig from '#shared/.stylelintrc';
+import sharedConfig from '@projects/shared/.stylelintrc';
 import deepmerge from 'deepmerge';
 
 export default deepmerge(sharedConfig, {});

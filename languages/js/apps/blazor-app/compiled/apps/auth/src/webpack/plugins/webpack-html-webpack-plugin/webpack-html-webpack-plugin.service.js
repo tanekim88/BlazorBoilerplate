@@ -7,11 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { WebpackHtmlWebpackPluginService } from '#shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { authPaths, AuthPaths } from '#auth/paths';
-import { authConfig } from '#auth/configs';
-import { AuthEnvironmentService } from '#auth/src/modules/environment/environment/environment.service';
+import { WebpackHtmlWebpackPluginService } from '@projects/shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { authPaths, AuthPaths } from '@projects/auth/paths';
+import { authConfig } from '@projects/auth/configs';
+import { AuthEnvironmentService } from '@projects/auth/src/modules/environment/environment/environment.service';
 let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
     authEnvironmentService;
     createOptions(options) {

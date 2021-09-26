@@ -1,4 +1,4 @@
-import { RootPaths, rootPaths } from "#root/paths";
+import { RootPaths, rootPaths } from "@projects/root/paths";
 
 export const blazorAppPaths = rootPaths.apps['blazor-app'];
-export const BlazorAppPaths = RootPaths.Apps.BlazorApp;
+export const BlazorAppPaths = RootPaths.languages.csharp.Apps.BlazorApp;

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackTsconfigPathsWebpackPluginService = class WebpackTsconfigPathsWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
         super(TsconfigPathsWebpackPlugin);

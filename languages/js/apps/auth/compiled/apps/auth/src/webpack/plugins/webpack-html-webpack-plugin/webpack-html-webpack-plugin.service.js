@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = void 0;
-const webpack_html_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const paths_1 = require("#auth/paths");
-const configs_1 = require("#auth/configs");
-const environment_service_1 = require("#auth/src/modules/environment/environment/environment.service");
+const webpack_html_webpack_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const paths_1 = require("@projects/auth/paths");
+const configs_1 = require("@projects/auth/configs");
+const environment_service_1 = require("@projects/auth/src/modules/environment/environment/environment.service");
 let AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class AuthWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends webpack_html_webpack_plugin_service_1.WebpackHtmlWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);

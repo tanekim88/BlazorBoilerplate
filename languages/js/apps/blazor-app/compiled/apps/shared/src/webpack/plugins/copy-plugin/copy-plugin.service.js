@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { sharedPaths } from '#shared/paths';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { sharedPaths } from '@projects/shared/paths';
 let WebpackCopyWebpackPluginService = class WebpackCopyWebpackPluginService extends WebpackPluginBaseService {
     constructor() {
         super(CopyWebpackPlugin);

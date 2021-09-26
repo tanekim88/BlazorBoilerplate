@@ -7,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { LOCAL_CONFIG } from '#shared/configs';
-import { ConfigBase } from '#shared/configs.base';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { LOCAL_CONFIG } from '@projects/shared/configs';
+import { ConfigBase } from '@projects/shared/configs.base';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { MergeService } from '../../utilities/merge/merge/merge.service';
 import path from 'path';
-import { rootPaths } from '#root/paths';
+import { rootPaths } from '@projects/root/paths';
 let PathService = class PathService {
     localConfig;
     mergeService;

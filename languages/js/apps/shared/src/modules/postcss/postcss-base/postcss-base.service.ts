@@ -1,8 +1,8 @@
 import { MergeService } from '../../utilities/modules/merge/merge/merge.service';
 
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { CustomInject } from '#shared/src/functions/process-providers';
-import { EnvironmentService } from '#shared/src/modules/environment/environment/environment.service';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject } from '@projects/shared/src/functions/process-providers';
+import { EnvironmentService } from '@projects/shared/src/modules/environment/environment/environment.service';
 @CustomInjectable()
 export class PostcssBaseService {
     @CustomInject(MergeService)

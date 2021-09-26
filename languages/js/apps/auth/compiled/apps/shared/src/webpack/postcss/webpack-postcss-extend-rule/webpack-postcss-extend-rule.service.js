@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackPostcssExtendRuleService = void 0;
 const webpack_postcss_base_service_1 = require("../webpack-postcss-base/webpack-postcss-base.service");
 const postcss_extend_rule_1 = __importDefault(require("postcss-extend-rule"));
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let WebpackPostcssExtendRuleService = class WebpackPostcssExtendRuleService extends webpack_postcss_base_service_1.WebpackPostcssBaseService {
     constructor() {
         super(postcss_extend_rule_1.default);

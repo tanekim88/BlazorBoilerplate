@@ -24,7 +24,7 @@ import { WebpackHtmlWebpackPluginService } from '../webpack-html-webpack-plugin/
 import { WebpackHtmlWebpackCustomizerPluginService } from '../webpack-html-webpack-customizer-plugin/webpack-html-webpack-customizer-plugin.service';
 import { WebpackProfilingPluginService } from '../webpack-profiling-plugin/webpack-profiling-plugin.service';
 import { WebpackWebpackBundleAnalyzerService } from '../webpack-webpack-bundle-analyzer/webpack-webpack-bundle-analyzer.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { WebpackProvidePluginService } from '../webpack-provide-plugin/webpack-provide-plugin.service';
 import { WebpackSvgSpriteMapWebpackPluginService } from '../webpack-svg-spritemap-webpack-plugin/webpack-svg-spritemap-webpack-plugin.service';
 let WebpackPluginsConfigService = class WebpackPluginsConfigService {

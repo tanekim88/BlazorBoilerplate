@@ -8,11 +8,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var _a;
-import { WebpackHtmlWebpackPluginService } from '#shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { blazorAppPaths } from '#blazor-app/paths';
-import { BlazorAppConfig } from '#blazor-app/configs';
-import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
+import { WebpackHtmlWebpackPluginService } from '@projects/shared/src/webpack/plugins/webpack-html-webpack-plugin/webpack-html-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { blazorAppPaths } from '@projects/blazor-app/paths';
+import { BlazorAppConfig } from '@projects/blazor-app/configs';
+import { BlazorAppEnvironmentService } from '@projects/blazor-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath = class BlazorAppWebpackHtmlWebpackPluginServiceForSrcTemplatesIndexHtmlPath extends WebpackHtmlWebpackPluginService {
     BlazorAppClientEnvironmentService;
     createOptions(options) {

@@ -15,11 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackCleanWebpackPluginService = void 0;
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const clean_webpack_plugin_1 = require("clean-webpack-plugin");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 const path_1 = __importDefault(require("path"));
-const configs_1 = require("#shared/configs");
-// import { configsCollections } from '#shared/configs-collection';
+const configs_1 = require("@projects/shared/configs");
+// import { configsCollections } from '@projects/shared/configs-collection';
 let WebpackCleanWebpackPluginService = class WebpackCleanWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {
     /**
      *

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import PostcssPresetEnv from 'postcss-preset-env';
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackPostcssPresetEnvService = class WebpackPostcssPresetEnvService extends WebpackPostcssBaseService {
     constructor() {
         super(PostcssPresetEnv);

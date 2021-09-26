@@ -1,11 +1,11 @@
 
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 import path from 'path';
 
 import { VitePluginBaseService } from '../../vite-plugin-base/vite-plugin-base.service';
 
-// import { configsCollections } from '#shared/configs-collection';
+// import { configsCollections } from '@projects/shared/configs-collection';
 import { normalizePath, Plugin, UserConfig } from 'vite';
 
 import fastGlob from 'fast-glob';
@@ -15,7 +15,7 @@ import { walk } from 'estree-walker';
 import MagicString from 'magic-string';
 import sanitizeFilename from 'sanitize-filename';
 import fs, { copyFileSync } from 'fs'
-import { rootPaths } from '#root/paths';
+import { rootPaths } from '@projects/root/paths';
 import { basename, dirname } from 'path/posix';
 
 import sass from 'sass';

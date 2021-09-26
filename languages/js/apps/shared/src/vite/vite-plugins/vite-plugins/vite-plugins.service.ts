@@ -1,4 +1,4 @@
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
 import { VitePluginGlobInputService } from '../services/vite-plugin-glob-input/vite-plugin-glob-input.service';
 import { VitePluginHtmlService } from '../services/vite-plugin-html/vite-plugin-html.service';

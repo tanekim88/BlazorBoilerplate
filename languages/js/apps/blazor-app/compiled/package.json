@@ -9,11 +9,11 @@
     "main": "index.js",
     "type": "module",
     "imports": {
-        "#root/*": "./*",
-        "#auth/*": "./apps/auth/*",
-        "#solid-app/*": "./apps/solid-app/*",
-        "#shared/*": "./apps/shared/*",
-        "#Auth/*": "./absolute-root/Apps/Auth/*",
+        "@projects/root/*": "./*",
+        "@projects/auth/*": "./apps/auth/*",
+        "@projects/solid-app/*": "./apps/solid-app/*",
+        "@projects/shared/*": "./apps/shared/*",
+        "@projects/auth/*": "./absolute-root/Apps/Auth/*",
         "#BlazorApp/*": "./absolute-root/Apps/BlazorApp/*"
     },
     "scripts": {

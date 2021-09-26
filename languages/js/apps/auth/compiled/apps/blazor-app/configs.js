@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.blazorAppConfig = exports.BlazorAppConfig = void 0;
-const configs_base_1 = require("#shared/configs.base");
+const configs_base_1 = require("@projects/shared/configs.base");
 const paths_1 = require("./paths");
 class BlazorAppConfig extends configs_base_1.ConfigBase {
     constructor() {

@@ -16,9 +16,9 @@ exports.EnvironmentService = void 0;
 const path_1 = __importDefault(require("path"));
 const configs_1 = require("../../../../configs");
 const merge_service_1 = require("../../utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 const configs_base_1 = require("../../../../configs.base");
-const paths_1 = require("#root/paths");
+const paths_1 = require("@projects/root/paths");
 let EnvironmentService = class EnvironmentService {
     onModuleInit() {
         const relPath = path_1.default.relative(paths_1.rootPaths.toAbsolutePath(), this.localConfig.rootDir);

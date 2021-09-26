@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthWebpackTsconfigPathsWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const webpack_tsconfig_paths_webpack_plugin_service_1 = require("#shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const webpack_tsconfig_paths_webpack_plugin_service_1 = require("@projects/shared/src/webpack/plugins/webpack-tsconfig-paths-webpack-plugin/webpack-tsconfig-paths-webpack-plugin.service");
 let AuthWebpackTsconfigPathsWebpackPluginService = class AuthWebpackTsconfigPathsWebpackPluginService extends webpack_tsconfig_paths_webpack_plugin_service_1.WebpackTsconfigPathsWebpackPluginService {
     createOptions(options) {
         return this.mergeService.mergeOptions(super.createOptions(), {}, options);

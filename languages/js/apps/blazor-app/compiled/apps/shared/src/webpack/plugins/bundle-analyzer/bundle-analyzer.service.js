@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { WebpackPluginBaseService } from '../webpack-plugin-base/webpack-plugin-base.service';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackWebpackBundleAnalyzerService = class WebpackWebpackBundleAnalyzerService extends WebpackPluginBaseService {
     constructor() {
         super(BundleAnalyzerPlugin);

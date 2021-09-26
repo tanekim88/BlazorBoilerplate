@@ -14,8 +14,8 @@ const webpack_closure_plugin_service_1 = require("../webpack-closure-plugin/webp
 const webpack_css_minimizer_plugin_service_1 = require("../webpack-css-minimizer-plugin/webpack-css-minimizer-plugin.service");
 const webpack_optimize_css_assets_plugin_service_1 = require("../webpack-optimize-css-assets-plugin/webpack-optimize-css-assets-plugin.service");
 const webpack_terser_plugin_service_1 = require("../webpack-terser-plugin/webpack-terser-plugin.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
-const process_webpack_providers_2 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
+const process_webpack_providers_2 = require("@projects/shared/src/functions/process-webpack-providers");
 let WebpackMinimizersService = class WebpackMinimizersService {
     createMinimizers() {
         const minimizers = [];

@@ -1,4 +1,4 @@
-import { ConfigBase } from '#shared/configs.base';
+import { ConfigBase } from '@projects/shared/configs.base';
 import { blazorAppPaths } from './paths';
 export class BlazorAppConfig extends ConfigBase {
     rootDir = blazorAppPaths.toAbsolutePath();

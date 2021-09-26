@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var _a;
 import path from 'path';
-import { WebpackCopyWebpackPluginService } from '#shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { blazorAppPaths } from '#blazor-app/paths';
-import { BlazorAppEnvironmentService } from '#blazor-app/src/modules/environment/environment/environment.service';
+import { WebpackCopyWebpackPluginService } from '@projects/shared/src/webpack/plugins/webpack-copy-webpack-plugin/webpack-copy-webpack-plugin.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { blazorAppPaths } from '@projects/blazor-app/paths';
+import { BlazorAppEnvironmentService } from '@projects/blazor-app/src/modules/environment/environment/environment.service';
 let BlazorAppWebpackCopyWebpackPluginService = class BlazorAppWebpackCopyWebpackPluginService extends WebpackCopyWebpackPluginService {
     BlazorAppClientEnvironmentService;
     createOptions(options) {

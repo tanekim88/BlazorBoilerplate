@@ -1,4 +1,4 @@
-import { CustomModule } from "#shared/src/functions/process-providers";
+import { CustomModule } from "@projects/shared/src/functions/process-providers";
 import { BlazorAppVitePluginsService } from "./vite-plugins.service";
 
 

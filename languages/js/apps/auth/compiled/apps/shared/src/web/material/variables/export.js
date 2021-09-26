@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.materialVariables = void 0;
 const sass_export_1 = require("sass-export");
-const paths_1 = require("#shared/paths");
+const paths_1 = require("@projects/shared/paths");
 const scss_parser_1 = __importDefault(require("scss-parser"));
 const node_sass_1 = __importDefault(require("node-sass"));
 const tinycolor2_1 = __importDefault(require("tinycolor2"));

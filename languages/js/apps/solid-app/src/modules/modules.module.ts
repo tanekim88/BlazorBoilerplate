@@ -1,5 +1,5 @@
-import { CustomModule } from '#shared/src/functions/process-providers';
-import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
+import { CustomModule } from '@projects/shared/src/functions/process-providers';
+import { PostcssModule } from '@projects/shared/src/modules/postcss/postcss.module';
 import { SolidAppEnvironmentModule } from './environment/environment.module';
 
 import { SolidAppUtilitiesModule } from './utilities/utilities.module';

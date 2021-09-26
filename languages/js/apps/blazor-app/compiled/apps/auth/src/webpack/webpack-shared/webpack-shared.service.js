@@ -7,16 +7,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInjectable } from '#shared/src/functions/process-providers';
-import { CustomInject } from '#shared/src/functions/process-providers';
-import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginService, } from '#shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
-import { WebpackSharedService } from '#shared/src/webpack/webpack-shared/webpack-shared.service';
-import { AuthPaths, authPaths } from '#auth/paths';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { CustomInject } from '@projects/shared/src/functions/process-providers';
+import { WebpackWatchEntriesPlugin, WebpackWatchEntriesPluginService, } from '@projects/shared/src/webpack/plugins/webpack-watch-entries-plugin/webpack-watch-entries-plugin.service';
+import { WebpackSharedService } from '@projects/shared/src/webpack/webpack-shared/webpack-shared.service';
+import { AuthPaths, authPaths } from '@projects/auth/paths';
 import path from 'path';
 import { AuthEnvironmentService } from '../../modules/environment/environment/environment.service';
 import { AuthWebpackRulesService } from '../rules/webpack-rules/webpack-rules.service';
 import { AuthWebpackPluginsService } from '../plugins/webpack-plugins/webpack-plugins.service';
-import { sharedPaths } from '#shared/paths';
+import { sharedPaths } from '@projects/shared/paths';
 let AuthWebpackSharedService = class AuthWebpackSharedService extends WebpackSharedService {
     authEnvironmentService;
     authWebpackRulesService;

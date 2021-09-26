@@ -7,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { WebpackMiniCssExtractPluginService, WebpackMiniCssExtractPluginConfigService, } from '#shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
+import { WebpackMiniCssExtractPluginService, WebpackMiniCssExtractPluginConfigService, } from '@projects/shared/src/webpack/plugins/webpack-mini-css-extract-plugin/webpack-mini-css-extract-plugin.service';
 let AuthWebpackMiniCssExtractPluginConfigService = class AuthWebpackMiniCssExtractPluginConfigService extends WebpackMiniCssExtractPluginConfigService {
     /**
      *

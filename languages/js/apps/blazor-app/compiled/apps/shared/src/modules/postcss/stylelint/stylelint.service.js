@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { PostcssBaseService } from '../../postcss-base/postcss-base.service';
 const Stylelint = require('stylelint');
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let StylelintService = class StylelintService extends PostcssBaseService {
     constructor() {
         super(Stylelint);

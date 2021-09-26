@@ -1,4 +1,4 @@
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
 import { MergeService } from '../../../modules/utilities/modules/merge/merge/merge.service';
 import {Plugin} from 'vite';

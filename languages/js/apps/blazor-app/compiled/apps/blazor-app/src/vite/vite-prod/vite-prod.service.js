@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { ViteProdService } from '#shared/src/vite/vite-prod/vite-prod.service';
+import { CustomInject, CustomInjectable } from '@projects/shared/src/functions/process-providers';
+import { ViteProdService } from '@projects/shared/src/vite/vite-prod/vite-prod.service';
 import { BlazorAppViteSharedService } from '../vite-shared/vite-shared.service';
 let BlazorAppViteProdService = class BlazorAppViteProdService extends ViteProdService {
     blazorAppClientViteSharedService;

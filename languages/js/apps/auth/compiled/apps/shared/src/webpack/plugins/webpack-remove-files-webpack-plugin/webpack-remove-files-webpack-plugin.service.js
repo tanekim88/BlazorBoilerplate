@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WebpackRemoveFilesWebpackPluginService = exports.WebpackPreRemoveFilesWebpackPluginService = void 0;
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 const webpack_plugin_base_service_1 = require("../webpack-plugin-base/webpack-plugin-base.service");
 const RemoveFilesWebpackPlugin = require('remove-files-webpack-plugin');
 let WebpackPreRemoveFilesWebpackPluginService = class WebpackPreRemoveFilesWebpackPluginService extends webpack_plugin_base_service_1.WebpackPluginBaseService {

@@ -7,8 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthMergeService = void 0;
-const merge_service_1 = require("#shared/src/modules/utilities/merge/merge/merge.service");
-const process_webpack_providers_1 = require("#shared/src/functions/process-webpack-providers");
+const merge_service_1 = require("@projects/shared/src/modules/utilities/merge/merge/merge.service");
+const process_webpack_providers_1 = require("@projects/shared/src/functions/process-webpack-providers");
 let AuthMergeService = class AuthMergeService extends merge_service_1.MergeService {
 };
 AuthMergeService = __decorate([

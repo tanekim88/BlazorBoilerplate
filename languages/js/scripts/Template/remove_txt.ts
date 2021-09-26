@@ -1,8 +1,8 @@
-import { sharedPaths } from '#shared/paths';
+import { sharedPaths } from '@projects/shared/paths';
 import fs from 'fs';
 import glob from 'glob';
 import path from 'path';
-import {rootPaths}  from '#root/paths';
+import {rootPaths}  from '@projects/root/paths';
 
 const dirPath = rootPaths.toAbsolutePath();
 

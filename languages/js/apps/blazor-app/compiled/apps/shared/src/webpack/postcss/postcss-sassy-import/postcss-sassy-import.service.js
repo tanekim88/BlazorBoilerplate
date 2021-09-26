@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import PostcssSassyImport from 'postcss-sassy-import';
 import { WebpackPostcssBaseService } from '../webpack-postcss-base/webpack-postcss-base.service';
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInjectable } from '@projects/shared/src/functions/process-providers';
 let WebpackPostcssSassyImportService = class WebpackPostcssSassyImportService extends WebpackPostcssBaseService {
     constructor() {
         super(PostcssSassyImport);
