@@ -182,29 +182,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Infrastructure"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{7152E5A0-263C-4F67-8F33-8427E14EBD08}"
-	ProjectSection(SolutionItems) = preProject
-		tye.yaml = tye.yaml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{40F2FB21-89FE-4CEC-BF07-6C2A7D865218}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{7C2D7D89-9540-4B88-A1F3-F1EEB2FEEDBF}"
-	ProjectSection(SolutionItems) = preProject
-		dapr\components\email.yaml = dapr\components\email.yaml
-		dapr\components\oauth2-client-credential.yaml = dapr\components\oauth2-client-credential.yaml
-		dapr\components\oauth2.yaml = dapr\components\oauth2.yaml
-		dapr\components\pubsub.yaml = dapr\components\pubsub.yaml
-		dapr\components\secretstore.yaml = dapr\components\secretstore.yaml
-		dapr\components\statestore.yaml = dapr\components\statestore.yaml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configurations", "configurations", "{0138F662-782D-43F1-85BA-4A147C3E2237}"
-	ProjectSection(SolutionItems) = preProject
-		dapr\configurations\config.yaml = dapr\configurations\config.yaml
-		dapr\configurations\pipeline.yaml = dapr\configurations\pipeline.yaml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShopBoundedContext", "ShopBoundedContext", "{99AFFF50-6DBA-4719-95E3-77C6A11C67C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{98E2923E-CF14-474B-B492-D1464D95FF7F}"
@@ -907,9 +884,6 @@ Global
 		{635D5947-263B-4582-8164-741C60FD1370} = {E86C3416-C5A6-4160-A7CF-9BAE60735B2E}
 		{684A4C6E-6DAC-4734-979F-C01E9F90ABA9} = {E86C3416-C5A6-4160-A7CF-9BAE60735B2E}
 		{87C19911-3A73-4AB4-9FF2-FFB6DBDA9AA1} = {E86C3416-C5A6-4160-A7CF-9BAE60735B2E}
-		{40F2FB21-89FE-4CEC-BF07-6C2A7D865218} = {7152E5A0-263C-4F67-8F33-8427E14EBD08}
-		{7C2D7D89-9540-4B88-A1F3-F1EEB2FEEDBF} = {40F2FB21-89FE-4CEC-BF07-6C2A7D865218}
-		{0138F662-782D-43F1-85BA-4A147C3E2237} = {40F2FB21-89FE-4CEC-BF07-6C2A7D865218}
 		{99AFFF50-6DBA-4719-95E3-77C6A11C67C1} = {C93EB5C9-B0CB-462E-80DF-B4EBA90FF8C7}
 		{98E2923E-CF14-474B-B492-D1464D95FF7F} = {99AFFF50-6DBA-4719-95E3-77C6A11C67C1}
 		{91CF6AD0-70DD-4FD5-B68C-8CECB64A5572} = {99AFFF50-6DBA-4719-95E3-77C6A11C67C1}

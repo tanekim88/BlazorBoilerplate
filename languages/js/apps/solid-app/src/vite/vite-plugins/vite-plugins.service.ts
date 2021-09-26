@@ -16,11 +16,6 @@ export class SolidAppVitePluginsService extends VitePluginsService {
     createManyPlugins() {
 
         return [
-            this.vitePluginHtmlService.createPlugin({
-                externals: [
-
-                ]
-            }),
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {

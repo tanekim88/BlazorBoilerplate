@@ -7,7 +7,7 @@
 name: app
 extensions:
 - name: dapr
-  components-path: tye/dapr/components    
+  components-path: Tye/dapr/components    
 
 services:
 - name: BlazorApp

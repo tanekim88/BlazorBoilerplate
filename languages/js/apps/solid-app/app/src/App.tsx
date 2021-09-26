@@ -3,11 +3,11 @@ import { atoms } from "./sprinkles.css";
 import { vars } from "./vars.css";
 
 const App: Component = (props: any) => {
- return (
+  return (
     <div class={atoms({
-
-    })}>
       
+    })}>
+
     </div>
   );
 };

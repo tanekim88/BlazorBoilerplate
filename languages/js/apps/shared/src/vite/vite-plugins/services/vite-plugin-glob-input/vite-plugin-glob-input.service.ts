@@ -6,17 +6,11 @@ import path from 'path';
 import { VitePluginBaseService } from '../../vite-plugin-base/vite-plugin-base.service';
 
 // import { configsCollections } from '#shared/configs-collection';
-import { normalizePath, Plugin, UserConfig } from 'vite';
+import { normalizePath } from 'vite';
 
 import fastGlob from 'fast-glob';
-import { createFilter } from '@rollup/pluginutils';
-import { Node } from 'estree';
-import { walk } from 'estree-walker';
-import MagicString from 'magic-string';
-import sanitizeFilename from 'sanitize-filename';
-import fs, { copyFileSync } from 'fs'
-import { rootPaths } from '#root/paths';
-import { basename, dirname } from 'path/posix';
+import fs from 'fs'
+import { dirname } from 'path/posix';
 
 import sass from 'sass';
 import chokidar from 'chokidar';
