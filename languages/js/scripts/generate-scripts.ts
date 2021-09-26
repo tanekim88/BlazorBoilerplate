@@ -63,7 +63,7 @@ const commandObjs = [
         name: 'docker:nuke',
         command: [
             'npm run docker:rm-f-all-containers',
-            'docker system prune'
+            'docker system prune -af --volumes'
         ],
         // command: "docker volume ls -qf dangling=true | xargs -r docker volume rm",
         includes: [rootProjName, ...appDirNames],
@@ -73,7 +73,7 @@ const commandObjs = [
         name: 'docker:win:nuke',
         command: [
             'npm run docker:win:rm-f-all-containers',
-            'docker system prune'],
+            'docker system prune -af --volumes'],
         includes: [rootProjName, ...appDirNames],
         static: true
     },
@@ -81,7 +81,7 @@ const commandObjs = [
         name: 'docker:win-ps:nuke',
         command: [
             'npm run docker:win-ps:rm-f-all-containers',
-            'docker system prune'],
+            'docker system prune -af --volumes'],
         includes: [rootProjName, ...appDirNames],
         static: true
     },
