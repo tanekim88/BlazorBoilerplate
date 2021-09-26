@@ -20,6 +20,7 @@ import { basename, dirname } from 'path/posix';
 
 import sass from 'sass';
 import chokidar from 'chokidar';
+import _ from 'lodash';
 let sassWatcher: chokidar.FSWatcher;
 let copyWatcher: chokidar.FSWatcher;
 
@@ -107,10 +108,12 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           input.include = [fromPath];
         }
 
+        const [dirs, files] = _.partition(input.include, e => fs.lstatSync(e).isDirectory());
+
         const entries = fastGlob
-          .sync(input.include, Object.assign({}, input.globOptions, {
+          .sync(files, Object.assign({}, input.globOptions, {
             stats: false,
-          }));
+          })).concat(dirs);;
 
         entries.forEach(absFrom => {
           let relTo;
@@ -168,8 +171,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
         const root = config.root;
         const outDir = config.build.outDir;
-
-
       },
       async options(conf) {
         console.log('### options')
@@ -206,17 +207,16 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           copyWatcher = chokidar.watch(filesToCopy, {});
           copyWatcher
             .on('change', fromPath => {
+              fromPath = normalizePath(fromPath);
+              console.log(`${fromPath} changed`)
               const toPath = fromToForCopy[fromPath];
               if (toPath) {
                 fs.copyFileSync(fromPath, toPath)
               }
             })
-
         }
 
         if (!sassWatcher) {
-
-
           const fromToForSass = {};
           const dirsForSass = {};
           const filesToSass = processInputs(options.sass, root, (input, absFrom, relTo) => {
@@ -249,18 +249,22 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           sassWatcher = chokidar.watch(filesToSass, {});
           sassWatcher
             .on('change', fromPath => {
+              fromPath = normalizePath(fromPath);
+              console.log(`${fromPath} changed`)
               const extName = path.extname(fromPath);
 
               if (extName === '.scss' || extName === '.sass') {
                 let toPath = fromToForSass[fromPath];
                 if (!toPath) {
-                  toPath = replaceExt(toPath, '.css');
+                  toPath = replaceExt(fromPath, '.css');
                 }
-                sass.renderSync({
+                const result = sass.renderSync({
                   file: fromPath,
-                  sourceMap: true,
+                  sourceMap: false,
                   outFile: toPath
-                })
+                });
+
+                fs.writeFileSync(toPath, result.css)
               }
             });
         }
