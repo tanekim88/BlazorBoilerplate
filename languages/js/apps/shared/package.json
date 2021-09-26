@@ -13,7 +13,12 @@
         "#root/*": "@projects/root/*"
     },
     "scripts": {
-        "setup": "node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts",
+        "docker:rm-f-all-containers": "docker rm -f $(docker ps -a -q)",
+        "docker:win:rm-f-all-containers": "FOR /f \"tokens=* \" %i IN ('docker ps -aq') DO docker rm -f %i ",
+        "docker:win-ps:rm-f-all-containers": "docker ps -qa --no-trunc | ForEach-Object -Process {docker rm -f $_}",
+        "docker:nuke": "npm run docker:rm-f-all-containers && docker system prune",
+        "docker:win:nuke": "npm run docker:win:rm-f-all-containers && docker system prune",
+        "docker:win-ps:nuke": "npm run docker:win-ps:rm-f-all-containers && docker system prune",
         "prebuild": "rimraf dist",
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -39,8 +44,7 @@
         "uninst": "npm uninstall",
         "init": "npm install -D concurrently npm-run-all",
         "nuke": "rimraf node_modules",
-        "reset": "npm run nuke && npm run init && npm run inst",
-        "generate:paths": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-paths.ts"
+        "reset": "npm run nuke && npm run init && npm run inst"
     },
     "keywords": [],
     "author": "",
@@ -88,6 +92,7 @@
         "normalize-path": "^3.0.0",
         "path-browserify": "^1.0.1",
         "path-to-regexp": "^6.2.0",
+        "powershell": "^2.3.2",
         "react": "^17.0.2",
         "reflect-metadata": "^0.1.13",
         "rxjs": "~7.3.0",

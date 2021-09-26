@@ -1,5 +1,0 @@
-../**/node_modules
-../wwwroot
-.dockerignore
-Dockerfile
-Dockerfile.prod

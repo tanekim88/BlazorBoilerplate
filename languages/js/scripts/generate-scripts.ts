@@ -37,10 +37,66 @@ const childs = fs.readdirSync(appsDir).map(appDir => {
 const appDirNames = childs.map((x) => x.folderName);
 
 const commandObjs = [
+    //////////////////
+
+    {
+        name: 'docker:rm-f-all-containers',
+        command: "docker rm -f $(docker ps -a -q)",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win:rm-f-all-containers',
+        command: "FOR /f \"tokens=* \" %i IN ('docker ps -aq') DO docker rm -f %i ",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win-ps:rm-f-all-containers',
+        command: "docker ps -qa --no-trunc | ForEach-Object -Process {docker rm -f $_}",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    /////////////
+
+    {
+        name: 'docker:nuke',
+        command: [
+            'npm run docker:rm-f-all-containers',
+            'docker system prune'
+        ],
+        // command: "docker volume ls -qf dangling=true | xargs -r docker volume rm",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win:nuke',
+        command: [
+            'npm run docker:win:rm-f-all-containers',
+            'docker system prune'],
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win-ps:nuke',
+        command: [
+            'npm run docker:win-ps:rm-f-all-containers',
+            'docker system prune'],
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+
+
+    ////////////////////
+    {
+        name: 'generate:paths',
+        command: 'node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-paths.ts',
+        includes: [rootProjName],
+    },
     {
         name: 'setup',
         command: 'node  --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-scripts.ts',
-        includes: [''],
+        includes: [rootProjName],
     },
     {
         name: 'prebuild',
@@ -153,70 +209,69 @@ const commandObjs = [
     {
         name: 'inst',
         command: 'npm install',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
     {
         name: 'inst:force',
         command: 'npm install --force',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
     {
         name: 'uninst',
         command: 'npm uninstall',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
 
     {
         name: 'init',
         command: 'npm install -D concurrently npm-run-all',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
     {
         name: 'nuke',
         command: 'rimraf node_modules',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
     {
         name: 'reset',
         command: 'npm run nuke && npm run init && npm run inst',
-        includes: ['', ...appDirNames],
+        includes: [rootProjName, ...appDirNames],
     },
-    {
-        name: 'generate:paths',
-        command: 'node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/generate-paths.ts',
-        includes: [''],
-    },
+
 ];
 
 commandObjs.forEach((commandObj) => {
     let scriptForAll = 'npm-run-all --parallel ';
 
-    if (commandObj.includes.indexOf('') !== -1) {
+    if (commandObj.includes.includes(rootProjName)) {
         scriptForAll += '"{commandName} -- {@}" '.replace('{commandName}', `${commandObj.name}`);
+    }
+
+    if (Array.isArray(commandObj.command)) {
+        commandObj.command = commandObj.command.join(' && ');
     }
 
     final[`${commandObj.name}`] = commandObj.command;
 
-    childs.forEach((target) => {
-        final[`${commandObj.name}:${target.folderName}`] = `cd ${target.relativeFolderPath ?? target.folderName
-            } && npm run {commandName}`.replace('{commandName}', commandObj.name);
+    if (!commandObj.static) {
 
-        if (commandObj.includes.indexOf(target.folderName) !== -1) {
-            scriptForAll += '"{commandName} -- {@}" '.replace(
-                '{commandName}',
-                `${commandObj.name}:${target.folderName}`,
-            );
-        }
-    });
+        childs.forEach((child) => {
+            if (commandObj.includes.indexOf(child.folderName) !== -1) {
+                final[`${commandObj.name}:${child.folderName}`] = `cd ${child.relativeFolderPath ?? child.folderName
+                    } && npm run {commandName}`.replace('{commandName}', commandObj.name);
 
-    scriptForAll += '--';
-    final[`${commandObj.name}:all`] = scriptForAll;
+                scriptForAll += '"{commandName} -- {@}" '.replace(
+                    '{commandName}',
+                    `${commandObj.name}:${child.folderName}`,
+                );
+            }
+        });
+
+        scriptForAll += '--';
+        final[`${commandObj.name}:all`] = scriptForAll;
+    }
 });
 
-const childScript = commandObjs.reduce((acc, curr) => {
-    acc[curr.name] = curr.command;
-    return acc;
-}, {});
 
 packageJson.scripts = final as any;
 const absRootDir = path.resolve(rootConfig.rootDir, '../..');
@@ -291,6 +346,20 @@ childs.forEach(async (child) => {
     const folderName = child.folderName;
     const childPackageJson = child.packageJson;
     childPackageJson.name = folderName;
+
+    const childScript = commandObjs.reduce((acc, curr) => {
+        if (curr.includes.includes(child.folderName)) {
+            if (Array.isArray(curr.command)) {
+
+                curr.command = curr.command.join(' && ');
+            }
+
+            acc[curr.name] = curr.command;
+        }
+        return acc;
+    }, {});
+
+
     childPackageJson.scripts = childScript as any;
     childPackageJson.dependencies = Object.assign({}, packageJson.dependencies);
     childPackageJson.devDependencies = packageJson.devDependencies as any;
