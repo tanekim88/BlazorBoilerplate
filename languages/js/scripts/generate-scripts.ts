@@ -273,10 +273,11 @@ function processTsToJson(dir) {
                         include.push(`./${child.relativeFolderPath}/${f}`);
                     });
                     paths[`#${child.folderName}/*`] = [`./${child.relativeFolderPath}/*`]
-
                 })
-                json.include = include;
-                json.compilerOptions.paths = paths;
+
+                json.include = [...new Set(json.include.concat(include))];
+                json.baseUrl = './';
+                Object.assign(json.compilerOptions.paths, paths);
             }
             const content = JSON.stringify(json, null, 4);
             fs.writeFileSync(absDest, content, 'utf8');

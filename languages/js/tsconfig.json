@@ -28,40 +28,42 @@
         ],
         "baseUrl": "./",
         "paths": {
-            "#shared/*": [
-                "./apps/shared/*"
+            "#root/*": [
+                "*"
             ],
             "#auth/*": [
                 "./apps/auth/*"
             ],
-            "#solid-app/*": [
-                "./apps/solid-app/*"
-            ],
             "#blazor-app/*": [
                 "./apps/blazor-app/*"
             ],
-            "#Auth/*": [
-                "../Apps/Auth/Server/*"
+            "#shared/*": [
+                "./apps/shared/*"
             ],
-            "#BlazorApp/*": [
-                "../Apps/BlazorApp/Client/*"
-            ],
-            "#root/*": [
-                "*"
+            "#solid-app/*": [
+                "./apps/solid-app/*"
             ]
         }
     },
     "include": [
         "**/*",
-        ".eslintrc.ts",
-        ".prettierrc.ts",
-        ".stylelintrc.ts",
-        "./apps/shared/.eslintrc.ts",
-        "./apps/shared/.prettierrc.ts",
-        "./apps/shared/.stylelintrc.ts",
+        "./tsconfig.ts",
+        "./.eslintrc.ts",
+        "./.prettierrc.ts",
+        "./.stylelintrc.ts",
+        "./apps/auth/tsconfig.ts",
         "./apps/auth/.eslintrc.ts",
         "./apps/auth/.prettierrc.ts",
         "./apps/auth/.stylelintrc.ts",
+        "./apps/blazor-app/tsconfig.ts",
+        "./apps/blazor-app/.eslintrc.ts",
+        "./apps/blazor-app/.prettierrc.ts",
+        "./apps/blazor-app/.stylelintrc.ts",
+        "./apps/shared/tsconfig.ts",
+        "./apps/shared/.eslintrc.ts",
+        "./apps/shared/.prettierrc.ts",
+        "./apps/shared/.stylelintrc.ts",
+        "./apps/solid-app/tsconfig.ts",
         "./apps/solid-app/.eslintrc.ts",
         "./apps/solid-app/.prettierrc.ts",
         "./apps/solid-app/.stylelintrc.ts"
@@ -71,5 +73,6 @@
         "node_modules/*",
         "**/compiled/*",
         "**/styles/*"
-    ]
+    ],
+    "baseUrl": "./"
 }
