@@ -8,7 +8,11 @@ import symlinkDir from 'symlink-dir';
 import { rootConfig } from '../configs';
 import normalizePath from 'normalize-path';
 import { renameExtension } from '#shared/src/functions/rename-extension';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
+const filename = fileURLToPath(import.meta.url);
+const scriptsDir = dirname(filename);
 const final = {
     lint: 'eslint "*/**/*.{js,ts,tsx}" --quiet --fix',
 };
@@ -245,13 +249,17 @@ Object.keys(packageJson.dependencies).forEach(key => {
 
 const filesToJson = ['tsconfig.ts', '.eslintrc.ts', '.prettierrc.ts', '.stylelintrc.ts']
 
-function processTsToJson(dir){
+function processTsToJson(dir) {
     filesToJson.forEach(fileToJson => {
-        const absFilePath = path.join(dir, fileToJson);
-        const dest = renameExtension(absFilePath, 'json');
-        import(absFilePath).then(json => {
+        const rel = path.relative(scriptsDir, dir);
+        const relFrom = path.join(rel, fileToJson);
+        const relPathWithoutExtension = renameExtension(relFrom, '');
+        const absDest = renameExtension(path.join(dir, fileToJson), '.json');
+        const from = normalizePath(relPathWithoutExtension);
+
+        import(`./${from}`).then(json => {
             const content = JSON.stringify(json);
-            fs.writeFileSync(dest, content, 'utf8');
+            fs.writeFileSync(absDest, content, 'utf8');
         })
     });
 }
