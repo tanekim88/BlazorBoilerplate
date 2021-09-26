@@ -21,6 +21,7 @@ import { basename, dirname } from 'path/posix';
 import sass from 'sass';
 import chokidar from 'chokidar';
 import _ from 'lodash';
+import { renameExtension } from '#shared/src/functions/rename-extension';
 let sassWatcher: chokidar.FSWatcher;
 let copyWatcher: chokidar.FSWatcher;
 
@@ -256,7 +257,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               if (extName === '.scss' || extName === '.sass') {
                 let toPath = fromToForSass[fromPath];
                 if (!toPath) {
-                  toPath = replaceExt(fromPath, '.css');
+                  toPath = renameExtension(fromPath, '.css');
                 }
                 const result = sass.renderSync({
                   file: fromPath,
@@ -528,31 +529,3 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
   }
 }
 
-
-
-function replaceExt(npath, ext) {
-  if (typeof npath !== 'string') {
-    return npath;
-  }
-
-  if (npath.length === 0) {
-    return npath;
-  }
-
-  var nFileName = path.basename(npath, path.extname(npath)) + ext;
-  var nFilepath = path.join(path.dirname(npath), nFileName);
-
-  // Because `path.join` removes the head './' from the given path.
-  // This removal can cause a problem when passing the result to `require` or
-  // `import`.
-  if (startsWithSingleDot(npath)) {
-    return '.' + path.sep + nFilepath;
-  }
-
-  return nFilepath;
-}
-
-function startsWithSingleDot(fpath) {
-  var first2chars = fpath.slice(0, 2);
-  return first2chars === '.' + path.sep || first2chars === './';
-}

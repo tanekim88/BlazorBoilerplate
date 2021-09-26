@@ -16765,6 +16765,11 @@
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
+,
+                            readonly "rename-extension.ts": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
 
                         }
 ,
@@ -16881,21 +16886,6 @@
                                         }
 ,
                                         readonly "vite-plugin-glob-input.service.ts": {
-                                            toAbsolutePath:()=> string,
-                                            toRelativePath:(relativeTo?:string)=> string
-                                        }
-
-                                    }
-,
-                                    readonly "vite-plugin-html": {
-                                        toAbsolutePath:()=> string,
-                                        toRelativePath:(relativeTo?:string)=> string,
-                                        readonly "vite-plugin-html.service.spec.ts": {
-                                            toAbsolutePath:()=> string,
-                                            toRelativePath:(relativeTo?:string)=> string
-                                        }
-,
-                                        readonly "vite-plugin-html.service.ts": {
                                             toAbsolutePath:()=> string,
                                             toRelativePath:(relativeTo?:string)=> string
                                         }
@@ -33024,6 +33014,10 @@ export const RootPaths:RootPathsType = createProxy( {
                             "process-providers.ts": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\process-providers.ts",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\process-providers.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\process-providers.ts") }
+                            },
+                            "rename-extension.ts": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\rename-extension.ts",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\rename-extension.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\functions\\rename-extension.ts") }
                             }
                         },
                         "icon-512.png": {
@@ -33121,18 +33115,6 @@ export const RootPaths:RootPathsType = createProxy( {
                                         "vite-plugin-glob-input.service.ts": {
                                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts",
                                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-glob-input\\vite-plugin-glob-input.service.ts") }
-                                        }
-                                    },
-                                    "vite-plugin-html": {
-                                        toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html",
-                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html") },
-                                        "vite-plugin-html.service.spec.ts": {
-                                            toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts",
-                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.spec.ts") }
-                                        },
-                                        "vite-plugin-html.service.ts": {
-                                            toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts",
-                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\vite\\vite-plugins\\services\\vite-plugin-html\\vite-plugin-html.service.ts") }
                                         }
                                     }
                                 },

@@ -7,6 +7,8 @@ import './generate-paths';
 import symlinkDir from 'symlink-dir';
 import { rootConfig } from '../configs';
 import normalizePath from 'normalize-path';
+import { renameExtension } from '#shared/src/functions/rename-extension';
+
 const final = {
     lint: 'eslint "*/**/*.{js,ts,tsx}" --quiet --fix',
 };
@@ -241,6 +243,19 @@ Object.keys(packageJson.dependencies).forEach(key => {
 });
 
 
+const filesToJson = ['tsconfig.ts', '.eslintrc.ts', '.prettierrc.ts', '.stylelintrc.ts']
+
+function processTsToJson(dir){
+    filesToJson.forEach(fileToJson => {
+        const absFilePath = path.join(dir, fileToJson);
+        const dest = renameExtension(absFilePath, 'json');
+        import(absFilePath).then(json => {
+            const content = JSON.stringify(json);
+            fs.writeFileSync(dest, content, 'utf8');
+        })
+    });
+}
+processTsToJson(rootDir);
 
 childs.forEach(async (child) => {
     const childFolderPath = path.resolve(rootDir, `${child.relativeFolderPath}`);
@@ -263,8 +278,9 @@ childs.forEach(async (child) => {
     childPackageJson.dependencies[`@projects/${rootProjName}`] = normalizePath(relToRoot);
 
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
-    await symlinkDir(childFolderPath, path.resolve(node_modules_ProjectsDir, folderName));
+
     await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));
+    processTsToJson(child.absoluteFolderPath);
 });
 
 
