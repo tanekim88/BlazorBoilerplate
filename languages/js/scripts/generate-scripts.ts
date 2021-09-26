@@ -5,21 +5,23 @@ import fs from 'fs';
 import packageJson from '../package.json';
 
 import path from 'path';
-
+import './generate-paths'; 
+import { normalizePath } from '@projects/shared/node_modules/vite/dist/node';
 import symlinkDir from 'symlink-dir';
 import { rootConfig } from '../configs';
-import changeCase from 'change-case';
 
+const rootProjName = 'root'
 const appsDir = path.resolve(rootConfig.rootDir, 'apps');
 const childs = fs.readdirSync(appsDir).map(appDir => {
     const absDir = path.resolve(appsDir, appDir);
     const packageJsonPath = path.resolve(absDir, 'package.json');
     const packageJsonStr = fs.readFileSync(packageJsonPath, 'utf-8');
     const packageJson = JSON.parse(packageJsonStr);
+    const rel = normalizePath(path.relative(rootDir, appsDir));
     return {
         folderName: appDir,
         packageJson: packageJson,
-        relativeFolderPath: `./apps/${appDir}`,
+        relativeFolderPath: `./${rel}/${appDir}`,
         absoluteFolderPath: path.join(appsDir, appDir)
     }
 });
@@ -217,7 +219,7 @@ const node_modules_ProjectsDir = path.join(rootDir, 'node_modules', '@projects')
 const languages = fs.readdirSync(languagesDir);
 fs.mkdirSync(node_modules_ProjectsDir, { recursive: true });
 
-await symlinkDir(rootDir, path.resolve(node_modules_ProjectsDir, 'root'));
+await symlinkDir(rootDir, path.resolve(node_modules_ProjectsDir, rootProjName));
 
 Object.keys(packageJson.dependencies).forEach(key => {
     if (key.startsWith('@projects/')) {
@@ -232,7 +234,7 @@ const rootPackageDependencies = Object.assign({}, packageJson.dependencies,
         acc[`@projects/${curr.folderName}`] = (`./${normalizePath(rel)}`);
         return acc;
     }, {}));
-rootPackageDependencies['@projects/root'] = '.';
+rootPackageDependencies[`@projects/${rootProjName}`] = '.';
 
 
 childs.forEach(async (child) => {
@@ -249,15 +251,13 @@ childs.forEach(async (child) => {
             acc[`@projects/${curr.folderName}`] = normalizePath(`${rel}/${curr.folderName}`);
             return acc;
         }, {}));
-    deps['@projects/root'] = path.relative(child.absoluteFolderPath, rootDir);
+    deps[`@projects/${rootProjName}`] = path.relative(child.absoluteFolderPath, rootDir);
     childPackageJson.dependencies = deps;
     fs.writeFileSync(path.resolve(childFolderPath, 'package.json'), JSON.stringify(childPackageJson, null, 4), 'utf8');
     await symlinkDir(childFolderPath, path.resolve(node_modules_ProjectsDir, folderName));
     await symlinkDir(path.resolve(rootDir, 'node_modules'), path.resolve(childFolderPath, 'node_modules'));
 });
 
-packageJson.dependencies = rootPackageDependencies;
 fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 4), 'utf8');
 
-import './generate-paths'; import { normalizePath } from '@projects/shared/node_modules/vite/dist/node';
 
