@@ -258,7 +258,7 @@ function processTsToJson(dir) {
         const from = normalizePath(relPathWithoutExtension);
 
         import(`./${from}`).then(json => {
-            const content = JSON.stringify(json);
+            const content = JSON.stringify(json, null, 4);
             fs.writeFileSync(absDest, content, 'utf8');
         })
     });
