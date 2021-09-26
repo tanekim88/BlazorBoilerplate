@@ -259,7 +259,8 @@ function processTsToJson(dir) {
 
         const from = normalizePath(relFromScriptWithoutExt);
 
-        import(`./${from}`).then(json => {
+        import(`./${from}`).then(result => {
+            const json = result.default;
             if (dir === rootDir && fileToJson === 'tsconfig.ts') {
                 const include = ['**/*'];
                 const paths = {};
