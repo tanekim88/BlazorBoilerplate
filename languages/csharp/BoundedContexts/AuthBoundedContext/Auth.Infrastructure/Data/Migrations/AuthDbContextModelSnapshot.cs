@@ -172,14 +172,9 @@ namespace Auth.Infrastructure.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("AspNetUserClaims", (string)null);
                 });
@@ -369,71 +364,6 @@ namespace Auth.Infrastructure.Data.Migrations
                     b.ToTable("User_UserGroupRoles");
                 });
 
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.RoleClaimId", b =>
-                {
-                    b.ToTable("RoleClaimId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.RoleId", b =>
-                {
-                    b.ToTable("RoleId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.TextMessageProviderIds.TwilioIds.TwilioVerifySettingId", b =>
-                {
-                    b.ToTable("TwilioVerifySettingId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserClaimId", b =>
-                {
-                    b.ToTable("UserClaimId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserGroupId", b =>
-                {
-                    b.ToTable("UserGroupId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserGroupRequestId", b =>
-                {
-                    b.ToTable("UserGroupRequestId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserGroupRoleId", b =>
-                {
-                    b.ToTable("UserGroupRoleId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserId", b =>
-                {
-                    b.ToTable("UserId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserLoginId", b =>
-                {
-                    b.ToTable("UserLoginId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.UserTokenId", b =>
-                {
-                    b.ToTable("UserTokenId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.User_RoleId", b =>
-                {
-                    b.ToTable("User_RoleId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.User_UserGroupId", b =>
-                {
-                    b.ToTable("User_UserGroupId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.User_UserGroupRoleId", b =>
-                {
-                    b.ToTable("User_UserGroupRoleId");
-                });
-
             modelBuilder.Entity("Core.Domain.Entities.ReferenceEntities.EnumReference", b =>
                 {
                     b.Property<string>("Type")
@@ -464,15 +394,9 @@ namespace Auth.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Auth.Domain.Entities.UserClaim", b =>
                 {
-                    b.HasOne("Auth.Domain.Entities.User", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Auth.Domain.Entities.User", "User")
                         .WithMany("UserClaims")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

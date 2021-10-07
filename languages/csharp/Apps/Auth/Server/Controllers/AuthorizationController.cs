@@ -27,16 +27,16 @@ namespace Auth.Server.Controllers
 {
     public class AuthorizationController : Controller
     {
-        private readonly OpenIddictApplicationManager<CustomOpenIdApplication> _applicationManager;
-        private readonly OpenIddictAuthorizationManager<CustomOpenIdAuthorization> _authorizationManager;
-        private readonly OpenIddictScopeManager<CustomOpenIdScope> _scopeManager;
+        private readonly OpenIddictApplicationManager<CustomOpenIddictApplication> _applicationManager;
+        private readonly OpenIddictAuthorizationManager<CustomOpenIddictAuthorization> _authorizationManager;
+        private readonly OpenIddictScopeManager<CustomOpenIddictScope> _scopeManager;
         private readonly SignInManager<UserModel> _signInManager;
         private readonly UserManager<UserModel> _userManager;
 
         public AuthorizationController(
-            OpenIddictApplicationManager<CustomOpenIdApplication> applicationManager,
-            OpenIddictAuthorizationManager<CustomOpenIdAuthorization> authorizationManager,
-            OpenIddictScopeManager<CustomOpenIdScope> scopeManager,
+            OpenIddictApplicationManager<CustomOpenIddictApplication> applicationManager,
+            OpenIddictAuthorizationManager<CustomOpenIddictAuthorization> authorizationManager,
+            OpenIddictScopeManager<CustomOpenIddictScope> scopeManager,
             SignInManager<UserModel> signInManager,
             UserManager<UserModel> userManager)
         {

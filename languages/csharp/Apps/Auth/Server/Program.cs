@@ -1,13 +1,16 @@
 ﻿
 
+using Auth.Domain;
+using Auth.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
+using Core.Domain;
 using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
-
-
+using System.Linq;
+using System.Reflection;
 
 namespace Auth.Server
 {
@@ -15,6 +18,13 @@ namespace Auth.Server
     {
         public static void Main(string[] args)
         {
+            //if (System.Diagnostics.Debugger.IsAttached == false)
+            //{
+            //    System.Diagnostics.Debugger.Launch();
+            //}
+
+
+
             AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
             var host = CreateHostBuilder(args: args).Build();

@@ -1,5 +1,7 @@
 ﻿using __Entities_BoundedContext_Name__.Infrastructure.DbContexts;
+using Core.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +17,9 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.Extensions.MicrosoftEx
             IConfiguration configuration)
         {
             services.AddDbContext<__Entities_BoundedContext_Name__DbContext_Gen_>(optionsAction: options =>
-                options.UseSqlServer(
+                options
+                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+                .UseSqlServer(
                     connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
                     sqlServerOptionsAction: sql =>
                     {

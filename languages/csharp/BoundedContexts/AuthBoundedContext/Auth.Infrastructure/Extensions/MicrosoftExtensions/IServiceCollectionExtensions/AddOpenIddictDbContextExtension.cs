@@ -31,8 +31,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                         sql.UseNetTopologySuite();
                     }).UseLazyLoadingProxies();
 
-                options.UseOpenIddict<CustomOpenIdApplication,
-                    CustomOpenIdAuthorization, CustomOpenIdScope, CustomOpenIdToken, int>();
+                options.UseOpenIddict<CustomOpenIddictApplication, CustomOpenIddictAuthorization, CustomOpenIddictScope, CustomOpenIddictToken, int>();
             });
             return services;
         }

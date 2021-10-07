@@ -22,8 +22,8 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                     // Note: call ReplaceDefaultEntities() to replace the default OpenIddict entities.
                     options.UseEntityFrameworkCore()
                         .UseDbContext<AuthDbContext>()
-                        .ReplaceDefaultEntities<CustomOpenIdApplication, CustomOpenIdAuthorization, CustomOpenIdScope,
-                            CustomOpenIdToken, int>();
+                        .ReplaceDefaultEntities<CustomOpenIddictApplication, CustomOpenIddictAuthorization, CustomOpenIddictScope,
+                            CustomOpenIddictToken, int>();
                 })
 
                 // Register the OpenIddict server components.

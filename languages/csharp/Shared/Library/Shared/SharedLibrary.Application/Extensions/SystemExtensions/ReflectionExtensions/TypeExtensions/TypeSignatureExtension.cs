@@ -39,6 +39,22 @@ namespace System.Reflection
             return signature;
         }
 
+        public static string GetFullSignatureWithoutGenericArgument(this Type type)
+        {
+            var isNullableType = type.IsNullable(underlyingType: out var underlyingNullableType);
+
+            var signatureType = isNullableType
+                ? underlyingNullableType
+                : type;
+
+            var signature = TypeExtensionMethods.GetQualifiedTypeName(type: signatureType);
+
+            if (isNullableType) signature += "?";
+
+            return signature;
+        }
+
+
         /// <summary>
         ///     Get a fully qualified signature for <paramref name="type" />
         /// </summary>
@@ -62,6 +78,27 @@ namespace System.Reflection
             if (isGenericType)
                 // Add the generic arguments
                 signature += BuildGenericSignature(genericArgumentTypes: signatureType.GetGenericArguments());
+
+            if (isNullableType) signature += "?";
+
+            return signature;
+        }
+
+
+        public static string GetSignatureWithoutGenericArgument(this Type type)
+        {
+            var isNullableType = type.IsNullable(underlyingType: out var underlyingNullableType);
+
+            var signatureType = isNullableType
+                ? underlyingNullableType
+                : type;
+
+            var isGenericType = signatureType.IsGeneric();
+
+            var signature = TypeExtensionMethods.GetQualifiedTypeName(type: signatureType);
+
+            var splitted = signature.Split(separator: ".");
+            signature = splitted[splitted.Length - 1];
 
             if (isNullableType) signature += "?";
 

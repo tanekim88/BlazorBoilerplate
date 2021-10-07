@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Auth.Infrastructure.Data.Migrations
 {
-    public partial class _1 : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,24 +49,6 @@ namespace Auth.Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RoleClaimId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RoleId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -81,78 +63,6 @@ namespace Auth.Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TwilioVerifySettingId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "User_RoleId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "User_UserGroupId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "User_UserGroupRoleId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserClaimId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserGroupId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserGroupRequestId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserGroupRoleId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
                 name: "UserGroups",
                 columns: table => new
                 {
@@ -164,38 +74,10 @@ namespace Auth.Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserLoginId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserTokenId",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: false)
@@ -206,12 +88,6 @@ namespace Auth.Infrastructure.Data.Migrations
                     table.ForeignKey(
                         name: "FK_AspNetUserClaims_AspNetUsers_UserId",
                         column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AspNetUserClaims_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -423,11 +299,6 @@ namespace Auth.Infrastructure.Data.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AspNetUserClaims_UserId1",
-                table: "AspNetUserClaims",
-                column: "UserId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserLogins_UserId",
                 table: "AspNetUserLogins",
                 column: "UserId");
@@ -515,46 +386,7 @@ namespace Auth.Infrastructure.Data.Migrations
                 name: "EnumReferences");
 
             migrationBuilder.DropTable(
-                name: "RoleClaimId");
-
-            migrationBuilder.DropTable(
-                name: "RoleId");
-
-            migrationBuilder.DropTable(
-                name: "TwilioVerifySettingId");
-
-            migrationBuilder.DropTable(
-                name: "User_RoleId");
-
-            migrationBuilder.DropTable(
-                name: "User_UserGroupId");
-
-            migrationBuilder.DropTable(
-                name: "User_UserGroupRoleId");
-
-            migrationBuilder.DropTable(
                 name: "User_UserGroupRoles");
-
-            migrationBuilder.DropTable(
-                name: "UserClaimId");
-
-            migrationBuilder.DropTable(
-                name: "UserGroupId");
-
-            migrationBuilder.DropTable(
-                name: "UserGroupRequestId");
-
-            migrationBuilder.DropTable(
-                name: "UserGroupRoleId");
-
-            migrationBuilder.DropTable(
-                name: "UserId");
-
-            migrationBuilder.DropTable(
-                name: "UserLoginId");
-
-            migrationBuilder.DropTable(
-                name: "UserTokenId");
 
             migrationBuilder.DropTable(
                 name: "Roles");

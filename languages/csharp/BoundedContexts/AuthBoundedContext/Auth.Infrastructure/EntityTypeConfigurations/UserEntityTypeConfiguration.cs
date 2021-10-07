@@ -51,13 +51,13 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
             // The relationships between User and other entity types
             // Note that these relationships are configured with no navigation properties
             // Each User can have many UserClaims
-            builder.HasMany<UserClaim>().WithOne().HasForeignKey(foreignKeyExpression: uc => uc.UserId).IsRequired();
+            builder.HasMany(user => user.UserClaims).WithOne(userClaim => userClaim.User).HasForeignKey(foreignKeyExpression: uc => uc.UserId).IsRequired();
             // Each User can have many UserLogins
-            builder.HasMany<UserLogin>().WithOne().HasForeignKey(foreignKeyExpression: ul => ul.UserId).IsRequired();
+            builder.HasMany(user => user.UserLogins).WithOne(userLogin => userLogin.User).HasForeignKey(foreignKeyExpression: ul => ul.UserId).IsRequired();
             // Each User can have many UserTokens
-            builder.HasMany<UserToken>().WithOne().HasForeignKey(foreignKeyExpression: ut => ut.UserId).IsRequired();
+            builder.HasMany(user => user.UserTokens).WithOne(userToken => userToken.User).HasForeignKey(foreignKeyExpression: ut => ut.UserId).IsRequired();
             // Each User can have many entries in the UserRole join table
-            builder.HasMany<User_Role>().WithOne().HasForeignKey(foreignKeyExpression: ur => ur.UserId).IsRequired();
+            builder.HasMany(user => user.User_Roles).WithOne(userRole=>userRole.User).HasForeignKey(foreignKeyExpression: ur => ur.UserId).IsRequired();
         ////////////////////////////////////////////////////////////
         /// Custom
          ////////////////////////////////////////////////////////////

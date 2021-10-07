@@ -18,4 +18,47 @@ System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIdApplica
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
    at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 26
 
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":42084,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIdApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":42084,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIdApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-06 23:14:05.915 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":42408,"Version":"1.0.0"}2021-10-06 23:14:09.070 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIdApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 26
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":42408,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIdApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-06 23:16:09.684 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaimId] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":11980,"Version":"1.0.0"}2021-10-06 23:16:44.071 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaimId] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5076,"Version":"1.0.0"}2021-10-06 23:34:07.786 -04:00 [ERR] Failed executing DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaimId] (
+
+);
+
+{"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":14756,"Version":"1.0.0"}2021-10-06 23:37:57.323 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":47968,"Version":"1.0.0"}2021-10-06 23:38:01.993 -04:00 [INF] HTTP GET / responded 200 in 453.8704 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":9,"ThreadId":9,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMC98FDLPPKU:00000001","ConnectionId":"0HMC98FDLPPKU","ProcessId":47968,"Version":"1.0.0"}2021-10-06 23:38:28.436 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21620,"Version":"1.0.0"}2021-10-06 23:38:32.250 -04:00 [INF] HTTP GET / responded 200 in 337.6104 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":14,"ThreadId":14,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMC98FMV40OQ:00000001","ConnectionId":"0HMC98FMV40OQ","ProcessId":21620,"Version":"1.0.0"}

@@ -1,8 +1,10 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
+using Core.Infrastructure;
 using Core.Infrastructure.DbContexts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,7 +20,9 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             IConfiguration configuration)
         {
             services.AddDbContext<AuthDbContext>(optionsAction: options =>
-                options.UseSqlServer(
+                options
+                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+                .UseSqlServer(
                     connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
                     sqlServerOptionsAction: sql =>
                     {

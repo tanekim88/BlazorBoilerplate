@@ -30,7 +30,7 @@ namespace Auth.Server
             var context = scope.ServiceProvider.GetRequiredService<AuthDbContext>();
             await context.Database.EnsureCreatedAsync();
 
-            var manager = scope.ServiceProvider.GetRequiredService<OpenIddictApplicationManager<CustomOpenIdApplication>>();
+            var manager = scope.ServiceProvider.GetRequiredService<OpenIddictApplicationManager<CustomOpenIddictApplication>>();
 
             if (await manager.FindByClientIdAsync("code") is null)
             {

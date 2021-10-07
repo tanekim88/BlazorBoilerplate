@@ -24,7 +24,8 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
             builder.HasKey(keyExpression: uc => uc.Id);
             // Maps to the AspNetUserClaims table
             builder.ToTable(name: "AspNetUserClaims");
-            builder.HasOne(navigationExpression: pt => pt.User).WithMany(navigationExpression: t => t.UserClaims).HasForeignKey(foreignKeyExpression: pt => pt.UserId);
+            //Already defind in userconfig
+            //builder.HasOne(navigationExpression: pt => pt.User).WithMany(navigationExpression: t => t.UserClaims).HasForeignKey(foreignKeyExpression: pt => pt.UserId);
         /*%s:end Body*/
         }
     }
