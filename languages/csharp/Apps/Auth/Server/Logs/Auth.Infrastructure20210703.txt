@@ -1,5 +1,0 @@
-2021-07-03 20:44:43.138 -04:00 [INF] Starting web host
-
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":28484,"Version":"1.0.0"}2021-07-03 20:44:52.179 -04:00 [INF] HTTP GET / responded 200 in 320.3775 ms
-
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM9UGJLM4BJI:00000001","ConnectionId":"0HM9UGJLM4BJI","ProcessId":28484,"Version":"1.0.0"}

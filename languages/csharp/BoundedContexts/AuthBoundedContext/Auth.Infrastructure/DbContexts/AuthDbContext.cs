@@ -1,41 +1,9 @@
 using Auth.Domain;
 using Auth.Domain.Entities;
-using Auth.Domain.Entities;
 using Core.Infrastructure.DbContexts;
 using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.Entities;
-using System;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using System;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
-using Auth.Domain.Entities;
 
 namespace Auth.Infrastructure.DbContexts
 {
@@ -65,7 +33,7 @@ namespace Auth.Infrastructure.DbContexts
 
         public DbSet<User_UserGroupRole> User_UserGroupRoles { get; set; }
 
-        public AuthDbContext(DbContextOptions options): base(options: options)
+        public AuthDbContext(DbContextOptions options) : base(options: options)
         {
         }
 
@@ -73,9 +41,11 @@ namespace Auth.Infrastructure.DbContexts
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.DefinePrimaryKeysFromKeyAttributes();
-            modelBuilder.ApplyConfigurationsFromAssembly(assembly: GetType().Assembly);
+            modelBuilder.ApplyCustomConfigurationsFromAssembly(assembly: GetType().Assembly);
             modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
-            var types = typeof(AuthDomainConfig).Assembly.GetTypes().Where(type => type.Namespace is not null && type.Namespace.Contains(".ValueObjects"));
+            var types = typeof(AuthDomainConfig).Assembly.GetTypes()
+                .Where(type => type.Namespace is not null && type.Namespace.Contains(".ValueObjects") && !type.Name.EndsWith("Gen_"));
+            
             foreach (var idType in types)
             {
                 modelBuilder.Entity(idType).HasNoKey();

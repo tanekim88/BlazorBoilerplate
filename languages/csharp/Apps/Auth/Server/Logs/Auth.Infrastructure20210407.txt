@@ -1,7 +1,0 @@
-2021-04-07 05:46:14.623 -04:00 [INF] Starting web host
-
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":36504,"Version":"1.0.0"}2021-04-07 05:46:24.064 -04:00 [INF] HTTP GET / responded 200 in 894.4228 ms
-
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7PL7UI62Q8:0000000F","ConnectionId":"0HM7PL7UI62Q8","ProcessId":36504,"Version":"1.0.0"}2021-04-07 05:46:27.272 -04:00 [INF] HTTP GET /faviconsfavicon.png responded 404 in 12.0862 ms
-
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HM7PL7UI62Q8:0000010F","ConnectionId":"0HM7PL7UI62Q8","ProcessId":36504,"Version":"1.0.0"}

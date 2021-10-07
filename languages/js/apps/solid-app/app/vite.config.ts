@@ -15,4 +15,8 @@ export default defineConfig({
     polyfillDynamicImport: false,
     outDir,
   },
+  server: {
+    port: 3001,
+    host: true
+  }
 });

@@ -1,5 +1,0 @@
-2021-03-16 17:54:56.671 -04:00 [INF] Starting web host
-
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":24536,"Version":"1.0.0"}2021-03-16 18:18:12.246 -04:00 [INF] Starting web host
-
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":49356,"Version":"1.0.0"}

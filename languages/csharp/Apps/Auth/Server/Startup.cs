@@ -45,7 +45,7 @@ namespace Auth.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCustomAuthServer(configuration: Configuration, environment: Environment);
-            //services.AddHostedService<Worker>();
+            services.AddHostedService<Worker>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

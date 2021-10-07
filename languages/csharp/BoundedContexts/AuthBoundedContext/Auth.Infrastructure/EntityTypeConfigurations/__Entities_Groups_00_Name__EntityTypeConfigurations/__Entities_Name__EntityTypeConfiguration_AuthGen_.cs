@@ -7,8 +7,7 @@ using Auth.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
 using Core.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
+
 
 namespace Auth.Infrastructure.EntityTypeConfigurations.__Entities_Groups_00_Name__EntityTypeConfigurations
 {

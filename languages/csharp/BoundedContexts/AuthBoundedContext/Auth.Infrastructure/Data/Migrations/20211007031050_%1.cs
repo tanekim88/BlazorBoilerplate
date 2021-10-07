@@ -3,30 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Auth.Infrastructure.Data.Migrations
 {
-    public partial class abc : Migration
+    public partial class _1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "__Entities_Name___AuthGen_",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK___Entities_Name___AuthGen_", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "__Entities_Name__Id_AuthGen_",
-                columns: table => new
-                {
-                },
-                constraints: table =>
-                {
-                });
-
             migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
@@ -516,12 +496,6 @@ namespace Auth.Infrastructure.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "__Entities_Name___AuthGen_");
-
-            migrationBuilder.DropTable(
-                name: "__Entities_Name__Id_AuthGen_");
-
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 

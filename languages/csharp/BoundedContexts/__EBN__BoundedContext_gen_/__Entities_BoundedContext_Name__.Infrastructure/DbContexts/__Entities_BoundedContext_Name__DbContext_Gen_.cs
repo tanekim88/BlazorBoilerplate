@@ -38,7 +38,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.DefinePrimaryKeysFromKeyAttributes();
-            modelBuilder.ApplyConfigurationsFromAssembly(assembly: GetType().Assembly);
+            modelBuilder.ApplyCustomConfigurationsFromAssembly(assembly: GetType().Assembly);
             //%S:begin UserAudit
             //modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
             //%S:end UserAudit

@@ -1,0 +1,9 @@
+2021-10-06 11:09:05.017 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":50172,"Version":"1.0.0"}2021-10-06 11:19:35.445 -04:00 [INF] HTTP GET / responded 200 in 220.7406 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":30,"ThreadId":30,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMC8RIQ79CPT:00000001","ConnectionId":"0HMC8RIQ79CPT","ProcessId":50172,"Version":"1.0.0"}2021-10-06 11:19:35.758 -04:00 [INF] HTTP GET /favicon.ico responded 404 in 31.3674 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":36,"ThreadId":36,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMC8RIQ79CPT:00000013","ConnectionId":"0HMC8RIQ79CPT","ProcessId":50172,"Version":"1.0.0"}2021-10-06 11:19:39.113 -04:00 [INF] HTTP GET /bootstrap-icons.svg responded 404 in 5.9121 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMC8RIQ79CPT:000002CF","ConnectionId":"0HMC8RIQ79CPT","ProcessId":50172,"Version":"1.0.0"}

@@ -18,7 +18,7 @@ namespace Email.Infrastructure.DbContexts
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.DefinePrimaryKeysFromKeyAttributes();
-            modelBuilder.ApplyConfigurationsFromAssembly(assembly: GetType().Assembly);
+            modelBuilder.ApplyCustomConfigurationsFromAssembly(assembly: GetType().Assembly);
             //%s:begin UserAudit
             //modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
             //%s:end UserAudit

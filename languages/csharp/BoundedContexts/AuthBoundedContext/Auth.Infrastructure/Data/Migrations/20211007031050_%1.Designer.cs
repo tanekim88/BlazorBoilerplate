@@ -10,15 +10,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Auth.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20210701233604_abc")]
-    partial class abc
+    [Migration("20211007031050_%1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "6.0.0-preview.5.21301.9")
+                .HasAnnotation("ProductVersion", "6.0.0-preview.7.21378.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Auth.Domain.Entities.Role", b =>
@@ -67,7 +67,7 @@ namespace Auth.Infrastructure.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims");
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.User", b =>
@@ -153,7 +153,7 @@ namespace Auth.Infrastructure.Data.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex");
 
-                    b.ToTable("AspNetUsers");
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.UserClaim", b =>
@@ -183,7 +183,7 @@ namespace Auth.Infrastructure.Data.Migrations
 
                     b.HasIndex("UserId1");
 
-                    b.ToTable("AspNetUserClaims");
+                    b.ToTable("AspNetUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.UserGroup", b =>
@@ -267,7 +267,7 @@ namespace Auth.Infrastructure.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins");
+                    b.ToTable("AspNetUserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.UserToken", b =>
@@ -294,7 +294,7 @@ namespace Auth.Infrastructure.Data.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens");
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.User_Role", b =>
@@ -314,7 +314,7 @@ namespace Auth.Infrastructure.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles");
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Auth.Domain.Entities.User_UserGroup", b =>
@@ -369,18 +369,6 @@ namespace Auth.Infrastructure.Data.Migrations
                     b.HasIndex("User_UserGroupId");
 
                     b.ToTable("User_UserGroupRoles");
-                });
-
-            modelBuilder.Entity("Auth.Domain.Entities.__Entities_Groups_00_Name__Entities.__Entities_Name___AuthGen_", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.None);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("__Entities_Name___AuthGen_");
                 });
 
             modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.RoleClaimId", b =>
@@ -446,11 +434,6 @@ namespace Auth.Infrastructure.Data.Migrations
             modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.User_UserGroupRoleId", b =>
                 {
                     b.ToTable("User_UserGroupRoleId");
-                });
-
-            modelBuilder.Entity("Auth.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids.__Entities_Name__Id_AuthGen_", b =>
-                {
-                    b.ToTable("__Entities_Name__Id_AuthGen_");
                 });
 
             modelBuilder.Entity("Core.Domain.Entities.ReferenceEntities.EnumReference", b =>

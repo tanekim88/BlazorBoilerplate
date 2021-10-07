@@ -20,7 +20,7 @@ namespace Core.Infrastructure.DbContexts
         {
             base.OnModelCreating(builder);
             builder.DefinePrimaryKeysFromKeyAttributes();
-            builder.ApplyConfigurationsFromAssembly(assembly: GetType().Assembly);
+            builder.ApplyCustomConfigurationsFromAssembly(assembly: GetType().Assembly);
         }
 
         //public int SaveChanges(IHttpContextAccessor _httpContextAccessor)

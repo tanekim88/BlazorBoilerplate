@@ -1,10 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+﻿using Core.Domain;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace Core.Infrastructure
 {
+
+    public class SampleId : TypedIdValueBase<SampleId> { }
+
     public class StronglyTypedIdValueConverterSelector : ValueConverterSelector
     {
         // The dictionary in the base type is private, so we need our own one here.
@@ -29,8 +33,10 @@ namespace Core.Infrastructure
             // 'null' means 'get any value converters for the modelClrType'
             if (underlyingProviderType is null || underlyingProviderType == typeof(int))
             {
+
                 // Try and get a nested class with the expected name. 
-                var converterType = underlyingModelType.BaseType?.GetNestedType("StronglyTypedIdEfValueConverter");
+                var converterType = underlyingModelType.BaseType?
+                    .GetNestedType(nameof(TypedIdValueBase<SampleId>.StronglyTypedIdEfValueConverter));
 
                 if (converterType is not null)
                 {
@@ -38,7 +44,6 @@ namespace Core.Infrastructure
                     if (name.Contains("TypedIdValueBase"))
                     {
                         Console.WriteLine();
-
                     }
 
                     converterType = converterType.MakeGenericType(new Type[] { underlyingModelType });
