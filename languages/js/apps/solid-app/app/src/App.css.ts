@@ -10,10 +10,10 @@ export const container = atoms({
     mobile: 'column',
     desktop: 'row',
   },
-  background: {
-    lightMode: 'blue-50',
-    darkMode: 'gray-700',
-  }
+  // background: {
+  //   lightMode: 'blue-50',
+  //   darkMode: 'gray-700',
+  // }
 });
 
 // const flexDirection = Math.random() > 0.5 ? 'column' : 'row';

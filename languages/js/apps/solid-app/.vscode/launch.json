@@ -73,16 +73,5 @@
                 "enabled": true
             }
         },
-        {
-            "name": "Launch and Debug Hosted BlazorWeb WebAssembly App",
-            "type": "blazorwasm",
-            "request": "launch",
-            "hosted": true,
-            "program": "${workspaceFolder}/../../../Apps/SolidApp/Server/bin/Debug/net6.0/SolidApp.Server.dll",
-            "cwd": "${workspaceFolder}/../../../Apps/SolidApp/Server",
-            "url": "https://localhost:4001",
-            "browser": "chrome",
-            "trace": true
-        }
     ]
 }

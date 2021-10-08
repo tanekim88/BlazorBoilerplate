@@ -1,7 +1,7 @@
 {
     "name": "solid-app",
     "version": "1.0.0",
-    "description": "BlazorWeb app description",
+    "description": "Solid app description",
     "main": "index.js",
     "private": true,
     "type": "module",
