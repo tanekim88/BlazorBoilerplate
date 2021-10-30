@@ -1,0 +1,343 @@
+2021-10-08 03:27:46.879 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43604,"Version":"1.0.0"}2021-10-08 03:27:49.348 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43604,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:27:54.018 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":9636,"Version":"1.0.0"}2021-10-08 03:27:56.030 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":9636,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:00.502 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43204,"Version":"1.0.0"}2021-10-08 03:28:01.868 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43204,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:05.047 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":9132,"Version":"1.0.0"}2021-10-08 03:28:06.410 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":9132,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:09.218 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43456,"Version":"1.0.0"}2021-10-08 03:28:10.299 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43456,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:12.882 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43084,"Version":"1.0.0"}2021-10-08 03:28:14.007 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43084,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:16.696 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":13300,"Version":"1.0.0"}2021-10-08 03:28:17.849 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":13300,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:20.473 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":22384,"Version":"1.0.0"}2021-10-08 03:28:21.588 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":22384,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:24.358 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5208,"Version":"1.0.0"}2021-10-08 03:28:25.557 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5208,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:28.445 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5268,"Version":"1.0.0"}2021-10-08 03:28:29.863 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5268,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:32.694 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38400,"Version":"1.0.0"}2021-10-08 03:28:33.832 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38400,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:36.605 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43640,"Version":"1.0.0"}2021-10-08 03:28:37.725 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43640,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:40.415 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":27568,"Version":"1.0.0"}2021-10-08 03:28:41.518 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":27568,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:44.311 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43064,"Version":"1.0.0"}2021-10-08 03:28:45.448 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":43064,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:48.101 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5836,"Version":"1.0.0"}2021-10-08 03:28:49.222 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":5836,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:52.029 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38112,"Version":"1.0.0"}2021-10-08 03:28:53.571 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38112,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:28:56.997 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":15748,"Version":"1.0.0"}2021-10-08 03:28:58.202 -04:00 [FTL] Host terminated unexpectedly
+System.InvalidOperationException: Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AsTracking[TEntity](IQueryable`1 source)
+   at OpenIddict.EntityFrameworkCore.OpenIddictEntityFrameworkCoreApplicationStore`5.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at OpenIddict.Core.OpenIddictApplicationCache`1.<>c__DisplayClass6_0.<<FindByClientIdAsync>g__ExecuteAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenIddict.Core.OpenIddictApplicationManager`1.FindByClientIdAsync(String identifier, CancellationToken cancellationToken)
+   at Auth.Server.Worker.StartAsync(CancellationToken cancellationToken) in C:\app\languages\csharp\Apps\Auth\Server\Worker.cs:line 35
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Auth.Server.Program.Main(String[] args) in C:\app\languages\csharp\Apps\Auth\Server\Program.cs:line 36
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":15748,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Cannot create a DbSet for 'CustomOpenIddictApplication' because this type is not included in the model for the context.","Source":"Microsoft.EntityFrameworkCore"},"Version":"1.0.0"}2021-10-08 03:29:00.985 -04:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":10836,"Version":"1.0.0"}

@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2a56c912-7122-40cf-9268-12f2ed214a85": {
+      "ProjectGuid": "2a56c912-7122-40cf-9268-12f2ed214a85",
+      "DisplayName": "Auth.Infrastructure",
+      "ColorIndex": 0
+    },
+    "42b5f8a0-7c1e-4c8e-b419-af31f163716d": {
+      "ProjectGuid": "42b5f8a0-7c1e-4c8e-b419-af31f163716d",
+      "DisplayName": "Email.Infrastructure",
+      "ColorIndex": 1
+    },
+    "7f28fdb8-3c8d-4b5b-9f23-d7c86a5dabf4": {
+      "ProjectGuid": "7f28fdb8-3c8d-4b5b-9f23-d7c86a5dabf4",
+      "DisplayName": "Core.Infrastructure",
+      "ColorIndex": 2
+    },
+    "70dc779a-74ad-4f81-abcb-039d72e6c134": {
+      "ProjectGuid": "70dc779a-74ad-4f81-abcb-039d72e6c134",
+      "DisplayName": "Auth.Server",
+      "ColorIndex": 3
+    },
+    "be38f719-0015-435c-becb-c84323813dc4": {
+      "ProjectGuid": "be38f719-0015-435c-becb-c84323813dc4",
+      "DisplayName": "Shop.Infrastructure",
+      "ColorIndex": 4
+    },
+    "18d72f3f-86d4-4a65-a1f9-d7380def5040": {
+      "ProjectGuid": "18d72f3f-86d4-4a65-a1f9-d7380def5040",
+      "DisplayName": "__Entities_BoundedContext_Name__.Infrastructure",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "24520f4c-49f7-479b-88ca-6d61c810f47b": {
+      "ProjectGuid": "24520f4c-49f7-479b-88ca-6d61c810f47b",
+      "DisplayName": "Auth.Domain",
+      "ColorIndex": 6
+    },
+    "5d254cab-a4e2-47b2-a5f4-6930e7bce783": {
+      "ProjectGuid": "5d254cab-a4e2-47b2-a5f4-6930e7bce783",
+      "DisplayName": "Core.Domain",
+      "ColorIndex": 7
+    },
+    "0f00d680-5191-4587-abe6-8ea6802d6f9f": {
+      "ProjectGuid": "0f00d680-5191-4587-abe6-8ea6802d6f9f",
+      "DisplayName": "Auth.Application",
+      "ColorIndex": 8
+    },
+    "5c854737-d7a6-4ba2-896d-bed4a86dbbe5": {
+      "ProjectGuid": "5c854737-d7a6-4ba2-896d-bed4a86dbbe5",
+      "DisplayName": "SharedLibrary.Application",
+      "ColorIndex": 9
+    },
+    "faeb318b-4b7a-4211-ab22-392e70254d58": {
+      "ProjectGuid": "faeb318b-4b7a-4211-ab22-392e70254d58",
+      "DisplayName": "BlazorApp.Server",
+      "ColorIndex": 10
+    }
+  },
+  "NextColorIndex": 11
+}

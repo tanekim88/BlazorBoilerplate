@@ -8,4 +8,4 @@ import { SolidAppPostcssService } from './postcss/postcss.service';
     imports: [PostcssModule],
     providers: [SolidAppPostcssService],
 })
-export class BlazorWebPostcssModule {}
+export class SolidAppPostcssModule {}

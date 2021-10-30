@@ -10,9 +10,12 @@ COPY app .
 ENV CHOKIDAR_USEPOLLING=true
 RUN npm i && npm install -g sass && npm run build
 
-# CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start"]
 
-FROM nginx:alpine
-COPY /app/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /wwwroot /usr/share/nginx/html/app
+# FROM nginx:alpine
+# COPY nginx.conf /etc/nginx/nginx.conf
+# COPY --from=build /wwwroot /usr/share/nginx/html
 # CMD ["tail", "-f", "/dev/null"]
+
+
+# CMD ["nginx", "-g", "daemon off;"]

@@ -16,7 +16,7 @@ export default defineConfig({
     outDir,
   },
   server: {
-    port: 3000,
+    port: 80,
     host: true
   }
 });
