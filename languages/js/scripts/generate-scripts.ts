@@ -67,7 +67,7 @@ const commandObjs = [
     },
     {
         name: 'docker:win:rm-f-all-non-dapr-containers',
-        command: "FOR /f \"tokens=*\" %i IN ('docker ps -q') DO (FOR /f \"tokens=*\" %g IN ('docker inspect --format=\"{{if ne \\\"dapr_\\\" (slice .Name 1 6) }}{{.Id}}{{end}}\" %i') DO ( docker rm -f %g ))",
+        command: "FOR /f \"tokens=*\" %i IN ('docker ps -q') DO (FOR /f \"tokens=*\" %g IN ('docker inspect --format=\"{{if ne \\\"dapr_\\\" (slice .Name 1 6) }}{{.Id}}{{end}}\" %i') DO ( (docker rm -f %g) ))",
         includes: [rootProjName, ...appDirNames],
         static: true
     },
