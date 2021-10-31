@@ -129,6 +129,11 @@
         readonly "components": {
             toAbsolutePath:()=> string,
             toRelativePath:(relativeTo?:string)=> string,
+            readonly "custom-secretstore.yaml": {
+                toAbsolutePath:()=> string,
+                toRelativePath:(relativeTo?:string)=> string
+            }
+,
             readonly "email.yaml": {
                 toAbsolutePath:()=> string,
                 toRelativePath:(relativeTo?:string)=> string
@@ -149,12 +154,7 @@
                 toRelativePath:(relativeTo?:string)=> string
             }
 ,
-            readonly "secretstore.yaml": {
-                toAbsolutePath:()=> string,
-                toRelativePath:(relativeTo?:string)=> string
-            }
-,
-            readonly "statestore.yaml": {
+            readonly "redis-state.yaml": {
                 toAbsolutePath:()=> string,
                 toRelativePath:(relativeTo?:string)=> string
             }
@@ -187,6 +187,51 @@
             readonly ".gitignore": {
                 toAbsolutePath:()=> string,
                 toRelativePath:(relativeTo?:string)=> string
+            }
+,
+            readonly ".idea": {
+                toAbsolutePath:()=> string,
+                toRelativePath:(relativeTo?:string)=> string,
+                readonly ".idea.App": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string,
+                    readonly ".idea": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string,
+                        readonly ".name": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "encodings.xml": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "indexLayout.xml": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "projectSettingsUpdater.xml": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "vcs.xml": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
+                        readonly "workspace.xml": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+
+                    }
+
+                }
+
             }
 ,
             readonly ".vs": {
@@ -1361,57 +1406,17 @@
                         readonly "Logs": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
-                            readonly "Auth.Infrastructure20210316.txt": {
+                            readonly "Auth.Infrastructure20211006.txt": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
-                            readonly "Auth.Infrastructure20210317.txt": {
+                            readonly "Auth.Infrastructure20211007.txt": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
-                            readonly "Auth.Infrastructure20210318.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210319.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210407.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210413.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210525.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210528.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210701.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210703.txt": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "Auth.Infrastructure20210920.txt": {
+                            readonly "Auth.Infrastructure20211008.txt": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
@@ -4680,6 +4685,21 @@
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
+,
+                            readonly "Core.Infrastructure20211006.txt": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
+                            readonly "Core.Infrastructure20211008.txt": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
+                            readonly "Core.Infrastructure20211030.txt": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
 
                         }
 ,
@@ -4887,11 +4907,6 @@
 
                 }
 
-            }
-,
-            readonly "bin": {
-                toAbsolutePath:()=> string,
-                toRelativePath:(relativeTo?:string)=> string
             }
 ,
             readonly "BoundedContexts": {
@@ -5679,12 +5694,12 @@
                             readonly "Migrations": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string,
-                                readonly "20210701233604_abc.cs": {
+                                readonly "20211007083507_init.cs": {
                                     toAbsolutePath:()=> string,
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
 ,
-                                readonly "20210701233604_abc.Designer.cs": {
+                                readonly "20211007083507_init.Designer.cs": {
                                     toAbsolutePath:()=> string,
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
@@ -5891,22 +5906,22 @@
                         readonly "OpenIdDict": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
-                            readonly "CustomOpenIdApplication.cs": {
+                            readonly "CustomOpenIddictApplication.cs": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
-                            readonly "CustomOpenIdAuthorization.cs": {
+                            readonly "CustomOpenIddictAuthorization.cs": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
-                            readonly "CustomOpenIdScope.cs": {
+                            readonly "CustomOpenIddictScope.cs": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
-                            readonly "CustomOpenIdToken.cs": {
+                            readonly "CustomOpenIddictToken.cs": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
@@ -12404,6 +12419,11 @@
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
 ,
+                                readonly "ApplyConfigurationsFromAssemblyExtension.cs": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string
+                                }
+,
                                 readonly "DefinePrimaryKeysFromKeyAttributesExtension.cs": {
                                     toAbsolutePath:()=> string,
                                     toRelativePath:(relativeTo?:string)=> string
@@ -16002,6 +16022,16 @@
                     toRelativePath:(relativeTo?:string)=> string
                 }
 ,
+                readonly "components": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string
+                }
+,
+                readonly "configurations": {
+                    toAbsolutePath:()=> string,
+                    toRelativePath:(relativeTo?:string)=> string
+                }
+,
                 readonly "obj": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string
@@ -18900,6 +18930,11 @@
                 readonly "solid-app": {
                     toAbsolutePath:()=> string,
                     toRelativePath:(relativeTo?:string)=> string,
+                    readonly ".dockerignore": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
                     readonly ".eslintrc.json": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
@@ -19115,6 +19150,11 @@
                         toRelativePath:(relativeTo?:string)=> string
                     }
 ,
+                    readonly "nginx.conf": {
+                        toAbsolutePath:()=> string,
+                        toRelativePath:(relativeTo?:string)=> string
+                    }
+,
                     readonly "node_modules": {
                         toAbsolutePath:()=> string,
                         toRelativePath:(relativeTo?:string)=> string
@@ -19205,17 +19245,7 @@
 ,
                         readonly "templates": {
                             toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string,
-                            readonly "index.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "index.webpack.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-
+                            toRelativePath:(relativeTo?:string)=> string
                         }
 ,
                         readonly "vite": {
@@ -19693,6 +19723,10 @@ export const RootPaths:RootPathsType = createProxy( {
         "components": {
             toAbsolutePath:()=> "C:\\app\\dapr\\components",
             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components") :  path.relative("C:\\app",  "C:\\app\\dapr\\components") },
+            "custom-secretstore.yaml": {
+                toAbsolutePath:()=> "C:\\app\\dapr\\components\\custom-secretstore.yaml",
+                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\custom-secretstore.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\custom-secretstore.yaml") }
+            },
             "email.yaml": {
                 toAbsolutePath:()=> "C:\\app\\dapr\\components\\email.yaml",
                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\email.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\email.yaml") }
@@ -19709,13 +19743,9 @@ export const RootPaths:RootPathsType = createProxy( {
                 toAbsolutePath:()=> "C:\\app\\dapr\\components\\pubsub.yaml",
                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\pubsub.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\pubsub.yaml") }
             },
-            "secretstore.yaml": {
-                toAbsolutePath:()=> "C:\\app\\dapr\\components\\secretstore.yaml",
-                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\secretstore.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\secretstore.yaml") }
-            },
-            "statestore.yaml": {
-                toAbsolutePath:()=> "C:\\app\\dapr\\components\\statestore.yaml",
-                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\statestore.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\statestore.yaml") }
+            "redis-state.yaml": {
+                toAbsolutePath:()=> "C:\\app\\dapr\\components\\redis-state.yaml",
+                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\dapr\\components\\redis-state.yaml") :  path.relative("C:\\app",  "C:\\app\\dapr\\components\\redis-state.yaml") }
             }
         },
         "configurations": {
@@ -19740,6 +19770,42 @@ export const RootPaths:RootPathsType = createProxy( {
             ".gitignore": {
                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.gitignore",
                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.gitignore") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.gitignore") }
+            },
+            ".idea": {
+                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea",
+                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea") },
+                ".idea.App": {
+                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App") },
+                    ".idea": {
+                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea") },
+                        ".name": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\.name",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\.name") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\.name") }
+                        },
+                        "encodings.xml": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\encodings.xml",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\encodings.xml") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\encodings.xml") }
+                        },
+                        "indexLayout.xml": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\indexLayout.xml",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\indexLayout.xml") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\indexLayout.xml") }
+                        },
+                        "projectSettingsUpdater.xml": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\projectSettingsUpdater.xml",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\projectSettingsUpdater.xml") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\projectSettingsUpdater.xml") }
+                        },
+                        "vcs.xml": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\vcs.xml",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\vcs.xml") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\vcs.xml") }
+                        },
+                        "workspace.xml": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\workspace.xml",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\workspace.xml") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\.idea\\.idea.App\\.idea\\workspace.xml") }
+                        }
+                    }
+                }
             },
             ".vs": {
                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\.vs",
@@ -20681,49 +20747,17 @@ export const RootPaths:RootPathsType = createProxy( {
                         "Logs": {
                             toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs") },
-                            "Auth.Infrastructure20210316.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210316.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210316.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210316.txt") }
+                            "Auth.Infrastructure20211006.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211006.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211006.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211006.txt") }
                             },
-                            "Auth.Infrastructure20210317.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210317.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210317.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210317.txt") }
+                            "Auth.Infrastructure20211007.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211007.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211007.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211007.txt") }
                             },
-                            "Auth.Infrastructure20210318.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210318.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210318.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210318.txt") }
-                            },
-                            "Auth.Infrastructure20210319.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210319.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210319.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210319.txt") }
-                            },
-                            "Auth.Infrastructure20210407.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210407.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210407.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210407.txt") }
-                            },
-                            "Auth.Infrastructure20210413.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210413.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210413.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210413.txt") }
-                            },
-                            "Auth.Infrastructure20210525.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210525.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210525.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210525.txt") }
-                            },
-                            "Auth.Infrastructure20210528.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210528.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210528.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210528.txt") }
-                            },
-                            "Auth.Infrastructure20210701.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210701.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210701.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210701.txt") }
-                            },
-                            "Auth.Infrastructure20210703.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210703.txt") }
-                            },
-                            "Auth.Infrastructure20210920.txt": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20210920.txt") }
+                            "Auth.Infrastructure20211008.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211008.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211008.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Logs\\Auth.Infrastructure20211008.txt") }
                             }
                         },
                         "obj": {
@@ -23336,6 +23370,18 @@ export const RootPaths:RootPathsType = createProxy( {
                             "Core.Infrastructure20210922.txt": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20210922.txt") }
+                            },
+                            "Core.Infrastructure20211006.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211006.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211006.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211006.txt") }
+                            },
+                            "Core.Infrastructure20211008.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211008.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211008.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211008.txt") }
+                            },
+                            "Core.Infrastructure20211030.txt": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211030.txt",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211030.txt") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Logs\\Core.Infrastructure20211030.txt") }
                             }
                         },
                         "obj": {
@@ -23500,10 +23546,6 @@ export const RootPaths:RootPathsType = createProxy( {
                         }
                     }
                 }
-            },
-            "bin": {
-                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\bin",
-                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\bin") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\bin") }
             },
             "BoundedContexts": {
                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts",
@@ -24136,13 +24178,13 @@ export const RootPaths:RootPathsType = createProxy( {
                             "Migrations": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations") },
-                                "20210701233604_abc.cs": {
-                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.cs",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.cs") }
+                                "20211007083507_init.cs": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.cs",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.cs") }
                                 },
-                                "20210701233604_abc.Designer.cs": {
-                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.Designer.cs",
-                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.Designer.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20210701233604_abc.Designer.cs") }
+                                "20211007083507_init.Designer.cs": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.Designer.cs",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.Designer.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\20211007083507_init.Designer.cs") }
                                 },
                                 "AuthDbContextModelSnapshot.cs": {
                                     toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\Data\\Migrations\\AuthDbContextModelSnapshot.cs",
@@ -24305,21 +24347,21 @@ export const RootPaths:RootPathsType = createProxy( {
                         "OpenIdDict": {
                             toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict") },
-                            "CustomOpenIdApplication.cs": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdApplication.cs",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdApplication.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdApplication.cs") }
+                            "CustomOpenIddictApplication.cs": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictApplication.cs",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictApplication.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictApplication.cs") }
                             },
-                            "CustomOpenIdAuthorization.cs": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdAuthorization.cs",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdAuthorization.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdAuthorization.cs") }
+                            "CustomOpenIddictAuthorization.cs": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictAuthorization.cs",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictAuthorization.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictAuthorization.cs") }
                             },
-                            "CustomOpenIdScope.cs": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdScope.cs",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdScope.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdScope.cs") }
+                            "CustomOpenIddictScope.cs": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictScope.cs",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictScope.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictScope.cs") }
                             },
-                            "CustomOpenIdToken.cs": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdToken.cs",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdToken.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIdToken.cs") }
+                            "CustomOpenIddictToken.cs": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictToken.cs",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictToken.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\CustomOpenIddictToken.cs") }
                             },
                             "TokenProviders": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\BoundedContexts\\AuthBoundedContext\\Auth.Infrastructure\\OpenIdDict\\TokenProviders",
@@ -29516,6 +29558,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                     toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\AddCommonPropertiesExtension.cs",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\AddCommonPropertiesExtension.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\AddCommonPropertiesExtension.cs") }
                                 },
+                                "ApplyConfigurationsFromAssemblyExtension.cs": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\ApplyConfigurationsFromAssemblyExtension.cs",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\ApplyConfigurationsFromAssemblyExtension.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\ApplyConfigurationsFromAssemblyExtension.cs") }
+                                },
                                 "DefinePrimaryKeysFromKeyAttributesExtension.cs": {
                                     toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\DefinePrimaryKeysFromKeyAttributesExtension.cs",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\DefinePrimaryKeysFromKeyAttributesExtension.cs") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Shared\\Core.Infrastructure\\Extensions\\MicrosoftExtensions\\ModelBuilderExtensions\\DefinePrimaryKeysFromKeyAttributesExtension.cs") }
@@ -32392,6 +32438,14 @@ export const RootPaths:RootPathsType = createProxy( {
                     toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Tye\\bin",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Tye\\bin") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Tye\\bin") }
                 },
+                "components": {
+                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Tye\\components",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Tye\\components") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Tye\\components") }
+                },
+                "configurations": {
+                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Tye\\configurations",
+                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Tye\\configurations") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Tye\\configurations") }
+                },
                 "obj": {
                     toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Tye\\obj",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Tye\\obj") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Tye\\obj") }
@@ -34711,6 +34765,10 @@ export const RootPaths:RootPathsType = createProxy( {
                 "solid-app": {
                     toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app",
                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app") },
+                    ".dockerignore": {
+                        toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\.dockerignore",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\.dockerignore") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\.dockerignore") }
+                    },
                     ".eslintrc.json": {
                         toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\.eslintrc.json",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\.eslintrc.json") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\.eslintrc.json") }
@@ -34883,6 +34941,10 @@ export const RootPaths:RootPathsType = createProxy( {
                         toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\Monikers.imagemanifest",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\Monikers.imagemanifest") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\Monikers.imagemanifest") }
                     },
+                    "nginx.conf": {
+                        toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\nginx.conf",
+                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\nginx.conf") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\nginx.conf") }
+                    },
                     "node_modules": {
                         toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\node_modules",
                         toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\node_modules") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\node_modules") }
@@ -34956,15 +35018,7 @@ export const RootPaths:RootPathsType = createProxy( {
                         },
                         "templates": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates") },
-                            "index.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.html") }
-                            },
-                            "index.webpack.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.webpack.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.webpack.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates\\index.webpack.html") }
-                            }
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\templates") }
                         },
                         "vite": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\vite",

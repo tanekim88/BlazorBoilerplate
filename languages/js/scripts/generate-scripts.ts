@@ -57,6 +57,26 @@ const commandObjs = [
         includes: [rootProjName, ...appDirNames],
         static: true
     },
+    //////////////////
+
+    {
+        name: 'docker:rm-f-all-non-dapr-containers',
+        command: "docker rm -f $(docker inspect --format='{{if eq \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q))",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win:rm-f-all-non-dapr-containers',
+        command: "FOR /f \"tokens=*\" %i IN ('docker ps -q') DO (FOR /f \"tokens=*\" %g IN ('docker inspect --format=\"{{if eq \\\"dapr_\\\" (slice .Name 1 6) }}{{.Id}}{{end}}\" %i') DO ( docker rm -f %g ))",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win-ps:rm-f-all-non-dapr-containers',
+        command: "docker inspect --format='{{if eq \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q) | ForEach-Object -Process {docker rm -f $_}",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
     /////////////
 
     {
@@ -85,6 +105,35 @@ const commandObjs = [
         includes: [rootProjName, ...appDirNames],
         static: true
     },
+    /////////////
+
+    {
+        name: 'docker:reset',
+        command: [
+            'npm run docker:rm-f-all-non-dapr-containers',
+            'docker system prune -af --volumes'
+        ],
+        // command: "docker volume ls -qf dangling=true | xargs -r docker volume rm",
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win:reset',
+        command: [
+            'npm run docker:win:rm-f-all-non-dapr-containers',
+            'docker system prune -af --volumes'],
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+    {
+        name: 'docker:win-ps:reset',
+        command: [
+            'npm run docker:win-ps:rm-f-all-non-dapr-containers',
+            'docker system prune -af --volumes'],
+        includes: [rootProjName, ...appDirNames],
+        static: true
+    },
+
 
 
     ////////////////////
