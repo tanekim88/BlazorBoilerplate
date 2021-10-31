@@ -61,19 +61,19 @@ const commandObjs = [
 
     {
         name: 'docker:rm-f-all-non-dapr-containers',
-        command: "docker rm -f $(docker inspect --format='{{if eq \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q))",
+        command: "docker rm -f $(docker inspect --format='{{if ne \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q))",
         includes: [rootProjName, ...appDirNames],
         static: true
     },
     {
         name: 'docker:win:rm-f-all-non-dapr-containers',
-        command: "FOR /f \"tokens=*\" %i IN ('docker ps -q') DO (FOR /f \"tokens=*\" %g IN ('docker inspect --format=\"{{if eq \\\"dapr_\\\" (slice .Name 1 6) }}{{.Id}}{{end}}\" %i') DO ( docker rm -f %g ))",
+        command: "FOR /f \"tokens=*\" %i IN ('docker ps -q') DO (FOR /f \"tokens=*\" %g IN ('docker inspect --format=\"{{if ne \\\"dapr_\\\" (slice .Name 1 6) }}{{.Id}}{{end}}\" %i') DO ( docker rm -f %g ))",
         includes: [rootProjName, ...appDirNames],
         static: true
     },
     {
         name: 'docker:win-ps:rm-f-all-non-dapr-containers',
-        command: "docker inspect --format='{{if eq \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q) | ForEach-Object -Process {docker rm -f $_}",
+        command: "docker inspect --format='{{if ne \"dapr_\" (slice .Name 1 6) }}{{.Id}}{{end}}' $(docker ps -q) | ForEach-Object -Process {docker rm -f $_}",
         includes: [rootProjName, ...appDirNames],
         static: true
     },
