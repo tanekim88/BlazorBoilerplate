@@ -6,6 +6,7 @@ using Material.Blazor;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Presentation.Infrastructure.Shared.Services.MaterialServices;
 using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
@@ -50,16 +51,20 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
 
             services.AddCustomNewtonsoftJson();
 
+            var blazorServerHostUrl = builder.Configuration.GetServiceUri("BlazorApp") ?? new Uri("https://localhost:4001/");
+
             services.AddHttpClient("GraphqlClient", (services, client) =>
             {
-                client.BaseAddress = new Uri("https://localhost:4001");
+                client.BaseAddress = blazorServerHostUrl;
                 //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", "");
             });
 
             Assembly[] allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             //services.AddCustomServices();
+            var clientBaseHost = builder.HostEnvironment.BaseAddress;
+
             services.AddHttpClient("BlazorApp.ServerAPI", client => client.BaseAddress =
-                 new Uri(builder.HostEnvironment.BaseAddress)).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+                blazorServerHostUrl).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
             // Supply HttpClient instances that include access tokens when making requests to the server project
             services.AddScoped(sp =>
@@ -69,8 +74,6 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             //{
             //    client.BaseAddress = new Uri("https://localhost:5001");
             //});
-
-
 
             services.AddMBServices(
                  toastServiceConfiguration: new MBToastServiceConfiguration()

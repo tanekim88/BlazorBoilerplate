@@ -30,7 +30,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuild
 
             config
                   .SetBasePath(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location))
-                //.AddJsonStream(stream: sharedSettingsStream)
+                .AddJsonStream(stream: sharedSettingsStream)
                 .AddJsonFile(path: "sharedAppsettings.json", optional: false)
                 .AddJsonFile(path: "appsettings.json", optional: false)
                 .AddJsonFile(path: $"sharedAppsettings.{env.EnvironmentName}.json", optional: true)
