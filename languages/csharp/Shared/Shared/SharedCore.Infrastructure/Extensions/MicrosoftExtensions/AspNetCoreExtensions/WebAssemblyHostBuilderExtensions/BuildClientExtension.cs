@@ -85,11 +85,11 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
                      Timeout = 5000,
                      MaxToastsShowing = 5
                  },
-                 animatedNavigationManagerServiceConfiguration: new MBAnimatedNavigationManagerServiceConfiguration()
-                 {
-                     ApplyAnimation = true,
-                     AnimationTime = 300
-                 },
+                 //animatedNavigationManagerServiceConfiguration: new MBAnimatedNavigationManagerServiceConfiguration()
+                 //{
+                 //    ApplyAnimation = true,
+                 //    AnimationTime = 300
+                 //},
                  snackbarServiceConfiguration: new MBSnackbarServiceConfiguration() {
                      CloseMethod = MBNotifierCloseMethod.TimeoutAndDismissButton,
                      Leading = false,

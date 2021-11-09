@@ -38,13 +38,13 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Dapr.AspNetCore" Version="1.4.0" />
-		<PackageReference Include="Dapr.Client" Version="1.4.0" />
+		<PackageReference Include="Dapr.Client" Version="1.5.0-rc01" />
 		<PackageReference Include="Grpc.Tools" Version="2.40.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0-rc.1.21452.15" />
-		<PackageReference Include="Ardalis.GuardClauses" Version="3.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0" />
+		<PackageReference Include="Ardalis.GuardClauses" Version="3.3.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.2.0" />
 		<PackageReference Include="Jint" Version="3.0.0-beta-2034" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
@@ -56,9 +56,9 @@
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.0.152" />
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="1.0.152" />
 		<PackageReference Include="protobuf-net.Grpc.Reflection" Version="1.0.152" />
-		<PackageReference Include="Refit.HttpClientFactory" Version="6.0.94" />
+		<PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
 		<PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
-		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.0.0-preview.7.21378.4-5" />
+		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.0.0-5" />
 		<PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.3-dev-00066" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.1-dev-00876" />
 		<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.5.0-alpha0003" />

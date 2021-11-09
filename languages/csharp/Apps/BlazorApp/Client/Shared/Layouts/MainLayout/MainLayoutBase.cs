@@ -36,7 +36,7 @@ namespace BlazorApp.Client.Shared.Layouts
         public string[] TabLabels { get; set; } = { "cat", "dog", "horse-head", "dove", "hippo", "kiwi-bird", "dragon" };
 
         [Inject] public IMaterialThemeSharedUiService MaterialThemeSharedUiService { get; set; }
-        [Inject] private IMBAnimatedNavigationManager AnimatedNavigationService { get; set; }
+        //[Inject] private IMBAnimatedNavigationManager AnimatedNavigationService { get; set; }
         [Inject] private IJSRuntime JsRuntime { get; set; }
         [Inject] private NavigationManager Navigation { get; set; }
         [Inject] private SignOutSessionStateManager SignOutManager { get; set; }
@@ -88,7 +88,7 @@ namespace BlazorApp.Client.Shared.Layouts
         public void ListItemClickHandler(string NavigationReference)
         {
             Drawer.NotifyNavigation();
-            AnimatedNavigationService.NavigateTo(uri: NavigationReference);
+            //AnimatedNavigationService.NavigateTo(uri: NavigationReference);
         }
 
         public void SideBarToggle()
