@@ -15,11 +15,11 @@
 
 	<ItemGroup>
 		<PackageReference Include="Dapr.Client" Version="1.5.0" />
-		<PackageReference Include="Grpc.Tools" Version="2.42.0">
+		<PackageReference Include="Grpc.Tools" Version="2.43.0-pre1">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="HotChocolate.Types" Version="12.4.0-preview.14" />
+		<PackageReference Include="HotChocolate.Types" Version="12.4.0-rc.1" />
 		<PackageReference Include="Humanizer" Version="2.13.14" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
 		<PackageReference Include="Material.Blazor" Version="2.0.1" />
