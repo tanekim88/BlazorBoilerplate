@@ -64,6 +64,11 @@
 		<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.5.0-alpha0003" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00947" />
 		<PackageReference Include="Serilog.Sinks.Seq" Version="5.1.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Csharp" Version="4.1.0-1.final" />
 	</ItemGroup>
 
 

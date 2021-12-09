@@ -53,8 +53,11 @@
 		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.4" />
 		<!--<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.0" />-->
 		<PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.0.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.0.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Csharp" Version="4.1.0-1.final" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

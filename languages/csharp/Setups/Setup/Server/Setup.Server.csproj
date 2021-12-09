@@ -32,6 +32,11 @@
         <PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
         <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
         <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.13.2" />
+		<PackageReference Include="Microsoft.CodeAnalysis" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.1.0-1.final" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Csharp" Version="4.1.0-1.final" />
     </ItemGroup>
 
     <ItemGroup>
