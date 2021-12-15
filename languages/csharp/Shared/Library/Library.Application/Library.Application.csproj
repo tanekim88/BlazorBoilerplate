@@ -11,45 +11,45 @@
         <PackageReference Include="DeepCloner" Version="0.10.3" />
         <PackageReference Include="DocumentFormat.OpenXml" Version="2.14.0" />
         <PackageReference Include="DynamicExpresso.Core" Version="2.9.7" />
-        <PackageReference Include="EPPlus" Version="5.8.3" />
-        <PackageReference Include="GreenDonut" Version="12.4.0-rc.1" />
+        <PackageReference Include="EPPlus" Version="5.8.4" />
+        <PackageReference Include="GreenDonut" Version="12.4.1" />
         <PackageReference Include="Grpc.Tools" Version="2.43.0-pre1">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="HotChocolate" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.AspNetCore" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.4.0-rc.1" />
+        <PackageReference Include="HotChocolate" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.AspNetCore" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.4.1" />
         <PackageReference Include="HotChocolate.AspNetCore.GraphiQL" Version="10.5.5" />
         <PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="10.5.5" />
-        <PackageReference Include="HotChocolate.Data" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Subscriptions" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Types" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Types.Filters" Version="12.4.0-rc.1" />
-        <PackageReference Include="HotChocolate.Types.Sorting" Version="12.4.0-rc.1" />
+        <PackageReference Include="HotChocolate.Data" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Subscriptions" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Types" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Types.Filters" Version="12.4.1" />
+        <PackageReference Include="HotChocolate.Types.Sorting" Version="12.4.1" />
         <PackageReference Include="Humanizer" Version="2.13.14" />
-        <PackageReference Include="ICSharpCode.Decompiler" Version="7.2.0.6702-preview2" />
+        <PackageReference Include="ICSharpCode.Decompiler" Version="7.2.0.6791-preview3" />
         <PackageReference Include="IdentityModel" Version="6.0.0-preview.2" />
         <PackageReference Include="IdentityServer4.EntityFramework" Version="4.1.2" />
         <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.1.2" />
         <PackageReference Include="Jint" Version="3.0.0-beta-2037" />
         <PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0158" />
         <PackageReference Include="libphonenumber-csharp" Version="8.12.34" />
-        <PackageReference Include="MailKit" Version="3.0.0-preview1" />
+        <PackageReference Include="MailKit" Version="3.0.0" />
         <PackageReference Include="Mapster" Version="7.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.4" />
         <!--<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.0" />-->
         <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
@@ -58,18 +58,18 @@
 		<PackageReference Include="Microsoft.CodeAnalysis.VisualBasic" Version="4.1.0-1.final" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.1.0-1.final" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Csharp" Version="4.1.0-1.final" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.1" />
         <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.10.0-alpha.21420.1" />
-        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
         <PackageReference Include="Mono.TextTemplating" Version="2.2.1" />
         <PackageReference Include="OpenIddict.AspNetCore" Version="3.1.1" />
         <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="3.1.1" />

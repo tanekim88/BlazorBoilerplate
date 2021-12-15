@@ -20,32 +20,32 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="HotChocolate.Types" Version="12.4.0-rc.1" />
+        <PackageReference Include="HotChocolate.Types" Version="12.4.1" />
         <PackageReference Include="Humanizer" Version="2.13.14" />
         <PackageReference Include="Mapster" Version="7.2.0" />
         <PackageReference Include="Material.Blazor" Version="2.0.1" />
         <PackageReference Include="MediatR" Version="9.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.1" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="6.0.1" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
         <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
         <PackageReference Include="Microsoft.Tye.Extensions.Configuration" Version="0.10.0-alpha.21420.1" />
         <PackageReference Include="Pluralize.NET" Version="1.0.2" />
         <PackageReference Include="protobuf-net" Version="3.0.101" />
         <PackageReference Include="protobuf-net.Grpc" Version="1.0.152" />
         <PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
 
-        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.1" />
         <PackageReference Include="StrawberryShake" Version="11.0.0-preview.137" />
-        <PackageReference Include="System.IO.Pipelines" Version="6.0.0" />
+        <PackageReference Include="System.IO.Pipelines" Version="6.0.1" />
         <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
 
     </ItemGroup>
