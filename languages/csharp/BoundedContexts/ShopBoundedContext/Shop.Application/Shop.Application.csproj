@@ -11,7 +11,7 @@
 		<PackageReference Include="Ardalis.Specification" Version="5.2.0" />
 		<PackageReference Include="Dapr.AspNetCore" Version="1.5.0" />
 		<PackageReference Include="Dapr.Client" Version="1.5.0" />
-		<PackageReference Include="Grpc.Tools" Version="2.43.0-pre1">
+		<PackageReference Include="Grpc.Tools" Version="2.43.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -20,32 +20,32 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="Confluent.Kafka" Version="1.8.2" />
 		<PackageReference Include="DeepCloner" Version="0.10.3" />
-		<PackageReference Include="DocumentFormat.OpenXml" Version="2.14.0" />
-		<PackageReference Include="DynamicExpresso.Core" Version="2.9.7" />
+		<PackageReference Include="DocumentFormat.OpenXml" Version="2.15.0" />
+		<PackageReference Include="DynamicExpresso.Core" Version="2.10.0" />
 		<PackageReference Include="EPPlus" Version="5.8.4" />
-		<PackageReference Include="GreenDonut" Version="12.4.1" />
-		<PackageReference Include="HotChocolate" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.AspNetCore" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.4.1" />
+		<PackageReference Include="GreenDonut" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.AspNetCore" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.5.0-preview.13" />
 		<PackageReference Include="HotChocolate.AspNetCore.GraphiQL" Version="10.5.5" />
 		<PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="10.5.5" />
-		<PackageReference Include="HotChocolate.Data" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Subscriptions" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Types" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Types.Filters" Version="12.4.1" />
-		<PackageReference Include="HotChocolate.Types.Sorting" Version="12.4.1" />
+		<PackageReference Include="HotChocolate.Data" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Subscriptions" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Types" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Types.Filters" Version="12.5.0-preview.13" />
+		<PackageReference Include="HotChocolate.Types.Sorting" Version="12.5.0-preview.13" />
 		<PackageReference Include="Humanizer" Version="2.13.14" />
 		<PackageReference Include="ICSharpCode.Decompiler" Version="7.2.0.6791-preview3" />
-		<PackageReference Include="IdentityModel" Version="6.0.0-preview.2" />
+		<PackageReference Include="IdentityModel" Version="6.0.0" />
 		<PackageReference Include="IdentityServer4.EntityFramework" Version="4.1.2" />
 		<PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.1.2" />
 		<PackageReference Include="Jint" Version="3.0.0-beta-2037" />
-		<PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0158" />
-		<PackageReference Include="libphonenumber-csharp" Version="8.12.34" />
+		<PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0175" />
+		<PackageReference Include="libphonenumber-csharp" Version="8.12.38" />
 		<PackageReference Include="MailKit" Version="3.0.0" />
 		<PackageReference Include="Mapster" Version="7.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.1" />
@@ -90,13 +90,13 @@
 		<PackageReference Include="Serilog.Enrichers.Thread" Version="3.2.0-dev-00752" />
 		<PackageReference Include="Serilog.Exceptions" Version="8.0.0" />
 		<PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.3-dev-00066" />
-		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.2-dev-00890" />
 		<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.5.0-alpha0003" />
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00947" />
 		<PackageReference Include="Serilog.Sinks.Seq" Version="5.1.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 		<PackageReference Include="System.CodeDom" Version="6.0.0" />
-		<PackageReference Include="Twilio" Version="5.68.2" />
+		<PackageReference Include="Twilio" Version="5.69.0" />
 		<PackageReference Include="Twilio.AspNet.Core" Version="5.68.3" />
 
 	</ItemGroup>
