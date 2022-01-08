@@ -13,7 +13,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetSignatureExtension
     {
-        public static string GetFullSignature(this MethodInfo method, bool invokable = false)
+        public static string GetFullSignature(this global::System.Reflection.MethodInfo method, bool invokable = false)
         {
             var signatureBuilder = new StringBuilder();
 
@@ -41,7 +41,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
             return signatureBuilder.ToString().Replace(oldValue: "+", newValue: ".");
         }
 
-        public static string GetSignature(this MethodInfo method, bool invokable = false)
+        public static string GetSignature(this global::System.Reflection.MethodInfo method, bool invokable = false)
         {
             var signatureBuilder = new StringBuilder();
 

@@ -29,11 +29,12 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                 // Register the OpenIddict server components.
                 .AddServer(configuration: options =>
                 {
-                    // Enable the authorization, logout, token and userinfo endpoints.
                     options.SetAuthorizationEndpointUris("/connect/authorize")
-                        .SetLogoutEndpointUris("/Identity/Account/Logout")
-                        .SetTokenEndpointUris("/connect/token")
-                        .SetUserinfoEndpointUris("/connect/userinfo");
+                               .SetLogoutEndpointUris("/connect/logout")
+                               .SetIntrospectionEndpointUris("/connect/introspect")
+                               .SetTokenEndpointUris("/connect/token")
+                               .SetUserinfoEndpointUris("/connect/userinfo")
+                               .SetVerificationEndpointUris("/connect/verify");
 
                     // Mark the "email", "profile" and "roles" scopes as supported scopes.
                     options.RegisterScopes(Scopes.Email, Scopes.Profile, Scopes.Roles, Scopes.Address, Scopes.Phone, Scopes.OfflineAccess);
@@ -49,11 +50,12 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                         .AddDevelopmentSigningCertificate();
 
                     // Register the ASP.NET Core host and configure the ASP.NET Core-specific options.
-                    options.UseAspNetCore()
-                        .EnableAuthorizationEndpointPassthrough()
-                        .EnableLogoutEndpointPassthrough()
-                        .EnableStatusCodePagesIntegration()
-                        .EnableTokenEndpointPassthrough();
+                      options.UseAspNetCore()
+                           .EnableAuthorizationEndpointPassthrough()
+                           .EnableLogoutEndpointPassthrough()
+                           .EnableTokenEndpointPassthrough()
+                           .EnableUserinfoEndpointPassthrough()
+                           .EnableStatusCodePagesIntegration();
 
 
                     //options.IgnoreEndpointPermissions();

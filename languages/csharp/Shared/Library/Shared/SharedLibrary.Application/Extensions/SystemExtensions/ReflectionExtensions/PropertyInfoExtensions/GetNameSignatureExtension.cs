@@ -13,7 +13,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetNameSignatureExtension
     {
-        public static string GetNameSignature(this PropertyInfo method)
+        public static string GetNameSignature(this global::System.Reflection.PropertyInfo method)
         {
             var signatureBuilder = new StringBuilder();
 

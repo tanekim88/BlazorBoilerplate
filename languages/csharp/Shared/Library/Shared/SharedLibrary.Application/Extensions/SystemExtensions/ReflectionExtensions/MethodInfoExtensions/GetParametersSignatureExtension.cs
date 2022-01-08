@@ -30,7 +30,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
         //    return methodParameters.ToList();
         //}
 
-        public static List<string> GetParameterSignatures(this MethodInfo method, bool invokable = false)
+        public static List<string> GetParameterSignatures(this global::System.Reflection.MethodInfo method, bool invokable = false)
         {
             var isExtensionMethod = method.IsDefined(attributeType: typeof(ExtensionAttribute), inherit: false);
             var methodParameters = method.GetParameters().AsEnumerable();
@@ -62,7 +62,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
             return methodParameterSignatures.ToList();
         }
 
-        public static List<string> GetFullParameterSignatures(this MethodInfo method, bool invokable = false)
+        public static List<string> GetFullParameterSignatures(this global::System.Reflection.MethodInfo method, bool invokable = false)
         {
             var isExtensionMethod = method.IsDefined(attributeType: typeof(ExtensionAttribute), inherit: false);
             var methodParameters = method.GetParameters().AsEnumerable();

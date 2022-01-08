@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using SharedCore.Application.Services.__Entities_Groups_00_Name__Services;
 
-namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IServiceCollectionExtensions
+namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IApplicationBuilderExtensions
 {
     public static class UseServerExtensions
     {
@@ -16,8 +16,23 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
         {
             app.UseResponseCompression();
 
+            app.UseCustomSecurityHeaders();
+            //X - Content - Type - Options: nosniff
+            //Strict - Transport - Security: max - age = 31536000; includeSubDomains - only applied to HTTPS responses
+            //X - Frame - Options: Deny - only applied to text / html responses
+            //X - XSS - Protection: 1; mode = block - only applied to text / html responses
+            //Referrer - Policy: strict - origin - when - cross - origin - only applied to text / html responses
+            //Content - Security - Policy: object-src 'none'; form - action 'self'; frame - ancestors 'none' - only applied to text / html responses
+
             if (env.IsDevelopment())
             {
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                    //options.RoutePrefix = string.Empty;
+                });
+
                 app.UseDeveloperExceptionPage(options: new DeveloperExceptionPageOptions
                 {
                     SourceCodeLineCount = 10
@@ -53,11 +68,12 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             app.UseWebSockets();
 
             // must be added after UseRouting and before UseEndpoints 
-            app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true});
+            app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
             app.UseEndpoints(configure: endpoints =>
             {
-                if (env.IsDevelopment()) {
+                if (env.IsDevelopment())
+                {
                     endpoints.MapGrpcReflectionService().EnableGrpcWeb();
                 }
 
@@ -70,10 +86,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             });
 
             app.UseSwagger();
-            app.UseSwaggerUI(setupAction: c =>
-            {
-                c.SwaggerEndpoint(url: "/swagger/v1/swagger.json", name: "My API v1");
-            });
+            app.UseCustomSwaggerUIExtension();
 
             return app;
         }

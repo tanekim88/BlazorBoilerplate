@@ -21,8 +21,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             services.AddCustomControllersWithViews();
             services.AddCustomCors();
-            services.AddCustomAuthDbContextPool(configuration);
-            services.AddCustomAuthDbContext(configuration);
+
             services.AddCustomGraphQLServer();
             services.AddCustomIdentity();
             //services.AddCustomIdentityServerAuthentication(configuration);
@@ -35,10 +34,12 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
             services.AddCustomLocalization();
             services.AddCustomAuthentication(configuration: configuration);
+            //services.AddCustomAuthDbContextPool(configuration);
+            //services.AddCustomAuthDbContext(configuration);
             services.AddCustomOpenIddictDbContextPool(configuration: configuration);
             services.AddCustomOpenIddictDbContext(configuration: configuration);
-
             services.AddCustomOpenIddict();
+
             services.AddCustomRazorPages();
             services.AddCustomSignalR();
             services.AddCustomSwaggerGen();

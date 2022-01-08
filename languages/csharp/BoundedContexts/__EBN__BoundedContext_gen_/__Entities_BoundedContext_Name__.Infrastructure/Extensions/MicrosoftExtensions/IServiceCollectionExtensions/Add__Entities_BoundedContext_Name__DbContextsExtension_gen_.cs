@@ -18,7 +18,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.Extensions.MicrosoftEx
         {
             services.AddDbContext<__Entities_BoundedContext_Name__DbContext_Gen_>(optionsAction: options =>
                 options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
                 .UseSqlServer(
                     connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
                     sqlServerOptionsAction: sql =>

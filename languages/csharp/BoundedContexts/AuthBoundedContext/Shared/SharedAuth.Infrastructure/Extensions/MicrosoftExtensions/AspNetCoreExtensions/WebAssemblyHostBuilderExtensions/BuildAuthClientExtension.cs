@@ -25,7 +25,7 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
                 // For more information about this bug, visit https://github.com/dotnet/aspnetcore/issues/28344.
                 //
                 options.ProviderOptions.ResponseMode = "query";
-
+                //options.ProviderOptions.DefaultScopes.Add("email");
                 // options.AuthenticationPaths.RemoteRegisterPath = "https://localhost:5001/Identity/Account/Register";
                 options.AuthenticationPaths.RemoteRegisterPath = "Account/Register";
                 options.AuthenticationPaths.RemoteProfilePath = "Account/Manage";

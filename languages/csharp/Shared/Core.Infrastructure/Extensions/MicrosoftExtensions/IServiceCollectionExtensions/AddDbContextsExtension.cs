@@ -18,7 +18,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             string migrationsAssembly = typeof(TDbContext).Assembly.FullName;
             services.AddDbContext<TDbContext>(optionsAction: options =>
                 options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
                 .UseSqlServer(
                     connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
                     sqlServerOptionsAction: sql =>

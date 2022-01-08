@@ -9,7 +9,7 @@ namespace Core.Infrastructure
 
     public class SampleId : TypedIdValueBase<SampleId> { }
 
-    public class StronglyTypedIdValueConverterSelector : ValueConverterSelector
+    public class StronglyTypedIdValueConverterSelector<TId> : ValueConverterSelector
     {
         // The dictionary in the base type is private, so we need our own one here.
         private readonly ConcurrentDictionary<(Type ModelClrType, Type ProviderClrType), ValueConverterInfo> _converters
@@ -31,7 +31,7 @@ namespace Core.Infrastructure
             var underlyingProviderType = UnwrapNullableType(providerClrType);
 
             // 'null' means 'get any value converters for the modelClrType'
-            if (underlyingProviderType is null || underlyingProviderType == typeof(int))
+            if (underlyingProviderType is null || underlyingProviderType == typeof(TId))
             {
 
                 // Try and get a nested class with the expected name. 
@@ -52,15 +52,15 @@ namespace Core.Infrastructure
                 if (converterType is not null)
                 {
                     yield return _converters.GetOrAdd(
-                        (underlyingModelType, typeof(int)),
+                        (underlyingModelType, typeof(TId)),
                         k =>
                         {
                             // Create an instance of the converter whenever it's requested.
                             Func<ValueConverterInfo, ValueConverter> factory =
                                     info => (ValueConverter)Activator.CreateInstance(converterType, info.MappingHints);
 
-                            // Build the info for our strongly-typed ID => Guid converter
-                            return new ValueConverterInfo(modelClrType, typeof(int), factory);
+                            // Build the info for our strongly-typed ID => TId converter
+                            return new ValueConverterInfo(modelClrType, typeof(TId), factory);
                         }
                     );
                 }

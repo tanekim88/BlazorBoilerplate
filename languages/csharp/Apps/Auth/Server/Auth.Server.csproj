@@ -96,6 +96,7 @@
 		<PackageReference Include="Mono.TextTemplating" Version="2.2.1" />
 		<PackageReference Include="OpenIddict.AspNetCore" Version="3.1.1" />
 		<PackageReference Include="OpenIddict.EntityFrameworkCore" Version="3.1.1" />
+		<PackageReference Include="OpenIddict.Quartz" Version="3.1.1" />
 		<PackageReference Include="OpenIddict.Validation.AspNetCore" Version="3.1.1" />
 		<PackageReference Include="Pluralize.NET" Version="1.0.2" />
 		<PackageReference Include="protobuf-net" Version="3.0.101" />

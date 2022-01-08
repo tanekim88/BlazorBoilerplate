@@ -32,4 +32,8 @@
     <ProjectReference Include="..\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

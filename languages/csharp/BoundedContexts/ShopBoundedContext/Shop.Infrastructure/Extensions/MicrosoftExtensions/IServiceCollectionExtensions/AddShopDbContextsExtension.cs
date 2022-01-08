@@ -13,7 +13,7 @@ namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         public static IServiceCollection AddCustomAuthDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ShopDbContext>(optionsAction: options => options
-            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
             .UseSqlServer(connectionString: configuration.GetConnectionString(name: "DefaultConnection"), sqlServerOptionsAction: sql =>
             {
                 sql.MigrationsAssembly(assemblyName: migrationsAssembly);

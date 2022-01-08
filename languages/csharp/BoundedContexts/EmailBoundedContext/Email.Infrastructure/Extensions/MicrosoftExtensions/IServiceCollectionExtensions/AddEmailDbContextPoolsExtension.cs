@@ -13,7 +13,7 @@ namespace Email.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollection
         public static IServiceCollection AddCustomAuthDbContextPool(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddPooledDbContextFactory<EmailDbContext>(optionsAction: options => options
-            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
             .UseSqlServer(connectionString: configuration.GetConnectionString(name: "DefaultConnection"), sqlServerOptionsAction: sql =>
             {
                 sql.MigrationsAssembly(assemblyName: migrationsAssembly);

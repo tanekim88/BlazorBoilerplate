@@ -36,6 +36,7 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
 
             // Maps to the AspNetUserLogins table
             builder.ToTable(name: "AspNetUserLogins");
+
             builder.HasOne(navigationExpression: l => l.User).WithMany(navigationExpression: u => u.UserLogins).HasForeignKey(foreignKeyExpression: u => u.UserId);
         /*%s:end Body*/
         }

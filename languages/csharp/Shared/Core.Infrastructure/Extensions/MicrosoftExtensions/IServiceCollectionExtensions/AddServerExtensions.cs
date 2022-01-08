@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+using System;
 using System.Reflection;
 
 
@@ -18,6 +20,8 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         public static IServiceCollection AddCustomServer(
             this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
+            services.AddCustomSwaggerDoc();
+
             services.AddGrpc();
             services.AddGrpcReflection();
 

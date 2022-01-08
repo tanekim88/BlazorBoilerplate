@@ -13,7 +13,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetSignatureExtension
     {
-        public static string GetSignature(this PropertyInfo propertyInfo)
+        public static string GetSignature(this global::System.Reflection.PropertyInfo propertyInfo)
         {
             var signatureBuilder = new StringBuilder();
 
@@ -29,7 +29,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
             return signatureBuilder.ToString();
         }
 
-        public static string GetFullSignature(this PropertyInfo propertyInfo)
+        public static string GetFullSignature(this global::System.Reflection.PropertyInfo propertyInfo)
         {
             var signatureBuilder = new StringBuilder();
 

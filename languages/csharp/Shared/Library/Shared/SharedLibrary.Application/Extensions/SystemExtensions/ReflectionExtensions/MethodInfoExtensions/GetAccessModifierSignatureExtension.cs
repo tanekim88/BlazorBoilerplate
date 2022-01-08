@@ -12,7 +12,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetAccessModifierSignatureExtension
     {
-        public static string GetAccessModifierSignature(this MethodInfo method)
+        public static string GetAccessModifierSignature(this global::System.Reflection.MethodInfo method)
         {
             string signature = null;
 

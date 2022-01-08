@@ -12,12 +12,12 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetTypeSignatureExtension
     {
-        public static string GetTypeSignature(this PropertyInfo propertyInfo)
+        public static string GetTypeSignature(this global::System.Reflection.PropertyInfo propertyInfo)
         {
             return propertyInfo.PropertyType.GetSignature();
         }
 
-        public static string GetFullTypeSignature(this PropertyInfo propertyInfo)
+        public static string GetFullTypeSignature(this global::System.Reflection.PropertyInfo propertyInfo)
         {
             return propertyInfo.PropertyType.GetFullSignature();
         }

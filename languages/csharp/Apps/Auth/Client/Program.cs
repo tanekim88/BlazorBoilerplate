@@ -1,35 +1,26 @@
 
 
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+using Auth.Client;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Net.Http;
 
 
 
-namespace Auth.Client
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
-            builder.RootComponents.Add<App>(selector: "#app");
+var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
+builder.RootComponents.Add<App>(selector: "#app");
 
-            builder.Services.AddHttpClient(name: "Auth.ServerAPI",
-                    configureClient: client =>
-                        client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
-                .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+builder.Services.AddHttpClient(name: "Auth.ServerAPI",
+        configureClient: client =>
+            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
+    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-            // Supply HttpClient instances that include access tokens when making requests to the server project
-            builder.Services.AddScoped(implementationFactory: sp =>
-                sp.GetRequiredService<IHttpClientFactory>().CreateClient(name: "Auth.ServerAPI"));
+// Supply HttpClient instances that include access tokens when making requests to the server project
+builder.Services.AddScoped(implementationFactory: sp =>
+    sp.GetRequiredService<IHttpClientFactory>().CreateClient(name: "Auth.ServerAPI"));
 
-            builder.Services.AddApiAuthorization();
+builder.Services.AddApiAuthorization();
 
-            await builder.Build().RunAsync();
-        }
-    }
-}
+await builder.Build().RunAsync();

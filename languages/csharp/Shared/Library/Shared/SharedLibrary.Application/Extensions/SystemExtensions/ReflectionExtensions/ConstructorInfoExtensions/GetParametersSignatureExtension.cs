@@ -15,7 +15,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetParametersSignatureExtension
     {
-        public static List<string> GetParameterSignatures(this ConstructorInfo constructorInfo, bool invokable = false)
+        public static List<string> GetParameterSignatures(this global::System.Reflection.ConstructorInfo constructorInfo, bool invokable = false)
         {
             var isExtensionMethod =
                 constructorInfo.IsDefined(attributeType: typeof(ExtensionAttribute), inherit: false);
@@ -48,7 +48,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
             return methodParameterSignatures.ToList();
         }
 
-        public static List<string> GetFullParameterSignatures(this ConstructorInfo constructorInfo,
+        public static List<string> GetFullParameterSignatures(this global::System.Reflection.ConstructorInfo constructorInfo,
             bool invokable = false)
         {
             var isExtensionMethod =

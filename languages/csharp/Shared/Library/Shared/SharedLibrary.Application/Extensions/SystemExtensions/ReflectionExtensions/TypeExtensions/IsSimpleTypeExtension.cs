@@ -6,8 +6,6 @@
 
 using System.Collections.Concurrent;
 
-
-
 namespace System.Reflection
 {
     public static class IsSimpleTypeExtension

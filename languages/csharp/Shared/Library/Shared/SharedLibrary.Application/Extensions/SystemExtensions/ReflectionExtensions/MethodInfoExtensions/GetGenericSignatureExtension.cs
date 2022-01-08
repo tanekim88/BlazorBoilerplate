@@ -13,7 +13,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetGenericSignatureExtension
     {
-        public static string GetGenericFullSignature(this MethodInfo method)
+        public static string GetGenericFullSignature(this global::System.Reflection.MethodInfo method)
         {
             if (method == null) throw new ArgumentNullException(paramName: nameof(method));
             if (!method.IsGenericMethod) throw new ArgumentException(message: $"{method.Name} is not generic.");
@@ -21,7 +21,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
             return TypeSignatureExtension.BuildGenericFullSignature(genericArgumentTypes: method.GetGenericArguments());
         }
 
-        public static string GetGenericSignature(this MethodInfo method)
+        public static string GetGenericSignature(this global::System.Reflection.MethodInfo method)
         {
             if (method == null) throw new ArgumentNullException(paramName: nameof(method));
             if (!method.IsGenericMethod) throw new ArgumentException(message: $"{method.Name} is not generic.");

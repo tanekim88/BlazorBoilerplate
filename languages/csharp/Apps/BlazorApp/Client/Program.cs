@@ -1,36 +1,27 @@
 
 
+using BlazorApp.Client;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.WebAssemblyHostBuilderExtensions;
 using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.WebAssemblyHostBuilderExtensions;
-using System.Threading.Tasks;
-
-namespace BlazorApp.Client
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
-            builder.RootComponents.Add<App>("#app");
-            builder.BuildClient();
-            builder.BuildAuthClient();
 
 
-            //builder.RootComponents.Add<App>(selector: "#app");
+var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
+builder.RootComponents.Add<App>("#app");
+builder.BuildClient();
+builder.BuildAuthClient();
 
-            //builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
-            //        configureClient: client =>
-            //            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
-            //    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+//builder.RootComponents.Add<App>(selector: "#app");
 
-            //// Supply HttpClient instances that include access tokens when making requests to the server project
-            //builder.Services.AddScoped(implementationFactory: sp =>
-            //    sp.GetRequiredService<IHttpClientFactory>().CreateClient(name: "BlazorApp.ServerAPI"));
+//builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
+//        configureClient: client =>
+//            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
+//    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-            //builder.Services.AddApiAuthorization();
+//// Supply HttpClient instances that include access tokens when making requests to the server project
+//builder.Services.AddScoped(implementationFactory: sp =>
+//    sp.GetRequiredService<IHttpClientFactory>().CreateClient(name: "BlazorApp.ServerAPI"));
 
-            await builder.Build().RunAsync();
-        }
-    }
-}
+//builder.Services.AddApiAuthorization();
+
+await builder.Build().RunAsync();

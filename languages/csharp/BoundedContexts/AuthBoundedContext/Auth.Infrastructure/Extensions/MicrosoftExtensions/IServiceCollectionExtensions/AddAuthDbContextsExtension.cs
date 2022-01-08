@@ -21,7 +21,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             services.AddDbContext<AuthDbContext>(optionsAction: options =>
                 options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector>()
+                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
                 .UseSqlServer(
                     connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
                     sqlServerOptionsAction: sql =>

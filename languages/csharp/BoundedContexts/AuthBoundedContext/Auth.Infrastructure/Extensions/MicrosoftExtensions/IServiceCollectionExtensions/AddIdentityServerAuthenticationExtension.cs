@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-
+using System.Threading.Tasks;
 
 namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
@@ -43,6 +42,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                         options.CallbackPath = "/authentication/login-callback";
                         options.SaveTokens = true;
                         options.GetClaimsFromUserInfoEndpoint = true;
+                        options.UseTokenLifetime = false;
 
                         //options.Scope.Add(IdentityServerConstants.StandardScopes.OpenId);
                         //options.Scope.Add(IdentityServerConstants.StandardScopes.Profile);
@@ -99,6 +99,13 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
                         //    return Task.CompletedTask;
                         //};
+
+                        //options.Events.OnAccessDenied = context =>
+                        //    {
+                        //        context.HandleResponse();
+                        //        context.Response.Redirect("/");
+                        //        return Task.CompletedTask;
+                        //    };
                     })
                 .AddGoogle(configureOptions: options =>
                 {

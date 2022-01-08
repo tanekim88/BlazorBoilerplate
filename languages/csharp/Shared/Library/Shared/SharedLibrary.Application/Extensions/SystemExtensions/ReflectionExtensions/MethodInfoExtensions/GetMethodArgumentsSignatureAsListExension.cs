@@ -15,7 +15,7 @@ namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtens
 {
     public static class GetMethodArgumentsSignatureAsListExension
     {
-        public static List<string> GetMethodArgumentsSignatureAsList(this MethodInfo method, bool invokable)
+        public static List<string> GetMethodArgumentsSignatureAsList(this global::System.Reflection.MethodInfo method, bool invokable)
         {
             var isExtensionMethod = method.IsDefined(attributeType: typeof(ExtensionAttribute), inherit: false);
             var methodParameters = method.GetParameters().AsEnumerable();
