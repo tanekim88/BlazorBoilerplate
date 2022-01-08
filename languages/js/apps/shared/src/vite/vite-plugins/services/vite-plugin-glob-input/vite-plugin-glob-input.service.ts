@@ -162,11 +162,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
         if (options.del) {
           processInputs(options.del, root, (input, absFrom, relTo) => {
-            const isDir = fs.lstatSync(absFrom).isDirectory();
-            if (isDir) {
-              fs.rmdirSync(absFrom, { recursive: true });
-            } else {
-              fs.unlinkSync(absFrom);
+            if (fs.existsSync(absFrom)) {
+              const isDir = fs.lstatSync(absFrom).isDirectory();
+              if (isDir) {
+                fs.rmdirSync(absFrom, { recursive: true });
+              } else {
+                fs.unlinkSync(absFrom);
+              }
             }
           });
         }
