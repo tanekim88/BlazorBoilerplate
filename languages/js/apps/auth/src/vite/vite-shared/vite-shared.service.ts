@@ -34,10 +34,12 @@ export class AuthViteSharedService extends ViteSharedService {
                     cssCodeSplit: true,
                     sourcemap: true,
                     minify: false,
-                    emptyOutDir: true,
+                    emptyOutDir: false,
                     polyfillDynamicImport: false,
                     target: 'esnext',
+                    
                 },
+                
                 server: {
                     port: 4010
                 },

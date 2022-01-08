@@ -43,7 +43,8 @@ export interface VitePluginGlobInputOptions {
   inputs: Input[],
   externalsForHtml?: { html: string, insertAt: any }[],
   sass?: Input[],
-  copy?: Input[]
+  copy?: Input[],
+  del?: Input[]
 }
 interface Data {
   absFrom?: string,
@@ -158,6 +159,17 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
         const root = config.root;
         const outDir = config.build.outDir;
+
+        if (options.del) {
+          processInputs(options.del, root, (input, absFrom, relTo) => {
+            const isDir = fs.lstatSync(absFrom).isDirectory();
+            if (isDir) {
+              fs.rmdirSync(absFrom, { recursive: true });
+            } else {
+              fs.unlinkSync(absFrom);
+            }
+          });
+        }
       },
 
 
@@ -451,7 +463,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const externals = options.externalsForHtml ?? [];
 
         externals.forEach(external => {
-          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`,'g');
+          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
           html = html.replace(
             reg,
             `${external.html}\n$&`
@@ -459,7 +471,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         });
 
         externals.forEach(external => {
-          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`,'g');
+          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
           html = html.replace(
             reg,
             ``

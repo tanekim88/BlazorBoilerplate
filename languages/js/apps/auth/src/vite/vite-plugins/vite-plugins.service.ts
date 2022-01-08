@@ -32,7 +32,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                         toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'bootstrap-icons.svg'),
                     },
                     {
-                        fromPath: this.authEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
+                        fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
                         toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'favicon.ico'),
                     },
                     {
@@ -47,6 +47,11 @@ export class AuthVitePluginsService extends VitePluginsService {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation-unobtrusive/dist'),
                         toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'lib/jquery-validation-unobtrusive'),
                     },
+                ],
+                del: [
+                    {
+                        fromPath: AuthPaths.wwwroot.toAbsolutePath(),
+                    }
                 ]
             })
         ]
