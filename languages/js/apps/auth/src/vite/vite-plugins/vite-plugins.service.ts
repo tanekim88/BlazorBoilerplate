@@ -23,29 +23,29 @@ export class AuthVitePluginsService extends VitePluginsService {
                 inputs: [
                     {
                         fromPath: authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
-                        toRelativePath: path.join(AuthPaths.Pages.Shared['_Layout.cshtml'].toRelativePath())
+                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.html')
                     },
                 ],
                 copy: [
                     {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'bootstrap-icons.svg'),
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'bootstrap-icons.svg'),
                     },
                     {
                         fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'favicon.ico'),
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'favicon.ico'),
                     },
                     {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery/dist'),
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'lib/jquery'),
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery'),
                     },
                     {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation/dist'),
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'lib/jquery-validation'),
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery-validation'),
                     },
                     {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation-unobtrusive/dist'),
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'lib/jquery-validation-unobtrusive'),
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery-validation-unobtrusive'),
                     },
                 ],
                 empty: [

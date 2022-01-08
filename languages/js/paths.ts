@@ -2732,6 +2732,11 @@
                             }
 
                         }
+,
+                        readonly "wwwroot": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
 
                     }
 ,
@@ -14330,6 +14335,11 @@
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
+,
+                            readonly "_Layout.html": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
 
                         }
 ,
@@ -20637,6 +20647,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\Properties\\serviceDependencies.local.json.user") }
                             }
+                        },
+                        "wwwroot": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\wwwroot",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\wwwroot") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\BlazorApp\\Server\\wwwroot") }
                         }
                     },
                     "Shared": {
@@ -29916,6 +29930,10 @@ export const RootPaths:RootPathsType = createProxy( {
                             "_Layout.cshtml": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") }
+                            },
+                            "_Layout.html": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html") }
                             }
                         },
                         "vite": {
