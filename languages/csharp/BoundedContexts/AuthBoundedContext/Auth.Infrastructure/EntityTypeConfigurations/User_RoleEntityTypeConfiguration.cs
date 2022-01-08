@@ -20,11 +20,13 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
         {
             base.Configure(builder);
             /*%s:begin Body*/
+
             // Primary key
-            builder.HasKey(keyExpression: r => new
-            {
-            r.UserId, r.RoleId
-            });
+            //builder.HasKey(keyExpression: r => new
+            //{
+            //    r.UserId, r.RoleId
+            //});
+
             // Maps to the AspNetUserRoles table
             builder.ToTable(name: "AspNetUserRoles");
             builder.HasOne(navigationExpression: r => r.User).WithMany(navigationExpression: u => u.User_Roles).HasForeignKey(foreignKeyExpression: u => u.UserId);

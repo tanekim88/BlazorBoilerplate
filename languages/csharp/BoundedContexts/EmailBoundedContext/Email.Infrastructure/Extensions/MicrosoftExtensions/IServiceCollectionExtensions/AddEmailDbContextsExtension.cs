@@ -1,4 +1,5 @@
 using Core.Infrastructure;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Email.Infrastructure.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -10,15 +11,10 @@ namespace Email.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollection
     public static class AddEmailDbContextsExtension
     {
         private static readonly string migrationsAssembly = typeof(EmailDbContext).Assembly.FullName;
-        public static IServiceCollection AddCustomAuthDbContext(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCustomEmailDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<EmailDbContext>(optionsAction: options => options
-            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-            .UseSqlServer(connectionString: configuration.GetConnectionString(name: "DefaultConnection"), sqlServerOptionsAction: sql =>
-            {
-                sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                sql.UseNetTopologySuite();
-            }).UseLazyLoadingProxies());
+            services.AddDbContext<EmailDbContext>(optionsAction: options =>
+                options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
             return services;
         }
     }

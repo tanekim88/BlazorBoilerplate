@@ -2,7 +2,7 @@ import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/e
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
-
+import solidPlugin from 'vite-plugin-solid';
 @CustomInjectable()
 export class SolidAppVitePluginsService extends VitePluginsService {
     @CustomInject(SolidAppEnvironmentService)
@@ -16,6 +16,7 @@ export class SolidAppVitePluginsService extends VitePluginsService {
     createManyPlugins() {
 
         return [
+            solidPlugin(),
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {

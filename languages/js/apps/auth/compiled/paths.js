@@ -20699,572 +20699,572 @@ exports.RootPaths = createProxy({
                     toRelativePath: () => "Js\\apps\\auth\\webpack.prod.ts"
                 }
             },
-            "solid-app": {
-                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app",
-                toRelativePath: () => "Js\\apps\\solid-app",
+            "auth": {
+                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth",
+                toRelativePath: () => "Js\\apps\\auth",
                 ".eslintrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.eslintrc.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.eslintrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.eslintrc.json",
+                    toRelativePath: () => "Js\\apps\\auth\\.eslintrc.json"
                 },
                 ".eslintrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.eslintrc.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.eslintrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.eslintrc.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\.eslintrc.ts"
                 },
                 ".prettierrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.prettierrc.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.prettierrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.prettierrc.json",
+                    toRelativePath: () => "Js\\apps\\auth\\.prettierrc.json"
                 },
                 ".prettierrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.prettierrc.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.prettierrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.prettierrc.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\.prettierrc.ts"
                 },
                 ".stylelintrc.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.stylelintrc.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.stylelintrc.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.stylelintrc.json",
+                    toRelativePath: () => "Js\\apps\\auth\\.stylelintrc.json"
                 },
                 ".stylelintrc.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.stylelintrc.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.stylelintrc.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.stylelintrc.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\.stylelintrc.ts"
                 },
                 ".vscode": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode",
-                    toRelativePath: () => "Js\\apps\\solid-app\\.vscode",
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.vscode",
+                    toRelativePath: () => "Js\\apps\\auth\\.vscode",
                     "launch.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\launch.json",
-                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\launch.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.vscode\\launch.json",
+                        toRelativePath: () => "Js\\apps\\auth\\.vscode\\launch.json"
                     },
                     "settings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\settings.json",
-                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\settings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.vscode\\settings.json",
+                        toRelativePath: () => "Js\\apps\\auth\\.vscode\\settings.json"
                     },
                     "tasks.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\.vscode\\tasks.json",
-                        toRelativePath: () => "Js\\apps\\solid-app\\.vscode\\tasks.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\.vscode\\tasks.json",
+                        toRelativePath: () => "Js\\apps\\auth\\.vscode\\tasks.json"
                     }
                 },
                 "berry.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\berry.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\berry.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\berry.json",
+                    toRelativePath: () => "Js\\apps\\auth\\berry.json"
                 },
                 "codegen-config.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\codegen-config.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\codegen-config.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\codegen-config.json",
+                    toRelativePath: () => "Js\\apps\\auth\\codegen-config.json"
                 },
                 "configs.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\configs.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\configs.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\configs.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\configs.ts"
                 },
                 "Graphql.graphql": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\Graphql.graphql",
-                    toRelativePath: () => "Js\\apps\\solid-app\\Graphql.graphql"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\Graphql.graphql",
+                    toRelativePath: () => "Js\\apps\\auth\\Graphql.graphql"
                 },
                 "Monikers.imagemanifest": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\Monikers.imagemanifest",
-                    toRelativePath: () => "Js\\apps\\solid-app\\Monikers.imagemanifest"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\Monikers.imagemanifest",
+                    toRelativePath: () => "Js\\apps\\auth\\Monikers.imagemanifest"
                 },
                 "node_modules": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\node_modules",
-                    toRelativePath: () => "Js\\apps\\solid-app\\node_modules"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\node_modules",
+                    toRelativePath: () => "Js\\apps\\auth\\node_modules"
                 },
                 "package-lock.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\package-lock.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\package-lock.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\package-lock.json",
+                    toRelativePath: () => "Js\\apps\\auth\\package-lock.json"
                 },
                 "package.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\package.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\package.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\package.json",
+                    toRelativePath: () => "Js\\apps\\auth\\package.json"
                 },
                 "paths.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\paths.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\paths.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\paths.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\paths.ts"
                 },
                 "src": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src",
-                    toRelativePath: () => "Js\\apps\\solid-app\\src",
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src",
+                    toRelativePath: () => "Js\\apps\\auth\\src",
                     "app.controller.spec.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.controller.spec.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.controller.spec.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\app.controller.spec.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\app.controller.spec.ts"
                     },
                     "app.controller.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.controller.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.controller.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\app.controller.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\app.controller.ts"
                     },
                     "app.module.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.module.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.module.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\app.module.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\app.module.ts"
                     },
                     "app.service.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\app.service.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\app.service.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\app.service.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\app.service.ts"
                     },
                     "appsettings.Development.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\appsettings.Development.json",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\appsettings.Development.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\appsettings.Development.json",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\appsettings.Development.json"
                     },
                     "appsettings.json": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\appsettings.json",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\appsettings.json"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\appsettings.json",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\appsettings.json"
                     },
                     "index.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\index.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\index.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\index.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\index.ts"
                     },
                     "logo": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\logo",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\logo",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\logo",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\logo",
                         "icon-512.png": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\logo\\icon-512.png",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\logo\\icon-512.png"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\logo\\icon-512.png",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\logo\\icon-512.png"
                         }
                     },
                     "main.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\main.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\main.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\main.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\main.ts"
                     },
                     "modules": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\modules",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\modules"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\modules",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\modules"
                     },
                     "server.ts": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\server.ts",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\server.ts"
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\server.ts",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\server.ts"
                     },
                     "service-worker": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\service-worker",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\service-worker",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\service-worker",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\service-worker",
                         "index.ts": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\service-worker\\index.ts",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\service-worker\\index.ts"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\service-worker\\index.ts",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\service-worker\\index.ts"
                         }
                     },
                     "templates": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\templates",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\templates",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\templates",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\templates",
                         "index.html": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\templates\\index.html",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\templates\\index.html"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\templates\\index.html",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\templates\\index.html"
                         }
                     },
                     "web": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\web",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\web",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\web",
                         "index.scss": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\index.scss",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\index.scss"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\web\\index.scss",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\web\\index.scss"
                         },
                         "libraries": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\libraries",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\libraries",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\web\\libraries",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\web\\libraries",
                             "index.scss": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\web\\libraries\\index.scss",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\web\\libraries\\index.scss"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\web\\libraries\\index.scss",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\web\\libraries\\index.scss"
                             }
                         }
                     },
                     "webpack": {
-                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack",
-                        toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack",
+                        toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack",
+                        toRelativePath: () => "Js\\apps\\auth\\src\\webpack",
                         "loaders": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders",
                             "webpack-custom-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-custom-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders\\webpack-custom-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders\\webpack-custom-sass-loader.js"
                             },
                             "webpack-post-postcss-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-postcss-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders\\webpack-post-postcss-loader.js",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders\\webpack-post-postcss-loader.js"
                             },
                             "webpack-post-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-post-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders\\webpack-post-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders\\webpack-post-sass-loader.js"
                             },
                             "webpack-pre-postcss-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders\\webpack-pre-postcss-loader.js"
                             },
                             "webpack-pre-sass-loader.js": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\loaders\\webpack-pre-sass-loader.js"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\loaders\\webpack-pre-sass-loader.js",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\loaders\\webpack-pre-sass-loader.js"
                             }
                         },
                         "plugins": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins",
                             "webpack-clean-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin",
                                 "webpack-clean-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-clean-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-clean-webpack-plugin\\webpack-clean-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-copy-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin",
                                 "webpack-copy-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-copy-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-copy-webpack-plugin\\webpack-copy-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-extract-svg-sprite-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin",
                                 "webpack-extract-svg-sprite-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-extract-svg-sprite-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-extract-svg-sprite-webpack-plugin\\webpack-extract-svg-sprite-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-favicons-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin",
                                 "webpack-favicons-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-favicons-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-favicons-webpack-plugin\\webpack-favicons-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-html-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin",
                                 "webpack-html-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-html-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-html-webpack-plugin\\webpack-html-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-mini-css-extract-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin",
                                 "webpack-mini-css-extract-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.spec.ts"
                                 },
                                 "webpack-mini-css-extract-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-mini-css-extract-plugin\\webpack-mini-css-extract-plugin.service.ts"
                                 }
                             },
                             "webpack-plugins": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins",
                                 "webpack-plugins.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.spec.ts"
                                 },
                                 "webpack-plugins.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins\\webpack-plugins.service.ts"
                                 }
                             },
                             "webpack-plugins.module.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins.module.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-plugins.module.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins.module.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-plugins.module.ts"
                             },
                             "webpack-remove-files-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin",
                                 "webpack-remove-files-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-remove-files-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-remove-files-webpack-plugin\\webpack-remove-files-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-svg-sprite-loader-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin",
                                 "webpack-svg-sprite-loader-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.spec.ts"
                                 },
                                 "webpack-svg-sprite-loader-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-svg-sprite-loader-plugin\\webpack-svg-sprite-loader-plugin.service.ts"
                                 }
                             },
                             "webpack-tsconfig-paths-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin",
                                 "webpack-tsconfig-paths-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-tsconfig-paths-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-tsconfig-paths-webpack-plugin\\webpack-tsconfig-paths-webpack-plugin.service.ts"
                                 }
                             },
                             "webpack-watch-entries-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin",
                                 "webpack-watch-entries-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.spec.ts"
                                 },
                                 "webpack-watch-entries-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-watch-entries-plugin\\webpack-watch-entries-plugin.service.ts"
                                 }
                             },
                             "webpack-webpack-chokidar-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin",
                                 "webpack-webpack-chokidar-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.spec.ts"
                                 },
                                 "webpack-webpack-chokidar-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-chokidar-plugin\\webpack-webpack-chokidar-plugin.service.ts"
                                 }
                             },
                             "webpack-webpack-fix-style-only-entries": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries",
                                 "webpack-webpack-fix-style-only-entries.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.spec.ts"
                                 },
                                 "webpack-webpack-fix-style-only-entries.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-webpack-fix-style-only-entries\\webpack-webpack-fix-style-only-entries.service.ts"
                                 }
                             },
                             "webpack-workbox-webpack-plugin": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin",
                                 "webpack-workbox-webpack-plugin.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.spec.ts"
                                 },
                                 "webpack-workbox-webpack-plugin.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\plugins\\webpack-workbox-webpack-plugin\\webpack-workbox-webpack-plugin.service.ts"
                                 }
                             }
                         },
                         "rules": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules",
                             "webpack-csv-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules",
                                 "webpack-csv-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.spec.ts"
                                 },
                                 "webpack-csv-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-csv-rules\\webpack-csv-rules.service.ts"
                                 }
                             },
                             "webpack-font-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules",
                                 "webpack-font-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.spec.ts"
                                 },
                                 "webpack-font-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-font-rules\\webpack-font-rules.service.ts"
                                 }
                             },
                             "webpack-image-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules",
                                 "webpack-image-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.spec.ts"
                                 },
                                 "webpack-image-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-image-rules\\webpack-image-rules.service.ts"
                                 }
                             },
                             "webpack-json-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules",
                                 "webpack-json-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.spec.ts"
                                 },
                                 "webpack-json-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-json-rules\\webpack-json-rules.service.ts"
                                 }
                             },
                             "webpack-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules",
                                 "webpack-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.spec.ts"
                                 },
                                 "webpack-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules\\webpack-rules.service.ts"
                                 }
                             },
                             "webpack-rules.module.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules.module.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-rules.module.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules.module.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-rules.module.ts"
                             },
                             "webpack-style-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules",
                                 "webpack-style-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.spec.ts"
                                 },
                                 "webpack-style-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-style-rules\\webpack-style-rules.service.ts"
                                 }
                             },
                             "webpack-svg-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules",
                                 "webpack-svg-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.spec.ts"
                                 },
                                 "webpack-svg-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-svg-rules\\webpack-svg-rules.service.ts"
                                 }
                             },
                             "webpack-ts-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules",
                                 "webpack-ts-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.spec.ts"
                                 },
                                 "webpack-ts-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-ts-rules\\webpack-ts-rules.service.ts"
                                 }
                             },
                             "webpack-xml-rules": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules",
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules",
                                 "webpack-xml-rules.service.spec.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.spec.ts"
                                 },
                                 "webpack-xml-rules.service.ts": {
-                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts",
-                                    toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts"
+                                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts",
+                                    toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\rules\\webpack-xml-rules\\webpack-xml-rules.service.ts"
                                 }
                             }
                         },
                         "webpack-dev": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-dev",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-dev",
                             "webpack-dev.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-dev\\webpack-dev.service.spec.ts"
                             },
                             "webpack-dev.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-dev\\webpack-dev.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-dev\\webpack-dev.service.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-dev\\webpack-dev.service.ts"
                             }
                         },
                         "webpack-prod": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-prod",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-prod",
                             "webpack-prod.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-prod\\webpack-prod.service.spec.ts"
                             },
                             "webpack-prod.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-prod\\webpack-prod.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-prod\\webpack-prod.service.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-prod\\webpack-prod.service.ts"
                             }
                         },
                         "webpack-shared": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared",
                             "webpack-shared.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared\\webpack-shared.service.spec.ts"
                             },
                             "webpack-shared.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared\\webpack-shared.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared\\webpack-shared.service.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared\\webpack-shared.service.ts"
                             }
                         },
                         "webpack-shared-config": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config",
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared-config",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared-config",
                             "webpack-shared-config.service.spec.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.spec.ts"
                             },
                             "webpack-shared-config.service.ts": {
-                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts",
-                                toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts"
+                                toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts",
+                                toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack-shared-config\\webpack-shared-config.service.ts"
                             }
                         },
                         "webpack.module.ts": {
-                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\src\\webpack\\webpack.module.ts",
-                            toRelativePath: () => "Js\\apps\\solid-app\\src\\webpack\\webpack.module.ts"
+                            toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\src\\webpack\\webpack.module.ts",
+                            toRelativePath: () => "Js\\apps\\auth\\src\\webpack\\webpack.module.ts"
                         }
                     }
                 },
                 "tailwind.config.js": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.js",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.js"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tailwind.config.js",
+                    toRelativePath: () => "Js\\apps\\auth\\tailwind.config.js"
                 },
                 "tailwind.config.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tailwind.config.json",
+                    toRelativePath: () => "Js\\apps\\auth\\tailwind.config.json"
                 },
                 "tailwind.config.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tailwind.config.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tailwind.config.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tailwind.config.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\tailwind.config.ts"
                 },
                 "tsconfig.backup.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.backup.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.backup.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tsconfig.backup.json",
+                    toRelativePath: () => "Js\\apps\\auth\\tsconfig.backup.json"
                 },
                 "tsconfig.json": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.json",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.json"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tsconfig.json",
+                    toRelativePath: () => "Js\\apps\\auth\\tsconfig.json"
                 },
                 "tsconfig.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\tsconfig.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\tsconfig.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\tsconfig.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\tsconfig.ts"
                 },
                 "webpack.dev.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\webpack.dev.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\webpack.dev.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\webpack.dev.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\webpack.dev.ts"
                 },
                 "webpack.prod.ts": {
-                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\solid-app\\webpack.prod.ts",
-                    toRelativePath: () => "Js\\apps\\solid-app\\webpack.prod.ts"
+                    toAbsolutePath: () => "C:\\Projects\\Js\\apps\\auth\\webpack.prod.ts",
+                    toRelativePath: () => "Js\\apps\\auth\\webpack.prod.ts"
                 }
             },
             "shared": {
@@ -23872,9 +23872,9 @@ exports.RootPaths = createProxy({
             toAbsolutePath: () => "C:\\Projects\\Js\\auth.code-workspace",
             toRelativePath: () => "Js\\auth.code-workspace"
         },
-        "solid-app.code-workspace": {
-            toAbsolutePath: () => "C:\\Projects\\Js\\solid-app.code-workspace",
-            toRelativePath: () => "Js\\solid-app.code-workspace"
+        "auth.code-workspace": {
+            toAbsolutePath: () => "C:\\Projects\\Js\\auth.code-workspace",
+            toRelativePath: () => "Js\\auth.code-workspace"
         },
         "compiled": {
             toAbsolutePath: () => "C:\\Projects\\Js\\compiled",
@@ -24007,9 +24007,9 @@ exports.RootPaths = createProxy({
                 toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\auth.code-workspace",
                 toRelativePath: () => "Js\\workspaces\\auth.code-workspace"
             },
-            "solid-app.code-workspace": {
-                toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\solid-app.code-workspace",
-                toRelativePath: () => "Js\\workspaces\\solid-app.code-workspace"
+            "auth.code-workspace": {
+                toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\auth.code-workspace",
+                toRelativePath: () => "Js\\workspaces\\auth.code-workspace"
             },
             "shared.code-workspace": {
                 toAbsolutePath: () => "C:\\Projects\\Js\\workspaces\\shared.code-workspace",

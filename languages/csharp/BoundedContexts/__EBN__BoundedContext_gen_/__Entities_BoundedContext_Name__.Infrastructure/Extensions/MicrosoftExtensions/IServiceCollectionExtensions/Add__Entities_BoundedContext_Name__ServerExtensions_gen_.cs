@@ -8,7 +8,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.Extensions.MicrosoftEx
 {
     public static class Add__Entities_BoundedContext_Name__ServerExtensions_gen_
     {
-        public static IServiceCollection AddCustomAuthServer(
+        public static IServiceCollection AddCustom__Entities_BoundedContext_Name__Server(
             this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
          

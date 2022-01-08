@@ -22,9 +22,9 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         html: `
                         <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
                         <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
-                    `, insertAt: '<head>'
+                    `, insertAt: '@head-start'
                     },
-                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '</head>' },
+                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '@head-end' },
                     {
                         html: `
                     <script src="_content/Material.Blazor/material.blazor.min.js"></script>
@@ -34,7 +34,7 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                     <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
                     <script src="_framework/blazor.webassembly.js"></script>
                     <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
-                    `, insertAt: '</body>'
+                    `, insertAt: '@body-end'
                     },
                 ],
                 inputs: [

@@ -25,7 +25,7 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
             // Maps to the AspNetRoleClaims table
             builder.ToTable(name: "AspNetRoleClaims");
             builder.HasOne(navigationExpression: pt => pt.Role).WithMany(navigationExpression: t => t.RoleClaims).HasForeignKey(foreignKeyExpression: pt => pt.RoleId);
-        /*%s:end Body*/
+            /*%s:end Body*/
         }
     }
 }

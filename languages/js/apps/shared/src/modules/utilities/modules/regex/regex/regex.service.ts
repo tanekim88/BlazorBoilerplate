@@ -8,7 +8,7 @@ export class RegexService {
         return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
     }
 
-    escapeRegExpIfStr(arg: string | RegExp) {
+    private escapeRegExpIfStr(arg: string | RegExp) {
         if (arg instanceof RegExp) {
             return arg;
         }

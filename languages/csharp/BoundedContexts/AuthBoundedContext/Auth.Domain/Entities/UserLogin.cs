@@ -39,9 +39,11 @@ namespace Auth.Domain.Entities
         /*%s:begin ConstructorBody*/
         /*%s:end ConstructorBody*/
         }
-
+        [Key]
+        [Column(Order = 0)]
         public string LoginProvider { get; private set; }
-
+        [Key]
+        [Column(Order = 1)]
         public string ProviderKey { get; private set; }
 
         [ForeignKey(name: nameof(UserId))]

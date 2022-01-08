@@ -1,5 +1,5 @@
 
-import { CustomInjectable } from '#shared/src/functions/process-providers';
+import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 // import { CustomInjectable } from '../../../functions/process-webpack-providers';
 import path from 'path';
 
@@ -16,6 +16,7 @@ import sass from 'sass';
 import chokidar from 'chokidar';
 import _ from 'lodash';
 import { renameExtension } from '#shared/src/functions/rename-extension';
+import { RegexService } from '#root/apps/shared/src/modules/utilities/modules/regex/regex/regex.service';
 let sassWatcher: chokidar.FSWatcher;
 let copyWatcher: chokidar.FSWatcher;
 
@@ -40,7 +41,7 @@ interface Input {
 }
 export interface VitePluginGlobInputOptions {
   inputs: Input[],
-  externalsForHtml?: { html: string, insertAt: any, pos?: 'before' | 'after' }[],
+  externalsForHtml?: { html: string, insertAt: any }[],
   sass?: Input[],
   copy?: Input[]
 }
@@ -69,8 +70,11 @@ enum NodeType {
 }
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
+  @CustomInject(RegexService)
+  protected regexService: RegexService;
 
   createPlugin(options: VitePluginGlobInputOptions) {
+    const regexService = this.regexService;
     options.externalsForHtml = options.externalsForHtml ?? [];
 
     let config;
@@ -442,16 +446,22 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(this);
         // console.dir(html);
 
+
         const externals = options.externalsForHtml ?? [];
+
         externals.forEach(external => {
-          let pos = external.pos;
-          if (!pos) {
-            pos = external.insertAt.includes('</') ? 'before' : 'after'
-          }
-          const replaceWith = pos == 'after' ? `$&\n${external.html}` : `${external.html}\n$&`
+          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`,'g');
           html = html.replace(
-            external.insertAt,
-            replaceWith
+            reg,
+            `${external.html}\n$&`
+          )
+        });
+
+        externals.forEach(external => {
+          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`,'g');
+          html = html.replace(
+            reg,
+            ``
           )
         });
 

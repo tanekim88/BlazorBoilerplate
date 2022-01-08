@@ -1,11 +1,7 @@
 /*%s:begin Header*/
 using Auth.Domain.Entities;
 using Auth.Domain.ValueObjects.Ids;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 /*%s:end Header*/
-using Auth.Domain.Entities;
-using Auth.Domain.ValueObjects.Ids;
 using Core.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -23,10 +19,13 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
             /*%s:begin Body*/
             // Composite primary key consisting of the LoginProvider and the key to use
             // with that provider
-            builder.HasKey(keyExpression: l => new
-            {
-            l.LoginProvider, l.ProviderKey
-            });
+
+            //builder.HasKey(keyExpression: l => new
+            //{
+            //    l.LoginProvider,
+            //    l.ProviderKey
+            //});
+
             if (maxKeyLength > 0)
             {
                 // Limit the size of the composite key columns due to common DB restrictions

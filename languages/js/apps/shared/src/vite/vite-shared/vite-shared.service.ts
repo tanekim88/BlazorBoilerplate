@@ -13,6 +13,10 @@ export class ViteSharedService extends ViteBaseService {
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
                 root: RootPaths.toAbsolutePath(),
+                build: {
+                    polyfillDynamicImport: false,
+                    target: 'esnext',
+                },
                 plugins: [
                     vanillaExtractPlugin({})
                 ],

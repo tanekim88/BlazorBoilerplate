@@ -6,7 +6,7 @@ namespace Email.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollection
 {
     public static class AddEmailServerExtensions
     {
-        public static IServiceCollection AddCustomAuthServer(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
+        public static IServiceCollection AddCustomEmailServer(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
             return services;
         }

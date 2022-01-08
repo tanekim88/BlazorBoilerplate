@@ -6,7 +6,7 @@ namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 {
     public static class AddShopServerExtensions
     {
-        public static IServiceCollection AddCustomAuthServer(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
+        public static IServiceCollection AddCustomShopServer(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
             return services;
         }

@@ -1,8 +1,10 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
+using Auth.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Auth.Infrastructure.OpenIdDict;
 using Core.Infrastructure;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
@@ -21,17 +23,9 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             services.AddDbContext<AuthDbContext>(optionsAction: options =>
             {
-                options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-                .UseSqlServer(
-                    connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
-                    sqlServerOptionsAction: sql =>
-                    {
-                        sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                        sql.UseNetTopologySuite();
-                    }).UseLazyLoadingProxies();
+                options.BuildCustomDbContextOptions(configuration, migrationsAssembly);
 
-                options.UseOpenIddict<CustomOpenIddictApplication, CustomOpenIddictAuthorization, CustomOpenIddictScope, CustomOpenIddictToken, int>();
+                options.BuildCustomDbContextOptionsForOpenIDDict();
             });
             return services;
         }

@@ -42,6 +42,9 @@
             ],
             "#solid-app/*": [
                 "./apps/solid-app/*"
+            ],
+            "#react-app/*": [
+                "./apps/react-app/*"
             ]
         }
     },
@@ -66,7 +69,11 @@
         "./apps/solid-app/tsconfig.ts",
         "./apps/solid-app/.eslintrc.ts",
         "./apps/solid-app/.prettierrc.ts",
-        "./apps/solid-app/.stylelintrc.ts"
+        "./apps/solid-app/.stylelintrc.ts",
+        "./apps/react-app/tsconfig.ts",
+        "./apps/react-app/.eslintrc.ts",
+        "./apps/react-app/.prettierrc.ts",
+        "./apps/react-app/.stylelintrc.ts"
     ],
     "exclude": [
         "**/node_modules/*",

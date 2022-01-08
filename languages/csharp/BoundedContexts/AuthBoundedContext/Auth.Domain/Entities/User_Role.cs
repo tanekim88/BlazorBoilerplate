@@ -36,8 +36,11 @@ namespace Auth.Domain.Entities
         /*%s:begin ConstructorBody*/
         /*%s:end ConstructorBody*/
         }
-
+        [Key]
+        [Column(Order = 0)]
         public virtual UserId UserId { get; private set; } = null !;
+        [Key]
+        [Column(Order = 1)]
         public virtual RoleId RoleId { get; private set; } = null !;
         [ForeignKey(name: nameof(UserId))]
         public virtual User User { get; private set; } = null !;

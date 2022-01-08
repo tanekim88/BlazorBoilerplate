@@ -1,9 +1,9 @@
+import { authConfig } from '#auth/configs';
 import { LOCAL_CONFIG } from '#shared/configs';
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { authConfig } from '../../../configs';
+
 import { AuthEnvironmentService } from './environment/environment.service';
 
-console.dir(authConfig);
 @CustomModule({
     providers: [
         {

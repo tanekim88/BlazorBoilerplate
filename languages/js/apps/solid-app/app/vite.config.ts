@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     target: "esnext",
     polyfillDynamicImport: false,
-    outDir,
+    outDir
   },
   server: {
     port: 80,

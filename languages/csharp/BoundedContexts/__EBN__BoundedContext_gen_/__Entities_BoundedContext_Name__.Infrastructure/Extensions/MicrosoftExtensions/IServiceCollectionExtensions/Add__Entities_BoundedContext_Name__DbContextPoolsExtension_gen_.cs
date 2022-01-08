@@ -2,6 +2,7 @@
 
 using __Entities_BoundedContext_Name__.Infrastructure.DbContexts;
 using Core.Infrastructure;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
@@ -15,19 +16,11 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.Extensions.MicrosoftEx
     {
         private static readonly string migrationsAssembly = typeof(__Entities_BoundedContext_Name__DbContext_Gen_).Assembly.FullName;
 
-        public static IServiceCollection AddCustomAuthDbContextPool(this IServiceCollection services,
+        public static IServiceCollection AddCustom__Entities_BoundedContext_Name__DbContextPool(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.AddPooledDbContextFactory<__Entities_BoundedContext_Name__DbContext_Gen_>(optionsAction: options =>
-                options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-                .UseSqlServer(
-                    connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
-                    sqlServerOptionsAction: sql =>
-                    {
-                        sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                        sql.UseNetTopologySuite();
-                    }).UseLazyLoadingProxies());
+                options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
             return services;
         }
     }

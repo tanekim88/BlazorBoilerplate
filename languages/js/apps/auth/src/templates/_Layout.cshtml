@@ -2,15 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <%= htmlWebpackPlugin.tags.headTags %>
     @RenderSection("Heads", required: false)
      
 </head>
 <body>
 @RenderBody()
-
-<%= htmlWebpackPlugin.tags.bodyTags %>
 
 @RenderSection("Scripts", required: false)
  

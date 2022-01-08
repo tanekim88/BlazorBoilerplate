@@ -4,21 +4,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Core.Infrastructure;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 
 namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
     public static class AddShopDbContextsExtension
     {
         private static readonly string migrationsAssembly = typeof(ShopDbContext).Assembly.FullName;
-        public static IServiceCollection AddCustomAuthDbContext(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCustomShopDbContext(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ShopDbContext>(optionsAction: options => options
-            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-            .UseSqlServer(connectionString: configuration.GetConnectionString(name: "DefaultConnection"), sqlServerOptionsAction: sql =>
-            {
-                sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                sql.UseNetTopologySuite();
-            }).UseLazyLoadingProxies());
+            services.AddDbContext<ShopDbContext>(optionsAction: options =>
+               options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
             return services;
         }
     }

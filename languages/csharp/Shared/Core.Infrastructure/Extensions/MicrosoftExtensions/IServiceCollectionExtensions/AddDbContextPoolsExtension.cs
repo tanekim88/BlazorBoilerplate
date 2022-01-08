@@ -1,6 +1,7 @@
 ﻿
 
 using Core.Infrastructure.DbContexts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
@@ -17,15 +18,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             string migrationsAssembly = typeof(TDbContext).Assembly.FullName;
             services.AddPooledDbContextFactory<TDbContext>(optionsAction: options =>
-                options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-                .UseSqlServer(
-                    connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
-                    sqlServerOptionsAction: sql =>
-                    {
-                        sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                        sql.UseNetTopologySuite();
-                    }).UseLazyLoadingProxies());
+               options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
             return services;
         }
     }

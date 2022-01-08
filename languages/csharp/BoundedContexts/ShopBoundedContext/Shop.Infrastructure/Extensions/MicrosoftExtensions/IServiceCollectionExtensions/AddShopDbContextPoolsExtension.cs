@@ -1,24 +1,18 @@
-using Shop.Infrastructure.DbContexts;
-using Microsoft.EntityFrameworkCore;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Core.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Shop.Infrastructure.DbContexts;
 
 namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
     public static class AddShopDbContextPoolsExtension
     {
         private static readonly string migrationsAssembly = typeof(ShopDbContext).Assembly.FullName;
-        public static IServiceCollection AddCustomAuthDbContextPool(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCustomShopDbContextPool(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddPooledDbContextFactory<ShopDbContext>(optionsAction: options => options
-            .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-            .UseSqlServer(connectionString: configuration.GetConnectionString(name: "DefaultConnection"), sqlServerOptionsAction: sql =>
-            {
-                sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                sql.UseNetTopologySuite();
-            }).UseLazyLoadingProxies());
+            services.AddPooledDbContextFactory<ShopDbContext>(optionsAction: options =>
+               options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
+
             return services;
         }
     }

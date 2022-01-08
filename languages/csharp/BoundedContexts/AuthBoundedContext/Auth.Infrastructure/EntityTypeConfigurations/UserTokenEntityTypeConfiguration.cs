@@ -20,10 +20,12 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
             base.Configure(builder);
             /*%s:begin Body*/
             // Composite primary key consisting of the UserId, LoginProvider and Name
-            builder.HasKey(keyExpression: t => new
-            {
-            t.UserId, t.LoginProvider, t.Name
-            });
+
+            //builder.HasKey(keyExpression: t => new
+            //{
+            //t.UserId, t.LoginProvider, t.Name
+            //});
+
             // Limit the size of the composite key columns due to common DB restrictions
             if (maxKeyLength > 0)
             {
@@ -33,6 +35,7 @@ namespace Auth.Infrastructure.EntityTypeConfigurations
 
             // Maps to the AspNetUserTokens table
             builder.ToTable(name: "AspNetUserTokens");
+
             builder.HasOne(navigationExpression: t => t.User).WithMany(navigationExpression: u => u.UserTokens).HasForeignKey(foreignKeyExpression: u => u.UserId);
         /*%s:end Body*/
         }

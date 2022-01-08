@@ -1,11 +1,7 @@
 /*%S:begin Header*/
 
-
-
 using AutoMapper.Internal;
 using Core.Domain;
-using Core.Domain.Entities.__Entities_Groups_00_Name__Entities;
-using Core.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -14,14 +10,10 @@ using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading;
 
-
-
 /*%S:end Header*/
-
 
 namespace Core.Infrastructure
 {
@@ -54,7 +46,8 @@ namespace Core.Infrastructure
             builder
                 .Property(property => property.Id)
                 .HasConversion(Converter)
-                .ValueGeneratedOnAdd();
+                .ValueGeneratedOnAdd()
+                .IsRequired();
 
             var domainAssemblyName = typeof(TEntity).Assembly.GetName().Name;
             var baseName = domainAssemblyName.Substring(0, domainAssemblyName.Length - "Domain".Length);
@@ -92,6 +85,8 @@ namespace Core.Infrastructure
                 }
 
             }
+
+            builder.Property(e => e.Id).IsRequired();
 
             /*%S:begin Body*/
             /*%S:end Body*/

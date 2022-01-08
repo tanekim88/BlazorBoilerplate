@@ -2,15 +2,11 @@
 
 import { solidAppPaths } from '#solid-app/paths';
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
-import { ViteBaseService } from '#shared/src/vite/vite-base/vite-base.service';
 import { UserConfig } from 'vite';
-import path from 'path';
 
 import { SolidAppEnvironmentService } from '#solid-app/src/modules/environment/environment/environment.service';
 import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { SolidAppVitePluginsService } from '../vite-plugins/vite-plugins.service';
-import { RootPaths, rootPaths } from '#root/paths';
-import { PostcssService } from '#shared/src/modules/postcss/postcss.service';
 import { SolidAppPostcssService } from '#solid-app/src/modules/postcss/postcss/postcss.service';
 @CustomInjectable()
 export class SolidAppViteSharedService extends ViteSharedService {
@@ -25,11 +21,10 @@ export class SolidAppViteSharedService extends ViteSharedService {
         const plugins = this.solidAppVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
-
                 build: {
                     outDir: solidAppPaths.wwwroot.toAbsolutePath(),
                     rollupOptions: {
-                        input: [],
+                        input: solidAppPaths.app['index.html'].toAbsolutePath(),
                         external: []
                     },
                     watch: {
@@ -40,7 +35,8 @@ export class SolidAppViteSharedService extends ViteSharedService {
                     sourcemap: true,
                     minify: false,
                     emptyOutDir: true,
-
+                    polyfillDynamicImport: false,
+                    target: 'esnext',
                 },
                 server: {
                     port: 4010

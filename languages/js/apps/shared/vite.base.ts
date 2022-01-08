@@ -13,10 +13,6 @@ export class ViteBase {
     }
 
     async createViteConfig(methodName = 'createConfiguration', env?, options?) {
-        if (options?.mode) {
-            process.env.NODE_ENV = options?.mode;
-        }
-
         try {
 
             const app = await NestFactory.create(this.viteModule, { abortOnError: false });

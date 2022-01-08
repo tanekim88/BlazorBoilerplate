@@ -3,6 +3,7 @@
 using Auth.Infrastructure.DbContexts;
 using Core.Infrastructure;
 using Core.Infrastructure.DbContexts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
@@ -20,15 +21,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             IConfiguration configuration)
         {
             services.AddDbContext<AuthDbContext>(optionsAction: options =>
-                options
-                .ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
-                .UseSqlServer(
-                    connectionString: configuration.GetConnectionString(name: "DefaultConnection"),
-                    sqlServerOptionsAction: sql =>
-                    {
-                        sql.MigrationsAssembly(assemblyName: migrationsAssembly);
-                        sql.UseNetTopologySuite();
-                    }).UseLazyLoadingProxies());
+                 options.BuildCustomDbContextOptions(configuration, migrationsAssembly));
 
             return services;
         }

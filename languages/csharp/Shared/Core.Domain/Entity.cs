@@ -11,7 +11,6 @@ namespace Core.Domain
 {
     public abstract class Entity<TId>
     {
-        [Required]
         public virtual TId Id { get; protected set; }
 
         private List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
