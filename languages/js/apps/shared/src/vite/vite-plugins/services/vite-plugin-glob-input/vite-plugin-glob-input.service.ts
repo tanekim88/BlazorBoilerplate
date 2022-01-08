@@ -17,6 +17,7 @@ import chokidar from 'chokidar';
 import _ from 'lodash';
 import { renameExtension } from '#shared/src/functions/rename-extension';
 import { RegexService } from '#root/apps/shared/src/modules/utilities/modules/regex/regex/regex.service';
+
 let sassWatcher: chokidar.FSWatcher;
 let copyWatcher: chokidar.FSWatcher;
 
@@ -44,7 +45,8 @@ export interface VitePluginGlobInputOptions {
   externalsForHtml?: { html: string, insertAt: any }[],
   sass?: Input[],
   copy?: Input[],
-  del?: Input[]
+  rm?: Input[],
+  empty?: Input[],
 }
 interface Data {
   absFrom?: string,
@@ -131,8 +133,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const dir = dirname(normalizePath(path.relative(root, absFrom)));
             relTo = normalizePath(path.join(dir, input.toName));
           }
-
-          actionsToTake(input, absFrom, relTo);
+          if (fs.existsSync(absFrom)) {
+            actionsToTake(input, absFrom, relTo);
+          }
         })
 
         return entries;
@@ -160,18 +163,27 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const root = config.root;
         const outDir = config.build.outDir;
 
-        if (options.del) {
-          processInputs(options.del, root, (input, absFrom, relTo) => {
-            if (fs.existsSync(absFrom)) {
-              const isDir = fs.lstatSync(absFrom).isDirectory();
-              if (isDir) {
-                fs.rmdirSync(absFrom, { recursive: true });
-              } else {
-                fs.unlinkSync(absFrom);
-              }
+        if (options.rm) {
+          processInputs(options.rm, root, (input, absFrom, relTo) => {
+            const isDir = fs.lstatSync(absFrom).isDirectory();
+            if (isDir) {
+              fs.rmdirSync(absFrom, { recursive: true });
+            } else {
+              fs.unlinkSync(absFrom);
             }
           });
         }
+
+        if (options.empty) {
+          processInputs(options.empty, root, (input, absFrom, relTo) => {
+            const isDir = fs.lstatSync(absFrom).isDirectory();
+            if (isDir) {
+              fs.rmdirSync(absFrom, { recursive: true });
+              fs.mkdirSync(absFrom);
+            }
+          });
+        }
+
       },
 
 

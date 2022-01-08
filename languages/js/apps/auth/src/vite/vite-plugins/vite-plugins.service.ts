@@ -48,7 +48,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                         toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(), 'lib/jquery-validation-unobtrusive'),
                     },
                 ],
-                del: [
+                empty: [
                     {
                         fromPath: AuthPaths.wwwroot.toAbsolutePath(),
                     }
