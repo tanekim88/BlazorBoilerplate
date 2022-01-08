@@ -11,7 +11,7 @@ if(fs.existsSync(fileToRemove)){
 }
 
 
-import tailwindConfig from '#shared/tailwind.config';
+// import tailwindConfig from '#shared/tailwind.config';
 import resolveConfig from 'tailwindcss/resolveConfig'
 @CustomInjectable()
 export class TailwindcssService extends PostcssBaseService {
@@ -20,11 +20,11 @@ export class TailwindcssService extends PostcssBaseService {
     }
 
     createOptions(options?: any): any {
-        console.dir(tailwindConfig);
-        const resolvedConfig =  resolveConfig(tailwindConfig);
-        console.dir(resolvedConfig);
-        return this.mergeService.mergeOptions(super.createOptions(), {
-            config: resolvedConfig,
-        });
+        // console.dir(tailwindConfig);
+        // const resolvedConfig =  resolveConfig(tailwindConfig);
+        // console.dir(resolvedConfig);
+        // return this.mergeService.mergeOptions(super.createOptions(), {
+        //     config: resolvedConfig,
+        // });
     }
 }

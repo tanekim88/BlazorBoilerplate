@@ -1,0 +1,1 @@
+{"version":3,"file":"vite.prod.js","sourceRoot":"","sources":["../../../apps/blazor-app/vite.prod.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,QAAQ,EAAE,MAAM,mBAAmB,CAAC;AAC7C,OAAO,EAAE,wBAAwB,EAAE,MAAM,wCAAwC,CAAC;AAClF,OAAO,EAAE,mBAAmB,EAAE,MAAM,wBAAwB,CAAC;AAE7D,MAAM,QAAQ,GAAG,IAAI,QAAQ,CAAC,mBAAmB,EAAE,wBAAwB,CAAC,CAAC;AAE7E,QAAQ,CAAC,KAAK,EAAE,CAAC"}

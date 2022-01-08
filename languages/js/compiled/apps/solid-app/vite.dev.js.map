@@ -1,0 +1,1 @@
+{"version":3,"file":"vite.dev.js","sourceRoot":"","sources":["../../../apps/solid-app/vite.dev.ts"],"names":[],"mappings":"AAEA,OAAO,EAAE,QAAQ,EAAE,MAAM,mBAAmB,CAAC;AAC7C,OAAO,EAAE,sBAAsB,EAAE,MAAM,sCAAsC,CAAC;AAC9E,OAAO,EAAE,kBAAkB,EAAE,MAAM,wBAAwB,CAAC;AAE5D,MAAM,QAAQ,GAAG,IAAI,QAAQ,CAAC,kBAAkB,EAAE,sBAAsB,CAAC,CAAC;AAE1E,MAAM,QAAQ,CAAC,KAAK,EAAE,CAAC"}

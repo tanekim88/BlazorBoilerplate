@@ -94,6 +94,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     };
 
     function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): string[] {
+      inputs = inputs ?? [];
       const toReturn = inputs.flatMap(input => {
         if (input.include) {
 

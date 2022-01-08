@@ -1,11 +1,11 @@
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
 import { AuthEnvironmentModule } from './environment/environment.module';
+import { AuthPostcssModule } from './postcss/postcss.module';
 
 import { AuthUtilitiesModule } from './utilities/utilities.module';
 
 @CustomModule({
     providers: [],
-    imports: [AuthUtilitiesModule, AuthEnvironmentModule, PostcssModule],
+    imports: [AuthUtilitiesModule, AuthEnvironmentModule, AuthPostcssModule],
 })
 export class AuthModulesModule {}

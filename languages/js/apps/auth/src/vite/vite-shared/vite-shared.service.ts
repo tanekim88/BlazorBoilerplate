@@ -22,7 +22,7 @@ export class AuthViteSharedService extends ViteSharedService {
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
                 build: {
-                    outDir: AuthPaths.wwwroot.toAbsolutePath(),
+                    outDir: AuthPaths.toAbsolutePath(),
                     rollupOptions: {
                         input: [],
                         external: []
