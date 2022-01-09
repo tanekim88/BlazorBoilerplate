@@ -6,6 +6,7 @@ import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/v
 import path from 'path';
 import solidPlugin from 'vite-plugin-solid';
 import { Plugin } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 @CustomInjectable()
 export class AuthVitePluginsService extends VitePluginsService {
     @CustomInject(AuthEnvironmentService)
@@ -19,6 +20,7 @@ export class AuthVitePluginsService extends VitePluginsService {
     createManyPlugins(): Plugin[] {
 
         return [
+            // VitePWA({}),
             solidPlugin(),
             ...this.vitePluginGlobInputService.createManyPlugins({
                 externalsForHtml: [
@@ -49,12 +51,8 @@ export class AuthVitePluginsService extends VitePluginsService {
                 inputs: [
                     {
                         fromPath: authPaths.src.web['_Layout.cshtml'].toAbsolutePath(),
-                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), '_Layout.cshtml')
-                    },
-                    {
-                        fromPath: this.authEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
-                        htmlToken: '[SERVICEWORKER_PATH]',
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), 'service-worker.[hash].js')
+                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), '_Layout.cshtml'),
+                        baseName: '~/'
                     },
                 ],
                 copy: [

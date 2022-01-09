@@ -9,6 +9,7 @@ import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.serv
 import { AuthVitePluginsService } from '../vite-plugins/vite-plugins.service';
 import { AuthPostcssService } from '#auth/src/modules/postcss/postcss/postcss.service';
 import { join } from 'path/posix';
+import { sharedPaths } from '#root/apps/shared';
 @CustomInjectable()
 export class AuthViteSharedService extends ViteSharedService {
     @CustomInject(AuthEnvironmentService)
@@ -59,7 +60,7 @@ export class AuthViteSharedService extends ViteSharedService {
                 },
                 resolve:{
                     alias:{
-                        '#shared': 'apps/shared'
+                        '#shared': sharedPaths.toAbsolutePath()
                     }
                 }
             } as UserConfig,

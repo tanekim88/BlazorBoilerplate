@@ -41,7 +41,8 @@ interface Input {
   applyChunk?: boolean,
   htmlToken?: string,
   outDir?: string,
-  watch?: boolean
+  watch?: boolean,
+  baseName?: string,
 }
 export interface VitePluginGlobInputOptions {
   inputs: Input[],
@@ -64,7 +65,8 @@ interface Data {
   facadeModuleId?: string,
   action?: Action,
   code?: string,
-  htmlToken?: string
+  htmlToken?: string,
+  baseName?: string,
 }
 enum NodeType {
   Literal = 'Literal',
@@ -74,11 +76,14 @@ enum NodeType {
   ExportNamedDeclaration = 'ExportNamedDeclaration',
   ExportAllDeclaration = 'ExportAllDeclaration',
 }
+
+const parentPathToken = '__dotdot__';
+
 @CustomInjectable()
 export class VitePluginGlobInputService extends VitePluginBaseService {
   @CustomInject(RegexService)
   protected regexService: RegexService;
-
+  relTo2ToData = {}
   createPrePlugin(options: VitePluginGlobInputOptions) {
     const regexService = this.regexService;
     options.externalsForHtml = options.externalsForHtml ?? [];
@@ -95,6 +100,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     const absToToData = {} as {
       [key: string]: Data
     };
+    const relTo2ToData = {} as {
+      [key: string]: Data
+    };
+    this.relTo2ToData = relTo2ToData;
     const relTo3ToData = {} as {
       [key: string]: Data
     };
@@ -156,14 +165,15 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     function replaceHtmlToken(text) {
       const entries = Object.entries(absFrom2ToData);
       for (const [key, data] of entries) {
-        if (data.htmlToken) {
-          text = text.replace(data.htmlToken, data.relTo3)
+        if (data.htmlToken && data.relTo3 && text) {
+          const fileName = path.basename(data.relTo3);
+          text = text.replace(data.htmlToken, fileName)
         }
       }
 
       return text;
     }
-
+    ;
 
     return ({
       name: 'vite-plugin-glob-input-pre',
@@ -325,7 +335,11 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
           for (let output of localOutput) {
             if (relTo.endsWith('.cshtml')) {
-              relTo = renameExtension(relTo, '.cshtml.html');
+              relTo = normalizePath(renameExtension(relTo, '.cshtml.html'));
+            }
+
+            if (relTo.startsWith('..')) {
+              relTo = relTo.replace(/\.\./g, parentPathToken);
             }
 
             const relTo2 = relTo;
@@ -355,10 +369,12 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               code,
               action: input.action,
               from2ToFrom,
-              htmlToken: input.htmlToken
+              htmlToken: input.htmlToken,
+              baseName: input.baseName
             };
             absFrom2ToData[absFrom2] = absFromToData[absFrom];
             absToToData[absTo] = absFromToData[absFrom];
+            relTo2ToData[relTo2] = absFromToData[absFrom];
           }
         });
 
@@ -429,7 +445,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         //   }
         // }
 
-        src = replaceHtmlToken(src);
 
         return src;
       },
@@ -483,7 +498,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               delete bundle[key]
             }
           }
-
+          file.code = replaceHtmlToken(file.code);
         }
       },
 
@@ -572,9 +587,28 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     });
   }
   createPostPlugin(...options: any): Plugin {
+    const convertTempPathToInvalidPath = (invalidPath: string) => {
+      return invalidPath.replace(new RegExp(this.regexService.escapeRegExp(parentPathToken), 'g'), '..');
+    }
+
+    const relTo2ToData = this.relTo2ToData;
+    const regexService = this.regexService;
+    let savedConfig;
     return {
       name: 'vite-plugin-glob-input-post',
       enforce: 'post',
+
+      config(config, args) {
+        console.log('### config')
+        console.dir(config);
+        console.dir(args);
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
+        savedConfig = config;
+
+
+      },
+
       generateBundle: function (option, bundle, isWrite: boolean) {
         console.log('### generateBundle POST')
         console.dir(option);
@@ -582,15 +616,50 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(isWrite);
         console.dir(this);
         const files = Object.entries<any>(bundle);
+        const keys = Object.keys(bundle);
         for (const [key, file] of files) {
+          let shouldDeleteKey = false;
+
+          const data = relTo2ToData[key];
+
+          if (file.fileName?.endsWith('.html') && file.type === 'asset') {
+            if (data?.baseName) {
+              let source = file.source;
+              keys.forEach(k => {
+                source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
+              });
+
+              file.source = source;
+            }
+          }
+
           if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {
             const newFileName = file.fileName.replace(/\.cshtml\.html$/, '.cshtml');
 
-            this.emitFile({
-              type: 'asset',
-              fileName: newFileName,
-              source: file.source
-            })
+            file.fileName = newFileName;
+
+            if (!file.fileName.includes(parentPathToken)) {
+              this.emitFile({
+                type: 'asset',
+                fileName: newFileName,
+                source: file.source
+              })
+            }
+
+            shouldDeleteKey = true;
+          }
+
+          if (file.fileName.includes(parentPathToken)) {
+            const newPath = convertTempPathToInvalidPath(file.fileName);
+
+            const finalPath = path.resolve(savedConfig.build.outDir, newPath);
+            const data = file.type === 'asset' ? file.source : file.code;
+            fs.writeFileSync(finalPath, data, { encoding: 'utf8' });
+
+            shouldDeleteKey = true;
+          }
+
+          if (shouldDeleteKey) {
             delete bundle[key];
           }
         }
