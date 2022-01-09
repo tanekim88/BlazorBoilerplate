@@ -49,38 +49,38 @@ export class AuthVitePluginsService extends VitePluginsService {
                 inputs: [
                     {
                         fromPath: authPaths.src.web['_Layout.cshtml'].toAbsolutePath(),
-                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.cshtml')
+                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), '_Layout.cshtml')
                     },
                     {
                         fromPath: this.authEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
                         htmlToken: '[SERVICEWORKER_PATH]',
-                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'service-worker.[hash].js')
+                        toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), 'service-worker.[hash].js')
                     },
                 ],
                 copy: [
                     // {
                     //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
-                    //     toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'bootstrap-icons.svg'),
+                    //     toRelativePath: 'bootstrap-icons.svg',
                     //     watch: false
                     // },
                     // {
                     //     fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
-                    //     toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'favicon.ico'),
+                    //     toRelativePath: 'favicon.ico',
                     //     watch: false
                     // },
                     // {
                     //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery/dist'),
-                    //     toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery'),
+                    //     toRelativePath: 'lib/jquery',
                     //     watch: false
                     // },
                     // {
                     //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation/dist'),
-                    //     toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery-validation'),
+                    //     toRelativePath:  'lib/jquery-validation',
                     //     watch: false
                     // },
                     // {
                     //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation-unobtrusive/dist'),
-                    //     toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'lib/jquery-validation-unobtrusive'),
+                    //     toRelativePath: 'lib/jquery-validation-unobtrusive',
                     //     watch: false
                     // },
                 ],

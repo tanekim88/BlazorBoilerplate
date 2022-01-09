@@ -16,7 +16,7 @@ import { dirname } from 'path/posix';
 import sass from 'sass';
 
 import chokidar from 'chokidar';
-import _ from 'lodash';
+import _, { replace } from 'lodash';
 import { renameExtension } from '#shared/src/functions/rename-extension';
 import { RegexService } from '#root/apps/shared/src/modules/utilities/modules/regex/regex/regex.service';
 
@@ -152,6 +152,18 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
       return [allEntries, toWatch];
     };
+
+    function replaceHtmlToken(text) {
+      const entries = Object.entries(absFrom2ToData);
+      for (const [key, data] of entries) {
+        if (data.htmlToken) {
+          text = text.replace(data.htmlToken, data.relTo3)
+        }
+      }
+
+      return text;
+    }
+
 
     return ({
       name: 'vite-plugin-glob-input-pre',
@@ -416,6 +428,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         //     map: null // provide source map if available
         //   }
         // }
+
+        src = replaceHtmlToken(src);
+
         return src;
       },
       outputOptions(outputOptions) {
@@ -468,9 +483,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               delete bundle[key]
             }
           }
-          if(file.type === 'chunk') {
-            file.fileName = file.fileName.replace(/^wwwroot\//, '');
-          }
 
         }
       },
@@ -500,14 +512,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           )
         });
 
-        const entries = Object.entries(absFrom2ToData);
-        for (const [key, data] of entries) {
-          if (data.htmlToken) {
-            html = html.replace(data.htmlToken, data.relTo3)
-          }
-        }
-
-
+        html = replaceHtmlToken(html);
         return html;
       },
       writeBundle(option, bundle): void {
