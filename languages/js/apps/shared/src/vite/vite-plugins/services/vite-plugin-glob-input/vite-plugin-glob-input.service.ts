@@ -10,6 +10,7 @@ import { normalizePath, Plugin } from 'vite';
 
 import fastGlob from 'fast-glob';
 import fs from 'fs'
+import fsExtra from 'fs-extra';
 import { dirname } from 'path/posix';
 
 import sass from 'sass';
@@ -180,12 +181,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           processInputs(options.empty, root, (input, absFrom, relTo) => {
             const isDir = fs.lstatSync(absFrom).isDirectory();
             if (isDir) {
-              fs.rmdirSync(absFrom, { recursive: true });
-              fs.mkdirSync(absFrom);
+              fsExtra.emptyDirSync(absFrom);
             }
           });
         }
-
       },
 
 
@@ -229,8 +228,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                 finalPath = path.join(output.dir, input.toRelativePath);
               }
               fromToForCopy[absFrom] = finalPath;
-              fs.copyFileSync(absFrom, finalPath);
-              // fsExtra.copy(absFrom, finalPath, { overwrite: true });
+              // fs.copyFileSync(absFrom, finalPath);
+              fsExtra.copySync(absFrom, finalPath, { overwrite: true });
             }
           });
 
