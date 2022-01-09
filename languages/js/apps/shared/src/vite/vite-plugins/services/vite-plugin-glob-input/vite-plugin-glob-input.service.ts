@@ -565,7 +565,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const files = Object.entries<any>(bundle);
         for (const [key, file] of files) {
           if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {
-            const newFileName =  file.fileName.replace(/\.cshtml\.html$/, '.html');
+            const newFileName =  file.fileName.replace(/\.cshtml\.html$/, '.cshtml');
             
             this.emitFile({
               type: 'asset',
