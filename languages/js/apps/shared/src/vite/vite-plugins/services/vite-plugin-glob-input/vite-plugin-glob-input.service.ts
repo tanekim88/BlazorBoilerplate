@@ -133,9 +133,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const dir = dirname(normalizePath(path.relative(root, absFrom)));
             relTo = normalizePath(path.join(dir, input.toName));
           }
-          // if(relTo.endsWith('.cshtml')){
-          //   relTo = renameExtension(relTo, '.csthml.html');
-          // }
 
           if (fs.existsSync(absFrom)) {
             actionsToTake(input, absFrom, relTo);
@@ -301,53 +298,46 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
 
         const input = processInputs(options.inputs, root, (input, absFrom, relTo) => {
-          let localOutput = conf.output;
-          if (input.outDir) {
-            localOutput = [{ dir: input.outDir }];
+          // let localOutput = conf.output;
+          // if (input.outDir) {
+          //   localOutput = [{ dir: input.outDir }];
+          // }
+
+          if(relTo.endsWith('.cshtml')){
+            relTo = renameExtension(relTo, '.cshtml.html');
+          }
+          
+          const relTo2 = relTo;
+
+          if (path.extname(absFrom) === '.ts' && path.extname(relTo) === '.js') {
+            relTo = relTo.replace(/\.js$/, '.ts');
+            relTo = relTo.replace(/\.?\[hash\]/g, '')
           }
 
-          for (let output of localOutput) {
-            let finalPath;
+          const absFrom2 = normalizePath(path.resolve(root, relTo));
 
-            if (input.relativeTo || input.toName) {
-              finalPath = path.join(output.dir, relTo);
-            }
+          const absTo = normalizePath(path.resolve(root, relTo));
 
-            if (input.toRelativePath) {
-              finalPath = path.join(output.dir, input.toRelativePath);
-            }
-            const relTo2 = relTo;
+          const absTo2 = normalizePath(path.resolve(root, relTo2));
 
-            if (path.extname(absFrom) === '.ts' && path.extname(relTo) === '.js') {
-              relTo = relTo.replace(/\.js$/, '.ts');
-              relTo = relTo.replace(/\.?\[hash\]/g, '')
-            }
+          const from2ToFrom = path.relative(dirname(absFrom2), dirname(absFrom));
 
-            const absFrom2 = normalizePath(path.resolve(root, relTo));
+          let code = fs.readFileSync(absFrom, { encoding: 'utf8' });
 
-            const absTo = normalizePath(path.resolve(root, relTo));
-
-            const absTo2 = normalizePath(path.resolve(root, relTo2));
-
-            const from2ToFrom = path.relative(dirname(absFrom2), dirname(absFrom));
-
-            let code = fs.readFileSync(absFrom, { encoding: 'utf8' });
-
-            absFromToData[absFrom] = {
-              absFrom,
-              absFrom2,
-              relTo,
-              relTo2,
-              absTo,
-              absTo2,
-              code,
-              action: input.action,
-              from2ToFrom,
-              htmlToken: input.htmlToken
-            };
-            absFrom2ToData[absFrom2] = absFromToData[absFrom];
-            absToToData[absTo] = absFromToData[absFrom];
-          }
+          absFromToData[absFrom] = {
+            absFrom,
+            absFrom2,
+            relTo,
+            relTo2,
+            absTo,
+            absTo2,
+            code,
+            action: input.action,
+            from2ToFrom,
+            htmlToken: input.htmlToken
+          };
+          absFrom2ToData[absFrom2] = absFromToData[absFrom];
+          absToToData[absTo] = absFromToData[absFrom];
         });
 
 
@@ -575,7 +565,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         const files = Object.entries<any>(bundle);
         for (const [key, file] of files) {
           if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {
-            const newFileName = renameExtension(file.fileName, '.cshtml');
+            const newFileName =  file.fileName.replace(/\.cshtml\.html$/, '.html');
+            
             this.emitFile({
               type: 'asset',
               fileName: newFileName,
