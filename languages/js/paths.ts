@@ -1580,7 +1580,17 @@
 ,
                         readonly "wwwroot": {
                             toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string
+                            toRelativePath:(relativeTo?:string)=> string,
+                            readonly "bootstrap-icons.svg": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
+                            readonly "favicon.ico": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+
                         }
 
                     }
@@ -14335,11 +14345,6 @@
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
-,
-                            readonly "_Layout.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
 
                         }
 ,
@@ -19726,7 +19731,15 @@ export const RootPaths:RootPathsType = createProxy( {
                         },
                         "wwwroot": {
                             toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") }
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") },
+                            "bootstrap-icons.svg": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg") }
+                            },
+                            "favicon.ico": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico") }
+                            }
                         }
                     },
                     "Shared": {
@@ -29930,10 +29943,6 @@ export const RootPaths:RootPathsType = createProxy( {
                             "_Layout.cshtml": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") }
-                            },
-                            "_Layout.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.html") }
                             }
                         },
                         "vite": {

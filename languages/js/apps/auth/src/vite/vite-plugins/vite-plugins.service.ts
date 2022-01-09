@@ -61,6 +61,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                     {
                         fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
                         toRelativePath: path.join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'bootstrap-icons.svg'),
+                    
                     },
                     {
                         fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
