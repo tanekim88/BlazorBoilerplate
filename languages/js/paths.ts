@@ -1233,6 +1233,11 @@
 
                         }
 ,
+                        readonly "assets": {
+                            toAbsolutePath:()=> string,
+                            toRelativePath:(relativeTo?:string)=> string
+                        }
+,
                         readonly "Auth.Server.csproj": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string
@@ -1581,6 +1586,21 @@
                         readonly "wwwroot": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
+                            readonly "assets": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string,
+                                readonly "service-worker.b4e6b81c.js": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string
+                                }
+,
+                                readonly "vendor.c379ad51.js": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string
+                                }
+
+                            }
+,
                             readonly "bootstrap-icons.svg": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
@@ -1589,6 +1609,701 @@
                             readonly "favicon.ico": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
+                            }
+,
+                            readonly "lib": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string,
+                                readonly "jquery": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "jquery.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.min.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.slim.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.slim.min.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+
+                                }
+,
+                                readonly "jquery-validation": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "additional-methods.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "additional-methods.min.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.validate.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.validate.min.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "localization": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string,
+                                        readonly "messages_ar.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ar.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_az.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_az.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_bg.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_bg.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_bn_BD.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_bn_BD.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ca.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ca.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_cs.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_cs.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_da.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_da.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_de.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_de.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_el.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_el.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es_AR.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es_AR.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es_PE.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_es_PE.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_et.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_et.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_eu.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_eu.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fa.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fa.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fi.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fi.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fr.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_fr.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ge.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ge.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_gl.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_gl.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_he.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_he.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hr.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hr.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hu.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hu.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hy_AM.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_hy_AM.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_id.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_id.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_is.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_is.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_it.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_it.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ja.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ja.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ka.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ka.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_kk.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_kk.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ko.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ko.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_lt.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_lt.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_lv.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_lv.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_mk.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_mk.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_my.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_my.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_nl.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_nl.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_no.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_no.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pl.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pl.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pt_BR.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pt_BR.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pt_PT.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_pt_PT.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ro.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ro.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ru.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ru.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sd.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sd.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_si.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_si.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sk.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sk.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sl.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sl.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sr.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sr.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sr_lat.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sr_lat.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sv.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_sv.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_th.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_th.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_tj.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_tj.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_tr.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_tr.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_uk.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_uk.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ur.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_ur.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_vi.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_vi.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_zh.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_zh.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_zh_TW.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "messages_zh_TW.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_de.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_de.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_es_CL.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_es_CL.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_fi.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_fi.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_it.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_it.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_nl.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_nl.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_pt.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+,
+                                        readonly "methods_pt.min.js": {
+                                            toAbsolutePath:()=> string,
+                                            toRelativePath:(relativeTo?:string)=> string
+                                        }
+
+                                    }
+
+                                }
+,
+                                readonly "jquery-validation-unobtrusive": {
+                                    toAbsolutePath:()=> string,
+                                    toRelativePath:(relativeTo?:string)=> string,
+                                    readonly "jquery.validate.unobtrusive.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+,
+                                    readonly "jquery.validate.unobtrusive.min.js": {
+                                        toAbsolutePath:()=> string,
+                                        toRelativePath:(relativeTo?:string)=> string
+                                    }
+
+                                }
+
                             }
 
                         }
@@ -14338,16 +15053,6 @@
 
                         }
 ,
-                        readonly "templates": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string,
-                            readonly "_Layout.cshtml": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-
-                        }
-,
                         readonly "vite": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
@@ -14441,6 +15146,11 @@
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
+                            readonly "index.ts": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
                             readonly "libraries": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string,
@@ -14449,6 +15159,11 @@
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
 
+                            }
+,
+                            readonly "_Layout.cshtml": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
                             }
 
                         }
@@ -14658,21 +15373,6 @@
 
                         }
 ,
-                        readonly "templates": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string,
-                            readonly "index.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-,
-                            readonly "index.webpack.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-
-                        }
-,
                         readonly "vite": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
@@ -14761,7 +15461,17 @@
                         readonly "web": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
+                            readonly "index.html": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
                             readonly "index.scss": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
+                            readonly "index.webpack.html": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string
                             }
@@ -15748,16 +16458,6 @@
 
                         }
 ,
-                        readonly "templates": {
-                            toAbsolutePath:()=> string,
-                            toRelativePath:(relativeTo?:string)=> string,
-                            readonly "index.html": {
-                                toAbsolutePath:()=> string,
-                                toRelativePath:(relativeTo?:string)=> string
-                            }
-
-                        }
-,
                         readonly "vite": {
                             toAbsolutePath:()=> string,
                             toRelativePath:(relativeTo?:string)=> string,
@@ -16054,6 +16754,11 @@
                                     toRelativePath:(relativeTo?:string)=> string
                                 }
 
+                            }
+,
+                            readonly "index.html": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
                             }
 ,
                             readonly "jquery": {
@@ -18181,6 +18886,11 @@
                                 toRelativePath:(relativeTo?:string)=> string
                             }
 ,
+                            readonly "index.ts": {
+                                toAbsolutePath:()=> string,
+                                toRelativePath:(relativeTo?:string)=> string
+                            }
+,
                             readonly "libraries": {
                                 toAbsolutePath:()=> string,
                                 toRelativePath:(relativeTo?:string)=> string,
@@ -19453,6 +20163,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                 }
                             }
                         },
+                        "assets": {
+                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\assets",
+                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\assets") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\assets") }
+                        },
                         "Auth.Server.csproj": {
                             toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Auth.Server.csproj",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Auth.Server.csproj") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\Auth.Server.csproj") }
@@ -19732,6 +20446,18 @@ export const RootPaths:RootPathsType = createProxy( {
                         "wwwroot": {
                             toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot") },
+                            "assets": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets") },
+                                "service-worker.b4e6b81c.js": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\service-worker.b4e6b81c.js",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\service-worker.b4e6b81c.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\service-worker.b4e6b81c.js") }
+                                },
+                                "vendor.c379ad51.js": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\vendor.c379ad51.js",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\vendor.c379ad51.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\assets\\vendor.c379ad51.js") }
+                                }
+                            },
                             "bootstrap-icons.svg": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\bootstrap-icons.svg") }
@@ -19739,6 +20465,562 @@ export const RootPaths:RootPathsType = createProxy( {
                             "favicon.ico": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\favicon.ico") }
+                            },
+                            "lib": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib") },
+                                "jquery": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery") },
+                                    "jquery.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.js") }
+                                    },
+                                    "jquery.min.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.min.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.min.js") }
+                                    },
+                                    "jquery.slim.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.js") }
+                                    },
+                                    "jquery.slim.min.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery\\jquery.slim.min.js") }
+                                    }
+                                },
+                                "jquery-validation": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation") },
+                                    "additional-methods.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.js") }
+                                    },
+                                    "additional-methods.min.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.min.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\additional-methods.min.js") }
+                                    },
+                                    "jquery.validate.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.js") }
+                                    },
+                                    "jquery.validate.min.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.min.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\jquery.validate.min.js") }
+                                    },
+                                    "localization": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization") },
+                                        "messages_ar.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.js") }
+                                        },
+                                        "messages_ar.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ar.min.js") }
+                                        },
+                                        "messages_az.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.js") }
+                                        },
+                                        "messages_az.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_az.min.js") }
+                                        },
+                                        "messages_bg.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.js") }
+                                        },
+                                        "messages_bg.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bg.min.js") }
+                                        },
+                                        "messages_bn_BD.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.js") }
+                                        },
+                                        "messages_bn_BD.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_bn_BD.min.js") }
+                                        },
+                                        "messages_ca.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.js") }
+                                        },
+                                        "messages_ca.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ca.min.js") }
+                                        },
+                                        "messages_cs.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.js") }
+                                        },
+                                        "messages_cs.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_cs.min.js") }
+                                        },
+                                        "messages_da.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.js") }
+                                        },
+                                        "messages_da.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_da.min.js") }
+                                        },
+                                        "messages_de.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.js") }
+                                        },
+                                        "messages_de.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_de.min.js") }
+                                        },
+                                        "messages_el.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.js") }
+                                        },
+                                        "messages_el.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_el.min.js") }
+                                        },
+                                        "messages_es.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.js") }
+                                        },
+                                        "messages_es.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es.min.js") }
+                                        },
+                                        "messages_es_AR.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.js") }
+                                        },
+                                        "messages_es_AR.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_AR.min.js") }
+                                        },
+                                        "messages_es_PE.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.js") }
+                                        },
+                                        "messages_es_PE.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_es_PE.min.js") }
+                                        },
+                                        "messages_et.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.js") }
+                                        },
+                                        "messages_et.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_et.min.js") }
+                                        },
+                                        "messages_eu.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.js") }
+                                        },
+                                        "messages_eu.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_eu.min.js") }
+                                        },
+                                        "messages_fa.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.js") }
+                                        },
+                                        "messages_fa.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fa.min.js") }
+                                        },
+                                        "messages_fi.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.js") }
+                                        },
+                                        "messages_fi.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fi.min.js") }
+                                        },
+                                        "messages_fr.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.js") }
+                                        },
+                                        "messages_fr.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_fr.min.js") }
+                                        },
+                                        "messages_ge.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.js") }
+                                        },
+                                        "messages_ge.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ge.min.js") }
+                                        },
+                                        "messages_gl.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.js") }
+                                        },
+                                        "messages_gl.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_gl.min.js") }
+                                        },
+                                        "messages_he.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.js") }
+                                        },
+                                        "messages_he.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_he.min.js") }
+                                        },
+                                        "messages_hr.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.js") }
+                                        },
+                                        "messages_hr.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hr.min.js") }
+                                        },
+                                        "messages_hu.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.js") }
+                                        },
+                                        "messages_hu.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hu.min.js") }
+                                        },
+                                        "messages_hy_AM.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.js") }
+                                        },
+                                        "messages_hy_AM.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_hy_AM.min.js") }
+                                        },
+                                        "messages_id.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.js") }
+                                        },
+                                        "messages_id.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_id.min.js") }
+                                        },
+                                        "messages_is.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.js") }
+                                        },
+                                        "messages_is.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_is.min.js") }
+                                        },
+                                        "messages_it.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.js") }
+                                        },
+                                        "messages_it.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_it.min.js") }
+                                        },
+                                        "messages_ja.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.js") }
+                                        },
+                                        "messages_ja.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ja.min.js") }
+                                        },
+                                        "messages_ka.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.js") }
+                                        },
+                                        "messages_ka.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ka.min.js") }
+                                        },
+                                        "messages_kk.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.js") }
+                                        },
+                                        "messages_kk.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_kk.min.js") }
+                                        },
+                                        "messages_ko.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.js") }
+                                        },
+                                        "messages_ko.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ko.min.js") }
+                                        },
+                                        "messages_lt.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.js") }
+                                        },
+                                        "messages_lt.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lt.min.js") }
+                                        },
+                                        "messages_lv.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.js") }
+                                        },
+                                        "messages_lv.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_lv.min.js") }
+                                        },
+                                        "messages_mk.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.js") }
+                                        },
+                                        "messages_mk.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_mk.min.js") }
+                                        },
+                                        "messages_my.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.js") }
+                                        },
+                                        "messages_my.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_my.min.js") }
+                                        },
+                                        "messages_nl.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.js") }
+                                        },
+                                        "messages_nl.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_nl.min.js") }
+                                        },
+                                        "messages_no.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.js") }
+                                        },
+                                        "messages_no.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_no.min.js") }
+                                        },
+                                        "messages_pl.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.js") }
+                                        },
+                                        "messages_pl.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pl.min.js") }
+                                        },
+                                        "messages_pt_BR.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.js") }
+                                        },
+                                        "messages_pt_BR.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_BR.min.js") }
+                                        },
+                                        "messages_pt_PT.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.js") }
+                                        },
+                                        "messages_pt_PT.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_pt_PT.min.js") }
+                                        },
+                                        "messages_ro.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.js") }
+                                        },
+                                        "messages_ro.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ro.min.js") }
+                                        },
+                                        "messages_ru.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.js") }
+                                        },
+                                        "messages_ru.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ru.min.js") }
+                                        },
+                                        "messages_sd.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.js") }
+                                        },
+                                        "messages_sd.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sd.min.js") }
+                                        },
+                                        "messages_si.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.js") }
+                                        },
+                                        "messages_si.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_si.min.js") }
+                                        },
+                                        "messages_sk.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.js") }
+                                        },
+                                        "messages_sk.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sk.min.js") }
+                                        },
+                                        "messages_sl.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.js") }
+                                        },
+                                        "messages_sl.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sl.min.js") }
+                                        },
+                                        "messages_sr.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.js") }
+                                        },
+                                        "messages_sr.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr.min.js") }
+                                        },
+                                        "messages_sr_lat.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.js") }
+                                        },
+                                        "messages_sr_lat.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sr_lat.min.js") }
+                                        },
+                                        "messages_sv.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.js") }
+                                        },
+                                        "messages_sv.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_sv.min.js") }
+                                        },
+                                        "messages_th.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.js") }
+                                        },
+                                        "messages_th.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_th.min.js") }
+                                        },
+                                        "messages_tj.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.js") }
+                                        },
+                                        "messages_tj.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tj.min.js") }
+                                        },
+                                        "messages_tr.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.js") }
+                                        },
+                                        "messages_tr.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_tr.min.js") }
+                                        },
+                                        "messages_uk.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.js") }
+                                        },
+                                        "messages_uk.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_uk.min.js") }
+                                        },
+                                        "messages_ur.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.js") }
+                                        },
+                                        "messages_ur.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_ur.min.js") }
+                                        },
+                                        "messages_vi.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.js") }
+                                        },
+                                        "messages_vi.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_vi.min.js") }
+                                        },
+                                        "messages_zh.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.js") }
+                                        },
+                                        "messages_zh.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh.min.js") }
+                                        },
+                                        "messages_zh_TW.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.js") }
+                                        },
+                                        "messages_zh_TW.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\messages_zh_TW.min.js") }
+                                        },
+                                        "methods_de.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.js") }
+                                        },
+                                        "methods_de.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_de.min.js") }
+                                        },
+                                        "methods_es_CL.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.js") }
+                                        },
+                                        "methods_es_CL.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_es_CL.min.js") }
+                                        },
+                                        "methods_fi.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.js") }
+                                        },
+                                        "methods_fi.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_fi.min.js") }
+                                        },
+                                        "methods_it.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.js") }
+                                        },
+                                        "methods_it.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_it.min.js") }
+                                        },
+                                        "methods_nl.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.js") }
+                                        },
+                                        "methods_nl.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_nl.min.js") }
+                                        },
+                                        "methods_pt.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.js") }
+                                        },
+                                        "methods_pt.min.js": {
+                                            toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.min.js",
+                                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation\\localization\\methods_pt.min.js") }
+                                        }
+                                    }
+                                },
+                                "jquery-validation-unobtrusive": {
+                                    toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive",
+                                    toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive") },
+                                    "jquery.validate.unobtrusive.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js") }
+                                    },
+                                    "jquery.validate.unobtrusive.min.js": {
+                                        toAbsolutePath:()=> "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+                                        toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js") :  path.relative("C:\\app",  "C:\\app\\languages\\csharp\\Apps\\Auth\\Server\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js") }
+                                    }
+                                }
                             }
                         }
                     },
@@ -29937,14 +31219,6 @@ export const RootPaths:RootPathsType = createProxy( {
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\service-worker\\index.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\service-worker\\index.ts") }
                             }
                         },
-                        "templates": {
-                            toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates") },
-                            "_Layout.cshtml": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\templates\\_Layout.cshtml") }
-                            }
-                        },
                         "vite": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\vite",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\vite") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\vite") },
@@ -30020,6 +31294,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.scss",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.scss") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.scss") }
                             },
+                            "index.ts": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.ts",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\index.ts") }
+                            },
                             "libraries": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries") },
@@ -30027,6 +31305,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                     toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries\\index.scss",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries\\index.scss") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\libraries\\index.scss") }
                                 }
+                            },
+                            "_Layout.cshtml": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\auth\\src\\web\\_Layout.cshtml",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\_Layout.cshtml") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\auth\\src\\web\\_Layout.cshtml") }
                             }
                         }
                     },
@@ -30193,18 +31475,6 @@ export const RootPaths:RootPathsType = createProxy( {
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\service-worker\\index.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\service-worker\\index.ts") }
                             }
                         },
-                        "templates": {
-                            toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates") },
-                            "index.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.html") }
-                            },
-                            "index.webpack.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.webpack.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.webpack.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\templates\\index.webpack.html") }
-                            }
-                        },
                         "vite": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\vite",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\vite") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\vite") },
@@ -30276,9 +31546,17 @@ export const RootPaths:RootPathsType = createProxy( {
                         "web": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web") },
+                            "index.html": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.html",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.html") }
+                            },
                             "index.scss": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.scss",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.scss") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.scss") }
+                            },
+                            "index.webpack.html": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.webpack.html",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.webpack.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\index.webpack.html") }
                             },
                             "libraries": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\blazor-app\\src\\web\\libraries",
@@ -31065,14 +32343,6 @@ export const RootPaths:RootPathsType = createProxy( {
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\service-worker\\index.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\service-worker\\index.ts") }
                             }
                         },
-                        "templates": {
-                            toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\templates",
-                            toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\templates") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\templates") },
-                            "index.html": {
-                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\templates\\index.html",
-                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\templates\\index.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\templates\\index.html") }
-                            }
-                        },
                         "vite": {
                             toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\vite",
                             toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\vite") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\vite") },
@@ -31311,6 +32581,10 @@ export const RootPaths:RootPathsType = createProxy( {
                                     toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\web\\fontawesome\\_index.scss",
                                     toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\web\\fontawesome\\_index.scss") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\web\\fontawesome\\_index.scss") }
                                 }
+                            },
+                            "index.html": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\web\\index.html",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\shared\\src\\web\\index.html") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\shared\\src\\web\\index.html") }
                             },
                             "jquery": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\shared\\src\\web\\jquery",
@@ -33011,6 +34285,10 @@ export const RootPaths:RootPathsType = createProxy( {
                             "index.scss": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.scss",
                                 toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.scss") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.scss") }
+                            },
+                            "index.ts": {
+                                toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.ts",
+                                toRelativePath:(relativeTo?:string)=>{ return relativeTo? path.relative(relativeTo,  "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.ts") :  path.relative("C:\\app",  "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\index.ts") }
                             },
                             "libraries": {
                                 toAbsolutePath:()=> "C:\\app\\languages\\js\\apps\\solid-app\\src\\web\\libraries",

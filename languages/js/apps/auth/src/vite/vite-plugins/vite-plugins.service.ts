@@ -48,7 +48,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                 ],
                 inputs: [
                     {
-                        fromPath: authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
+                        fromPath: authPaths.src.web['_Layout.cshtml'].toAbsolutePath(),
                         toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.cshtml')
                     },
                     {

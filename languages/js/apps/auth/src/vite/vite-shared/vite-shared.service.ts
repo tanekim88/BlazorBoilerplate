@@ -8,6 +8,7 @@ import { AuthEnvironmentService } from '#auth/src/modules/environment/environmen
 import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { AuthVitePluginsService } from '../vite-plugins/vite-plugins.service';
 import { AuthPostcssService } from '#auth/src/modules/postcss/postcss/postcss.service';
+import { join } from 'path/posix';
 @CustomInjectable()
 export class AuthViteSharedService extends ViteSharedService {
     @CustomInject(AuthEnvironmentService)
@@ -23,6 +24,7 @@ export class AuthViteSharedService extends ViteSharedService {
             super.createConfiguration(), {
                 build: {
                     outDir: AuthPaths.toAbsolutePath(),
+                    assetsDir: join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'assets'),
                     rollupOptions: {
                         input: [],
                         external: []
