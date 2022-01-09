@@ -22,6 +22,7 @@ export class AuthViteSharedService extends ViteSharedService {
         const plugins = this.authVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
+                base:'~',
                 build: {
                     outDir: AuthPaths.toAbsolutePath(),
                     assetsDir: join(AuthPaths.wwwroot.toRelativePath(AuthPaths.toAbsolutePath()), 'assets'),
@@ -54,6 +55,11 @@ export class AuthViteSharedService extends ViteSharedService {
                 css: {
                     postcss: {
                         plugins: postcssPlugins
+                    }
+                },
+                resolve:{
+                    alias:{
+                        '#shared': 'apps/shared'
                     }
                 }
             } as UserConfig,

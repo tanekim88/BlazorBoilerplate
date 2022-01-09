@@ -9,6 +9,11 @@
 
     @RenderSection("Scripts", required: false)
     <script src="./index.ts" type="module"></script>
+    <script type="module">
+        await navigator.serviceWorker.register('[SERVICEWORKER_PATH]', {
+            type: 'module',
+        });
+    </script>
 </body>
 </html>
 

@@ -468,6 +468,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               delete bundle[key]
             }
           }
+          if(file.type === 'chunk') {
+            file.fileName = file.fileName.replace(/^wwwroot\//, '');
+          }
+
         }
       },
 
