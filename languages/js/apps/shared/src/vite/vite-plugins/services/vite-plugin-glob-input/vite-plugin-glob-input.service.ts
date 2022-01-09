@@ -6,7 +6,7 @@ import path from 'path';
 import { VitePluginBaseService } from '../../vite-plugin-base/vite-plugin-base.service';
 
 // import { configsCollections } from '#shared/configs-collection';
-import { normalizePath } from 'vite';
+import { normalizePath, Plugin } from 'vite';
 
 import fastGlob from 'fast-glob';
 import fs from 'fs'
@@ -76,7 +76,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
   @CustomInject(RegexService)
   protected regexService: RegexService;
 
-  createPlugin(options: VitePluginGlobInputOptions) {
+  createPrePlugin(options: VitePluginGlobInputOptions) {
     const regexService = this.regexService;
     options.externalsForHtml = options.externalsForHtml ?? [];
 
@@ -133,6 +133,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const dir = dirname(normalizePath(path.relative(root, absFrom)));
             relTo = normalizePath(path.join(dir, input.toName));
           }
+          if(relTo.endsWith('.cshtml')){
+            relTo = renameExtension(relTo, '.csthml.html');
+          }
+
           if (fs.existsSync(absFrom)) {
             actionsToTake(input, absFrom, relTo);
           }
@@ -145,7 +149,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     };
 
     return ({
-      name: 'vite-plugin-glob-input',
+      name: 'vite-plugin-glob-input-pre',
       enforce: 'pre' as 'pre' | 'post',
 
       config(config, args) {
@@ -557,6 +561,31 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       },
 
     });
+  }
+  createPostPlugin(...options: any): Plugin {
+    return {
+      name: 'vite-plugin-glob-input-post',
+      enforce: 'post',
+      generateBundle: function (option, bundle, isWrite: boolean) {
+        console.log('### generateBundle POST')
+        console.dir(option);
+        console.dir(bundle);
+        console.dir(isWrite);
+        console.dir(this);
+        const files = Object.entries<any>(bundle);
+        for (const [key, file] of files) {
+          if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {
+            const newFileName = renameExtension(file.fileName, '.cshtml');
+            this.emitFile({
+              type: 'asset',
+              fileName: newFileName,
+              source: file.source
+            })
+            delete bundle[key];
+          }
+        }
+      }
+    }
   }
 }
 

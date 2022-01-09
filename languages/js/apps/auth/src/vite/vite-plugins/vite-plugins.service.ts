@@ -5,6 +5,7 @@ import { CustomInject, CustomInjectable } from '#shared/src/functions/process-pr
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 import path from 'path';
 import solidPlugin from 'vite-plugin-solid';
+import { Plugin } from 'vite';
 @CustomInjectable()
 export class AuthVitePluginsService extends VitePluginsService {
     @CustomInject(AuthEnvironmentService)
@@ -15,15 +16,15 @@ export class AuthVitePluginsService extends VitePluginsService {
 
     // @CustomInject(VitePluginHtmlService)
     // protected vitePluginHtmlService: VitePluginHtmlService;
-    createManyPlugins() {
+    createManyPlugins(): Plugin[] {
 
         return [
             solidPlugin(),
-            this.vitePluginGlobInputService.createPlugin({
+            ...this.vitePluginGlobInputService.createManyPlugins({
                 inputs: [
                     {
-                        fromPath: authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
-                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.html')
+                        fromPath: authPaths.src.templates['_Layout.cshtml.html'].toAbsolutePath(),
+                        toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.cshtml')
                     },
                 ],
                 copy: [
@@ -53,7 +54,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                         fromPath: AuthPaths.wwwroot.toAbsolutePath(),
                     }
                 ]
-            })
+            }),
         ]
     }
 
