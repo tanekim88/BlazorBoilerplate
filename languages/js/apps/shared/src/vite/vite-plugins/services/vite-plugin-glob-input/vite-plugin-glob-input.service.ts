@@ -305,7 +305,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         }
 
 
-        const input = processInputs(options.inputs, root, (input, absFrom, relTo) => {
+        const [input, filesToWatch] = processInputs(options.inputs, root, (input, absFrom, relTo) => {
           let localOutput = conf.output;
           if (input.outDir) {
             localOutput = [{ dir: input.outDir }];
