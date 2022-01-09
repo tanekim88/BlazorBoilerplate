@@ -41,6 +41,7 @@ interface Input {
   applyChunk?: boolean,
   htmlToken?: string,
   outDir?: string,
+  watch?: boolean
 }
 export interface VitePluginGlobInputOptions {
   inputs: Input[],
@@ -98,9 +99,11 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       [key: string]: Data
     };
 
-    function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): string[] {
+    function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): [string[], string[]] {
       inputs = inputs ?? [];
-      const toReturn = inputs.flatMap(input => {
+      const allEntries = [];
+      const toWatch = [];
+      const toReturn = inputs.forEach(input => {
         if (input.include) {
 
           input.include = input.include.map(p => normalizePath(p));
@@ -141,10 +144,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           }
         })
 
-        return entries;
+        allEntries.push(...entries);
+        if (input.watch) {
+          toWatch.push(...entries);
+        }
       });
 
-      return toReturn;
+      return [allEntries, toWatch];
     };
 
     return ({
@@ -211,7 +217,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         if (!copyWatcher) {
 
           const fromToForCopy = {};
-          const filesToCopy = processInputs(options.copy, root, (input, absFrom, relTo) => {
+          const [filesToCopy, filesToWatch] = processInputs(options.copy, root, (input, absFrom, relTo) => {
             let localOutput = conf.output;
             if (input.outDir) {
               localOutput = [{ dir: input.outDir }];
@@ -233,7 +239,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
           });
 
-          copyWatcher = chokidar.watch(filesToCopy, {});
+          copyWatcher = chokidar.watch(filesToWatch, {});
           copyWatcher
             .on('change', fromPath => {
               fromPath = normalizePath(fromPath);
@@ -248,7 +254,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         if (!sassWatcher) {
           const fromToForSass = {};
           const dirsForSass = {};
-          const filesToSass = processInputs(options.sass, root, (input, absFrom, relTo) => {
+          const [filesToSass, sassFilesToWatch] = processInputs(options.sass, root, (input, absFrom, relTo) => {
             const isDir = fs.lstatSync(absFrom).isDirectory();
 
             let localOutput = conf.output;
@@ -275,7 +281,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             }
           });
 
-          sassWatcher = chokidar.watch(filesToSass, {});
+          sassWatcher = chokidar.watch(sassFilesToWatch, {});
           sassWatcher
             .on('change', fromPath => {
               fromPath = normalizePath(fromPath);
