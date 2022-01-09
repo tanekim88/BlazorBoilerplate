@@ -23,7 +23,7 @@ export class AuthVitePluginsService extends VitePluginsService {
             ...this.vitePluginGlobInputService.createManyPlugins({
                 inputs: [
                     {
-                        fromPath: authPaths.src.templates['_Layout.cshtml.html'].toAbsolutePath(),
+                        fromPath: authPaths.src.templates['_Layout.cshtml'].toAbsolutePath(),
                         toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.toAbsolutePath()), '_Layout.cshtml')
                     },
                 ],

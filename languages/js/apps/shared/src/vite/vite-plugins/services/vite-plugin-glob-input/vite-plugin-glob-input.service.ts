@@ -133,9 +133,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const dir = dirname(normalizePath(path.relative(root, absFrom)));
             relTo = normalizePath(path.join(dir, input.toName));
           }
-          if(relTo.endsWith('.cshtml')){
-            relTo = renameExtension(relTo, '.csthml.html');
-          }
+          // if(relTo.endsWith('.cshtml')){
+          //   relTo = renameExtension(relTo, '.csthml.html');
+          // }
 
           if (fs.existsSync(absFrom)) {
             actionsToTake(input, absFrom, relTo);

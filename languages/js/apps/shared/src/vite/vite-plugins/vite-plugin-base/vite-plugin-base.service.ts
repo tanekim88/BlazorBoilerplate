@@ -32,7 +32,7 @@ export class VitePluginBaseService {
         return {} as any
     }
 
-    createPlugins(...options: any): Plugin[] {
+    createManyPlugins(...options: any): Plugin[] {
         return [
             this.createPrePlugin(...options),
             this.createPlugin(...options),
