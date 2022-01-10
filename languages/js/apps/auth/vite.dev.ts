@@ -8,3 +8,4 @@ const viteBase = new ViteBase(AuthViteModule, AuthViteDevService);
 
 await viteBase.build();
 
+

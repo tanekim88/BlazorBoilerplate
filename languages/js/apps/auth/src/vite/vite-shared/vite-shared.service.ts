@@ -41,7 +41,6 @@ export class AuthViteSharedService extends ViteSharedService {
                     emptyOutDir: false,
                     polyfillDynamicImport: false,
                     target: 'esnext',
-                    
                 },
                 
                 server: {
