@@ -42,7 +42,9 @@ const p = function polyfill() {
     }
 };true&&p();
 
+var _index = '';
+
 var index$1 = '';
 
 var index = '';
-//# sourceMappingURL=_Layout.cshtml.e2908ca5.js.map
+//# sourceMappingURL=_Layout.cshtml.b6599193.js.map
