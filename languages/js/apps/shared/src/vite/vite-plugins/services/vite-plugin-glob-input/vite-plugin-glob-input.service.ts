@@ -26,13 +26,12 @@ let copyWatcher: chokidar.FSWatcher;
 // import fibers from 'fibers';
 
 type Action = 'ts-to-json' | 'copy' | 'scss-to-css';
-interface External {
+export interface External {
   insertAt: string,
   htmls?: string[],
-  scripts?: string[],
-  links?: string[]
+  enforce?: 'pre' | 'post'
 }
-interface Input {
+export interface Input {
   fromPath?: string,
   toRelativePath?: string,
   toName?: string,
@@ -60,7 +59,7 @@ export interface VitePluginGlobInputOptions {
   rm?: Input[],
   empty?: Input[],
 }
-interface Data {
+export interface Data {
   absFrom?: string,
   absFrom2?: string,
   from2ToFrom?: string,
@@ -76,14 +75,6 @@ interface Data {
   htmlToken?: string,
   baseName?: string,
   externals?: External[],
-}
-enum NodeType {
-  Literal = 'Literal',
-  CallExpression = 'CallExpression',
-  Identifier = 'Identifier',
-  ImportDeclaration = 'ImportDeclaration',
-  ExportNamedDeclaration = 'ExportNamedDeclaration',
-  ExportAllDeclaration = 'ExportAllDeclaration',
 }
 
 const parentPathToken = '__dotdot__';
@@ -367,6 +358,23 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             let code = fs.readFileSync(absFrom, { encoding: 'utf8' });
 
+
+
+            const externals = input.externals ?? [];
+
+            externals.forEach(external => {
+              const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+              external.htmls?.forEach(html => {
+                code = code.replace(
+                  reg,
+                  `${html}\n$&`
+                )
+              });
+            });
+
+
+
+
             absFromToData[absFrom] = {
               absFrom,
               absFrom2,
@@ -629,43 +637,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                 source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
               });
 
-              const externals = data.externals ?? [];
-               
-              
-              externals.forEach(external => {
-                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
-                external.links?.forEach(link => {
-                  source = source.replace(
-                    reg,
-                    `<link rel="stylesheet" href="${link}" />\n$&`
-                  )
-                });
-                external.htmls?.forEach(html => {
-                  source = source.replace(
-                    reg,
-                    `${html}\n$&`
-                  )
-                });
-                external.scripts?.forEach(script => {
-                  source = source.replace(
-                    reg,
-                    `<script src=${script}></script>\n$&`
-                  )
-                });
-
-              });
-
-              externals.forEach(external => {
+              data.externals.forEach(external => {
                 const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
                 source = source.replace(
                   reg,
                   ``
                 )
               });
-
-
-
-
 
               file.source = source;
             }

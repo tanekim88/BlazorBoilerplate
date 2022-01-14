@@ -20,11 +20,15 @@ export class AuthVitePluginsService extends VitePluginsService {
     // protected vitePluginHtmlService: VitePluginHtmlService;
     createManyPlugins(): Plugin[] {
 
+        const htmls = [
+            sharedPaths.src.web.material.native.components.card['index.ts'].toAbsolutePath()
+        ].map(html => `<script type="module" src="${html}"></script>`);
+        
         return [
             // VitePWA({}),
             solidPlugin(),
             ...this.vitePluginGlobInputService.createManyPlugins({
-          
+
                 sass: [
                     {
                         fromPath: AuthPaths.Pages.toAbsolutePath()
@@ -56,12 +60,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                             // },
                             {
                                 insertAt: '@head-start',
-                                scripts: [
-                                    sharedPaths.src.web.material.native.components.button['index.ts'].toAbsolutePath()
-                                ],
-                                links:[
-                                    sharedPaths.src.web.material.native.components.card['index.ts'].toAbsolutePath()
-                                ]
+                                htmls: htmls,
                             }
                         ],
                     },
