@@ -5,15 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { CustomModule } from '#shared/src/functions/process-providers';
-import { PostcssModule } from '#shared/src/modules/postcss/postcss.module';
 import { AuthEnvironmentModule } from './environment/environment.module';
+import { AuthPostcssModule } from './postcss/postcss.module';
 import { AuthUtilitiesModule } from './utilities/utilities.module';
 let AuthModulesModule = class AuthModulesModule {
 };
 AuthModulesModule = __decorate([
     CustomModule({
         providers: [],
-        imports: [AuthUtilitiesModule, AuthEnvironmentModule, PostcssModule],
+        imports: [AuthUtilitiesModule, AuthEnvironmentModule, AuthPostcssModule],
     })
 ], AuthModulesModule);
 export { AuthModulesModule };

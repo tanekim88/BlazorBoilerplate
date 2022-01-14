@@ -16,19 +16,17 @@ const fileToRemove = sharedPaths['tailwind.config.json'].toAbsolutePath();
 if (fs.existsSync(fileToRemove)) {
     fs.unlinkSync(fileToRemove);
 }
-import tailwindConfig from '#shared/tailwind.config';
-import resolveConfig from 'tailwindcss/resolveConfig';
 let TailwindcssService = class TailwindcssService extends PostcssBaseService {
     constructor() {
         super(Tailwindcss);
     }
     createOptions(options) {
-        console.dir(tailwindConfig);
-        const resolvedConfig = resolveConfig(tailwindConfig);
-        console.dir(resolvedConfig);
-        return this.mergeService.mergeOptions(super.createOptions(), {
-            config: resolvedConfig,
-        });
+        // console.dir(tailwindConfig);
+        // const resolvedConfig =  resolveConfig(tailwindConfig);
+        // console.dir(resolvedConfig);
+        // return this.mergeService.mergeOptions(super.createOptions(), {
+        //     config: resolvedConfig,
+        // });
     }
 };
 TailwindcssService = __decorate([

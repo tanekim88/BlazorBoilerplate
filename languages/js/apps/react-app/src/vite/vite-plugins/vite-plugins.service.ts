@@ -19,8 +19,8 @@ export class ReactAppVitePluginsService extends VitePluginsService {
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {
-                        include: [this.reactAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
-                        relativeTo: this.reactAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
+                        include: [this.reactAppEnvironmentService.localPaths.src.web['index.html'].toAbsolutePath()],
+                        relativeTo: this.reactAppEnvironmentService.localPaths.src.web.toAbsolutePath(),
                     }
                 ]
             })

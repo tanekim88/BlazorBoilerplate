@@ -15,6 +15,7 @@ import { VitePluginBaseService } from '../../vite-plugin-base/vite-plugin-base.s
 import { normalizePath } from 'vite';
 import fastGlob from 'fast-glob';
 import fs from 'fs';
+import fsExtra from 'fs-extra';
 import { dirname } from 'path/posix';
 import sass from 'sass';
 import chokidar from 'chokidar';
@@ -32,19 +33,33 @@ var NodeType;
     NodeType["ExportNamedDeclaration"] = "ExportNamedDeclaration";
     NodeType["ExportAllDeclaration"] = "ExportAllDeclaration";
 })(NodeType || (NodeType = {}));
+const parentPathToken = '__dotdot__';
 let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePluginBaseService {
     regexService;
-    createPlugin(options) {
+    absFromToData = {};
+    absFrom2ToData = {};
+    absToToData = {};
+    relTo2ToData = {};
+    relTo3ToData = {};
+    createPrePlugin(options) {
         const regexService = this.regexService;
-        options.externalsForHtml = options.externalsForHtml ?? [];
         let config;
         let server;
         const absFromToData = {};
+        this.absFromToData = absFromToData;
         const absFrom2ToData = {};
+        this.absFrom2ToData = absFrom2ToData;
         const absToToData = {};
+        this.absToToData = absToToData;
+        const relTo2ToData = {};
+        this.relTo2ToData = relTo2ToData;
         const relTo3ToData = {};
+        this.relTo3ToData = relTo3ToData;
         function processInputs(inputs, root, actionsToTake) {
-            const toReturn = inputs.flatMap(input => {
+            inputs = inputs ?? [];
+            const allEntries = [];
+            const toWatch = [];
+            const toReturn = inputs.forEach(input => {
                 if (input.include) {
                     input.include = input.include.map(p => normalizePath(p));
                     input.relativeTo = input.relativeTo && normalizePath(input.relativeTo);
@@ -71,15 +86,20 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                         const dir = dirname(normalizePath(path.relative(root, absFrom)));
                         relTo = normalizePath(path.join(dir, input.toName));
                     }
-                    actionsToTake(input, absFrom, relTo);
+                    if (fs.existsSync(absFrom)) {
+                        actionsToTake(input, absFrom, relTo);
+                    }
                 });
-                return entries;
+                allEntries.push(...entries);
+                if (input.watch) {
+                    toWatch.push(...entries);
+                }
             });
-            return toReturn;
+            return [allEntries, toWatch];
         }
         ;
         return ({
-            name: 'vite-plugin-glob-input',
+            name: 'vite-plugin-glob-input-pre',
             enforce: 'pre',
             config(config, args) {
                 console.log('### config');
@@ -93,6 +113,25 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                 }
                 const root = config.root;
                 const outDir = config.build.outDir;
+                if (options.rm) {
+                    processInputs(options.rm, root, (input, absFrom, relTo) => {
+                        const isDir = fs.lstatSync(absFrom).isDirectory();
+                        if (isDir) {
+                            fs.rmSync(absFrom, { recursive: true });
+                        }
+                        else {
+                            fs.unlinkSync(absFrom);
+                        }
+                    });
+                }
+                if (options.empty) {
+                    processInputs(options.empty, root, (input, absFrom, relTo) => {
+                        const isDir = fs.lstatSync(absFrom).isDirectory();
+                        if (isDir) {
+                            fsExtra.emptyDirSync(absFrom);
+                        }
+                    });
+                }
             },
             configResolved(resolvedConfig) {
                 console.log('### configResolved');
@@ -113,7 +152,7 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                 const outDir = config.build.outDir;
                 if (!copyWatcher) {
                     const fromToForCopy = {};
-                    const filesToCopy = processInputs(options.copy, root, (input, absFrom, relTo) => {
+                    const [filesToCopy, filesToWatch] = processInputs(options.copy, root, (input, absFrom, relTo) => {
                         let localOutput = conf.output;
                         if (input.outDir) {
                             localOutput = [{ dir: input.outDir }];
@@ -127,9 +166,11 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                                 finalPath = path.join(output.dir, input.toRelativePath);
                             }
                             fromToForCopy[absFrom] = finalPath;
+                            // fs.copyFileSync(absFrom, finalPath);
+                            fsExtra.copySync(absFrom, finalPath, { overwrite: true });
                         }
                     });
-                    copyWatcher = chokidar.watch(filesToCopy, {});
+                    copyWatcher = chokidar.watch(filesToWatch, {});
                     copyWatcher
                         .on('change', fromPath => {
                         fromPath = normalizePath(fromPath);
@@ -143,7 +184,7 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                 if (!sassWatcher) {
                     const fromToForSass = {};
                     const dirsForSass = {};
-                    const filesToSass = processInputs(options.sass, root, (input, absFrom, relTo) => {
+                    const [filesToSass, sassFilesToWatch] = processInputs(options.sass, root, (input, absFrom, relTo) => {
                         const isDir = fs.lstatSync(absFrom).isDirectory();
                         let localOutput = conf.output;
                         if (input.outDir) {
@@ -165,7 +206,7 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                             }
                         }
                     });
-                    sassWatcher = chokidar.watch(filesToSass, {});
+                    sassWatcher = chokidar.watch(sassFilesToWatch, {});
                     sassWatcher
                         .on('change', fromPath => {
                         fromPath = normalizePath(fromPath);
@@ -185,18 +226,17 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                         }
                     });
                 }
-                const input = processInputs(options.inputs, root, (input, absFrom, relTo) => {
+                const [input, filesToWatch] = processInputs(options.inputs, root, (input, absFrom, relTo) => {
                     let localOutput = conf.output;
                     if (input.outDir) {
                         localOutput = [{ dir: input.outDir }];
                     }
                     for (let output of localOutput) {
-                        let finalPath;
-                        if (input.relativeTo || input.toName) {
-                            finalPath = path.join(output.dir, relTo);
+                        if (relTo.endsWith('.cshtml')) {
+                            relTo = normalizePath(renameExtension(relTo, '.cshtml.html'));
                         }
-                        if (input.toRelativePath) {
-                            finalPath = path.join(output.dir, input.toRelativePath);
+                        if (relTo.startsWith('..')) {
+                            relTo = relTo.replace(/\.\./g, parentPathToken);
                         }
                         const relTo2 = relTo;
                         if (path.extname(absFrom) === '.ts' && path.extname(relTo) === '.js') {
@@ -218,10 +258,13 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                             code,
                             action: input.action,
                             from2ToFrom,
-                            htmlToken: input.htmlToken
+                            htmlToken: input.htmlToken,
+                            baseName: input.baseName,
+                            externals: input.externals,
                         };
                         absFrom2ToData[absFrom2] = absFromToData[absFrom];
                         absToToData[absTo] = absFromToData[absFrom];
+                        relTo2ToData[relTo2] = absFromToData[absFrom];
                     }
                 });
                 conf.input = input;
@@ -333,24 +376,6 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
             },
             transformIndexHtml(html) {
                 console.log('### transformIndexHtml');
-                // console.dir(this.getWatchFiles())
-                console.dir(this);
-                // console.dir(html);
-                const externals = options.externalsForHtml ?? [];
-                externals.forEach(external => {
-                    const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
-                    html = html.replace(reg, `${external.html}\n$&`);
-                });
-                externals.forEach(external => {
-                    const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
-                    html = html.replace(reg, ``);
-                });
-                const entries = Object.entries(absFrom2ToData);
-                for (const [key, data] of entries) {
-                    if (data.htmlToken) {
-                        html = html.replace(data.htmlToken, data.relTo3);
-                    }
-                }
                 return html;
             },
             writeBundle(option, bundle) {
@@ -401,6 +426,96 @@ let VitePluginGlobInputService = class VitePluginGlobInputService extends VitePl
                 };
             },
         });
+    }
+    createPostPlugin(...options) {
+        const convertTempPathToInvalidPath = (invalidPath) => {
+            return invalidPath.replace(new RegExp(this.regexService.escapeRegExp(parentPathToken), 'g'), '..');
+        };
+        const regexService = this.regexService;
+        const absFromToData = this.absFromToData;
+        const absFrom2ToData = this.absFrom2ToData;
+        const absToToData = this.absToToData;
+        const relTo2ToData = this.relTo2ToData;
+        const relTo3ToData = this.relTo3ToData;
+        let savedConfig;
+        return {
+            name: 'vite-plugin-glob-input-post',
+            enforce: 'post',
+            config(config, args) {
+                console.log('### config');
+                console.dir(config);
+                console.dir(args);
+                // console.dir(this.getWatchFiles())
+                console.dir(this);
+                savedConfig = config;
+            },
+            generateBundle: function (option, bundle, isWrite) {
+                console.log('### generateBundle POST');
+                console.dir(option);
+                console.dir(bundle);
+                console.dir(isWrite);
+                console.dir(this);
+                const files = Object.entries(bundle);
+                const keys = Object.keys(bundle);
+                for (const [key, file] of files) {
+                    let shouldDeleteKey = false;
+                    const data = relTo2ToData[key];
+                    if (file.fileName?.endsWith('.html') && file.type === 'asset') {
+                        if (data?.baseName) {
+                            let source = file.source;
+                            keys.forEach(k => {
+                                source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
+                            });
+                            const externals = data.externals ?? [];
+                            externals.forEach(external => {
+                                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+                                external.links?.forEach(link => {
+                                    source = source.replace(reg, `<link rel="stylesheet" href="${link}" />\n$&`);
+                                });
+                                external.htmls?.forEach(html => {
+                                    source = source.replace(reg, `${html}\n$&`);
+                                });
+                                external.scripts?.forEach(script => {
+                                    source = source.replace(reg, `<script src=${script}></script>\n$&`);
+                                });
+                            });
+                            externals.forEach(external => {
+                                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+                                source = source.replace(reg, ``);
+                            });
+                            file.source = source;
+                        }
+                    }
+                    if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {
+                        const newFileName = file.fileName.replace(/\.cshtml\.html$/, '.cshtml');
+                        file.fileName = newFileName;
+                        if (!file.fileName.includes(parentPathToken)) {
+                            this.emitFile({
+                                type: 'asset',
+                                fileName: newFileName,
+                                source: file.source
+                            });
+                        }
+                        shouldDeleteKey = true;
+                    }
+                    if (file.fileName.includes(parentPathToken)) {
+                        const newPath = convertTempPathToInvalidPath(file.fileName);
+                        const finalPath = path.resolve(savedConfig.build.outDir, newPath);
+                        const data = file.type === 'asset' ? file.source : file.code;
+                        fs.writeFileSync(finalPath, data, { encoding: 'utf8' });
+                        shouldDeleteKey = true;
+                    }
+                    if (shouldDeleteKey) {
+                        delete bundle[key];
+                    }
+                }
+            },
+            transformIndexHtml: function (html) {
+                // console.dir(this.getWatchFiles())
+                console.dir(this);
+                // console.dir(html);
+            }
+        };
     }
 };
 __decorate([

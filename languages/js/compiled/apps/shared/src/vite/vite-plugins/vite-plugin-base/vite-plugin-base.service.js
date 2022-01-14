@@ -10,14 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { CustomInject, CustomInjectable } from '#shared/src/functions/process-providers';
 import { EnvironmentService } from '../../../modules/environment/environment/environment.service';
 import { MergeService } from '../../../modules/utilities/modules/merge/merge/merge.service';
+import _ from 'lodash';
 let VitePluginBaseService = class VitePluginBaseService {
     mergeService;
     environmentService;
     createOptions(options) {
         return this.mergeService.mergeOptions({}, options);
     }
+    createPrePlugin(...options) {
+        return {};
+    }
     createPlugin(...options) {
         return {};
+    }
+    createPostPlugin(...options) {
+        return {};
+    }
+    createManyPlugins(...options) {
+        return [
+            this.createPrePlugin(...options),
+            this.createPlugin(...options),
+            this.createPostPlugin(...options)
+        ].filter(plugin => {
+            return !_.isEmpty(plugin);
+        });
     }
 };
 __decorate([

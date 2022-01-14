@@ -20,33 +20,33 @@ import { PostcssRfsAutopilotService } from "#shared/src/modules/postcss/services
 import { RfsService } from "#shared/src/modules/postcss/services/rfs/rfs.service";
 let ReactAppPostcssService = class ReactAppPostcssService {
     CssNanoService;
-    PostcssReporterService;
+    postcssReporterService;
     environmentService;
-    PostcssPurgecssService;
-    PostcssPresetEnvService;
-    PostcssCombineDuplicatedSelectorsService;
-    PostcssFunctionsService;
-    PostcssFontMagicianService;
+    postcssPurgecssService;
+    postcssPresetEnvService;
+    postcssCombineDuplicatedSelectorsService;
+    postcssFunctionsService;
+    postcssFontMagicianService;
     // @CustomInject(TailwindcssService)
     // protected TailwindcssService: TailwindcssService;
-    PostcssRfsAutopilotService;
+    postcssRfsAutopilotService;
     RfsService;
     createPostcssPlugins() {
         const plugins = [];
-        plugins.push(this.PostcssRfsAutopilotService.createPlugin());
+        plugins.push(this.postcssRfsAutopilotService.createPlugin());
         plugins.push(this.RfsService.createPlugin());
         // plugins.push(this.TailwindcssService.createPlugin());
-        // plugins.push(this.PostcssFunctionsService.createPlugin());
-        // plugins.push(this.PostcssFontMagicianService.createPlugin());
-        // plugins.push(this.PostcssPresetEnvService.createPlugin());
+        // plugins.push(this.postcssFunctionsService.createPlugin());
+        // plugins.push(this.postcssFontMagicianService.createPlugin());
+        // plugins.push(this.postcssPresetEnvService.createPlugin());
         // if (this.environmentService.isDevelopment) {
-        //     postcssPluginsAfter.push(this.PostcssCombineDuplicatedSelectorsService.createPlugin());
+        //     postcssPluginsAfter.push(this.postcssCombineDuplicatedSelectorsService.createPlugin());
         // }
         if (this.environmentService.isProduction) {
-            plugins.push(this.PostcssPurgecssService.createPlugin());
+            plugins.push(this.postcssPurgecssService.createPlugin());
             plugins.push(this.CssNanoService.createPlugin());
         }
-        // plugins.push(this.PostcssReporterService.createPlugin());
+        // plugins.push(this.postcssReporterService.createPlugin());
         return plugins;
     }
 };
@@ -57,7 +57,7 @@ __decorate([
 __decorate([
     CustomInject(PostcssReporterService),
     __metadata("design:type", PostcssReporterService)
-], ReactAppPostcssService.prototype, "PostcssReporterService", void 0);
+], ReactAppPostcssService.prototype, "postcssReporterService", void 0);
 __decorate([
     CustomInject(EnvironmentService),
     __metadata("design:type", EnvironmentService)
@@ -65,27 +65,27 @@ __decorate([
 __decorate([
     CustomInject(PostcssPurgecssService),
     __metadata("design:type", PostcssPurgecssService)
-], ReactAppPostcssService.prototype, "PostcssPurgecssService", void 0);
+], ReactAppPostcssService.prototype, "postcssPurgecssService", void 0);
 __decorate([
     CustomInject(PostcssPresetEnvService),
     __metadata("design:type", PostcssPresetEnvService)
-], ReactAppPostcssService.prototype, "PostcssPresetEnvService", void 0);
+], ReactAppPostcssService.prototype, "postcssPresetEnvService", void 0);
 __decorate([
     CustomInject(PostcssCombineDuplicatedSelectorsService),
     __metadata("design:type", PostcssCombineDuplicatedSelectorsService)
-], ReactAppPostcssService.prototype, "PostcssCombineDuplicatedSelectorsService", void 0);
+], ReactAppPostcssService.prototype, "postcssCombineDuplicatedSelectorsService", void 0);
 __decorate([
     CustomInject(PostcssFunctionsService),
     __metadata("design:type", PostcssFunctionsService)
-], ReactAppPostcssService.prototype, "PostcssFunctionsService", void 0);
+], ReactAppPostcssService.prototype, "postcssFunctionsService", void 0);
 __decorate([
     CustomInject(PostcssFontMagicianService),
     __metadata("design:type", PostcssFontMagicianService)
-], ReactAppPostcssService.prototype, "PostcssFontMagicianService", void 0);
+], ReactAppPostcssService.prototype, "postcssFontMagicianService", void 0);
 __decorate([
     CustomInject(PostcssRfsAutopilotService),
     __metadata("design:type", PostcssRfsAutopilotService)
-], ReactAppPostcssService.prototype, "PostcssRfsAutopilotService", void 0);
+], ReactAppPostcssService.prototype, "postcssRfsAutopilotService", void 0);
 __decorate([
     CustomInject(RfsService),
     __metadata("design:type", RfsService)

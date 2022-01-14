@@ -16,45 +16,45 @@ export class ReactAppPostcssService {
     @CustomInject(CssnanoService)
     protected CssNanoService: CssnanoService;
     @CustomInject(PostcssReporterService)
-    protected PostcssReporterService: PostcssReporterService;
+    protected postcssReporterService: PostcssReporterService;
     @CustomInject(EnvironmentService)
     protected environmentService: EnvironmentService;
     @CustomInject(PostcssPurgecssService)
-    protected PostcssPurgecssService: PostcssPurgecssService;
+    protected postcssPurgecssService: PostcssPurgecssService;
     @CustomInject(PostcssPresetEnvService)
-    protected PostcssPresetEnvService: PostcssPresetEnvService;
+    protected postcssPresetEnvService: PostcssPresetEnvService;
     @CustomInject(PostcssCombineDuplicatedSelectorsService)
-    protected PostcssCombineDuplicatedSelectorsService: PostcssCombineDuplicatedSelectorsService;
+    protected postcssCombineDuplicatedSelectorsService: PostcssCombineDuplicatedSelectorsService;
     @CustomInject(PostcssFunctionsService)
-    protected PostcssFunctionsService: PostcssFunctionsService;
+    protected postcssFunctionsService: PostcssFunctionsService;
     @CustomInject(PostcssFontMagicianService)
-    protected PostcssFontMagicianService: PostcssFontMagicianService;
+    protected postcssFontMagicianService: PostcssFontMagicianService;
     // @CustomInject(TailwindcssService)
     // protected TailwindcssService: TailwindcssService;
     @CustomInject(PostcssRfsAutopilotService)
-    protected PostcssRfsAutopilotService: PostcssRfsAutopilotService;
+    protected postcssRfsAutopilotService: PostcssRfsAutopilotService;
     @CustomInject(RfsService)
     protected RfsService: RfsService;
     createPostcssPlugins() {
         const plugins = [];
-        plugins.push(this.PostcssRfsAutopilotService.createPlugin());
+        plugins.push(this.postcssRfsAutopilotService.createPlugin());
         plugins.push(this.RfsService.createPlugin());
 
         // plugins.push(this.TailwindcssService.createPlugin());
-        // plugins.push(this.PostcssFunctionsService.createPlugin());
-        // plugins.push(this.PostcssFontMagicianService.createPlugin());
-        // plugins.push(this.PostcssPresetEnvService.createPlugin());
+        // plugins.push(this.postcssFunctionsService.createPlugin());
+        // plugins.push(this.postcssFontMagicianService.createPlugin());
+        // plugins.push(this.postcssPresetEnvService.createPlugin());
 
         // if (this.environmentService.isDevelopment) {
-        //     postcssPluginsAfter.push(this.PostcssCombineDuplicatedSelectorsService.createPlugin());
+        //     postcssPluginsAfter.push(this.postcssCombineDuplicatedSelectorsService.createPlugin());
         // }
 
         if (this.environmentService.isProduction) {
-            plugins.push(this.PostcssPurgecssService.createPlugin());
+            plugins.push(this.postcssPurgecssService.createPlugin());
             plugins.push(this.CssNanoService.createPlugin());
         }
 
-        // plugins.push(this.PostcssReporterService.createPlugin());
+        // plugins.push(this.postcssReporterService.createPlugin());
         return plugins;
     }
 }

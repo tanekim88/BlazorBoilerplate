@@ -44,12 +44,12 @@ let BlazorAppVitePluginsService = class BlazorAppVitePluginsService extends Vite
                 inputs: [
                     {
                         include: [
-                            this.blazorAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()
+                            this.blazorAppEnvironmentService.localPaths.src.web['index.html'].toAbsolutePath()
                         ],
-                        relativeTo: this.blazorAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
+                        relativeTo: this.blazorAppEnvironmentService.localPaths.src.web.toAbsolutePath(),
                     },
                     {
-                        fromPath: this.blazorAppEnvironmentService.localPaths.src['service-worker']['index.ts'].toAbsolutePath(),
+                        fromPath: this.blazorAppEnvironmentService.localPaths.src.web['service-worker']['index.ts'].toAbsolutePath(),
                         toName: 'service-worker.[hash].js',
                         htmlToken: '[SERVICEWORKER_PATH]'
                     },

@@ -7,6 +7,7 @@ import path from 'path';
 import solidPlugin from 'vite-plugin-solid';
 import { Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { sharedPaths } from '#root/apps/shared';
 @CustomInjectable()
 export class AuthVitePluginsService extends VitePluginsService {
     @CustomInject(AuthEnvironmentService)
@@ -23,26 +24,7 @@ export class AuthVitePluginsService extends VitePluginsService {
             // VitePWA({}),
             solidPlugin(),
             ...this.vitePluginGlobInputService.createManyPlugins({
-                externalsForHtml: [
-                    // {
-                    //     html: `
-                    //     <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
-                    //     <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
-                    // `, insertAt: '@head-start'
-                    // },
-                    // { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '@head-end' },
-                    // {
-                    //     html: `
-                    // <script src="_content/Material.Blazor/material.blazor.min.js"></script>
-                    // <script>
-                    //     MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
-                    // </script>
-                    // <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
-                    // <script src="_framework/blazor.webassembly.js"></script>
-                    // <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
-                    // `, insertAt: '@body-end'
-                    // },
-                ],
+          
                 sass: [
                     {
                         fromPath: AuthPaths.Pages.toAbsolutePath()
@@ -52,7 +34,36 @@ export class AuthVitePluginsService extends VitePluginsService {
                     {
                         fromPath: authPaths.src.web['_Layout.cshtml'].toAbsolutePath(),
                         toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), '_Layout.cshtml'),
-                        baseName: '~/'
+                        baseName: '~/',
+                        extrenals: [
+                            // {
+                            //     html: `
+                            //     <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
+                            //     <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
+                            // `, insertAt: '@head-start'
+                            // },
+                            // { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '@head-end' },
+                            // {
+                            //     html: `
+                            // <script src="_content/Material.Blazor/material.blazor.min.js"></script>
+                            // <script>
+                            //     MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                            // </script>
+                            // <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+                            // <script src="_framework/blazor.webassembly.js"></script>
+                            // <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
+                            // `, insertAt: '@body-end'
+                            // },
+                            {
+                                insertAt: '@head-start',
+                                scripts: [
+                                    sharedPaths.src.web.material.native.components.button['index.ts'].toAbsolutePath()
+                                ],
+                                links:[
+                                    sharedPaths.src.web.material.native.components.card['index.ts'].toAbsolutePath()
+                                ]
+                            }
+                        ],
                     },
                 ],
                 copy: [

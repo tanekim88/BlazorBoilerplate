@@ -13,6 +13,7 @@ import { AuthEnvironmentService } from '#auth/src/modules/environment/environmen
 import { ViteSharedService } from '#shared/src/vite/vite-shared/vite-shared.service';
 import { AuthVitePluginsService } from '../vite-plugins/vite-plugins.service';
 import { AuthPostcssService } from '#auth/src/modules/postcss/postcss/postcss.service';
+import { sharedPaths } from '#root/apps/shared';
 let AuthViteSharedService = class AuthViteSharedService extends ViteSharedService {
     authEnvironmentService;
     authVitePluginsService;
@@ -21,8 +22,10 @@ let AuthViteSharedService = class AuthViteSharedService extends ViteSharedServic
         const postcssPlugins = this.authPostcssService.createPostcssPlugins();
         const plugins = this.authVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(super.createConfiguration(), {
+            base: '/',
             build: {
                 outDir: AuthPaths.wwwroot.toAbsolutePath(),
+                // assetsDir:'assets',
                 rollupOptions: {
                     input: [],
                     external: []
@@ -32,7 +35,7 @@ let AuthViteSharedService = class AuthViteSharedService extends ViteSharedServic
                 cssCodeSplit: true,
                 sourcemap: true,
                 minify: false,
-                emptyOutDir: true,
+                emptyOutDir: false,
                 polyfillDynamicImport: false,
                 target: 'esnext',
             },
@@ -48,6 +51,11 @@ let AuthViteSharedService = class AuthViteSharedService extends ViteSharedServic
             css: {
                 postcss: {
                     plugins: postcssPlugins
+                }
+            },
+            resolve: {
+                alias: {
+                    '#shared': sharedPaths.toAbsolutePath()
                 }
             }
         }, options);

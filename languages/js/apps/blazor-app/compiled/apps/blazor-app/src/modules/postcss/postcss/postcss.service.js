@@ -33,20 +33,20 @@ let BlazorAppPostcssService = class BlazorAppPostcssService {
     RfsService;
     createPostcssPlugins() {
         const plugins = [];
-        plugins.push(this.PostcssRfsAutopilotService.createPlugin());
+        plugins.push(this.postcssRfsAutopilotService.createPlugin());
         plugins.push(this.RfsService.createPlugin());
         // plugins.push(this.TailwindcssService.createPlugin());
-        // plugins.push(this.PostcssFunctionsService.createPlugin());
-        // plugins.push(this.PostcssFontMagicianService.createPlugin());
-        // plugins.push(this.PostcssPresetEnvService.createPlugin());
+        // plugins.push(this.postcssFunctionsService.createPlugin());
+        // plugins.push(this.postcssFontMagicianService.createPlugin());
+        // plugins.push(this.postcssPresetEnvService.createPlugin());
         // if (this.environmentService.isDevelopment) {
-        //     postcssPluginsAfter.push(this.PostcssCombineDuplicatedSelectorsService.createPlugin());
+        //     postcssPluginsAfter.push(this.postcssCombineDuplicatedSelectorsService.createPlugin());
         // }
         if (this.environmentService.isProduction) {
-            plugins.push(this.PostcssPurgecssService.createPlugin());
+            plugins.push(this.postcssPurgecssService.createPlugin());
             plugins.push(this.CssNanoService.createPlugin());
         }
-        // plugins.push(this.PostcssReporterService.createPlugin());
+        // plugins.push(this.postcssReporterService.createPlugin());
         return plugins;
     }
 };

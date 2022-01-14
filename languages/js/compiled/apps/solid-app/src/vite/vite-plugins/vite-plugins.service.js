@@ -23,8 +23,8 @@ let SolidAppVitePluginsService = class SolidAppVitePluginsService extends VitePl
             this.vitePluginGlobInputService.createPlugin({
                 inputs: [
                     {
-                        include: [this.solidAppEnvironmentService.localPaths.src.templates['index.html'].toAbsolutePath()],
-                        relativeTo: this.solidAppEnvironmentService.localPaths.src.templates.toAbsolutePath(),
+                        include: [this.solidAppEnvironmentService.localPaths.src.web['index.html'].toAbsolutePath()],
+                        relativeTo: this.solidAppEnvironmentService.localPaths.src.web.toAbsolutePath(),
                     }
                 ]
             })

@@ -26,6 +26,12 @@ let copyWatcher: chokidar.FSWatcher;
 // import fibers from 'fibers';
 
 type Action = 'ts-to-json' | 'copy' | 'scss-to-css';
+interface External {
+  insertAt: string,
+  htmls?: string[],
+  scripts?: string[],
+  links?: string[]
+}
 interface Input {
   fromPath?: string,
   toRelativePath?: string,
@@ -43,10 +49,12 @@ interface Input {
   outDir?: string,
   watch?: boolean,
   baseName?: string,
+  externals?: External[],
 }
+
+
 export interface VitePluginGlobInputOptions {
   inputs: Input[],
-  externalsForHtml?: { html: string, insertAt: any }[],
   sass?: Input[],
   copy?: Input[],
   rm?: Input[],
@@ -67,6 +75,7 @@ interface Data {
   code?: string,
   htmlToken?: string,
   baseName?: string,
+  externals?: External[],
 }
 enum NodeType {
   Literal = 'Literal',
@@ -83,23 +92,34 @@ const parentPathToken = '__dotdot__';
 export class VitePluginGlobInputService extends VitePluginBaseService {
   @CustomInject(RegexService)
   protected regexService: RegexService;
-  relTo2ToData = {}
+
+  absFromToData: { [key: string]: Data } = {};
+
+  absFrom2ToData: { [key: string]: Data } = {};
+
+  absToToData: { [key: string]: Data } = {};
+
+  relTo2ToData: { [key: string]: Data } = {};
+
+  relTo3ToData: { [key: string]: Data } = {};
+
   createPrePlugin(options: VitePluginGlobInputOptions) {
     const regexService = this.regexService;
-    options.externalsForHtml = options.externalsForHtml ?? [];
 
     let config;
     let server;
     const absFromToData = {} as {
       [key: string]: Data
     };
-
+    this.absFromToData = absFromToData;
     const absFrom2ToData = {} as {
       [key: string]: Data
     };
+    this.absFrom2ToData = absFrom2ToData;
     const absToToData = {} as {
       [key: string]: Data
     };
+    this.absToToData = absToToData;
     const relTo2ToData = {} as {
       [key: string]: Data
     };
@@ -107,7 +127,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
     const relTo3ToData = {} as {
       [key: string]: Data
     };
-
+    this.relTo3ToData = relTo3ToData;
     function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): [string[], string[]] {
       inputs = inputs ?? [];
       const allEntries = [];
@@ -162,18 +182,6 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       return [allEntries, toWatch];
     };
 
-    function replaceHtmlToken(text) {
-      const entries = Object.entries(absFrom2ToData);
-      for (const [key, data] of entries) {
-        if (data.htmlToken && data.relTo3 && text) {
-          const fileName = path.basename(data.relTo3);
-          text = text.replace(data.htmlToken, fileName)
-        }
-      }
-
-      return text;
-    }
-    ;
 
     return ({
       name: 'vite-plugin-glob-input-pre',
@@ -370,7 +378,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               action: input.action,
               from2ToFrom,
               htmlToken: input.htmlToken,
-              baseName: input.baseName
+              baseName: input.baseName,
+              externals: input.externals,
             };
             absFrom2ToData[absFrom2] = absFromToData[absFrom];
             absToToData[absTo] = absFromToData[absFrom];
@@ -498,36 +507,12 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               delete bundle[key]
             }
           }
-          file.code = replaceHtmlToken(file.code);
         }
       },
 
       transformIndexHtml(html) {
         console.log('### transformIndexHtml')
-        // console.dir(this.getWatchFiles())
-        console.dir(this);
-        // console.dir(html);
 
-
-        const externals = options.externalsForHtml ?? [];
-
-        externals.forEach(external => {
-          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
-          html = html.replace(
-            reg,
-            `${external.html}\n$&`
-          )
-        });
-
-        externals.forEach(external => {
-          const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
-          html = html.replace(
-            reg,
-            ``
-          )
-        });
-
-        html = replaceHtmlToken(html);
         return html;
       },
       writeBundle(option, bundle): void {
@@ -591,9 +576,23 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       return invalidPath.replace(new RegExp(this.regexService.escapeRegExp(parentPathToken), 'g'), '..');
     }
 
-    const relTo2ToData = this.relTo2ToData;
     const regexService = this.regexService;
+
+    const absFromToData = this.absFromToData;
+
+    const absFrom2ToData = this.absFrom2ToData;
+
+    const absToToData = this.absToToData;
+
+    const relTo2ToData = this.relTo2ToData;
+
+    const relTo3ToData = this.relTo3ToData;
+
+
     let savedConfig;
+
+
+
     return {
       name: 'vite-plugin-glob-input-post',
       enforce: 'post',
@@ -623,11 +622,50 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           const data = relTo2ToData[key];
 
           if (file.fileName?.endsWith('.html') && file.type === 'asset') {
+
             if (data?.baseName) {
               let source = file.source;
               keys.forEach(k => {
                 source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
               });
+
+              const externals = data.externals ?? [];
+               
+              
+              externals.forEach(external => {
+                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+                external.links?.forEach(link => {
+                  source = source.replace(
+                    reg,
+                    `<link rel="stylesheet" href="${link}" />\n$&`
+                  )
+                });
+                external.htmls?.forEach(html => {
+                  source = source.replace(
+                    reg,
+                    `${html}\n$&`
+                  )
+                });
+                external.scripts?.forEach(script => {
+                  source = source.replace(
+                    reg,
+                    `<script src=${script}></script>\n$&`
+                  )
+                });
+
+              });
+
+              externals.forEach(external => {
+                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+                source = source.replace(
+                  reg,
+                  ``
+                )
+              });
+
+
+
+
 
               file.source = source;
             }
@@ -663,6 +701,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             delete bundle[key];
           }
         }
+      },
+      transformIndexHtml: function (html) {
+        // console.dir(this.getWatchFiles())
+        console.dir(this);
+        // console.dir(html);
+
+
       }
     }
   }
