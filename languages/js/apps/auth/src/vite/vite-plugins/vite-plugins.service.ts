@@ -8,6 +8,7 @@ import solidPlugin from 'vite-plugin-solid';
 import { Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { sharedPaths } from '#root/apps/shared';
+import glob from 'glob';
 @CustomInjectable()
 export class AuthVitePluginsService extends VitePluginsService {
     @CustomInject(AuthEnvironmentService)
@@ -19,11 +20,12 @@ export class AuthVitePluginsService extends VitePluginsService {
     // @CustomInject(VitePluginHtmlService)
     // protected vitePluginHtmlService: VitePluginHtmlService;
     createManyPlugins(): Plugin[] {
+        const dirPath = sharedPaths.src.web.material.native.components.toAbsolutePath();
 
-        const htmls = [
-            sharedPaths.src.web.material.native.components.card['index.ts'].toAbsolutePath()
-        ].map(html => `<script type="module" src="${html}"></script>`);
+        const indexFiles = glob.sync(path.join(dirPath, '**/index.ts'));
         
+        const htmls = indexFiles.map(html => `<script async type="module" src="${html}"></script>`);
+
         return [
             // VitePWA({}),
             solidPlugin(),
@@ -39,7 +41,7 @@ export class AuthVitePluginsService extends VitePluginsService {
                         fromPath: authPaths.src.web['_Layout.cshtml'].toAbsolutePath(),
                         toRelativePath: path.join(AuthPaths.Pages.Shared.toRelativePath(AuthPaths.wwwroot.toAbsolutePath()), '_Layout.cshtml'),
                         baseName: '~/',
-                        extrenals: [
+                        externals: [
                             // {
                             //     html: `
                             //     <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />

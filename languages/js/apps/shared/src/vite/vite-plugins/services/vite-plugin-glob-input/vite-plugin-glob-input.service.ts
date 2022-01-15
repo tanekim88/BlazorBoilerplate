@@ -363,7 +363,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const externals = input.externals ?? [];
 
             externals.forEach(external => {
-              const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+              const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
               external.htmls?.forEach(html => {
                 code = code.replace(
                   reg,
@@ -637,8 +637,8 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                 source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
               });
 
-              data.externals.forEach(external => {
-                const reg = new RegExp(`\b${regexService.escapeRegExp(external.insertAt)}\b`, 'g');
+              data.externals?.forEach(external => {
+                const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
                 source = source.replace(
                   reg,
                   ``

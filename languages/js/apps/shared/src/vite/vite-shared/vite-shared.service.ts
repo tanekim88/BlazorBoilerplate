@@ -20,6 +20,10 @@ export class ViteSharedService extends ViteBaseService {
                 build: {
                     polyfillDynamicImport: false,
                     target: 'esnext',
+                    // output:{
+                    //     manualChunks: undefined
+                    // },
+                    // cssCodeSplit: false
                 },
                 plugins: [
                     vanillaExtractPlugin({})
@@ -40,7 +44,6 @@ export class ViteSharedService extends ViteBaseService {
                             // includePaths: [
                             //     rootPaths.apps.toAbsolutePath(),
                             // ],
-
                             importer: (url: string, prev, done) => {
                                 if (!url.startsWith('@')) return null;
 

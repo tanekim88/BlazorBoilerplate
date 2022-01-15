@@ -10,6 +10,8 @@ import { AuthVitePluginsService } from '../vite-plugins/vite-plugins.service';
 import { AuthPostcssService } from '#auth/src/modules/postcss/postcss/postcss.service';
 import { join } from 'path/posix';
 import { sharedPaths } from '#root/apps/shared';
+import sanitizeFilename from 'sanitize-filename';
+
 @CustomInjectable()
 export class AuthViteSharedService extends ViteSharedService {
     @CustomInject(AuthEnvironmentService)
@@ -23,13 +25,23 @@ export class AuthViteSharedService extends ViteSharedService {
         const plugins = this.authVitePluginsService.createManyPlugins();
         return this.mergeService.mergeOptions(
             super.createConfiguration(), {
-                base:'/',
+                base: '/',
                 build: {
                     outDir: AuthPaths.wwwroot.toAbsolutePath(),
                     // assetsDir:'assets',
                     rollupOptions: {
                         input: [],
-                        external: []
+                        external: [],
+                        output: {
+                            manualChunks(id) {
+                                console.log("11111111111111111111111")
+                                console.dir(id);
+                                return sanitizeFilename(id);
+                                if (id.includes('node_modules')) {
+                                    return 'vendor';
+                                }
+                            }
+                        }
                     },
                     watch: {
 
@@ -41,8 +53,9 @@ export class AuthViteSharedService extends ViteSharedService {
                     emptyOutDir: false,
                     polyfillDynamicImport: false,
                     target: 'esnext',
+                 
                 },
-                
+
                 server: {
                     port: 4010
                 },
@@ -57,8 +70,8 @@ export class AuthViteSharedService extends ViteSharedService {
                         plugins: postcssPlugins
                     }
                 },
-                resolve:{
-                    alias:{
+                resolve: {
+                    alias: {
                         '#shared': sharedPaths.toAbsolutePath()
                     }
                 }
