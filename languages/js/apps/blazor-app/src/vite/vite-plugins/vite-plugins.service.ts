@@ -4,50 +4,63 @@ import { CustomInject, CustomInjectable } from '#shared/src/functions/process-pr
 
 import { VitePluginsService } from '#shared/src/vite/vite-plugins/vite-plugins/vite-plugins.service';
 import path from 'path';
+import glob from 'glob';
+import { sharedPaths } from '#root/apps/shared';
+import { AuthPaths } from '#root/apps/auth/paths';
 @CustomInjectable()
 export class BlazorAppVitePluginsService extends VitePluginsService {
     @CustomInject(BlazorAppEnvironmentService)
     blazorAppEnvironmentService: BlazorAppEnvironmentService
 
-    // @CustomInject(VitePluginGlobInputService)
-    // protected vitePluginGlobInputService: VitePluginGlobInputService;
-
-    // @CustomInject(VitePluginHtmlService)
-    // protected vitePluginHtmlService: VitePluginHtmlService;
     createManyPlugins() {
+        const dirPath = sharedPaths.src.web.material.components.toAbsolutePath();
+
+        const indexFiles = glob.sync(path.join(dirPath, '**/index.ts'));
+
+        const htmls = indexFiles.map(html => `<script async type="module" src="${html}"></script>`);
+
         return [
-            this.vitePluginGlobInputService.createPlugin({
-                externalsForHtml: [
-                    {
-                        html: `
-                        <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
-                        <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
-                    `, insertAt: '@head-start'
-                    },
-                    { html: '<link href="BlazorApp.Client.styles.css" rel="stylesheet" />', insertAt: '@head-end' },
-                    {
-                        html: `
-                    <script src="_content/Material.Blazor/material.blazor.min.js"></script>
-                    <script>
-                        MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
-                    </script>
-                    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
-                    <script src="_framework/blazor.webassembly.js"></script>
-                    <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
-                    `, insertAt: '@body-end'
-                    },
-                ],
+            ...this.vitePluginGlobInputService.createManyPlugins({
+                webDir: blazorAppPaths.src.web.toAbsolutePath(),
                 inputs: [
                     {
                         include: [
                             this.blazorAppEnvironmentService.localPaths.src.web['index.html'].toAbsolutePath()
                         ],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.web.toAbsolutePath(),
-                    },
-                    {
-                        fromPath: this.blazorAppEnvironmentService.localPaths.src.web['service-worker']['index.ts'].toAbsolutePath(),
-                        toName: 'service-worker.[hash].js',
-                        htmlToken: '[SERVICEWORKER_PATH]'
+                        externals: [
+
+                            {
+                                htmls: [`
+                                    <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
+                                    <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
+                                `],
+                                insertAt: '@head-start',
+                                enforce: 'post'
+                            },
+                            {
+                                htmls: ['<link href="BlazorApp.Client.styles.css" rel="stylesheet" />'],
+                                insertAt: '@head-end',
+                                enforce: 'post'
+                            },
+                            {
+                                htmls: [`
+                                <script src="_content/Material.Blazor/material.blazor.min.js"></script>
+                                <script>
+                                    MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
+                                </script>
+                                <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+                                <script src="_framework/blazor.webassembly.js"></script>
+                                <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
+                                `],
+                                insertAt: '@body-end',
+                                enforce: 'post'
+                            },
+                            // {
+                            //     insertAt: '@head-start',
+                            //     htmls: htmls,
+                            // }
+                        ]
                     },
                 ],
                 sass: [
@@ -67,7 +80,12 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         fromPath: this.blazorAppEnvironmentService.localPaths.src.logo['favicon.ico'].toAbsolutePath(),
                         toRelativePath: 'favicon.ico',
                     },
-                ]
+                ],
+                // empty: [
+                //     {
+                //         fromPath: BlazorAppPaths.Client.wwwroot.toAbsolutePath(),
+                //     }
+                // ]
             })
         ]
     }

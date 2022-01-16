@@ -21,7 +21,7 @@
 					<MBTooltip TooltipType="@MBTooltipType.Div">
 						<Target>
 							<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href=""
-									 aria-label="" Match="NavLinkMatch.All">
+								aria-label="" Match="NavLinkMatch.All">
 								<svg class="bi" fill="currentColor">
 									<use xlink:href="bootstrap-icons.svg#chat" />
 								</svg>
@@ -32,7 +32,7 @@
 						</Content>
 					</MBTooltip>
 					@* <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
-	 	aria-label="Open navigation menu">menu</button> *@
+						aria-label="Open navigation menu">menu</button> *@
 					@* <span class="mdc-top-app-bar__title">GGDB</span> *@
 				</section>
 				<section class="flex justify-center">
@@ -42,15 +42,18 @@
 								<div class="mdc-tab-scroller__scroll-content">
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="shop" Match="NavLinkMatch.All">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab"
+												aria-selected="true" tabindex="0" href="shop" Match="NavLinkMatch.All">
 												<div class="material-icons mdc-icon-button">
 													<span class="mdc-tab__content">
 														<svg fill="currentColor">
 															<use xlink:href="bootstrap-icons.svg#bag" />
 														</svg>
 													</span>
-													<span class="mdc-tab-indicator @GetTabIndActive("shop")" >
-														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style="border-color:var(--primary);"></span>
+													<span class="mdc-tab-indicator @GetTabIndActive("shop")">
+														<span
+															class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+															style="border-color:var(--primary);"></span>
 													</span>
 													<span class="mdc-tab__ripple"></span>
 												</div>
@@ -62,7 +65,9 @@
 									</MBTooltip>
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="network" Match="NavLinkMatch.All">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab"
+												aria-selected="true" tabindex="0" href="network"
+												Match="NavLinkMatch.All">
 												<div class="material-icons mdc-icon-button">
 
 													<span class="mdc-tab__content">
@@ -71,7 +76,8 @@
 														</svg>
 													</span>
 													<span class="mdc-tab-indicator @GetTabIndActive("network")">
-														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+														<span
+															class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 													</span>
 													<span class="mdc-tab__ripple"></span>
 												</div>
@@ -84,7 +90,8 @@
 
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0" href="job" Match="NavLinkMatch.All">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab"
+												aria-selected="true" tabindex="0" href="job" Match="NavLinkMatch.All">
 												<div class="material-icons mdc-icon-button">
 													<span class="mdc-tab__content">
 														<svg class="bi" fill="currentColor">
@@ -92,7 +99,8 @@
 														</svg>
 													</span>
 													<span class="mdc-tab-indicator @GetTabIndActive("job")">
-														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+														<span
+															class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 													</span>
 													<span class="mdc-tab__ripple"></span>
 												</div>
@@ -105,9 +113,9 @@
 
 									<MBTooltip TooltipType="@MBTooltipType.Div">
 										<Target>
-											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab" aria-selected="true" tabindex="0"
-													 href="debate"
-													 Match="NavLinkMatch.All">
+											<NavLink class="mdc-tab" ActiveClass="mdc-tab--active" role="tab"
+												aria-selected="true" tabindex="0" href="debate"
+												Match="NavLinkMatch.All">
 												<div class="material-icons mdc-icon-button">
 													<span class="mdc-tab__content">
 														<svg class="bi" fill="currentColor">
@@ -115,7 +123,8 @@
 														</svg>
 													</span>
 													<span class="mdc-tab-indicator @GetTabIndActive("debate")">
-														<span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+														<span
+															class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 													</span>
 													<span class="mdc-tab__ripple"></span>
 												</div>
@@ -136,8 +145,7 @@
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
 									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-											 href="authentication/profile"
-											 Match="NavLinkMatch.All">
+										href="authentication/profile" Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
 											<use href="bootstrap-icons.svg#person-circle" />
 										</svg>
@@ -149,11 +157,17 @@
 							</MBTooltip>
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
-									<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" @onclick="BeginSignOut">
-										<svg class="bi" width="32" height="32" fill="currentColor">
-											<use href="bootstrap-icons.svg#power" />
-										</svg>
-									</button>
+									<form method="post" action="Account/Logout">
+										<AntiForgeryTokenInput />
+										<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+											@onclick="BeginSignOut">
+											<svg class="bi" width="32" height="32" fill="currentColor">
+												<use href="bootstrap-icons.svg#power" />
+											</svg>
+										</button>
+									</form>
+
+
 								</Target>
 								<Content>
 									@S[name: "Logout"]
@@ -164,8 +178,8 @@
 
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
-									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/register"
-											 aria-label="" Match="NavLinkMatch.All">
+									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+										href="authentication/register" aria-label="" Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
 											<use xlink:href="bootstrap-icons.svg#person-plus" />
 										</svg>
@@ -177,8 +191,8 @@
 							</MBTooltip>
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
-									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button" href="authentication/login"
-											 aria-label="" Match="NavLinkMatch.All">
+									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+										href="authentication/login" aria-label="" Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
 											<use xlink:href="bootstrap-icons.svg#box-arrow-in-right" />
 										</svg>
@@ -198,37 +212,37 @@
 
 
 		@* <MBTopAppBar Title="Material.Blazor" NavIcon="menu" ScrollTarget="#main-content"
-  	TopAppBarType="@MBTopAppBarType.Standard" class="mdc-top-app-bar--short-has-action-item mdc-elevation--z5">
-  	<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
-  	<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
-  	aria-label="Open navigation menu">menu</button>
-  	<span class="mdc-top-app-bar__title">Page title</span>
-  	</section>
-  	<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-  	<MBIconButton @onclick="@OpenMenuAsync" Icon="more_vert" />
-  	<div class="mdc-menu-surface--anchor">
-  	<MBMenu @ref="Menu">
-  	<MBMenuSelectionGroup @key="@MaterialThemeService.CurrentTheme">
-  	<MBListItem Label="Material Default Theme" LeadingIcon="done"
-  	IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "material-theme")"
-  	@onclick="@(() => ThemeSetterAsync("default-theme"))" />
-  	<MBListItem Label="Light Square Theme" LeadingIcon="done"
-  	IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "light-square-theme")"
-  	@onclick="@(() => ThemeSetterAsync("light-square-theme"))" />
-  	<MBListItem Label="Dark Square Theme" LeadingIcon="done"
-  	IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "dark-square-theme")"
-  	@onclick="@(() => ThemeSetterAsync("dark-square-theme"))" />
-  	<MBListItem Label="Rounded Theme" LeadingIcon="done"
-  	IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "rounded-theme")"
-  	@onclick="@(() => ThemeSetterAsync("rounded-theme"))" />
-  	<MBListItem Label="Asymmetric Theme" LeadingIcon="done"
-  	IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "asymmetric-theme")"
-  	@onclick="@(() => ThemeSetterAsync("asymmetric-theme"))" />
-  	</MBMenuSelectionGroup>
-  	</MBMenu>
-  	</div>
-  	</section>
-  	</MBTopAppBar> *@
+			TopAppBarType="@MBTopAppBarType.Standard" class="mdc-top-app-bar--short-has-action-item mdc-elevation--z5">
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" role="toolbar">
+			<button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+			aria-label="Open navigation menu">menu</button>
+			<span class="mdc-top-app-bar__title">Page title</span>
+			</section>
+			<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+			<MBIconButton @onclick="@OpenMenuAsync" Icon="more_vert" />
+			<div class="mdc-menu-surface--anchor">
+			<MBMenu @ref="Menu">
+			<MBMenuSelectionGroup @key="@MaterialThemeService.CurrentTheme">
+			<MBListItem Label="Material Default Theme" LeadingIcon="done"
+			IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "material-theme")"
+			@onclick="@(() => ThemeSetterAsync("default-theme"))" />
+			<MBListItem Label="Light Square Theme" LeadingIcon="done"
+			IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "light-square-theme")"
+			@onclick="@(() => ThemeSetterAsync("light-square-theme"))" />
+			<MBListItem Label="Dark Square Theme" LeadingIcon="done"
+			IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "dark-square-theme")"
+			@onclick="@(() => ThemeSetterAsync("dark-square-theme"))" />
+			<MBListItem Label="Rounded Theme" LeadingIcon="done"
+			IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "rounded-theme")"
+			@onclick="@(() => ThemeSetterAsync("rounded-theme"))" />
+			<MBListItem Label="Asymmetric Theme" LeadingIcon="done"
+			IsSelectedMenuItem="@(MaterialThemeService.CurrentTheme == "asymmetric-theme")"
+			@onclick="@(() => ThemeSetterAsync("asymmetric-theme"))" />
+			</MBMenuSelectionGroup>
+			</MBMenu>
+			</div>
+			</section>
+			</MBTopAppBar> *@
 
 		<main class="w-full h-full" id="main-content">
 

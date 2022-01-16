@@ -12,6 +12,11 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<Content Include="$(ProjectDir)/../../../sharedAppsettings.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
+		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
+		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
+		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
+		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
+		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
 		<Content Include="$(ProjectDir)/../../../sharedAppsettings.Development.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
 	</ItemGroup>
 
@@ -122,6 +127,8 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.13.5" />
+
+		<PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.16.1" />
 	</ItemGroup>
 
 	<ItemGroup>

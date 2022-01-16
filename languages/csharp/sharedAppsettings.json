@@ -36,7 +36,7 @@
       "Application": "Sample"
     }
   },
-  "Authentication": {
+  "Auth": {
     "Google": {
       "ClientId": "968377613412-0p830k37rosj2f8112ecbsgnnt4cbhho.apps.googleusercontent.com",
       "ClientSecret": "oJTrh-fH4JoSmaNKXdykbuLy"

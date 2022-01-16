@@ -36,7 +36,8 @@ export class VitePluginBaseService {
         return [
             this.createPrePlugin(...options),
             this.createPlugin(...options),
-            this.createPostPlugin(...options)].filter(plugin => {
+            this.createPostPlugin(...options)
+        ].filter(plugin => {
                 return !_.isEmpty(plugin);
             })
     }

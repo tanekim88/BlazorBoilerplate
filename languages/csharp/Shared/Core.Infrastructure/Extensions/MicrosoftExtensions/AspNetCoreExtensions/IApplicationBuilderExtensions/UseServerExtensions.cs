@@ -16,7 +16,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
         {
             app.UseResponseCompression();
 
-            app.UseCustomSecurityHeaders();
+            app.UseCustomSecurityHeaders(env.IsDevelopment(), configuration["Auth:Authority"]);
             //X - Content - Type - Options: nosniff
             //Strict - Transport - Security: max - age = 31536000; includeSubDomains - only applied to HTTPS responses
             //X - Frame - Options: Deny - only applied to text / html responses

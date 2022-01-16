@@ -16,6 +16,19 @@ namespace SharedAuth.Application.Models.EntityModels
 
         public string LastName { get; set; } = null!;
 
+        /// <summary>
+        /// ////////////////////////////
+        /// </summary>
+        public static readonly UserModel Anonymous = new UserModel();
+        public bool IsAuthenticated { get; set; }
+
+        public string NameClaimType { get; set; }
+
+        public string RoleClaimType { get; set; }
+        /// <summary>
+        /// ////////////////////////////
+        /// </summary>
+        
         public virtual ICollection<UserClaimModel> UserClaims { get; set; } = null!;
 
         public virtual ICollection<UserLoginModel> UserLogins { get; set; } = null!;

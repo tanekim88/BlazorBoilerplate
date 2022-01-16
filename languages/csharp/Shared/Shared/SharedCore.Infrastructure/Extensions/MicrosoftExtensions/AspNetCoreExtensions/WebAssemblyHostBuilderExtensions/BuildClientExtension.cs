@@ -4,6 +4,7 @@ using Grpc.Net.Client.Web;
 using GrpcService1;
 using Material.Blazor;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -85,24 +86,19 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
                      Timeout = 5000,
                      MaxToastsShowing = 5
                  },
-                 //animatedNavigationManagerServiceConfiguration: new MBAnimatedNavigationManagerServiceConfiguration()
-                 //{
-                 //    ApplyAnimation = true,
-                 //    AnimationTime = 300
-                 //},
                  snackbarServiceConfiguration: new MBSnackbarServiceConfiguration() {
                      CloseMethod = MBNotifierCloseMethod.TimeoutAndDismissButton,
                      Leading = false,
                      Stacked = false,
                      Timeout = 5000
+                 },
+                 loggingServiceConfiguration: new MBLoggingServiceConfiguration()
+                 {
+                     LoggingLevel = MBLoggingLevel.Warning
                  }
-                 //loggingServiceConfiguration: new MBLoggingServiceConfiguration() {
-                 //    LoggingLevel = MBLoggingLevel.Warning
-                 //}
              );
             services.AddSingleton<IMaterialThemeSharedUiService, MaterialThemeSharedUiService>();
-     
-            //services.AddScoped<AuthenticationStateProvider, IdentityAuthenticationStateProvider>();
+
             //services.AddCustomServices();
             services.AddLocalization();
             services.AddOptions();

@@ -1,5 +1,6 @@
 
 
+using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +23,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                 options.ClaimsIdentity.RoleClaimType = Claims.Role;
             });
 
+            services.AddCustomAntiforgery();
             services.AddCustomIdentity();
             services.AddCustomOpenIddictDbContextPool(configuration: configuration);
             services.AddCustomOpenIddictDbContext(configuration: configuration);

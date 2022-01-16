@@ -23,14 +23,14 @@ export class AuthVitePluginsService extends VitePluginsService {
         const dirPath = sharedPaths.src.web.material.native.components.toAbsolutePath();
 
         const indexFiles = glob.sync(path.join(dirPath, '**/index.ts'));
-        
+
         const htmls = indexFiles.map(html => `<script async type="module" src="${html}"></script>`);
 
         return [
             // VitePWA({}),
-            solidPlugin(),
+            // solidPlugin(),
             ...this.vitePluginGlobInputService.createManyPlugins({
-
+                webDir: authPaths.src.web.toAbsolutePath(),
                 sass: [
                     {
                         fromPath: AuthPaths.Pages.toAbsolutePath()
@@ -68,31 +68,31 @@ export class AuthVitePluginsService extends VitePluginsService {
                     },
                 ],
                 copy: [
-                    // {
-                    //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
-                    //     toRelativePath: 'bootstrap-icons.svg',
-                    //     watch: false
-                    // },
-                    // {
-                    //     fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
-                    //     toRelativePath: 'favicon.ico',
-                    //     watch: false
-                    // },
-                    // {
-                    //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery/dist'),
-                    //     toRelativePath: 'lib/jquery',
-                    //     watch: false
-                    // },
-                    // {
-                    //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation/dist'),
-                    //     toRelativePath:  'lib/jquery-validation',
-                    //     watch: false
-                    // },
-                    // {
-                    //     fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation-unobtrusive/dist'),
-                    //     toRelativePath: 'lib/jquery-validation-unobtrusive',
-                    //     watch: false
-                    // },
+                    {
+                        fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'bootstrap-icons', 'bootstrap-icons.svg'),
+                        toRelativePath: 'bootstrap-icons.svg',
+                        watch: false
+                    },
+                    {
+                        fromPath: authPaths.src.logo['favicon.ico'].toAbsolutePath(),
+                        toRelativePath: 'favicon.ico',
+                        watch: false
+                    },
+                    {
+                        fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery/dist'),
+                        toRelativePath: 'lib/jquery',
+                        watch: false
+                    },
+                    {
+                        fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation/dist'),
+                        toRelativePath:  'lib/jquery-validation',
+                        watch: false
+                    },
+                    {
+                        fromPath: path.join(this.authEnvironmentService.localPaths['node_modules'].toAbsolutePath(), 'jquery-validation-unobtrusive/dist'),
+                        toRelativePath: 'lib/jquery-validation-unobtrusive',
+                        watch: false
+                    },
                 ],
                 empty: [
                     {

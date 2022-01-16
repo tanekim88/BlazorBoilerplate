@@ -41,7 +41,6 @@ export class BlazorAppViteSharedService extends ViteSharedService {
                     sourcemap: true,
                     minify: false,
                     emptyOutDir: true,
-
                 },
                 server: {
                     port: 4010

@@ -16,7 +16,7 @@ import { dirname } from 'path/posix';
 import sass from 'sass';
 
 import chokidar from 'chokidar';
-import _, { replace } from 'lodash';
+import _ from 'lodash';
 import { renameExtension } from '#shared/src/functions/rename-extension';
 import { RegexService } from '#root/apps/shared/src/modules/utilities/modules/regex/regex/regex.service';
 
@@ -58,6 +58,7 @@ export interface VitePluginGlobInputOptions {
   copy?: Input[],
   rm?: Input[],
   empty?: Input[],
+  webDir?: string,
 }
 export interface Data {
   absFrom?: string,
@@ -84,41 +85,26 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
   @CustomInject(RegexService)
   protected regexService: RegexService;
 
-  absFromToData: { [key: string]: Data } = {};
+  dataDict: { [key: string]: { [key: string]: Data } } = {
+    absFromToData: {},
 
-  absFrom2ToData: { [key: string]: Data } = {};
+    absFrom2ToData: {},
 
-  absToToData: { [key: string]: Data } = {};
+    absToToData: {},
 
-  relTo2ToData: { [key: string]: Data } = {};
+    relTo2ToData: {},
 
-  relTo3ToData: { [key: string]: Data } = {};
+    relTo3ToData: {},
+  };
+
 
   createPrePlugin(options: VitePluginGlobInputOptions) {
     const regexService = this.regexService;
 
     let config;
     let server;
-    const absFromToData = {} as {
-      [key: string]: Data
-    };
-    this.absFromToData = absFromToData;
-    const absFrom2ToData = {} as {
-      [key: string]: Data
-    };
-    this.absFrom2ToData = absFrom2ToData;
-    const absToToData = {} as {
-      [key: string]: Data
-    };
-    this.absToToData = absToToData;
-    const relTo2ToData = {} as {
-      [key: string]: Data
-    };
-    this.relTo2ToData = relTo2ToData;
-    const relTo3ToData = {} as {
-      [key: string]: Data
-    };
-    this.relTo3ToData = relTo3ToData;
+    const dataDict = this.dataDict;
+
     function processInputs(inputs: Input[], root: string, actionsToTake: (input: Input, absFrom: string, relTo: string) => any): [string[], string[]] {
       inputs = inputs ?? [];
       const allEntries = [];
@@ -173,25 +159,33 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
       return [allEntries, toWatch];
     };
 
-
+    let command;
     return ({
       name: 'vite-plugin-glob-input-pre',
       enforce: 'pre' as 'pre' | 'post',
 
       config(config, args) {
         console.log('### config')
+        command = args.command;
         console.dir(config);
         console.dir(args);
         // console.dir(this.getWatchFiles())
         console.dir(this);
 
-        config.build.watch.ignored = ['**/node_modules/**', '**/.git/**']
-        if (args.command === 'build') {
-          // config.root = __dirname
+
+        if (command === 'serve') {
+          config.optimizeDeps.include = [];
         }
+
+        config.build.watch.ignored = ['**/node_modules/**', '**/.git/**']
 
         const root = config.root;
         const outDir = config.build.outDir;
+
+        if (options.webDir && path.isAbsolute(options.webDir)) {
+          options.webDir = path.relative(root, options.webDir);
+        }
+
 
         if (options.rm) {
           processInputs(options.rm, root, (input, absFrom, relTo) => {
@@ -279,8 +273,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             const isDir = fs.lstatSync(absFrom).isDirectory();
 
             let localOutput = conf.output;
+
             if (input.outDir) {
               localOutput = [{ dir: input.outDir }];
+            }
+
+            if (!Array.isArray(localOutput)) {
+              localOutput = [];
             }
 
             for (let output of localOutput) {
@@ -314,10 +313,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
                 if (!toPath) {
                   toPath = renameExtension(fromPath, '.css');
                 }
-                const result = sass.renderSync({
-                  file: fromPath,
+
+                const result = sass.compile(fromPath, {
                   sourceMap: false,
-                  outFile: toPath
                 });
 
                 fs.writeFileSync(toPath, result.css)
@@ -330,6 +328,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           let localOutput = conf.output;
           if (input.outDir) {
             localOutput = [{ dir: input.outDir }];
+          }
+
+          if (!Array.isArray(localOutput)) {
+            localOutput = [{}];
           }
 
           for (let output of localOutput) {
@@ -362,7 +364,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
             const externals = input.externals ?? [];
 
-            externals.forEach(external => {
+            externals.filter(external => external.enforce === 'pre' || !external.enforce).forEach(external => {
               const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
               external.htmls?.forEach(html => {
                 code = code.replace(
@@ -373,9 +375,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
             });
 
 
+            if (absFrom.endsWith('.html') || absFrom.endsWith('.cshtml')) {
+              const reg = new RegExp(regexService.escapeRegExp(root), 'g');
+              code = code.replace(reg, '');
+              fs.writeFileSync(absFrom + '.dev.html', code);
+            }
 
-
-            absFromToData[absFrom] = {
+            dataDict.absFromToData[absFrom] = {
               absFrom,
               absFrom2,
               relTo,
@@ -389,9 +395,9 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               baseName: input.baseName,
               externals: input.externals,
             };
-            absFrom2ToData[absFrom2] = absFromToData[absFrom];
-            absToToData[absTo] = absFromToData[absFrom];
-            relTo2ToData[relTo2] = absFromToData[absFrom];
+            dataDict.absFrom2ToData[absFrom2] = dataDict.absFromToData[absFrom];
+            dataDict.absToToData[absTo] = dataDict.absFromToData[absFrom];
+            dataDict.relTo2ToData[relTo2] = dataDict.absFromToData[absFrom];
           }
         });
 
@@ -421,11 +427,11 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(source);
         console.dir(importer);
         console.dir(options);
-        console.dir(absFromToData);
+        console.dir(dataDict.absFromToData);
         console.dir(this.getWatchFiles())
         console.dir(this);
 
-        const foundObj = absFromToData[source];
+        const foundObj = dataDict.absFromToData[source];
         if (foundObj?.absTo) {
           return foundObj.absTo;
         }
@@ -436,7 +442,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           return resolution?.id;
         }
 
-        let resolution2 = await this.resolve(source, absFrom2ToData[importer]?.absFrom, { skipSelf: true });
+        let resolution2 = await this.resolve(source, dataDict.absFrom2ToData[importer]?.absFrom, { skipSelf: true });
 
         if (resolution2) {
           return resolution2?.id;
@@ -447,7 +453,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(id);
         console.dir(this.getWatchFiles())
         console.dir(this);
-        return absToToData[id]?.code;
+        return dataDict.absToToData[id]?.code;
       },
       transform(src, id) {
         console.log('### transform')
@@ -492,10 +498,10 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
           if (chunk.facadeModuleId) {
             if (chunk.facadeModuleId.endsWith('.ts') || chunk.facadeModuleId.endsWith('.js')) {
-              absFrom2ToData[chunk.facadeModuleId].relTo3 = chunk.fileName;
+              dataDict.absFrom2ToData[chunk.facadeModuleId].relTo3 = chunk.fileName;
             }
 
-            relTo3ToData[chunk.fileName] = absFrom2ToData[chunk.facadeModuleId];
+            dataDict.relTo3ToData[chunk.fileName] = dataDict.absFrom2ToData[chunk.facadeModuleId];
           }
         }
 
@@ -568,52 +574,51 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         server = _server
         server.middlewares.use((req, res, next) => {
           // custom handle request...
+          next();
         })
 
         return () => {
-          server.middlewares.use((req, res, next) => {
-            // custom handle request...
+          server.middlewares.use(async (req, res, next) => {
+            // if (!req.originalUrl.endsWith(".html") && req.originalUrl !== "/") {
+            //   req.url = `/templates/` + req.originalUrl + ".html";
+            // } else if (req.url === "/index.html") {
+            //   req.url = `/templates/` + req.url;
+            // }
+
+            if (req.url.endsWith('.html') || req.url.endsWith('.cshtml')) {
+              req.url = `/${normalizePath(options.webDir)}${req.url}`;
+            }
+
+            next();
           })
         }
       },
 
     });
   }
-  createPostPlugin(...options: any): Plugin {
+  createPostPlugin(options: VitePluginGlobInputOptions): Plugin {
+
     const convertTempPathToInvalidPath = (invalidPath: string) => {
       return invalidPath.replace(new RegExp(this.regexService.escapeRegExp(parentPathToken), 'g'), '..');
     }
 
+    const dataDict = this.dataDict;
+
     const regexService = this.regexService;
-
-    const absFromToData = this.absFromToData;
-
-    const absFrom2ToData = this.absFrom2ToData;
-
-    const absToToData = this.absToToData;
-
-    const relTo2ToData = this.relTo2ToData;
-
-    const relTo3ToData = this.relTo3ToData;
-
-
-    let savedConfig;
-
+    let config;
 
 
     return {
       name: 'vite-plugin-glob-input-post',
       enforce: 'post',
 
-      config(config, args) {
+      config(conf, args) {
         console.log('### config')
-        console.dir(config);
+        console.dir(conf);
         console.dir(args);
         // console.dir(this.getWatchFiles())
         console.dir(this);
-        savedConfig = config;
-
-
+        config = conf;
       },
 
       generateBundle: function (option, bundle, isWrite: boolean) {
@@ -627,7 +632,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         for (const [key, file] of files) {
           let shouldDeleteKey = false;
 
-          const data = relTo2ToData[key];
+          const data = dataDict.relTo2ToData[key];
 
           if (file.fileName?.endsWith('.html') && file.type === 'asset') {
 
@@ -635,6 +640,17 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
               let source = file.source;
               keys.forEach(k => {
                 source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
+              });
+
+
+              data.externals.filter(external => external.enforce === 'post').forEach(external => {
+                const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
+                external.htmls?.forEach(html => {
+                  source = source.replace(
+                    reg,
+                    `${html}\n$&`
+                  )
+                });
               });
 
               data.externals?.forEach(external => {
@@ -668,7 +684,7 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
           if (file.fileName.includes(parentPathToken)) {
             const newPath = convertTempPathToInvalidPath(file.fileName);
 
-            const finalPath = path.resolve(savedConfig.build.outDir, newPath);
+            const finalPath = path.resolve(config.build.outDir, newPath);
             const data = file.type === 'asset' ? file.source : file.code;
             fs.writeFileSync(finalPath, data, { encoding: 'utf8' });
 
@@ -685,9 +701,13 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
         console.dir(this);
         // console.dir(html);
 
-
       }
     }
+  }
+
+
+  createManyPlugins(...options: VitePluginGlobInputOptions[]): Plugin[] {
+    return super.createManyPlugins(...options);
   }
 }
 

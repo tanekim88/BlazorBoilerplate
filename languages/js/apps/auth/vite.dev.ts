@@ -6,6 +6,7 @@ import { AuthViteModule } from './src/vite/vite.module';
 
 const viteBase = new ViteBase(AuthViteModule, AuthViteDevService);
 
+// await viteBase.watch();
 await viteBase.build();
 
 

@@ -34,9 +34,9 @@ export class AuthViteSharedService extends ViteSharedService {
                         external: [],
                         output: {
                             manualChunks(id) {
-                                console.log("11111111111111111111111")
-                                console.dir(id);
-                                return sanitizeFilename(id);
+                                // console.log("11111111111111111111111")
+                                // console.dir(id);
+                                // return sanitizeFilename(id);
                                 if (id.includes('node_modules')) {
                                     return 'vendor';
                                 }

@@ -18,7 +18,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-            var authSection = configuration.GetSection(key: "Authentication");
+            var authSection = configuration.GetSection(key: "Auth");
             services.AddAuthentication(configureOptions: options =>
                 {
                     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -26,20 +26,22 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                 })
                 .AddCookie(authenticationScheme: CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddOpenIdConnect(authenticationScheme: IdentityServerConstants.ProtocolTypes.OpenIdConnect,
-                    displayName: "Identity Server", configureOptions: options =>
+                    displayName: "OpenIdDict Server", configureOptions: options =>
                     {
+                        options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                         //options.Authority = "https://identity.taneware.com";
-                        options.Authority = "https://localhost:5001";
+                        options.Authority = authSection["Authority"];
                         //options.Authority = "https://localhost:47254";
                         //options.Authority = "https://localhost:44388";
 
-                        options.RequireHttpsMetadata = false;
+                        options.RequireHttpsMetadata = true;
 
-                        options.ClientId = "code";
-                        options.ClientSecret = "secret";
+                        options.ClientId = authSection["ClientId"];
+                        options.ClientSecret = authSection["ClientSecret"];
                         options.ResponseType = "code";
                         //options.ResponseMode = "form_post";
-                        options.CallbackPath = "/authentication/login-callback";
+
+                        //options.CallbackPath = "/authentication/login-callback";
                         options.SaveTokens = true;
                         options.GetClaimsFromUserInfoEndpoint = true;
                         options.UseTokenLifetime = false;
