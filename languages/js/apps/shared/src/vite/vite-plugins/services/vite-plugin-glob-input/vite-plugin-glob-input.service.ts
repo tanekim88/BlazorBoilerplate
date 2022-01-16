@@ -636,33 +636,33 @@ export class VitePluginGlobInputService extends VitePluginBaseService {
 
           if (file.fileName?.endsWith('.html') && file.type === 'asset') {
 
+            let source = file.source;
+
             if (data?.baseName) {
-              let source = file.source;
               keys.forEach(k => {
                 source = source.replace(new RegExp(regexService.escapeRegExp(`/${k}`), 'g'), `${data.baseName}${k}`);
               });
+            }
 
-
-              data.externals.filter(external => external.enforce === 'post').forEach(external => {
-                const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
-                external.htmls?.forEach(html => {
-                  source = source.replace(
-                    reg,
-                    `${html}\n$&`
-                  )
-                });
-              });
-
-              data.externals?.forEach(external => {
-                const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
+            data.externals.filter(external => external.enforce === 'post').forEach(external => {
+              const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
+              external.htmls?.forEach(html => {
                 source = source.replace(
                   reg,
-                  ``
+                  `${html}\n$&`
                 )
               });
+            });
 
-              file.source = source;
-            }
+            data.externals?.forEach(external => {
+              const reg = new RegExp(`${regexService.escapeRegExp(external.insertAt)}`, 'g');
+              source = source.replace(
+                reg,
+                ``
+              )
+            });
+            
+            file.source = source;
           }
 
           if (file.fileName?.endsWith('.cshtml.html') && file.type === 'asset') {

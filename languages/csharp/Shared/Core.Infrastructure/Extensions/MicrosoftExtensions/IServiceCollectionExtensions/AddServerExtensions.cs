@@ -20,8 +20,6 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         public static IServiceCollection AddCustomServer(
             this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
         {
-            services.AddCustomSwaggerDoc();
-
             services.AddGrpc();
             services.AddGrpcReflection();
 

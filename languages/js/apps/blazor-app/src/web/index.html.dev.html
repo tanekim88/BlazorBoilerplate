@@ -2,14 +2,9 @@
 <html>
 
 <head>
-    
-                                    <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />
-                                    <link href="_content/Material.Blazor/material-components-web.min.css" rel="stylesheet" />
-                                
+    @head-start
 
-
-    <link href="BlazorApp.Client.styles.css" rel="stylesheet" />
-
+    @head-end
 </head>
 
 <body>
@@ -32,16 +27,7 @@
             return null;
         }
     </script>
-    
-                                <script src="_content/Material.Blazor/material.blazor.min.js"></script>
-                                <script>
-                                    MaterialBlazor.MBTooltip.numbers.HIDE_DELAY_MS = 0
-                                </script>
-                                <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
-                                <script src="_framework/blazor.webassembly.js"></script>
-                                <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
-                                
-
+    @body-end
 </body>
 
 </html>

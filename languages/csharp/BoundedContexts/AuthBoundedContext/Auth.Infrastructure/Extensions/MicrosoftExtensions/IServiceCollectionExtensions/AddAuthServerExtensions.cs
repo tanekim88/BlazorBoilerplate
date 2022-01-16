@@ -42,7 +42,6 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
             services.AddCustomRazorPages();
             services.AddCustomSignalR();
-            services.AddCustomSwaggerGen();
             services.ConfigureCustomApplicationCookie();
             services.ConfigureCustomIdentityOptions();
             services.ConfigureCustomIISOptions();

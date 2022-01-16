@@ -18,7 +18,6 @@
 		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
 		<ProjectReference Include="..\Shared\Auth.Shared.csproj" />
-		<ProjectReference Include="..\Client\Auth.Client.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

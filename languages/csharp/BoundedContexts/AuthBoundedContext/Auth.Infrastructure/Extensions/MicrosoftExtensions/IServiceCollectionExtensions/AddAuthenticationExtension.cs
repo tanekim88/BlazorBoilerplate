@@ -17,7 +17,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-            var authSection = configuration.GetSection(key: "Authentication");
+            var authSection = configuration.GetSection(key: "Auth");
             services.AddAuthentication(configureOptions: options =>
                 {
                     options.DefaultScheme = OpenIddict.Validation.AspNetCore.OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;

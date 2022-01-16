@@ -111,12 +111,55 @@ namespace Auth.Server
                         },
                     PostLogoutRedirectUris =
                         {
-                            new Uri("https://localhost:3001/signout-callback-oidc"),
-                            new Uri("https://localhost:5001/signout-callback-oidc"),
+                            new Uri("https://localhost:3001/signout-callback-oidc")
                         },
                     RedirectUris =
                         {
                             new Uri("https://localhost:3001/signin-oidc"),
+                        },
+                    ClientSecret = "secret",
+                    Permissions =
+                        {
+                            Permissions.Endpoints.Authorization,
+                            Permissions.Endpoints.Logout,
+                            Permissions.Endpoints.Token,
+                            Permissions.Endpoints.Revocation,
+                            Permissions.GrantTypes.AuthorizationCode,
+                            Permissions.GrantTypes.RefreshToken,
+                            Permissions.ResponseTypes.Code,
+                            Permissions.Scopes.Email,
+                            Permissions.Scopes.Profile,
+                            Permissions.Scopes.Roles,
+                            Permissions.Scopes.Phone,
+                            Permissions.Scopes.Address,
+                            Permissions.Prefixes.Scope + "blazor-app-server-code"
+                        },
+                    Requirements =
+                        {
+                            Requirements.Features.ProofKeyForCodeExchange
+                        }
+                });
+            }
+
+
+            // Blazor Hosted
+            if (await manager.FindByClientIdAsync("auth-code") is null)
+            {
+                await manager.CreateAsync(new OpenIddictApplicationDescriptor
+                {
+                    ClientId = "auth-code",
+                    ConsentType = ConsentTypes.Explicit,
+                    DisplayName = "Auth code PKCE",
+                    DisplayNames =
+                        {
+                            [CultureInfo.GetCultureInfo("fr-FR")] = "Application cliente MVC"
+                        },
+                    PostLogoutRedirectUris =
+                        {
+                            new Uri("https://localhost:5001/signout-callback-oidc"),
+                        },
+                    RedirectUris =
+                        {
                             new Uri("https://localhost:5001/signin-oidc"),
                         },
                     ClientSecret = "secret",
@@ -134,7 +177,7 @@ namespace Auth.Server
                             Permissions.Scopes.Roles,
                             Permissions.Scopes.Phone,
                             Permissions.Scopes.Address,
-                            Permissions.Prefixes.Scope + "blazor-app-server"
+                            Permissions.Prefixes.Scope + "auth-code"
                         },
                     Requirements =
                         {
@@ -147,7 +190,7 @@ namespace Auth.Server
         private async Task RegisterScopesAsync(IServiceProvider serviceProvider)
         {
             var manager = serviceProvider.GetRequiredService<IOpenIddictScopeManager>();
-            if (await manager.FindByNameAsync("blazor-app-server-scope") is null)
+            if (await manager.FindByNameAsync("blazor-app-server-code") is null)
             {
                 await manager.CreateAsync(new OpenIddictScopeDescriptor
                 {
@@ -156,10 +199,27 @@ namespace Auth.Server
                         {
                             [CultureInfo.GetCultureInfo("fr-FR")] = "Accès à l'API de démo"
                         },
-                    Name = "blazor-app-server-scope",
+                    Name = "blazor-app-server-code",
                     Resources =
                         {
                             "blazor-app-server-code"
+                        }
+                });
+            }
+
+            if (await manager.FindByNameAsync("auth-code") is null)
+            {
+                await manager.CreateAsync(new OpenIddictScopeDescriptor
+                {
+                    DisplayName = "Auth API access",
+                    DisplayNames =
+                        {
+                            [CultureInfo.GetCultureInfo("fr-FR")] = "Accès à l'API de démo"
+                        },
+                    Name = "auth-code",
+                    Resources =
+                        {
+                            "auth-code"
                         }
                 });
             }

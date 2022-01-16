@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Linq;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,7 +17,23 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
         {
             services.AddSwaggerGen(setupAction: c =>
             {
-                c.SwaggerDoc(name: "v1", info: new OpenApiInfo {Title = "OData Api", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "ToDo API",
+                    Description = "An ASP.NET Core Web API for managing ToDo items",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Example Contact",
+                        Url = new Uri("https://example.com/contact")
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Example License",
+                        Url = new Uri("https://example.com/license")
+                    }
+                });
             });
 
 

@@ -29,7 +29,6 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                         ],
                         relativeTo: this.blazorAppEnvironmentService.localPaths.src.web.toAbsolutePath(),
                         externals: [
-
                             {
                                 htmls: [`
                                     <link href="_content/Material.Blazor/material.blazor.min.css" rel="stylesheet" />

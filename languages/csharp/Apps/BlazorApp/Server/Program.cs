@@ -17,7 +17,7 @@ builder.Host.ConfigureAppConfiguration(configureDelegate: (hostingContext, confi
 //   .UseUrls("https://localhost:4001", "http://localhost:4000")
 .UseSerilog();
 
-AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+//AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
 builder.Services.AddCustomServer(configuration:builder. Configuration, environment: builder.Environment);
 builder.Services.AddCustomClientAuthServer(configuration: builder.Configuration, environment: builder.Environment);
