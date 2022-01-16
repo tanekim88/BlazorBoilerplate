@@ -7,11 +7,15 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using SharedCore.Application.Services.__Entities_Groups_00_Name__Services;
 
-namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IApplicationBuilderExtensions
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+
+namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
 {
     public static class UseServerExtensions
     {
-        public static IApplicationBuilder UseCustomServerExtensions(this IApplicationBuilder app,
+        public static IApplicationBuilder UseCustomServerExtensions(this WebApplication app,
             IConfiguration configuration, IWebHostEnvironment env)
         {
             app.UseResponseCompression();
@@ -70,20 +74,17 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             // must be added after UseRouting and before UseEndpoints 
             app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
 
-            app.UseEndpoints(configure: endpoints =>
+            if (env.IsDevelopment())
             {
-                if (env.IsDevelopment())
-                {
-                    endpoints.MapGrpcReflectionService().EnableGrpcWeb();
-                }
+                app.MapGrpcReflectionService().EnableGrpcWeb();
+            }
 
-                endpoints.MapGrpcService<GreeterService>().EnableGrpcWeb();
-                //endpoints.MapGraphQL();
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-                //endpoints.MapHub<ChatHub>("/chathub");
-                endpoints.MapFallbackToFile(filePath: "index.html");
-            });
+            app.MapGrpcService<GreeterService>().EnableGrpcWeb();
+            //app.MapGraphQL();
+            app.MapRazorPages();
+            app.MapControllers();
+            //app.MapHub<ChatHub>("/chathub");
+            app.MapFallbackToFile(filePath: "index.html");
 
             app.UseSwagger();
             app.UseCustomSwaggerUIExtension();

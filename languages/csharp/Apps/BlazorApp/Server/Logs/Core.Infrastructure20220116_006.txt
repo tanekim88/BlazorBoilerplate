@@ -5928,4 +5928,212 @@
 
 {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP1RPJKB5J","CustomId":28,"ThreadId":28,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":53856,"Version":"1.0.0"}2022-01-16 11:41:27.264 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
 
-{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP1RPJKB5K","CustomId":27,"ThreadId":27,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":53856,"Version":"1.0.0"}
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP1RPJKB5K","CustomId":27,"ThreadId":27,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":53856,"Version":"1.0.0"}2022-01-16 11:56:21.767 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.397 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U5R","CustomId":12,"ThreadId":12,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.807 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U5S","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.893 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U5T","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.909 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U5U","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.924 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U5V","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.937 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U60","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.946 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U61","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.956 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U62","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.966 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U63","CustomId":12,"ThreadId":12,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.978 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U64","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:23.993 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U65","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.003 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U66","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.015 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U67","CustomId":12,"ThreadId":12,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.026 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U68","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.041 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U69","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.051 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6A","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.062 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6B","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.076 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6C","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.088 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6D","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.099 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6E","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.111 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6F","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.122 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6G","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.134 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6H","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.144 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6I","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.153 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6J","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.163 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6K","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.176 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6L","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.188 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6M","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.200 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6N","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.211 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6O","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.220 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6P","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.230 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6Q","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.239 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6R","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.253 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6S","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.263 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6T","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.296 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6U","CustomId":12,"ThreadId":12,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.309 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U6V","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.318 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U70","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.328 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U71","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.337 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U72","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.347 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U73","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.358 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U74","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.366 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U75","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.377 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U76","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.394 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U77","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.421 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U78","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.473 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U79","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.484 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7A","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.493 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7B","CustomId":12,"ThreadId":12,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.501 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7C","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.510 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7D","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.519 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7E","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.529 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7F","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.538 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7G","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.548 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7H","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.558 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7I","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.567 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7J","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.576 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7K","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.590 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7L","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.603 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7M","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.616 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7N","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.626 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7O","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.636 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7P","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.650 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7Q","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.665 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7R","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.678 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7S","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.690 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7T","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.699 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7U","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.708 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U7V","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.718 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U80","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.727 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U81","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.735 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U82","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.744 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U83","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.753 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U84","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.762 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U85","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.773 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U86","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.782 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U87","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.791 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U88","CustomId":11,"ThreadId":11,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.801 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U89","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.811 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8A","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.821 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8B","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.829 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8C","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.838 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8D","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.845 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8E","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.853 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8F","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.861 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8G","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.869 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8H","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.879 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8I","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.889 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8J","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.897 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8K","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.905 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8L","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.913 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8M","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.920 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8N","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.929 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8O","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.937 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8P","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.945 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8Q","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.953 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8R","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.960 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8S","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.968 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8T","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.975 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8U","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.982 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U8V","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.991 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U90","CustomId":17,"ThreadId":17,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}2022-01-16 11:56:24.999 -05:00 [ERR] HTTP/2 over TLS was not negotiated on an HTTP/2-only endpoint.
+
+{"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","ConnectionId":"0HMEP24FV6U91","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":18236,"Version":"1.0.0"}

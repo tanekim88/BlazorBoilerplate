@@ -1,15 +1,13 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using SharedAuth.Infrastructure.Auth.AccountClaimsPrincipalFactories;
 using SharedAuth.Infrastructure.Service;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.WebAssemblyHostBuilderExtensions
+namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
 {
     public static class BuildAuthClientExtension
     {

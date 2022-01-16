@@ -9,14 +9,10 @@
 		<DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>..\..\..</DockerfileContext>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 	<ItemGroup>
 		<Content Include="$(ProjectDir)/../../../sharedAppsettings.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
-		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
-		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
-		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
-		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
-		<Content Remove="C:\app\languages\csharp\Apps\BlazorApp\Server\/../../../sharedAppsettings.Development.json" />
 		<Content Include="$(ProjectDir)/../../../sharedAppsettings.Development.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
 	</ItemGroup>
 

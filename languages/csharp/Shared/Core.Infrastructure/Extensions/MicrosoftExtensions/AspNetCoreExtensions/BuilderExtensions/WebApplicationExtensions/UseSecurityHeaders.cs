@@ -2,11 +2,11 @@
 
 using Microsoft.AspNetCore.Builder;
 
-namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IApplicationBuilderExtensions
+namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
 {
     public static class UseSecurityHeadersExtension
     {
-        public static IApplicationBuilder UseCustomSecurityHeaders(this IApplicationBuilder app, bool isDev, string idpHost)
+        public static IApplicationBuilder UseCustomSecurityHeaders(this WebApplication app, bool isDev, string idpHost)
         {
             var policyCollection = new HeaderPolicyCollection()
                 .AddFrameOptionsDeny()
