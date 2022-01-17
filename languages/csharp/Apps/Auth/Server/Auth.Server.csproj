@@ -118,4 +118,8 @@
 		<PackageReference Include="Twilio.AspNet.Core" Version="5.68.3" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Logs\" />
+	</ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using SharedAuth.Infrastructure.Auth.AuthenticationStateProviders;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ namespace SharedAuth.Infrastructure.Service
 {
     public class AuthorizedHandler : DelegatingHandler
     {
-        private readonly HostAuthenticationStateProvider _authenticationStateProvider;
+        private readonly CustomAuthenticationStateProvider _authenticationStateProvider;
 
-        public AuthorizedHandler(HostAuthenticationStateProvider authenticationStateProvider)
+        public AuthorizedHandler(CustomAuthenticationStateProvider authenticationStateProvider)
         {
             _authenticationStateProvider = authenticationStateProvider;
         }

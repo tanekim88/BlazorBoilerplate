@@ -53,17 +53,21 @@ namespace Auth.Server
                         },
                     PostLogoutRedirectUris =
                         {
-                            new Uri("https://localhost:4200")
+                            new Uri("http://localhost:4200/signout-callback-oidc"),
+                            new Uri("https://localhost:4200/signout-callback-oidc"),
                         },
                     RedirectUris =
                         {
-                            new Uri("https://localhost:4200")
+                            new Uri("http://localhost:4200/signin-oidc"),
+                            new Uri("https://localhost:4200/signin-oidc"),
                         },
                     Permissions =
                         {
                             Permissions.Endpoints.Authorization,
                             Permissions.Endpoints.Logout,
                             Permissions.Endpoints.Token,
+                            Permissions.Endpoints.Revocation,
+                            Permissions.Endpoints.Introspection,
                             Permissions.GrantTypes.AuthorizationCode,
                             Permissions.GrantTypes.RefreshToken,
                             Permissions.ResponseTypes.Code,
@@ -72,31 +76,17 @@ namespace Auth.Server
                             Permissions.Scopes.Roles,
                             Permissions.Scopes.Phone,
                             Permissions.Scopes.Address,
-                            Permissions.Prefixes.Scope + "blazorServer"
+                            Permissions.Prefixes.Scope + "angular-app-server-code",
+
                         },
                     Requirements =
                         {
                             Requirements.Features.ProofKeyForCodeExchange
-                        }
+                        },
+
                 });
             }
-
-            // API
-            if (await manager.FindByClientIdAsync("blazor-app-server-code") == null)
-            {
-                var descriptor = new OpenIddictApplicationDescriptor
-                {
-                    ClientId = "blazor-app-server-code",
-                    ClientSecret = "secret",
-                    Permissions =
-                        {
-                            Permissions.Endpoints.Introspection
-                        }
-                };
-
-                await manager.CreateAsync(descriptor);
-            }
-
+       
             // Blazor Hosted
             if (await manager.FindByClientIdAsync("blazor-app-code") is null)
             {
@@ -111,11 +101,15 @@ namespace Auth.Server
                         },
                     PostLogoutRedirectUris =
                         {
-                            new Uri("https://localhost:3001/signout-callback-oidc")
+                            new Uri("https://localhost:3001/signout-callback-oidc"),
+                            new Uri("https://localhost:4001/signout-callback-oidc"),
+                            new Uri("https://localhost:5001/signout-callback-oidc"),
                         },
                     RedirectUris =
                         {
                             new Uri("https://localhost:3001/signin-oidc"),
+                            new Uri("https://localhost:4001/signin-oidc"),
+                            new Uri("https://localhost:5001/signin-oidc"),
                         },
                     ClientSecret = "secret",
                     Permissions =
@@ -124,6 +118,7 @@ namespace Auth.Server
                             Permissions.Endpoints.Logout,
                             Permissions.Endpoints.Token,
                             Permissions.Endpoints.Revocation,
+                            Permissions.Endpoints.Introspection,
                             Permissions.GrantTypes.AuthorizationCode,
                             Permissions.GrantTypes.RefreshToken,
                             Permissions.ResponseTypes.Code,
@@ -132,7 +127,7 @@ namespace Auth.Server
                             Permissions.Scopes.Roles,
                             Permissions.Scopes.Phone,
                             Permissions.Scopes.Address,
-                            Permissions.Prefixes.Scope + "blazor-app-server-code"
+                            Permissions.Prefixes.Scope + "blazor-app-code"
                         },
                     Requirements =
                         {
@@ -190,7 +185,7 @@ namespace Auth.Server
         private async Task RegisterScopesAsync(IServiceProvider serviceProvider)
         {
             var manager = serviceProvider.GetRequiredService<IOpenIddictScopeManager>();
-            if (await manager.FindByNameAsync("blazor-app-server-code") is null)
+            if (await manager.FindByNameAsync("blazor-app-code") is null)
             {
                 await manager.CreateAsync(new OpenIddictScopeDescriptor
                 {
@@ -199,13 +194,14 @@ namespace Auth.Server
                         {
                             [CultureInfo.GetCultureInfo("fr-FR")] = "Accès à l'API de démo"
                         },
-                    Name = "blazor-app-server-code",
+                    Name = "blazor-app-code",
                     Resources =
                         {
-                            "blazor-app-server-code"
+                            "blazor-app-code"
                         }
                 });
             }
+
 
             if (await manager.FindByNameAsync("auth-code") is null)
             {

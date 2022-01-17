@@ -79,7 +79,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
                 policyCollection.AddStrictTransportSecurityMaxAgeIncludeSubDomains(maxAgeInSeconds: 60 * 60 * 24 * 365);
             }
 
-            app.UseSecurityHeaders(policyCollection);
+            //app.UseSecurityHeaders(policyCollection);
 
             return app;
         }

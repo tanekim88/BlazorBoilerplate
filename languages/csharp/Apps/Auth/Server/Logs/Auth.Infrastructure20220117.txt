@@ -1,0 +1,436 @@
+2022-01-17 07:23:02.174 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:23:09.504 -05:00 [INF] HTTP GET / responded 200 in 379.8729 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMGEVDD8N:00000001","ConnectionId":"0HMEPMGEVDD8N","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:23:14.178 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 9.0567 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":23,"ThreadId":23,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMGEVDD8N:0000000F","ConnectionId":"0HMEPMGEVDD8N","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:24:13.692 -05:00 [INF] The request address matched a server endpoint: "Configuration".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMGEVDD8R:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMGEVDD8R","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:24:13.703 -05:00 [INF] The configuration request was successfully extracted: {}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMGEVDD8R:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMGEVDD8R","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:24:13.705 -05:00 [INF] The configuration request was successfully validated.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMGEVDD8R:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMGEVDD8R","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:24:13.764 -05:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5001/",
+  "authorization_endpoint": "https://localhost:5001/connect/authorize",
+  "token_endpoint": "https://localhost:5001/connect/token",
+  "introspection_endpoint": "https://localhost:5001/connect/introspect",
+  "end_session_endpoint": "https://localhost:5001/connect/logout",
+  "userinfo_endpoint": "https://localhost:5001/connect/userinfo",
+  "jwks_uri": "https://localhost:5001/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "email",
+    "profile",
+    "roles",
+    "address",
+    "phone",
+    "offline_access"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMGEVDD8R:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMGEVDD8R","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:24:13.769 -05:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 90.9126 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMGEVDD8R:00000001","ConnectionId":"0HMEPMGEVDD8R","ProcessId":3196,"Version":"1.0.0"}2022-01-17 07:30:36.833 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:41.045 -05:00 [INF] The request address matched a server endpoint: "Configuration".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:41.076 -05:00 [INF] The configuration request was successfully extracted: {}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:41.078 -05:00 [INF] The configuration request was successfully validated.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:41.102 -05:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5001/",
+  "authorization_endpoint": "https://localhost:5001/connect/authorize",
+  "token_endpoint": "https://localhost:5001/connect/token",
+  "introspection_endpoint": "https://localhost:5001/connect/introspect",
+  "end_session_endpoint": "https://localhost:5001/connect/logout",
+  "userinfo_endpoint": "https://localhost:5001/connect/userinfo",
+  "jwks_uri": "https://localhost:5001/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "email",
+    "profile",
+    "roles",
+    "address",
+    "phone",
+    "offline_access"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:41.112 -05:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 244.3783 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMKM6UBUK:00000001","ConnectionId":"0HMEPMKM6UBUK","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:43.561 -05:00 [INF] HTTP GET / responded 200 in 276.1673 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMKM6UBUO:00000001","ConnectionId":"0HMEPMKM6UBUO","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.218 -05:00 [INF] The request address matched a server endpoint: "Authorization".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":24,"ThreadId":24,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.230 -05:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "angular-app-code",
+  "redirect_uri": "http://localhost:4200",
+  "response_type": "code",
+  "scope": "openid profile email offline_access",
+  "nonce": "c148be7cefae69e9861be38d59182811f2ddNXkpi",
+  "state": "e5fe1102569994fb1d26522dcf502b7e1aG0vWAy2",
+  "code_challenge": "Aknq5ROix4ze1c2_gH8zYwq-jGFitf1bB9_YtXK0MD8",
+  "code_challenge_method": "S256"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":24,"ThreadId":24,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.305 -05:00 [INF] Client validation failed because 'http://localhost:4200' was not a valid redirect_uri for angular-app-code.
+
+{"SourceContext":"OpenIddict.Core.OpenIddictApplicationManager","RequestId":"0HMEPMKM6UBUT:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":26,"ThreadId":26,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.307 -05:00 [INF] The authorization request was rejected because the redirect_uri was invalid: 'http://localhost:4200'.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":26,"ThreadId":26,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.332 -05:00 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The specified 'redirect_uri' is not valid for this client application.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2043"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":26,"ThreadId":26,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:30:47.334 -05:00 [INF] HTTP GET /connect/authorize?client_id=angular-app-code&redirect_uri=http%3A%2F%2Flocalhost%3A4200&response_type=code&scope=openid%20profile%20email%20offline_access&nonce=c148be7cefae69e9861be38d59182811f2ddNXkpi&state=e5fe1102569994fb1d26522dcf502b7e1aG0vWAy2&code_challenge=Aknq5ROix4ze1c2_gH8zYwq-jGFitf1bB9_YtXK0MD8&code_challenge_method=S256 responded 400 in 139.1959 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":26,"ThreadId":26,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMKM6UBUT:00000001","ConnectionId":"0HMEPMKM6UBUT","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:47.150 -05:00 [INF] The request address matched a server endpoint: "Configuration".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000003","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:47.151 -05:00 [INF] The configuration request was successfully extracted: {}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000003","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:47.151 -05:00 [INF] The configuration request was successfully validated.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000003","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:47.152 -05:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5001/",
+  "authorization_endpoint": "https://localhost:5001/connect/authorize",
+  "token_endpoint": "https://localhost:5001/connect/token",
+  "introspection_endpoint": "https://localhost:5001/connect/introspect",
+  "end_session_endpoint": "https://localhost:5001/connect/logout",
+  "userinfo_endpoint": "https://localhost:5001/connect/userinfo",
+  "jwks_uri": "https://localhost:5001/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "email",
+    "profile",
+    "roles",
+    "address",
+    "phone",
+    "offline_access"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUK:00000003","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMKM6UBUK","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:47.155 -05:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 5.9613 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMKM6UBUK:00000003","ConnectionId":"0HMEPMKM6UBUK","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.513 -05:00 [INF] The request address matched a server endpoint: "Authorization".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000005","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.514 -05:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "angular-app-code",
+  "redirect_uri": "http://localhost:4200",
+  "response_type": "code",
+  "scope": "openid profile email offline_access",
+  "nonce": "0a1c80df01adf22c7078c8de09a979a289ZSh6wNb",
+  "state": "c2c7a6944c5fe24c1d052932443ac51312wQiPaCr",
+  "code_challenge": "h59ddlo03uMAwHlKrNwmyLerFsSS-xCMQulrqmlMYjM",
+  "code_challenge_method": "S256"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000005","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.572 -05:00 [INF] Client validation failed because 'http://localhost:4200' was not a valid redirect_uri for angular-app-code.
+
+{"SourceContext":"OpenIddict.Core.OpenIddictApplicationManager","RequestId":"0HMEPMKM6UBUT:00000005","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.573 -05:00 [INF] The authorization request was rejected because the redirect_uri was invalid: 'http://localhost:4200'.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000005","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.574 -05:00 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The specified 'redirect_uri' is not valid for this client application.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2043"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMKM6UBUT:00000005","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMKM6UBUT","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:35:48.574 -05:00 [INF] HTTP GET /connect/authorize?client_id=angular-app-code&redirect_uri=http%3A%2F%2Flocalhost%3A4200&response_type=code&scope=openid%20profile%20email%20offline_access&nonce=0a1c80df01adf22c7078c8de09a979a289ZSh6wNb&state=c2c7a6944c5fe24c1d052932443ac51312wQiPaCr&code_challenge=h59ddlo03uMAwHlKrNwmyLerFsSS-xCMQulrqmlMYjM&code_challenge_method=S256 responded 400 in 62.3443 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMKM6UBUT:00000005","ConnectionId":"0HMEPMKM6UBUT","ProcessId":21512,"Version":"1.0.0"}2022-01-17 07:39:24.287 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:32.863 -05:00 [INF] HTTP GET / responded 200 in 508.9163 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMPJQBVEB:00000001","ConnectionId":"0HMEPMPJQBVEB","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.754 -05:00 [INF] The request address matched a server endpoint: "Authorization".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMPJQBVEF:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMPJQBVEF","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.780 -05:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "angular-app-code",
+  "redirect_uri": "http://localhost:4200",
+  "response_type": "code",
+  "scope": "openid profile email offline_access",
+  "nonce": "764530654aeff387d57030d646d8c4db888X944Fm",
+  "state": "e5fe1102569994fb1d26522dcf502b7e1aG0vWAy2",
+  "code_challenge": "_wFjuWbt2VPI0yg1vkXdmEfriWfHeC64_85hgCk7fcc",
+  "code_challenge_method": "S256"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMPJQBVEF:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMPJQBVEF","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.828 -05:00 [INF] Client validation failed because 'http://localhost:4200' was not a valid redirect_uri for angular-app-code.
+
+{"SourceContext":"OpenIddict.Core.OpenIddictApplicationManager","RequestId":"0HMEPMPJQBVEF:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMPJQBVEF","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.828 -05:00 [INF] The authorization request was rejected because the redirect_uri was invalid: 'http://localhost:4200'.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMPJQBVEF:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMPJQBVEF","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.846 -05:00 [INF] The response was successfully returned as a plain-text document: {
+  "error": "invalid_request",
+  "error_description": "The specified 'redirect_uri' is not valid for this client application.",
+  "error_uri": "https://documentation.openiddict.com/errors/ID2043"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMPJQBVEF:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMPJQBVEF","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:39:41.849 -05:00 [INF] HTTP GET /connect/authorize?client_id=angular-app-code&redirect_uri=http%3A%2F%2Flocalhost%3A4200&response_type=code&scope=openid%20profile%20email%20offline_access&nonce=764530654aeff387d57030d646d8c4db888X944Fm&state=e5fe1102569994fb1d26522dcf502b7e1aG0vWAy2&code_challenge=_wFjuWbt2VPI0yg1vkXdmEfriWfHeC64_85hgCk7fcc&code_challenge_method=S256 responded 400 in 108.3206 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMPJQBVEF:00000001","ConnectionId":"0HMEPMPJQBVEF","ProcessId":31564,"Version":"1.0.0"}2022-01-17 07:48:25.148 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:31.569 -05:00 [INF] HTTP GET / responded 200 in 307.3087 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":16,"ThreadId":16,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6G:00000001","ConnectionId":"0HMEPMUKK4V6G","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:32.035 -05:00 [INF] HTTP GET / responded 200 in 20.9565 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":9,"ThreadId":9,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6G:0000000B","ConnectionId":"0HMEPMUKK4V6G","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:35.454 -05:00 [INF] The request address matched a server endpoint: "Configuration".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6M:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMUKK4V6M","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:35.473 -05:00 [INF] The configuration request was successfully extracted: {}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6M:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMUKK4V6M","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:35.475 -05:00 [INF] The configuration request was successfully validated.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6M:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMUKK4V6M","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:35.521 -05:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:5001/",
+  "authorization_endpoint": "https://localhost:5001/connect/authorize",
+  "token_endpoint": "https://localhost:5001/connect/token",
+  "introspection_endpoint": "https://localhost:5001/connect/introspect",
+  "end_session_endpoint": "https://localhost:5001/connect/logout",
+  "userinfo_endpoint": "https://localhost:5001/connect/userinfo",
+  "jwks_uri": "https://localhost:5001/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "email",
+    "profile",
+    "roles",
+    "address",
+    "phone",
+    "offline_access"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6M:00000001","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMEPMUKK4V6M","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:35.527 -05:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 88.5331 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6M:00000001","ConnectionId":"0HMEPMUKK4V6M","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:37.458 -05:00 [INF] The request address matched a server endpoint: "Authorization".
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6O:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMUKK4V6O","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:37.464 -05:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "angular-app-code",
+  "redirect_uri": "https://localhost:4200",
+  "response_type": "code",
+  "scope": "openid profile email offline_access",
+  "nonce": "ca6e7ced40b2919504ac824fe01ecfef5dvRQNdcf",
+  "state": "5e2cd32c6887e50a752284621cab4a88efVcgxXBf",
+  "code_challenge": "uGWZpXHLF2oIQuiVNzkDvJvLQdh7prgLV4b3gACMebc",
+  "code_challenge_method": "S256"
+}.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6O:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMUKK4V6O","CustomId":19,"ThreadId":19,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:37.512 -05:00 [INF] The authorization request was successfully validated.
+
+{"SourceContext":"OpenIddict.Server.OpenIddictServerDispatcher","RequestId":"0HMEPMUKK4V6O:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMEPMUKK4V6O","CustomId":24,"ThreadId":24,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:37.678 -05:00 [INF] HTTP GET /connect/authorize?client_id=angular-app-code&redirect_uri=https%3A%2F%2Flocalhost%3A4200&response_type=code&scope=openid%20profile%20email%20offline_access&nonce=ca6e7ced40b2919504ac824fe01ecfef5dvRQNdcf&state=5e2cd32c6887e50a752284621cab4a88efVcgxXBf&code_challenge=uGWZpXHLF2oIQuiVNzkDvJvLQdh7prgLV4b3gACMebc&code_challenge_method=S256 responded 302 in 224.4918 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":24,"ThreadId":24,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000001","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:37.812 -05:00 [INF] HTTP GET /Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Dangular-app-code%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A4200%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520offline_access%26nonce%3Dca6e7ced40b2919504ac824fe01ecfef5dvRQNdcf%26state%3D5e2cd32c6887e50a752284621cab4a88efVcgxXBf%26code_challenge%3DuGWZpXHLF2oIQuiVNzkDvJvLQdh7prgLV4b3gACMebc%26code_challenge_method%3DS256 responded 200 in 128.6144 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":20,"ThreadId":20,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000003","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:48:38.210 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 0.6619 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":16,"ThreadId":16,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000013","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:51:22.500 -05:00 [INF] HTTP POST /Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Dangular-app-code%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A4200%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%2520offline_access%26nonce%3Dca6e7ced40b2919504ac824fe01ecfef5dvRQNdcf%26state%3D5e2cd32c6887e50a752284621cab4a88efVcgxXBf%26code_challenge%3DuGWZpXHLF2oIQuiVNzkDvJvLQdh7prgLV4b3gACMebc%26code_challenge_method%3DS256 responded 200 in 104.8076 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":32,"ThreadId":32,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000019","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:51:22.697 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 0.9830 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":29,"ThreadId":29,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000023","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"Version":"1.0.0"}2022-01-17 07:51:27.143 -05:00 [ERR] HTTP GET /identity/account/register responded 500 in 76.5697 ms
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method234(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass3_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\IServiceCollectionExtensions\AddLocalizationExtension.cs:line 156
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMEPMUKK4V6O:00000029","ConnectionId":"0HMEPMUKK4V6O","ProcessId":34972,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}2022-01-17 07:51:27.178 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method234(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass3_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\IServiceCollectionExtensions\AddLocalizationExtension.cs:line 156
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMEPMUKK4V6O:00000029","RequestPath":"/identity/account/register","ConnectionId":"0HMEPMUKK4V6O","CustomId":31,"ThreadId":31,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":34972,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}

@@ -1,7 +1,9 @@
 
 
 using BlazorApp.Client;
+using BlazorApp.Client.States;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
 using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
 
@@ -10,6 +12,7 @@ builder.RootComponents.Add<App>("#app");
 builder.BuildClient();
 builder.BuildAuthClient();
 
+builder.Services.AddSingleton<AppState>();
 //builder.RootComponents.Add<App>(selector: "#app");
 
 //builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",

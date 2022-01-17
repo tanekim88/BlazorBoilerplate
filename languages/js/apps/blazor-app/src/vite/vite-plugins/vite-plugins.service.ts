@@ -50,7 +50,6 @@ export class BlazorAppVitePluginsService extends VitePluginsService {
                                 </script>
                                 <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
                                 <script src="_framework/blazor.webassembly.js"></script>
-                                <script>navigator.serviceWorker.register("[SERVICEWORKER_PATH]", {type:"module"});</script>
                                 `],
                                 insertAt: '@body-end',
                                 enforce: 'post'

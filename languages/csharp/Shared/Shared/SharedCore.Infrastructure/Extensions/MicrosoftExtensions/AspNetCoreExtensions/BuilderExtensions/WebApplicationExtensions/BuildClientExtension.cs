@@ -64,12 +64,9 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             //services.AddCustomServices();
             var clientBaseHost = builder.HostEnvironment.BaseAddress;
 
-            services.AddHttpClient("BlazorApp.ServerAPI", client => client.BaseAddress =
-                blazorServerHostUrl).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
             // Supply HttpClient instances that include access tokens when making requests to the server project
-            services.AddScoped(sp =>
-                 sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
+
 
             //builder.services.AddHttpClient<IIdentityServerService, IdentityServerService>(client =>
             //{
@@ -102,7 +99,7 @@ namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             //services.AddCustomServices();
             services.AddLocalization();
             services.AddOptions();
-            services.AddAuthorizationCore();
+
 
             //services.AddSingleton<MaterialThemeService>();
 
