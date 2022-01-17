@@ -76,7 +76,7 @@ namespace Auth.Server
                             Permissions.Scopes.Roles,
                             Permissions.Scopes.Phone,
                             Permissions.Scopes.Address,
-                            Permissions.Prefixes.Scope + "angular-app-server-code",
+                            Permissions.Prefixes.Scope + "angular-app-code",
 
                         },
                     Requirements =

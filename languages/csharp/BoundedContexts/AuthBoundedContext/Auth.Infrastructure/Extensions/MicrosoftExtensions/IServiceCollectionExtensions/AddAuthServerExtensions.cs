@@ -34,11 +34,18 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
             services.AddCustomLocalization();
             services.AddCustomAuthentication(configuration: configuration);
-            //services.AddCustomAuthDbContextPool(configuration);
-            //services.AddCustomAuthDbContext(configuration);
-            services.AddCustomOpenIddictDbContextPool(configuration: configuration);
-            services.AddCustomOpenIddictDbContext(configuration: configuration);
-            services.AddCustomOpenIddict();
+
+
+            // OpenIdDict
+            //services.AddCustomOpenIddictDbContextPool(configuration: configuration);
+            //services.AddCustomOpenIddictDbContext(configuration: configuration);
+            //services.AddCustomOpenIddict();
+
+            // IdentityServer
+            services.AddCustomAuthDbContextPool(configuration);
+            services.AddCustomAuthDbContext(configuration);
+            services.AddCustomIdentityServerAuthentication(configuration);
+
 
             services.AddCustomRazorPages();
             services.AddCustomSignalR();

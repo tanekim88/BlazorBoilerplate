@@ -75,11 +75,11 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
                 CustomRemoteAuthenticationState,
                 CustomRemoteUserAccount>(options =>
             {
-                options.ProviderOptions.ClientId = "blazor-app-code";
-                options.ProviderOptions.Authority = "https://localhost:5001/";
-                options.ProviderOptions.ResponseType = "code";
+                //options.ProviderOptions.ClientId = "blazor-app-code";
+                //options.ProviderOptions.Authority = "https://localhost:5001/";
+                //options.ProviderOptions.ResponseType = "code";
 
-                //builder.Configuration.Bind("Auth", options.ProviderOptions);
+                builder.Configuration.Bind("Auth", options.ProviderOptions);
                 // Note: response_mode=fragment is the best option for a SPA. Unfortunately, the BlazorWeb WASM
                 // authentication stack is impacted by a bug that prevents it from correctly extracting
                 // authorization error responses (e.g error=access_denied responses) from the URL fragment.

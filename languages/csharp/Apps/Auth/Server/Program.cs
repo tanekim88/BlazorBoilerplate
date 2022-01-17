@@ -20,7 +20,7 @@ builder.Host.ConfigureAppConfiguration(configureDelegate: (hostingContext, confi
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
 builder.Services.AddCustomAuthServer(configuration: builder.Configuration, environment: builder.Environment);
-builder.Services.AddHostedService<Worker>();
+//builder.Services.AddHostedService<Worker>();
 
 var app = builder.Build();
 app.UseCustomAuthServerExtensions(configuration: builder.Configuration, builder.Environment);
