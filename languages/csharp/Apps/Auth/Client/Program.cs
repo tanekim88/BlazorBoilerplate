@@ -16,15 +16,6 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
 builder.RootComponents.Add<App>(selector: "#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddHttpClient(name: "Auth.ServerAPI",
-        configureClient: client =>
-            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
-    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
-
-// Supply HttpClient instances that include access tokens when making requests to the server project
-builder.Services.AddScoped(implementationFactory: sp =>
-    sp.GetRequiredService<IHttpClientFactory>().CreateClient(name: "Auth.ServerAPI"));
-
 builder.BuildClient();
 builder.BuildAuthClient();
 

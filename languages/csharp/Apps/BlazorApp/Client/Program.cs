@@ -2,6 +2,7 @@
 
 using BlazorApp.Client;
 using BlazorApp.Client.States;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
@@ -9,6 +10,7 @@ using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensi
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
 builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.BuildClient();
 builder.BuildAuthClient();
 
