@@ -159,12 +159,13 @@
 								<Target>
 									<form method="post" action="Account/Logout">
 										<AntiForgeryTokenInput />
-										<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+									 <a href="@context.User.FindFirst("bff:logout_url")?.Value">Log out</a>
+									@*	<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
 											@onclick="BeginSignOut">
 											<svg class="bi" width="32" height="32" fill="currentColor">
 												<use href="bootstrap-icons.svg#power" />
 											</svg>
-										</button>
+										</button>*@
 									</form>
 
 
@@ -179,7 +180,8 @@
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
 									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-										href="authentication/register" aria-label="" Match="NavLinkMatch.All">
+										href="authentication/register" 
+										aria-label="" Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
 											<use xlink:href="bootstrap-icons.svg#person-plus" />
 										</svg>
@@ -191,12 +193,20 @@
 							</MBTooltip>
 							<MBTooltip TooltipType="@MBTooltipType.Div">
 								<Target>
-									<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-										href="authentication/login" aria-label="" Match="NavLinkMatch.All">
+					@*				<NavLink class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+										href="authentication/login"
+										
+										aria-label="" Match="NavLinkMatch.All">
 										<svg class="bi" width="32" height="32" fill="currentColor">
 											<use xlink:href="bootstrap-icons.svg#box-arrow-in-right" />
 										</svg>
-									</NavLink>
+									</NavLink>*@
+									<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+										@onclick="BeginSignIn">
+										<svg class="bi" width="32" height="32" fill="currentColor">
+											<use xlink:href="bootstrap-icons.svg#box-arrow-in-right" />
+										</svg>
+									</button>
 								</Target>
 								<Content>
 									Sign In

@@ -11,6 +11,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Pages\Authentication - Copy.razor.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Pages\Authentication - Copy.razor.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Ardalis.GuardClauses" Version="3.3.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.2.0" />
 		<PackageReference Include="Dapr.Client" Version="1.5.0" />

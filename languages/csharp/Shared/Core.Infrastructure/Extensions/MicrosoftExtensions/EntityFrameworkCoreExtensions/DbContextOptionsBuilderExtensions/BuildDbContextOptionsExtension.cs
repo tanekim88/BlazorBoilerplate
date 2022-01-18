@@ -17,7 +17,8 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCore
                 {
                     sql.MigrationsAssembly(assemblyName: migrationsAssembly);
                     sql.UseNetTopologySuite();
-                }).UseLazyLoadingProxies();
+                });
+            //.UseLazyLoadingProxies(); 
 
             return options;
         }

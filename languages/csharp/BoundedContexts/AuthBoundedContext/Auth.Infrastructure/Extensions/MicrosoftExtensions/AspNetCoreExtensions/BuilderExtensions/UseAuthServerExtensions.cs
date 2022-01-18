@@ -9,13 +9,15 @@ using Serilog;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions
 {
     public static class UseAuthServerExtensions
     {
-        public static IApplicationBuilder UseCustomAuthServerExtensions(this IApplicationBuilder app,
+        public static IApplicationBuilder UseCustomAuthServerExtensions(this WebApplication app,
             IConfiguration configuration, IWebHostEnvironment env)
         {
+            app.InitializeCustomDatabaseForIdentityServer();
+
             if (env.IsDevelopment())
             {
                 //app.UseLiveReload();
@@ -51,15 +53,24 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             app.UseCors(policyName: "CorsPolicy");
 
             app.UseAuthentication();
+            app.UseBff();
             app.UseAuthorization();
 
 
-            app.UseEndpoints(configure: endpoints =>
-            {
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-                endpoints.MapFallbackToFile(filePath: "index.html");
-            });
+
+            //app.MapRazorPages();
+            //app.MapControllers();
+            //app.MapFallbackToFile(filePath: "index.html");
+
+            app.MapBffManagementEndpoints();
+            app.MapRazorPages();
+
+            app.MapControllers()
+                .RequireAuthorization()
+                .AsBffApiEndpoint();
+
+            app.MapFallbackToFile("index.html");
+
             return app;
         }
     }

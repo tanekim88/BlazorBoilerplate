@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using SharedAuth.Infrastructure.Auth.AccountClaimsPrincipalFactories;
 using SharedAuth.Infrastructure.Auth.AuthenticationStateProviders;
 using SharedAuth.Infrastructure.Auth.AuthorizationMessageHandlers;
+using SharedAuth.Infrastructure.Auth.DelegatingHandlers;
 using SharedAuth.Infrastructure.Auth.RemoteAuthenticationStates;
 using SharedAuth.Infrastructure.Auth.RemoteUserAccounts;
 using SharedAuth.Infrastructure.Service;
@@ -22,19 +23,42 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
 
             var services = builder.Services;
             services.AddAuthorizationCore();
-            //builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             //builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
             //        configureClient: client =>
             //            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
             //    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-            builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
-            builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
-        configureClient: client =>
-            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
-                .AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
+        //    builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
+        //    builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
+        //configureClient: client =>
+        //    client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
+        //        .AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
 
-            builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
+        //    builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
+
+
+
+
+
+
+
+
+            // authentication state and authorization
+            builder.Services.AddAuthorizationCore();
+            builder.Services.AddScoped<AuthenticationStateProvider, CustomBFFAuthenticationStateProvider>();
+
+            // HTTP client configuration
+            builder.Services.AddTransient<AntiforgeryHandler>();
+            //builder.Services.AddHttpClient("backend", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
+            builder.Services.AddHttpClient("backend", client => client.BaseAddress = new Uri("https://localhost:5001"))
+                .AddHttpMessageHandler<AntiforgeryHandler>();
+            builder.Services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("backend"));
+
+
+
+
+
 
 
 
@@ -69,49 +93,54 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             //services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
 
 
+            builder.Services.AddOidcAuthentication(options =>
+            {
+                builder.Configuration.Bind("Auth", options.ProviderOptions);
+            });
+
             //builder.services.AddApiAuthorization();
             //In order to authenticate to IS4:
-            services.AddOidcAuthentication<
-                CustomRemoteAuthenticationState,
-                CustomRemoteUserAccount>(options =>
-            {
-                //options.ProviderOptions.ClientId = "blazor-app-code";
-                //options.ProviderOptions.Authority = "https://localhost:5001/";
-                //options.ProviderOptions.ResponseType = "code";
+            //services.AddOidcAuthentication<
+            //    CustomRemoteAuthenticationState,
+            //    CustomRemoteUserAccount>(options =>
+            //{
+            //    //options.ProviderOptions.ClientId = "blazor-app-code";
+            //    //options.ProviderOptions.Authority = "https://localhost:5001/";
+            //    //options.ProviderOptions.ResponseType = "code";
 
-                builder.Configuration.Bind("Auth", options.ProviderOptions);
-                // Note: response_mode=fragment is the best option for a SPA. Unfortunately, the BlazorWeb WASM
-                // authentication stack is impacted by a bug that prevents it from correctly extracting
-                // authorization error responses (e.g error=access_denied responses) from the URL fragment.
-                // For more information about this bug, visit https://github.com/dotnet/aspnetcore/issues/28344.
-                //
-                options.ProviderOptions.ResponseMode = "query";
-                options.ProviderOptions.DefaultScopes.Add("email");
-                options.AuthenticationPaths.RemoteRegisterPath = "https://localhost:5001/Identity/Account/Register";
-                //options.AuthenticationPaths.RemoteRegisterPath = "Account/Register";
-                //options.AuthenticationPaths.RemoteProfilePath = "Account/Manage";
+            //    builder.Configuration.Bind("Auth", options.ProviderOptions);
+            //    // Note: response_mode=fragment is the best option for a SPA. Unfortunately, the BlazorWeb WASM
+            //    // authentication stack is impacted by a bug that prevents it from correctly extracting
+            //    // authorization error responses (e.g error=access_denied responses) from the URL fragment.
+            //    // For more information about this bug, visit https://github.com/dotnet/aspnetcore/issues/28344.
+            //    //
+            //    options.ProviderOptions.ResponseMode = "query";
+            //    options.ProviderOptions.DefaultScopes.Add("email");
+            //    options.AuthenticationPaths.RemoteRegisterPath = "https://localhost:5001/Identity/Account/Register";
+            //    //options.AuthenticationPaths.RemoteRegisterPath = "Account/Register";
+            //    //options.AuthenticationPaths.RemoteProfilePath = "Account/Manage";
 
-                //options.AuthenticationPaths.LogInPath = "authorization/login";
-                //options.AuthenticationPaths.LogInCallbackPath = "authorization/login-callback";
-                //options.AuthenticationPaths.LogInFailedPath = "authorization/login-failed";
-                //options.AuthenticationPaths.LogOutPath = "authorization/logout";
-                //options.AuthenticationPaths.LogOutCallbackPath = "authorization/logout-callback";
-                //options.AuthenticationPaths.LogOutFailedPath = "authorization/logout-failed";
-                //options.AuthenticationPaths.LogOutSucceededPath = "authorization/logged-out";
-                //options.AuthenticationPaths.ProfilePath = "authorization/profile";
-                //options.AuthenticationPaths.RegisterPath = "authorization/register";
+            //    //options.AuthenticationPaths.LogInPath = "authorization/login";
+            //    //options.AuthenticationPaths.LogInCallbackPath = "authorization/login-callback";
+            //    //options.AuthenticationPaths.LogInFailedPath = "authorization/login-failed";
+            //    //options.AuthenticationPaths.LogOutPath = "authorization/logout";
+            //    //options.AuthenticationPaths.LogOutCallbackPath = "authorization/logout-callback";
+            //    //options.AuthenticationPaths.LogOutFailedPath = "authorization/logout-failed";
+            //    //options.AuthenticationPaths.LogOutSucceededPath = "authorization/logged-out";
+            //    //options.AuthenticationPaths.ProfilePath = "authorization/profile";
+            //    //options.AuthenticationPaths.RegisterPath = "authorization/register";
 
 
-                // Add the "roles" (OpenIddictConstants.Scopes.Roles) scope and the "role" (OpenIddictConstants.Claims.Role) claim
-                // (the same ones used in the Startup class of the Server) in order for the roles to be validated.
-                // See the Counter component for an example of how to use the Authorize attribute with roles
-                //options.ProviderOptions.DefaultScopes.Add("roles");
-                //options.UserOptions.RoleClaim = "role";
+            //    // Add the "roles" (OpenIddictConstants.Scopes.Roles) scope and the "role" (OpenIddictConstants.Claims.Role) claim
+            //    // (the same ones used in the Startup class of the Server) in order for the roles to be validated.
+            //    // See the Counter component for an example of how to use the Authorize attribute with roles
+            //    //options.ProviderOptions.DefaultScopes.Add("roles");
+            //    //options.UserOptions.RoleClaim = "role";
 
-            }).AddAccountClaimsPrincipalFactory<
-                CustomRemoteAuthenticationState,
-                CustomRemoteUserAccount,
-                CustomAccountClaimsPrincipalFactory>();
+            //}).AddAccountClaimsPrincipalFactory<
+            //    CustomRemoteAuthenticationState,
+            //    CustomRemoteUserAccount,
+            //    CustomAccountClaimsPrincipalFactory>();
 
 
             return builder;

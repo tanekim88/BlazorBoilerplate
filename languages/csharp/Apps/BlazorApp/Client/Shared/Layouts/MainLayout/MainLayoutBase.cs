@@ -66,6 +66,14 @@ namespace BlazorApp.Client.Shared.Layouts
             Navigation.NavigateTo(uri: "authentication/logout");
         }
 
+
+        public async Task BeginSignIn(MouseEventArgs args)
+        {
+            await SignOutManager.SetSignOutState();
+            Navigation.NavigateTo(uri: "authentication/logout");
+        }
+
+
         protected override Task OnInitializedAsync()
         {
             MaterialThemeSharedUiService.OnThemeChange += StateHasChanged;

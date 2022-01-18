@@ -1,0 +1,78 @@
+﻿@page "/authentication/{action}"
+@inject NavigationManager navigationManager
+@inject IJSRuntime JS
+@inject AppState State
+@using BlazorApp.Client.States
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using SharedAuth.Infrastructure.Auth.RemoteAuthenticationStates
+
+<RemoteAuthenticatorView Action="@Action"
+                        TAuthenticationState="CustomRemoteAuthenticationState"
+                        AuthenticationState="AuthenticationState"
+                        OnLogInSucceeded="RestoreState"
+                        OnLogOutSucceeded="RestoreState">
+    <LoggingIn>
+        You are about to be redirected to login page
+    </LoggingIn>
+    <CompletingLoggingIn>
+        Completing logging in
+    </CompletingLoggingIn>
+    <LogInFailed>
+        Login failed
+    </LogInFailed>
+    <LogOut>
+        Log out
+    </LogOut>
+    <CompletingLogOut>
+        Completing loging out.
+    </CompletingLogOut>
+    <LogOutFailed>
+        log out failed
+    </LogOutFailed>
+    <LogOutSucceeded>
+        Log out succeded
+    </LogOutSucceeded>
+    <UserProfile>
+        User profile
+    </UserProfile>
+    <Registering>
+        Registering.
+    </Registering>
+</RemoteAuthenticatorView>
+
+@code {
+    [Parameter]
+    public string Action { get; set; }
+
+    public CustomRemoteAuthenticationState AuthenticationState { get; set; } =
+        new CustomRemoteAuthenticationState();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (RemoteAuthenticationActions.IsAction(RemoteAuthenticationActions.LogIn,
+            Action) ||
+            RemoteAuthenticationActions.IsAction(RemoteAuthenticationActions.LogOut,
+            Action))
+        {
+            AuthenticationState.Id = Guid.NewGuid().ToString();
+
+            await JS.InvokeVoidAsync("sessionStorage.setItem",
+                AuthenticationState.Id, State.GetStateForLocalStorage());
+        }
+    }
+
+    private async Task RestoreState()
+    {
+        if (AuthenticationState.Id != null)
+        {
+            var locallyStoredState = await JS.InvokeAsync<string>(
+                "sessionStorage.getItem", AuthenticationState.Id);
+
+            if (locallyStoredState != null)
+            {
+                State.SetStateFromLocalStorage(locallyStoredState);
+                await JS.InvokeVoidAsync("sessionStorage.removeItem", AuthenticationState.Id);
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             services.AddCustomStores();
 
             services.AddCustomLocalization();
-            services.AddCustomAuthentication(configuration: configuration);
+            //services.AddCustomAuthentication(configuration: configuration);
 
 
             // OpenIdDict

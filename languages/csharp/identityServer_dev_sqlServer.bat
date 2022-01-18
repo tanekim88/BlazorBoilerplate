@@ -10,7 +10,7 @@ dotnet ef database update -c PersistedGrantDbContext -p ./BoundedContexts/AuthBo
 dotnet ef migrations add InitialConfigurationDbMigration -c ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server
 dotnet ef database update -c ConfigurationDbContext -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server
  
-dotnet ef migrations add InitialDbMigration -c ApplicationDbContext -o Data/Migrations -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
-dotnet ef database update -c ApplicationDbContext -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
+dotnet ef migrations add InitialDbMigration -c AuthDbContext -o Data/Migrations -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
+dotnet ef database update -c AuthDbContext -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
 
 pause
