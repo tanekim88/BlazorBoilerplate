@@ -1,0 +1,3 @@
+2022-01-19 18:13:56.815 -05:00 [INF] Starting Duende IdentityServer version 5.2.0+1c3f1fadb0fa7a4bea3f4a6f7028cbfcff3b9918 (.NET 6.0.1)
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":44688,"Version":"1.0.0"}

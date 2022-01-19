@@ -28,8 +28,8 @@ namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
             });
 
             //services.AddCustomAntiforgery();
-            services.AddCustomAuthDbContextPool(configuration);
-            services.AddCustomAuthDbContext(configuration);
+            services.AddCustomAuthDbContextPool(configuration, environment);
+            services.AddCustomAuthDbContext(configuration, environment);
             services.AddCustomIdentity();
             //services.AddCustomOpenIddictDbContextPool(configuration: configuration);
             //services.AddCustomOpenIddictDbContext(configuration: configuration);

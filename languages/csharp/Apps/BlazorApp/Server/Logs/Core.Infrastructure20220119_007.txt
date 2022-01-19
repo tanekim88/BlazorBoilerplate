@@ -143,4 +143,8 @@ System.InvalidOperationException: IDX20803: Unable to obtain configuration from:
 
 {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573H:00000001","ConnectionId":"0HMERIGU1573H","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:26.369 -05:00 [INF] HTTP GET /bff/user?slide=false responded 401 in 0.7468 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":39,"ThreadId":39,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573F:0000004B","ConnectionId":"0HMERIGU1573F","ProcessId":61632,"Version":"1.0.0"}
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":39,"ThreadId":39,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573F:0000004B","ConnectionId":"0HMERIGU1573F","ProcessId":61632,"Version":"1.0.0"}2022-01-19 18:15:01.622 -05:00 [INF] HTTP GET /bff/user?slide=false responded 401 in 6.2984 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":41,"ThreadId":41,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU156OL:00000047","ConnectionId":"0HMERIGU156OL","ProcessId":61632,"Version":"1.0.0"}2022-01-19 18:15:05.791 -05:00 [INF] HTTP GET /[SERVICEWORKER_PATH] responded 304 in 1.3387 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":47,"ThreadId":47,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573H:00000003","ConnectionId":"0HMERIGU1573H","ProcessId":61632,"Version":"1.0.0"}

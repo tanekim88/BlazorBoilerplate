@@ -18,11 +18,16 @@ namespace Auth.Server.Areas.Identity.Pages.Account
     public class LoginWithRecoveryCodeModel : PageModel
     {
         private readonly ILogger<LoginWithRecoveryCodeModel> _logger;
+        private readonly UserManager<UserModel> _userManager;
         private readonly SignInManager<UserModel> _signInManager;
 
-        public LoginWithRecoveryCodeModel(SignInManager<UserModel> signInManager, ILogger<LoginWithRecoveryCodeModel> logger)
+        public LoginWithRecoveryCodeModel(
+            SignInManager<UserModel> signInManager,
+                UserManager<UserModel> userManager,
+            ILogger<LoginWithRecoveryCodeModel> logger)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -53,20 +58,20 @@ namespace Auth.Server.Areas.Identity.Pages.Account
             var recoveryCode = Input.RecoveryCode.Replace(oldValue: " ", newValue: string.Empty);
 
             var result = await _signInManager.TwoFactorRecoveryCodeSignInAsync(recoveryCode: recoveryCode);
-
+            var userId = await _userManager.GetUserIdAsync(user);
             if (result.Succeeded)
             {
-                _logger.LogInformation(message: "User with ID '{UserId}' logged in with a recovery code.", user.Id);
+                _logger.LogInformation(message: "User with ID '{UserId}' logged in with a recovery code.", userId);
                 return LocalRedirect(localUrl: returnUrl ?? Url.Content(contentPath: "~/"));
             }
 
             if (result.IsLockedOut)
             {
-                _logger.LogWarning(message: "User with ID '{UserId}' account locked out.", user.Id);
+                _logger.LogWarning(message: "User with ID '{UserId}' account locked out.", userId);
                 return RedirectToPage(pageName: "./Lockout");
             }
 
-            _logger.LogWarning(message: "Invalid recovery code entered for user with ID '{UserId}' ", user.Id);
+            _logger.LogWarning(message: "Invalid recovery code entered for user with ID '{UserId}' ", userId);
             ModelState.AddModelError(key: string.Empty, errorMessage: "Invalid recovery code entered.");
             return Page();
         }

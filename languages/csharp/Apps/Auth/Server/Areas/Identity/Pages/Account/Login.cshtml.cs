@@ -45,7 +45,8 @@ namespace Auth.Server.Areas.Identity.Pages.Account
             if (!string.IsNullOrEmpty(value: ErrorMessage))
                 ModelState.AddModelError(key: string.Empty, errorMessage: ErrorMessage);
 
-            returnUrl = returnUrl ?? Url.Content(contentPath: "~/");
+            returnUrl ??= Url.Content("~/");
+
 
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(scheme: IdentityConstants.ExternalScheme);

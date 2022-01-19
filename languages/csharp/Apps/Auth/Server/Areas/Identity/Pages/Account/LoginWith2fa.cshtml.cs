@@ -18,11 +18,16 @@ namespace Auth.Server.Areas.Identity.Pages.Account
     public class LoginWith2faModel : PageModel
     {
         private readonly ILogger<LoginWith2faModel> _logger;
+        private readonly UserManager<UserModel> _userManager;
         private readonly SignInManager<UserModel> _signInManager;
 
-        public LoginWith2faModel(SignInManager<UserModel> signInManager, ILogger<LoginWith2faModel> logger)
+        public LoginWith2faModel(
+            SignInManager<UserModel> signInManager,
+                      UserManager<UserModel> userManager,
+            ILogger<LoginWith2faModel> logger)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -64,19 +69,22 @@ namespace Auth.Server.Areas.Identity.Pages.Account
                     isPersistent: rememberMe,
                     rememberClient: Input.RememberMachine);
 
+            var userId = await _userManager.GetUserIdAsync(user);
+
+
             if (result.Succeeded)
             {
-                _logger.LogInformation(message: "User with ID '{UserId}' logged in with 2fa.", user.Id);
+                _logger.LogInformation(message: "User with ID '{UserId}' logged in with 2fa.", userId);
                 return LocalRedirect(localUrl: returnUrl);
             }
 
             if (result.IsLockedOut)
             {
-                _logger.LogWarning(message: "User with ID '{UserId}' account locked out.", user.Id);
+                _logger.LogWarning(message: "User with ID '{UserId}' account locked out.", userId);
                 return RedirectToPage(pageName: "./Lockout");
             }
 
-            _logger.LogWarning(message: "Invalid authenticator code entered for user with ID '{UserId}'.", user.Id);
+            _logger.LogWarning(message: "Invalid authenticator code entered for user with ID '{UserId}'.", userId);
             ModelState.AddModelError(key: string.Empty, errorMessage: "Invalid authenticator code.");
             return Page();
         }

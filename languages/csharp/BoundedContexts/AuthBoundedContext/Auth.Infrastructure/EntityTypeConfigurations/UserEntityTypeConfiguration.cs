@@ -9,6 +9,7 @@ using Auth.Domain.ValueObjects.Ids;
 using Core.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Auth.Infrastructure.EntityTypeConfigurations
 {

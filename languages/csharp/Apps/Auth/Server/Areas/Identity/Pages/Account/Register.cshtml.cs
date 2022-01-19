@@ -17,8 +17,8 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
-
+using System;
+using System.Threading;
 
 namespace Auth.Server.Areas.Identity.Pages.Account
 {
@@ -26,17 +26,22 @@ namespace Auth.Server.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private readonly IEmailSender _emailSender;
+        private readonly UserManager<UserModel> _userManager;
+        private readonly IUserStore<UserModel> _userStore;
+        private readonly IUserEmailStore<UserModel> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly SignInManager<UserModel> _signInManager;
-        private readonly UserManager<UserModel> _userManager;
 
         public RegisterModel(
             UserManager<UserModel> userManager,
+            IUserStore<UserModel> userStore,
             SignInManager<UserModel> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
             _userManager = userManager;
+            _userStore = userStore;
+            _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
@@ -44,28 +49,34 @@ namespace Auth.Server.Areas.Identity.Pages.Account
 
         [BindProperty] public InputModel Input { get; set; }
 
-        public string? ReturnUrl { get; set; }
+        public string ReturnUrl { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            returnUrl ??= Url.Content("~/");
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content(contentPath: "~/");
+            returnUrl ??= Url.Content("~/");
+            ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new UserModel {UserName = Input.Email, Email = Input.Email};
+                var user = CreateUser();
                 //user.GlobalId = Guid.NewGuid().ToString();
+                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
                 var result = await _userManager.CreateAsync(user: user, password: Input.Password);
                 if (result.Succeeded)
                 {
+
+                    var userId = await _userManager.GetUserIdAsync(user);
                     _logger.LogInformation(message: "User created a new account with password.");
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user: user);
                     code = WebEncoders.Base64UrlEncode(input: Encoding.UTF8.GetBytes(s: code));
@@ -99,7 +110,7 @@ namespace Auth.Server.Areas.Identity.Pages.Account
                     var callbackUrl = Url.Page(
                         pageName: "/Account/ConfirmEmail",
                         pageHandler: null,
-                        values: new {area = "Identity", userId = user.Id, code, returnUrl},
+                        values: new { area = "Identity", userId = userId, code, returnUrl },
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(email: Input.Email, subject: "Confirm your email",
@@ -107,14 +118,14 @@ namespace Auth.Server.Areas.Identity.Pages.Account
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(value: callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                        return RedirectToPage(pageName: "RegisterConfirmation",
-                            routeValues: new {email = Input.Email, returnUrl});
-
-                    await _signInManager.SignInAsync(user: user, isPersistent: false);
-
-                    if (Regex.IsMatch(input: returnUrl, pattern: @"^https?:"))
-                        return Redirect(url: returnUrl);
-                    return LocalRedirect(localUrl: returnUrl);
+                    {
+                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                    }
+                    else
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return LocalRedirect(returnUrl);
+                    }
                 }
 
                 foreach (var error in result.Errors)
@@ -144,6 +155,29 @@ namespace Auth.Server.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare(otherProperty: "Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+        }
+
+        private UserModel CreateUser()
+        {
+            try
+            {
+                return Activator.CreateInstance<UserModel>();
+            }
+            catch
+            {
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(UserModel)}'. " +
+                    $"Ensure that '{nameof(UserModel)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+            }
+        }
+
+        private IUserEmailStore<UserModel> GetEmailStore()
+        {
+            if (!_userManager.SupportsUserEmail)
+            {
+                throw new NotSupportedException("The default UI requires a user store with email support.");
+            }
+            return (IUserEmailStore<UserModel>)_userStore;
         }
     }
 }

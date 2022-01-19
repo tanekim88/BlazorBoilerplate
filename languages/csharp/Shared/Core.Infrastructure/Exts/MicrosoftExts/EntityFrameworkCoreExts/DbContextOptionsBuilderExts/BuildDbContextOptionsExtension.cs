@@ -1,13 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 
 namespace Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts
 {
     public static class BuildDbContextOptionsExtension
     {
-        public static DbContextOptionsBuilder BuildCustomDbContextOptions(this DbContextOptionsBuilder options, 
+        public static DbContextOptionsBuilder BuildCustomDbContextOptions(this DbContextOptionsBuilder options,
             IConfiguration configuration,
+            IWebHostEnvironment env,
             string migrationsAssembly)
         {
             options.ReplaceService<IValueConverterSelector, StronglyTypedIdValueConverterSelector<int>>()
@@ -19,6 +22,10 @@ namespace Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbConte
                     sql.UseNetTopologySuite();
                 });
             //.UseLazyLoadingProxies(); 
+            if (env.IsDevelopment())
+            {
+                options.EnableSensitiveDataLogging();
+            }
 
             return options;
         }

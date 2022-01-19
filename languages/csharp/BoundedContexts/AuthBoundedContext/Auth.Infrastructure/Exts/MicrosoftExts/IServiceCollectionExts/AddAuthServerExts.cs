@@ -43,8 +43,8 @@ namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
             //services.AddCustomOpenIddict();
 
             // IdentityServer
-            services.AddCustomAuthDbContextPool(configuration);
-            services.AddCustomAuthDbContext(configuration);
+            services.AddCustomAuthDbContextPool(configuration, environment);
+            services.AddCustomAuthDbContext(configuration, environment);
             services.AddCustomIdentityServer(configuration, environment);
 
 

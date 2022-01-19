@@ -2,6 +2,7 @@
 
 using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -10,6 +11,9 @@ namespace SharedAuth.Application.Models.EntityModels
 {
     public class UserModel : IdentityUser<int>
     {
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public override int Id { get; set; }
         public string FirstName { get; set; } = null!;
 
         public string MiddleInitial { get; set; } = null!;

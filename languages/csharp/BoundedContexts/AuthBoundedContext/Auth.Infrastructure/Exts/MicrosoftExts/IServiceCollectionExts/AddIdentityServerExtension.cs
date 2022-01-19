@@ -23,7 +23,8 @@ namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
             //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.AddScoped<IUserClaimsPrincipalFactory<UserModel>, CustomUserClaimsPrincipalFactory>();
 
-            var builder = services.AddIdentityServer(options => {
+            var builder = services.AddIdentityServer(options =>
+            {
                 //options.Authentication.CookieLifetime = TimeSpan.FromHours(1);
                 //options.Authentication.CookieSlidingExpiration = false;
                 //options.Authentication.CookieAuthenticationScheme = "your_cookie";
@@ -51,11 +52,11 @@ namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
                 builder.AddConfigurationStore(options =>
                 {
 
-                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, migrationsAssembly);
+                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, env, migrationsAssembly);
                 })
                 .AddOperationalStore(options =>
                 {
-                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, migrationsAssembly);
+                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, env, migrationsAssembly);
 
                     // this enables automatic token cleanup. this is optional.
                     options.EnableTokenCleanup = true;
