@@ -1,4 +1,5 @@
-﻿using Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+﻿using Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
+using Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
 using Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
 using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
 using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
@@ -17,12 +18,12 @@ builder.Host.ConfigureAppConfiguration(configureDelegate: (hostingContext, confi
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
 builder.Services.AddCustomServer(configuration:builder. Configuration, environment: builder.Environment);
-builder.Services.AddCustomClientAuthServer(configuration: builder.Configuration, environment: builder.Environment);
+builder.Services.AddCustomBff(configuration: builder.Configuration, environment: builder.Environment);
 
 var app = builder.Build();
 
-app.UseCustomServerExtensions(configuration: builder.Configuration, builder.Environment);
-
+//app.UseCustomServerExtensions(configuration: builder.Configuration, builder.Environment);
+app.UseCustomBff(builder.Configuration,builder.Environment);
 using (var scope = app.Services.CreateScope())
 {
     try

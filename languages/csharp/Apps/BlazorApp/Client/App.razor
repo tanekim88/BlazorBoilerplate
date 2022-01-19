@@ -7,6 +7,7 @@
                     @if (!context.User.Identity.IsAuthenticated)
                     {
                         <RedirectToLogin/>
+                        <p>You can login <a href="bff/login">here</a></p>
                     }
                     else
                     {

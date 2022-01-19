@@ -1,3 +1,0 @@
-2022-01-05 07:46:07.240 -05:00 [INF] Starting web host
-
-{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":52908,"Version":"1.0.0"}

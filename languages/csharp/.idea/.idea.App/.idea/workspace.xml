@@ -5,11 +5,62 @@
     <projectFile>Apps/BlazorApp/Client/BlazorApp.Client.csproj</projectFile>
     <projectFile>Apps/Auth/Server/Auth.Server.csproj</projectFile>
     <projectFile>Apps/Auth/Client/Auth.Client.csproj</projectFile>
+    <projectFile>Apps/BlazorServerApp/BlazorServerApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bc25106-4cf2-420b-a37f-63542ad9cbef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apps/Auth/Server/Logs/Auth.Infrastructure20211007.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/Auth/Server/Logs/Auth.Infrastructure20211007.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/App/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/App/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/App/v17/.futdcache.v1" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/App/v17/.futdcache.v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/App/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/App/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/App/v17/fileList.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/App/v17/fileList.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/Auth/Server/Logs/Auth.Infrastructure20220117.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/Auth/Server/Logs/Auth.Infrastructure20220117.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/Auth/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/Auth/Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Client/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Client/App.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Client/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Client/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Client/Shared/Layouts/MainLayout/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Client/Shared/Layouts/MainLayout/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Client/Shared/Layouts/MainLayout/MainLayoutBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Client/Shared/Layouts/MainLayout/MainLayoutBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/BlazorApp.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Server/BlazorApp.Server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210407.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210528.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210529.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210530.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210531.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210601.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210604.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210701.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210703.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210704.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210704_001.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210920.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20210922.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20211006.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20211008.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20211030.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20211101.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220105.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_001.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_002.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_003.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_004.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_005.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_006.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_007.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Logs/Core.Infrastructure20220116_008.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorApp/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorApp/Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/BlazorServerApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/BlazorServerApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Auth.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Auth.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/DbContexts/AuthDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/DbContexts/AuthDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/AspNetCoreExtensions/BuilderExtensions/InitializeDatabaseForIdentityServerExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/AspNetCoreExtensions/BuilderExtensions/UseAuthServerExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddAuthServerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddAuthServerExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddClientAuthServerExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddIdentityServerAuthenticationExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/IdentityServer/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Auth.Infrastructure/IdentityServer/Config.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Infrastructure/Extensions/MicrosoftExtensions/AspNetCoreExtensions/BuilderExtensions/WebApplicationExtensions/BuildAuthClientExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoundedContexts/AuthBoundedContext/Shared/SharedAuth.Infrastructure/Extensions/MicrosoftExtensions/AspNetCoreExtensions/BuilderExtensions/WebApplicationExtensions/BuildAuthClientExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Core.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddServerExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Core.Infrastructure/Extensions/MicrosoftExtensions/IServiceCollectionExtensions/AddServerExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/apps/angular-app/node_modules" beforeDir="false" afterPath="$PROJECT_DIR$/../js/apps/angular-app/node_modules" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +69,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5EC559C4-E46B-4495-AC0C-B501660C616F/2/AuthenticationHttpContextExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BF80BB66-4945-4D07-9487-338641CA9E37/5c/667f303a/IOpenIddictApplicationStore`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D737D706-A3C7-48AD-9F30-92841CC2EA12/10/DefaultLoginService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6D6B0E26-29AC-448D-81AC-7CC3A1114B64/62/HttpProtocol.Generated.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E5A78BE-EE0F-4ABD-8ED7-EF3636048CF1/332/TaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E5A78BE-EE0F-4ABD-8ED7-EF3636048CF1/267/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A67338C6-6709-407D-BCC6-1FCD23B4DF49/3/FeatureReferences.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E5A78BE-EE0F-4ABD-8ED7-EF3636048CF1/301/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/74426F0C-3353-4AB4-8259-0418BD0FEBB8/3/DefaultHttpContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E5A78BE-EE0F-4ABD-8ED7-EF3636048CF1/1D0/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zAjP1CABqSsmbvjxRNHLNwB3X8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,7 +97,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Auth.Server">
+  <component name="RunManager" selected=".NET Launch Settings Profile.BlazorApp.Server">
     <configuration name="Auth.Client: Auth" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Apps/Auth/Client/Auth.Client.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -155,6 +218,36 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="BlazorServerApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Apps/BlazorServerApp/BlazorServerApp.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="BlazorServerApp" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="BlazorServerApp: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Apps/BlazorServerApp/BlazorServerApp.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -165,22 +258,43 @@
       <option name="presentableId" value="Default" />
       <updated>1633597761000</updated>
       <workItem from="1633597792957" duration="605000" />
+      <workItem from="1642602420414" duration="1565000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D737D706-A3C7-48AD-9F30-92841CC2EA12/10/DefaultLoginService.cs</url>
+          <line>47</line>
+          <properties documentPath="C:\Users\tanek\AppData\Roaming\JetBrains\Rider2021.1\resharper-host\SourcesCache\D737D706-A3C7-48AD-9F30-92841CC2EA12\10\DefaultLoginService.cs" initialLine="47" containingFunctionPresentation="method 'ProcessRequestAsync'">
+            <startOffsets>
+              <option value="1355" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1391" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="DotNet Exception Breakpoints" />
       </default-breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Authentication.AuthenticationProperties" memberName="Items" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

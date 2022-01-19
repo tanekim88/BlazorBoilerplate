@@ -24,6 +24,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
             levelSwitch.MinimumLevel = LogEventLevel.Information;
             Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
                 //  .ReadFrom.AppSettings()
                 .MinimumLevel.ControlledBy(levelSwitch: levelSwitch)
                 .MinimumLevel.Override(source: "Microsoft", minimumLevel: LogEventLevel.Warning)

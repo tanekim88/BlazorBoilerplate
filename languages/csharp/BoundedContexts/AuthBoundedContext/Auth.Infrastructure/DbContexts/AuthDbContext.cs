@@ -35,7 +35,7 @@ namespace Auth.Infrastructure.DbContexts
 
         public DbSet<User_UserGroupRole> User_UserGroupRoles { get; set; }
 
-        public AuthDbContext(DbContextOptions options) : base(options: options)
+        public AuthDbContext(DbContextOptions<AuthDbContext> options) : base(options: options)
         {
         }
 

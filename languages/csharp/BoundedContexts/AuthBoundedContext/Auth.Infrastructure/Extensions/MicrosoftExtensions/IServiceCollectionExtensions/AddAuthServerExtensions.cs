@@ -44,7 +44,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             // IdentityServer
             services.AddCustomAuthDbContextPool(configuration);
             services.AddCustomAuthDbContext(configuration);
-            services.AddCustomIdentityServerAuthentication(configuration);
+            services.AddCustomIdentityServer(configuration, environment);
 
 
             services.AddCustomRazorPages();

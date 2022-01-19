@@ -32,7 +32,8 @@ namespace Auth.Infrastructure.IdentityServer
                     },
                     ApiSecrets =
                     {
-                        new Secret("secret".Sha256())
+                        //new Secret("secret".Sha256())
+                        new Secret("secret")
                     }
                 },
                 new ApiResource("api2")
@@ -43,7 +44,8 @@ namespace Auth.Infrastructure.IdentityServer
                     },
                     ApiSecrets =
                     {
-                        new Secret("secret".Sha256())
+                        //new Secret("secret".Sha256())
+                        new Secret("secret")
                     }
                 }
             };
@@ -55,42 +57,42 @@ namespace Auth.Infrastructure.IdentityServer
                 new Client
                 {
                     ClientId = "angular-app-code",
-                    ClientSecrets = { new Secret("secret".Sha256()) },
+                    //ClientSecrets = { new Secret("secret".Sha256()) },
+                    ClientSecrets = { new Secret("secret") },
 
                     AllowedGrantTypes = GrantTypes.Code,
 
                     RedirectUris = {
-                        "https://localhost:4200/signin-oidc" 
+                        "https://localhost:4200/signin-oidc" ,
                     },
                     FrontChannelLogoutUri = "https://localhost:4200/signout-oidc",
                     PostLogoutRedirectUris = {
-                        "https://localhost:4200/signout-callback-oidc"
+                        "https://localhost:4200",
                     },
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "scope2" }
+                    AllowedScopes = { "openid", "profile", "email", "offline_access", "scope2" }
                 },
 
                 // interactive client using code flow + pkce
                 new Client
                 {
                     ClientId = "blazor-app-code",
-                    ClientSecrets = { new Secret("secret".Sha256()) },
+                    //ClientSecrets = { new Secret("secret".Sha256()) },
+                    ClientSecrets = { new Secret("secret") },
 
                     AllowedGrantTypes = GrantTypes.Code,
 
                     RedirectUris = {
-                        "https://localhost:3001/signin-oidc" ,
                         "https://localhost:4001/signin-oidc" ,
                     },
                     FrontChannelLogoutUri = "https://localhost:4001/signout-oidc",
                     PostLogoutRedirectUris = {
-                        "https://localhost:3001/signout-callback-oidc" ,
                         "https://localhost:4001/signout-callback-oidc"
                     },
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "openid", "profile", "scope2" }
+                    AllowedScopes = { "openid","address","phone", "profile", "email", "offline_access", "scope2" }
                 },
             };
     }

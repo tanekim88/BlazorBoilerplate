@@ -2,13 +2,12 @@
 
 using Core.Application.Services.__Entities_Groups_00_Name__ApplicationServices;
 using Core.Domain.Services.__Entities_Groups_00_Name__Services;
+using Core.Infrastructure.Implementations.MicrosoftImplementations.AspNetCoreImplementations.IdentityImplementations.UIImplementations.ServicesImplementations.IEmailSenderImplementations;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
-using System;
 using System.Reflection;
 
 
@@ -36,7 +35,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             });
             //////////////////////////////////////////////////////////////////////////////////
 
-            services.AddCustomControllersWithViews();
+            //services.AddCustomControllersWithViews();
             services.AddCustomCors();
             //services.AddCustomDbContextPool(configuration);
             //services.AddCustomDbContext(configuration);
@@ -50,7 +49,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
 
             services.AddCustomRazorPages();
             services.AddCustomSignalR();
-            services.AddCustomSwaggerGen();
+            //services.AddCustomSwaggerGen();
             services.ConfigureCustomApplicationCookie();
             services.ConfigureCustomIdentityOptions();
             services.ConfigureCustomIISOptions();
@@ -65,6 +64,7 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
             //var implementationAssembly = typeof(__Entities_Name__Repository_Gen_<ApplicationDbContext>).Assembly;
             //services.AddCustomEfRepositories<ApplicationDbContext>(interfaceAssembly, implementationAssembly);
 
+            services.AddTransient<IEmailSender, CustomEmailSender>();
 
             return services;
         }

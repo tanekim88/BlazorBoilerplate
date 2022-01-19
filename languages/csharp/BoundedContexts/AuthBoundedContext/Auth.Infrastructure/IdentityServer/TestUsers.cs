@@ -30,7 +30,7 @@ namespace Auth.Infrastructure.IdentityServer
                     new TestUser
                     {
                         SubjectId = "818727",
-                        Username = "tanekim77",
+                        Username = "tanekim77@hotmail.com",
                         Password = "1234",
                         Claims =
                         {

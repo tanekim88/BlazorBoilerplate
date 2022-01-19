@@ -39,7 +39,7 @@ namespace BlazorApp.Client.Shared.Layouts
         //[Inject] private IMBAnimatedNavigationManager AnimatedNavigationService { get; set; }
         [Inject] private IJSRuntime JsRuntime { get; set; }
         [Inject] private NavigationManager Navigation { get; set; }
-        [Inject] private SignOutSessionStateManager SignOutManager { get; set; }
+        //[Inject] private SignOutSessionStateManager SignOutManager { get; set; }
 
 
 
@@ -60,19 +60,11 @@ namespace BlazorApp.Client.Shared.Layouts
         }
         //[CascadingParameter] public CascadingThemeState CascadingThemeState { get; set;}
 
-        public async Task BeginSignOut(MouseEventArgs args)
-        {
-            await SignOutManager.SetSignOutState();
-            Navigation.NavigateTo(uri: "authentication/logout");
-        }
-
-
-        public async Task BeginSignIn(MouseEventArgs args)
-        {
-            await SignOutManager.SetSignOutState();
-            Navigation.NavigateTo(uri: "authentication/logout");
-        }
-
+        //public async Task BeginSignOut(MouseEventArgs args)
+        //{
+        //    await SignOutManager.SetSignOutState();
+        //    Navigation.NavigateTo(uri: "authentication/logout");
+        //}
 
         protected override Task OnInitializedAsync()
         {

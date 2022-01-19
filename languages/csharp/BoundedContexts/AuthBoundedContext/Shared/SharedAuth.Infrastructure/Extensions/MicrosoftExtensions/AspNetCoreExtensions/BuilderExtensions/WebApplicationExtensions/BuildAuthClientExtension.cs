@@ -23,35 +23,31 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
 
             var services = builder.Services;
             services.AddAuthorizationCore();
-            builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            //builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+        
             //builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
             //        configureClient: client =>
             //            client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
             //    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-        //    builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
-        //    builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
-        //configureClient: client =>
-        //    client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
-        //        .AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
+            //    builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
+            //    builder.Services.AddHttpClient(name: "BlazorApp.ServerAPI",
+            //configureClient: client =>
+            //    client.BaseAddress = new Uri(uriString: builder.HostEnvironment.BaseAddress))
+            //        .AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
 
-        //    builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
-
-
-
-
+            //    builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("BlazorApp.ServerAPI"));
 
 
 
 
             // authentication state and authorization
-            builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomBFFAuthenticationStateProvider>();
+            builder.Services.TryAddSingleton(sp => (CustomBFFAuthenticationStateProvider)sp.GetRequiredService<AuthenticationStateProvider>());
 
             // HTTP client configuration
             builder.Services.AddTransient<AntiforgeryHandler>();
-            //builder.Services.AddHttpClient("backend", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
-            builder.Services.AddHttpClient("backend", client => client.BaseAddress = new Uri("https://localhost:5001"))
+            builder.Services.AddHttpClient("backend", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
                 .AddHttpMessageHandler<AntiforgeryHandler>();
             builder.Services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("backend"));
 
@@ -93,10 +89,10 @@ namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExt
             //services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
 
 
-            builder.Services.AddOidcAuthentication(options =>
-            {
-                builder.Configuration.Bind("Auth", options.ProviderOptions);
-            });
+            //builder.Services.AddOidcAuthentication(options =>
+            //{
+            //    builder.Configuration.Bind("Auth", options.ProviderOptions);
+            //});
 
             //builder.services.AddApiAuthorization();
             //In order to authenticate to IS4:

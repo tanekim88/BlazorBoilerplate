@@ -85,6 +85,8 @@ namespace Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtension
             app.UseSwagger();
             app.UseCustomSwaggerUIExtension();
 
+
+
             return app;
         }
     }
