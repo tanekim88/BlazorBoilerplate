@@ -6,7 +6,7 @@ using __Entities_BoundedContext_Name__.Domain;
 using __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities;
 //<# } #>
 using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

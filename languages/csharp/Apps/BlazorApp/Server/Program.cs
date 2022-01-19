@@ -1,8 +1,8 @@
 ﻿using Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
 using Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.IConfigurationBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);

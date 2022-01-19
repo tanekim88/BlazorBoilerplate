@@ -1,7 +1,7 @@
 
 
 using Core.Domain.Entities.ReferenceEntities;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 
 

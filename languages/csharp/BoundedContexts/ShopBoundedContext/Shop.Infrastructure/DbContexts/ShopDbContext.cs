@@ -2,7 +2,7 @@
 //%s:end Usings
 using Shop.Domain;
 using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

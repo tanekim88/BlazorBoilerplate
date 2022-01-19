@@ -2,7 +2,7 @@ using Auth.Domain;
 using Auth.Domain.Entities;
 using Auth.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
 using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Reflection;
