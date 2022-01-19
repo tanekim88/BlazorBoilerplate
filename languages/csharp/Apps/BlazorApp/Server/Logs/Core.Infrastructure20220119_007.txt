@@ -129,4 +129,18 @@ System.InvalidOperationException: IDX20803: Unable to obtain configuration from:
 
 {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":171,"ThreadId":171,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERGQH080D7:00000031","ConnectionId":"0HMERGQH080D7","ProcessId":4204,"Version":"1.0.0"}2022-01-19 15:21:32.671 -05:00 [INF] HTTP GET /[SERVICEWORKER_PATH] responded 304 in 0.5856 ms
 
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":172,"ThreadId":172,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERGQH080O1:00000005","ConnectionId":"0HMERGQH080O1","ProcessId":4204,"Version":"1.0.0"}
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":172,"ThreadId":172,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERGQH080O1:00000005","ConnectionId":"0HMERGQH080O1","ProcessId":4204,"Version":"1.0.0"}2022-01-19 16:39:52.380 -05:00 [WRN] You do not have a valid license key for Duende IdentityServer. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+
+{"SourceContext":"Duende.Bff","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:39:53.188 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:04.823 -05:00 [INF] HTTP GET /bff/user?slide=false responded 401 in 149.6521 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":27,"ThreadId":27,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU156OL:0000003B","ConnectionId":"0HMERIGU156OL","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:07.917 -05:00 [INF] HTTP GET / responded 200 in 220.3008 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573F:00000001","ConnectionId":"0HMERIGU1573F","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:08.651 -05:00 [INF] HTTP GET /bff/login responded 302 in 1407.6147 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU156OL:0000003D","ConnectionId":"0HMERIGU156OL","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:18.537 -05:00 [INF] HTTP GET /[SERVICEWORKER_PATH] responded 304 in 1.7342 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573H:00000001","ConnectionId":"0HMERIGU1573H","ProcessId":61632,"Version":"1.0.0"}2022-01-19 16:40:26.369 -05:00 [INF] HTTP GET /bff/user?slide=false responded 401 in 0.7468 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":39,"ThreadId":39,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIGU1573F:0000004B","ConnectionId":"0HMERIGU1573F","ProcessId":61632,"Version":"1.0.0"}

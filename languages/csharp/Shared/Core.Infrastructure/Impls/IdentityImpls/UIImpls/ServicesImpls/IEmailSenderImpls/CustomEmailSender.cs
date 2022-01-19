@@ -15,11 +15,9 @@ namespace Core.Infrastructure.Impls.IdentityImpls.AspNetCoreImpls.IdentityImpls.
     {
         private readonly ILogger _logger;
 
-        public CustomEmailSender(
-            ILogger logger)
+        public CustomEmailSender()
         {
-            _logger = logger;
-        }
+              }
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {

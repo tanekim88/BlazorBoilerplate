@@ -4,7 +4,9 @@ using Auth.Domain.Interfaces.RepositoryInterfaces.__Entities_Groups_00_Name__Rep
 using Auth.Infrastructure.DbContexts;
 using Auth.Infrastructure.Repositories.__Entities_Groups_00_Name__Repositories;
 using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
+using Core.Infrastructure.Impls.IdentityImpls.AspNetCoreImpls.IdentityImpls.UIImpls.ServicesImpls.IEmailSenderImpls;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -57,6 +59,8 @@ namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
             var projName = Assembly.GetExecutingAssembly().GetName().Name;
             services.ConfigureCustomSerilog(env: environment, logFileName: projName);
             services.ConfigureCustomTwilio(configuration: configuration);
+
+            services.AddTransient<IEmailSender, CustomEmailSender>();
 
             return services;
         }

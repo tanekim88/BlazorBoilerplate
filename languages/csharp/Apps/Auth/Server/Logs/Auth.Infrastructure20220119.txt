@@ -445,4 +445,135 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
    at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 
-{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMERH4V5SM2G:00000005","RequestPath":"/Identity/Account/Register","ConnectionId":"0HMERH4V5SM2G","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":15896,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}
+{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMERH4V5SM2G:00000005","RequestPath":"/Identity/Account/Register","ConnectionId":"0HMERH4V5SM2G","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":15896,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}2022-01-19 16:37:36.300 -05:00 [INF] Starting Duende IdentityServer version 5.2.0+1c3f1fadb0fa7a4bea3f4a6f7028cbfcff3b9918 (.NET 6.0.1)
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:37:36.379 -05:00 [WRN] You do not have a valid license key for Duende IdentityServer. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+
+{"SourceContext":"Duende.IdentityServer","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:37:36.383 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:37:36.386 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:37:36.933 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:37:43.143 -05:00 [INF] HTTP GET / responded 200 in 282.5200 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLPU:00000001","ConnectionId":"0HMERIFLBBLPU","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:07.467 -05:00 [INF] Invoking IdentityServer endpoint: Duende.IdentityServer.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+
+{"SourceContext":"Duende.IdentityServer.Hosting.IdentityServerMiddleware","RequestId":"0HMERIFLBBLQ1:00000002","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMERIFLBBLQ1","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:07.567 -05:00 [INF] Active signing key found with kid 30B94DDA6DD83A50D3CE87602832FDB5 for alg RS256. Expires in "89.09:06:28". Retires in "103.09:06:28"
+
+{"SourceContext":"Duende.IdentityServer.Services.KeyManagement.KeyManager","RequestId":"0HMERIFLBBLQ1:00000002","RequestPath":"/.well-known/openid-configuration","ConnectionId":"0HMERIFLBBLQ1","CustomId":33,"ThreadId":33,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:07.575 -05:00 [INF] HTTP GET /.well-known/openid-configuration responded 200 in 179.1852 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":33,"ThreadId":33,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLQ1:00000002","ConnectionId":"0HMERIFLBBLQ1","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:08.513 -05:00 [INF] Invoking IdentityServer endpoint: Duende.IdentityServer.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+
+{"SourceContext":"Duende.IdentityServer.Hosting.IdentityServerMiddleware","RequestId":"0HMERIFLBBLQ1:00000003","RequestPath":"/.well-known/openid-configuration/jwks","ConnectionId":"0HMERIFLBBLQ1","CustomId":33,"ThreadId":33,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:08.546 -05:00 [INF] HTTP GET /.well-known/openid-configuration/jwks responded 200 in 56.1904 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":33,"ThreadId":33,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLQ1:00000003","ConnectionId":"0HMERIFLBBLQ1","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:08.694 -05:00 [INF] Invoking IdentityServer endpoint: Duende.IdentityServer.Endpoints.AuthorizeEndpoint for /connect/authorize
+
+{"SourceContext":"Duende.IdentityServer.Hosting.IdentityServerMiddleware","RequestId":"0HMERIFLBBLQ2:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMERIFLBBLQ2","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:08.846 -05:00 [INF] Showing login: User is not authenticated
+
+{"SourceContext":"Duende.IdentityServer.ResponseHandling.AuthorizeInteractionResponseGenerator","RequestId":"0HMERIFLBBLQ2:00000001","RequestPath":"/connect/authorize","ConnectionId":"0HMERIFLBBLQ2","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:08.856 -05:00 [INF] HTTP GET /connect/authorize?client_id=blazor-app-code&redirect_uri=https%3A%2F%2Flocalhost%3A4001%2Fsignin-oidc&response_type=code&scope=openid&code_challenge=RXYiHLqK1AXdyuHSkkhCLBj2GgpIf39HJqpu5sA55vg&code_challenge_method=S256&nonce=637782252086382824.Njk1N2Q5NjEtMDFmNi00YmZiLTk5YzEtM2E2ODEzNmQ5ZDA4MGY1ZGIxZmYtZTJlNC00MDMxLWI5ZGYtZmJhYzc2ZDNjZmU1&state=CfDJ8N3J4kJ_MwxBrpORh4sl0zlPKkcSiS5ilaAbPSc62z3W3nczXjCCGUWxU7XnmCzVkXjcVwlv97npuen1WiVLrXhUtJQuFNTJYnc9ZJWkgjSKPee_mVg23EkwTRScCvbqifRBQd-DD5AzKR2GS3P3nzRq0Y30rw-PmAvpHDbEM0vwoCE93_QR8Kgo82JdggOjbzJwRwrNKzLEwqZP9w8n33PaPGIVu9xrWWWHsLRr5RjdFq3eIrfLcyOy0SSV1YbFz6AhjIh5f9jUXGiwjZHSbB-z_gS-wvYk5m43ZPo4hjNp_2BIQBUyu15c3iN11_m_RJVHyx5KXf3mAQBgFenydELTzSTnNnmVfiWpKFo5COgN5CJanfl_LmrN0DUHxmjFjQ&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.11.1.0 responded 302 in 177.1746 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLQ2:00000001","ConnectionId":"0HMERIFLBBLQ2","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:13.228 -05:00 [INF] HTTP GET /Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Dblazor-app-code%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A4001%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%26code_challenge%3DRXYiHLqK1AXdyuHSkkhCLBj2GgpIf39HJqpu5sA55vg%26code_challenge_method%3DS256%26nonce%3D637782252086382824.Njk1N2Q5NjEtMDFmNi00YmZiLTk5YzEtM2E2ODEzNmQ5ZDA4MGY1ZGIxZmYtZTJlNC00MDMxLWI5ZGYtZmJhYzc2ZDNjZmU1%26state%3DCfDJ8N3J4kJ_MwxBrpORh4sl0zlPKkcSiS5ilaAbPSc62z3W3nczXjCCGUWxU7XnmCzVkXjcVwlv97npuen1WiVLrXhUtJQuFNTJYnc9ZJWkgjSKPee_mVg23EkwTRScCvbqifRBQd-DD5AzKR2GS3P3nzRq0Y30rw-PmAvpHDbEM0vwoCE93_QR8Kgo82JdggOjbzJwRwrNKzLEwqZP9w8n33PaPGIVu9xrWWWHsLRr5RjdFq3eIrfLcyOy0SSV1YbFz6AhjIh5f9jUXGiwjZHSbB-z_gS-wvYk5m43ZPo4hjNp_2BIQBUyu15c3iN11_m_RJVHyx5KXf3mAQBgFenydELTzSTnNnmVfiWpKFo5COgN5CJanfl_LmrN0DUHxmjFjQ%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.11.1.0 responded 200 in 4366.8937 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":27,"ThreadId":27,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLQ2:00000003","ConnectionId":"0HMERIFLBBLQ2","ProcessId":51680,"Version":"1.0.0"}2022-01-19 16:40:22.753 -05:00 [ERR] HTTP GET /identity/account/register responded 500 in 459.6194 ms
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method115(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass3_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Duende.IdentityServer.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IIssuerNameService issuerNameService, IBackChannelLogoutService backChannelLogoutService) in /_/src/IdentityServer/Hosting/IdentityServerMiddleware.cs:line 102
+   at Duende.IdentityServer.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in /_/src/IdentityServer/Hosting/MutualTlsEndpointMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Duende.IdentityServer.Hosting.DynamicProviders.DynamicSchemeAuthenticationMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/DynamicProviders/DynamicSchemes/DynamicSchemeAuthenticationMiddleware.cs:line 47
+   at Duende.IdentityServer.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/BaseUrlMiddleware.cs:line 31
+   at Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Exts\MicrosoftExts\IServiceCollectionExts\AddLocalizationExtension.cs:line 156
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIFLBBLPU:00000005","ConnectionId":"0HMERIFLBBLPU","ProcessId":51680,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}2022-01-19 16:40:22.949 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method115(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelActivatorProvider.<>c__DisplayClass3_0.<CreateActivator>b__0(PageContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Duende.IdentityServer.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IIssuerNameService issuerNameService, IBackChannelLogoutService backChannelLogoutService) in /_/src/IdentityServer/Hosting/IdentityServerMiddleware.cs:line 102
+   at Duende.IdentityServer.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes) in /_/src/IdentityServer/Hosting/MutualTlsEndpointMiddleware.cs:line 94
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Duende.IdentityServer.Hosting.DynamicProviders.DynamicSchemeAuthenticationMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/DynamicProviders/DynamicSchemes/DynamicSchemeAuthenticationMiddleware.cs:line 47
+   at Duende.IdentityServer.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/BaseUrlMiddleware.cs:line 31
+   at Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Exts\MicrosoftExts\IServiceCollectionExts\AddLocalizationExtension.cs:line 156
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMERIFLBBLPU:00000005","RequestPath":"/identity/account/register","ConnectionId":"0HMERIFLBBLPU","CustomId":21,"ThreadId":21,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":51680,"ExceptionDetail":{"Type":"System.InvalidOperationException","HResult":-2146233079,"Message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UI.Services.IEmailSender' while attempting to activate 'Auth.Server.Areas.Identity.Pages.Account.RegisterModel'.","Source":"Microsoft.Extensions.DependencyInjection.Abstractions","TargetSite":"System.Object GetService(System.IServiceProvider, System.Type, System.Type, Boolean)"},"Version":"1.0.0"}2022-01-19 16:42:27.114 -05:00 [INF] Starting Duende IdentityServer version 5.2.0+1c3f1fadb0fa7a4bea3f4a6f7028cbfcff3b9918 (.NET 6.0.1)
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:27.204 -05:00 [WRN] You do not have a valid license key for Duende IdentityServer. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+
+{"SourceContext":"Duende.IdentityServer","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:27.208 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:27.212 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:27.960 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:37.080 -05:00 [INF] HTTP GET / responded 200 in 252.1574 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:00000001","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:42:49.492 -05:00 [INF] HTTP GET /identity/account/register responded 200 in 1681.0991 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":22,"ThreadId":22,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:00000005","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:43:05.129 -05:00 [INF] HTTP POST /identity/account/register responded 200 in 98.1239 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":9,"ThreadId":9,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:0000000F","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:43:12.205 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 0.8979 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:00000017","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:43:30.318 -05:00 [INF] HTTP POST /identity/account/register responded 200 in 24.1601 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":26,"ThreadId":26,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:00000019","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:43:30.419 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 0.3397 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":7,"ThreadId":7,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:0000001D","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:44:08.292 -05:00 [INF] HTTP POST /identity/account/register responded 200 in 18.0380 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":29,"ThreadId":29,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:00000023","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:44:08.610 -05:00 [INF] HTTP GET /assets/_index.scss.map responded 404 in 0.9999 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":4,"ThreadId":4,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIIBUMI7G:0000002B","ConnectionId":"0HMERIIBUMI7G","ProcessId":38080,"Version":"1.0.0"}2022-01-19 16:50:50.331 -05:00 [INF] Starting Duende IdentityServer version 5.2.0+1c3f1fadb0fa7a4bea3f4a6f7028cbfcff3b9918 (.NET 6.0.1)
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:50:50.412 -05:00 [WRN] You do not have a valid license key for Duende IdentityServer. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please start a conversation with us: https://duendesoftware.com/contact
+
+{"SourceContext":"Duende.IdentityServer","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:50:50.415 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:50:50.418 -05:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+
+{"SourceContext":"Duende.IdentityServer.Startup","CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:50:51.165 -05:00 [INF] Starting web host
+
+{"CustomId":1,"ThreadId":1,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:50:57.639 -05:00 [INF] HTTP GET / responded 200 in 315.1759 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":8,"ThreadId":8,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIN1QC2GK:00000001","ConnectionId":"0HMERIN1QC2GK","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:51:06.768 -05:00 [INF] HTTP GET /Identity/Account/Register responded 200 in 1442.9764 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":18,"ThreadId":18,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIN1QC2GK:00000005","ConnectionId":"0HMERIN1QC2GK","ProcessId":3012,"Version":"1.0.0"}2022-01-19 16:53:38.268 -05:00 [INF] HTTP POST /identity/account/register responded 200 in 140672.2373 ms
+
+{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":30,"ThreadId":30,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERIN1QC2GK:00000009","ConnectionId":"0HMERIN1QC2GK","ProcessId":3012,"Version":"1.0.0"}
