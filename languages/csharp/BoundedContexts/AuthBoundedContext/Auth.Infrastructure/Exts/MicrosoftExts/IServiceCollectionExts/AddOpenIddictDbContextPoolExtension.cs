@@ -1,18 +1,14 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
-using Auth.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
-using Auth.Infrastructure.OpenIdDict;
-using Core.Infrastructure;
-using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Auth.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
+using Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddOpenIddictDbContextPoolExtension
     {

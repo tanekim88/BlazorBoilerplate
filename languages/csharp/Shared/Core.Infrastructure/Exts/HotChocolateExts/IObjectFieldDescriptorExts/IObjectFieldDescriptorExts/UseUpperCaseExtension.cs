@@ -4,7 +4,7 @@ using HotChocolate.Types;
 
 
 
-namespace Core.Infrastructure.Exts.HotChocolateExtensions.IObjectFieldDescriptorExtensions
+namespace Core.Infrastructure.Exts.HotChocolateExts.IObjectFieldDescriptorExts
 {
     public static class ObjectFieldUseUpperCaseExtensions
     {

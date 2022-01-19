@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace Core.Infrastructure.Exts.HotChocolateExtensions.IObjectFieldDescriptorExtensions
+namespace Core.Infrastructure.Exts.HotChocolateExts.IObjectFieldDescriptorExts
 {
     public static class UseDbContextExtension
     {

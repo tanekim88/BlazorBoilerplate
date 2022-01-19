@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.IMvcBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.IMvcBuilderExts
 {
     public static class UseODataExtension
     {

@@ -1,25 +1,18 @@
 ﻿using Auth.Infrastructure.DbContexts;
 using Auth.Infrastructure.IdentityServer;
-using Auth.Infrastructure.IdentityServer.CustomTokenRequestValidators;
-using Auth.Infrastructure.IdentityServer.DefaultScopeParsers;
-using Auth.Infrastructure.IdentityServer.ProfileServices;
-using Auth.Infrastructure.IdentityServer.UserClaimsPrincipalFactories;
-using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
-using Duende.IdentityServer;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
+using Auth.Infrastructure.Impls.DuendeImpls.IdentityServerImpls.ServicesImpls.IProfileServiceImpls;
+using Auth.Infrastructure.Impls.DuendeImpls.IdentityServerImpls.ValidationImpls;
+using Auth.Infrastructure.Impls.DuendeImpls.IdentityServerImpls.ValidationImpls.DefaultScopeParserImpls;
+using Auth.Infrastructure.Impls.MicrosoftImpls.AspNetCoreImpls.IdentityImpls.UserClaimsPrincipalFactoryImpls;
+using Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
 using SharedAuth.Application.Models.EntityModels;
-using System;
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddIdentityServerExtension
     {

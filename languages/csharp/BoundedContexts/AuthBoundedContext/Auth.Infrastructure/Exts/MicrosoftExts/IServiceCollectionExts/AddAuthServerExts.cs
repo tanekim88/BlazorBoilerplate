@@ -3,16 +3,15 @@
 using Auth.Domain.Interfaces.RepositoryInterfaces.__Entities_Groups_00_Name__RepositoryInterfaces;
 using Auth.Infrastructure.DbContexts;
 using Auth.Infrastructure.Repositories.__Entities_Groups_00_Name__Repositories;
-using Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions;
+using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using System.Reflection;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddAuthServerExtensions
     {

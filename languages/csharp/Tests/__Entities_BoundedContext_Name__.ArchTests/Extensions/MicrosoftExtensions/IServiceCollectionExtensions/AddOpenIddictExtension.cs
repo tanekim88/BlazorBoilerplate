@@ -7,7 +7,7 @@ using static OpenIddict.Abstractions.OpenIddictConstants;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddOpenIddictExtension
     {

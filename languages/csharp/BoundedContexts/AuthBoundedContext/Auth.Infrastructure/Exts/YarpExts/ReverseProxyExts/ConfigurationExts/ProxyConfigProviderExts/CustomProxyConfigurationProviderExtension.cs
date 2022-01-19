@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Yarp.ReverseProxy.Configuration;
 
-namespace Auth.Infrastructure.Extensions.YarpExtensions.ReverseProxyExtensions.ConfigurationExtensions.ProxyConfigProviderExtensions
+namespace Auth.Infrastructure.Exts.YarpExts.ReverseProxyExts.ConfigurationExts.ProxyConfigProviderExts
 {
     public static class CustomProxyConfigurationProviderExtension
     {

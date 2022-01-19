@@ -1,6 +1,4 @@
-﻿
-
-using Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.IMvcBuilderExtensions;
+﻿using Core.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.IMvcBuilderExts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -10,7 +8,7 @@ using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddControllersWithViewsExtension
     {

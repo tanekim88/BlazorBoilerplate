@@ -5,7 +5,7 @@ using System.Reflection;
 
 
 
-namespace Core.Infrastructure.Exts.ObjectExtensions
+namespace Core.Infrastructure.Exts.ObjectExts
 {
     public static class DescriptionAttributeMethodExtension
     {

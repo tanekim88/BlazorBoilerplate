@@ -14,7 +14,7 @@ using SharedAuth.Infrastructure.Service;
 using System;
 using System.Net.Http;
 
-namespace SharedAuth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
+namespace SharedAuth.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts
 {
     public static class BuildAuthClientExtension
     {

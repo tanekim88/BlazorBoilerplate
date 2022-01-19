@@ -4,7 +4,7 @@ using Microsoft.OData.ModelBuilder;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.ODataExtensions.ODataConventionModelBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.ODataExts.ODataConventionModelBuilderExts
 {
     public static class SetEntitiesExtension_ServerGen_
     {

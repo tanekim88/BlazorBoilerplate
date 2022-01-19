@@ -1,17 +1,13 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
-using Core.Infrastructure;
-using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddAuthDbContextPoolsExtension
     {

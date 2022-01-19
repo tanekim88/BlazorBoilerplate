@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Builder;
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts
 {
     public static class UseSwaggerUIExtension
     {

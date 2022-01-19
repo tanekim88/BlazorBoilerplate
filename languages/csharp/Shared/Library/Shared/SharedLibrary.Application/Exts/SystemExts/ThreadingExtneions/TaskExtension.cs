@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedLibrary.Application.Extensions.SystemExtensions.ThreadingExtensions
+namespace SharedLibrary.Application.Exts.SystemExts.ThreadingExts
 {
     public class TaskExtension
     {

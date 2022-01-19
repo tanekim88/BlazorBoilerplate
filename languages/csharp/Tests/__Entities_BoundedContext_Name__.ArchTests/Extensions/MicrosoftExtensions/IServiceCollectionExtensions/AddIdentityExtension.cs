@@ -8,7 +8,7 @@ using SharedAuth.Application.Models.EntityModels;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddIdentityExtension
     {

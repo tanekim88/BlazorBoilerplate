@@ -11,7 +11,7 @@ using Microsoft.Extensions.Options;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddLocalizationExtension
     {

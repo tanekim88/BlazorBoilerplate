@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using SharedCore.Application.Services.__Entities_Groups_00_Name__Services;
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts
 {
     public static class UseServerExtensions
     {

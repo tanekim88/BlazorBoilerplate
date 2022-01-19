@@ -1,23 +1,19 @@
-﻿using Grpc.Core;
-using Grpc.Net.Client;
+﻿using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using GrpcService1;
 using Material.Blazor;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Presentation.Infrastructure.Shared.Services.MaterialServices;
-using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+using SharedCore.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using SharedPresentation.Application.Interfaces.MatherialThemeServiceInterfaces;
 using System;
 using System.Net.Http;
 using System.Reflection;
-using System.Threading.Tasks;
 
-namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
+namespace SharedCore.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts
 {
     public static class BuildClientExtension
     {

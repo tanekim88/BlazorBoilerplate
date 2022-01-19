@@ -29,7 +29,7 @@ using System;
 
 
 
-namespace SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions
+namespace SetupLibrary.Infrastructure.Exts.IServiceCollectionExts
 {
     public static class AddSetupServicesExtension
     {

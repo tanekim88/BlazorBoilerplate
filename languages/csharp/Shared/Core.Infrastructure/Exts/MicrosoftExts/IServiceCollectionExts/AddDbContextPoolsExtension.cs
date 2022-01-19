@@ -1,15 +1,11 @@
-﻿
-
-using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
+﻿using Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddDbContextPoolsExtension
     {

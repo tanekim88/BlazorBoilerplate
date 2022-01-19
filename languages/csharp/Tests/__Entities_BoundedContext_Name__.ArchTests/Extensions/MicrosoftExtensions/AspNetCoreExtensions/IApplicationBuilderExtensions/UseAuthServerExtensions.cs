@@ -9,7 +9,7 @@ using Serilog;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.IServiceCollectionExts
 {
     public static class UseAuthServerExtensions
     {

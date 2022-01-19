@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 
 
 
-namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.ConstructorInfoExtensions
+namespace SharedLibrary.Application.Exts.SystemExts.ReflectionExts.ConstructorInfoExts
 {
     public static class GetParametersSignatureExtension
     {

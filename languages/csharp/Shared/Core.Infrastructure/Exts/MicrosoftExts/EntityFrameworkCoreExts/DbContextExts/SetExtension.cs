@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 
-namespace Core.Infrastructure.Exts.ModelBuilderExtensions.EntityFrameworkCoreExtensions.DbContextExtensions
+namespace Core.Infrastructure.Exts.ModelBuilderExts.EntityFrameworkCoreExts.DbContextExts
 {
     public static class SetExtension
     {

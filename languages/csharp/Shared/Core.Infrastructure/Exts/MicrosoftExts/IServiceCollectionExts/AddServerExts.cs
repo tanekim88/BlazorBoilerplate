@@ -2,17 +2,17 @@
 
 using Core.Application.Services.__Entities_Groups_00_Name__ApplicationServices;
 using Core.Domain.Services.__Entities_Groups_00_Name__Services;
-using Core.Infrastructure.Implementations.MicrosoftImplementations.AspNetCoreImplementations.IdentityImplementations.UIImplementations.ServicesImplementations.IEmailSenderImplementations;
+using Core.Infrastructure.Impls.IdentityImpls.AspNetCoreImpls.IdentityImpls.UIImpls.ServicesImpls.IEmailSenderImpls;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+using SharedCore.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using System.Reflection;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddServerExtensions
     {

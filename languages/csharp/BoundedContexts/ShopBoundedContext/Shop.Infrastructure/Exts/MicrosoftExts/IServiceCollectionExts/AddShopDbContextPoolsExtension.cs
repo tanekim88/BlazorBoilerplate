@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shop.Infrastructure.DbContexts;
 
-namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Shop.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddShopDbContextPoolsExtension
     {

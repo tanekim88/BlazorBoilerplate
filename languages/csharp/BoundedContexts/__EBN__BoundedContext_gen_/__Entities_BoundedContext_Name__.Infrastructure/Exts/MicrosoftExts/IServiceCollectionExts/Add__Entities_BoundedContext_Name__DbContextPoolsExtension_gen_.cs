@@ -1,16 +1,13 @@
 ﻿
 
 using __Entities_BoundedContext_Name__.Infrastructure.DbContexts;
-using Core.Infrastructure;
-using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Core.Infrastructure.Exts.MicrosoftExts.EntityFrameworkCoreExts.DbContextOptionsBuilderExts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace __Entities_BoundedContext_Name__.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace __Entities_BoundedContext_Name__.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class Add__Entities_BoundedContext_Name__DbContextPoolsExtension_gen_
     {

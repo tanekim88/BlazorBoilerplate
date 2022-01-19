@@ -4,7 +4,7 @@
 //using Microsoft.Extensions.DependencyInjection;
 
 
-//namespace Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+//namespace Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 //{
 //    public static class AddLiveReloadExtension
 //    {

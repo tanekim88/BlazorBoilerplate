@@ -9,16 +9,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using static OpenIddict.Abstractions.OpenIddictConstants;
-using Yarp.ReverseProxy.Configuration;
-using Duende.Bff;
-using System.Collections.Generic;
-using IdentityModel.AspNetCore.AccessTokenManagement;
-using Microsoft.IdentityModel.Tokens;
-using Auth.Infrastructure.Extensions.YarpExtensions.ReverseProxyExtensions.ConfigurationExtensions.ProxyConfigProviderExtensions;
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddBffExtensions
     {
@@ -55,7 +50,7 @@ namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionE
                 //options.ManagementBasePath = "/bff";
                 ////Flag that specifies if the sid claim needs to be present in the logout request as query string parameter. Used to prevent cross site request forgery.Defaults to true.
                 //options.RequireLogoutSessionId = true;
-                ////Specifies if the user’s refresh token is automatically revoked at logout time.Defaults to true.
+                ////Specifies if the userï¿½s refresh token is automatically revoked at logout time.Defaults to true.
                 //options.RevokeRefreshTokenOnLogout = true;
                 ////Specifies if during backchannel logout all matching user sessions are logged out. If true, all sessions for the subject will be revoked.If false, just the specific session will be revoked.Defaults to false.
                 //options.BackchannelLogoutAllUserSessions = false;

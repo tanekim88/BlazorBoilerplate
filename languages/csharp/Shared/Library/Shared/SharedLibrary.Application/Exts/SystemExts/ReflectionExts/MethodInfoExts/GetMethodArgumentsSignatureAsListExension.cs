@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 
 
 
-namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions
+namespace SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts
 {
     public static class GetMethodArgumentsSignatureAsListExension
     {

@@ -5,7 +5,7 @@ using SharedCore.Domain.Interfaces.ModelInterfaces;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.ModelBuilderExts
 {
     public static class SetNoActionsForUpdatedByOptionalAndCreatedByOptionalExtension
     {

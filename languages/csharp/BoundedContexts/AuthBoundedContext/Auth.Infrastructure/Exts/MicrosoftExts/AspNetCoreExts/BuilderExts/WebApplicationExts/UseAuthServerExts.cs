@@ -1,6 +1,4 @@
-﻿
-
-using Core.Infrastructure.Exts.MicrosoftExtensions.IServiceCollectionExtensions;
+﻿using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +7,7 @@ using Serilog;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts
 {
     public static class UseAuthServerExtensions
     {

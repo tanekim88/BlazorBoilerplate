@@ -9,7 +9,7 @@ using System.Text;
 
 
 
-namespace SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions
+namespace SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts
 {
     public static class GetNameWithGenericSignatureExtension
     {

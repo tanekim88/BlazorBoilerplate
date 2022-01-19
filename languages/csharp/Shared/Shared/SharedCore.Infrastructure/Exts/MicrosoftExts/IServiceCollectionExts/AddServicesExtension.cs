@@ -3,7 +3,7 @@ using SharedCore.Domain.Attributes.ServiceAttributes;
 using System.Linq;
 using System.Reflection;
 
-namespace SharedCore.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace SharedCore.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddServicesExtension
     {

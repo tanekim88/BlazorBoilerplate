@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.AspNetCoreExtensions.IMvcBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.IMvcBuilderExts
 {
     public static class AddDaprExtension
     {

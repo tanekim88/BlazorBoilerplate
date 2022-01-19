@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Core.Infrastructure;
 using Core.Infrastructure.Exts.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
 
-namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Shop.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddShopDbContextsExtension
     {

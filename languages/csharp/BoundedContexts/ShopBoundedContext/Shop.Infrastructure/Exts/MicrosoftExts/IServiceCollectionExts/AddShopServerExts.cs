@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Shop.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Shop.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddShopServerExtensions
     {

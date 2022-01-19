@@ -10,7 +10,7 @@ using System.Text.Json;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.IConfigurationBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts
 {
     public static class AddAppSettingsExtension
     {

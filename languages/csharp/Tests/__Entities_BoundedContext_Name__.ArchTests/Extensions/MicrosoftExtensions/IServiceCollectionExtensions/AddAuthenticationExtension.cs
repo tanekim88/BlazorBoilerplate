@@ -8,7 +8,7 @@ using OpenIddict.Server.AspNetCore;
 
 
 
-namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
 {
     public static class AddAuthenticationExtension
     {

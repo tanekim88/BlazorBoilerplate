@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExtensions.ModelBuilderExtensions
+namespace Core.Infrastructure.Exts.MicrosoftExts.ModelBuilderExts
 {
     public static class ApplyConfigurationsFromAssemblyExtension
     {
