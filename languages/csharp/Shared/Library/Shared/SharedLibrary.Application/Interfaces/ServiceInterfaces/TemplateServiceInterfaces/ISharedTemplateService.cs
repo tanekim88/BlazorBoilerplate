@@ -9,22 +9,21 @@ namespace SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateService
 {
     public interface ISharedTemplateService
     {
-        GetRequiredAssemblyPathsOutput GetRequiredAssemblyPaths();
+        //GetRequiredAssemblyPathsOutput GetRequiredAssemblyPaths();
 
-        GetUsedNamepacesOutput GetUsedNamepaces();
+        //GetUsedNamepacesOutput GetUsedNamepaces();
 
-        Task<ParseTemplateOutput> ParseTemplate(string inputFile, string inputContent, string outputFile,
-            bool preserveInputOnSucess = true, bool preserveOutputOnSucess = true);
+        Task<ParseTemplateOutput> ParseTemplate<TArgs>(string inputContent, string outputFile, TArgs args);
 
-        public record GetRequiredAssemblyPathsOutput
-        {
-            public List<string> Payload { get; set; }
-        }
+        //public record GetRequiredAssemblyPathsOutput
+        //{
+        //    public List<string> Payload { get; set; }
+        //}
 
-        public record GetUsedNamepacesOutput
-        {
-            public List<string> Payload { get; set; }
-        }
+        //public record GetUsedNamepacesOutput
+        //{
+        //    public List<string> Payload { get; set; }
+        //}
 
         public record ParseTemplateOutput
         {

@@ -26,7 +26,7 @@ namespace Library.Infrastructure.Services.EvalServices
             var nSize = 99999;
             var items = expressionRecords;
 
-            var parsedParameters = (Dictionary<string, object>) parameters;
+            var parsedParameters = (Dictionary<string, object>)parameters;
             var tempFolder = _pathService.GetCurrentProjectPath().ProjectDirPath;
             var newGuid = Guid.NewGuid();
             var preFileName = DateTime.Now.Ticks + "__" + Thread.CurrentThread.ManagedThreadId +
@@ -108,12 +108,18 @@ namespace Library.Infrastructure.Services.EvalServices
                 //File.WriteAllText(@"C:\Project\Apps\Packages\SharedPackages\Library.Core.Infrastructure.Package\Library.Core.Infrastructure\runiF.txt", inputContent);
 
                 var result = await _templateService.ParseTemplate(
-                    inputFile: inputFile,
                     inputContent: inputContent,
                     outputFile: outputFile,
-                    preserveInputOnSucess: false,
-                    preserveOutputOnSucess: false
+                    null
                 );
+
+                //var result = await _templateService.ParseTemplate(
+                //inputFile: inputFile,
+                //inputContent: inputContent,
+                //outputFile: outputFile,
+                //preserveInputOnSucess: false,
+                //preserveOutputOnSucess: false
+                //);
 
                 if (result.Success)
                 {
@@ -137,7 +143,7 @@ namespace Library.Infrastructure.Services.EvalServices
                             stream.Write(buffer: data, offset: 0, count: data.Length);
                             stream.Position = 0;
                             DataContractSerializer deserializer = new(type: typeof(T));
-                            var result2 = (T) deserializer.ReadObject(stream: stream);
+                            var result2 = (T)deserializer.ReadObject(stream: stream);
 
                             return new ExpressionCodeResult<T>
                             {
@@ -154,11 +160,11 @@ namespace Library.Infrastructure.Services.EvalServices
             }).Select(selector: x => x.Result);
 
             if (results.Any(predicate: result => result == null))
-                return new EvaluateBulkExpressionsOutput<T> {Payloads = null};
+                return new EvaluateBulkExpressionsOutput<T> { Payloads = null };
 
             var payloads = results.SelectMany(selector: x => x).ToList();
 
-            return new EvaluateBulkExpressionsOutput<T> {Payloads = payloads};
+            return new EvaluateBulkExpressionsOutput<T> { Payloads = payloads };
         }
     }
 }

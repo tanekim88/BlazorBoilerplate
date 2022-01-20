@@ -11,7 +11,7 @@ using Library.Application.Interfaces.ServiceInterfaces.RegexServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.SerializerServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces;
 using Library.Infrastructure.Services.AssemblyServices;
-using Library.Infrastructure.Services.EvalServices;
+
 using Library.Infrastructure.Services.JsServices;
 using Library.Infrastructure.Services.PathServices;
 using Library.Infrastructure.Services.RegexServices;
@@ -52,7 +52,7 @@ namespace SetupLibrary.Infrastructure.Exts.IServiceCollectionExts
             services.AddSingleton<ITranslationUiService, TranslationUiService>();
             services.AddSingleton<IAssemblyService, AssemblyService>();
             services.AddSingleton<IXmlSerializerService, XmlSerializerService>();
-            services.AddSingleton<IEvalService, EvalService>();
+     
             services.AddSingleton<IJsService, JsService>();
             services.AddSingleton<CodeGeneratorService>();
 
