@@ -21,6 +21,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             await PopulateModels(data: data);
 
             PopulateServices(data: data);
+
             PopulateDbContexts(data: data);
 
             await PopulateLocalizations(data: data);
@@ -31,46 +32,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
             return data;
         }
-
-
-        //public async Task<TemplateData> PopulateData2(List<TemplateProject> projects, TemplateFile file)
-        //{
-        //    var data = new TemplateData();
-
-        //    data.Projects = projects;
-
-        //    var codeType = file.CodeType;
-
-        //    file.Content = File.ReadAllText(file.TemplatePath);
-
-        //    file.Project = projects.Find(project => project.Name == file.Project.Name);
-
-        //    var referenceFile = await GetReferenceFile(file.Content, data, codeType);
-
-        //    if (!string.IsNullOrEmpty(referenceFile))
-        //    {
-        //        file.Content = File.ReadAllText(referenceFile);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Models), codeType))
-        //    {
-        //        await PopulateModels(projects, data);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Services), codeType))
-        //    {
-        //        PopulateServices(projects, data);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Localizations), codeType))
-        //    {
-        //        await PopulateLocalizations(projects, data);
-        //    }
-
-        //    PopulateProjects(data);
-
-        //    return data;
-        //}
 
         public bool IsMatch(TemplateFile file, string pluralName, TemplateCodeType codeType)
         {

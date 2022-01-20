@@ -5,6 +5,16 @@
 	  <nullable>enable</nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Services\EvalServices\EvalService.cs" />
+    <Compile Remove="Services\EvalServices\EvalService_EvaluateExpression.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Services\EvalServices\EvalService_EvaluateExpression.cs" />
+    <None Include="Services\EvalServices\EvalService.cs" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Confluent.Kafka" Version="1.8.2" />
 		<PackageReference Include="Dapr.AspNetCore" Version="1.6.0-rc01" />

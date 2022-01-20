@@ -20,15 +20,15 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
             if (commandContent != null)
             {
-                var result = await _evalService.EvaluateExpression<bool>(
-                    code: commandContent,
-                    parameters: new
-                    {
-                        Data = data
-                    }
-                );
+                //var result = await _evalService.EvaluateExpression<bool>(
+                //    code: commandContent,
+                //    parameters: new
+                //    {
+                //        Data = data
+                //    }
+                //);
 
-                return new ShouldRunOutput {Success = result.Payload};
+                //return new ShouldRunOutput {Success = result.Payload};
             }
 
             return new ShouldRunOutput {Success = true};

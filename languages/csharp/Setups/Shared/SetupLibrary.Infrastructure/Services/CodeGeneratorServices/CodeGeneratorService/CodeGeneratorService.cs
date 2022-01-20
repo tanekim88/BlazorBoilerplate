@@ -22,7 +22,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     {
         private static readonly ConcurrentDictionary<string, object> Cache = new();
         private readonly IAssemblyService _assemblyService;
-        private readonly IEvalService _evalService;
+     
         private readonly IJsService _jsService;
         private readonly IPathService _pathService;
         private readonly IRegexService _regexService;
@@ -38,7 +38,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             ITranslationUiService translationUiService,
             IAssemblyService assemblyService,
             IXmlSerializerService xmlSerializerService,
-            IEvalService evalService,
+         
             IServiceProvider serviceProvider,
             IJsService jsService)
         {
@@ -48,7 +48,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             _translationUiService = translationUiService;
             _assemblyService = assemblyService;
             _xmlSerializerService = xmlSerializerService;
-            _evalService = evalService;
+    
             _serviceProvider = serviceProvider;
             _jsService = jsService;
         }

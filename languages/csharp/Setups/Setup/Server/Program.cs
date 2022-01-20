@@ -19,13 +19,13 @@ namespace Setup.Server
                 args: new[]
                 {
                                 "-g",
-                                "-f", @"C:\App\BoundedContexts\__EBN__BoundedContext_gen_",           
+                                "-f", @"C:\app\languages\csharp\BoundedContexts\__EBN__BoundedContext_gen_",           
                 },
                 dependentProjects: new List<TemplateProject>
                 {
                 }
             );
-            //throw new Exception();
+            throw new Exception();
 
             await CodeGeneratorService.ProcessArgs(
                 args: new[]

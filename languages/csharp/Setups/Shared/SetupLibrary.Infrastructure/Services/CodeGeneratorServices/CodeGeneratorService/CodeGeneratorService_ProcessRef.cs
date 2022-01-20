@@ -49,14 +49,15 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var toReturn = await new Regex(pattern: @"<#=(?<Expression>.*?)#>").ReplaceAsync(input: commandContent,
                     replacementFn: async match =>
                     {
-                        var expression = match.Groups[groupname: "Expression"].Value;
-                        var result = await _evalService.EvaluateExpression<string>(
-                            code: expression,
-                            parameters: new
-                            {
-                                Data = data
-                            }
-                        );
+                        return null;
+                        //var expression = match.Groups[groupname: "Expression"].Value;
+                        //var result = await _evalService.EvaluateExpression<string>(
+                        //    code: expression,
+                        //    parameters: new
+                        //    {
+                        //        Data = data
+                        //    }
+                        //);
 
                         //var pattern = @"^\s*Data\.(?<Domains>\w+)\.Find\(\s*(?<item>\w+)\s*=>\s*\k<item>.(?<PropertyToQuery>\w+)\s*==\s*""(?<Value>\w+)""\s*\)\.(?<Property>\w+)\s*$";
                         //expression = Regex.Replace(expression, pattern, (match) =>
@@ -80,7 +81,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                         //}, RegexOptions.Singleline);
 
 
-                        return result.Payload;
+                        //return result.Payload;
                     });
 
                 return toReturn;

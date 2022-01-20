@@ -24,6 +24,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 File = file,
                 Project = file.Project
             };
+
             var localParameters = new Dictionary<string, object>
             {
                 [key: "Data.Context"] = context
