@@ -34,6 +34,8 @@
 		<PackageReference Include="Dapr.Client" Version="1.5.0" />
 		<PackageReference Include="DeepCloner" Version="0.10.3" />
 		<PackageReference Include="EPPlus" Version="5.8.4" />
+		<PackageReference Include="FluentValidation" Version="10.3.6" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
 		<PackageReference Include="GreenDonut" Version="12.5.0-preview.13" />
 		<PackageReference Include="Grpc.AspNetCore" Version="2.42.0-pre1" />
 		<PackageReference Include="Grpc.Tools" Version="2.43.0">

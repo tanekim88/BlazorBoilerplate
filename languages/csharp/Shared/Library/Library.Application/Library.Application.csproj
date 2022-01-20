@@ -12,6 +12,7 @@
         <PackageReference Include="DocumentFormat.OpenXml" Version="2.15.0" />
         <PackageReference Include="DynamicExpresso.Core" Version="2.10.0" />
         <PackageReference Include="EPPlus" Version="5.8.4" />
+        <PackageReference Include="FluentValidation" Version="10.3.6" />
         <PackageReference Include="GreenDonut" Version="12.5.0-preview.13" />
         <PackageReference Include="Grpc.Tools" Version="2.43.0">
           <PrivateAssets>all</PrivateAssets>

@@ -5,9 +5,9 @@ using Core.Domain;
 using Core.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 //%s:begin Header
 //%s:end Header
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Auth.Domain.Entities
 {

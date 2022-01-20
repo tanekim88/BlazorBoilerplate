@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using System;
-
+using Mapster;
+TypeAdapterConfig.GlobalSettings.Default.MapToConstructor(true);
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.ConfigureAppConfiguration(configureDelegate: (hostingContext, config) =>
         {

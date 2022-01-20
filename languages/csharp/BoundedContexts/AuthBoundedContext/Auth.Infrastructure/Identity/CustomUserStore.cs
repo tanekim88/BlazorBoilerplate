@@ -8,6 +8,7 @@ using Auth.Domain.Specs.UserClaimSpecs;
 using Auth.Domain.Specs.UserLoginSpecs;
 using Auth.Domain.Specs.UserSpecs;
 using Auth.Domain.ValueObjects.Ids;
+using Mapster;
 using Microsoft.AspNetCore.Identity;
 using SharedAuth.Application.Models.EntityModels;
 using System;
@@ -61,7 +62,7 @@ namespace Auth.Infrastructure.Identity
 
         public IQueryable<UserModel> Users { get; }
 
-         //IQueryableUserStore<User> Members
+        //IQueryableUserStore<User> Members
 
         //public IQueryable<User> Users
         //{
@@ -73,9 +74,9 @@ namespace Auth.Infrastructure.Identity
         //    }
         //}
 
-        
 
-         //IUserStore<User> Members
+
+        //IUserStore<User> Members
 
         public async Task<IdentityResult> CreateAsync(UserModel user, CancellationToken cancellationToken)
         {
@@ -86,7 +87,7 @@ namespace Auth.Infrastructure.Identity
                 if (user == null)
                     throw new ArgumentNullException(paramName: nameof(user));
 
-                var userEntity = GetUserEntity(user: user);
+                var userEntity = GetUserEntity(userModel: user);
 
                 await _userRepository.AddAsync(entity: userEntity);
 
@@ -208,7 +209,7 @@ namespace Auth.Infrastructure.Identity
                 if (user == null)
                     throw new ArgumentNullException(paramName: nameof(user));
 
-                var userEntity = GetUserEntity(user: user);
+                var userEntity = GetUserEntity(userModel: user);
 
                 _userRepository.Update(entity: userEntity);
                 await _userRepository.SaveChangesAsync(cancellationToken: cancellationToken);
@@ -226,9 +227,9 @@ namespace Auth.Infrastructure.Identity
             // Lifetimes of dependencies are managed by the IoC container, so disposal here is unnecessary.
         }
 
-        
 
-         //IUserPasswordStore<User> Members
+
+        //IUserPasswordStore<User> Members
 
         public Task SetPasswordHashAsync(UserModel user, string passwordHash, CancellationToken cancellationToken)
         {
@@ -262,9 +263,9 @@ namespace Auth.Infrastructure.Identity
             return Task.FromResult(result: !string.IsNullOrWhiteSpace(value: user.PasswordHash));
         }
 
-        
 
-         //IUserEmailStore<User> Members
+
+        //IUserEmailStore<User> Members
 
         public Task SetEmailAsync(UserModel user, string email, CancellationToken cancellationToken)
         {
@@ -344,9 +345,9 @@ namespace Auth.Infrastructure.Identity
             return Task.CompletedTask;
         }
 
-        
 
-         //IUserLoginStore<User> Members
+
+        //IUserLoginStore<User> Members
 
         public async Task AddLoginAsync(UserModel user, UserLoginInfo login, CancellationToken cancellationToken)
         {
@@ -429,9 +430,9 @@ namespace Auth.Infrastructure.Identity
             return GetUser(entity: userEntity);
         }
 
-        
 
-         //IUserRoleStore<User> Members
+
+        //IUserRoleStore<User> Members
 
         public async Task AddToRoleAsync(UserModel user, string roleName, CancellationToken cancellationToken)
         {
@@ -520,9 +521,9 @@ namespace Auth.Infrastructure.Identity
             return toReturn;
         }
 
-        
 
-         //IUserSecurityStampStore<User> Members
+
+        //IUserSecurityStampStore<User> Members
 
         public Task SetSecurityStampAsync(UserModel user, string stamp, CancellationToken cancellationToken)
         {
@@ -546,9 +547,9 @@ namespace Auth.Infrastructure.Identity
             return Task.FromResult(result: user.SecurityStamp);
         }
 
-        
 
-         //IUserClaimStore<User> Members
+
+        //IUserClaimStore<User> Members
 
         public async Task<IList<Claim>> GetClaimsAsync(UserModel user, CancellationToken cancellationToken)
         {
@@ -667,9 +668,9 @@ namespace Auth.Infrastructure.Identity
             return toReturn;
         }
 
-        
 
-         //IUserAuthenticationTokenStore<User> Members
+
+        //IUserAuthenticationTokenStore<User> Members
 
         public async Task SetTokenAsync(UserModel user, string loginProvider, string name, string value,
             CancellationToken cancellationToken)
@@ -733,9 +734,9 @@ namespace Auth.Infrastructure.Identity
             return userTokenEntity?.Name;
         }
 
-        
 
-         //IUserTwoFactorStore<User> Members
+
+        //IUserTwoFactorStore<User> Members
 
         public Task SetTwoFactorEnabledAsync(UserModel user, bool enabled, CancellationToken cancellationToken)
         {
@@ -759,9 +760,9 @@ namespace Auth.Infrastructure.Identity
             return Task.FromResult(result: user.TwoFactorEnabled);
         }
 
-        
 
-         //IUserPhoneNumberStore<User> Members
+
+        //IUserPhoneNumberStore<User> Members
 
         public Task SetPhoneNumberAsync(UserModel user, string phoneNumber, CancellationToken cancellationToken)
         {
@@ -807,9 +808,9 @@ namespace Auth.Infrastructure.Identity
             return Task.CompletedTask;
         }
 
-        
 
-         //IUserLockoutStore<User> Members
+
+        //IUserLockoutStore<User> Members
 
         public Task<DateTimeOffset?> GetLockoutEndDateAsync(UserModel user, CancellationToken cancellationToken)
         {
@@ -887,37 +888,19 @@ namespace Auth.Infrastructure.Identity
             return Task.CompletedTask;
         }
 
-        
 
-         //Private Methods
 
-        private User GetUserEntity(UserModel user)
+        //Private Methods
+
+        private User GetUserEntity(UserModel userModel)
         {
-            if (user == null)
+            if (userModel == null)
                 return null;
 
-            var userId = new UserId(user.Id);
 
-            return new User(
-                id: userId,
-                accessFailedCount: user.AccessFailedCount,
-                concurrencyStamp: user.ConcurrencyStamp,
-                email: user.Email,
-                emailConfirmed: user.EmailConfirmed,
-                lockoutEnabled: user.LockoutEnabled,
-                lockoutEnd: user.LockoutEnd,
-                normalizedEmail: user.NormalizedEmail,
-                normalizedUserName: user.NormalizedUserName,
-                passwordHash: user.PasswordHash,
-                phoneNumber: user.PhoneNumber,
-                phoneNumberConfirmed: user.PhoneNumberConfirmed,
-                securityStamp: user.SecurityStamp,
-                twoFactorEnabled: user.TwoFactorEnabled,
-                userName: user.UserName,
-                firstName: user.FirstName,
-                lastName: user.LastName,
-                middleInitial: user.MiddleInitial
-            );
+            var userEntity = userModel.Adapt<User>();
+
+            return userEntity;
         }
 
         private UserModel GetUser(User entity)
@@ -957,6 +940,6 @@ namespace Auth.Infrastructure.Identity
                 : new UserClaim(claimType: value.Type, claimValue: value.Value, userId: userId);
         }
 
-        
+
     }
 }

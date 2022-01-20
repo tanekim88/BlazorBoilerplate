@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using SharedAuth.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts;
 using SharedCore.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts;
+using Mapster;
+TypeAdapterConfig.GlobalSettings.Default.MapToConstructor(true);
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args: args);
 builder.RootComponents.Add<App>("#app");

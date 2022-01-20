@@ -9,6 +9,7 @@
 		<PackageReference Include="Ardalis.GuardClauses" Version="3.3.0" />
 		<PackageReference Include="Ardalis.Specification" Version="5.2.0" />
 		<PackageReference Include="Dapr.Client" Version="1.5.0" />
+		<PackageReference Include="FluentValidation" Version="10.3.6" />
 		<PackageReference Include="Google.Protobuf" Version="3.19.1" />
 		<PackageReference Include="Grpc.Net.Client" Version="2.42.0-pre1" />
 		<PackageReference Include="Grpc.Net.Client.Web" Version="2.42.0-pre1" />
@@ -49,5 +50,11 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
 	  <ProjectReference Include="..\..\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Interfaces\MapperInterfaces\" />
+	  <Folder Include="Impls\" />
+	  <Folder Include="Mappers\" />
 	</ItemGroup>
 </Project>
