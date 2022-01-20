@@ -17,7 +17,7 @@ namespace Core.Infrastructure.Impls.IdentityImpls.AspNetCoreImpls.IdentityImpls.
 
         public CustomEmailSender()
         {
-              }
+        }
 
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
