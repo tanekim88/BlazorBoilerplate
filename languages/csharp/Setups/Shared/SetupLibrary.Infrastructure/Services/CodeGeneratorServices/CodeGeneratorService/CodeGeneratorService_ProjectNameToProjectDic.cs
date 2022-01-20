@@ -349,7 +349,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Server)}",
                     Prefix = "",
                     Postfix = "",
-                    Assembly = typeof(BlazorApp.Server.Program).Assembly,
+                    Assembly = typeof(BlazorApp.Server.Controllers.AccountController).Assembly,
                     CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Server)}",
                     GeneratorSymbol = ""
                 },
@@ -368,7 +368,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     Name = $"{nameof(BlazorApp)}.{nameof(BlazorApp.Client)}",
                     Prefix = "",
                     Postfix = "",
-                    Assembly = typeof(BlazorApp.Client.Program).Assembly,
+                    Assembly = typeof(BlazorApp.Client.App).Assembly,
                     CodeName = $"{nameof(BlazorApp)}_{nameof(BlazorApp.Client)}",
                     GeneratorSymbol = ""
                 },

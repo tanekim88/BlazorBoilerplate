@@ -1,12 +1,10 @@
 ﻿
-
-using AutoMapper.Internal;
 using Humanizer;
 using Mono.Cecil;
 using SetupLibrary.Application.Models;
 using SharedCore.Domain.Attributes.ServiceAttributes;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.PropertyInfoExtensions;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.PropertyInfoExts;
 using SharedLibrary.Application.StringEnums.ServiceLifetimeStringEnums;
 using System.Collections.Generic;
 using System.Linq;

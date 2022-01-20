@@ -1,14 +1,12 @@
 ﻿
-
+using SetupLibrary.Application.Models;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.PropertyInfoExts;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using AutoMapper.Internal;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.PropertyInfoExtensions;
-using SetupLibrary.Application.Models;
 
 
 

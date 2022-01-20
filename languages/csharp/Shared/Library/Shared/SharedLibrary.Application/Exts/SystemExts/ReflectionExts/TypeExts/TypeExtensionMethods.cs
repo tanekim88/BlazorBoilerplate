@@ -2,15 +2,41 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+using System.Collections;
+
 namespace System.Reflection
 {
     public static class TypeExtensionMethods
     {
+        public static bool IsEnumerableType(this Type type)
+        {
+            //Debug.WriteLine("Type IEnumerable:   " + typeof(IEnumerable).IsEnumerable());
+            //Debug.WriteLine("Type IEnumerable<>: " + typeof(IEnumerable<string>).IsEnumerable());
+            //Debug.WriteLine("Type List:          " + typeof(List<string>).IsEnumerable());
+            //Debug.WriteLine("Type string:        " + typeof(string).IsEnumerable());
+            //Debug.WriteLine("Type DateTime:      " + typeof(DateTime).IsEnumerable());
+            //Debug.WriteLine("Instance List:      " + new List<string>().IsEnumerable());
+            //Debug.WriteLine("Instance string:    " + "".IsEnumerable());
+            //Debug.WriteLine("Instance DateTime:  " + new DateTime().IsEnumerable());
+            return typeof(IEnumerable).IsAssignableFrom(type);
+        }
+
+        public static bool IsDictionaryType(this Type type)
+        {
+            return typeof(IDictionary).IsAssignableFrom(type);
+        }
+
+        public static bool IsNullable(this Type type)
+        {
+            return Nullable.GetUnderlyingType(type) != null;
+        }
         public static bool IsNullable(this Type type, out Type underlyingType)
         {
             underlyingType = Nullable.GetUnderlyingType(nullableType: type);
             return underlyingType != null;
         }
+
+
 
         /// <summary>
         ///     Is this type a generic type

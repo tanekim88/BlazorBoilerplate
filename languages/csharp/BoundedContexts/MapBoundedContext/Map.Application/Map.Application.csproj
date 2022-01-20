@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapr.AspNetCore" Version="1.5.0" />
-    <PackageReference Include="Dapr.Client" Version="1.5.0" />
+    <PackageReference Include="Dapr.AspNetCore" Version="1.6.0-rc01" />
+    <PackageReference Include="Dapr.Client" Version="1.6.0-rc01" />
     <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="Grpc.Tools" Version="2.43.0">
       <PrivateAssets>all</PrivateAssets>

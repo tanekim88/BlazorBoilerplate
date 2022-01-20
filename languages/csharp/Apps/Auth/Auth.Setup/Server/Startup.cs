@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions;
+using SetupLibrary.Infrastructure.Exts.IServiceCollectionExts;
 
 namespace Auth.Setup.Server
 {

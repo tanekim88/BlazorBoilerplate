@@ -1,7 +1,4 @@
-﻿
-
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using SetupLibrary.Application.Models;
@@ -9,7 +6,7 @@ using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
 
 
 namespace Setup.Server

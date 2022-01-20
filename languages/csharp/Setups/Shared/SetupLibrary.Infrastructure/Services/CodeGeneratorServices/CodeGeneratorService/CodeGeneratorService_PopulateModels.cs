@@ -1,13 +1,10 @@
-﻿
-
-using AutoMapper.Internal;
-using Force.DeepCloner;
+﻿using Force.DeepCloner;
 using Karambolo.Common;
 using Microsoft.EntityFrameworkCore;
 using ProtoBuf;
 using SetupLibrary.Application.Models;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions;
-using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.PropertyInfoExtensions;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts;
+using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.PropertyInfoExts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -154,7 +151,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             .Select(selector: (propertyInfo, i) =>
                             {
 
-                                var isNullable = propertyInfo.PropertyType.IsNullableType();
+                                var isNullable = propertyInfo.PropertyType.IsNullable();
 
                                 var declaredOnly = modelType.GetProperty(name: propertyInfo.Name,
                                     bindingAttr: BindingFlags.DeclaredOnly | BindingFlags.Public |

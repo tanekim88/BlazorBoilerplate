@@ -1,9 +1,8 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
-using Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
-using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
+using Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
+using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.JsServiceInterfaces;
@@ -25,7 +24,6 @@ using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 using Presentation.Infrastructure.Services.TranslationServices;
 using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
 using SetupLibrary.Infrastructure.Services.DatabaseSetupServices;
-using System;
 
 
 
@@ -42,8 +40,8 @@ namespace SetupLibrary.Infrastructure.Exts.IServiceCollectionExts
 
 
             services.AddCustomAuthServer(configuration, environment);
-            services.AddCustomDbContextPool<AuthDbContext>(configuration);
-            services.AddCustomDbContext<AuthDbContext>(configuration);
+            services.AddCustomDbContextPool<AuthDbContext>(configuration,environment);
+            services.AddCustomDbContext<AuthDbContext>(configuration, environment);
 
 
             services.AddSingleton<IPathService, PathService>();

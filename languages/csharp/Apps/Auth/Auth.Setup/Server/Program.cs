@@ -1,6 +1,4 @@
-﻿
-
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
+﻿using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -25,7 +23,7 @@ namespace Auth.Setup.Server
                         Prefix = "",
                         Postfix = "",
                         Assembly =
-                            typeof(Auth.Client.Program).Assembly,
+                            typeof(Auth.Client.App).Assembly,
                         CodeName =  $"{nameof(Auth)}_{nameof(Auth.Client)}",
                         GeneratorSymbol = "Auth",
                         IsShared = true
@@ -36,7 +34,7 @@ namespace Auth.Setup.Server
                         Prefix = "",
                         Postfix = "",
                         Assembly =
-                            typeof(Auth.Server.Program).Assembly,
+                            typeof(Auth.Server.Controllers.OidcConfigurationController).Assembly,
                         CodeName = $"{nameof(Auth)}_{nameof(Auth.Server)}",
                         GeneratorSymbol = "Auth",
                         IsShared = true

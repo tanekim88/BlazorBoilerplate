@@ -1,13 +1,13 @@
 ﻿
 
+using Core.Infrastructure.Exts.ObjectExts;
+using Humanizer;
+using SetupLibrary.Application.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Humanizer;
-using Core.Infrastructure.Extensions.ObjectExtensions;
-using SetupLibrary.Application.Models;
 
 
 

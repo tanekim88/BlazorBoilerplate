@@ -1,22 +1,20 @@
 ﻿
 
-using System;
-using System.Collections.Generic;
-using System.CommandLine;
-using System.CommandLine.Invocation;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
+using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
 using Library.Infrastructure.Services.PathServices;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using SetupLibrary.Application.Models;
-
-
+using System;
+using System.Collections.Generic;
+using System.CommandLine;
+using System.CommandLine.NamingConventionBinder;
+using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 {
