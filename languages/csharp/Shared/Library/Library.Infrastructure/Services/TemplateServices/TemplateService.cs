@@ -45,14 +45,13 @@ namespace Library.Infrastructure.Services.TemplateServices
 
         public async Task<ParseTemplateOutput> ParseTemplate<TArgs>(
             string inputContent,
-            string outputFile,
-            TArgs args
+            TArgs data
         )
         {
             try
             {
                 Template template = Template.Parse(inputContent);  // Parses and compiles the template
-                string outputContent = template.Render(args, member => member.Name); // Renders the output => "hi tobi"
+                string outputContent = template.Render(data, member => member.Name); // Renders the output => "hi tobi"
 
 
                 return new ParseTemplateOutput

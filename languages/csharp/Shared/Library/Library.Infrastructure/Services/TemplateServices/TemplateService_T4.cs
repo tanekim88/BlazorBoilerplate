@@ -22,13 +22,13 @@ using System.Threading.Tasks;
 using Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces;
 using static SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces.ISharedTemplateService;
-using static SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces.ISharedTemplateService_T4;
+using static SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces.ISharedT4TemplateService;
 
 namespace Library.Infrastructure.Services.TemplateServices
 {
     public /*%s:begin Partial*/ /*%s:end Partial*/ class TemplateService_T4
         : /*%s:begin BaseClass*/ /*%s:end BaseClass*/
-            ITemplateService_T4
+            IT4TemplateService
     {
         /*%s:begin Properties*/
         private readonly IPathService _pathService;

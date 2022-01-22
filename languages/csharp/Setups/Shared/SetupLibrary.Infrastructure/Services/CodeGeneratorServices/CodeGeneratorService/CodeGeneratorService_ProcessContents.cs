@@ -17,17 +17,13 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     {
         public async Task<ProcessContentsOutput> ProcessContents(
              TemplateFile file,
-             Dictionary<string, object> parameters,
+             TemplateData data,
              List<LocalTemplateInfo> localTemplateInfosForPaths
             )
         {
             var context = new TemplateContext();
             context.File = file;
             context.Project = file.Project;
-            var localParameters = file.LocalParameters;
-            var combinedParameters =
-               parameters.ToDictionary(keySelector: parameter => parameter.Key,
-                    elementSelector: parameter => parameter.Value);
 
             var codeType = file.CodeType;
 
@@ -60,38 +56,35 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var contentMax = contentNameMatches.OrderByDescending(keySelector: x => x.Length).FirstOrDefault()
                     ?.Length ?? 0;
 
-                var matchingTokenInfosForContent = combinedParameters.SelectMany(selector: paramter =>
-                {
-                    var matchingNames = GetMatchingNames(
-                        maxLength: contentMax,
-                        isPath: false,
-                        candidates: contentNameMatches,
-                        objectType: paramter.Value.GetType(),
-                        codeType: codeType,
-                        text: text,
-                        parentName: null,
-                        parentPropertyPaths: new List<string>());
 
-                    return matchingNames;
-                }).ToList();
+                var matchingTokenInfosForContent = GetMatchingNames(
+                    maxLength: contentMax,
+                    isPath: true,
+                    candidates: contentNameMatches,
+                    objectType: data.GetType(),
+                    codeType: codeType,
+                    text: file.Path,
+                    parentName: null,
+                    parentPropertyPaths: new List<string>());
+
+
 
                 var tokenInfosForContent = matchingTokenInfosForContent.SelectMany(selector: tokenInfo =>
                 {
-                    return combinedParameters.SelectMany(selector: paramter =>
-                    {
-                        var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
-                            context: context,
-                            isPath: false,
-                            matchingToken: tokenInfo,
-                            codeType: codeType,
-                            text: text,
-                            obj: paramter.Value,
-                            constraints: listOfTokenInfosUsedForPath,
-                            parentName: null,
-                            parentPropertyPaths: new List<string>());
-                        return toReturn;
-                    });
+                    var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
+                             context: data.Context,
+                             isPath: true,
+                             matchingToken: tokenInfo,
+                             codeType: codeType,
+                             text: file.Path,
+                             obj: tokenInfo,
+                             constraints: null,
+                             parentName: null,
+                             parentPropertyPaths: new List<string>());
+
+                    return toReturn;
                 }).ToList();
+
 
 
                 var finalList = new List<TemplateTokenInfo>();
@@ -232,7 +225,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     return new LocalTemplateInfo
                     {
                         Id = localTemplateInfForPath.InputFilePath + "__" + Guid.NewGuid(),
-                        LocalParameters = localParameters,
+                        Context = file.Context,
                         InputFilePath = localTemplateInfForPath.InputFilePath,
                         OutputFilePath = localTemplateInfForPath.OutputFilePath,
                         ShouldOverride = file.ShouldOverWrite,

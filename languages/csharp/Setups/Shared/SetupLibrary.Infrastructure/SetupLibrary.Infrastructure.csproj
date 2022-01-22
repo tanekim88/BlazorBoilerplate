@@ -205,4 +205,8 @@
 			<HintPath>..\..\..\Dlls\OrchardDlls\PoExtractor.Razor.dll</HintPath>
 		</Reference>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Services\CodeGeneratorServices\CodeGeneratorService\Configs\" />
+	</ItemGroup>
 </Project>

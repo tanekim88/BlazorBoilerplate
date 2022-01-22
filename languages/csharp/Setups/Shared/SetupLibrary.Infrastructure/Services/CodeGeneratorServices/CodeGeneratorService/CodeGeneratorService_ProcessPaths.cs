@@ -20,7 +20,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
         public string OutputFilePath { get; set; }
         public string TemplateContent { get; set; }
         public string TargetFileContent { get; set; }
-        public Dictionary<string, object> LocalParameters { get; set; }
+        public TemplateContext Context { get; set; }
         public bool ShouldOverride { get; set; }
         public List<string> Sections { get; set; }
         public List<string> TemplateSections { get; set; }
@@ -31,16 +31,8 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     {
         public async Task<ProcessPathsOutput> ProcessPaths(
         TemplateFile file,
-        Dictionary<string, object> parameters
-            )
+        TemplateData data)
         {
-            var context = new TemplateContext();
-            context.File = file;
-            context.Project = file.Project;
-            var localParameters = file.LocalParameters;
-            var combinedParameters = parameters.Concat(second: localParameters)
-                .ToDictionary(keySelector: parameter => parameter.Key, elementSelector: parameter => parameter.Value);
-
             var codeType = file.CodeType;
 
             var textString = file.Content;
@@ -69,37 +61,33 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
             var pathMax = pathNameMatches.OrderByDescending(keySelector: x => x.Length).FirstOrDefault()?.Length ?? 0;
 
-            var matchingTokenInfosForPath = combinedParameters.SelectMany(selector: paramter =>
-            {
-                var matchingNames = GetMatchingNames(
-                    maxLength: pathMax,
-                    isPath: true,
-                    candidates: pathNameMatches,
-                    objectType: paramter.Value.GetType(),
-                    codeType: codeType,
-                    text: file.Path,
-                    parentName: null,
-                    parentPropertyPaths: new List<string>());
 
-                return matchingNames;
-            }).ToList();
+            var matchingTokenInfosForPath = GetMatchingNames(
+                maxLength: pathMax,
+                isPath: true,
+                candidates: pathNameMatches,
+                objectType: data.GetType(),
+                codeType: codeType,
+                text: file.Path,
+                parentName: null,
+                parentPropertyPaths: new List<string>());
+
+
 
             var tokenInfosForPath = matchingTokenInfosForPath.SelectMany(selector: tokenInfo =>
             {
-                return combinedParameters.SelectMany(selector: paramter =>
-                {
-                    var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
-                        context: context,
+               var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
+                        context: data.Context,
                         isPath: true,
                         matchingToken: tokenInfo,
                         codeType: codeType,
                         text: file.Path,
-                        obj: paramter.Value,
+                        obj: tokenInfo,
                         constraints: null,
                         parentName: null,
                         parentPropertyPaths: new List<string>());
-                    return toReturn;
-                });
+
+                return toReturn;
             }).ToList();
 
             var finalList = new List<TemplateTokenInfo>();
@@ -246,55 +234,20 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
                 if (file.Path != file.TemplatePath)
                 {
-                    var currentTempFilePath = filePath + ".temp.txt";
-                    var ttTempFilePath = filePath + ".tt.temp.txt";
-                    var tempXmlPath = filePath + ".xml.temp.txt";
-
-                    var dir = Path.GetDirectoryName(path: tempXmlPath);
-
-                    if (!Directory.Exists(path: dir)) Directory.CreateDirectory(path: dir);
-
-                    //if (Track.ProcessedFileToDic.TryGetValue(tempXmlPath, out var o))
-                    //{
-                    //    throw new Exception("????????????" + tempXmlPath);
-                    //}
-                    //else
-                    //{
-                    //    Track.ProcessedFileToDic[tempXmlPath] = new ConcurrentDictionary<string, object>
-                    //    {
-                    //        ["currentTempFilePath"] = currentTempFilePath,
-                    //        ["tempXmlPath"] = tempXmlPath,
-                    //        ["ttTempFilePath"] = ttTempFilePath,
-                    //        ["listOfTokenInfos"] = listOfTokenInfos,
-                    //        ["TemplatePath"] = file.TemplatePath,
-                    //        ["file"] = file,
-                    //        ["OriginalTemplatePath"] = file.TemplatePath,
-                    //    };
-                    //}
-
-
-                    var outputFile = file.ShouldFinalize ? filePath : currentTempFilePath;
-
+                    var dir = Path.GetDirectoryName(path: filePath);
 
                     return new LocalTemplateInfo
                     {
-                        Id = ttTempFilePath + "__" + Guid.NewGuid(),
-                        LocalParameters = localParameters,
-                        InputFilePath = ttTempFilePath,
-                        OutputFilePath = outputFile,
+                        Id = Guid.NewGuid().ToString(),
+                        Context = data.Context,
+                        InputFilePath = file.TemplatePath,
+                        OutputFilePath = filePath,
                         ShouldOverride = file.ShouldOverWrite,
                         TemplateContent = processedText,
                         Sections = foundSections,
                         TemplateSections = file.TemplateSections,
                         ListOfTokenInfosUsedForPath = listOfTokenInfos
                     };
-                    //var result = await _evalService.EvaluateTemplate(new EvalutateTemplateInput
-                    //{
-                    //    Code = finalReadyText,
-                    //    Parameters = combinedParameters,
-                    //    InputFile = ttTempFilePath,
-                    //    OutputFile = outputFile,
-                    //});
                 }
 
                 return null;

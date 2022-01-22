@@ -6,7 +6,7 @@ using SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateServiceInte
 
 namespace Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces
 {
-    public interface ITemplateService_T4 : ISharedTemplateService_T4
+    public interface IT4TemplateService : ISharedT4TemplateService
     {
     }
 }

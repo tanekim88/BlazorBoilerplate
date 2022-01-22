@@ -44,6 +44,6 @@ namespace SetupLibrary.Application.Models
 
         [IgnoreDataMember] public List<TemplateDirectory> Directories { get; set; }
 
-        [IgnoreDataMember] public Dictionary<string, object> LocalParameters { get; set; }
+        [IgnoreDataMember] public TemplateContext Context { get; set; }
     }
 }

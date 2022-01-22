@@ -6,13 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\EvalServices\EvalService.cs" />
     <Compile Remove="Services\EvalServices\EvalService_EvaluateExpression.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Services\EvalServices\EvalService_EvaluateExpression.cs" />
-    <None Include="Services\EvalServices\EvalService.cs" />
   </ItemGroup>
 
 	<ItemGroup>

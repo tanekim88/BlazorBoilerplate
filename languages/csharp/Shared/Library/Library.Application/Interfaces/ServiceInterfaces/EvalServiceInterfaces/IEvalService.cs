@@ -11,27 +11,8 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
 {
     public interface IEvalService
     {
-        Task<EvaluateBulkExpressionsOutput<T>> EvaluateBulkExpressions<T>(
-            List<ExpressionCodeRecord> expressionRecords, dynamic parameters, List<Type> localTypes);
+        Task<EvaluateExpressionOutput<Targs>> Evaluate<Targs>(string code, Targs data);
 
-        Task<EvaluateBulkStatementsOutput<T>> EvaluateBulkStatements<T>(
-            List<StatementCodeRecord> codeRecords,
-            string resultVariableName,
-            dynamic parameters,
-            List<Type> localTypes);
-
-        Task<EvaluateBulkTemplatesOutput> EvaluateBulkTemplates(
-            List<EvalCodeRecord> codeRecords, dynamic parameters, List<Type> localTypes,
-            bool preserveInputOnSucess = true, bool preserveOutputOnSucess = true);
-
-        Task<EvaluateExpressionOutput<T>> EvaluateExpression<T>(string code, dynamic parameters,
-            string resultVariableName = null);
-
-        Task<EvaluateStatementsOutput<T>> EvaluateStatements<T>(string code, dynamic parameters,
-            string resultVariableName = null);
-
-        Task<EvalutateTemplateOutput> EvaluateTemplate(string inputFile, string outputFile, string code,
-            dynamic parameters, string resultVariableName = null);
         public class GetAllTypesOutput
         {
             public Type Type { get; set; }
@@ -43,10 +24,6 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
                    IDictionary<string, Type> dic = null
                    );
         GetClassNameOutput GetClassName(Type type);
-
-        Task<GetFooterOutput> GetFooter(List<Type> objTypes, StringBuilder builder);
-
-        Task<GetHeaderOutput> GetHeader(string templateId, StringBuilder builder);
 
         Task<GetIntroOutput> GetParametersTemplate(
             string template,

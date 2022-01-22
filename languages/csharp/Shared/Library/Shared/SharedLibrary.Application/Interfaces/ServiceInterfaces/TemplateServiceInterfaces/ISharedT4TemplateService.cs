@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SharedLibrary.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces
 {
-    public interface ISharedTemplateService_T4
+    public interface ISharedT4TemplateService
     {
         GetRequiredAssemblyPathsOutput GetRequiredAssemblyPaths();
 

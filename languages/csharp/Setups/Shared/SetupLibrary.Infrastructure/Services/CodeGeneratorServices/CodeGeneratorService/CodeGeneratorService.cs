@@ -30,7 +30,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
         private readonly ITemplateService _templateService;
         private readonly ITranslationUiService _translationUiService;
         private readonly IXmlSerializerService _xmlSerializerService;
-
+        private readonly IEvalService _evalService;
         public CodeGeneratorService(
             IRegexService regexService,
             ITemplateService templateParserSetupService,
@@ -38,6 +38,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             ITranslationUiService translationUiService,
             IAssemblyService assemblyService,
             IXmlSerializerService xmlSerializerService,
+            IEvalService evalService,
          
             IServiceProvider serviceProvider,
             IJsService jsService)
@@ -51,6 +52,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     
             _serviceProvider = serviceProvider;
             _jsService = jsService;
+            _evalService = evalService;
         }
     }
 }
