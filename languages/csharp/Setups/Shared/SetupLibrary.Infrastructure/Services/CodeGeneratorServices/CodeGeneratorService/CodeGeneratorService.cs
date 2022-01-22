@@ -1,9 +1,5 @@
 ﻿
 
-using System;
-using System.Collections.Concurrent;
-using Auth.Infrastructure.DbContexts;
-using Core.Infrastructure.DbContexts;
 using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.JsServiceInterfaces;
@@ -11,8 +7,9 @@ using Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.RegexServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.SerializerServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces;
-using Microsoft.EntityFrameworkCore;
 using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
+using System;
+using System.Collections.Concurrent;
 
 
 

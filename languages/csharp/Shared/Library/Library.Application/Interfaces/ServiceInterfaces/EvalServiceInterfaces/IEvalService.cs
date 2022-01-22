@@ -11,7 +11,7 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
 {
     public interface IEvalService
     {
-        Task<EvaluateExpressionOutput<Targs>> Evaluate<Targs>(string code, Targs data);
+        Task<EvaluateExpressionOutput<TReturn>> Evaluate<Targs, TReturn>(string code, Targs data);
 
         public class GetAllTypesOutput
         {
@@ -23,25 +23,8 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
                    Type type,
                    IDictionary<string, Type> dic = null
                    );
-        GetClassNameOutput GetClassName(Type type);
 
-        Task<GetIntroOutput> GetParametersTemplate(
-            string template,
-            string xmlFilePathPrefix,
-            IDictionary<string, object> parameters = null,
-            bool shouldInlineXml = false
-        );
-
-        GetTypeFromClassNameOutput GetTypeFromClassName(string className);
-                public record ProcessOutput
-        {
-            public StringBuilder Builder { get; set; }
-            public List<XmlData> ListOfXmlData { get; set; }
-        }
-        Task<ProcessOutput> Process(Func<StringBuilder, Task<StringBuilder>> bodyBuilder, string templateId,
-            dynamic parametersInput, List<Type> localTypes, string resultVariableName = null,
-            string xmlFilePathPrefix = null);
-
+ 
         public record ExpressionCodeRecord
         {
             public string Id { get; set; }
@@ -61,24 +44,6 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
             public List<ExpressionCodeResult<T>> Payloads { get; set; }
         }
 
-        public record StatementCodeRecord
-        {
-            public string Id { get; set; }
-            public string Code { get; set; }
-            public Dictionary<string, object> LocalParameters { get; set; }
-            public string ContextTemplate { get; set; }
-        }
-
-        public record StatementCodeResult<T>
-        {
-            public string Id { get; set; }
-            public T Result { get; set; }
-        }
-
-        public record EvaluateBulkStatementsOutput<T>
-        {
-            public List<StatementCodeResult<T>> Payloads { get; set; }
-        }
 
         public record EvalCodeRecord
         {
