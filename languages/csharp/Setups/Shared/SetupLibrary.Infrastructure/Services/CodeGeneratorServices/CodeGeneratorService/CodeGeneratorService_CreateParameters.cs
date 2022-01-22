@@ -195,9 +195,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     var content = File.ReadAllText(path: templateFile.TemplatePath);
                     content = codeType.ApplyAliasses(content: content);
                     templateFile.Content = content;
-
-                    var result = await CreateLocalParameters(file: templateFile);
-                    templateFile.LocalParameters = result.LocalParameters;
                 });
             });
 

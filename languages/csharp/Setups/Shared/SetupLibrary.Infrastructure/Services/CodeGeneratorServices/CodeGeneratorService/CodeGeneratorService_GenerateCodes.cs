@@ -22,7 +22,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             var parameters = result.Parameters;
             var projects = result.Projects;
 
-            await Process(parameters: parameters, projects : projects );
+            //await Process( parameters, projects : projects );
         }
 
 

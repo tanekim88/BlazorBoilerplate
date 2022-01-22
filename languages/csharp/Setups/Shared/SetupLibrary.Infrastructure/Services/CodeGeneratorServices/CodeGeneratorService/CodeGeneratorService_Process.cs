@@ -44,25 +44,25 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var context = (await CreateContext(file)).Context;
                 data.Context = context;
 
-                var shouldRun = (await ProcessRunIf(file, data)).ShouldRun;
+                //var shouldRun = (await ProcessRunIf(file, data)).ShouldRun;
 
-                if (!shouldRun)
-                {
-                    continue;
-                }
+                //if (!shouldRun)
+                //{
+                //    continue;
+                //}
 
-                var result = await ProcessPaths(
-                    file: file,
-                    data: data
-                );
+                //var result = await ProcessPaths(
+                //    file: file,
+                //    data: data
+                //);
 
-                var contentResult = await ProcessContents(
-                    file: file,
-                    data: data,
-                    localTemplateInfosForPaths: result.LocalTemplateInfos
-                );
+                //var contentResult = await ProcessContents(
+                //    file: file,
+                //    data: data,
+                //    localTemplateInfosForPaths: result.LocalTemplateInfos
+                //);
 
-                var codeType = file.CodeType;
+                //var codeType = file.CodeType;
 
                 //content = codeType.RemoveCommandStrings(intputString: content);
                 //content = codeType.AlignSingleLineTemplateCommands(intputString: content);
@@ -85,6 +85,11 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 //}
 
             }
+        }
+
+        private Task<bool> ProcessRunIf(TemplateFile file, TemplateData data)
+        {
+            throw new NotImplementedException();
         }
     }
 }
