@@ -1,240 +1,240 @@
 ﻿
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using SetupLibrary.Application.Models;
-using static Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces.IEvalService;
+//using System;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Linq;
+//using System.Text.RegularExpressions;
+//using System.Threading.Tasks;
+//using SetupLibrary.Application.Models;
+//using static Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces.IEvalService;
 
 
 
-namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
-{
-    public partial class CodeGeneratorService
-    {
-        public async Task<ProcessRefsOutput> ProcessBulkRefs(
-            Dictionary<string, object> parameters,
-            List<TemplateFile> files
-        )
-        {
-            var dic = files.ToDictionary(keySelector: file => file.TemplatePath);
+//namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
+//{
+//    public partial class CodeGeneratorService
+//    {
+//        public async Task<ProcessRefsOutput> ProcessBulkRefs(
+//            Dictionary<string, object> parameters,
+//            List<TemplateFile> files
+//        )
+//        {
+//            var dic = files.ToDictionary(keySelector: file => file.TemplatePath);
 
-            var expressionRecords = files.Select(selector: async file =>
-            {
-                var commandContent = GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.RefIf,
-                    codeType: file.CodeType);
+//            var expressionRecords = files.Select(selector: async file =>
+//            {
+//                var commandContent = GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.RefIf,
+//                    codeType: file.CodeType);
 
-                if (commandContent == null) return null;
+//                if (commandContent == null) return null;
 
-                var contextTemplateResult = await GetContextTemplate(
-                    fileTemplatePath: file.TemplatePath,
-                    project: file.Project,
-                    sections: null,
-                    templateSections: null
-                );
-
-
-                return new ExpressionCodeRecord
-                {
-                    Id = file.TemplatePath,
-                    Expression = commandContent,
-                    LocalParameters = file.LocalParameters,
-                    ContextTemplate = contextTemplateResult.Template
-                };
-            }).Select(selector: x => x.Result).Where(predicate: x => x != null).ToList();
+//                var contextTemplateResult = await GetContextTemplate(
+//                    fileTemplatePath: file.TemplatePath,
+//                    project: file.Project,
+//                    sections: null,
+//                    templateSections: null
+//                );
 
 
-            var refIfsResult = await _evalService.EvaluateBulkExpressions<bool>(
-                expressionRecords: expressionRecords,
-                parameters: parameters,
-                localTypes: new List<Type>
-                {
-                    typeof(TemplateContext)
-                }
-            );
+//                return new ExpressionCodeRecord
+//                {
+//                    Id = file.TemplatePath,
+//                    Expression = commandContent,
+//                    LocalParameters = file.LocalParameters,
+//                    ContextTemplate = contextTemplateResult.Template
+//                };
+//            }).Select(selector: x => x.Result).Where(predicate: x => x != null).ToList();
 
 
-            var idToRefIfDic = refIfsResult.Payloads.ToDictionary(keySelector: payload => payload.Id,
-                elementSelector: payload => payload.Result);
+//            var refIfsResult = await _evalService.EvaluateBulkExpressions<bool>(
+//                expressionRecords: expressionRecords,
+//                parameters: parameters,
+//                localTypes: new List<Type>
+//                {
+//                    typeof(TemplateContext)
+//                }
+//            );
 
 
-            var codeRecords = files.Select(selector: async file =>
-            {
-                var id = file.TemplatePath;
-
-                if (idToRefIfDic.TryGetValue(key: id, value: out var val))
-                    if (!val)
-                        return null;
-
-                var commandContent = GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.Ref,
-                    codeType: file.CodeType);
-
-                if (commandContent == null)
-                {
-                    commandContent = GetFirstCommandContent(inputString: file.Content,
-                        command: TemplateCommand.PartialRef, codeType: file.CodeType);
-                    if (commandContent is not null) file.HasPartialRef = true;
-                }
-
-                if (commandContent == null)
-                {
-                    var partialRefProjectContent =
-                        GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.PartialRefProject,
-                            codeType: file.CodeType);
-
-                    if (partialRefProjectContent != null)
-                    {
-                        file.HasPartialRef = true;
-
-                        var currentFileProjectPathResult = _pathService.GetProjectPath(
-                            projectName: file.Project.Name
-                        );
-
-                        var targetProjectPathResult = _pathService.GetProjectPath(
-                            projectName: partialRefProjectContent
-                        );
-
-                        if (!string.IsNullOrEmpty(value: currentFileProjectPathResult.ProjectPath) &&
-                            !string.IsNullOrEmpty(value: targetProjectPathResult.ProjectPath))
-                        {
-                            var path = file.TemplatePath.Replace(oldValue: currentFileProjectPathResult.ProjectPath,
-                                newValue: targetProjectPathResult.ProjectPath);
-
-                            var currentProject = ProjectNameToProjectDic[key: file.Project.Name];
-                            var targetProject = ProjectNameToProjectDic[key: partialRefProjectContent];
-
-                            path = Regex.Replace(input: path,
-                                pattern:
-                                $@"{file.CodeType.GetTemplateSymbolName(templateSymbol: currentProject.GeneratorSymbol + "Gen", isPath: true)}",
-                                replacement: file.CodeType.GetTemplateSymbolName(
-                                    templateSymbol: targetProject.GeneratorSymbol + "Gen", isPath: true));
-
-                            var content = File.ReadAllText(path: path);
-                            file.PartialRefContent = file.CodeType.ApplyAliasses(content: content);
-
-                            var result = file.CodeType.ApplySectionCommand(
-
-                                    sourceContent: file.PartialRefContent,
-                                    targetContent: file.Content,
-                                    sectionBeginCommand: TemplateCommand.TemplateSectionBegin,
-                                    sectionEndCommand: TemplateCommand.TemplateSectionEnd
-                                );
-
-                            file.Content = result.ProcessedContent;
-                            file.TemplateSections = result.FoundSections;
-                        }
-                    }
-                }
-
-                if (commandContent == null)
-                {
-                    var refProjectContent =
-                        GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.RefProject,
-                            codeType: file.CodeType);
-
-                    if (refProjectContent != null)
-                    {
-                        var currentFileProjectPathResult = _pathService.GetProjectPath(
-                            projectName: file.Project.Name
-                        );
-
-                        var targetProjectPathResult = _pathService.GetProjectPath(
-                            projectName: refProjectContent
-                        );
-
-                        if (!string.IsNullOrEmpty(value: currentFileProjectPathResult.ProjectPath) &&
-                            !string.IsNullOrEmpty(value: targetProjectPathResult.ProjectPath))
-                        {
-                            var path = file.TemplatePath.Replace(oldValue: currentFileProjectPathResult.ProjectPath,
-                                newValue: targetProjectPathResult.ProjectPath);
-
-                            var currentProject = ProjectNameToProjectDic[key: file.Project.Name];
-                            var targetProject = ProjectNameToProjectDic[key: refProjectContent];
-
-                            path = Regex.Replace(input: path,
-                                pattern:
-                                $@"{file.CodeType.GetTemplateSymbolName(templateSymbol: currentProject.GeneratorSymbol + "Gen", isPath: true)}",
-                                replacement: file.CodeType.GetTemplateSymbolName(
-                                    templateSymbol: targetProject.GeneratorSymbol + "Gen", isPath: true));
-
-                            var content = File.ReadAllText(path: path);
-                            file.Content = file.CodeType.ApplyAliasses(content: content);
-                        }
-                    }
-                }
-
-                if (commandContent == null) return null;
-
-                var project = file.Project;
+//            var idToRefIfDic = refIfsResult.Payloads.ToDictionary(keySelector: payload => payload.Id,
+//                elementSelector: payload => payload.Result);
 
 
-                var contextTemplateResult = await GetContextTemplate(
-                    fileTemplatePath: file.TemplatePath,
-                    project: project,
-                    sections: null,
-                    templateSections: null
-                );
+//            var codeRecords = files.Select(selector: async file =>
+//            {
+//                var id = file.TemplatePath;
 
-                return new EvalCodeRecord
-                {
-                    Id = file.TemplatePath,
-                    BodyCode = commandContent,
+//                if (idToRefIfDic.TryGetValue(key: id, value: out var val))
+//                    if (!val)
+//                        return null;
 
-                    LocalParameters = file.LocalParameters,
-                    ContextTemplate = contextTemplateResult.Template
-                };
-            }).Select(selector: x => x.Result).Where(predicate: x => x != null).ToList();
+//                var commandContent = GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.Ref,
+//                    codeType: file.CodeType);
+
+//                if (commandContent == null)
+//                {
+//                    commandContent = GetFirstCommandContent(inputString: file.Content,
+//                        command: TemplateCommand.PartialRef, codeType: file.CodeType);
+//                    if (commandContent is not null) file.HasPartialRef = true;
+//                }
+
+//                if (commandContent == null)
+//                {
+//                    var partialRefProjectContent =
+//                        GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.PartialRefProject,
+//                            codeType: file.CodeType);
+
+//                    if (partialRefProjectContent != null)
+//                    {
+//                        file.HasPartialRef = true;
+
+//                        var currentFileProjectPathResult = _pathService.GetProjectPath(
+//                            projectName: file.Project.Name
+//                        );
+
+//                        var targetProjectPathResult = _pathService.GetProjectPath(
+//                            projectName: partialRefProjectContent
+//                        );
+
+//                        if (!string.IsNullOrEmpty(value: currentFileProjectPathResult.ProjectPath) &&
+//                            !string.IsNullOrEmpty(value: targetProjectPathResult.ProjectPath))
+//                        {
+//                            var path = file.TemplatePath.Replace(oldValue: currentFileProjectPathResult.ProjectPath,
+//                                newValue: targetProjectPathResult.ProjectPath);
+
+//                            var currentProject = ProjectNameToProjectDic[key: file.Project.Name];
+//                            var targetProject = ProjectNameToProjectDic[key: partialRefProjectContent];
+
+//                            path = Regex.Replace(input: path,
+//                                pattern:
+//                                $@"{file.CodeType.GetTemplateSymbolName(templateSymbol: currentProject.GeneratorSymbol + "Gen", isPath: true)}",
+//                                replacement: file.CodeType.GetTemplateSymbolName(
+//                                    templateSymbol: targetProject.GeneratorSymbol + "Gen", isPath: true));
+
+//                            var content = File.ReadAllText(path: path);
+//                            file.PartialRefContent = file.CodeType.ApplyAliasses(content: content);
+
+//                            var result = file.CodeType.ApplySectionCommand(
+
+//                                    sourceContent: file.PartialRefContent,
+//                                    targetContent: file.Content,
+//                                    sectionBeginCommand: TemplateCommand.TemplateSectionBegin,
+//                                    sectionEndCommand: TemplateCommand.TemplateSectionEnd
+//                                );
+
+//                            file.Content = result.ProcessedContent;
+//                            file.TemplateSections = result.FoundSections;
+//                        }
+//                    }
+//                }
+
+//                if (commandContent == null)
+//                {
+//                    var refProjectContent =
+//                        GetFirstCommandContent(inputString: file.Content, command: TemplateCommand.RefProject,
+//                            codeType: file.CodeType);
+
+//                    if (refProjectContent != null)
+//                    {
+//                        var currentFileProjectPathResult = _pathService.GetProjectPath(
+//                            projectName: file.Project.Name
+//                        );
+
+//                        var targetProjectPathResult = _pathService.GetProjectPath(
+//                            projectName: refProjectContent
+//                        );
+
+//                        if (!string.IsNullOrEmpty(value: currentFileProjectPathResult.ProjectPath) &&
+//                            !string.IsNullOrEmpty(value: targetProjectPathResult.ProjectPath))
+//                        {
+//                            var path = file.TemplatePath.Replace(oldValue: currentFileProjectPathResult.ProjectPath,
+//                                newValue: targetProjectPathResult.ProjectPath);
+
+//                            var currentProject = ProjectNameToProjectDic[key: file.Project.Name];
+//                            var targetProject = ProjectNameToProjectDic[key: refProjectContent];
+
+//                            path = Regex.Replace(input: path,
+//                                pattern:
+//                                $@"{file.CodeType.GetTemplateSymbolName(templateSymbol: currentProject.GeneratorSymbol + "Gen", isPath: true)}",
+//                                replacement: file.CodeType.GetTemplateSymbolName(
+//                                    templateSymbol: targetProject.GeneratorSymbol + "Gen", isPath: true));
+
+//                            var content = File.ReadAllText(path: path);
+//                            file.Content = file.CodeType.ApplyAliasses(content: content);
+//                        }
+//                    }
+//                }
+
+//                if (commandContent == null) return null;
+
+//                var project = file.Project;
 
 
-            var result = await _evalService.EvaluateBulkTemplates(
-                codeRecords: codeRecords,
-                parameters: parameters,
-                localTypes: new List<Type>
-                {
-                    typeof(TemplateContext)
-                },
-                preserveOutputOnSucess: false,
-                preserveInputOnSucess: false
-            );
+//                var contextTemplateResult = await GetContextTemplate(
+//                    fileTemplatePath: file.TemplatePath,
+//                    project: project,
+//                    sections: null,
+//                    templateSections: null
+//                );
 
-            result.Payloads.ForEach(action: o =>
-            {
-                var file = dic[key: o.Id];
-                var content = file.CodeType.ApplyAliasses(content: o.Content);
+//                return new EvalCodeRecord
+//                {
+//                    Id = file.TemplatePath,
+//                    BodyCode = commandContent,
 
-                if (file.HasPartialRef)
-                    file.PartialRefContent = content;
-                else
-                    file.Content = File.ReadAllText(path: content);
+//                    LocalParameters = file.LocalParameters,
+//                    ContextTemplate = contextTemplateResult.Template
+//                };
+//            }).Select(selector: x => x.Result).Where(predicate: x => x != null).ToList();
 
 
-                if (file.HasPartialRef)
-                {
-                    var result = file.CodeType.ApplySectionCommand(
-                        sourceContent: file.PartialRefContent,
-                        targetContent: file.Content,
-                        sectionBeginCommand: TemplateCommand.TemplateSectionBegin,
-                        sectionEndCommand: TemplateCommand.TemplateSectionEnd
-                    );
+//            var result = await _evalService.EvaluateBulkTemplates(
+//                codeRecords: codeRecords,
+//                parameters: parameters,
+//                localTypes: new List<Type>
+//                {
+//                    typeof(TemplateContext)
+//                },
+//                preserveOutputOnSucess: false,
+//                preserveInputOnSucess: false
+//            );
 
-                    file.Content = result.ProcessedContent;
-                    file.TemplateSections = result.FoundSections;
-                }
-            });
+//            result.Payloads.ForEach(action: o =>
+//            {
+//                var file = dic[key: o.Id];
+//                var content = file.CodeType.ApplyAliasses(content: o.Content);
 
-            return new ProcessRefsOutput
-            {
-                Files = files
-            };
-        }
+//                if (file.HasPartialRef)
+//                    file.PartialRefContent = content;
+//                else
+//                    file.Content = File.ReadAllText(path: content);
 
 
-        public record ProcessRefsOutput
-        {
-            public List<TemplateFile> Files { get; init; }
-        }
-    }
-}
+//                if (file.HasPartialRef)
+//                {
+//                    var result = file.CodeType.ApplySectionCommand(
+//                        sourceContent: file.PartialRefContent,
+//                        targetContent: file.Content,
+//                        sectionBeginCommand: TemplateCommand.TemplateSectionBegin,
+//                        sectionEndCommand: TemplateCommand.TemplateSectionEnd
+//                    );
+
+//                    file.Content = result.ProcessedContent;
+//                    file.TemplateSections = result.FoundSections;
+//                }
+//            });
+
+//            return new ProcessRefsOutput
+//            {
+//                Files = files
+//            };
+//        }
+
+
+//        public record ProcessRefsOutput
+//        {
+//            public List<TemplateFile> Files { get; init; }
+//        }
+//    }
+//}
