@@ -1,6 +1,6 @@
 
 
-dotnet ef migrations add %1 -c AuthDbContext -o Data/Migrations -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
-dotnet ef database update -c AuthDbContext -p ./BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v 
+dotnet ef migrations add %1 -c AuthDbContext -o Data/Migrations -p ./Shared/BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v
+dotnet ef database update -c AuthDbContext -p ./Shared/BoundedContexts/AuthBoundedContext/Auth.Infrastructure --startup-project ./Apps/Auth/Server  -v 
 
 pause

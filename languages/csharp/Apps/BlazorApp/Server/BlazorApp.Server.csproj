@@ -17,8 +17,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Core.Infrastructure\Core.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
 		<ProjectReference Include="..\Client\BlazorApp.Client.csproj" />

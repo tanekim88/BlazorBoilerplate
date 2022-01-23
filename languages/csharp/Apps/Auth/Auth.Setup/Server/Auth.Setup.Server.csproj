@@ -7,13 +7,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Auth.IntegrationEvents\Auth.IntegrationEvents.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />
-		<ProjectReference Include="..\..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.IntegrationEvents\Auth.IntegrationEvents.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\..\Setups\Shared\SetupLibrary.Application\SetupLibrary.Application.csproj" />
 		<ProjectReference Include="..\..\..\..\Setups\Shared\SetupLibrary.Domain\SetupLibrary.Domain.csproj" />
 		<ProjectReference Include="..\..\..\..\Setups\Shared\SetupLibrary.Infrastructure\SetupLibrary.Infrastructure.csproj" />

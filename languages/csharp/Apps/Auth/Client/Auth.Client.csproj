@@ -31,7 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Infrastructure\SharedCore.Infrastructure.csproj" />
 		<ProjectReference Include="..\Shared\Auth.Shared.csproj" />
 	</ItemGroup>

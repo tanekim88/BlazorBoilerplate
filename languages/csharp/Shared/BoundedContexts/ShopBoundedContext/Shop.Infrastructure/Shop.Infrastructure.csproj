@@ -22,18 +22,18 @@
 		<PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.13.7" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Shared\Core.Application\Core.Application.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Core.Domain\Core.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Core.Infrastructure\Core.Infrastructure.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Library.Application\Library.Application.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Library.Domain\Library.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Library.Infrastructure\Library.Infrastructure.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Infrastructure\SharedLibrary.Infrastructure.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Presentation\Shared\SharedPresentation.Application\SharedPresentation.Application.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Presentation\Shared\SharedPresentation.Domain\SharedPresentation.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\Shared\Presentation\Shared\SharedPresentation.Infrastructure\SharedPresentation.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\Core.Application\Core.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Core.Domain\Core.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\Core.Infrastructure\Core.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Library.Application\Library.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Library.Domain\Library.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Library.Infrastructure\Library.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\Library\Shared\SharedLibrary.Infrastructure\SharedLibrary.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\Presentation\Shared\SharedPresentation.Application\SharedPresentation.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Presentation\Shared\SharedPresentation.Domain\SharedPresentation.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\Presentation\Shared\SharedPresentation.Infrastructure\SharedPresentation.Infrastructure.csproj" />
 	  <ProjectReference Include="..\Shared\SharedShop.Application\SharedShop.Application.csproj" />
 	  <ProjectReference Include="..\Shared\SharedShop.Domain\SharedShop.Domain.csproj" />
 	  <ProjectReference Include="..\Shared\SharedShop.Infrastructure\SharedShop.Infrastructure.csproj" />

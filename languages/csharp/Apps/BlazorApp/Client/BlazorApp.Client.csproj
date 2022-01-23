@@ -55,11 +55,11 @@
 
 	<ItemGroup>
 
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
 
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />
 
-		<ProjectReference Include="..\..\..\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj" />
 
 		<ProjectReference Include="..\..\..\Shared\Presentation\Shared\SharedPresentation.Application\SharedPresentation.Application.csproj" />
 

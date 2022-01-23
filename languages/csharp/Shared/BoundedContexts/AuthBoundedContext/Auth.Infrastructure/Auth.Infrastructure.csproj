@@ -32,8 +32,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Shared\Core.Infrastructure\Core.Infrastructure.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
+		<ProjectReference Include="..\..\..\Core.Infrastructure\Core.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Shared\SharedCore.Application\SharedCore.Application.csproj" />
 		<ProjectReference Include="..\Auth.Domain\Auth.Domain.csproj" />
 		<ProjectReference Include="..\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
 		<ProjectReference Include="..\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj" />

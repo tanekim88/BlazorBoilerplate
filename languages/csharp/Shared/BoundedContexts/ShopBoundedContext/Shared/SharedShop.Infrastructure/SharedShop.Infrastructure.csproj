@@ -39,12 +39,12 @@
 
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
-	  <ProjectReference Include="..\..\..\..\Shared\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\..\Shared\Library\Shared\SharedLibrary.Infrastructure\SharedLibrary.Infrastructure.csproj" />
-	  <ProjectReference Include="..\..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
-	  <ProjectReference Include="..\..\..\..\Shared\Shared\SharedCore.Domain\SharedCore.Domain.csproj" />
-	  <ProjectReference Include="..\..\..\..\Shared\Shared\SharedCore.Infrastructure\SharedCore.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\..\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
+	  <ProjectReference Include="..\..\..\..\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\..\Library\Shared\SharedLibrary.Infrastructure\SharedLibrary.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\..\..\Shared\SharedCore.Application\SharedCore.Application.csproj" />
+	  <ProjectReference Include="..\..\..\..\Shared\SharedCore.Domain\SharedCore.Domain.csproj" />
+	  <ProjectReference Include="..\..\..\..\Shared\SharedCore.Infrastructure\SharedCore.Infrastructure.csproj" />
 	  <ProjectReference Include="..\SharedShop.Application\SharedShop.Application.csproj" />
 	  <ProjectReference Include="..\SharedShop.Domain\SharedShop.Domain.csproj" />
 	</ItemGroup>

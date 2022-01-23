@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Shared", "Apps\Auth\Sh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{FC0BD025-71F0-440D-952B-760620D6AEDA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BoundedContexts", "BoundedContexts", "{C93EB5C9-B0CB-462E-80DF-B4EBA90FF8C7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BoundedContexts", "Shared\BoundedContexts", "{C93EB5C9-B0CB-462E-80DF-B4EBA90FF8C7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthBoundedContext", "AuthBoundedContext", "{C51C2F42-B541-44DA-959E-4F70E67E8B3E}"
 EndProject

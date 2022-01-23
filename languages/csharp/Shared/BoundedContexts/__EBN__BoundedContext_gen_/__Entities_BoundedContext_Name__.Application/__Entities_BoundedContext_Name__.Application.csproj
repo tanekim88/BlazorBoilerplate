@@ -102,14 +102,14 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Shared\Core.Application\Core.Application.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Core.Domain\Core.Domain.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Library\Library.Application\Library.Application.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Library\Library.Domain\Library.Domain.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
-		<ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Domain\SharedCore.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Core.Application\Core.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Core.Domain\Core.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Library\Library.Application\Library.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Library\Library.Domain\Library.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Shared\SharedCore.Application\SharedCore.Application.csproj" />
+		<ProjectReference Include="..\..\..\..\Shared\Shared\SharedCore.Domain\SharedCore.Domain.csproj" />
 		<ProjectReference Include="..\Shared\Shared__Entities_BoundedContext_Name__.Application\Shared__Entities_BoundedContext_Name__.Application.csproj" />
 		<ProjectReference Include="..\Shared\Shared__Entities_BoundedContext_Name__.Domain\Shared__Entities_BoundedContext_Name__.Domain.csproj" />
 		<ProjectReference Include="..\__Entities_BoundedContext_Name__.Domain\__Entities_BoundedContext_Name__.Domain.csproj" />
