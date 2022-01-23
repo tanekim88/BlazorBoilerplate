@@ -1,6 +1,7 @@
 ﻿
 
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using SetupLibrary.Application.Models;
 
 
@@ -9,7 +10,12 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 {
     public partial class CodeGeneratorService
     {
-        public string GetFirstCommandContent(string inputString, string command, TemplateCodeType codeType)
+        public class GetFirstCommandContentOutput
+        {
+            public bool Success { get; set; }
+            public string? Payload { get; set; }
+        }
+        public async Task<GetFirstCommandContentOutput> GetFirstCommandContentAsync(string inputString, string command, TemplateCodeType codeType)
         {
             Match matches = null;
             if (!string.IsNullOrEmpty(value: codeType.SingLineCommentSymbol))
@@ -32,10 +38,19 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             {
                 var commandContent = matches.Groups[groupname: $"{codeType._commandContentName}"].Value;
 
-                return commandContent.Trim();
+                var toReturn = commandContent.Trim();
+                return new GetFirstCommandContentOutput
+                {
+                    Payload = toReturn,
+                    Success = true
+                };
             }
 
-            return null;
+            return new GetFirstCommandContentOutput
+            {
+                Payload = null,
+                Success = false
+            };
         }
     }
 }

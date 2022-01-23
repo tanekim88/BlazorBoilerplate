@@ -29,10 +29,9 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
     public partial class CodeGeneratorService
     {
-        public async Task<ProcessPathsOutput> ProcessPaths(
-        TemplateFile file,
-        TemplateData data)
+        public async Task<ProcessPathsOutput> ProcessPaths(TemplateData data)
         {
+            var file = data.Context.File;
             var codeType = file.CodeType;
 
             var textString = file.Content;
@@ -71,7 +70,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 text: file.Path,
                 parentName: null,
                 parentPropertyPaths: new List<string>());
-
 
 
             var tokenInfosForPath = matchingTokenInfosForPath.SelectMany(selector: tokenInfo =>
@@ -173,9 +171,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 return toReturn;
             }).Select(selector: x => x.First()).ToList();
 
-            //listOfList = listOfList.Take(3).ToList();
 
-            //listOfList.ForEach(async listOfTokenInfos =>
             var localTemplateInfos = groupedFilteredListOfList.Select(selector: async listOfTokenInfos =>
             {
                 var listOfListBackup = groupedFilteredListOfList;

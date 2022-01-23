@@ -15,7 +15,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             TemplateCodeType codeType
         )
         {
-            var commandContent = GetFirstCommandContent(inputString: inputString, command: TemplateCommand.RunIf,
+            var commandContent = GetFirstCommandContentAsync(inputString: inputString, command: TemplateCommand.RunIf,
                 codeType: codeType);
 
             if (commandContent != null)

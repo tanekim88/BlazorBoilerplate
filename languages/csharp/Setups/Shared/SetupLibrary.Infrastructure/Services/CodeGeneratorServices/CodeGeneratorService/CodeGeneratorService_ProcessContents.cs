@@ -16,14 +16,11 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     public partial class CodeGeneratorService
     {
         public async Task<ProcessContentsOutput> ProcessContents(
-             TemplateFile file,
              TemplateData data,
              List<LocalTemplateInfo> localTemplateInfosForPaths
             )
         {
-            var context = new TemplateContext();
-            context.File = file;
-            context.Project = file.Project;
+            var file = data.Context.File;
 
             var codeType = file.CodeType;
 

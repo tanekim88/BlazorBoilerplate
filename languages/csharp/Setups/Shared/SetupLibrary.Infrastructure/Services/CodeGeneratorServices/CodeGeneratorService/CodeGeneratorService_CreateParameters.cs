@@ -17,7 +17,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     {
         public record CreateParametersOutput
         {
-            public Dictionary<string, object> Parameters { get; init; }
+            public  TemplateData Data { get; init; }
             public List<TemplateProject> Projects { get; init; }
         }
         public class Temp
@@ -268,14 +268,9 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 data.Entities.Add(newEntity);
             }
 
-            var parameters = new Dictionary<string, object>
-            {
-                [key: "Data"] = data
-            };
-
             return new CreateParametersOutput
             {
-                Parameters = parameters,
+                Data = data,
                 Projects = projects
             };
         }

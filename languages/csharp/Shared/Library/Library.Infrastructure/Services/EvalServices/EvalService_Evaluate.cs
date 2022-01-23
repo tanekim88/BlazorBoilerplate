@@ -17,7 +17,7 @@ namespace Library.Infrastructure.Services.EvalServices
 {
     public partial class EvalService
     {
-        public async Task<EvaluateExpressionOutput<TReturn>> Evaluate<Targs ,TReturn>(
+        public async Task<EvaluateExpressionOutput<TReturn>> EvaluateAsync<Targs ,TReturn>(
             string code,
             Targs data
         )

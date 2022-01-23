@@ -1,19 +1,14 @@
 ﻿
 
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using SetupLibrary.Application.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ICSharpCode.Decompiler.CSharp.Syntax;
-using Microsoft.AspNetCore.Components.WebAssembly.Http;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using SetupLibrary.Application.Models;
-using static Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces.IEvalService;
 
 
 
@@ -32,7 +27,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
     public partial class CodeGeneratorService
     {
-        public async Task Process<TArgs>(
+        public async Task Process(
             TemplateData data,
             List<TemplateProject> projects
         )
@@ -44,52 +39,55 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var context = (await CreateContext(file)).Context;
                 data.Context = context;
 
-                //var shouldRun = (await ProcessRunIf(file, data)).ShouldRun;
 
-                //if (!shouldRun)
-                //{
-                //    continue;
-                //}
+                var result = await ProcessRefAsync(data, allFiles);
 
-                //var result = await ProcessPaths(
-                //    file: file,
-                //    data: data
-                //);
 
-                //var contentResult = await ProcessContents(
-                //    file: file,
-                //    data: data,
-                //    localTemplateInfosForPaths: result.LocalTemplateInfos
-                //);
+                var shouldRun = (await ProcessRunIf(data)).ShouldRun;
 
-                //var codeType = file.CodeType;
+                if (!shouldRun)
+                {
+                    continue;
+                }
 
-                //content = codeType.RemoveCommandStrings(intputString: content);
-                //content = codeType.AlignSingleLineTemplateCommands(intputString: content);
-                //content = codeType.ReplaceIgnoredNamesInContent(inputString: content);
+                var processPathsOutput = await ProcessPaths(
+                    data: data
+                );
 
-                //if (file.ShouldOverWrite || !File.Exists(path: localTem.OutputFilePath))
-                //{
-                //    if (localTem.OutputFilePath.EndsWith(".cs"))
-                //    {
-                //        try
-                //        {
-                //            var tree = CSharpSyntaxTree.ParseText(content);
-                //            var root = tree.GetRoot().NormalizeWhitespace();
-                //            content = root.ToFullString();
-                //        }
-                //        catch (Exception e) { }
-                //    }
+                var contentResult = await ProcessContents(
+                    data: data,
+                    localTemplateInfosForPaths: processPathsOutput.LocalTemplateInfos
+                );
 
-                //    File.WriteAllText(path: localTem.OutputFilePath, contents: content);
-                //}
+                var templateInfos = contentResult.LocalTemplateInfos;
 
+
+                foreach (var templateInfo in templateInfos)
+                {
+                    var content = templateInfo.TemplateContent;
+                    var codeType = file.CodeType;
+
+                    content = codeType.RemoveCommandStrings(intputString: content);
+                    content = codeType.AlignSingleLineTemplateCommands(intputString: content);
+                    content = codeType.ReplaceIgnoredNamesInContent(inputString: content);
+
+                    if (file.ShouldOverWrite || !File.Exists(path: templateInfo.OutputFilePath))
+                    {
+                        if (templateInfo.OutputFilePath.EndsWith(".cs"))
+                        {
+                            try
+                            {
+                                var tree = CSharpSyntaxTree.ParseText(content);
+                                var root = tree.GetRoot().NormalizeWhitespace();
+                                content = root.ToFullString();
+                            }
+                            catch (Exception e) { }
+                        }
+
+                        File.WriteAllText(path: templateInfo.OutputFilePath, contents: content);
+                    }
+                }
             }
-        }
-
-        private Task<bool> ProcessRunIf(TemplateFile file, TemplateData data)
-        {
-            throw new NotImplementedException();
         }
     }
 }

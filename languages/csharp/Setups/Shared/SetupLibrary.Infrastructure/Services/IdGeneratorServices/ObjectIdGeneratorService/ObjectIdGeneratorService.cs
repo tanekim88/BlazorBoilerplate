@@ -1,5 +1,5 @@
 /*%runIf: 
-Data.Services.Exists(service => service.Groups[0].Name == "IdGenerator" && service.Name == "ObjectIdGenerator")
+Services.Exists(service => service.Groups[0].Name == "IdGenerator" && service.Name == "ObjectIdGenerator")
 */
 
 //%t:begin Intro
@@ -8,17 +8,12 @@ Data.Services.Exists(service => service.Groups[0].Name == "IdGenerator" && servi
 //%t:end Intro
 
 //%s:begin Header
-
-
-
 using SharedCore.Domain.Attributes.ServiceAttributes;
 using SharedLibrary.Application.StringEnums.ServiceLifetimeStringEnums;
 using System;
 using System.Runtime.Serialization;
-
-
-
 //%s:end Header
+
 
 //%t:begin Header
 //%t:end Header

@@ -11,7 +11,7 @@ namespace Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces
 {
     public interface IEvalService
     {
-        Task<EvaluateExpressionOutput<TReturn>> Evaluate<Targs, TReturn>(string code, Targs data);
+        Task<EvaluateExpressionOutput<TReturn>> EvaluateAsync<Targs, TReturn>(string code, Targs data);
 
         public class GetAllTypesOutput
         {

@@ -36,7 +36,7 @@ namespace SetupLibrary.Application.Models
 
         [DataMember] public string TemplatePath { get; set; }
 
-        [DataMember] public string XmlPath { get; set; }
+        //[DataMember] public string XmlPath { get; set; }
 
         [DataMember] public string Extension { get; set; }
 

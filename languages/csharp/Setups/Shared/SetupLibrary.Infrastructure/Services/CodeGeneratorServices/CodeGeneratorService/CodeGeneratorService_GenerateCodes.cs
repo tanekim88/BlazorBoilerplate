@@ -19,59 +19,10 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 templateFilePaths: templatePaths, dependentProjects: dependentProjects
                 );
 
-            var parameters = result.Parameters;
+            var data = result.Data;
             var projects = result.Projects;
 
-            //await Process( parameters, projects : projects );
+            await Process(data,  projects);
         }
-
-
-
-        //public async Task<TemplateData> PopulateData2(List<TemplateProject> projects, TemplateFile file)
-        //{
-        //    var data = new TemplateData();
-
-        //    data.Projects = projects;
-
-        //    var codeType = file.CodeType;
-
-        //    file.Content = File.ReadAllText(file.TemplatePath);
-
-        //    file.Project = projects.Find(project => project.Name == file.Project.Name);
-
-        //    var referenceFile = await GetReferenceFile(file.Content, data, codeType);
-
-        //    if (!string.IsNullOrEmpty(referenceFile))
-        //    {
-        //        file.Content = File.ReadAllText(referenceFile);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Models), codeType))
-        //    {
-        //        await PopulateModels(projects, data);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Services), codeType))
-        //    {
-        //        PopulateServices(projects, data);
-        //    }
-
-        //    if (IsMatch(file, nameof(TemplateData.Localizations), codeType))
-        //    {
-        //        await PopulateLocalizations(projects, data);
-        //    }
-
-        //    PopulateProjects(data);
-
-        //    return data;
-        //}
-
-        //public bool IsMatch(TemplateFile file, string pluralName, TemplateCodeType codeType)
-        //{
-        //    var pathMatched = Regex.IsMatch(file.TemplatePath, $@"({codeType.TemplateBeginSymbolForPath}|{codeType.GetPropertyPathSeparator(true)}){pluralName}{codeType.GetPropertyPathSeparator(true)}");
-        //    var contentPathMatched = Regex.IsMatch(file.Content, $@"({codeType.TemplateBeginSymbolForContent}|{codeType.GetPropertyPathSeparator(false)}){pluralName}{codeType.GetPropertyPathSeparator(false)}");
-        //    var contentDataMatched = Regex.IsMatch(file.Content, $@"\.\s*{pluralName}\b");
-        //    return pathMatched || contentPathMatched || contentDataMatched;
-        //}
     }
 }
