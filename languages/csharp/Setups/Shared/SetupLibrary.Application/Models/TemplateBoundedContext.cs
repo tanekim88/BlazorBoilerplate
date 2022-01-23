@@ -3,8 +3,6 @@
 using System;
 using System.Runtime.Serialization;
 
-
-
 namespace SetupLibrary.Application.Models
 {
     [DataContract(IsReference = true)]

@@ -3,8 +3,6 @@
 //%S:begin Header
 //%S:end Header
 
-
-
 using Shared__Entities_BoundedContext_Name__.Application.Interfaces.ServiceInterfaces.__Entities_Groups_00_Name__ServiceInterfaces;
 
 namespace Shared__Entities_BoundedContext_Name__.Application.Services.__Entities_Groups_00_Name__Services

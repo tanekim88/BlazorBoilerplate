@@ -14,6 +14,8 @@ namespace SetupLibrary.Application.Models
     public class TemplateContext : ICloneable
     {
         [DataMember] public TemplateProject Project { get; set; }
+        [DataMember] public TemplateFile File { get; set; }
+        [DataMember] public TemplateEntity Entity { get; set; }
 
         [DataMember] public TemplateProject ApplicationProject { get; set; }
         [DataMember] public TemplateProject SharedApplicationProject { get; set; }
@@ -24,11 +26,12 @@ namespace SetupLibrary.Application.Models
         [DataMember] public TemplateProject InfrastructureProject { get; set; }
         [DataMember] public TemplateProject SharedInfrastructureProject { get; set; }
 
-        [DataMember] public TemplateFile File { get; set; }
 
         [DataMember] public List<TemplateSection> Sections { get; set; }
+        [DataMember] public Dictionary<string, TemplateSection> SectionsDict { get; set; }
 
         [DataMember] public List<TemplateSection> TemplateSections { get; set; }
+        [DataMember] public Dictionary<string, TemplateSection> TemplateSectionsDict { get; set; }
 
         public object Clone()
         {
