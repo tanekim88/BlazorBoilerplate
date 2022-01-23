@@ -32,69 +32,69 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JobBoundedContext", "JobBou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SurveyBoundedContext", "SurveyBoundedContext", "{47FFA40D-608B-4B39-BF40-C7C5A09A4350}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Domain", "BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj", "{24520F4C-49F7-479B-88CA-6D61C810F47B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Domain", "Shared\BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj", "{24520F4C-49F7-479B-88CA-6D61C810F47B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Infrastructure", "BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj", "{2A56C912-7122-40CF-9268-12F2ED214A85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Infrastructure", "Shared\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj", "{2A56C912-7122-40CF-9268-12F2ED214A85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Application", "BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj", "{0F00D680-5191-4587-ABE6-8EA6802D6F9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Application", "Shared\BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj", "{0F00D680-5191-4587-ABE6-8EA6802D6F9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Domain", "BoundedContexts\JobBoundedContext\Job.Domain\Job.Domain.csproj", "{51029B6D-8AD8-42F0-AAF4-FD392048FF9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Domain", "Shared\BoundedContexts\JobBoundedContext\Job.Domain\Job.Domain.csproj", "{51029B6D-8AD8-42F0-AAF4-FD392048FF9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Application", "BoundedContexts\JobBoundedContext\Job.Application\Job.Application.csproj", "{A5C930F6-B57F-4511-80FC-ABDCDF0FD727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Application", "Shared\BoundedContexts\JobBoundedContext\Job.Application\Job.Application.csproj", "{A5C930F6-B57F-4511-80FC-ABDCDF0FD727}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Infrastructure", "BoundedContexts\JobBoundedContext\Job.Infrastructure\Job.Infrastructure.csproj", "{8EEE57D8-1B13-4A33-AAB5-B296A7B35DC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.Infrastructure", "Shared\BoundedContexts\JobBoundedContext\Job.Infrastructure\Job.Infrastructure.csproj", "{8EEE57D8-1B13-4A33-AAB5-B296A7B35DC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Domain", "BoundedContexts\SurveyBoundedContext\Survey.Domain\Survey.Domain.csproj", "{4061E934-90E1-4475-9602-ECD210C0DBCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Domain", "Shared\BoundedContexts\SurveyBoundedContext\Survey.Domain\Survey.Domain.csproj", "{4061E934-90E1-4475-9602-ECD210C0DBCE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Infrastructure", "BoundedContexts\SurveyBoundedContext\Survey.Infrastructure\Survey.Infrastructure.csproj", "{61B34997-6CD0-42C3-91C7-2B72E9CAF222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Infrastructure", "Shared\BoundedContexts\SurveyBoundedContext\Survey.Infrastructure\Survey.Infrastructure.csproj", "{61B34997-6CD0-42C3-91C7-2B72E9CAF222}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Application", "BoundedContexts\SurveyBoundedContext\Survey.Application\Survey.Application.csproj", "{A73385E1-2BE2-46FE-80A0-61C2F36DA2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.Application", "Shared\BoundedContexts\SurveyBoundedContext\Survey.Application\Survey.Application.csproj", "{A73385E1-2BE2-46FE-80A0-61C2F36DA2FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.IntegrationEvents", "BoundedContexts\AuthBoundedContext\Auth.IntegrationEvents\Auth.IntegrationEvents.csproj", "{B99C75D1-119E-46CB-99C4-CF8B33149126}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.IntegrationEvents", "Shared\BoundedContexts\AuthBoundedContext\Auth.IntegrationEvents\Auth.IntegrationEvents.csproj", "{B99C75D1-119E-46CB-99C4-CF8B33149126}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.IntegrationEvents", "BoundedContexts\JobBoundedContext\Job.IntegrationEvents\Job.IntegrationEvents.csproj", "{1C8C394D-79E2-499E-94EE-826880CFEEBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.IntegrationEvents", "Shared\BoundedContexts\JobBoundedContext\Job.IntegrationEvents\Job.IntegrationEvents.csproj", "{1C8C394D-79E2-499E-94EE-826880CFEEBB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DebateBoundedContext", "DebateBoundedContext", "{99D9F49D-FEFF-4C02-B2B9-AB55AA482F89}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7434B19F-2588-452E-A8F6-9EECB431CA5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.IntegrationTests", "BoundedContexts\AuthBoundedContext\Tests\Auth.IntegrationTests\Auth.IntegrationTests.csproj", "{9C25E229-92B1-477F-846D-C0F175EF98E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.IntegrationTests", "Shared\BoundedContexts\AuthBoundedContext\Tests\Auth.IntegrationTests\Auth.IntegrationTests.csproj", "{9C25E229-92B1-477F-846D-C0F175EF98E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.ArchTests", "BoundedContexts\AuthBoundedContext\Tests\Auth.ArchTests\Auth.ArchTests.csproj", "{2B2225AE-D859-43A1-B379-1F89E2EBF57D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.ArchTests", "Shared\BoundedContexts\AuthBoundedContext\Tests\Auth.ArchTests\Auth.ArchTests.csproj", "{2B2225AE-D859-43A1-B379-1F89E2EBF57D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.UnitTests", "BoundedContexts\AuthBoundedContext\Tests\Auth.UnitTests\Auth.UnitTests.csproj", "{60479270-2A19-463C-BBE0-8DB1C2F8480E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.UnitTests", "Shared\BoundedContexts\AuthBoundedContext\Tests\Auth.UnitTests\Auth.UnitTests.csproj", "{60479270-2A19-463C-BBE0-8DB1C2F8480E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D085CB3C-F910-4AF5-93D8-D26CF8D9DA45}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3ABAEF0B-CD1B-414C-80EB-1D99B210A63C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.UnitTests", "BoundedContexts\JobBoundedContext\Tests\Job.UnitTests\Job.UnitTests.csproj", "{59B5DAED-1618-4245-916B-8ECF2A3D3A60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.UnitTests", "Shared\BoundedContexts\JobBoundedContext\Tests\Job.UnitTests\Job.UnitTests.csproj", "{59B5DAED-1618-4245-916B-8ECF2A3D3A60}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.ArchTests", "BoundedContexts\JobBoundedContext\Tests\Job.ArchTests\Job.ArchTests.csproj", "{5A958305-A4CC-41F4-826B-916DAEE3FC4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.ArchTests", "Shared\BoundedContexts\JobBoundedContext\Tests\Job.ArchTests\Job.ArchTests.csproj", "{5A958305-A4CC-41F4-826B-916DAEE3FC4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.IntegrationTests", "BoundedContexts\JobBoundedContext\Tests\Job.IntegrationTests\Job.IntegrationTests.csproj", "{346E2340-89A1-45A7-915D-093CFC812114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Job.IntegrationTests", "Shared\BoundedContexts\JobBoundedContext\Tests\Job.IntegrationTests\Job.IntegrationTests.csproj", "{346E2340-89A1-45A7-915D-093CFC812114}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.ArchTests", "BoundedContexts\SurveyBoundedContext\Tests\Survey.ArchTests\Survey.ArchTests.csproj", "{1533DA10-A5A9-40DD-A84B-ADC552836FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.ArchTests", "Shared\BoundedContexts\SurveyBoundedContext\Tests\Survey.ArchTests\Survey.ArchTests.csproj", "{1533DA10-A5A9-40DD-A84B-ADC552836FA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.UnitTests", "BoundedContexts\SurveyBoundedContext\Tests\Survey.UnitTests\Survey.UnitTests.csproj", "{92793388-9966-4FFC-9F39-7E1A50A6B975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.UnitTests", "Shared\BoundedContexts\SurveyBoundedContext\Tests\Survey.UnitTests\Survey.UnitTests.csproj", "{92793388-9966-4FFC-9F39-7E1A50A6B975}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.IntegrationTests", "BoundedContexts\SurveyBoundedContext\Tests\Survey.IntegrationTests\Survey.IntegrationTests.csproj", "{E3C846A2-D29A-44DD-A170-25D73E5AAD81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey.IntegrationTests", "Shared\BoundedContexts\SurveyBoundedContext\Tests\Survey.IntegrationTests\Survey.IntegrationTests.csproj", "{E3C846A2-D29A-44DD-A170-25D73E5AAD81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Application", "BoundedContexts\DebateBoundedContext\Debate.Application\Debate.Application.csproj", "{D2EDAD11-141D-439E-8746-6F4309190DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Application", "Shared\BoundedContexts\DebateBoundedContext\Debate.Application\Debate.Application.csproj", "{D2EDAD11-141D-439E-8746-6F4309190DA6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Infrastructure", "BoundedContexts\DebateBoundedContext\Debate.Infrastructure\Debate.Infrastructure.csproj", "{93C7C318-07A8-4C98-8750-F452F53A5F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Infrastructure", "Shared\BoundedContexts\DebateBoundedContext\Debate.Infrastructure\Debate.Infrastructure.csproj", "{93C7C318-07A8-4C98-8750-F452F53A5F90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Domain", "BoundedContexts\DebateBoundedContext\Debate.Domain\Debate.Domain.csproj", "{EEE3563A-DAD4-4F93-B2E9-37A6AA9385FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.Domain", "Shared\BoundedContexts\DebateBoundedContext\Debate.Domain\Debate.Domain.csproj", "{EEE3563A-DAD4-4F93-B2E9-37A6AA9385FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{80BC4E61-6256-4D0A-AA54-0235F7BCFEA4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.ArchTests", "BoundedContexts\DebateBoundedContext\Tests\Debate.ArchTests\Debate.ArchTests.csproj", "{BE70BBD6-B1EB-40CE-8B0F-D6900537700C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.ArchTests", "Shared\BoundedContexts\DebateBoundedContext\Tests\Debate.ArchTests\Debate.ArchTests.csproj", "{BE70BBD6-B1EB-40CE-8B0F-D6900537700C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.UnitTests", "BoundedContexts\DebateBoundedContext\Tests\Debate.UnitTests\Debate.UnitTests.csproj", "{E75337EE-CC33-4801-9A6E-4F8A14E5A2F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.UnitTests", "Shared\BoundedContexts\DebateBoundedContext\Tests\Debate.UnitTests\Debate.UnitTests.csproj", "{E75337EE-CC33-4801-9A6E-4F8A14E5A2F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.IntegrationTests", "BoundedContexts\DebateBoundedContext\Tests\Debate.IntegrationTests\Debate.IntegrationTests.csproj", "{1174C7A7-20A8-4591-BB8A-A0794AB78A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.IntegrationTests", "Shared\BoundedContexts\DebateBoundedContext\Tests\Debate.IntegrationTests\Debate.IntegrationTests.csproj", "{1174C7A7-20A8-4591-BB8A-A0794AB78A65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.IntegrationEvents", "BoundedContexts\DebateBoundedContext\Debate.IntegrationEvents\Debate.IntegrationEvents.csproj", "{364D95F5-7B14-4AE6-A668-2E2288AA3E5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debate.IntegrationEvents", "Shared\BoundedContexts\DebateBoundedContext\Debate.IntegrationEvents\Debate.IntegrationEvents.csproj", "{364D95F5-7B14-4AE6-A668-2E2288AA3E5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setups", "Setups", "{6289D3CE-1100-4DF7-A67E-10D5459AB15B}"
 EndProject
@@ -128,23 +128,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MapBoundedContext", "MapBou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CE3DB656-DA1C-4BC4-A691-53E15DD6942F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Domain", "BoundedContexts\MapBoundedContext\Map.Domain\Map.Domain.csproj", "{A3649140-E9C2-473F-9A8D-D4C2FDCA497F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Domain", "Shared\BoundedContexts\MapBoundedContext\Map.Domain\Map.Domain.csproj", "{A3649140-E9C2-473F-9A8D-D4C2FDCA497F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Application", "BoundedContexts\MapBoundedContext\Map.Application\Map.Application.csproj", "{119340CA-69FC-42F0-91C7-C9BDA8221054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Application", "Shared\BoundedContexts\MapBoundedContext\Map.Application\Map.Application.csproj", "{119340CA-69FC-42F0-91C7-C9BDA8221054}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Infrastructure", "BoundedContexts\MapBoundedContext\Map.Infrastructure\Map.Infrastructure.csproj", "{20E63422-DA47-4527-9E96-F97122AD6899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.Infrastructure", "Shared\BoundedContexts\MapBoundedContext\Map.Infrastructure\Map.Infrastructure.csproj", "{20E63422-DA47-4527-9E96-F97122AD6899}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3BC90EE0-83A6-4831-8607-E1EAD3CE3BB6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{A38960BF-213C-4E1C-8C77-6762D6B2F021}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Infrastructure", "BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj", "{71E99504-3D9F-415C-94FB-2C02246DBF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Infrastructure", "Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Infrastructure\SharedAuth.Infrastructure.csproj", "{71E99504-3D9F-415C-94FB-2C02246DBF6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2D6ED313-E193-4746-B439-5EF84423CE09}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B291355C-0039-46E5-83F5-6AE2AEC7E434}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Domain", "BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj", "{17246092-292D-4845-8F45-A156E91CB42D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Domain", "Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Domain\SharedAuth.Domain.csproj", "{17246092-292D-4845-8F45-A156E91CB42D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedCore.Application", "Shared\Shared\SharedCore.Application\SharedCore.Application.csproj", "{F1B304DF-04F1-4652-9470-70DAD4FE7E8D}"
 EndProject
@@ -182,17 +182,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedPresentation.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary.Application", "Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj", "{5C854737-D7A6-4BA2-896D-BED4A86DBBE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Application", "BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj", "{F0AA6928-A305-472E-BA0E-FDB7B6163E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedAuth.Application", "Shared\BoundedContexts\AuthBoundedContext\Shared\SharedAuth.Application\SharedAuth.Application.csproj", "{F0AA6928-A305-472E-BA0E-FDB7B6163E40}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setup.Server", "Setups\Setup\Server\Setup.Server.csproj", "{D63DDF85-FE9C-48F2-A1AC-D83492FB1E93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Application", "BoundedContexts\MapBoundedContext\Shared\SharedMap.Application\SharedMap.Application.csproj", "{858F4E84-7FF2-420A-B27D-F40D7F90226F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Application", "Shared\BoundedContexts\MapBoundedContext\Shared\SharedMap.Application\SharedMap.Application.csproj", "{858F4E84-7FF2-420A-B27D-F40D7F90226F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Domain", "BoundedContexts\MapBoundedContext\Shared\SharedMap.Domain\SharedMap.Domain.csproj", "{779D0E1C-E91C-42B5-86CD-46D06F8100F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Domain", "Shared\BoundedContexts\MapBoundedContext\Shared\SharedMap.Domain\SharedMap.Domain.csproj", "{779D0E1C-E91C-42B5-86CD-46D06F8100F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Infrastructure", "BoundedContexts\MapBoundedContext\Shared\SharedMap.Infrastructure\SharedMap.Infrastructure.csproj", "{D202617D-FB3E-4E81-AD86-12009638C2A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedMap.Infrastructure", "Shared\BoundedContexts\MapBoundedContext\Shared\SharedMap.Infrastructure\SharedMap.Infrastructure.csproj", "{D202617D-FB3E-4E81-AD86-12009638C2A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.IntegrationEvents", "BoundedContexts\MapBoundedContext\Map.IntegrationEvents\Map.IntegrationEvents.csproj", "{450F4C15-6616-4050-8270-6ABFF9E52AE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Map.IntegrationEvents", "Shared\BoundedContexts\MapBoundedContext\Map.IntegrationEvents\Map.IntegrationEvents.csproj", "{450F4C15-6616-4050-8270-6ABFF9E52AE8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth.Setup", "Auth.Setup", "{1F82033E-1EB2-41E7-9740-7DB6C49AC168}"
 EndProject
@@ -204,55 +204,55 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Setup.Shared", "Apps\A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__EBN__BoundedContext_gen_", "__EBN__BoundedContext_gen_", "{340EC944-F910-40E3-8B7F-E91CF8CDE794}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Application", "BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Application\__Entities_BoundedContext_Name__.Application.csproj", "{CAF34FE3-6A9D-46AA-98F1-2B6D3BD35B5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Application", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Application\__Entities_BoundedContext_Name__.Application.csproj", "{CAF34FE3-6A9D-46AA-98F1-2B6D3BD35B5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Domain", "BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Domain\__Entities_BoundedContext_Name__.Domain.csproj", "{67FB02BF-2E02-4A23-9FA8-0A1F97A86643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Domain", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Domain\__Entities_BoundedContext_Name__.Domain.csproj", "{67FB02BF-2E02-4A23-9FA8-0A1F97A86643}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Infrastructure", "BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Infrastructure\__Entities_BoundedContext_Name__.Infrastructure.csproj", "{18D72F3F-86D4-4A65-A1F9-D7380DEF5040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.Infrastructure", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.Infrastructure\__Entities_BoundedContext_Name__.Infrastructure.csproj", "{18D72F3F-86D4-4A65-A1F9-D7380DEF5040}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D2568547-AA66-422C-B61C-1A20F99D3F74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Application", "BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Application\Shared__Entities_BoundedContext_Name__.Application.csproj", "{6926BB6E-471C-42D3-92CF-953B6E4C3139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Application", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Application\Shared__Entities_BoundedContext_Name__.Application.csproj", "{6926BB6E-471C-42D3-92CF-953B6E4C3139}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Domain", "BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Domain\Shared__Entities_BoundedContext_Name__.Domain.csproj", "{23AF3D3A-8077-422F-BEB4-A408D1D1881B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Domain", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Domain\Shared__Entities_BoundedContext_Name__.Domain.csproj", "{23AF3D3A-8077-422F-BEB4-A408D1D1881B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Infrastructure", "BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Infrastructure\Shared__Entities_BoundedContext_Name__.Infrastructure.csproj", "{E3C1C63D-8B38-4CC2-A77B-A5A153F2F1B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared__Entities_BoundedContext_Name__.Infrastructure", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Shared\Shared__Entities_BoundedContext_Name__.Infrastructure\Shared__Entities_BoundedContext_Name__.Infrastructure.csproj", "{E3C1C63D-8B38-4CC2-A77B-A5A153F2F1B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.IntegrationEvents", "BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.IntegrationEvents\__Entities_BoundedContext_Name__.IntegrationEvents.csproj", "{4A43E413-1ACC-4CBE-9BC9-1607DB2688E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.IntegrationEvents", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\__Entities_BoundedContext_Name__.IntegrationEvents\__Entities_BoundedContext_Name__.IntegrationEvents.csproj", "{4A43E413-1ACC-4CBE-9BC9-1607DB2688E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{73CB8CBD-916C-467E-B65C-5C009374B4A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.IntegrationTests", "BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.IntegrationTests\__Entities_BoundedContext_Name__.IntegrationTests.csproj", "{CF9413D7-1B05-4391-AD53-C9BB8FC34316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.IntegrationTests", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.IntegrationTests\__Entities_BoundedContext_Name__.IntegrationTests.csproj", "{CF9413D7-1B05-4391-AD53-C9BB8FC34316}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.UnitTests", "BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.UnitTests\__Entities_BoundedContext_Name__.UnitTests.csproj", "{B8BB30FE-29D4-49A4-A3FF-E261A66B3BFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.UnitTests", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.UnitTests\__Entities_BoundedContext_Name__.UnitTests.csproj", "{B8BB30FE-29D4-49A4-A3FF-E261A66B3BFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.ArchTests", "BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.ArchTests\__Entities_BoundedContext_Name__.ArchTests.csproj", "{E7C5D921-E591-46EC-B3B9-167DF4B1AA1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "__Entities_BoundedContext_Name__.ArchTests", "Shared\BoundedContexts\__EBN__BoundedContext_gen_\Tests\__Entities_BoundedContext_Name__.ArchTests\__Entities_BoundedContext_Name__.ArchTests.csproj", "{E7C5D921-E591-46EC-B3B9-167DF4B1AA1F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmailBoundedContext", "EmailBoundedContext", "{44233373-6946-48D3-BBB5-79782A934FE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A8C9FD57-50AF-48BF-AC72-07A04428AFF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Domain", "BoundedContexts\EmailBoundedContext\Email.Domain\Email.Domain.csproj", "{79C0254D-7D28-4A25-A487-F9D5AD52FCFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Domain", "Shared\BoundedContexts\EmailBoundedContext\Email.Domain\Email.Domain.csproj", "{79C0254D-7D28-4A25-A487-F9D5AD52FCFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E86C3416-C5A6-4160-A7CF-9BAE60735B2E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Application", "BoundedContexts\EmailBoundedContext\Email.Application\Email.Application.csproj", "{3DADF0BE-B5AF-4352-953C-95954DF60B2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Application", "Shared\BoundedContexts\EmailBoundedContext\Email.Application\Email.Application.csproj", "{3DADF0BE-B5AF-4352-953C-95954DF60B2D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Infrastructure", "BoundedContexts\EmailBoundedContext\Email.Infrastructure\Email.Infrastructure.csproj", "{42B5F8A0-7C1E-4C8E-B419-AF31F163716D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.Infrastructure", "Shared\BoundedContexts\EmailBoundedContext\Email.Infrastructure\Email.Infrastructure.csproj", "{42B5F8A0-7C1E-4C8E-B419-AF31F163716D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.IntegrationEvents", "BoundedContexts\EmailBoundedContext\Email.IntegrationEvents\Email.IntegrationEvents.csproj", "{732E1145-E54A-4D47-A469-0D9BD1E3226C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.IntegrationEvents", "Shared\BoundedContexts\EmailBoundedContext\Email.IntegrationEvents\Email.IntegrationEvents.csproj", "{732E1145-E54A-4D47-A469-0D9BD1E3226C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Domain", "BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Domain\SharedEmail.Domain.csproj", "{635D5947-263B-4582-8164-741C60FD1370}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Domain", "Shared\BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Domain\SharedEmail.Domain.csproj", "{635D5947-263B-4582-8164-741C60FD1370}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Application", "BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Application\SharedEmail.Application.csproj", "{684A4C6E-6DAC-4734-979F-C01E9F90ABA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Application", "Shared\BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Application\SharedEmail.Application.csproj", "{684A4C6E-6DAC-4734-979F-C01E9F90ABA9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Infrastructure", "BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Infrastructure\SharedEmail.Infrastructure.csproj", "{87C19911-3A73-4AB4-9FF2-FFB6DBDA9AA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedEmail.Infrastructure", "Shared\BoundedContexts\EmailBoundedContext\Shared\SharedEmail.Infrastructure\SharedEmail.Infrastructure.csproj", "{87C19911-3A73-4AB4-9FF2-FFB6DBDA9AA1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.UnitTests", "BoundedContexts\EmailBoundedContext\Tests\Email.UnitTests\Email.UnitTests.csproj", "{FC662502-FDEE-4005-A886-3A7607D4096D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.UnitTests", "Shared\BoundedContexts\EmailBoundedContext\Tests\Email.UnitTests\Email.UnitTests.csproj", "{FC662502-FDEE-4005-A886-3A7607D4096D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.IntegrationTests", "BoundedContexts\EmailBoundedContext\Tests\Email.IntegrationTests\Email.IntegrationTests.csproj", "{AC3FDFDB-F874-4433-8F2C-9FD1D8154EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.IntegrationTests", "Shared\BoundedContexts\EmailBoundedContext\Tests\Email.IntegrationTests\Email.IntegrationTests.csproj", "{AC3FDFDB-F874-4433-8F2C-9FD1D8154EF7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.ArchTests", "BoundedContexts\EmailBoundedContext\Tests\Email.ArchTests\Email.ArchTests.csproj", "{6A6F6DF9-61F3-4819-8286-4D4F46DFA454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Email.ArchTests", "Shared\BoundedContexts\EmailBoundedContext\Tests\Email.ArchTests\Email.ArchTests.csproj", "{6A6F6DF9-61F3-4819-8286-4D4F46DFA454}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "Docker\docker-compose.dcproj", "{C0E87997-4B94-4DCB-BC52-97FB937C9ACC}"
 EndProject
@@ -287,25 +287,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6BC20BFF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{98E2923E-CF14-474B-B492-D1464D95FF7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Domain", "BoundedContexts\ShopBoundedContext\Shop.Domain\Shop.Domain.csproj", "{91CF6AD0-70DD-4FD5-B68C-8CECB64A5572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Domain", "Shared\BoundedContexts\ShopBoundedContext\Shop.Domain\Shop.Domain.csproj", "{91CF6AD0-70DD-4FD5-B68C-8CECB64A5572}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Application", "BoundedContexts\ShopBoundedContext\Shop.Application\Shop.Application.csproj", "{8A83B0BF-1620-4659-9882-E345134FC4E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Application", "Shared\BoundedContexts\ShopBoundedContext\Shop.Application\Shop.Application.csproj", "{8A83B0BF-1620-4659-9882-E345134FC4E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Infrastructure", "BoundedContexts\ShopBoundedContext\Shop.Infrastructure\Shop.Infrastructure.csproj", "{BE38F719-0015-435C-BECB-C84323813DC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.Infrastructure", "Shared\BoundedContexts\ShopBoundedContext\Shop.Infrastructure\Shop.Infrastructure.csproj", "{BE38F719-0015-435C-BECB-C84323813DC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.IntegrationEvents", "BoundedContexts\ShopBoundedContext\Shop.IntegrationEvents\Shop.IntegrationEvents.csproj", "{07A87137-6C80-4A69-8D26-DA1D57886883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.IntegrationEvents", "Shared\BoundedContexts\ShopBoundedContext\Shop.IntegrationEvents\Shop.IntegrationEvents.csproj", "{07A87137-6C80-4A69-8D26-DA1D57886883}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Domain", "BoundedContexts\ShopBoundedContext\Shared\SharedShop.Domain\SharedShop.Domain.csproj", "{4B56B44D-13A2-4211-A49F-BC361FB45A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Domain", "Shared\BoundedContexts\ShopBoundedContext\Shared\SharedShop.Domain\SharedShop.Domain.csproj", "{4B56B44D-13A2-4211-A49F-BC361FB45A79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Application", "BoundedContexts\ShopBoundedContext\Shared\SharedShop.Application\SharedShop.Application.csproj", "{6A76F18A-F436-4EFF-B60C-86741846E5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Application", "Shared\BoundedContexts\ShopBoundedContext\Shared\SharedShop.Application\SharedShop.Application.csproj", "{6A76F18A-F436-4EFF-B60C-86741846E5EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Infrastructure", "BoundedContexts\ShopBoundedContext\Shared\SharedShop.Infrastructure\SharedShop.Infrastructure.csproj", "{0BE149F1-9E27-4458-849F-6B71DAC1AEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedShop.Infrastructure", "Shared\BoundedContexts\ShopBoundedContext\Shared\SharedShop.Infrastructure\SharedShop.Infrastructure.csproj", "{0BE149F1-9E27-4458-849F-6B71DAC1AEAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.UnitTests", "BoundedContexts\ShopBoundedContext\Tests\Shop.UnitTests\Shop.UnitTests.csproj", "{9A4916EE-0886-484C-8769-D4EEE8F6D3A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.UnitTests", "Shared\BoundedContexts\ShopBoundedContext\Tests\Shop.UnitTests\Shop.UnitTests.csproj", "{9A4916EE-0886-484C-8769-D4EEE8F6D3A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.IntegrationTests", "BoundedContexts\ShopBoundedContext\Tests\Shop.IntegrationTests\Shop.IntegrationTests.csproj", "{001A2189-3FA4-4DA2-BD96-B03BC011B1D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.IntegrationTests", "Shared\BoundedContexts\ShopBoundedContext\Tests\Shop.IntegrationTests\Shop.IntegrationTests.csproj", "{001A2189-3FA4-4DA2-BD96-B03BC011B1D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.ArchTests", "BoundedContexts\ShopBoundedContext\Tests\Shop.ArchTests\Shop.ArchTests.csproj", "{4EB678EC-2354-4904-825B-03E289189F74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop.ArchTests", "Shared\BoundedContexts\ShopBoundedContext\Tests\Shop.ArchTests\Shop.ArchTests.csproj", "{4EB678EC-2354-4904-825B-03E289189F74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Setup.Server", "Apps\BlazorApp\BlazorApp.Setup\Server\BlazorApp.Setup.Server.csproj", "{2F8735BC-8019-4D03-A462-6D9106F8F43B}"
 EndProject
