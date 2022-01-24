@@ -213,7 +213,8 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                         text: text,
                         codeType: codeType,
                         templateInfos: listOfTokenInfos,
-                        file: file
+                        file: file,
+                        data: data
                     );
 
                     var processedText = ProcessContentsPathsAndContentsResult.ProcessedText;

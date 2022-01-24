@@ -16,7 +16,8 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 string text,
                 TemplateCodeType codeType,
                 List<TemplateTokenInfo> templateInfos,
-                TemplateFile file
+                TemplateFile file,
+                TemplateData data
         )
         {
             text = codeType.RemoveTemplatePostfix(inputString: text, isPath: false);
