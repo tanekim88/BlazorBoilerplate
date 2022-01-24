@@ -19,7 +19,7 @@ namespace Setup.Server
                 args: new[]
                 {
                                 "-g",
-                                "-f", @"C:\app\languages\csharp\BoundedContexts\__EBN__BoundedContext_gen_",           
+                                "-f", @"C:\app\languages\csharp\Shared\BoundedContexts\__EBN__BoundedContext_gen_",           
                 },
                 dependentProjects: new List<TemplateProject>
                 {

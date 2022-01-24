@@ -24,21 +24,21 @@
 		<PackageReference Include="DocumentFormat.OpenXml" Version="2.15.0" />
 		<PackageReference Include="DynamicExpresso.Core" Version="2.10.0" />
 		<PackageReference Include="EPPlus" Version="5.8.5" />
-		<PackageReference Include="GreenDonut" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.AspNetCore" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.6.0-preview.5" />
+		<PackageReference Include="GreenDonut" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.AspNetCore" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.6.0-preview.7" />
 		<PackageReference Include="HotChocolate.AspNetCore.GraphiQL" Version="10.5.5" />
 		<PackageReference Include="HotChocolate.AspNetCore.Voyager" Version="10.5.5" />
-		<PackageReference Include="HotChocolate.Data" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Subscriptions" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Types" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Types.Filters" Version="12.6.0-preview.5" />
-		<PackageReference Include="HotChocolate.Types.Sorting" Version="12.6.0-preview.5" />
+		<PackageReference Include="HotChocolate.Data" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.PersistedQueries.FileSystem" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.PersistedQueries.Redis" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Subscriptions" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Subscriptions.Redis" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Types" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Types.Filters" Version="12.6.0-preview.7" />
+		<PackageReference Include="HotChocolate.Types.Sorting" Version="12.6.0-preview.7" />
 		<PackageReference Include="Humanizer" Version="2.13.14" />
 		<PackageReference Include="ICSharpCode.Decompiler" Version="7.2.0.6791-preview3" />
 		<PackageReference Include="IdentityModel" Version="6.0.0" />

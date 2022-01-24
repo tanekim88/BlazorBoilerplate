@@ -1,4 +1,3 @@
-//%runIf: !Context.Entity.ShouldNotGenerate
 //%S:begin Header
 //%S:end Header
 

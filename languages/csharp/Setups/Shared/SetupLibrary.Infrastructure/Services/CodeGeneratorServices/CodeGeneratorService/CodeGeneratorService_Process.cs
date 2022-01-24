@@ -39,25 +39,26 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var context = (await CreateContext(file)).Context;
                 data.Context = context;
 
-
                 var result = await ProcessRefAsync(data, allFiles);
 
-
-                var shouldRun = (await ProcessRunIf(data)).ShouldRun;
-
-                if (!shouldRun)
-                {
-                    continue;
-                }
-
                 var processPathsOutput = await ProcessPaths(
+                    file: file,
                     data: data
                 );
 
                 var contentResult = await ProcessContents(
+                    file: file,
                     data: data,
                     localTemplateInfosForPaths: processPathsOutput.LocalTemplateInfos
                 );
+
+                //var shouldRun = (await ProcessRunIf(data)).ShouldRun;
+
+                //if (!shouldRun)
+                //{
+                //    continue;
+                //}
+
 
                 var templateInfos = contentResult.LocalTemplateInfos;
 

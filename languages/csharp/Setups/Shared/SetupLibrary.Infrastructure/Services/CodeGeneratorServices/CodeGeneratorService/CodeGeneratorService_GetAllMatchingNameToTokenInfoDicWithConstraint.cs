@@ -17,7 +17,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     public partial class CodeGeneratorService
     {
         public List<TemplateTokenInfo> GetAllMatchingNameToTokenInfoDicWithConstraint(
-            TemplateContext context,
             bool isPath,
             TemplateTokenInfo matchingToken,
             TemplateCodeType codeType,
@@ -87,8 +86,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
             var objectType = obj.GetType();
 
-            if (obj is TemplateContext) obj = context;
-
             var matchingPropertyPaths = matchingToken.PropertyPaths;
             var currentName = matchingToken.CurrentName;
 
@@ -129,7 +126,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             clonedMatchingToken.PropertyPaths = restPaths;
 
                             GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                context: context,
                                 isPath: isPath,
                                 matchingToken: clonedMatchingToken,
                                 codeType: codeType,
@@ -172,7 +168,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             clonedMatchingToken.PropertyPaths = restPaths;
 
                             GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                context: context,
                                 isPath: isPath,
                                 matchingToken: clonedMatchingToken,
                                 codeType: codeType,
@@ -222,7 +217,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                      firstPropertyPath +
                                      secondPropertyPath + foundIndex;
                             GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                context: context,
                                 isPath: isPath,
                                 matchingToken: clonedMatchingToken,
                                 codeType: codeType,
@@ -264,7 +258,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                 clonedMatchingToken.PropertyPaths = restPaths;
 
                                 GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                    context: context,
                                     isPath: isPath,
                                     matchingToken: clonedMatchingToken,
                                     codeType: codeType,
@@ -341,7 +334,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                 var id = currentName + string.Join(separator: '_', values: parentIds) + '_' +
                                          firstPropertyPath + i;
                                 GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                    context: context,
                                     isPath: isPath,
                                     matchingToken: clonedMatchingToken,
                                     codeType: codeType,
@@ -368,7 +360,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                 var id = ObjectIdService.GetId(obj: foundElem);
 
                                 GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                    context: context,
                                     isPath: isPath,
                                     matchingToken: clonedMatchingToken,
                                     codeType: codeType,
@@ -410,7 +401,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                              firstPropertyPath +
                                              i;
                                     GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                        context: context,
                                         isPath: isPath,
                                         matchingToken: clonedMatchingToken,
                                         codeType: codeType,
@@ -438,7 +428,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                              firstPropertyPath +
                                              i;
                                     GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                        context: context,
                                         isPath: isPath,
                                         matchingToken: clonedMatchingToken,
                                         codeType: codeType,
@@ -476,7 +465,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                                 i++;
 
                                 GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                    context: context,
                                     isPath: isPath,
                                     matchingToken: matchingToken,
                                     codeType: codeType,
@@ -521,7 +509,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             clonedMatchingToken.PropertyPaths = restPaths;
 
                             GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                context: context,
                                 isPath: isPath,
                                 matchingToken: clonedMatchingToken,
                                 codeType: codeType,
@@ -548,7 +535,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             var id = ObjectIdService.GetId(obj: propObj);
 
                             GetAllMatchingNameToTokenInfoDicWithConstraint(
-                                context: context,
                                 isPath: isPath,
                                 matchingToken: clonedMatchingToken,
                                 codeType: codeType,

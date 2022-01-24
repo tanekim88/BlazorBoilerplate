@@ -16,12 +16,11 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
     public partial class CodeGeneratorService
     {
         public async Task<ProcessContentsOutput> ProcessContents(
+             TemplateFile file,
              TemplateData data,
              List<LocalTemplateInfo> localTemplateInfosForPaths
             )
         {
-            var file = data.Context.File;
-
             var codeType = file.CodeType;
 
             var toReturn = localTemplateInfosForPaths.SelectMany(selector: localTemplateInfForPath =>
@@ -29,9 +28,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var text = localTemplateInfForPath.TemplateContent;
                 var sections = localTemplateInfForPath.Sections;
                 var templateSections = localTemplateInfForPath.TemplateSections;
-                var listOfTokenInfosUsedForPath = localTemplateInfForPath.ListOfTokenInfosUsedForPath;
-
-
+       
                 var preparedTextString = codeType.RemoveTemplatePostfix(inputString: text, isPath: false);
                 var contentMatches = Regex.Matches(input: preparedTextString,
                     pattern: codeType.GetTemplateName(
@@ -69,12 +66,11 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 var tokenInfosForContent = matchingTokenInfosForContent.SelectMany(selector: tokenInfo =>
                 {
                     var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
-                             context: data.Context,
                              isPath: true,
                              matchingToken: tokenInfo,
                              codeType: codeType,
                              text: file.Path,
-                             obj: tokenInfo,
+                             obj: data,
                              constraints: null,
                              parentName: null,
                              parentPropertyPaths: new List<string>());
@@ -223,7 +219,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     return new LocalTemplateInfo
                     {
                         Id = localTemplateInfForPath.InputFilePath + "__" + Guid.NewGuid(),
-                        Context = file.Context,
+                        Data = data,
                         InputFilePath = localTemplateInfForPath.InputFilePath,
                         OutputFilePath = localTemplateInfForPath.OutputFilePath,
                         ShouldOverride = file.ShouldOverWrite,

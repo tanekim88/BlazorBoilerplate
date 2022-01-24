@@ -28,7 +28,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             public string TemplatePath { get; set; }
             public string GenType { get; set; }
         }
-        public async Task<CreateParametersOutput> CreateParameters(
+        public async Task<CreateParametersOutput> CreateData(
             List<string> templateFilePaths,
             List<TemplateProject> dependentProjects
         )
@@ -39,11 +39,16 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
                 var genType = match.Groups["genType"].Value;
 
-                if (!File.Exists(templatePath))
+                if (Directory.Exists(templatePath))
                 {
-
                     var files = Directory.EnumerateFiles(templatePath, "*", SearchOption.AllDirectories).Select(subFilePath =>
                     {
+                        if (subFilePath.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}") ||
+                            subFilePath.Contains($"{Path.DirectorySeparatorChar}obj{Path.DirectorySeparatorChar}"))
+                        {
+                            return null;
+                        }
+
                         var match2 = Regex.Match(subFilePath, @"_\w*(?<genType>[Gg]en)_(\.\w+)?$");
 
                         var genType2 = match.Groups["genType"].Value;
@@ -55,10 +60,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             TemplatePath = subFilePath,
                             GenType = finalGenType
                         };
-                    }).Where(file => 
-                    !file.TemplatePath.Contains($"{Path.DirectorySeparatorChar}bin{Path.DirectorySeparatorChar}")&&
-                     !file.TemplatePath.Contains($"{Path.DirectorySeparatorChar}obj{Path.DirectorySeparatorChar}")
-                    );
+                    }).Where(file => file is not null);
 
                     return files;
 
@@ -250,7 +252,6 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
             {
                 var newEntity = new TemplateEntity
                 {
-                    ShouldNotGenerate = true,
                     Name = "Sample",
                     BoundedContext = new TemplateBoundedContext
                     {

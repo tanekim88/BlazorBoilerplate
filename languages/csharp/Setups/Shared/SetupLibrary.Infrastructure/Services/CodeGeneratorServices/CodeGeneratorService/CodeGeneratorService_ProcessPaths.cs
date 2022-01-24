@@ -20,7 +20,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
         public string OutputFilePath { get; set; }
         public string TemplateContent { get; set; }
         public string TargetFileContent { get; set; }
-        public TemplateContext Context { get; set; }
+        public TemplateData Data { get; set; }
         public bool ShouldOverride { get; set; }
         public List<string> Sections { get; set; }
         public List<string> TemplateSections { get; set; }
@@ -29,9 +29,10 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
     public partial class CodeGeneratorService
     {
-        public async Task<ProcessPathsOutput> ProcessPaths(TemplateData data)
+        public async Task<ProcessPathsOutput> ProcessPaths(
+            TemplateFile file,
+            TemplateData data)
         {
-            var file = data.Context.File;
             var codeType = file.CodeType;
 
             var textString = file.Content;
@@ -74,16 +75,15 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
 
             var tokenInfosForPath = matchingTokenInfosForPath.SelectMany(selector: tokenInfo =>
             {
-               var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
-                        context: data.Context,
-                        isPath: true,
-                        matchingToken: tokenInfo,
-                        codeType: codeType,
-                        text: file.Path,
-                        obj: tokenInfo,
-                        constraints: null,
-                        parentName: null,
-                        parentPropertyPaths: new List<string>());
+                var toReturn = GetAllMatchingNameToTokenInfoDicWithConstraint(
+                         isPath: true,
+                         matchingToken: tokenInfo,
+                         codeType: codeType,
+                         text: file.Path,
+                         obj: data,
+                         constraints: null,
+                         parentName: null,
+                         parentPropertyPaths: new List<string>());
 
                 return toReturn;
             }).ToList();
@@ -235,7 +235,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                     return new LocalTemplateInfo
                     {
                         Id = Guid.NewGuid().ToString(),
-                        Context = data.Context,
+                        Data = data,
                         InputFilePath = file.TemplatePath,
                         OutputFilePath = filePath,
                         ShouldOverride = file.ShouldOverWrite,

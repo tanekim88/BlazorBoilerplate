@@ -15,7 +15,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 List<TemplateProject> dependentProjects
             )
         {
-            var result = await CreateParameters(
+            var result = await CreateData(
                 templateFilePaths: templatePaths, dependentProjects: dependentProjects
                 );
 
