@@ -110,7 +110,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                             );
 
                         file.Content = applySectionCommandResult.ProcessedContent;
-                        file.TemplateSections = applySectionCommandResult.FoundSections;
+                        file.TemplateSections = applySectionCommandResult.FoundSections.Select(section => new TemplateSection { Name = section }).ToList();
                     }
                 }
             }
@@ -173,7 +173,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
                 );
 
                 file.Content = result2.ProcessedContent;
-                file.TemplateSections = result2.FoundSections;
+                file.TemplateSections = result2.FoundSections.Select(section => new TemplateSection { Name = section }).ToList();
             }
             else
             {

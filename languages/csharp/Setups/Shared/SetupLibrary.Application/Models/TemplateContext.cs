@@ -27,12 +27,6 @@ namespace SetupLibrary.Application.Models
         [DataMember] public TemplateProject SharedInfrastructureProject { get; set; }
 
 
-        [DataMember] public List<TemplateSection> Sections { get; set; }
-        [DataMember] public Dictionary<string, TemplateSection> SectionsDict { get; set; }
-
-        [DataMember] public List<TemplateSection> TemplateSections { get; set; }
-        [DataMember] public Dictionary<string, TemplateSection> TemplateSectionsDict { get; set; }
-
         public object Clone()
         {
             return MemberwiseClone();
@@ -65,18 +59,24 @@ namespace SetupLibrary.Application.Models
         {
             var names = typeof(TemplateData).GetProperties().Select(selector: p => p.Name.Singularize()).ToList();
 
-            var toReturn = (TemplateContext) MemberwiseClone();
+            var toReturn = (TemplateContext)MemberwiseClone();
             var objectType = obj.GetType();
             var currentProperties = GetType().GetProperties();
 
             foreach (var propertyInfo in currentProperties)
+            {
                 if (propertyInfo.PropertyType == objectType)
+                {
                     if (propertyInfo.Name != nameof(Project) && propertyInfo.Name != nameof(File))
+                    {
                         if (names.Contains(item: propertyInfo.Name))
                         {
                             propertyInfo.SetValue(obj: toReturn, value: obj);
                             return toReturn;
                         }
+                    }
+                }
+            }
 
             return this;
         }

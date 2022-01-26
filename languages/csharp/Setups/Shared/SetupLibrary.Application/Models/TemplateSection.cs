@@ -10,5 +10,6 @@ namespace SetupLibrary.Application.Models
     public class TemplateSection
     {
         [DataMember] public string Name { get; set; }
+        [DataMember] public string Value { get; set; }
     }
 }

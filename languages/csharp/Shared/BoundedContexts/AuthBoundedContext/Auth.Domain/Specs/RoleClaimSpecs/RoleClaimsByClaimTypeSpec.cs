@@ -11,7 +11,7 @@ namespace Auth.Domain.Specs.RoleClaimSpecs
     {
         public RoleClaimsByClaimTypeSpec(string claimType)
         {
-            Query.Where(RoleClaim => RoleClaim.ClaimType == claimType);
+            Query.Where(roleClaim => roleClaim.ClaimType == claimType);
         }
     }
 }

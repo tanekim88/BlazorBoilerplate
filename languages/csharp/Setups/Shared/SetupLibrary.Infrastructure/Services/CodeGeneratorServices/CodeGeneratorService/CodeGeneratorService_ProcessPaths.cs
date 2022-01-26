@@ -23,7 +23,7 @@ namespace SetupLibrary.Infrastructure.Services.CodeGeneratorServices
         public TemplateData Data { get; set; }
         public bool ShouldOverride { get; set; }
         public List<string> Sections { get; set; }
-        public List<string> TemplateSections { get; set; }
+        public List<TemplateSection> TemplateSections { get; set; }
         public List<TemplateTokenInfo> ListOfTokenInfosUsedForPath { get; set; }
     }
 

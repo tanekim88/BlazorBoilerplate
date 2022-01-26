@@ -63,9 +63,9 @@ namespace SetupLibrary.Application.Models
         public string SingLineCommentSymbol { get; set; } = "//";
         public string MultiLineCommentBeginSymbol { get; set; } = "/*";
         public string MultiLineCommentEndSymbol { get; set; } = "*/";
-        public string T4TemplateExpressionCodePrefix { get; set; } = "<#=";
-        public string T4TemplateCodePrefix { get; set; } = "<#";
-        public string T4TemplateCodePostfix { get; set; } = "#>";
+        public string T4TemplateExpressionCodePrefix { get; set; } = "{{";
+        public string T4TemplateCodePrefix { get; set; } = "{{";
+        public string T4TemplateCodePostfix { get; set; } = "}}";
         public string CSharpExpressionPrefix { get; set; } = "CSBEGIN";
         public string CSharpExpressionPostfix { get; set; } = "CSEND";
         public string CSharpExpressionDotSymbol { get; set; } = "_";
@@ -251,7 +251,7 @@ namespace SetupLibrary.Application.Models
             )
         {
             HashSet<string> foundSectionNames = new();
-            if (sourceContent.Contains(value: "Url")) Console.WriteLine();
+  
             Func<string, string, string?, string> regexFunc = (sectionBeginCommand, sectionEndCommand, name) =>
             {
                 var nameRegex = string.IsNullOrEmpty(value: name) ? @"(?<name>\w+)" : name;
@@ -387,7 +387,7 @@ namespace SetupLibrary.Application.Models
         public string AlignSingleLineTemplateCommands(string intputString)
         {
             if (!string.IsNullOrEmpty(value: SingLineCommentSymbol))
-                intputString = Regex.Replace(input: intputString, pattern: @"^\s*<#([^=])", replacement: "<#$1",
+                intputString = Regex.Replace(input: intputString, pattern: @"^\s*{{([^=])", replacement: "{{$1",
                     options: RegexOptions.Multiline);
 
             return intputString;
@@ -418,16 +418,16 @@ namespace SetupLibrary.Application.Models
 
         public string ActivateTemplateSyntaxByUncommenting(string intputString)
         {
-            var toReturn = Regex.Replace(input: intputString, pattern: @$"{Regex.Escape(str: SingLineCommentSymbol)}<#",
-                replacement: "<#");
+            var toReturn = Regex.Replace(input: intputString, pattern: @$"{Regex.Escape(str: SingLineCommentSymbol)}{{{{",
+                replacement: "{{");
             toReturn = Regex.Replace(input: toReturn,
                 pattern:
-                @$"{Regex.Escape(str: MultiLineCommentBeginSymbol)}<#(?<Content>.*?){Regex.Escape(str: MultiLineCommentEndSymbol)}",
-                replacement: "<#${Content}", options: RegexOptions.Multiline);
+                @$"{Regex.Escape(str: MultiLineCommentBeginSymbol)}{{{{(?<Content>.*?){Regex.Escape(str: MultiLineCommentEndSymbol)}",
+                replacement: "{{${Content}", options: RegexOptions.Multiline);
             toReturn = Regex.Replace(input: toReturn,
                 pattern:
-                @$"{Regex.Escape(str: MultiLineCommentBeginSymbol)}(?<Content>.*?)#>{Regex.Escape(str: MultiLineCommentEndSymbol)}",
-                replacement: "${Content}#>");
+                @$"{Regex.Escape(str: MultiLineCommentBeginSymbol)}(?<Content>.*?)}}}}{Regex.Escape(str: MultiLineCommentEndSymbol)}",
+                replacement: "${Content}}}");
             return toReturn;
         }
 

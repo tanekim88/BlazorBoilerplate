@@ -1,5 +1,4 @@
-﻿
-using Core.Domain;
+﻿using Core.Domain;
 
 namespace __Entities_BoundedContext_Name__.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids
 {

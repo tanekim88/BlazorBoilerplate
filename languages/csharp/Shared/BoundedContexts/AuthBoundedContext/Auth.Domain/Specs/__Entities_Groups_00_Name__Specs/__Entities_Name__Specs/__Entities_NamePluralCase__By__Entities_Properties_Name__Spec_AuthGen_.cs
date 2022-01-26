@@ -1,12 +1,18 @@
-﻿//%runIf: Data.Context.Project.Entities.Exists(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "__Entities_Groups_00_Name__" && entity.Name == "__Entities_Name__" && entity.Properties.Exists(property => property.Name == "__Entities_Properties_Name__" && (property.IsSimpleType || property.IsValueObject )))
-//<# var entity = Data.Context.Project.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "__Entities_Groups_00_Name__" && entity.Name == "__Entities_Name__"); #>
-//<# var property = entity.Properties.First(property => property.Name == "__Entities_Properties_Name__"); #>
-//<# var paramSig = property.Signature.Type + " " + (property.Name.ToLower()[0] + property.Name.Substring(1)); #>
-//<# var whereArgSig = "__Entities_NameCamelCase__ => __Entities_NameCamelCase__." + property.Signature.Name + " == " + (property.Name.ToLower()[0] + property.Name.Substring(1)); #>
+﻿//%runIf: Context.Property.IsSimpleType || Context.Property.IsValueObject 
 
-//<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
-//%u using <#= usedNamespace #>;
-//<# } #>
+
+/*{{
+paramSig = [ Context.Property.Signature.Type , " " , (Context.Property.Name[0] | string.downcase) , (Context.Property.Name | string.slice 1 )  ] | array.join ","
+whereArgSig = ["__Entities_NameCamelCase__ => __Entities_NameCamelCase__." , Context.Property.Signature.Name , " == " , (Context.Property.Name[0] | string.downcase), (Context.Property.Name | string.slice 1) ] | array.join ","
+}}*/
+
+
+/*%u
+{{~ for $usedNamespace in Context.Entity.UsedNamespaces ~}}
+using {{ $usedNamespace }};
+{{~ end ~}}
+*/
+
 using Ardalis.Specification;
 using Auth.Domain.Entities.__Entities_Groups_00_Name__Entities;
 
@@ -17,9 +23,9 @@ namespace Auth.Domain.Specs.__Entities_Groups_00_Name__Specs.__Entities_Name__Sp
     public sealed class __Entities_NamePluralCase__By__Entities_Properties_Name__Spec_AuthGen_
         : Specification<__Entities_Name___AuthGen_>
     {
-        public __Entities_NamePluralCase__By__Entities_Properties_Name__Spec_AuthGen_(/*<#= paramSig #>*/)
+        public __Entities_NamePluralCase__By__Entities_Properties_Name__Spec_AuthGen_(/*{{ paramSig }}*/)
         {
-            //%u Query.Where(<#= whereArgSig #>);
+            //%u Query.Where({{ whereArgSig }});
         }
     }
 }

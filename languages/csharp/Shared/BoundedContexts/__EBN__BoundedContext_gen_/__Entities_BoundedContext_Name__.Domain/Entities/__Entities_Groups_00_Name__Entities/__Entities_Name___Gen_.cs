@@ -1,47 +1,64 @@
 ﻿
 //%t:begin Intro
-//<# var entity = Data.Entities.Find(entity => string.Join(".", entity.Groups.Select(group => group.Name)) == "__Entities_Groups_00_Name__" && entity.Name == "__Entities_Name__" && entity.BoundedContext.Name == "__Entities_BoundedContext_Name__"); #>
-//<# var interfaces = entity.Interfaces.Select(i => i.Name); #>
-//<# var interfaces_by_comma = string.Join(",", interfaces); #>
-//<# var primaryKeySignatures = entity.Properties.Where(property => property.IsPrimaryKey).Select(primaryKey => primaryKey.Signature);  #>
 
-//<# var camelPrimaryKeyNames = primaryKeySignatures.Select(x => x.Name.Camelize()); #>
-//<# var camelPrimaryKeyNames_by_slash = string.Join("/", camelPrimaryKeyNames); #>
-//<# var camelPrimaryKeyNames_by_comma = string.Join(",", camelPrimaryKeyNames); #>
+/*{{ 
 
-//<# var camelPrimaryKeyFullNames = primaryKeySignatures.Select(x => x.FullType + " " + x.Name.Camelize()); #>
-//<# var camelPrimaryKeyFullNames_by_comma = string.Join(",", camelPrimaryKeyFullNames); #>
+interfaces = Context.Entity.Interfaces | array.map "Name" 
+interfaces_by_comma = interfaces | array.join ", "
 
-//<# var camelPrimaryKeyName_eq_entitiesName_dot_Names = primaryKeySignatures.Select(x => x.Name.Camelize() + " = " + entity.Name + "." + x.Name); #>
-//<# var camelPrimaryKeyName_eq_entitiesName_dot_Names_by_comma = string.Join(",", camelPrimaryKeyName_eq_entitiesName_dot_Names); #>
+func isPrimaryKey(property)
+   ret property.IsPrimaryKey
+end
+primaryKeySignatures = Context.Entity.Properties |  array.filter @isPrimaryKey | array.map "Signature"
 
-//<# var entitiesName_dot_Names = primaryKeySignatures.Select(x =>  entity.Name  + "." + x.Name); #>
-//<# var entitiesName_dot_Names_by_comma = string.Join(",", entitiesName_dot_Names); #>
+camelPrimaryKeyNames = primaryKeySignatures | array.map "Name" | array.camelize
 
-//<# var constructorParameters = entity.Properties.Where(property => ( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id").Select(property => property.Signature.Type + " " + (property.Name.ToLower()[0] + property.Name.Substring(1)) + (property.IsNullable ? " = null": "")); #>
-//<# var constructorParameters_by_comma = string.Join(",\n", constructorParameters); #>
+camelPrimaryKeyNames_by_slash = camelPrimaryKeyNames | array.join "/"
+camelPrimaryKeyNames_by_comma = camelPrimaryKeyNames | array.join ","
 
-//<# var constructorParametersForBody = entity.Properties.Where(property => ( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id")
-//%u .Select(property => {
-//%u    var fieldName = property.Name.ToLower()[0] + property.Name.Substring(1);
-//%u    var toReturn = property.Name + " = " + fieldName;
-//%u    if(property.IsEnumerableClass) { 
-//%u        toReturn = "_" + fieldName + " = " + fieldName;
-//%u            
-//%u    }
-//%u 
-//%u    return toReturn;
-//%u 
-//%u }); #>
-//<# var constructorParametersForBody_by_semicolumn = string.Join(";\n", constructorParametersForBody) + ";"; #>
+func camelPrimaryKeyFullNamesSelect(arg); ret [arg.FullType, " ", (arg.Name | string.camelize)] | array.join ""; end
+camelPrimaryKeyFullNames = primaryKeySignatures | array.select @camelPrimaryKeyFullNamesSelect
+camelPrimaryKeyFullNames_by_comma = camelPrimaryKeyFullNames | array.join ","
+
+camelPrimaryKeyName_eq_entitiesName_dot_Names = primaryKeySignatures.Select(x => x.Name.Camelize() + " = " + entity.Name + "." + x.Name); #>
+camelPrimaryKeyName_eq_entitiesName_dot_Names_by_comma = string.Join(",", camelPrimaryKeyName_eq_entitiesName_dot_Names); #>
+
+entitiesName_dot_Names = primaryKeySignatures.Select(x =>  entity.Name  + "." + x.Name); #>
+entitiesName_dot_Names_by_comma = string.Join(",", entitiesName_dot_Names); #>
+
+constructorParameters = entity.Properties.Where(property => ( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id").Select(property => property.Signature.Type + " " + (property.Name.ToLower()[0] + property.Name.Substring(1)) + (property.IsNullable ? " = null": "")); #>
+constructorParameters_by_comma = string.Join(",\n", constructorParameters); #>
+
+func isSimpleTypeAndValueObject(property)
+   ret (( property.IsSimpleType || property.IsValueObject ) && property.Name != "Id")
+end
+
+func constructorParametersForBodySelect(property)
+    fieldName = property.Name | string.camelize
+    if property.IsEnumerableClass 
+        toReturn = ["_", fieldName, " = ", fieldName] | array.join ""
+    else
+        toReturn = [property.Name , " = " , fieldName] | array.join ""
+    end
+ 
+    ret toReturn
+end
+
+constructorParametersForBody = Context.Entity.Properties | array.filter @isSimpleTypeAndValueObject | array.select @constructorParametersForBodySelect
+constructorParametersForBody_by_newline = constructorParametersForBody | array.join ";\n"
+constructorParametersForBody_by_newline_semicolumn = constructorParametersForBody_by_newline | string.append ";"
+}}*/
+
 //%t:end Intro
 
-//<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
-//%u using <#= usedNamespace #>;
-//<# } #>
+
+/*%u
+{{~ for $usedNamespace in Context.Entity.UsedNamespaces ~}}
+using {{ $usedNamespace }};
+{{~ end ~}}
+*/
 
 //%u using Core.Domain.Entities;
-
 //%S:begin Header
 //%S:end Header
 //%u using System.ComponentModel.DataAnnotations.Schema;
@@ -62,15 +79,21 @@ namespace __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_
         }
 
         public __Entities_Name___Gen_(
-        //<#= constructorParameters_by_comma #>
-        //<# if(constructorParameters.Count() > 0 && Data.Context.Sections.Exists(section => section.Name == "ConstructorParameters")) { #>
-        //%u ,
-        //<# } #>
+        /*{{ 
+            constructorParameters_by_comma
+
+            func doesConstructorParametersExists(section)
+                ret section.Name == "ConstructorParameters"
+            end
+
+            if (constructorParameters | array.size) > 0 && (Context.File.Sections | array.exists @doesConstructorParametersExists)
+            ,
+            end
+        }}*/
         /*%S:begin ConstructorParameters*/
+            
         /*%S:end ConstructorParameters*/
-        //<# if(constructorParameters.Count() > 0 || Data.Context.Sections.Exists(section => section.Name == "ConstructorParameters")) { #>
-        //%u ,
-        //<# } #>
+
         __Entities_Name__Id_Gen_? id = null
         )
         {
@@ -81,32 +104,28 @@ namespace __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_
 
             Id = id;
 
-            //<#= constructorParametersForBody_by_semicolumn #>
-
+            //{{ constructorParametersForBody_by_newline_semicolumn }}
             /*%S:begin ConstructorBody*/
             /*%S:end ConstructorBody*/
         }
 
-        //<# foreach(var property in entity.Properties) { #> 
-        //<# if( property.Name != "Id" ) { #>
-
-        //<# foreach(var attribute in property.Attributes ) { #> 
-        //<# if(attribute.IsDbType) { #>
-        //<#= attribute.Signature.NameAndArgumentsInsideBrackets ?? "" #>
-        //<# } #>
-        //<# } #>
-
-        //<# if(property.IsEnumerableClass) { #>
-        //%u private readonly <#= property.Signature.Type #> _<#= property.Name.ToLower()[0] #><#= property.Name.Substring(1) #> = new List<<#=property.Signature.ChildType #>>(); 
-        //%u public virtual IReadOnlyCollection<<#= property.Signature.ChildType #>> <#= property.Signature.Name #> => _<#= property.Name.ToLower()[0] #><#= property.Name.Substring(1) #>.AsReadOnly();
-        //<# } else if(property.IsValueObject || !property.IsSimpleType) { #>
-        //%u <#= property.Signature.AccessModifier ?? "" #> virtual <#= property.Signature.Type #> <#= property.Name #> { get; private set; } <#= !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" #>
-        //<# } else  { #>
-        //%u <#= property.Signature.AccessModifier ?? "" #>  <#= property.Signature.Type #> <#= property.Name #> { get; private set; } <#= !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" #>
-        //<# } #>
-        //<# } #>
-        //<# } #>
-
+        /*{{for property in entity.Properties
+            if property.Name != "Id"
+                for attribute in property.Attributes
+                    if attribute.IsDbType
+                        attribute.Signature.NameAndArgumentsInsideBrackets ?? ""
+                    end
+                    if property.IsEnumerableClass}}
+                        private readonly {{ property.Signature.Type }} _{{ property.Name | string.camelize }}= new List<{{ property.Signature.ChildType }}>(); 
+                        public virtual IReadOnlyCollection<{{ property.Signature.ChildType }}> {{ property.Signature.Name }} => _{{property.Name | string.camelize}}.AsReadOnly();
+                    {{else if property.IsValueObject || !property.IsSimpleType}}
+                        {{property.Signature.AccessModifier ?? "" }} virtual {{ property.Signature.Type }} {{ property.Name }} { get; private set; } {{ !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" }}
+                    {{else}}
+                        {{property.Signature.AccessModifier ?? "" }}  {{ property.Signature.Type }} {{ property.Name }} { get; private set; } {{ !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" }}
+                    {{end
+                end
+            end
+        end}}*/
 
         //%S:begin Body
         //%S:end Body
