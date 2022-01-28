@@ -8,11 +8,12 @@ using Core.Infrastructure.Exts.MicrosoftExts.ModelBuilderExts;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-//<# foreach(var entity in entities) { #>
-//<# foreach(var usedNamespace in entity.UsedNamespaces) { #>
-//%u using <#= usedNamespace #>;
-//<# } #>
-//<# } #>
+/*{{~ for entity in Context.BoundexContext.Entities
+        for usedNamespace in entity.UsedNamespaces}}
+using {{ usedNamespace }};
+        {{end     
+    end
+~}}*/
 
 
 namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
@@ -20,13 +21,14 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
     public class __Entities_BoundedContext_Name__DbContext_Gen_ : ApplicationDbContext
     {
         //%d:begin
-        public DbSet<__Entities_Name___Gen_> __Entities_NamePluralCase__ { get; set; }
+        public DbSet<__Entities_Name___Gen_> __Entities_Name_PluralCase__ { get; set; }
         //%d:end
 
-        //<# foreach(var entity in entities) { #>
-        //%u public DbSet<<#=entity.Name#>> <#= entity.Name.Pluralize() #> { get; set; }
-        //<# } #>
-
+        /*{{ 
+            for entity in Context.BoundexContext.Entities}}
+                public DbSet<{{entity.Name}}> {{ entity.PluralName }} { get; set; }
+            {{end
+        }}*/
         public __Entities_BoundedContext_Name__DbContext_Gen_(DbContextOptions options) : base(options: options)
         {
         }

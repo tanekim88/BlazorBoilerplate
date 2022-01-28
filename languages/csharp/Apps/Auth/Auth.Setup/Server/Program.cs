@@ -1,9 +1,8 @@
-﻿using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
+﻿using CodeGenerator.Services.CodeGeneratorServices;
+using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using SetupLibrary.Application.Models;
-using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

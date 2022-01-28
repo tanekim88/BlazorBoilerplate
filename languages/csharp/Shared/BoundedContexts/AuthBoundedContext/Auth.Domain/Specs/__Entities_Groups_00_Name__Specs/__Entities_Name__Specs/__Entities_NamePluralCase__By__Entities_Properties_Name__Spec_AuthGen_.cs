@@ -2,8 +2,8 @@
 
 
 /*{{
-paramSig = [ Context.Property.Signature.Type , " " , (Context.Property.Name[0] | string.downcase) , (Context.Property.Name | string.slice 1 )  ] | array.join ","
-whereArgSig = ["__Entities_NameCamelCase__ => __Entities_NameCamelCase__." , Context.Property.Signature.Name , " == " , (Context.Property.Name[0] | string.downcase), (Context.Property.Name | string.slice 1) ] | array.join ","
+paramSig = [ Context.Property.Signature.Type , " " , (Context.Property.Name | string.camelize ) ] | array.join ","
+whereArgSig = [ (Context.Entity.Name | string.camelize), " => ", (Context.Entity.Name | string.camelize), "." , Context.Property.Signature.Name , " == " , (Context.Property.Name | string.camelize) ] | array.join ","
 }}*/
 
 

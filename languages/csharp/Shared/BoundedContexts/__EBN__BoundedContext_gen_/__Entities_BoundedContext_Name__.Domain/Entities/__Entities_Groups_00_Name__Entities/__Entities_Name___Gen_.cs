@@ -121,7 +121,7 @@ namespace __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_
                     {{else if property.IsValueObject || !property.IsSimpleType}}
                         {{property.Signature.AccessModifier ?? "" }} virtual {{ property.Signature.Type }} {{ property.Name }} { get; private set; } {{ !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" }}
                     {{else}}
-                        {{property.Signature.AccessModifier ?? "" }}  {{ property.Signature.Type }} {{ property.Name }} { get; private set; } {{ !property.IsNullable && !property.IsSimpleType ?  " = null!;" : "" }}
+                        {{property.Signature.AccessModifier ?? "" }}  {{ property.Signature.Type }} {{ property.Name }} { get; private set; } {{ (!property.IsNullable && !property.IsSimpleType) ?  " = null!;" : "" }}
                     {{end
                 end
             end
