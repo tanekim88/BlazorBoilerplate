@@ -1,15 +1,4 @@
-﻿
-
-using Core.Domain.Entities.ReferenceEntities;
-using Core.Infrastructure.DbContexts;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-
-
-namespace CodeGenerator.Services.DatabaseSetupServices
+﻿namespace CodeGenerator.Services.DatabaseSetupServices
 {
     public class ReferencesDatabaseSetupService
     {

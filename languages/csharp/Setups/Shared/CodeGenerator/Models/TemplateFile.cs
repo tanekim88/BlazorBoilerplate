@@ -27,6 +27,8 @@ namespace CodeGenerator.Models
 
         [DataMember] public string Name { get; set; }
 
+        [DataMember] public List<TemplateTokenInfo> tokenIfos { get; set; }
+
         [IgnoreDataMember] public string Content { get; set; }
 
         [DataMember] public string Path { get; set; }

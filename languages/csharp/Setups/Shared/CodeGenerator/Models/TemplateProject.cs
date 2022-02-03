@@ -49,6 +49,7 @@ namespace CodeGenerator.Models
 
         [DataMember] public List<TemplateModel> Models { get; set; }
         [DataMember] public List<TemplateEntity> Entities { get; set; }
+        [DataMember] public List<TemplateProject> DependentProjects { get; set; }
 
         public object Clone()
         {

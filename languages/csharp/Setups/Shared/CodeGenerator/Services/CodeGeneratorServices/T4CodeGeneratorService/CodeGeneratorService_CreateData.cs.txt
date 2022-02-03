@@ -10,7 +10,7 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService
+    public partial class CodeGeneratorService<TData>
     {
         public async Task<TemplateData> CreateData(List<TemplateProject> projects)
         {

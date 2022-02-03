@@ -102,6 +102,8 @@
 		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Application\SharedLibrary.Application.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Domain\SharedLibrary.Domain.csproj" />
 		<ProjectReference Include="..\..\..\Shared\Library\Shared\SharedLibrary.Infrastructure\SharedLibrary.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Shared\Presentation\Presentation.Application\Presentation.Application.csproj" />
+		<ProjectReference Include="..\..\..\Shared\Presentation\Presentation.Infrastructure\Presentation.Infrastructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -130,6 +132,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Services\CodeGeneratorServices\CodeGeneratorService\Configs\" />
+	  <Folder Include="Services\CodeGeneratorServices\CodeGeneratorService\ProcessData\ProcessModels\" />
 	  <Folder Include="Services\NewFolder\" />
 	</ItemGroup>
 </Project>

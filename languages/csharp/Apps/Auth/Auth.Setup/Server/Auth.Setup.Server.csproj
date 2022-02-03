@@ -8,6 +8,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\..\Setups\Shared\CodeGenerator\CodeGenerator.csproj" />
+		<ProjectReference Include="..\..\..\..\Setups\Shared\SetupLibrary\SetupLibrary.Infrastructure\SetupLibrary.Infrastructure.csproj" />
 		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Application\Auth.Application.csproj" />
 		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Domain\Auth.Domain.csproj" />
 		<ProjectReference Include="..\..\..\..\Shared\BoundedContexts\AuthBoundedContext\Auth.Infrastructure\Auth.Infrastructure.csproj" />

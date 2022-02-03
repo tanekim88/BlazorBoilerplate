@@ -8,7 +8,7 @@
 
 //namespace SetupLibrary.Core.Infrastructure.Services.CodeGeneratorServices
 //{
-//    public partial class CodeGeneratorService
+//    public partial class CodeGeneratorService<TData>
 //    {
 //        public record LocalTemplateInfo
 //        {

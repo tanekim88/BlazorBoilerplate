@@ -3,11 +3,10 @@
 //using Microsoft.AspNetCore.Builder;
 //using Microsoft.Extensions.DependencyInjection;
 //using Serilog;
-using SetupLibrary.Application.Models;
-using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
+using CodeGenerator.Models;
+using CodeGenerator.Services.CodeGeneratorServices;
 using System;
 using System.Collections.Generic;
-
 
 
 

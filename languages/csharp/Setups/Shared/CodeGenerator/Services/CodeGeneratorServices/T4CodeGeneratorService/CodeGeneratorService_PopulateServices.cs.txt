@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService
+    public partial class CodeGeneratorService<TData>
     {
         public void PopulateServices(TemplateData data)
         {

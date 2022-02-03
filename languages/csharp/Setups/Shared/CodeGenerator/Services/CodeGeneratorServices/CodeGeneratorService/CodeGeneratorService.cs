@@ -1,5 +1,7 @@
 ﻿
 
+using CodeGenerator.Interfaces.CodeGeneratorInterfaces;
+using CodeGenerator.Models;
 using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.JsServiceInterfaces;
@@ -10,15 +12,15 @@ using Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces
 using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 using System;
 using System.Collections.Concurrent;
-
-
+using System.Collections.Generic;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService
+    public partial class CodeGeneratorService<TData>
     {
         private static readonly ConcurrentDictionary<string, object> Cache = new();
         private readonly IAssemblyService _assemblyService;
+
      
         private readonly IJsService _jsService;
         private readonly IPathService _pathService;
@@ -28,6 +30,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         private readonly ITranslationUiService _translationUiService;
         private readonly IXmlSerializerService _xmlSerializerService;
         private readonly IEvalService _evalService;
+        private readonly ICodeGeneratorProvider<TData> _codeGeneratorProvider;
         public CodeGeneratorService(
             IRegexService regexService,
             ITemplateService templateParserSetupService,
@@ -38,7 +41,8 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             IEvalService evalService,
          
             IServiceProvider serviceProvider,
-            IJsService jsService)
+            IJsService jsService,
+            ICodeGeneratorProvider<TData> codeGeneratorProvider)
         {
             _regexService = regexService;
             _templateService = templateParserSetupService;
@@ -50,6 +54,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             _serviceProvider = serviceProvider;
             _jsService = jsService;
             _evalService = evalService;
+            _codeGeneratorProvider = codeGeneratorProvider;
         }
     }
 }

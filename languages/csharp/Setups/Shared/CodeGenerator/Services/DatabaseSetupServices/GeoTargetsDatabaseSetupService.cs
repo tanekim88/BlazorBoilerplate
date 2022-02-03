@@ -1,9 +1,4 @@
-﻿
-
-using Core.Infrastructure.DbContexts;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using System.IO;
+﻿using Microsoft.AspNetCore.Hosting;
 
 
 

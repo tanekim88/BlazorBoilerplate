@@ -1,29 +1,24 @@
 ﻿
 
+using CodeGenerator.Models;
+using Microsoft.CodeAnalysis;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ICSharpCode.Decompiler.CSharp.Syntax;
-using Microsoft.AspNetCore.Components.WebAssembly.Http;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using CodeGenerator.Models;
-using static Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces.IEvalService;
 
 
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService
+    public partial class CodeGeneratorService<TData>
     {
         public async Task ProcessBoundedContext<TArgs>(
             Dictionary<string, TArgs> parameters,
-            List<TemplateProject> projects
+            List<TemplateProject> projects,
+            string boundedContextNames
         )
         {
 
@@ -35,7 +30,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             var projGuid = "9A19103F-16F7-4668-BE54-9A1E7A4F7556";
 
             var sep = Path.DirectorySeparatorChar;
-            foreach (var newBoundedContextName in newBoundedContextNames)
+            foreach (var newBoundedContextName in boundedContextNames)
             {
                 var currentToParentFolderDic = new Dictionary<string, string[]>
                 {

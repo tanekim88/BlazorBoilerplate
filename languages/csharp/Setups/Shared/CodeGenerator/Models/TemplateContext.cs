@@ -16,6 +16,7 @@ namespace CodeGenerator.Models
         [DataMember] public TemplateProject Project { get; set; }
         [DataMember] public TemplateFile File { get; set; }
         [DataMember] public TemplateEntity Entity { get; set; }
+        [DataMember] public TemplateModel Model { get; set; }
         [DataMember] public TemplateBoundedContext BoundedContext { get; set; }
 
         [DataMember] public TemplateProject ApplicationProject { get; set; }

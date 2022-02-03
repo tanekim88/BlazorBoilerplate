@@ -1,9 +1,4 @@
-﻿
-
-using Auth.Infrastructure.DbContexts;
-using Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
-using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
-using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
+﻿using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.JsServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces;
@@ -20,12 +15,11 @@ using Library.Infrastructure.Services.TemplateServices;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
-using Presentation.Infrastructure.Services.TranslationServices;
+
 using CodeGenerator.Services.CodeGeneratorServices;
 using CodeGenerator.Services.DatabaseSetupServices;
-
-
+using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
+using Presentation.Infrastructure.Services.TranslationServices;
 
 namespace CodeGenerator.Exts.IServiceCollectionExts
 {
@@ -36,13 +30,6 @@ namespace CodeGenerator.Exts.IServiceCollectionExts
             services.AddSingleton<DatabaseSetupService>();
 
             services.AddSingleton<GeoTargetsDatabaseSetupService>();
-            services.AddSingleton<ReferencesDatabaseSetupService>();
-
-
-            services.AddCustomAuthServer(configuration, environment);
-            services.AddCustomDbContextPool<AuthDbContext>(configuration,environment);
-            services.AddCustomDbContext<AuthDbContext>(configuration, environment);
-
 
             services.AddSingleton<IPathService, PathService>();
 

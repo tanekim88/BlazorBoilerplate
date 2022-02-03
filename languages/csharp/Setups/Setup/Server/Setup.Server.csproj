@@ -97,8 +97,10 @@
         <ProjectReference Include="..\..\..\Shared\Shared\SharedCore.Infrastructure\SharedCore.Infrastructure.csproj" />
         <ProjectReference Include="..\..\..\Tests\ArchTests\ArchTests.csproj" />
         <ProjectReference Include="..\..\..\Tests\IntegrationTests\IntegrationTests.csproj" />
+        <ProjectReference Include="..\..\Shared\CodeGenerator\CodeGenerator.csproj" />
         <ProjectReference Include="..\..\Shared\SetupLibrary.Application\SetupLibrary.Application.csproj" />
         <ProjectReference Include="..\..\Shared\SetupLibrary.Infrastructure\SetupLibrary.Infrastructure.csproj" />
+        <ProjectReference Include="..\..\Shared\SetupLibrary\SetupLibrary.Infrastructure\SetupLibrary.Infrastructure.csproj" />
         <ProjectReference Include="..\Shared\Setup.Shared.csproj" />
     </ItemGroup>
 

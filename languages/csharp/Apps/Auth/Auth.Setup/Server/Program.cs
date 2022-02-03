@@ -1,4 +1,5 @@
-﻿using CodeGenerator.Services.CodeGeneratorServices;
+﻿using CodeGenerator.Models;
+using CodeGenerator.Services.CodeGeneratorServices;
 using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;

@@ -1,5 +1,5 @@
-﻿using SetupLibrary.Application.Models;
-using SetupLibrary.Domain.Interfaces.CodeGeneratorInterfaces;
+﻿using CodeGenerator.Interfaces.CodeGeneratorInterfaces;
+using CodeGenerator.Models;
 using System.Threading.Tasks;
 
 namespace SetupLibrary.Infrastructure.Impls.SetupLibraryImpls.DomainImpls.InterfacesImpls.CodeGeneratorInterfacesImpls

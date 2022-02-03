@@ -2,6 +2,7 @@
 
 using Auth.Infrastructure.DbContexts;
 using Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
+using CodeGenerator.Services.CodeGeneratorServices;
 using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
 using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
@@ -22,7 +23,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 using Presentation.Infrastructure.Services.TranslationServices;
-using SetupLibrary.Infrastructure.Services.CodeGeneratorServices;
 using SetupLibrary.Infrastructure.Services.DatabaseSetupServices;
 
 
