@@ -9,7 +9,7 @@ using Karambolo.PO;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public async Task<POCatalog> ParsePoFileAsync(string poFilePath)
         {

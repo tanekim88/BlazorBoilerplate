@@ -9,38 +9,38 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public class TemplateProperty : TemplateBase, ICloneable
     {
-        [DataMember] public string Name { get; set; }
-        [DataMember] public string BaseName { get; set; }
-        [DataMember] public bool IsEnumerableClass { get; set; }
-        [IgnoreDataMember] public PropertyInfo PropertyInfo { get; set; }
+         public string Name { get; set; }
+         public string BaseName { get; set; }
+         public bool IsEnumerableClass { get; set; }
+         public PropertyInfo PropertyInfo { get; set; }
 
-        [DataMember] public TemplatePropertySignature Signature { get; set; }
+         public TemplatePropertySignature Signature { get; set; }
 
-        [DataMember] public bool IsPrimaryKey { get; set; }
-        [DataMember] public bool IsDictionaryType { get; set; }
+         public bool IsPrimaryKey { get; set; }
+         public bool IsDictionaryType { get; set; }
 
-        [DataMember] public bool IsPublic { get; set; }
-        [DataMember] public bool IsValueObject { get; set; }
-        [DataMember] public bool IsNullable { get; set; }
+         public bool IsPublic { get; set; }
+         public bool IsValueObject { get; set; }
+         public bool IsNullable { get; set; }
 
-        [DataMember] public bool IsSimpleType { get; set; }
+         public bool IsSimpleType { get; set; }
 
-        [DataMember] public bool IsVirtual { get; set; }
+         public bool IsVirtual { get; set; }
 
-        [DataMember] public bool IsDeclaredOnly { get; set; }
+         public bool IsDeclaredOnly { get; set; }
 
-        [DataMember] public bool HasPublicGetter { get; set; }
+         public bool HasPublicGetter { get; set; }
 
-        [DataMember] public bool HasPublicSetter { get; set; }
+         public bool HasPublicSetter { get; set; }
 
-        [DataMember] public List<TemplateAttribute> Attributes { get; set; }
+         public List<TemplateAttribute> Attributes { get; set; }
 
-        [DataMember] public int Order { get; set; }
+         public int Order { get; set; }
 
-        [DataMember] public int PrimaryKeyOrder { get; set; }
+         public int PrimaryKeyOrder { get; set; }
 
         public object Clone()
         {

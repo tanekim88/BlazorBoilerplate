@@ -1,8 +1,7 @@
 ﻿
 
 using System.Collections.Generic;
-
-
+using System.Threading.Tasks;
 
 namespace Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces
 {
@@ -11,7 +10,7 @@ namespace Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces
         GetAncestorFolderThatContainsThisFileOutput GetAncestorFolderInfoThatContainsThisFilePattern(
             string currentDirPath, List<string> regexPathPatterns = null);
 
-        GetAppsDirOutput GetAppDirPath();
+        Task<GetAppsDirOutput> GetAppDirPathAsync();
 
         GetAssemblyPathOutput GetAssemblyPath(string projectName);
 
@@ -79,7 +78,7 @@ namespace Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces
         public record GetProjectPathFromFilePathOutput
         {
             public string ProjectDirPath { get; set; }
-            public string ProjectPath { get; set; }
+            public string ProjectFilePath { get; set; }
             public string ProjectName { get; set; }
         }
 

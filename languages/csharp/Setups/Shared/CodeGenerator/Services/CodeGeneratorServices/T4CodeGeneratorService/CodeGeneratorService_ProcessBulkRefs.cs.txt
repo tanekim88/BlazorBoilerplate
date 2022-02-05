@@ -13,7 +13,7 @@ using static Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfa
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public async Task<ProcessRefsOutput> ProcessBulkRefs(
             Dictionary<string, object> parameters,

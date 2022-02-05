@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public async Task ProcessBoundedContext<TArgs>(
             Dictionary<string, TArgs> parameters,
@@ -22,7 +22,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         )
         {
 
-            var appsDir = _pathService.GetAppDirPath();
+            var appsDir = _pathService.GetAppDirPathAsync();
             var slnPath = Path.Combine(appsDir.AppDirPath, "App.sln");
             var slnContent = File.ReadAllText(slnPath);
             var folderGuid = "2150E333-8FDC-42A3-9474-1A3956D46DE8";

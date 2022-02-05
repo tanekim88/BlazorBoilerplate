@@ -132,7 +132,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Services\CodeGeneratorServices\CodeGeneratorService\Configs\" />
-	  <Folder Include="Services\CodeGeneratorServices\CodeGeneratorService\ProcessData\ProcessModels\" />
+	  <Folder Include="Impls\CodeGeneratorImpls\ProcessData\ProcessModels\" />
 	  <Folder Include="Services\NewFolder\" />
 	</ItemGroup>
 </Project>

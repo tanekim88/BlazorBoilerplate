@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> where TFile : TemplateFile<TData>
     {
         public async Task<ProcessPathsBodyOutput> ProcessPathsBody(
              List<TemplateDirectory> directories,
              string path,
-             TemplateFile file,
+             TFile file,
              TemplateCodeType codeType,
-             List<TemplateTokenInfo> templateInfos
+             List<TemplateTokenInfo<TData>> templateInfos
         )
         {
 
@@ -94,30 +94,28 @@ namespace CodeGenerator.Services.CodeGeneratorServices
 
             var sections = new List<string>();
             var textString = file.Content;
-            if (path != file.TemplatePath)
-            {
-                var currentTempFilePath = path + ".temp.txt";
-                var ttTempFilePath = path + ".tt.temp.txt";
-                var tempXmlPath = path + ".xml.temp.txt";
+            //if (path != file.FilePath)
+            //{
+            //    var currentTempFilePath = path + ".temp.txt";
 
-                var dir = Path.GetDirectoryName(path: tempXmlPath);
+            //    var dir = Path.GetDirectoryName(path: currentTempFilePath);
 
-                if (!Directory.Exists(path: dir)) Directory.CreateDirectory(path: dir);
+            //    if (!Directory.Exists(path: dir)) Directory.CreateDirectory(path: dir);
 
 
-                path = file.ShouldFinalize ? path : currentTempFilePath;
-                if (File.Exists(path: path) && file.ShouldPartiallyOverWrite)
-                {
-                    var outputFileContent = File.ReadAllText(path: path);
-                    var result = codeType.ApplySectionCommand(
-                        sourceContent: outputFileContent,
-                        targetContent: textString
-                    );
+            //    path = file.ShouldFinalize ? path : currentTempFilePath;
+            //    if (File.Exists(path: path) && file.ShouldPartiallyOverWrite)
+            //    {
+            //        var outputFileContent = File.ReadAllText(path: path);
+            //        var result = codeType.ApplySectionCommand(
+            //            sourceContent: outputFileContent,
+            //            targetContent: textString
+            //        );
 
-                    textString = result.ProcessedContent;
-                    sections = result.FoundSections;
-                }
-            }
+            //        textString = result.ProcessedContent;
+            //        sections = result.FoundSections;
+            //    }
+            //}
 
 
             textString = codeType.RemoveTemplatePostfix(inputString: textString, isPath: false);

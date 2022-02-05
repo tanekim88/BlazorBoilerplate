@@ -501,276 +501,276 @@ namespace Core.Infrastructure.Exts.MicrosoftExts.ODataExts.ODataConventionModelB
  
 <# } #>
 <#+
-[DataContract(IsReference = true)]
+
 public class TemplateContext {
-   [DataMember] public TemplateProject Project { get; set; }
-   [DataMember] public TemplateProject ApplicationProject { get; set; }
-   [DataMember] public TemplateProject SharedApplicationProject { get; set; }
-   [DataMember] public TemplateProject DomainProject { get; set; }
-   [DataMember] public TemplateProject SharedDomainProject { get; set; }
-   [DataMember] public TemplateProject InfrastructureProject { get; set; }
-   [DataMember] public TemplateProject SharedInfrastructureProject { get; set; }
-   [DataMember] public TemplateFile File { get; set; }
-   [DataMember] public List<TemplateSection> Sections { get; set; }
-   [DataMember] public List<TemplateSection> TemplateSections { get; set; }
+    public TemplateProject Project { get; set; }
+    public TemplateProject ApplicationProject { get; set; }
+    public TemplateProject SharedApplicationProject { get; set; }
+    public TemplateProject DomainProject { get; set; }
+    public TemplateProject SharedDomainProject { get; set; }
+    public TemplateProject InfrastructureProject { get; set; }
+    public TemplateProject SharedInfrastructureProject { get; set; }
+    public TemplateFile File { get; set; }
+    public List<TemplateSection> Sections { get; set; }
+    public List<TemplateSection> TemplateSections { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateProject:TemplateBase {
-   [DataMember] public string Type { get; set; }
-   [DataMember] public bool IsShared { get; set; }
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string BaseName { get; set; }
-   [DataMember] public string CodeName { get; set; }
-   [DataMember] public string Prefix { get; set; }
-   [DataMember] public string Postfix { get; set; }
-   [DataMember] public string GeneratorSymbol { get; set; }
-   [DataMember] public string Path { get; set; }
-   [DataMember] public string DirPath { get; set; }
-   [DataMember] public List<TemplateFile> Files { get; set; }
-   [DataMember] public List<TemplateService> Services { get; set; }
-   [DataMember] public List<TemplateLocalization> Localizations { get; set; }
-   [DataMember] public List<TemplateModel> Models { get; set; }
-   [DataMember] public List<TemplateEntity> Entities { get; set; }
+    public string Type { get; set; }
+    public bool IsShared { get; set; }
+    public string Name { get; set; }
+    public string BaseName { get; set; }
+    public string CodeName { get; set; }
+    public string Prefix { get; set; }
+    public string Postfix { get; set; }
+    public string GeneratorSymbol { get; set; }
+    public string Path { get; set; }
+    public string DirPath { get; set; }
+    public List<TemplateFile> Files { get; set; }
+    public List<TemplateService> Services { get; set; }
+    public List<TemplateLocalization> Localizations { get; set; }
+    public List<TemplateModel> Models { get; set; }
+    public List<TemplateEntity> Entities { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateBase {
-   [DataMember] public List<TemplateGroup> Groups { get; set; }
-   [DataMember] public TemplateBoundedContext BoundedContext { get; set; }
+    public List<TemplateGroup> Groups { get; set; }
+    public TemplateBoundedContext BoundedContext { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateGroup {
-   [DataMember] public string Name { get; set; }
+    public string Name { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateBoundedContext {
-   [DataMember] public string Name { get; set; }
+    public string Name { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateFile:TemplateBase {
-   [DataMember] public string TemplateName { get; set; }
-   [DataMember] public string GenType { get; set; }
-   [DataMember] public bool HasPartialRef { get; set; }
-   [DataMember] public bool ShouldOverWrite { get; set; }
-   [DataMember] public bool ShouldPartiallyOverWrite { get; set; }
-   [DataMember] public bool ShouldFinalize { get; set; }
-   [DataMember] public TemplateProject Project { get; set; }
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string Path { get; set; }
-   [DataMember] public string TemplatePath { get; set; }
-   [DataMember] public string XmlPath { get; set; }
-   [DataMember] public string Extension { get; set; }
-   [DataMember] public TemplateCodeType CodeType { get; set; }
+    public string TemplateName { get; set; }
+    public string GenType { get; set; }
+    public bool HasPartialRef { get; set; }
+    public bool ShouldOverWrite { get; set; }
+    public bool ShouldPartiallyOverWrite { get; set; }
+    public bool ShouldFinalize { get; set; }
+    public TemplateProject Project { get; set; }
+    public string Name { get; set; }
+    public string Path { get; set; }
+    public string TemplatePath { get; set; }
+    public string XmlPath { get; set; }
+    public string Extension { get; set; }
+    public TemplateCodeType CodeType { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateCodeType {
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateDirectory:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string TemplatePath { get; set; }
-   [DataMember] public string Path { get; set; }
-   [DataMember] public bool ShouldOverwrite { get; set; }
+    public string Name { get; set; }
+    public string TemplatePath { get; set; }
+    public string Path { get; set; }
+    public bool ShouldOverwrite { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateService:TemplateBase {
-   [DataMember] public bool IsShared { get; set; }
-   [DataMember] public string Type { get; set; }
-   [DataMember] public string BaseName { get; set; }
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string Namespace { get; set; }
-   [DataMember] public TemplateProject Project { get; set; }
-   [DataMember] public List<TemplateMethod> Methods { get; set; }
-   [DataMember] public string ServiceLifetime { get; set; }
-   [DataMember] public List<TemplateConstructor> Constructors { get; set; }
-   [DataMember] public bool IsAbstract { get; set; }
-   [DataMember] public TemplateModel ModelCounterpart { get; set; }
-   [DataMember] public List<TemplateProperty> Properties { get; set; }
-   [DataMember] public List<TemplateInterface> Interfaces { get; set; }
-   [DataMember] public TemplateType ParentType { get; set; }
+    public bool IsShared { get; set; }
+    public string Type { get; set; }
+    public string BaseName { get; set; }
+    public string Name { get; set; }
+    public string Namespace { get; set; }
+    public TemplateProject Project { get; set; }
+    public List<TemplateMethod> Methods { get; set; }
+    public string ServiceLifetime { get; set; }
+    public List<TemplateConstructor> Constructors { get; set; }
+    public bool IsAbstract { get; set; }
+    public TemplateModel ModelCounterpart { get; set; }
+    public List<TemplateProperty> Properties { get; set; }
+    public List<TemplateInterface> Interfaces { get; set; }
+    public TemplateType ParentType { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateMethod:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public bool IsAdded { get; set; }
-   [DataMember] public bool IsModelMethod { get; set; }
-   [DataMember] public bool IsPublic { get; set; }
-   [DataMember] public TemplateMethodSignature Signature { get; set; }
+    public string Name { get; set; }
+    public bool IsAdded { get; set; }
+    public bool IsModelMethod { get; set; }
+    public bool IsPublic { get; set; }
+    public TemplateMethodSignature Signature { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateMethodSignature:TemplateSignatureBase {
-   [DataMember] public List<string> Parameters { get; set; }
-   [DataMember] public List<string> FullParameters { get; set; }
-   [DataMember] public string FullTypeAndNameAndParameters { get; set; }
-   [DataMember] public string TypeAndNameAndParameters { get; set; }
+    public List<string> Parameters { get; set; }
+    public List<string> FullParameters { get; set; }
+    public string FullTypeAndNameAndParameters { get; set; }
+    public string TypeAndNameAndParameters { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateSignatureBase:TemplateBase {
-   [DataMember] public string FullTypeAndName { get; set; }
-   [DataMember] public string TypeAndName { get; set; }
-   [DataMember] public string AccessModifier { get; set; }
-   [DataMember] public string FullType { get; set; }
-   [DataMember] public string Type { get; set; }
-   [DataMember] public string ChildType { get; set; }
-   [DataMember] public string ChildFullType { get; set; }
-   [DataMember] public string Name { get; set; }
+    public string FullTypeAndName { get; set; }
+    public string TypeAndName { get; set; }
+    public string AccessModifier { get; set; }
+    public string FullType { get; set; }
+    public string Type { get; set; }
+    public string ChildType { get; set; }
+    public string ChildFullType { get; set; }
+    public string Name { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateConstructor:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public List<TemplateParameter> Parameters { get; set; }
+    public string Name { get; set; }
+    public List<TemplateParameter> Parameters { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateParameter:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public TemplateParameterSignature Signature { get; set; }
+    public string Name { get; set; }
+    public TemplateParameterSignature Signature { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateParameterSignature:TemplateSignatureBase {
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateModel:TemplateBase {
-   [DataMember] public bool IsValueObject { get; set; }
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string BaseName { get; set; }
-   [DataMember] public TemplateModel BaseClass { get; set; }
-   [DataMember] public string FullName { get; set; }
-   [DataMember] public string BaseFullName { get; set; }
-   [DataMember] public string Namespace { get; set; }
-   [DataMember] public TemplateProject Project { get; set; }
-   [DataMember] public List<TemplateMethod> Methods { get; set; }
-   [DataMember] public List<TemplateProperty> Properties { get; set; }
-   [DataMember] public List<TemplateInterface> Interfaces { get; set; }
-   [DataMember] public List<TemplateAttribute> Attributes { get; set; }
-   [DataMember] public List<string> UsedNamespaces { get; set; }
+    public bool IsValueObject { get; set; }
+    public string Name { get; set; }
+    public string BaseName { get; set; }
+    public TemplateModel BaseClass { get; set; }
+    public string FullName { get; set; }
+    public string BaseFullName { get; set; }
+    public string Namespace { get; set; }
+    public TemplateProject Project { get; set; }
+    public List<TemplateMethod> Methods { get; set; }
+    public List<TemplateProperty> Properties { get; set; }
+    public List<TemplateInterface> Interfaces { get; set; }
+    public List<TemplateAttribute> Attributes { get; set; }
+    public List<string> UsedNamespaces { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateProperty:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string BaseName { get; set; }
-   [DataMember] public bool IsEnumerableClass { get; set; }
-   [DataMember] public TemplatePropertySignature Signature { get; set; }
-   [DataMember] public bool IsPrimaryKey { get; set; }
-   [DataMember] public bool IsDictionaryType { get; set; }
-   [DataMember] public bool IsPublic { get; set; }
-   [DataMember] public bool IsValueObject { get; set; }
-   [DataMember] public bool IsNullable { get; set; }
-   [DataMember] public bool IsSimpleType { get; set; }
-   [DataMember] public bool IsVirtual { get; set; }
-   [DataMember] public bool IsDeclaredOnly { get; set; }
-   [DataMember] public bool HasPublicGetter { get; set; }
-   [DataMember] public bool HasPublicSetter { get; set; }
-   [DataMember] public List<TemplateAttribute> Attributes { get; set; }
-   [DataMember] public int Order { get; set; }
-   [DataMember] public int PrimaryKeyOrder { get; set; }
+    public string Name { get; set; }
+    public string BaseName { get; set; }
+    public bool IsEnumerableClass { get; set; }
+    public TemplatePropertySignature Signature { get; set; }
+    public bool IsPrimaryKey { get; set; }
+    public bool IsDictionaryType { get; set; }
+    public bool IsPublic { get; set; }
+    public bool IsValueObject { get; set; }
+    public bool IsNullable { get; set; }
+    public bool IsSimpleType { get; set; }
+    public bool IsVirtual { get; set; }
+    public bool IsDeclaredOnly { get; set; }
+    public bool HasPublicGetter { get; set; }
+    public bool HasPublicSetter { get; set; }
+    public List<TemplateAttribute> Attributes { get; set; }
+    public int Order { get; set; }
+    public int PrimaryKeyOrder { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplatePropertySignature:TemplateSignatureBase {
-   [DataMember] public string Initializer { get; set; }
+    public string Initializer { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateAttribute {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public bool IsDbType { get; set; }
-   [DataMember] public TemplateAttributeSignature Signature { get; set; }
-   [DataMember] public List<TemplateAttributeProperty> Properties { get; set; }
+    public string Name { get; set; }
+    public bool IsDbType { get; set; }
+    public TemplateAttributeSignature Signature { get; set; }
+    public List<TemplateAttributeProperty> Properties { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateAttributeSignature:TemplateSignatureBase {
-   [DataMember] public string NameAndArgumentsInsideBrackets { get; set; }
+    public string NameAndArgumentsInsideBrackets { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateAttributeProperty {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public string Value { get; set; }
+    public string Name { get; set; }
+    public string Value { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateInterface:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public TemplateInterfaceSignature Signature { get; set; }
+    public string Name { get; set; }
+    public TemplateInterfaceSignature Signature { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateInterfaceSignature:TemplateSignatureBase {
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateType:TemplateBase {
-   [DataMember] public string Name { get; set; }
-   [DataMember] public List<TemplateConstructor> Constructors { get; set; }
-   [DataMember] public TemplateTypeSignature Signature { get; set; }
+    public string Name { get; set; }
+    public List<TemplateConstructor> Constructors { get; set; }
+    public TemplateTypeSignature Signature { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateTypeSignature:TemplateSignatureBase {
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateLocalization:TemplateBase {
-   [DataMember] public string Key { get; set; }
-   [DataMember] public string PluralKey { get; set; }
-   [DataMember] public string Context { get; set; }
-   [DataMember] public string ContextCodeName { get; set; }
-   [DataMember] public string PluralRule { get; set; }
-   [DataMember] public string UnderscoredLanguageCode { get; set; }
-   [DataMember] public string Encoding { get; set; }
-   [DataMember] public List<TemplateLocalizationPluralForm> PluralForms { get; set; }
-   [DataMember] public string MethodName { get; set; }
-   [DataMember] public string LanguageCode { get; set; }
-   [DataMember] public string DotLanguageCode { get; set; }
-   [DataMember] public TemplateProject Project { get; set; }
+    public string Key { get; set; }
+    public string PluralKey { get; set; }
+    public string Context { get; set; }
+    public string ContextCodeName { get; set; }
+    public string PluralRule { get; set; }
+    public string UnderscoredLanguageCode { get; set; }
+    public string Encoding { get; set; }
+    public List<TemplateLocalizationPluralForm> PluralForms { get; set; }
+    public string MethodName { get; set; }
+    public string LanguageCode { get; set; }
+    public string DotLanguageCode { get; set; }
+    public TemplateProject Project { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateLocalizationPluralForm:TemplateBase {
-   [DataMember] public int PluralFormIndex { get; set; }
-   [DataMember] public string Value { get; set; }
-   [DataMember] public TemplateProject Project { get; set; }
+    public int PluralFormIndex { get; set; }
+    public string Value { get; set; }
+    public TemplateProject Project { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateEntity:TemplateModel {
-   [DataMember] public bool ShouldNotGenerate { get; set; }
+    public bool ShouldNotGenerate { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateSection {
-   [DataMember] public string Name { get; set; }
+    public string Name { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateData {
-   [DataMember] public List<TemplateLocalization> Localizations { get; set; }
-   [DataMember] public List<TemplateModel> Models { get; set; }
-   [DataMember] public List<TemplateEntity> Entities { get; set; }
-   [DataMember] public List<TemplateService> Services { get; set; }
-   [DataMember] public List<TemplateDbContext> DbContexts { get; set; }
-   [DataMember] public List<TemplateProject> Projects { get; set; }
-   [DataMember] public List<TemplateFile> Files { get; set; }
-   [DataMember] public TemplateContext Context { get; set; }
+    public List<TemplateLocalization> Localizations { get; set; }
+    public List<TemplateModel> Models { get; set; }
+    public List<TemplateEntity> Entities { get; set; }
+    public List<TemplateService> Services { get; set; }
+    public List<TemplateDbContext> DbContexts { get; set; }
+    public List<TemplateProject> Projects { get; set; }
+    public List<TemplateFile> Files { get; set; }
+    public TemplateContext Context { get; set; }
 }
 
-[DataContract(IsReference = true)]
+
 public class TemplateDbContext:TemplateService {
 }
 #>

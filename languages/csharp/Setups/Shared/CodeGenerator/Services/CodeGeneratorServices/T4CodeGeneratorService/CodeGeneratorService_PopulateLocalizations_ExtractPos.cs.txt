@@ -13,7 +13,7 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public void PopulateLocalizations_ExtractPos(TemplateProject project)
         {

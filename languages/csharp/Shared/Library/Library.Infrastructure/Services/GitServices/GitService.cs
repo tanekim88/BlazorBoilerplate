@@ -42,7 +42,7 @@ namespace Library.Infrastructure.Services.GitServices
             /*%s:begin ConstructorBody*/
             _pathService = pathService;
 
-            var appDir = _pathService.GetAppDirPath().AppDirPath;
+            var appDir = _pathService.GetAppDirPathAsync().AppDirPath;
             _repository = new Repository(path: appDir);
             /*%s:end ConstructorBody*/
         }

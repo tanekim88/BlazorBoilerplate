@@ -1,15 +1,13 @@
 ﻿
 
+using CodeGenerator.Models;
+using Humanizer;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Humanizer;
-using CodeGenerator.Models;
-
-
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
@@ -24,22 +22,22 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         public bool ShouldOverride { get; set; }
         public List<string> Sections { get; set; }
         public List<TemplateSection> TemplateSections { get; set; }
-        public List<TemplateTokenInfo> ListOfTokenInfosUsedForPath { get; set; }
+        public List<TemplateTokenInfo<TData>> ListOfTokenInfosUsedForPath { get; set; }
     }
 
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile>
     {
-        public async Task<ProcessPathsOutput> ProcessPaths(
-            TemplateFile file,
+        public async Task<ProcessPathsOutput<TData>> ProcessPaths(
+            TFile file,
             TData data)
         {
             var codeType = file.CodeType;
 
             var textString = file.Content;
 
-            var pathMaxLength = Path.GetFileName(path: file.Path).Length;
+            var pathMaxLength = Path.GetFileName(path: file.ProcessedFilePath).Length;
 
-            var preparedPathString = codeType.RemoveTemplatePostfix(inputString: file.Path, isPath: true);
+            var preparedPathString = codeType.RemoveTemplatePostfix(inputString: file.ProcessedFilePath, isPath: true);
 
             var pathMatches = Regex.Matches(input: preparedPathString,
                 pattern: codeType.GetTemplateName(
@@ -68,7 +66,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 candidates: pathNameMatches,
                 objectType: data.GetType(),
                 codeType: codeType,
-                text: file.Path,
+                text: file.ProcessedFilePath,
                 parentName: null,
                 parentPropertyPaths: new List<string>());
 
@@ -79,7 +77,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                          isPath: true,
                          matchingToken: tokenInfo,
                          codeType: codeType,
-                         text: file.Path,
+                         text: file.ProcessedFilePath,
                          obj: data,
                          constraints: null,
                          parentName: null,
@@ -88,7 +86,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 return toReturn;
             }).ToList();
 
-            var finalList = new List<TemplateTokenInfo>();
+            var finalList = new List<TemplateTokenInfo<TData>>();
 
             var combinedTokenInfos = tokenInfosForPath.GroupBy(keySelector: token =>
             {
@@ -110,7 +108,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                         {
                             if (groupedIdTokens.TryGetValue(key: groupId, value: out var o))
                                 return o;
-                            return new List<TemplateTokenInfo>();
+                            return new List<TemplateTokenInfo<TData>>();
                         }).ToList();
 
                         return toReturn;
@@ -148,7 +146,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             {
                 if (groupedTokens.TryGetValue(key: x.Id, value: out var o)) return o;
 
-                return new List<TemplateTokenInfo>();
+                return new List<TemplateTokenInfo<TData>>();
             }).ToList();
 
             var filteredListOfList = listOfList.Where(predicate: list =>
@@ -160,7 +158,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 return pathMatches;
             }).ToList();
 
-            if (filteredListOfList.Count() == 0 && pathNameMatches.Count() == 0) filteredListOfList = new List<List<TemplateTokenInfo>> { new() };
+            if (filteredListOfList.Count() == 0 && pathNameMatches.Count() == 0) filteredListOfList = new List<List<TemplateTokenInfo<TData>>> { new() };
 
             var groupedFilteredListOfList = filteredListOfList.GroupBy(keySelector: list =>
             {
@@ -176,44 +174,12 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             {
                 var listOfListBackup = groupedFilteredListOfList;
 
-                var filePath = file.Path;
+                var filePath = file.ProcessedFilePath;
 
                 var directories = new List<TemplateDirectory>();
-                var templateDirectoryPath = Directory.GetParent(path: file.TemplatePath).FullName;
-                var path = file.Path;
-                while (templateDirectoryPath != file.Project.DirPath)
-                {
-                    path = Directory.GetParent(path: path).FullName;
+                var templateDirectoryPath = Directory.GetParent(path: file.FilePath).FullName;
+                var path = file.ProcessedFilePath;
 
-                    var isTemplateDir = templateDirectoryPath.EndsWith(
-                        value: codeType.GetTemplateSymbolName(templateSymbol: file.Project.GeneratorSymbol,
-                            isPath: true),
-                        comparisonType: StringComparison.OrdinalIgnoreCase);
-
-                    var shouldOverWrite = false;
-
-                    if (isTemplateDir)
-                        shouldOverWrite =
-                            templateDirectoryPath.EndsWith(
-                                value: codeType.GetTemplateSymbolName(
-                                    templateSymbol: file.Project.GeneratorSymbol.Pascalize(), isPath: true)) ||
-                            templateDirectoryPath.EndsWith(
-                                value: codeType.GetTemplateSymbolName(
-                                    templateSymbol: file.Project.GeneratorSymbol.ToUpper(), isPath: true));
-
-                    var toAdd = new TemplateDirectory
-                    {
-                        ShouldOverwrite = shouldOverWrite,
-                        Path = path,
-                        TemplatePath = templateDirectoryPath
-                    };
-
-                    directories.Add(item: toAdd);
-
-                    templateDirectoryPath = Directory.GetParent(path: templateDirectoryPath).FullName;
-                }
-
-                directories.Reverse();
 
                 var processPathsPathsAndContentsResult = await ProcessPathsBody(
                     directories: directories,
@@ -228,7 +194,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
 
                 filePath = processPathsPathsAndContentsResult.Path;
 
-                if (file.Path != file.TemplatePath)
+                if (file.ProcessedFilePath != file.FilePath)
                 {
                     var dir = Path.GetDirectoryName(path: filePath);
 
@@ -236,7 +202,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                     {
                         Id = Guid.NewGuid().ToString(),
                         Data = data,
-                        InputFilePath = file.TemplatePath,
+                        InputFilePath = file.FilePath,
                         OutputFilePath = filePath,
                         ShouldOverride = file.ShouldOverWrite,
                         TemplateContent = processedText,
@@ -247,7 +213,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 }
 
                 return null;
-            }).Select(selector: x => x.Result).Where(predicate: x => x != null).ToList();
+            }).Select(selector: x => x.Result).Where(predicate: x => x is not null).ToList();
 
             return new ProcessPathsOutput<TData>
             {

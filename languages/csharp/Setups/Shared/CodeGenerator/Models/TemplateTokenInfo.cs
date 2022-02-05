@@ -9,17 +9,16 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
-    public class TemplateTokenInfo : ICloneable
+    
+    public class TemplateTokenInfo<TData> : ICloneable
     {
+        public bool IsActive { get; set; }
         public bool IsAlias { get; set; }
         public string CurrentName { get; set; }
 
         public string Value { get; set; }
-
-        public TemplateContext Current { get; set; }
+        public TemplateFile<TData> File { get; set; }
         public bool IsPlural { get; set; }
-
         public List<TemplateAttribute> Attributes { get; set; }
         public List<string> AllPropertyPaths { get; set; }
         public List<string> PropertyPaths { get; set; }

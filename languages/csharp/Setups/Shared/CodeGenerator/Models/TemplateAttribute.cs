@@ -7,15 +7,15 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public class TemplateAttribute
     {
-        [DataMember] public string Name { get; set; }
+         public string Name { get; set; }
 
-        [DataMember] public bool IsDbType { get; set; }
+         public bool IsDbType { get; set; }
 
-        [DataMember] public TemplateAttributeSignature Signature { get; set; }
+         public TemplateAttributeSignature Signature { get; set; }
 
-        [DataMember] public List<TemplateAttributeProperty> Properties { get; set; }
+         public List<TemplateAttributeProperty> Properties { get; set; }
     }
 }

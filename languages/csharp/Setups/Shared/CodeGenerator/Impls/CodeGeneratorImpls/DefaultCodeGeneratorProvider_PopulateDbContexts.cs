@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Impls.CodeGeneratorImpls
 {
-    public partial class CodeGeneratorProvider: ICodeGeneratorProvider
+    public partial class CodeGeneratorProvider: ICodeGeneratorProvider<TemplateData>
     {
         public void PopulateDbContexts(TemplateData data)
         {

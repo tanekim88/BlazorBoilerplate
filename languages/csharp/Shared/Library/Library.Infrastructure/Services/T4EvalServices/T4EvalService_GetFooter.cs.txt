@@ -37,7 +37,7 @@ namespace Library.Infrastructure.Services.T4EvalServices
                 {
                     builder.Append(value: "\n");
                     if (attribute.IsReference)
-                        builder.Append(value: "[DataContract(IsReference = true)]\n");
+                        builder.Append(value: "\n");
                     else
                         builder.Append(value: "[DataContract]\n");
 
@@ -58,7 +58,7 @@ namespace Library.Infrastructure.Services.T4EvalServices
                         if (propAttribute != null)
                             builder.Append(
                                 value:
-                                $"   [DataMember] public {prop.PropertyType.GetSignature()} {prop.Name} {{ get; set; }}\n");
+                                $"    public {prop.PropertyType.GetSignature()} {prop.Name} {{ get; set; }}\n");
                     }
 
                     builder.Append(value: "}\n");

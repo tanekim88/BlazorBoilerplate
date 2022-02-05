@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public static async Task<int> ProcessArgs(string[] args, List<TemplateProject> dependentProjects)
         {

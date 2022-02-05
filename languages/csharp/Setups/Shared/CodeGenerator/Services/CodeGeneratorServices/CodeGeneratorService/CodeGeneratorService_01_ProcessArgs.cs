@@ -13,11 +13,10 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> where TFile : TemplateFile<TData>
     {
-        public async Task<int> ProcessArgs(string[] args, List<TemplateProject> dependentProjects)
+        public async Task<int> ProcessArgs(string[] args)
         {
-            dependentProjects.Reverse();
             var cmd = new RootCommand
             {
                 new Option(aliases: new[] {"--gen", "-g"}, description: "Generate Code."),
@@ -85,7 +84,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                             using (var scope = host.Services.CreateScope())
                             {
                                 var provider = scope.ServiceProvider;
-                                var codeSetupService = provider.GetRequiredService<CodeGeneratorService<TData>>();
+                                var codeSetupService = provider.GetRequiredService<CodeGeneratorService<TData, TFile>>();
 
                                 await codeSetupService.GenerateCodes(
                                     templatePaths: templatePaths.ToList());

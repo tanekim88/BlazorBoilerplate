@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public static List<string> newBoundedContextNames = new List<string> { "Email", "Shop" };
 

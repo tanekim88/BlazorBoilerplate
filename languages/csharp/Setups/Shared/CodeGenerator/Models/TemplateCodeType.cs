@@ -14,7 +14,7 @@ using CodeGenerator.Models.Dictionaries;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public class TemplateCodeType
     {
         //public string OrderBySymbol { get; set; } = "orderBy";
@@ -108,11 +108,9 @@ namespace CodeGenerator.Models
             foreach (var genPostFix in new[]
             {
                 "Gen",
-                "Tmp"
             })
             {
                 var regexes = GetTemplatePostfixRegexes(genPostFix: genPostFix, isPath: isPath);
-
 
                 regexes.ForEach(action: regex =>
                 {
@@ -410,9 +408,9 @@ namespace CodeGenerator.Models
         }
 
 
-        public string GetAllTemplateSymbolToken(TemplateProject project, bool isPath)
+        public string GetAllTemplateSymbolToken(string generatorSymbol, bool isPath)
         {
-            return GetTemplateName(inputName: project.GeneratorSymbol, isPath: isPath);
+            return GetTemplateName(inputName: generatorSymbol, isPath: isPath);
         }
 
 

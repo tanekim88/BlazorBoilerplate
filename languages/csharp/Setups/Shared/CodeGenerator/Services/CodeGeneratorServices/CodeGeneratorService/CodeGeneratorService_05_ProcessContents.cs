@@ -13,12 +13,12 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> where TFile : TemplateFile<TData>
     {
-        public async Task<ProcessContentsOutput> ProcessContents(
-             TemplateFile file,
-             TemplateData data,
-             List<LocalTemplateInfo> localTemplateInfosForPaths
+        public async Task<ProcessContentsOutput<TData>> ProcessContents(
+             TFile file,
+             List<LocalTemplateInfo<TData>> localTemplateInfosForPaths,
+             TData data
             )
         {
             var codeType = file.CodeType;
@@ -55,9 +55,9 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                     maxLength: contentMax,
                     isPath: true,
                     candidates: contentNameMatches,
-                    objectType: data.GetType(),
+                    objectType: localTemplateInfForPath.Data.GetType(),
                     codeType: codeType,
-                    text: file.Path,
+                    text: file.ProcessedFilePath,
                     parentName: null,
                     parentPropertyPaths: new List<string>());
 
@@ -69,8 +69,8 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                              isPath: true,
                              matchingToken: tokenInfo,
                              codeType: codeType,
-                             text: file.Path,
-                             obj: data,
+                             text: file.ProcessedFilePath,
+                             obj: localTemplateInfForPath.Data.GetType(),
                              constraints: null,
                              parentName: null,
                              parentPropertyPaths: new List<string>());
@@ -80,7 +80,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
 
 
 
-                var finalList = new List<TemplateTokenInfo>();
+                var finalList = new List<TemplateTokenInfo<TData>>();
 
                 var combinedTokenInfos = tokenInfosForContent.GroupBy(keySelector: token =>
                 {
@@ -102,7 +102,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                             {
                                 if (groupedIdTokens.TryGetValue(key: groupId, value: out var o))
                                     return o;
-                                return new List<TemplateTokenInfo>();
+                                return new List<TemplateTokenInfo<TData>>();
                             }).ToList();
 
                             return toReturn;
@@ -139,12 +139,12 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 {
                     if (groupedTokens.TryGetValue(key: x.Id, value: out var o)) return o;
 
-                    return new List<TemplateTokenInfo>();
+                    return new List<TemplateTokenInfo<TData>>();
                 }).ToList();
 
                 var filteredListOfList = listOfList.Where(predicate: list => { return true; }).ToList();
 
-                if (filteredListOfList.Count() == 0) filteredListOfList = new List<List<TemplateTokenInfo>> { new() };
+                if (filteredListOfList.Count() == 0) filteredListOfList = new List<List<TemplateTokenInfo<TData>>> { new() };
 
                 var groupedFilteredListOfList = filteredListOfList.GroupBy(keySelector: list =>
                 {
@@ -165,12 +165,12 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                 {
                     var listOfListBackup = groupedFilteredListOfList;
 
-                    var filePath = file.Path;
+                    var filePath = file.ProcessedFilePath;
 
                     var directories = new List<TemplateDirectory>();
-                    var templateDirectoryPath = Directory.GetParent(path: file.TemplatePath).FullName;
-                    var path = file.Path;
-                    if (templateDirectoryPath != file.Project.DirPath)
+                    var templateDirectoryPath = Directory.GetParent(path: file.FilePath).FullName;
+                    var path = file.ProcessedFilePath;
+                    if (templateDirectoryPath != file.Project.ProjectDirPath)
                     {
                         path = Directory.GetParent(path: path).FullName;
 
@@ -210,16 +210,16 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                         codeType: codeType,
                         templateInfos: listOfTokenInfos,
                         file: file,
-                        data: data
+                        data: localTemplateInfForPath.Data
                     );
 
                     var processedText = ProcessContentsPathsAndContentsResult.ProcessedText;
 
 
-                    return new LocalTemplateInfo
+                    return new LocalTemplateInfo<TData>
                     {
                         Id = localTemplateInfForPath.InputFilePath + "__" + Guid.NewGuid(),
-                        Data = data,
+                        Data = localTemplateInfForPath.Data,
                         InputFilePath = localTemplateInfForPath.InputFilePath,
                         OutputFilePath = localTemplateInfForPath.OutputFilePath,
                         ShouldOverride = file.ShouldOverWrite,
@@ -233,16 +233,16 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             });
 
 
-            return new ProcessContentsOutput
+            return new ProcessContentsOutput<TData>
             {
                 LocalTemplateInfos = toReturn.ToList()
             };
         }
 
 
-        public record ProcessContentsOutput
+        public record ProcessContentsOutput<TData>
         {
-            public List<LocalTemplateInfo> LocalTemplateInfos { get; set; }
+            public List<LocalTemplateInfo<TData>> LocalTemplateInfos { get; set; }
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodeGenerator.Impls.CodeGeneratorImpls
 {
-    public partial class DefaultCodeGeneratorProvider : ICodeGeneratorProvider
+    public partial class DefaultCodeGeneratorProvider : ICodeGeneratorProvider<TemplateData>
     {
         public async Task PopulateModels(TemplateData data)
         {

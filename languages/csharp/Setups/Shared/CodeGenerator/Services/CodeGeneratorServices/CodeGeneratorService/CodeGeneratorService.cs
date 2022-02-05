@@ -11,17 +11,13 @@ using Library.Application.Interfaces.ServiceInterfaces.SerializerServiceInterfac
 using Library.Application.Interfaces.ServiceInterfaces.TemplateServiceInterfaces;
 using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
+
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> where TFile : TemplateFile<TData>
     {
-        private static readonly ConcurrentDictionary<string, object> Cache = new();
         private readonly IAssemblyService _assemblyService;
-
-     
         private readonly IJsService _jsService;
         private readonly IPathService _pathService;
         private readonly IRegexService _regexService;
@@ -30,7 +26,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         private readonly ITranslationUiService _translationUiService;
         private readonly IXmlSerializerService _xmlSerializerService;
         private readonly IEvalService _evalService;
-        private readonly ICodeGeneratorProvider<TData> _codeGeneratorProvider;
+        private readonly ICodeGeneratorProvider<TData, TFile> _codeGeneratorProvider;
         public CodeGeneratorService(
             IRegexService regexService,
             ITemplateService templateParserSetupService,
@@ -42,7 +38,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
          
             IServiceProvider serviceProvider,
             IJsService jsService,
-            ICodeGeneratorProvider<TData> codeGeneratorProvider)
+            ICodeGeneratorProvider<TData, TFile> codeGeneratorProvider)
         {
             _regexService = regexService;
             _templateService = templateParserSetupService;

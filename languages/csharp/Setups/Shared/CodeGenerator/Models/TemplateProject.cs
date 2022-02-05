@@ -1,61 +1,34 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using System.Runtime.Serialization;
-using Microsoft.EntityFrameworkCore;
-using CodeGenerator.Attributes;
 
 
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
-    public class TemplateProject : TemplateBase, ICloneable
+
+    public class TemplateProject<TData, TFile> : TemplateBase, ICloneable where TFile : TemplateFile<TData>
     {
-        [DataMember] public string Type { get; set; }
-        [DataMember] public bool IsShared { get; set; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public TData Data { get; set; }
+        public string BaseName { get; set; }
+        public TemplateCodeType CodeType { get; set; } = new();
+        public string GeneratorSymbol { get; set; }
 
-        [DataMember] public string Name { get; set; }
-        [DataMember] public string BaseName { get; set; }
+        public string ProjectFilePath { get; set; }
 
-        [DataMember] public string CodeName { get; set; }
+        public string ProjectDirPath { get; set; }
 
-        [DataMember]
-        [PropertyPathsAlias(propertyPaths: new[] { "Prefix" })]
-        public string Prefix { get; set; }
+        public Assembly Assembly { get; set; }
 
-        [DataMember]
-        [PropertyPathsAlias(propertyPaths: new[] { "Postfix" })]
-        public string Postfix { get; set; }
+        public HashSet<TFile> Files { get; set; }
 
-        [DataMember] public string GeneratorSymbol { get; set; }
-
-        [DataMember] public string Path { get; set; }
-
-        [DataMember] public string DirPath { get; set; }
-
-        [IgnoreDataMember] public Assembly Assembly { get; set; }
-        [IgnoreDataMember] public Assembly InfrastructureAssembly { get; set; }
-        [IgnoreDataMember] public Assembly ApplicationAssembly { get; set; }
-        [IgnoreDataMember] public Assembly DomainAssembly { get; set; }
-
-        [DataMember] public List<TemplateFile> Files { get; set; }
-
-        [DataMember] public List<TemplateService> Services { get; set; }
-
-        [DataMember] public List<TemplateLocalization> Localizations { get; set; }
-
-        [DataMember] public List<TemplateModel> Models { get; set; }
-        [DataMember] public List<TemplateEntity> Entities { get; set; }
-        [DataMember] public List<TemplateProject> DependentProjects { get; set; }
+        public List<TemplateProject<TData, TFile>> DependentProjects { get; set; }
 
         public object Clone()
         {
             return MemberwiseClone();
         }
-
-        //public Dictionary<string, Dictionary<string, TemplateLocalization>> LocalizationByLanguageCodeByKey { get; set; }
     }
 }

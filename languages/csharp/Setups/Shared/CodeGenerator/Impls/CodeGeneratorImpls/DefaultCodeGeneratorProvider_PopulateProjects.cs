@@ -11,7 +11,7 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class DefaultCodeGeneratorProvider : ICodeGeneratorProvider<TemplateData>
     {
         public void PopulateProjects(TemplateData data)
         {

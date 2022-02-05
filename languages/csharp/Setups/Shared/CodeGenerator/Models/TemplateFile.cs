@@ -1,55 +1,51 @@
 ﻿
 
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
-    public class TemplateFile : TemplateBase
+
+    public class TemplateFile<TData> : TemplateBase
     {
-        [DataMember] public string TemplateName { get; set; }
+        public string FileName { get; set; }
 
-        [DataMember] public string GenType { get; set; }
+        //public string GenType { get; set; }
 
-        [DataMember] public bool HasPartialRef { get; set; }
+        //public bool HasPartialRef { get; set; }
 
-        [IgnoreDataMember] public string PartialRefContent { get; set; }
-        [DataMember] public bool ShouldOverWrite { get; set; }
+        //public string PartialRefContent { get; set; }
+        //public bool ShouldOverWrite { get; set; }
 
-        [DataMember] public bool ShouldPartiallyOverWrite { get; set; }
+        //public bool ShouldPartiallyOverWrite { get; set; }
 
-        [DataMember] public bool ShouldFinalize { get; set; }
+        //public bool ShouldFinalize { get; set; }
 
-        [DataMember] public TemplateProject Project { get; set; } = new();
+        //public TemplateProject<TData, TemplateFile<TData>> Project { get; set; } = new();
 
-        [DataMember] public string Name { get; set; }
+        public string ProcessedFileName { get; set; }
 
-        [DataMember] public List<TemplateTokenInfo> tokenIfos { get; set; }
+        public List<TemplateTokenInfo<TData>> tokenInfos { get; set; }
 
-        [IgnoreDataMember] public string Content { get; set; }
+        public string Content { get; set; }
 
-        [DataMember] public string Path { get; set; }
+        public string ProcessedFilePath { get; set; }
 
-        [DataMember] public string TemplatePath { get; set; }
+        public string FilePath { get; set; }
 
-        //[DataMember] public string XmlPath { get; set; }
+        // public string XmlPath { get; set; }
 
-        [DataMember] public string Extension { get; set; }
+        public string Extension { get; set; }
 
-        [DataMember] public TemplateCodeType CodeType { get; set; } = new();
+        public TemplateCodeType CodeType { get; set; } = new();
 
-        [IgnoreDataMember] public List<TemplateDirectory> Directories { get; set; }
+        //public List<TemplateDirectory> Directories { get; set; }
 
-        [IgnoreDataMember] public TemplateContext Context { get; set; }
+        //public Dictionary<string, TemplateSection> SectionsDict { get; set; }
 
-
-        [DataMember] public Dictionary<string, TemplateSection> SectionsDict { get; set; }
-
-        [DataMember] public List<TemplateSection> Sections { get; set; }
-        [DataMember] public Dictionary<string, TemplateSection> TemplateSectionsDict { get; set; }
-        [DataMember] public List<TemplateSection> TemplateSections { get; set; }
+        //public List<TemplateSection> Sections { get; set; }
+        //public Dictionary<string, TemplateSection> TemplateSectionsDict { get; set; }
+        //public List<TemplateSection> TemplateSections { get; set; }
     }
 }

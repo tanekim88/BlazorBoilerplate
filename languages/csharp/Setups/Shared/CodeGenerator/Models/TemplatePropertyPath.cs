@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public class TemplatePropertyPath : TemplateBase
     {
         public string Name { get; set; }

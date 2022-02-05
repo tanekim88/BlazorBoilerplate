@@ -27,7 +27,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         public List<TemplateTokenInfo> ListOfTokenInfosUsedForPath { get; set; }
     }
 
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public async Task<ProcessPathsOutput> ProcessPaths(
         TemplateFile file,

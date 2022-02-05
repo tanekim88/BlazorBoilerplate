@@ -9,15 +9,15 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> where TFile : TemplateFile<TData>
     {
         public ProcessContentsBodyOutput ProcessContentsBody(
                 List<TemplateDirectory> directories,
                 string text,
                 TemplateCodeType codeType,
-                List<TemplateTokenInfo> templateInfos,
-                TemplateFile file,
-                TemplateData data
+                List<TemplateTokenInfo<TData>> templateInfos,
+                TFile file,
+                TData data
         )
         {
             text = codeType.RemoveTemplatePostfix(inputString: text, isPath: false);
@@ -89,12 +89,12 @@ namespace CodeGenerator.Services.CodeGeneratorServices
             }
 
 
-            text = codeType.ReplaceWithCSharpExpressionForContent(inputString: text);
+            //text = codeType.ReplaceWithCSharpExpressionForContent(inputString: text);
 
-            text = codeType.ActivateTemplateSyntaxByUncommenting(intputString: text);
-            text = codeType.ApplyUncommentCommand(intputString: text);
+            //text = codeType.ActivateTemplateSyntaxByUncommenting(intputString: text);
+            //text = codeType.ApplyUncommentCommand(intputString: text);
 
-            text = codeType.ApplyIgnoreCommand(text: text);
+            //text = codeType.ApplyIgnoreCommand(text: text);
 
             return new ProcessContentsBodyOutput
             {

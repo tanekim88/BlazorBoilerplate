@@ -8,12 +8,10 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public abstract class TemplateBase
     {
-        [DataMember] public List<TemplateGroup> Groups { get; set; }
-
-        [DataMember] public TemplateBoundedContext BoundedContext { get; set; }
+         public List<TemplateGroup> Groups { get; set; }
 
         public string GetDomainName()
         {

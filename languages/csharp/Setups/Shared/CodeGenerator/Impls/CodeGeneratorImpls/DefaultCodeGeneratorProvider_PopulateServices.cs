@@ -14,7 +14,7 @@ using CodeGenerator.Interfaces.CodeGeneratorInterfaces;
 
 namespace CodeGenerator.Impls.CodeGeneratorImpls
 {
-    public partial class DefaultCodeGeneratorProvider : ICodeGeneratorProvider
+    public partial class DefaultCodeGeneratorProvider : ICodeGeneratorProvider<TemplateData>
     {
         public void PopulateServices(TemplateData data)
         {

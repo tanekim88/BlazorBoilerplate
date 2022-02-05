@@ -18,7 +18,7 @@ using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         private static readonly ConcurrentDictionary<string, object> Cache = new();
         private readonly IAssemblyService _assemblyService;

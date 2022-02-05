@@ -24,7 +24,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
         public static ConcurrentDictionary<string, ConcurrentDictionary<string, object>> ProcessedFileToDic = new();
     }
 
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public async Task Process(
             Dictionary<string, object> parameters,

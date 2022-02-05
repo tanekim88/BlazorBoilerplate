@@ -7,7 +7,7 @@ using CodeGenerator.Models;
 
 namespace CodeGenerator.Services.CodeGeneratorServices
 {
-    public partial class CodeGeneratorService<TData>
+    public partial class CodeGeneratorService<TData, TFile> 
     {
         public string GetFirstCommandContent(string inputString, string command, TemplateCodeType codeType)
         {

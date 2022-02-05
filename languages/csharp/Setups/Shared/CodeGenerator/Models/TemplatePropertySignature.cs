@@ -7,10 +7,10 @@ using System.Runtime.Serialization;
 
 namespace CodeGenerator.Models
 {
-    [DataContract(IsReference = true)]
+    
     public class TemplatePropertySignature : TemplateSignatureBase, ICloneable
     {
-        [DataMember] public string Initializer { get; set; }
+         public string Initializer { get; set; }
 
 
         public object Clone()

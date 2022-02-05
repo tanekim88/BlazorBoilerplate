@@ -17,6 +17,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces;
 using Microsoft.AspNetCore.Hosting;
 using static Library.Application.Interfaces.ServiceInterfaces.PathServiceInterfaces.IPathService;
@@ -43,7 +44,7 @@ namespace Library.Infrastructure.Services.PathServices
         public PathService(
             /*%s:begin ConstructorParameters*/
             IWebHostEnvironment env
-            /*%s:end ConstructorParameters*/
+        /*%s:end ConstructorParameters*/
         )
         {
             /*%s:begin ConstructorBody*/
@@ -60,7 +61,7 @@ namespace Library.Infrastructure.Services.PathServices
             List<string> regexPathPatterns = null
         )
         {
-            if (regexPathPatterns is null) regexPathPatterns = new List<string> {@"\.(cs|vb)proj$"};
+            if (regexPathPatterns is null) regexPathPatterns = new List<string> { @"\.(cs|vb)proj$" };
 
             return GetAncestorFolderInfoThatContainsThisFilePattern_Static(
                 currentDirPath: currentDirPath,
@@ -75,7 +76,7 @@ namespace Library.Infrastructure.Services.PathServices
         )
         {
             if (excludedDirs is null)
-                excludedDirs = new List<string> {@"node_modules"};
+                excludedDirs = new List<string> { @"node_modules" };
             if (globPatterns is null)
                 globPatterns = new List<string>();
             return GetFilesThatMatchesTheGlob_Static(currentDirPath: currentDirPath, excludedDirs: excludedDirs,
@@ -83,16 +84,16 @@ namespace Library.Infrastructure.Services.PathServices
         }
 
 
-        public GetAppsDirOutput GetAppDirPath()
+        public async Task<GetAppsDirOutput> GetAppDirPathAsync()
         {
-            if (AppDirPath != null) return new GetAppsDirOutput {AppDirPath = AppDirPath};
+            if (AppDirPath is not null) return new GetAppsDirOutput { AppDirPath = AppDirPath };
 
             var currentRootPath = _env.ContentRootPath;
             var result = GetAncestorFolderInfoThatContainsThisFilePattern(currentDirPath: currentRootPath,
                 regexPathPatterns: new List<string>
                     {@$"{Regex.Escape(str: Path.DirectorySeparatorChar.ToString())}App\.sln$"});
 
-            return new GetAppsDirOutput {AppDirPath = result.FoundDirPath};
+            return new GetAppsDirOutput { AppDirPath = result.FoundDirPath };
         }
 
 
@@ -104,7 +105,7 @@ namespace Library.Infrastructure.Services.PathServices
 
             var result = GetAncestorFolderInfoThatContainsThisFilePattern(
                 currentDirPath: dirPath,
-                regexPathPatterns: new List<string> {@"\.(cs|vb)proj$"}
+                regexPathPatterns: new List<string> { @"\.(cs|vb)proj$" }
             );
 
 
@@ -114,7 +115,7 @@ namespace Library.Infrastructure.Services.PathServices
             return new GetProjectPathFromFilePathOutput
             {
                 ProjectDirPath = result.FoundDirPath,
-                ProjectPath = foundProjectPath,
+                ProjectFilePath = foundProjectPath,
                 ProjectName = projectName
             };
         }
@@ -134,7 +135,7 @@ namespace Library.Infrastructure.Services.PathServices
 
             var foundPath = result.FoundPaths.FirstOrDefault();
 
-            return new GetCurrentProjectPathOutput {ProjectPath = foundPath, ProjectDirPath = result.FoundDirPath};
+            return new GetCurrentProjectPathOutput { ProjectPath = foundPath, ProjectDirPath = result.FoundDirPath };
         }
 
 
@@ -143,7 +144,7 @@ namespace Library.Infrastructure.Services.PathServices
             var result = GetProjectPath_Static(projectName: projectName);
 
             return new GetProjectPathOutput
-                {ProjectPath = result.ProjectDirPath, ProjectDirPath = result.ProjectDirPath};
+            { ProjectPath = result.ProjectDirPath, ProjectDirPath = result.ProjectDirPath };
         }
 
 
@@ -184,14 +185,14 @@ namespace Library.Infrastructure.Services.PathServices
                 .OrderByDescending(keySelector: x => x).FirstOrDefault();
 
 
-            return new GetDynamicExpressoAssemblyPathOutput {Payload = humanizerAssemblyPath};
+            return new GetDynamicExpressoAssemblyPathOutput { Payload = humanizerAssemblyPath };
         }
 
         public GetHumanizerAssemblyPathOutput GetHumanizerAssemblyPath()
         {
             if (_humanizerAssemblyPath != null)
             {
-                return new GetHumanizerAssemblyPathOutput {Payload = _humanizerAssemblyPath};
+                return new GetHumanizerAssemblyPathOutput { Payload = _humanizerAssemblyPath };
                 ;
             }
 
@@ -204,7 +205,7 @@ namespace Library.Infrastructure.Services.PathServices
 
             _humanizerAssemblyPath = humanizerAssemblyPath;
 
-            return new GetHumanizerAssemblyPathOutput {Payload = humanizerAssemblyPath};
+            return new GetHumanizerAssemblyPathOutput { Payload = humanizerAssemblyPath };
         }
 
 
@@ -213,7 +214,7 @@ namespace Library.Infrastructure.Services.PathServices
             var assembly = AppDomain.CurrentDomain.GetAssemblies()
                 .FirstOrDefault(predicate: x => x.GetName().Name == projectName);
 
-            return new GetAssemblyPathOutput {Payload = assembly.Location};
+            return new GetAssemblyPathOutput { Payload = assembly.Location };
         }
 
 
@@ -229,7 +230,7 @@ namespace Library.Infrastructure.Services.PathServices
             else if (RuntimeInformation.IsOSPlatform(osPlatform: OSPlatform.Linux))
                 toReturn = @"/usr/lib/monodevelop/AddIns/MonoDevelop.TextTemplating/TextTransform.exe";
 
-            return new GetTextTransformPathOutput {Path = toReturn};
+            return new GetTextTransformPathOutput { Path = toReturn };
         }
 
 
@@ -241,7 +242,7 @@ namespace Library.Infrastructure.Services.PathServices
             if (File.Exists(path: currentDirPath)) currentDirPath = Directory.GetParent(path: currentDirPath).FullName;
 
             if (!Directory.Exists(path: currentDirPath))
-                return new GetAncestorFolderThatContainsThisFileOutput {FoundDirPath = null, FoundPaths = null};
+                return new GetAncestorFolderThatContainsThisFileOutput { FoundDirPath = null, FoundPaths = null };
 
             var files = Directory
                 .EnumerateFiles(path: currentDirPath, searchPattern: "*", searchOption: SearchOption.TopDirectoryOnly)
@@ -252,7 +253,7 @@ namespace Library.Infrastructure.Services.PathServices
 
             if (files.Count() > 0)
                 return new GetAncestorFolderThatContainsThisFileOutput
-                    {FoundDirPath = currentDirPath, FoundPaths = files.ToList()};
+                { FoundDirPath = currentDirPath, FoundPaths = files.ToList() };
 
             return GetAncestorFolderInfoThatContainsThisFilePattern_Static(
                 currentDirPath: Directory.GetParent(path: currentDirPath).FullName,
@@ -363,7 +364,7 @@ namespace Library.Infrastructure.Services.PathServices
 
         public static GetAppsDirOutput GetAppsDir_Static()
         {
-            if (AppDirPath != null) return new GetAppsDirOutput {AppDirPath = AppDirPath};
+            if (AppDirPath != null) return new GetAppsDirOutput { AppDirPath = AppDirPath };
 
             var currentAssembly = Assembly.GetExecutingAssembly();
             var result = GetAncestorFolderInfoThatContainsThisFilePattern_Static(
@@ -371,14 +372,14 @@ namespace Library.Infrastructure.Services.PathServices
                 regexPathPatterns: new List<string>
                     {@$"{Regex.Escape(str: Path.DirectorySeparatorChar.ToString())}.+\.sln$"});
 
-            return new GetAppsDirOutput {AppDirPath = result.FoundDirPath};
+            return new GetAppsDirOutput { AppDirPath = result.FoundDirPath };
         }
 
         public static GetAllProjectPathsWithinAppsDirOutput GetAllProjectPathsWithinAppsDir_Static()
         {
             if (AllProjectPathsWithinAppsDir != null)
                 return new GetAllProjectPathsWithinAppsDirOutput
-                    {AllProjectPathsWithinAppsDir = AllProjectPathsWithinAppsDir};
+                { AllProjectPathsWithinAppsDir = AllProjectPathsWithinAppsDir };
 
             var appsDirResult = GetAppsDir_Static();
             var foundPaths = Directory.EnumerateFiles(path: appsDirResult.AppDirPath, searchPattern: "*.*proj",
@@ -387,7 +388,7 @@ namespace Library.Infrastructure.Services.PathServices
 
             AllProjectPathsWithinAppsDir = foundPaths;
 
-            return new GetAllProjectPathsWithinAppsDirOutput {AllProjectPathsWithinAppsDir = foundPaths};
+            return new GetAllProjectPathsWithinAppsDirOutput { AllProjectPathsWithinAppsDir = foundPaths };
         }
 
         public static GetProjectPathOutput GetProjectPath_Static(string projectName)
@@ -399,7 +400,7 @@ namespace Library.Infrastructure.Services.PathServices
                     $@"{Regex.Escape(str: Path.DirectorySeparatorChar.ToString())}{projectName}\.(cs|vb)proj$"));
             var foundDirPath = Directory.GetParent(path: foundPath).FullName;
 
-            return new GetProjectPathOutput {ProjectPath = foundPath, ProjectDirPath = foundDirPath};
+            return new GetProjectPathOutput { ProjectPath = foundPath, ProjectDirPath = foundDirPath };
         }
 
 
