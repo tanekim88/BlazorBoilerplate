@@ -17,7 +17,7 @@ await CodeGeneratorService.ProcessArgs(
              args: new[]
              {
                                 "-g",
-                                "-f", @"C:\app\languages\csharp\Shared\BoundedContexts\__EBN__BoundedContext_gen_",
+                                "-f", @"C:\app\languages\csharp\Shared\BoundedContexts\__BoundedContext_gen_",
              },
              dependentProjects: new List<TemplateProject>
              {

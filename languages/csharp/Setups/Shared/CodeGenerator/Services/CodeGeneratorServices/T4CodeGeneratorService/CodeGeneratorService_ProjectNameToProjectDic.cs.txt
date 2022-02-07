@@ -433,7 +433,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                             {
                                 var finalValue = value.ToString()
                                 .Replace("__BoundedContext_Name__", boundedContextName)
-                                .Replace("__EBN__", boundedContextName);
+                                .Replace("__", boundedContextName);
 
                                 var codeType = TemplateCodeType.GetCodeTypeFromExtension(".cs");
 
