@@ -1,7 +1,7 @@
 ﻿
 using CodeGenerator.Models;
-using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts;
-using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.PropertyInfoExts;
+using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions;
+using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.PropertyInfoExtensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;

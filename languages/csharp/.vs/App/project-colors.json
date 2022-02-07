@@ -28,7 +28,7 @@
     },
     "18d72f3f-86d4-4a65-a1f9-d7380def5040": {
       "ProjectGuid": "18d72f3f-86d4-4a65-a1f9-d7380def5040",
-      "DisplayName": "__Entities_BoundedContext_Name__.Infrastructure",
+      "DisplayName": "__BoundedContext_Name__.Infrastructure",
       "ColorIndex": 5
     },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
@@ -59,6 +59,86 @@
     "faeb318b-4b7a-4211-ab22-392e70254d58": {
       "ProjectGuid": "faeb318b-4b7a-4211-ab22-392e70254d58",
       "DisplayName": "BlazorApp.Server",
+      "ColorIndex": 10
+    },
+    "ac9d6442-b0d8-453d-9c7b-34c5182186a2": {
+      "ProjectGuid": "ac9d6442-b0d8-453d-9c7b-34c5182186a2",
+      "DisplayName": "CodeGenerator",
+      "ColorIndex": 11
+    },
+    "557069b7-091a-4cb7-9d32-5421209ad286": {
+      "ProjectGuid": "557069b7-091a-4cb7-9d32-5421209ad286",
+      "DisplayName": "SetupLibrary.Infrastructure",
+      "ColorIndex": 12
+    },
+    "a425709d-91aa-4882-ad8b-6a97325d655d": {
+      "ProjectGuid": "a425709d-91aa-4882-ad8b-6a97325d655d",
+      "DisplayName": "BlazorApp.Setup.Client",
+      "ColorIndex": 13
+    },
+    "2f8735bc-8019-4d03-a462-6d9106f8f43b": {
+      "ProjectGuid": "2f8735bc-8019-4d03-a462-6d9106f8f43b",
+      "DisplayName": "BlazorApp.Setup.Server",
+      "ColorIndex": 14
+    },
+    "d63ddf85-fe9c-48f2-a1ac-d83492fb1e93": {
+      "ProjectGuid": "d63ddf85-fe9c-48f2-a1ac-d83492fb1e93",
+      "DisplayName": "Setup.Server",
+      "ColorIndex": 15
+    },
+    "e4467006-5a57-4943-af6a-f3b3de85b17f": {
+      "ProjectGuid": "e4467006-5a57-4943-af6a-f3b3de85b17f",
+      "DisplayName": "SetupLibrary.Domain",
+      "ColorIndex": 0
+    },
+    "95e22a0a-c76f-471f-a1db-5d45664d37bc": {
+      "ProjectGuid": "95e22a0a-c76f-471f-a1db-5d45664d37bc",
+      "DisplayName": "SetupLibrary.Application",
+      "ColorIndex": 1
+    },
+    "f0aa6928-a305-472e-ba0e-fdb7b6163e40": {
+      "ProjectGuid": "f0aa6928-a305-472e-ba0e-fdb7b6163e40",
+      "DisplayName": "SharedAuth.Application",
+      "ColorIndex": 2
+    },
+    "caf34fe3-6a9d-46aa-98f1-2b6d3bd35b5b": {
+      "ProjectGuid": "caf34fe3-6a9d-46aa-98f1-2b6d3bd35b5b",
+      "DisplayName": "__BoundedContext_Name__.Application",
+      "ColorIndex": 3
+    },
+    "67fb02bf-2e02-4a23-9fa8-0a1f97a86643": {
+      "ProjectGuid": "67fb02bf-2e02-4a23-9fa8-0a1f97a86643",
+      "DisplayName": "__BoundedContext_Name__.Domain",
+      "ColorIndex": 4
+    },
+    "4a43e413-1acc-4cbe-9bc9-1607db2688e8": {
+      "ProjectGuid": "4a43e413-1acc-4cbe-9bc9-1607db2688e8",
+      "DisplayName": "__BoundedContext_Name__.IntegrationEvents",
+      "ColorIndex": 5
+    },
+    "23af3d3a-8077-422f-beb4-a408d1d1881b": {
+      "ProjectGuid": "23af3d3a-8077-422f-beb4-a408d1d1881b",
+      "DisplayName": "Shared__BoundedContext_Name__.Domain",
+      "ColorIndex": 6
+    },
+    "e3c1c63d-8b38-4cc2-a77b-a5a153f2f1b5": {
+      "ProjectGuid": "e3c1c63d-8b38-4cc2-a77b-a5a153f2f1b5",
+      "DisplayName": "Shared__BoundedContext_Name__.Infrastructure",
+      "ColorIndex": 7
+    },
+    "e7c5d921-e591-46ec-b3b9-167df4b1aa1f": {
+      "ProjectGuid": "e7c5d921-e591-46ec-b3b9-167df4b1aa1f",
+      "DisplayName": "__BoundedContext_Name__.ArchTests",
+      "ColorIndex": 8
+    },
+    "cf9413d7-1b05-4391-ad53-c9bb8fc34316": {
+      "ProjectGuid": "cf9413d7-1b05-4391-ad53-c9bb8fc34316",
+      "DisplayName": "__BoundedContext_Name__.IntegrationTests",
+      "ColorIndex": 9
+    },
+    "b8bb30fe-29d4-49a4-a3ff-e261a66b3bfd": {
+      "ProjectGuid": "b8bb30fe-29d4-49a4-a3ff-e261a66b3bfd",
+      "DisplayName": "__BoundedContext_Name__.UnitTests",
       "ColorIndex": 10
     }
   },

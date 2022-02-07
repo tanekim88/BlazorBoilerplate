@@ -14,12 +14,12 @@ using {{ $usedNamespace }};
 */
 
 
-using __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities;
+using __BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities;
 using Ardalis.Specification;
 
 
 
-namespace __Entities_BoundedContext_Name__.Domain.Specs.__Entities_Groups_00_Name__Specs.__Entities_Name__Specs
+namespace __BoundedContext_Name__.Domain.Specs.__Entities_Groups_00_Name__Specs.__Entities_Name__Specs
 {
     public sealed class __Entities_NamePluralCase__By__Entities_Properties_Name__Spec_Gen_
         : Specification<__Entities_Name___Gen_>

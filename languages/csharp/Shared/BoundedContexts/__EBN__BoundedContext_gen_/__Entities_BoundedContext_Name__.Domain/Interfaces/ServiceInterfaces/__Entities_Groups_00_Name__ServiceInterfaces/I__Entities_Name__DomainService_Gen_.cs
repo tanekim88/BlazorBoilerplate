@@ -9,7 +9,7 @@ using {{ $usedNamespace }};
 */
 
 
-namespace __Entities_BoundedContext_Name__.Domain.Interfaces.ServiceInterfaces.__Entities_Groups_00_Name__ServiceInterfaces
+namespace __BoundedContext_Name__.Domain.Interfaces.ServiceInterfaces.__Entities_Groups_00_Name__ServiceInterfaces
 {
     public interface I__Entities_Name__DomainService_Gen_
     {

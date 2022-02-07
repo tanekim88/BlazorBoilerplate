@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SetupLibrary.Infrastructure.Exts.IServiceCollectionExts;
+using SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions;
 
 namespace SetupLibrary.Infrastructure
 {

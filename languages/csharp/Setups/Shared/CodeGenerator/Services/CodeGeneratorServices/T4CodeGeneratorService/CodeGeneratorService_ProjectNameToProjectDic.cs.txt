@@ -16,112 +16,112 @@ namespace CodeGenerator.Services.CodeGeneratorServices
 
              new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.Domain)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.Domain)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.Domain.Interfaces.RepositoryInterfaces.__Entities_Groups_00_Name__RepositoryInterfaces.I__Entities_Name__Repository_Gen_).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.Domain)}",
+                        typeof(__BoundedContext_Name__.Domain.Interfaces.RepositoryInterfaces.__Entities_Groups_00_Name__RepositoryInterfaces.I__Entities_Name__Repository_Gen_).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.Domain)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.Application)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.Application)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.Application.__Entities_BoundedContext_Name__ApplicationConfig).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.Application)}",
+                        typeof(__BoundedContext_Name__.Application.__BoundedContext_Name__ApplicationConfig).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.Application)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.Infrastructure)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.Infrastructure)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.Infrastructure.DbContexts.__Entities_BoundedContext_Name__DbContext_Gen_).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.Infrastructure)}",
+                        typeof(__BoundedContext_Name__.Infrastructure.DbContexts.__BoundedContext_Name__DbContext_Gen_).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.Infrastructure)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
 
                 new()
                 {
-                    Name = $"{nameof(Shared__Entities_BoundedContext_Name__)}.{nameof(Shared__Entities_BoundedContext_Name__.Domain)}",
+                    Name = $"{nameof(Shared__BoundedContext_Name__)}.{nameof(Shared__BoundedContext_Name__.Domain)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Domain.Shared__Entities_BoundedContext_Name__DomainConfig).Assembly,
-                    CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Domain)}",
+                        typeof(Shared__BoundedContext_Name__.Domain.Shared__BoundedContext_Name__DomainConfig).Assembly,
+                    CodeName = $"{nameof(Shared__BoundedContext_Name__)}_{nameof(Shared__BoundedContext_Name__.Domain)}",
                     GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
                 {
-                    Name = $"{nameof(Shared__Entities_BoundedContext_Name__)}.{nameof(Shared__Entities_BoundedContext_Name__.Application)}",
+                    Name = $"{nameof(Shared__BoundedContext_Name__)}.{nameof(Shared__BoundedContext_Name__.Application)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Application.Shared__Entities_BoundedContext_Name__ApplicationConfig).Assembly,
-                    CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Application)}",
+                        typeof(Shared__BoundedContext_Name__.Application.Shared__BoundedContext_Name__ApplicationConfig).Assembly,
+                    CodeName = $"{nameof(Shared__BoundedContext_Name__)}_{nameof(Shared__BoundedContext_Name__.Application)}",
                     GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
                 {
-                    Name = $"{nameof(Shared__Entities_BoundedContext_Name__)}.{nameof(Shared__Entities_BoundedContext_Name__.Infrastructure)}",
+                    Name = $"{nameof(Shared__BoundedContext_Name__)}.{nameof(Shared__BoundedContext_Name__.Infrastructure)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(Shared__Entities_BoundedContext_Name__.Infrastructure.Shared__Entities_BoundedContext_Name__InfrastructureConfig).Assembly,
-                    CodeName = $"{nameof(Shared__Entities_BoundedContext_Name__)}_{nameof(Shared__Entities_BoundedContext_Name__.Infrastructure)}",
+                        typeof(Shared__BoundedContext_Name__.Infrastructure.Shared__BoundedContext_Name__InfrastructureConfig).Assembly,
+                    CodeName = $"{nameof(Shared__BoundedContext_Name__)}_{nameof(Shared__BoundedContext_Name__.Infrastructure)}",
                     GeneratorSymbol = "Shared",
                     IsShared = true
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.IntegrationEvents)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.IntegrationEvents)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.IntegrationEvents.__Entities_BoundedContext_Name__IntegrationEventsConfig).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.IntegrationEvents)}",
+                        typeof(__BoundedContext_Name__.IntegrationEvents.__BoundedContext_Name__IntegrationEventsConfig).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.IntegrationEvents)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.ArchTests)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.ArchTests)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.ArchTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.ArchTests)}",
+                        typeof(__BoundedContext_Name__.ArchTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.ArchTests)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.UnitTests)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.UnitTests)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.UnitTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.UnitTests)}",
+                        typeof(__BoundedContext_Name__.UnitTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.UnitTests)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
                 new()
                 {
-                    Name = $"{nameof(__Entities_BoundedContext_Name__)}.{nameof(__Entities_BoundedContext_Name__.IntegrationTests)}",
+                    Name = $"{nameof(__BoundedContext_Name__)}.{nameof(__BoundedContext_Name__.IntegrationTests)}",
                     Prefix = "",
                     Postfix = "",
                     Assembly =
-                        typeof(__Entities_BoundedContext_Name__.IntegrationTests.UnitTest1).Assembly,
-                    CodeName = $"{nameof(__Entities_BoundedContext_Name__)}_{nameof(__Entities_BoundedContext_Name__.IntegrationTests)}",
+                        typeof(__BoundedContext_Name__.IntegrationTests.UnitTest1).Assembly,
+                    CodeName = $"{nameof(__BoundedContext_Name__)}_{nameof(__BoundedContext_Name__.IntegrationTests)}",
                     GeneratorSymbol = "",
                     IsShared = false
                 },
@@ -432,7 +432,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                             if (value is not null && value.GetType() == typeof(string))
                             {
                                 var finalValue = value.ToString()
-                                .Replace("__Entities_BoundedContext_Name__", boundedContextName)
+                                .Replace("__BoundedContext_Name__", boundedContextName)
                                 .Replace("__EBN__", boundedContextName);
 
                                 var codeType = TemplateCodeType.GetCodeTypeFromExtension(".cs");

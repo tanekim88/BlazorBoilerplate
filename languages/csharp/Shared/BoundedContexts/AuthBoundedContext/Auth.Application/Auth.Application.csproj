@@ -104,4 +104,8 @@
     <ProjectReference Include="..\Shared\SharedAuth.Application\SharedAuth.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Modules\" />
+  </ItemGroup>
+
 </Project>

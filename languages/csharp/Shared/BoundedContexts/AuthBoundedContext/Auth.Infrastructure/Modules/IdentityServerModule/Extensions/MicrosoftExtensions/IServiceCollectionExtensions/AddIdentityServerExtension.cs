@@ -1,0 +1,69 @@
+﻿using Auth.Infrastructure.DbContexts;
+using Auth.Infrastructure.Modules.IdentityServerModule.Models;
+using Auth.Infrastructure.Modules.IdentityServerModule.Models.ServicesModels.IProfileServiceModels;
+using Auth.Infrastructure.Modules.IdentityServerModule.Models.ValidationModels.DefaultScopeParserModels;
+using Auth.Infrastructure.Modules.IdentityServerModule.Models.ValidationModels.ICustomTokenRequestValidators;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.EntityFrameworkCoreExtensions.DbContextOptionsBuilderExtensions;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SharedAuth.Application.Models.EntityModels;
+
+namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
+{
+    public static class AddIdentityServerExtension
+    {
+        private static readonly string migrationsAssembly = typeof(AuthDbContext).Assembly.FullName;
+        public static IServiceCollection AddCustomIdentityServer(this IServiceCollection services,
+            IConfiguration configuration, IWebHostEnvironment env)
+        {
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddScoped<IUserClaimsPrincipalFactory<UserModel>, CustomUserClaimsPrincipalFactory>();
+
+            var builder = services.AddIdentityServer(options =>
+            {
+                //options.Authentication.CookieLifetime = TimeSpan.FromHours(1);
+                //options.Authentication.CookieSlidingExpiration = false;
+                //options.Authentication.CookieAuthenticationScheme = "your_cookie";
+                options.Events.RaiseSuccessEvents = true;
+                options.Events.RaiseFailureEvents = true;
+                options.Events.RaiseErrorEvents = true;
+            })
+                .AddAspNetIdentity<UserModel>()
+                .AddScopeParser<CustomDefaultScopeParser>()
+                .AddCustomTokenRequestValidator<CustomTokenRequestValidator>()
+                .AddProfileService<CustomProfileService>()
+                ;
+
+            if (env.IsDevelopment())
+            {
+                builder
+                .AddDeveloperSigningCredential()
+                .AddTestUsers(TestUsers.Users)
+                .AddInMemoryClients(Config.Clients)
+                .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiScopes(Config.ApiScopes);
+            }
+            else
+            {
+                builder.AddConfigurationStore(options =>
+                {
+
+                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, env, migrationsAssembly);
+                })
+                .AddOperationalStore(options =>
+                {
+                    options.ConfigureDbContext = b => b.BuildCustomDbContextOptions(configuration, env, migrationsAssembly);
+
+                    // this enables automatic token cleanup. this is optional.
+                    options.EnableTokenCleanup = true;
+                    options.TokenCleanupInterval = 3600; // interval in seconds (default is 3600)
+                });
+            }
+
+            return services;
+        }
+    }
+}

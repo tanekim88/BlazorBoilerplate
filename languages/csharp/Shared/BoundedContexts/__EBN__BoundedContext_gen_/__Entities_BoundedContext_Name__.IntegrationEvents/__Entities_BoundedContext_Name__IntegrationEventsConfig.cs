@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace __Entities_BoundedContext_Name__.IntegrationEvents
+namespace __BoundedContext_Name__.IntegrationEvents
 {
-    public class __Entities_BoundedContext_Name__IntegrationEventsConfig
+    public class __BoundedContext_Name__IntegrationEventsConfig
     {
     }
 }

@@ -482,7 +482,7 @@ using Microsoft.OData.ModelBuilder;
 
 
 
-namespace Core.Infrastructure.Exts.MicrosoftExts.ODataExts.ODataConventionModelBuilderExts
+namespace Core.Infrastructure.Extensions.MicrosoftExtensions.ODataExtensions.ODataConventionModelBuilderExtensions
 {
     public static class SetEntitiesExtension
     {

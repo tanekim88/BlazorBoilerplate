@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Shared__Entities_BoundedContext_Name__.Domain
+namespace Shared__BoundedContext_Name__.Domain
 {
-    public class Shared__Entities_BoundedContext_Name__DomainConfig
+    public class Shared__BoundedContext_Name__DomainConfig
     {
     }
 }

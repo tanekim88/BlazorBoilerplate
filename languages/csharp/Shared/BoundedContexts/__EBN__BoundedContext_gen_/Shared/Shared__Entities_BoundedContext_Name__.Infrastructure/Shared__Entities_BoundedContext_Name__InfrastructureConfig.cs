@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Shared__Entities_BoundedContext_Name__.Infrastructure
+namespace Shared__BoundedContext_Name__.Infrastructure
 {
-    public class Shared__Entities_BoundedContext_Name__InfrastructureConfig
+    public class Shared__BoundedContext_Name__InfrastructureConfig
     {
     }
 }

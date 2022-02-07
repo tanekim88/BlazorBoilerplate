@@ -64,13 +64,13 @@ using {{ $usedNamespace }};
 //%u using System.ComponentModel.DataAnnotations.Schema;
 //%u using System.ComponentModel.DataAnnotations;
 
-using __Entities_BoundedContext_Name__.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
+using __BoundedContext_Name__.Domain.ValueObjects.Ids.__Entities_Groups_00_Name__Ids;
 using Core.Domain;
 using Core.Domain.Interfaces;
 //%u using System.Collections.ObjectModel;
 //%u using System.Collections.Generic;
 
-namespace __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities
+namespace __BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities
 {
     public class __Entities_Name___Gen_ : Entity<__Entities_Name__Id_Gen_>, IAggregateRoot
     {

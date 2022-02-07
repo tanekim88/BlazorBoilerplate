@@ -1,10 +1,10 @@
 ﻿//%S:begin Usings
 //%S:end Usings
 //{{~ if Context.BoundexContext.Entities.size > 0 ~}}>
-using __Entities_BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities;
+using __BoundedContext_Name__.Domain.Entities.__Entities_Groups_00_Name__Entities;
 //{{~ end ~}}
 using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Exts.MicrosoftExts.ModelBuilderExts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
@@ -16,9 +16,9 @@ using {{ usedNamespace }};
 ~}}*/
 
 
-namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
+namespace __BoundedContext_Name__.Infrastructure.DbContexts
 {
-    public class __Entities_BoundedContext_Name__DbContext_Gen_ : ApplicationDbContext
+    public class __BoundedContext_Name__DbContext_Gen_ : ApplicationDbContext
     {
         //%d:begin
         public DbSet<__Entities_Name___Gen_> __Entities_Name_PluralCase__ { get; set; }
@@ -29,7 +29,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
                 public DbSet<{{entity.Name}}> {{ entity.PluralName }} { get; set; }
             {{end
         }}*/
-        public __Entities_BoundedContext_Name__DbContext_Gen_(DbContextOptions options) : base(options: options)
+        public __BoundedContext_Name__DbContext_Gen_(DbContextOptions options) : base(options: options)
         {
         }
 
@@ -43,7 +43,7 @@ namespace __Entities_BoundedContext_Name__.Infrastructure.DbContexts
             //modelBuilder.SetNoActionsForUpdatedByOptionalAndCreatedByOptional<User>();
             //%S:end UserAudit
 
-            var types = typeof(__Entities_BoundedContext_Name__InfrastructureConfig).Assembly.GetTypes().Where(type =>
+            var types = typeof(__BoundedContext_Name__InfrastructureConfig).Assembly.GetTypes().Where(type =>
                 type.Namespace is not null && type.Namespace.Contains(".ValueObjects"));
 
             foreach (var idType in types)

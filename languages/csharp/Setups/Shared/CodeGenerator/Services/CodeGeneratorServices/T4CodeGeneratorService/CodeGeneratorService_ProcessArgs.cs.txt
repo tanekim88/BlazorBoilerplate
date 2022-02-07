@@ -1,6 +1,6 @@
 ﻿
 
-using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
 using Library.Infrastructure.Services.PathServices;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;

@@ -1,9 +1,9 @@
 ﻿
 
 using Auth.Infrastructure.DbContexts;
-using Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
+using Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
 using CodeGenerator.Services.CodeGeneratorServices;
-using Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions;
 using Library.Application.Interfaces.ServiceInterfaces.AssemblyServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.EvalServiceInterfaces;
 using Library.Application.Interfaces.ServiceInterfaces.JsServiceInterfaces;
@@ -27,7 +27,7 @@ using SetupLibrary.Infrastructure.Services.DatabaseSetupServices;
 
 
 
-namespace SetupLibrary.Infrastructure.Exts.IServiceCollectionExts
+namespace SetupLibrary.Infrastructure.Extensions.IServiceCollectionExtensions
 {
     public static class AddSetupServicesExtension
     {

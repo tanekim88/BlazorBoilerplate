@@ -179,7 +179,7 @@ namespace CodeGenerator.Services.CodeGeneratorServices
                         value: codeType.GetTemplateSymbolName(templateSymbol: "Tmp", isPath: true),
                         comparisonType: StringComparison.InvariantCultureIgnoreCase);
 
-                    filePath = codeType.RemoveTemplatePostfix(inputString: filePath, isPath: true).Replace("__EBN__", "__Entities_BoundedContext_Name__");
+                    filePath = codeType.RemoveTemplatePostfix(inputString: filePath, isPath: true).Replace("__EBN__", "__BoundedContext_Name__");
 
                     templateFile.TemplatePath = templatePath;
 

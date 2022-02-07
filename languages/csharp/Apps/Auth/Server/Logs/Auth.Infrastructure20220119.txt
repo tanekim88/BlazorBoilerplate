@@ -498,7 +498,7 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Duende.IdentityServer.Hosting.DynamicProviders.DynamicSchemeAuthenticationMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/DynamicProviders/DynamicSchemes/DynamicSchemeAuthenticationMiddleware.cs:line 47
    at Duende.IdentityServer.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/BaseUrlMiddleware.cs:line 31
-   at Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Exts\MicrosoftExts\IServiceCollectionExts\AddLocalizationExtension.cs:line 156
+   at Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\IServiceCollectionExtensions\AddLocalizationExtension.cs:line 156
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
@@ -527,7 +527,7 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Duende.IdentityServer.Hosting.DynamicProviders.DynamicSchemeAuthenticationMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/DynamicProviders/DynamicSchemes/DynamicSchemeAuthenticationMiddleware.cs:line 47
    at Duende.IdentityServer.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in /_/src/IdentityServer/Hosting/BaseUrlMiddleware.cs:line 31
-   at Core.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Exts\MicrosoftExts\IServiceCollectionExts\AddLocalizationExtension.cs:line 156
+   at Core.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions.RequestLocalizationCookiesMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\app\languages\csharp\Shared\Core.Infrastructure\Extensions\MicrosoftExtensions\IServiceCollectionExtensions\AddLocalizationExtension.cs:line 156
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)

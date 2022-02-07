@@ -2,8 +2,8 @@
 using Mono.Cecil;
 using CodeGenerator.Models;
 using SharedCore.Domain.Attributes.ServiceAttributes;
-using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.MethodInfoExts;
-using SharedLibrary.Application.Exts.SystemExts.ReflectionExts.PropertyInfoExts;
+using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.MethodInfoExtensions;
+using SharedLibrary.Application.Extensions.SystemExtensions.ReflectionExtensions.PropertyInfoExtensions;
 using SharedLibrary.Application.StringEnums.ServiceLifetimeStringEnums;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
-﻿//using Auth.Infrastructure.Exts.MicrosoftExts.AspNetCoreExts.BuilderExts.WebApplicationExts;
-//using Core.Infrastructure.Exts.MicrosoftExts.IConfigurationBuilderExts;
+﻿//using Auth.Infrastructure.Extensions.MicrosoftExtensions.AspNetCoreExtensions.BuilderExtensions.WebApplicationExtensions;
+//using Core.Infrastructure.Extensions.MicrosoftExtensions.IConfigurationBuilderExtensions;
 //using Microsoft.AspNetCore.Builder;
 //using Microsoft.Extensions.DependencyInjection;
 //using Serilog;

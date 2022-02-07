@@ -21,7 +21,7 @@ using CodeGenerator.Services.DatabaseSetupServices;
 using Presentation.Application.Interfaces.TranslationUiServiceInterfaces;
 using Presentation.Infrastructure.Services.TranslationServices;
 
-namespace CodeGenerator.Exts.IServiceCollectionExts
+namespace CodeGenerator.Extensions.IServiceCollectionExtensions
 {
     public static class AddSetupServicesExtension
     {

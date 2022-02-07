@@ -68,37 +68,37 @@
     },
     "b8bb30fe-29d4-49a4-a3ff-e261a66b3bfd": {
       "ProjectGuid": "b8bb30fe-29d4-49a4-a3ff-e261a66b3bfd",
-      "DisplayName": "__Entities_BoundedContext_Name__.UnitTests",
+      "DisplayName": "__BoundedContext_Name__.UnitTests",
       "ColorIndex": 13
     },
     "cf9413d7-1b05-4391-ad53-c9bb8fc34316": {
       "ProjectGuid": "cf9413d7-1b05-4391-ad53-c9bb8fc34316",
-      "DisplayName": "__Entities_BoundedContext_Name__.IntegrationTests",
+      "DisplayName": "__BoundedContext_Name__.IntegrationTests",
       "ColorIndex": 14
     },
     "4a43e413-1acc-4cbe-9bc9-1607db2688e8": {
       "ProjectGuid": "4a43e413-1acc-4cbe-9bc9-1607db2688e8",
-      "DisplayName": "__Entities_BoundedContext_Name__.IntegrationEvents",
+      "DisplayName": "__BoundedContext_Name__.IntegrationEvents",
       "ColorIndex": 15
     },
     "18d72f3f-86d4-4a65-a1f9-d7380def5040": {
       "ProjectGuid": "18d72f3f-86d4-4a65-a1f9-d7380def5040",
-      "DisplayName": "__Entities_BoundedContext_Name__.Infrastructure",
+      "DisplayName": "__BoundedContext_Name__.Infrastructure",
       "ColorIndex": 0
     },
     "67fb02bf-2e02-4a23-9fa8-0a1f97a86643": {
       "ProjectGuid": "67fb02bf-2e02-4a23-9fa8-0a1f97a86643",
-      "DisplayName": "__Entities_BoundedContext_Name__.Domain",
+      "DisplayName": "__BoundedContext_Name__.Domain",
       "ColorIndex": 1
     },
     "e7c5d921-e591-46ec-b3b9-167df4b1aa1f": {
       "ProjectGuid": "e7c5d921-e591-46ec-b3b9-167df4b1aa1f",
-      "DisplayName": "__Entities_BoundedContext_Name__.ArchTests",
+      "DisplayName": "__BoundedContext_Name__.ArchTests",
       "ColorIndex": 2
     },
     "caf34fe3-6a9d-46aa-98f1-2b6d3bd35b5b": {
       "ProjectGuid": "caf34fe3-6a9d-46aa-98f1-2b6d3bd35b5b",
-      "DisplayName": "__Entities_BoundedContext_Name__.Application",
+      "DisplayName": "__BoundedContext_Name__.Application",
       "ColorIndex": 3
     },
     "92793388-9966-4ffc-9f39-7e1a50a6b975": {
@@ -168,17 +168,17 @@
     },
     "e3c1c63d-8b38-4cc2-a77b-a5a153f2f1b5": {
       "ProjectGuid": "e3c1c63d-8b38-4cc2-a77b-a5a153f2f1b5",
-      "DisplayName": "Shared__Entities_BoundedContext_Name__.Infrastructure",
+      "DisplayName": "Shared__BoundedContext_Name__.Infrastructure",
       "ColorIndex": 1
     },
     "23af3d3a-8077-422f-beb4-a408d1d1881b": {
       "ProjectGuid": "23af3d3a-8077-422f-beb4-a408d1d1881b",
-      "DisplayName": "Shared__Entities_BoundedContext_Name__.Domain",
+      "DisplayName": "Shared__BoundedContext_Name__.Domain",
       "ColorIndex": 2
     },
     "6926bb6e-471c-42d3-92cf-953b6e4c3139": {
       "ProjectGuid": "6926bb6e-471c-42d3-92cf-953b6e4c3139",
-      "DisplayName": "Shared__Entities_BoundedContext_Name__.Application",
+      "DisplayName": "Shared__BoundedContext_Name__.Application",
       "ColorIndex": 3
     },
     "0be149f1-9e27-4458-849f-6b71dac1aeaa": {

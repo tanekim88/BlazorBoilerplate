@@ -1,6 +1,6 @@
-﻿namespace Shared__Entities_BoundedContext_Name__.Application
+﻿namespace Shared__BoundedContext_Name__.Application
 {
-    public class Shared__Entities_BoundedContext_Name__ApplicationConfig
+    public class Shared__BoundedContext_Name__ApplicationConfig
     {
     }
 }

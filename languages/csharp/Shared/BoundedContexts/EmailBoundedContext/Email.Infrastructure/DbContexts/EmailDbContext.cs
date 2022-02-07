@@ -1,7 +1,7 @@
 //%s:begin Usings
 //%s:end Usings
 using Core.Infrastructure.DbContexts;
-using Core.Infrastructure.Exts.MicrosoftExts.ModelBuilderExts;
+using Core.Infrastructure.Extensions.MicrosoftExtensions.ModelBuilderExtensions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

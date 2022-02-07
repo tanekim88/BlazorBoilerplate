@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 
 
-namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
+namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
     public static class AddOpenIddictDbContextExtension
     {

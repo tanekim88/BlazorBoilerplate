@@ -12,7 +12,7 @@ using System.Reflection;
 
 
 
-namespace Auth.Infrastructure.Exts.MicrosoftExts.IServiceCollectionExts
+namespace Auth.Infrastructure.Extensions.MicrosoftExtensions.IServiceCollectionExtensions
 {
     public static class AddAuthServerExtensions
     {
