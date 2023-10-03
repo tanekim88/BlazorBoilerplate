@@ -1,6 +1,0 @@
-#: \Services\AccountServices\AccountService\AccountService.cs:42
-#. [Display(Name = "Remember me?")]
-msgctxt "SharedLibrary.Services.AccountServices.LoginInput"
-msgid "Remember me?"
-msgstr ""
-

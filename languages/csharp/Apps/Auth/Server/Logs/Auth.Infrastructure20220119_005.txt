@@ -1,3 +1,0 @@
-2022-01-19 20:48:31.469 -05:00 [INF] HTTP POST /identity/account/register?returnUrl=%2F responded 200 in 83857.5956 ms
-
-{"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","CustomId":37,"ThreadId":37,"MachineName":"TANECOMPUTER","EnvironmentUserName":"TANECOMPUTER\\tanek","RequestId":"0HMERMPDVR1JF:0000000F","ConnectionId":"0HMERMPDVR1JF","ProcessId":50628,"Version":"1.0.0"}

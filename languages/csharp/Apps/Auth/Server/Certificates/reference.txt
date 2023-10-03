@@ -1,8 +1,0 @@
- openssl req -x509 -days 365 -newkey rsa:2048 -keyout my-key.pem
- openssl pkcs12 -export -in my-cert.pem -inkey my-key.pem -out taneware.pfx
- openssl pkcs12 -in taneware.pfx -clcerts -nokeys -out taneware.pem
-
-
-openssl pkcs12 -in ./taneware.pfx -clcerts -nokeys -out taneware.crt
-openssl pkcs12 -in ./taneware.pfx -nocerts -nodes -out taneware.rsa
-

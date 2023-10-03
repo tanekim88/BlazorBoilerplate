@@ -1,1 +1,0 @@
-{"version":3,"file":"path.module.js","sourceRoot":"","sources":["../../../../../../apps/shared/src/modules/path/path.module.ts"],"names":[],"mappings":";;;;;;AACA,OAAO,EAAE,YAAY,EAAE,MAAM,yCAAyC,CAAC;AACvE,OAAO,EAAE,WAAW,EAAE,MAAM,qBAAqB,CAAC;AAKlD,IAAa,UAAU,GAAvB,MAAa,UAAU;CAAG,CAAA;AAAb,UAAU;IAHtB,YAAY,CAAC;QACV,SAAS,EAAE,CAAC,WAAW,CAAC;KAC3B,CAAC;GACW,UAAU,CAAG;SAAb,UAAU"}

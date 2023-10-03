@@ -1,8 +1,0 @@
-{
-  "packages": [
-    "BlazorApp",
-    "Auth",
-    "Shared"
-  ],
-  "version": "0.0.0"
-}
